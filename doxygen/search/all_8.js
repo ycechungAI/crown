@@ -14,7 +14,6 @@ var searchData=
   ['idtable',['IdTable',['../structcrown_1_1_id_table.html#af17d1584b8c34af637a956cef557d523',1,'crown::IdTable']]],
   ['idtable',['IdTable',['../structcrown_1_1_id_table.html',1,'crown']]],
   ['idtable_3c_20512_20_3e',['IdTable&lt; 512 &gt;',['../structcrown_1_1_id_table.html',1,'crown']]],
-  ['imaxdiv_5ft',['imaxdiv_t',['../structimaxdiv__t.html',1,'']]],
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a02d6ed555ce025f862ca69fb3604a2c9',1,'crown::queue']]],
   ['index',['index',['../classcrown_1_1_j_s_o_n_element.html#acdd5922d094ca8ed87882e0ff1a44ffb',1,'crown::JSONElement']]],
   ['index_5for_5fnil',['index_or_nil',['../classcrown_1_1_j_s_o_n_element.html#a24be12e353cac068e37808c76389a2dd',1,'crown::JSONElement']]],

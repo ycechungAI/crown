@@ -12,7 +12,6 @@ var searchData=
   ['idarray_3c_20max_5fsprites_2c_20crown_3a_3asprite_20_2a_20_3e',['IdArray&lt; MAX_SPRITES, crown::Sprite * &gt;',['../structcrown_1_1_id_array.html',1,'crown']]],
   ['idtable',['IdTable',['../structcrown_1_1_id_table.html',1,'crown']]],
   ['idtable_3c_20512_20_3e',['IdTable&lt; 512 &gt;',['../structcrown_1_1_id_table.html',1,'crown']]],
-  ['imaxdiv_5ft',['imaxdiv_t',['../structimaxdiv__t.html',1,'']]],
   ['inputdevice',['InputDevice',['../structcrown_1_1_input_device.html',1,'crown']]],
   ['inputmanager',['InputManager',['../classcrown_1_1_input_manager.html',1,'crown']]],
   ['instancedata',['InstanceData',['../structcrown_1_1_scene_graph_1_1_instance_data.html',1,'crown::SceneGraph']]],
