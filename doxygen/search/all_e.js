@@ -20,7 +20,5 @@ var searchData=
   ['osmetricsevent',['OsMetricsEvent',['../structcrown_1_1_os_metrics_event.html',1,'crown']]],
   ['osmouseevent',['OsMouseEvent',['../structcrown_1_1_os_mouse_event.html',1,'crown']]],
   ['ostouchevent',['OsTouchEvent',['../structcrown_1_1_os_touch_event.html',1,'crown']]],
-  ['oswindow',['OsWindow',['../classcrown_1_1_os_window.html',1,'crown']]],
-  ['oswindow',['OsWindow',['../classcrown_1_1_os_window.html#afd456e3d2d8f642cb7fbd7474f0ed801',1,'crown::OsWindow']]],
   ['overlap_5ftest',['overlap_test',['../classcrown_1_1_physics_world.html#acb23738ea759fe6b3f78c4dc7941f018',1,'crown::PhysicsWorld']]]
 ];

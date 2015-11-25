@@ -23,7 +23,6 @@ var searchData=
   ['is_5fnumber',['is_number',['../classcrown_1_1_j_s_o_n_element.html#a34839347543fc6d1e16b10ba09e14274',1,'crown::JSONElement']]],
   ['is_5fobject',['is_object',['../classcrown_1_1_j_s_o_n_element.html#a84fde73455604e1a02894872b6744f9d',1,'crown::JSONElement']]],
   ['is_5fplaying',['is_playing',['../classcrown_1_1_sound_world.html#a9c072650bed66bb2802343af954eef96',1,'crown::SoundWorld']]],
-  ['is_5fresizable',['is_resizable',['../classcrown_1_1_os_window.html#a61404def4a5d6cf4d999af480efa90db',1,'crown::OsWindow']]],
   ['is_5froot_5fpath',['is_root_path',['../namespacecrown_1_1path.html#aa1ab22d094de2c8773841f7931a9ef8d',1,'crown::path']]],
   ['is_5frunning',['is_running',['../structcrown_1_1_device.html#a47a272de70b847996435d66b152f7608',1,'crown::Device']]],
   ['is_5fsleeping',['is_sleeping',['../structcrown_1_1_actor.html#a284ca2261752353ccafc6368cbe44139',1,'crown::Actor']]],

@@ -13,13 +13,12 @@ var searchData=
   ['render',['render',['../classcrown_1_1_world.html#a722c4fbc65b4a81ac525e9104974bc8a',1,'crown::World']]],
   ['render_5fworld',['render_world',['../structcrown_1_1_device.html#a9c08f6101300f166e4dcce97f2aeb54a',1,'crown::Device::render_world()'],['../classcrown_1_1_world.html#aff28e2323bf4bbd31ce63b0b742f8951',1,'crown::World::render_world()']]],
   ['reserve',['reserve',['../namespacecrown_1_1array.html#ad048ded0e8b31389468699c8286356be',1,'crown::array::reserve()'],['../namespacecrown_1_1hash.html#ae7bf4cfedbc7d16ede3369f45a62f639',1,'crown::hash::reserve()'],['../namespacecrown_1_1vector.html#a885dd7c473009bb9804431e2cfd24063',1,'crown::vector::reserve()']]],
-  ['resize',['resize',['../classcrown_1_1_os_window.html#aae7fd1bddc46dd9112ce8ba0f8fb5ae7',1,'crown::OsWindow::resize()'],['../namespacecrown_1_1array.html#a5ea3a79de316d3aca3bc7b5e220febdf',1,'crown::array::resize()'],['../namespacecrown_1_1vector.html#a9ffc5aa51975d5a759bd8df136975d94',1,'crown::vector::resize()']]],
+  ['resize',['resize',['../namespacecrown_1_1array.html#a5ea3a79de316d3aca3bc7b5e220febdf',1,'crown::array::resize()'],['../namespacecrown_1_1vector.html#a9ffc5aa51975d5a759bd8df136975d94',1,'crown::vector::resize()']]],
   ['resolution',['resolution',['../structcrown_1_1_device.html#a2512fcc111b17c7b8f247b52cfd57c69',1,'crown::Device']]],
   ['resource_5fmanager',['resource_manager',['../structcrown_1_1_device.html#aaf61aaf38128a36942ccb49e1b417300',1,'crown::Device']]],
   ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html#a24f395408b9cdd99309ec5af12de1c4f',1,'crown::ResourceLoader']]],
   ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#ac523d3a61f853205cdb891689bb0f47f',1,'crown::ResourceManager']]],
-  ['restore',['restore',['../classcrown_1_1_os_window.html#a80045800aa941f308b8305b2959662e4',1,'crown::OsWindow']]],
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],
   ['root',['root',['../classcrown_1_1_j_s_o_n_parser.html#af47e4b2cd2fcf24db1dfbf22d6f08be9',1,'crown::JSONParser']]],
-  ['rotation',['rotation',['../group___math.html#ga84a5e85fb858c55fd2555bb2fc601440',1,'crown::rotation(const Matrix3x3 &amp;m)'],['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown::rotation(const Matrix4x4 &amp;m)']]]
+  ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]]
 ];

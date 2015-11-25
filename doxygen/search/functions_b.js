@@ -2,7 +2,7 @@ var searchData=
 [
   ['last_5fdelta_5ftime',['last_delta_time',['../structcrown_1_1_device.html#afc5cdb1f3941883c768f738c5931a55b',1,'crown::Device']]],
   ['length',['length',['../group___math.html#ga966f45c47ad5ddefc427537d03b7f3a4',1,'crown::length(const Quaternion &amp;q)'],['../group___math.html#ga63f271dbd3752bb82b8d93463f9ca3e0',1,'crown::length(const Vector2 &amp;a)'],['../group___math.html#gafd529871971796570685ee7b66bdd22e',1,'crown::length(const Vector3 &amp;a)'],['../group___math.html#ga5207cc8c1bc06b356fcdf27342262433',1,'crown::length(const Vector4 &amp;a)']]],
-  ['linear',['linear',['../group___math.html#ga63f4adf7a842e6a87e23c0a6d20e701f',1,'crown']]],
+  ['linear',['linear',['../group___math.html#gac0158c1da73f6a0c7e777ffb69710e51',1,'crown']]],
   ['linear_5fdamping',['linear_damping',['../structcrown_1_1_actor.html#a03c4b0b0f970634c24932b4b20eaa329',1,'crown::Actor']]],
   ['linear_5fvelocity',['linear_velocity',['../structcrown_1_1_actor.html#aeb8d6592e809621fc3334cdfecf820c3',1,'crown::Actor']]],
   ['link',['link',['../structcrown_1_1_scene_graph.html#a43b254078e31ee496ec6e80db2f5124a',1,'crown::SceneGraph']]],

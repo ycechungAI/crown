@@ -10,6 +10,5 @@ var searchData=
   ['oskeyboardevent',['OsKeyboardEvent',['../structcrown_1_1_os_keyboard_event.html',1,'crown']]],
   ['osmetricsevent',['OsMetricsEvent',['../structcrown_1_1_os_metrics_event.html',1,'crown']]],
   ['osmouseevent',['OsMouseEvent',['../structcrown_1_1_os_mouse_event.html',1,'crown']]],
-  ['ostouchevent',['OsTouchEvent',['../structcrown_1_1_os_touch_event.html',1,'crown']]],
-  ['oswindow',['OsWindow',['../classcrown_1_1_os_window.html',1,'crown']]]
+  ['ostouchevent',['OsTouchEvent',['../structcrown_1_1_os_touch_event.html',1,'crown']]]
 ];

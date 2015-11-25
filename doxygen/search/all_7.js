@@ -4,6 +4,5 @@ var searchData=
   ['has_5fkey',['has_key',['../classcrown_1_1_j_s_o_n_element.html#ab25206209b7b547c8b097146162216a0',1,'crown::JSONElement']]],
   ['has_5floaded',['has_loaded',['../structcrown_1_1_resource_package.html#a28e2975249dd85dc5ab7542b01046e72',1,'crown::ResourcePackage']]],
   ['hash',['Hash',['../structcrown_1_1_hash.html',1,'crown']]],
-  ['header',['Header',['../structcrown_1_1event__stream_1_1_header.html',1,'crown::event_stream']]],
-  ['hide',['hide',['../classcrown_1_1_os_window.html#abd40eca98c2447d141b295307a4b82c1',1,'crown::OsWindow']]]
+  ['header',['Header',['../structcrown_1_1event__stream_1_1_header.html',1,'crown::event_stream']]]
 ];

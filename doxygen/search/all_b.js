@@ -8,7 +8,7 @@ var searchData=
   ['levelresource',['LevelResource',['../structcrown_1_1_level_resource.html',1,'crown']]],
   ['levelsound',['LevelSound',['../structcrown_1_1_level_sound.html',1,'crown']]],
   ['levelunit',['LevelUnit',['../structcrown_1_1_level_unit.html',1,'crown']]],
-  ['linear',['linear',['../group___math.html#ga63f4adf7a842e6a87e23c0a6d20e701f',1,'crown']]],
+  ['linear',['linear',['../group___math.html#gac0158c1da73f6a0c7e777ffb69710e51',1,'crown']]],
   ['linear_5fdamping',['linear_damping',['../structcrown_1_1_actor.html#a03c4b0b0f970634c24932b4b20eaa329',1,'crown::Actor']]],
   ['linear_5fvelocity',['linear_velocity',['../structcrown_1_1_actor.html#aeb8d6592e809621fc3334cdfecf820c3',1,'crown::Actor']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html',1,'crown']]],

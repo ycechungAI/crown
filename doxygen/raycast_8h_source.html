@@ -96,70 +96,71 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * License: https://github.com/taylor001/crown/blob/master/LICENSE</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;math_types.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;container_types.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;physics_types.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;PxQueryFiltering.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;PxScene.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;PxVec3.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using</span> physx::PxQueryFilterData;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> physx::PxQueryFlag;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> physx::PxHitFlag;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> physx::PxHitFlags;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> physx::PxRaycastHit;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> physx::PxRaycastBuffer;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> physx::PxScene;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> physx::PxVec3;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecrown.html">crown</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">struct </span>Actor;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structcrown_1_1_raycast_hit.html">   29</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcrown_1_1_raycast_hit.html">RaycastHit</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> position;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">float</span> distance;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> normal;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="structcrown_1_1_actor.html">Actor</a>* actor;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;config.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;math_types.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;container_types.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;physics_types.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;PxQueryFiltering.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;PxScene.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;PxVec3.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using</span> physx::PxQueryFilterData;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using</span> physx::PxQueryFlag;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> physx::PxHitFlag;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> physx::PxHitFlags;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> physx::PxRaycastHit;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> physx::PxRaycastBuffer;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> physx::PxScene;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> physx::PxVec3;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecrown.html">crown</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">struct </span>Actor;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structcrown_1_1_raycast_hit.html">   30</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcrown_1_1_raycast_hit.html">RaycastHit</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> position;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">float</span> distance;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> normal;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="structcrown_1_1_actor.html">Actor</a>* actor;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structcrown_1_1_raycast.html">   40</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcrown_1_1_raycast.html">Raycast</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="structcrown_1_1_raycast.html#a6ddb6020df95597d5fb3471fec0ba83f">Raycast</a>(PxScene* scene, CollisionMode::Enum mode, CollisionType::Enum type);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span>                    <a class="code" href="structcrown_1_1_raycast.html#a14328116a87e99ebc5a004072092d76f">cast</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; from, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; dir, <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="group___math.html#ga966f45c47ad5ddefc427537d03b7f3a4">length</a>, <a class="code" href="structcrown_1_1_array.html">Array&lt;RaycastHit&gt;</a>&amp; hits);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    CollisionMode::Enum     mode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    CollisionType::Enum     type() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    PxScene*                m_scene;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    PxRaycastHit            m_hits[CE_MAX_RAY_INTERSECTIONS];</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    PxRaycastBuffer         m_buffer;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    PxQueryFilterData       m_fd;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    CollisionMode::Enum     m_mode;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    CollisionType::Enum     m_type;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;} <span class="comment">// namespace crown</span></div>
-<div class="ttc" id="structcrown_1_1_actor_html"><div class="ttname"><a href="structcrown_1_1_actor.html">crown::Actor</a></div><div class="ttdoc">Represents a rigid body. </div><div class="ttdef"><b>Definition:</b> actor.h:33</div></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structcrown_1_1_raycast.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcrown_1_1_raycast.html">Raycast</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="structcrown_1_1_raycast.html#a6ddb6020df95597d5fb3471fec0ba83f">Raycast</a>(PxScene* scene, CollisionMode::Enum mode, CollisionType::Enum type);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span>                    <a class="code" href="structcrown_1_1_raycast.html#a14328116a87e99ebc5a004072092d76f">cast</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; from, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; dir, <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="group___math.html#ga966f45c47ad5ddefc427537d03b7f3a4">length</a>, <a class="code" href="structcrown_1_1_array.html">Array&lt;RaycastHit&gt;</a>&amp; hits);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    CollisionMode::Enum     mode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    CollisionType::Enum     type() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    PxScene*                m_scene;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    PxRaycastHit            m_hits[CE_MAX_RAY_INTERSECTIONS];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    PxRaycastBuffer         m_buffer;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    PxQueryFilterData       m_fd;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    CollisionMode::Enum     m_mode;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    CollisionType::Enum     m_type;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} <span class="comment">// namespace crown</span></div>
+<div class="ttc" id="structcrown_1_1_actor_html"><div class="ttname"><a href="structcrown_1_1_actor.html">crown::Actor</a></div><div class="ttdoc">Represents a rigid body. </div><div class="ttdef"><b>Definition:</b> actor.h:34</div></div>
 <div class="ttc" id="structcrown_1_1_array_html"><div class="ttname"><a href="structcrown_1_1_array.html">crown::Array</a></div><div class="ttdoc">Dynamic array of POD items. </div><div class="ttdef"><b>Definition:</b> container_types.h:24</div></div>
 <div class="ttc" id="structcrown_1_1_raycast_html_a6ddb6020df95597d5fb3471fec0ba83f"><div class="ttname"><a href="structcrown_1_1_raycast.html#a6ddb6020df95597d5fb3471fec0ba83f">crown::Raycast::Raycast</a></div><div class="ttdeci">Raycast(PxScene *scene, CollisionMode::Enum mode, CollisionType::Enum type)</div><div class="ttdoc">Constructor. </div><div class="ttdef"><b>Definition:</b> raycast.cpp:17</div></div>
 <div class="ttc" id="structcrown_1_1_vector3_html"><div class="ttname"><a href="structcrown_1_1_vector3.html">crown::Vector3</a></div><div class="ttdef"><b>Definition:</b> math_types.h:22</div></div>
-<div class="ttc" id="structcrown_1_1_raycast_html"><div class="ttname"><a href="structcrown_1_1_raycast.html">crown::Raycast</a></div><div class="ttdef"><b>Definition:</b> raycast.h:40</div></div>
+<div class="ttc" id="structcrown_1_1_raycast_html"><div class="ttname"><a href="structcrown_1_1_raycast.html">crown::Raycast</a></div><div class="ttdef"><b>Definition:</b> raycast.h:41</div></div>
 <div class="ttc" id="namespacecrown_html"><div class="ttname"><a href="namespacecrown.html">crown</a></div><div class="ttdef"><b>Definition:</b> audio.h:8</div></div>
 <div class="ttc" id="structcrown_1_1_raycast_html_a14328116a87e99ebc5a004072092d76f"><div class="ttname"><a href="structcrown_1_1_raycast.html#a14328116a87e99ebc5a004072092d76f">crown::Raycast::cast</a></div><div class="ttdeci">void cast(const Vector3 &amp;from, const Vector3 &amp;dir, const float length, Array&lt; RaycastHit &gt; &amp;hits)</div><div class="ttdoc">Performs a raycast against objects in the scene. </div><div class="ttdef"><b>Definition:</b> raycast.cpp:38</div></div>
-<div class="ttc" id="group___math_html_ga966f45c47ad5ddefc427537d03b7f3a4"><div class="ttname"><a href="group___math.html#ga966f45c47ad5ddefc427537d03b7f3a4">crown::length</a></div><div class="ttdeci">float length(const Quaternion &amp;q)</div><div class="ttdoc">Returns the length of q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:88</div></div>
-<div class="ttc" id="structcrown_1_1_raycast_hit_html"><div class="ttname"><a href="structcrown_1_1_raycast_hit.html">crown::RaycastHit</a></div><div class="ttdef"><b>Definition:</b> raycast.h:29</div></div>
+<div class="ttc" id="group___math_html_ga966f45c47ad5ddefc427537d03b7f3a4"><div class="ttname"><a href="group___math.html#ga966f45c47ad5ddefc427537d03b7f3a4">crown::length</a></div><div class="ttdeci">float length(const Quaternion &amp;q)</div><div class="ttdoc">Returns the length of q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:89</div></div>
+<div class="ttc" id="structcrown_1_1_raycast_hit_html"><div class="ttname"><a href="structcrown_1_1_raycast_hit.html">crown::RaycastHit</a></div><div class="ttdef"><b>Definition:</b> raycast.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Nov 21 2015 16:15:40 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 25 2015 17:59:57 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
