@@ -58,5 +58,6 @@ var searchData=
   ['stop_5fall',['stop_all',['../classcrown_1_1_sound_world.html#a84e1146efc2ea54a14656dd005f0fa8b',1,'crown::SoundWorld']]],
   ['stop_5fsound',['stop_sound',['../classcrown_1_1_world.html#a5b31d017ca5cfc3c61f112f44464095b',1,'crown::World']]],
   ['strip_5fleading',['strip_leading',['../classcrown_1_1_dynamic_string.html#a399ba48e4432426293aebe8b48c57fc6',1,'crown::DynamicString']]],
-  ['strip_5ftrailing',['strip_trailing',['../classcrown_1_1_dynamic_string.html#ac16108c1524efee68086a6067612abe4',1,'crown::DynamicString']]]
+  ['strip_5ftrailing',['strip_trailing',['../classcrown_1_1_dynamic_string.html#ac16108c1524efee68086a6067612abe4',1,'crown::DynamicString']]],
+  ['submit',['submit',['../structcrown_1_1_debug_line.html#aeb338a656490c118533ece64a3887bd8',1,'crown::DebugLine']]]
 ];

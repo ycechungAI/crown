@@ -20,6 +20,7 @@ var searchData=
   ['render_5fworld',['render_world',['../structcrown_1_1_device.html#a9c08f6101300f166e4dcce97f2aeb54a',1,'crown::Device::render_world()'],['../classcrown_1_1_world.html#aff28e2323bf4bbd31ce63b0b742f8951',1,'crown::World::render_world()']]],
   ['renderworld',['RenderWorld',['../classcrown_1_1_render_world.html',1,'crown']]],
   ['reserve',['reserve',['../namespacecrown_1_1array.html#ad048ded0e8b31389468699c8286356be',1,'crown::array::reserve()'],['../namespacecrown_1_1hash.html#ae7bf4cfedbc7d16ede3369f45a62f639',1,'crown::hash::reserve()'],['../namespacecrown_1_1vector.html#a885dd7c473009bb9804431e2cfd24063',1,'crown::vector::reserve()']]],
+  ['reset',['reset',['../structcrown_1_1_debug_line.html#a8a48b86120d5919d167f4882fd5bfc6b',1,'crown::DebugLine']]],
   ['resize',['resize',['../namespacecrown_1_1array.html#a5ea3a79de316d3aca3bc7b5e220febdf',1,'crown::array::resize()'],['../namespacecrown_1_1vector.html#a9ffc5aa51975d5a759bd8df136975d94',1,'crown::vector::resize()']]],
   ['resolution',['resolution',['../structcrown_1_1_device.html#a2512fcc111b17c7b8f247b52cfd57c69',1,'crown::Device']]],
   ['resource',['Resource',['../structcrown_1_1_package_resource_1_1_resource.html',1,'crown::PackageResource']]],

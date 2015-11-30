@@ -80,5 +80,6 @@ var searchData=
   ['stringid32',['StringId32',['../structcrown_1_1_string_id32.html',1,'crown']]],
   ['stringid64',['StringId64',['../structcrown_1_1_string_id64.html',1,'crown']]],
   ['strip_5fleading',['strip_leading',['../classcrown_1_1_dynamic_string.html#a399ba48e4432426293aebe8b48c57fc6',1,'crown::DynamicString']]],
-  ['strip_5ftrailing',['strip_trailing',['../classcrown_1_1_dynamic_string.html#ac16108c1524efee68086a6067612abe4',1,'crown::DynamicString']]]
+  ['strip_5ftrailing',['strip_trailing',['../classcrown_1_1_dynamic_string.html#ac16108c1524efee68086a6067612abe4',1,'crown::DynamicString']]],
+  ['submit',['submit',['../structcrown_1_1_debug_line.html#aeb338a656490c118533ece64a3887bd8',1,'crown::DebugLine']]]
 ];
