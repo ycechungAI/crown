@@ -16,8 +16,7 @@ var searchData=
   ['resize',['resize',['../namespacecrown_1_1array.html#a5ea3a79de316d3aca3bc7b5e220febdf',1,'crown::array::resize()'],['../namespacecrown_1_1vector.html#a9ffc5aa51975d5a759bd8df136975d94',1,'crown::vector::resize()']]],
   ['resolution',['resolution',['../structcrown_1_1_device.html#a2512fcc111b17c7b8f247b52cfd57c69',1,'crown::Device']]],
   ['resource_5fmanager',['resource_manager',['../structcrown_1_1_device.html#aaf61aaf38128a36942ccb49e1b417300',1,'crown::Device']]],
-  ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html#a24f395408b9cdd99309ec5af12de1c4f',1,'crown::ResourceLoader']]],
-  ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#ac523d3a61f853205cdb891689bb0f47f',1,'crown::ResourceManager']]],
+  ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#a3e117a0d3466aa31e8e587783d803aca',1,'crown::ResourceManager']]],
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],
   ['root',['root',['../classcrown_1_1_j_s_o_n_parser.html#af47e4b2cd2fcf24db1dfbf22d6f08be9',1,'crown::JSONParser']]],
   ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]]

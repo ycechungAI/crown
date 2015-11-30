@@ -106,60 +106,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a24f395408b9cdd99309ec5af12de1c4f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_resource_loader.html#a24f395408b9cdd99309ec5af12de1c4f">ResourceLoader</a> (<a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;fs, <a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;resource_heap)</td></tr>
-<tr class="memdesc:a24f395408b9cdd99309ec5af12de1c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the resources data from the given <em>fs</em> using <em>resource_heap</em> to allocate memory for them.  <a href="#a24f395408b9cdd99309ec5af12de1c4f">More...</a><br /></td></tr>
-<tr class="separator:a24f395408b9cdd99309ec5af12de1c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5fcba272619a650e375e6336c802a4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5fcba272619a650e375e6336c802a4b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_resource_loader.html#ae5fcba272619a650e375e6336c802a4b">load</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name)</td></tr>
-<tr class="memdesc:ae5fcba272619a650e375e6336c802a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the <em>resource</em> in a background thread. <br /></td></tr>
-<tr class="separator:ae5fcba272619a650e375e6336c802a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56e552f3417825f8da5ff3c1d26fa2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac56e552f3417825f8da5ff3c1d26fa2e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ResourceLoader</b> (<a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;fs)</td></tr>
+<tr class="separator:ac56e552f3417825f8da5ff3c1d26fa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89ee74c5f2dbe541b3555c4be9e436c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac89ee74c5f2dbe541b3555c4be9e436c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_resource_loader.html#ac89ee74c5f2dbe541b3555c4be9e436c">add_request</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, <a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
+<tr class="memdesc:ac89ee74c5f2dbe541b3555c4be9e436c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a request for loading the resource <em>type</em> <em>name</em>. <br /></td></tr>
+<tr class="separator:ac89ee74c5f2dbe541b3555c4be9e436c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaec8425fcee7e58d20f4f565b1bd79a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaec8425fcee7e58d20f4f565b1bd79a1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_resource_loader.html#aaec8425fcee7e58d20f4f565b1bd79a1">flush</a> ()</td></tr>
 <tr class="memdesc:aaec8425fcee7e58d20f4f565b1bd79a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks until all pending requests have been processed. <br /></td></tr>
 <tr class="separator:aaec8425fcee7e58d20f4f565b1bd79a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf365d06a8229af41957628eb06365b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf365d06a8229af41957628eb06365b6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_loaded</b> (<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_resource_data.html">ResourceData</a> &gt; &amp;loaded)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_resource_loader.html#adf365d06a8229af41957628eb06365b6">get_loaded</a> (<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_resource_data.html">ResourceData</a> &gt; &amp;loaded)</td></tr>
+<tr class="memdesc:adf365d06a8229af41957628eb06365b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all the resources that have been loaded. <br /></td></tr>
 <tr class="separator:adf365d06a8229af41957628eb06365b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Loads resources in a background thread. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a24f395408b9cdd99309ec5af12de1c4f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">crown::ResourceLoader::ResourceLoader </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;&#160;</td>
-          <td class="paramname"><em>fs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;&#160;</td>
-          <td class="paramname"><em>resource_heap</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads the resources data from the given <em>fs</em> using <em>resource_heap</em> to allocate memory for them. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/resource/<a class="el" href="resource__loader_8h_source.html">resource_loader.h</a></li>
 <li>src/resource/resource_loader.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 25 2015 17:59:57 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 30 2015 17:55:01 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -9,7 +9,7 @@ var searchData=
   ['link_5fsound',['link_sound',['../classcrown_1_1_world.html#a90dd4a7ce8f47bb6dc1487101efc9254',1,'crown::World']]],
   ['link_5funit',['link_unit',['../classcrown_1_1_world.html#a1501e08df16a08651832171a533461e8',1,'crown::World']]],
   ['list_5ffiles',['list_files',['../classcrown_1_1_disk_filesystem.html#a4d7a6b630493d44f166cbd6a72fa5a80',1,'crown::DiskFilesystem::list_files()'],['../classcrown_1_1_filesystem.html#a382672dc39bc55ceab172b3c479074c3',1,'crown::Filesystem::list_files()']]],
-  ['load',['load',['../classcrown_1_1_resource_loader.html#ae5fcba272619a650e375e6336c802a4b',1,'crown::ResourceLoader::load()'],['../classcrown_1_1_resource_manager.html#a4d0320bb66c272c82bd9b806770181d1',1,'crown::ResourceManager::load()'],['../structcrown_1_1_resource_package.html#a788f7fa52db81d6fd985a8683dcc06a2',1,'crown::ResourcePackage::load()']]],
+  ['load',['load',['../classcrown_1_1_resource_manager.html#a4d0320bb66c272c82bd9b806770181d1',1,'crown::ResourceManager::load()'],['../structcrown_1_1_resource_package.html#a788f7fa52db81d6fd985a8683dcc06a2',1,'crown::ResourcePackage::load()']]],
   ['load_5flevel',['load_level',['../classcrown_1_1_world.html#a4e8f9775f9dc73b691d8fc071df9495b',1,'crown::World']]],
   ['load_5fmodule_5fenum',['load_module_enum',['../structcrown_1_1_lua_environment.html#a3d918a2afb9e360b36c6c51022ea072f',1,'crown::LuaEnvironment']]],
   ['load_5fmodule_5ffunction',['load_module_function',['../structcrown_1_1_lua_environment.html#a5b076366f49d6405751abc78e3f11e1c',1,'crown::LuaEnvironment']]],

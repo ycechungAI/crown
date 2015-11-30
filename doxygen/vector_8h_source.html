@@ -194,14 +194,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            v._capacity = <a class="code" href="namespacecrown_1_1vector.html#ad9d6e811fc42fc5a72bd9d6f42ba0173">capacity</a>;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            v._data = (T*)v._allocator-&gt;allocate(capacity * <span class="keyword">sizeof</span>(T), CE_ALIGNOF(T));</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; v._size; i++)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; v._size; ++i)</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            {</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keyword">new</span> (v._data + i) T(tmp[i]);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (tmp)</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; v._size; i++)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; v._size; ++i)</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                {</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    tmp[i].~T();</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                }</div>
@@ -255,7 +255,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="namespacecrown_1_1vector.html#a2db3ae13901700b04056e291829359a9">grow</a>(v, v._size + count);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        T* arr = &amp;v._data[v._size];</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; count; i++)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; count; ++i)</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            arr[i] = items[i];</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        v._size += count;</div>
@@ -265,7 +265,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00196"></a><span class="lineno"><a class="line" href="namespacecrown_1_1vector.html#a78b5653bb602b7714d77d4dce0679949">  196</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacecrown_1_1vector.html#a78b5653bb602b7714d77d4dce0679949">clear</a>(<a class="code" href="structcrown_1_1_vector.html">Vector&lt;T&gt;</a>&amp; v)</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; v._size; i++)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; v._size; ++i)</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            v._data[i].~T();</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        v._size = 0;</div>
@@ -356,7 +356,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;<span class="keyword">inline</span> Vector&lt;T&gt;::~Vector()</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; _size; i++)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; _size; ++i)</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        _data[i].~T();</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">if</span> (_data)</div>
@@ -383,7 +383,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keyword">const</span> uint32_t size = <a class="code" href="namespacecrown_1_1vector.html#adf5470b5f38c790707735150c30b480c">vector::size</a>(other);</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="namespacecrown_1_1vector.html#a9ffc5aa51975d5a759bd8df136975d94">vector::resize</a>(*<span class="keyword">this</span>, size);</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; size; i++)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; size; ++i)</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        _data[i] = other._data[i];</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
@@ -394,7 +394,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacecrown_1_1vector_html_a885dd7c473009bb9804431e2cfd24063"><div class="ttname"><a href="namespacecrown_1_1vector.html#a885dd7c473009bb9804431e2cfd24063">crown::vector::reserve</a></div><div class="ttdeci">void reserve(Vector&lt; T &gt; &amp;v, uint32_t capacity)</div><div class="ttdoc">Reserves space in the vector v for at least capacity items. </div><div class="ttdef"><b>Definition:</b> vector.h:106</div></div>
 <div class="ttc" id="namespacecrown_1_1vector_html_affa1e11905f198c1c3c7418cf3605a17"><div class="ttname"><a href="namespacecrown_1_1vector.html#affa1e11905f198c1c3c7418cf3605a17">crown::vector::pop_back</a></div><div class="ttdeci">void pop_back(Vector&lt; T &gt; &amp;v)</div><div class="ttdoc">Removes the last item from the vector v. </div><div class="ttdef"><b>Definition:</b> vector.h:173</div></div>
 <div class="ttc" id="namespacecrown_1_1vector_html_ac9cff8bab563b3aca39422b49bd78518"><div class="ttname"><a href="namespacecrown_1_1vector.html#ac9cff8bab563b3aca39422b49bd78518">crown::vector::push_back</a></div><div class="ttdeci">uint32_t push_back(Vector&lt; T &gt; &amp;v, const T &amp;item)</div><div class="ttdoc">Appends an item to the vector v and returns its index. </div><div class="ttdef"><b>Definition:</b> vector.h:161</div></div>
-<div class="ttc" id="structcrown_1_1_vector_html"><div class="ttname"><a href="structcrown_1_1_vector.html">crown::Vector</a></div><div class="ttdoc">Dynamic array of objects. </div><div class="ttdef"><b>Definition:</b> container_types.h:54</div></div>
+<div class="ttc" id="structcrown_1_1_vector_html"><div class="ttname"><a href="structcrown_1_1_vector.html">crown::Vector</a></div><div class="ttdoc">Dynamic array of objects. </div><div class="ttdef"><b>Definition:</b> container_types.h:56</div></div>
 <div class="ttc" id="namespacecrown_1_1vector_html_adf5470b5f38c790707735150c30b480c"><div class="ttname"><a href="namespacecrown_1_1vector.html#adf5470b5f38c790707735150c30b480c">crown::vector::size</a></div><div class="ttdeci">uint32_t size(const Vector&lt; T &gt; &amp;v)</div><div class="ttdoc">Returns the number of items in the vector v. </div><div class="ttdef"><b>Definition:</b> vector.h:85</div></div>
 <div class="ttc" id="namespacecrown_1_1vector_html_a24bdaefee1e4b323a927a24adebc7a17"><div class="ttname"><a href="namespacecrown_1_1vector.html#a24bdaefee1e4b323a927a24adebc7a17">crown::vector::push</a></div><div class="ttdeci">uint32_t push(Vector&lt; T &gt; &amp;v, const T *items, uint32_t count)</div><div class="ttdoc">Appends count items to the vector v and returns the number of items in the vector after the append op...</div><div class="ttdef"><b>Definition:</b> vector.h:182</div></div>
 <div class="ttc" id="namespacecrown_1_1vector_html_a26e09a38511ac2f0fdc56e929fc41d01"><div class="ttname"><a href="namespacecrown_1_1vector.html#a26e09a38511ac2f0fdc56e929fc41d01">crown::vector::condense</a></div><div class="ttdeci">void condense(Vector&lt; T &gt; &amp;v)</div><div class="ttdoc">Condenses the vector v so that its capacity matches the actual number of items in the vector...</div><div class="ttdef"><b>Definition:</b> vector.h:155</div></div>
@@ -408,7 +408,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 25 2015 17:59:57 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 30 2015 17:55:00 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

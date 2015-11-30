@@ -1042,10 +1042,12 @@ When resource autoload is enabled it always returns true.</dd>
 <dd>Adds a line from <em>start</em> to <em>end</em> with the given <em>color</em>.</dd>
 <dt><strong>add_axes</strong> (debug_line, tm, length)</dt>
 <dd>Adds lines for each axis with the given <em>length</em>.</dd>
-<dt><strong>add_cone</strong> (debug_line, from, to, radius, color)</dt>
+<dt><strong>add_circle</strong> (debug_line, center, radius, normal, color, [segments = 36])</dt>
+<dd>Adds a circle at <em>center</em> with the given <em>radius</em> and <em>normal</em> vector.</dd>
+<dt><strong>add_cone</strong> (debug_line, from, to, radius, color, [segments = 36])</dt>
 <dd>Adds a cone with the base centered at <em>from</em> and the tip at <em>to</em>.</dd>
-<dt><strong>add_sphere</strong> (debug_line, center, radius, color)</dt>
-<dd>Adds a sphere at <em>center</em> with the given <em>radius</em> and <em>color</em>.</dd>
+<dt><strong>add_sphere</strong> (debug_line, center, radius, color, [segments = 36])</dt>
+<dd>Adds a sphere at <em>center</em> with the given <em>radius</em>.</dd>
 <dt><strong>add_obb</strong> (debug_line, tm, extents, color)</dt>
 <dd>Adds an orientd bounding box. <em>tm</em> describes the position and orientation of
 the box. <em>extents</em> describes the size of the box along the axis.</dd>
