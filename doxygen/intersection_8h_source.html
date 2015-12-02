@@ -105,20 +105,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">float</span> ray_plane_intersection(<span class="keyword">const</span> Vector3&amp; from, <span class="keyword">const</span> Vector3&amp; dir, <span class="keyword">const</span> Plane&amp; p);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">float</span> ray_sphere_intersection(<span class="keyword">const</span> Vector3&amp; from, <span class="keyword">const</span> Vector3&amp; dir, <span class="keyword">const</span> Sphere&amp; s);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">float</span> ray_disc_intersection(<span class="keyword">const</span> Vector3&amp; from, <span class="keyword">const</span> Vector3&amp; dir, <span class="keyword">const</span> Vector3&amp; center, <span class="keywordtype">float</span> radius, <span class="keyword">const</span> Vector3&amp; normal);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">float</span> ray_oobb_intersection(<span class="keyword">const</span> Vector3&amp; from, <span class="keyword">const</span> Vector3&amp; dir, <span class="keyword">const</span> OBB&amp; obb);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">float</span> ray_sphere_intersection(<span class="keyword">const</span> Vector3&amp; from, <span class="keyword">const</span> Vector3&amp; dir, <span class="keyword">const</span> Sphere&amp; s);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">bool</span> plane_3_intersection(<span class="keyword">const</span> Plane&amp; p1, <span class="keyword">const</span> Plane&amp; p2, <span class="keyword">const</span> Plane&amp; p3, Vector3&amp; ip);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">bool</span> frustum_sphere_intersection(<span class="keyword">const</span> Frustum&amp; f, <span class="keyword">const</span> Sphere&amp; s);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">bool</span> frustum_box_intersection(<span class="keyword">const</span> Frustum&amp; f, <span class="keyword">const</span> AABB&amp; b);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">float</span> ray_obb_intersection(<span class="keyword">const</span> Vector3&amp; from, <span class="keyword">const</span> Vector3&amp; dir, <span class="keyword">const</span> Matrix4x4&amp; tm, <span class="keyword">const</span> Vector3&amp; half_extents);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <span class="comment">// namespace crown</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">bool</span> plane_3_intersection(<span class="keyword">const</span> Plane&amp; p1, <span class="keyword">const</span> Plane&amp; p2, <span class="keyword">const</span> Plane&amp; p3, Vector3&amp; ip);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">bool</span> frustum_sphere_intersection(<span class="keyword">const</span> Frustum&amp; f, <span class="keyword">const</span> Sphere&amp; s);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">bool</span> frustum_box_intersection(<span class="keyword">const</span> Frustum&amp; f, <span class="keyword">const</span> AABB&amp; b);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <span class="comment">// namespace crown</span></div>
 <div class="ttc" id="namespacecrown_html"><div class="ttname"><a href="namespacecrown.html">crown</a></div><div class="ttdef"><b>Definition:</b> audio.h:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 30 2015 18:04:10 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 2 2015 17:54:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

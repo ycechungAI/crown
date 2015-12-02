@@ -640,6 +640,15 @@ If <em>up</em> is not specified, Vector3.up() is used.</dd>
 <h2><a class="toc-backref" href="#id9">Math</a></h2>
 <blockquote>
 <dl class="docutils">
+<dt><strong>ray_plane_intersection</strong> (from, dir, point, normal) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Returns the distance along ray (from, dir) to intersection point with plane defined by
+<em>point</em> and <em>normal</em> or -1.0 if no intersection.</dd>
+<dt><strong>ray_disc_intersection</strong> (from, dir, center, radius, normal) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Returns the distance along ray (from, dir) to intersection point with disc defined by
+<em>center</em>, <em>radius</em> and <em>normal</em> or -1.0 if no intersection.</dd>
+<dt><strong>ray_sphere_intersection</strong> (from, dir, center, radius) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Returns the distance along ray (from, dir) to intersection point with sphere defined by
+<em>center</em> and <em>radius</em> or -1.0 if no intersection.</dd>
 <dt><strong>ray_obb_intersection</strong> (from, dir, tm, extents) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the distance along ray (from, dir) to intersection point with the oriented
 bounding box (tm, extents) or -1.0 if no intersection.</dd>

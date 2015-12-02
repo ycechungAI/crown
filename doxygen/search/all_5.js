@@ -15,5 +15,6 @@ var searchData=
   ['fov',['fov',['../structcrown_1_1_camera.html#a5d330383dd81028605267119927254c8',1,'crown::Camera']]],
   ['frame_5fcount',['frame_count',['../structcrown_1_1_device.html#af9bc205a7cc669230bece1e8e8073c52',1,'crown::Device']]],
   ['from_5fmatrix',['from_matrix',['../namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6',1,'crown::frustum']]],
+  ['from_5fpoint_5fand_5fnormal',['from_point_and_normal',['../namespacecrown_1_1plane.html#a517c3e04ebdaa9202b345367be57961f',1,'crown::plane']]],
   ['frustum',['Frustum',['../structcrown_1_1_frustum.html',1,'crown']]]
 ];
