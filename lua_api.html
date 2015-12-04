@@ -612,12 +612,18 @@ If <em>up</em> is not specified, Vector3.up() is used.</dd>
 <dd>Sets the y axis of the matrix <em>m</em>.</dd>
 <dt><strong>set_z</strong> (m, z)</dt>
 <dd>Sets the z axis of the matrix <em>m</em>.</dd>
+<dt><strong>rotation</strong> (m) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
+<dd>Returns the rotation portion of the matrix <em>m</em>.</dd>
+<dt><strong>set_rotation</strong> (m, r)</dt>
+<dd>Sets the rotation portion of the matrix <em>m</em>.</dd>
 <dt><strong>translation</strong> (m, a) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns the translation portion of the matrix <em>m</em>.</dd>
 <dt><strong>set_translation</strong> (m, t)</dt>
 <dd>Sets the translation portion of the matrix <em>m</em>.</dd>
 <dt><strong>identity</strong> ()</dt>
 <dd>Returns the identity matrix.</dd>
+<dt><strong>transform</strong> (m, v) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
+<dd>Transforms the vector <em>v</em> by the matrix <em>m</em> and returns the result.</dd>
 <dt><strong>to_string</strong> (a)</dt>
 <dd>Returns a string representing the matrix.</dd>
 </dl>
