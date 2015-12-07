@@ -13,12 +13,11 @@ var searchData=
   ['array_3c_20char_20_3e',['Array&lt; char &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3ahash_3a_3aentry_20_3e',['Array&lt; crown::Hash::Entry &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3apackageresource_3a_3aresource_20_3e',['Array&lt; crown::PackageResource::Resource &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['array_3c_20crown_3a_3aresourcedata_20_3e',['Array&lt; crown::ResourceData &gt;',['../structcrown_1_1_array.html',1,'crown']]],
+  ['array_3c_20crown_3a_3aresourcerequest_20_3e',['Array&lt; crown::ResourceRequest &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3aspriteanimation_20_2a_20_3e',['Array&lt; crown::SpriteAnimation * &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3atexturedata_20_3e',['Array&lt; crown::TextureData &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3auniformdata_20_3e',['Array&lt; crown::UniformData &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3aworld_20_2a_20_3e',['Array&lt; crown::World * &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['array_3c_20resourcerequest_20_3e',['Array&lt; ResourceRequest &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20uint32_5ft_20_3e',['Array&lt; uint32_t &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['atomicint',['AtomicInt',['../structcrown_1_1_atomic_int.html',1,'crown']]]
 ];

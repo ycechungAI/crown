@@ -24,7 +24,6 @@ var searchData=
   ['collisiongroup',['CollisionGroup',['../structcrown_1_1_collision_group.html',1,'crown']]],
   ['collisionmode',['CollisionMode',['../structcrown_1_1_collision_mode.html',1,'crown']]],
   ['collisiontype',['CollisionType',['../structcrown_1_1_collision_type.html',1,'crown']]],
-  ['color4',['Color4',['../group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18',1,'crown']]],
   ['commandline',['CommandLine',['../structcrown_1_1_command_line.html',1,'crown']]],
   ['compareentry',['CompareEntry',['../structcrown_1_1sort__map__internal_1_1_compare_entry.html',1,'crown::sort_map_internal']]],
   ['compile_5fall',['compile_all',['../classcrown_1_1_bundle_compiler.html#a2b888c84349ad09c4c107fcdd6373234',1,'crown::BundleCompiler']]],

@@ -17,6 +17,7 @@ var searchData=
   ['resize',['resize',['../namespacecrown_1_1array.html#a5ea3a79de316d3aca3bc7b5e220febdf',1,'crown::array::resize()'],['../namespacecrown_1_1vector.html#a9ffc5aa51975d5a759bd8df136975d94',1,'crown::vector::resize()']]],
   ['resolution',['resolution',['../structcrown_1_1_device.html#a2512fcc111b17c7b8f247b52cfd57c69',1,'crown::Device']]],
   ['resource_5fmanager',['resource_manager',['../structcrown_1_1_device.html#aaf61aaf38128a36942ccb49e1b417300',1,'crown::Device']]],
+  ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html#ac56e552f3417825f8da5ff3c1d26fa2e',1,'crown::ResourceLoader']]],
   ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#a3e117a0d3466aa31e8e587783d803aca',1,'crown::ResourceManager']]],
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],
   ['root',['root',['../classcrown_1_1_j_s_o_n_parser.html#af47e4b2cd2fcf24db1dfbf22d6f08be9',1,'crown::JSONParser']]],

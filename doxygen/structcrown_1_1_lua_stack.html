@@ -119,9 +119,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memitem:ab03621fc0d9d47a4274346b3cbc7065c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab03621fc0d9d47a4274346b3cbc7065c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_nil</b> (int i)</td></tr>
 <tr class="separator:ab03621fc0d9d47a4274346b3cbc7065c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe19c22b2f7aec84d8d1ec82214b91eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe19c22b2f7aec84d8d1ec82214b91eb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_bool</b> (int i)</td></tr>
+<tr class="separator:afe19c22b2f7aec84d8d1ec82214b91eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab60c6f6cca3021ac1bbeb8f7a37743a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab60c6f6cca3021ac1bbeb8f7a37743a4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_number</b> (int i)</td></tr>
 <tr class="separator:ab60c6f6cca3021ac1bbeb8f7a37743a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a93d46f15231f21539ed90b2ec30a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45a93d46f15231f21539ed90b2ec30a5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_pointer</b> (int i)</td></tr>
+<tr class="separator:a45a93d46f15231f21539ed90b2ec30a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c6868d9fb84913096a16d9650f472f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76c6868d9fb84913096a16d9650f472f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_vector3</b> (int i)</td></tr>
+<tr class="separator:a76c6868d9fb84913096a16d9650f472f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b7fc95e274ba6443ae1a025d1691de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19b7fc95e274ba6443ae1a025d1691de"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_quaternion</b> (int i)</td></tr>
+<tr class="separator:a19b7fc95e274ba6443ae1a025d1691de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf0311a449577ea8c2e815ce5f77f1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bf0311a449577ea8c2e815ce5f77f1b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_matrix4x4</b> (int i)</td></tr>
+<tr class="separator:a5bf0311a449577ea8c2e815ce5f77f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a253e2ed1389b426d4db867e609f560e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a253e2ed1389b426d4db867e609f560e1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a253e2ed1389b426d4db867e609f560e1">value_type</a> (int i)</td></tr>
 <tr class="memdesc:a253e2ed1389b426d4db867e609f560e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps lua_type. <br /></td></tr>
@@ -132,12 +147,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_nil</b> ()</td><
 <tr class="memitem:ac2fc753b68ca91d4c6333454e1ae5dc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2fc753b68ca91d4c6333454e1ae5dc7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_bool</b> (bool value)</td></tr>
 <tr class="separator:ac2fc753b68ca91d4c6333454e1ae5dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbe7ae308b64c34ad35cc8e57f59c667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbe7ae308b64c34ad35cc8e57f59c667"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_int32</b> (int32_t value)</td></tr>
-<tr class="separator:acbe7ae308b64c34ad35cc8e57f59c667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae9643d0962c37fabc53ef6e62b46dba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae9643d0962c37fabc53ef6e62b46dba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_uint32</b> (uint32_t value)</td></tr>
-<tr class="separator:aae9643d0962c37fabc53ef6e62b46dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab579f9280a006db8a261d0e257224907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab579f9280a006db8a261d0e257224907"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_int</b> (int value)</td></tr>
+<tr class="separator:ab579f9280a006db8a261d0e257224907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee9f3b98ca12ca19eb3f90c12842151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ee9f3b98ca12ca19eb3f90c12842151"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_id</b> (uint32_t value)</td></tr>
+<tr class="separator:a4ee9f3b98ca12ca19eb3f90c12842151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c24996888fb7eeb35dd916b9a97fb8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c24996888fb7eeb35dd916b9a97fb8c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_string_id</b> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> value)</td></tr>
 <tr class="separator:a3c24996888fb7eeb35dd916b9a97fb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,12 +168,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_fstring</b> (con
 <tr class="memitem:a558b6cfed7a0fb99ae455e5b081b0058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a558b6cfed7a0fb99ae455e5b081b0058"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_literal</b> (const char *s, uint32_t len)</td></tr>
 <tr class="separator:a558b6cfed7a0fb99ae455e5b081b0058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2b2031ce4e29cb2ef554bad710ee22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2b2031ce4e29cb2ef554bad710ee22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_pointer</b> (void *p)</td></tr>
+<tr class="separator:ada2b2031ce4e29cb2ef554bad710ee22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57785a335febebed066a2b615634282e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57785a335febebed066a2b615634282e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_bool</b> (int i)</td></tr>
 <tr class="separator:a57785a335febebed066a2b615634282e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40353f759eb414c4d1f54399d02dadaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40353f759eb414c4d1f54399d02dadaf"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_int</b> (int i)</td></tr>
 <tr class="separator:a40353f759eb414c4d1f54399d02dadaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fabfa29f8211c1e949ea07f6db72b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59fabfa29f8211c1e949ea07f6db72b2"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_id</b> (int i)</td></tr>
+<tr class="separator:a59fabfa29f8211c1e949ea07f6db72b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a097d801b462c0604f063623d096d8be7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a097d801b462c0604f063623d096d8be7"></a>
 <a class="el" href="structcrown_1_1_string_id32.html">StringId32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_string_id</b> (int i)</td></tr>
 <tr class="separator:a097d801b462c0604f063623d096d8be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +189,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>get_float</b> (int i
 <tr class="memitem:ac719e1d4adebe6b03cf8e98ddff1d87e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac719e1d4adebe6b03cf8e98ddff1d87e"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>get_string</b> (int i)</td></tr>
 <tr class="separator:ac719e1d4adebe6b03cf8e98ddff1d87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afabdb3c81712dd7a83e86b2c23892f4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afabdb3c81712dd7a83e86b2c23892f4a"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>get_pointer</b> (int i)</td></tr>
+<tr class="separator:afabdb3c81712dd7a83e86b2c23892f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a3e5dbf6bac0ae39633fb40d7c05609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a5a3e5dbf6bac0ae39633fb40d7c05609">push_table</a> ()</td></tr>
 <tr class="memdesc:a5a3e5dbf6bac0ae39633fb40d7c05609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes an empty table onto the stack.  <a href="#a5a3e5dbf6bac0ae39633fb40d7c05609">More...</a><br /></td></tr>
 <tr class="separator:a5a3e5dbf6bac0ae39633fb40d7c05609"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,7 +316,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_debug_line</b> (
 <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_quaternion</b> (int i)</td></tr>
 <tr class="separator:afefd001a61562eaa5610c6e967bccf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50d8ca4b0e26a5b722315c0fc8d9be98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50d8ca4b0e26a5b722315c0fc8d9be98"></a>
-<a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_color4</b> (int i)</td></tr>
+<a class="el" href="structcrown_1_1_vector4.html">Color4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_color4</b> (int i)</td></tr>
 <tr class="separator:a50d8ca4b0e26a5b722315c0fc8d9be98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a532e3ae1afdf320948f2b45d8989c109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a532e3ae1afdf320948f2b45d8989c109"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_vector2</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;v)</td></tr>
@@ -330,6 +354,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_matrix4x4box</b>
 <tr class="memitem:a20ede60a53f3cb89f7f8474c0f4cc91e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20ede60a53f3cb89f7f8474c0f4cc91e"></a>
 <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_matrix4x4box</b> (int i)</td></tr>
 <tr class="separator:a20ede60a53f3cb89f7f8474c0f4cc91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402c1dc0befa3b810d1c0043bf5c0337"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a402c1dc0befa3b810d1c0043bf5c0337"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *p)</td></tr>
+<tr class="separator:a402c1dc0befa3b810d1c0043bf5c0337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af38286a44a791d569fa35f5d3c736b2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af38286a44a791d569fa35f5d3c736b2d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> *p)</td></tr>
+<tr class="separator:af38286a44a791d569fa35f5d3c736b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a754327576ce7394cbf980fc966859601"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a754327576ce7394cbf980fc966859601"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *p)</td></tr>
+<tr class="separator:a754327576ce7394cbf980fc966859601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a41c25040850c35c8f4b545b5b5620ac4"></a>
@@ -419,7 +452,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_matrix4x4box</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 17:54:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 7 2015 16:28:02 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

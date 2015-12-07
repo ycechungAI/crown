@@ -99,16 +99,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;filesystem.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;reader_writer.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;array.h&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecrown.html">crown</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structcrown_1_1_compile_options.html">   14</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcrown_1_1_compile_options.html">CompileOptions</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="structcrown_1_1_compile_options.html">CompileOptions</a>(<a class="code" href="classcrown_1_1_filesystem.html">Filesystem</a>&amp; fs, <a class="code" href="classcrown_1_1_file.html">File</a>* out, <span class="keyword">const</span> <span class="keywordtype">char</span>* platform)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="structcrown_1_1_compile_options.html">CompileOptions</a>(<a class="code" href="classcrown_1_1_filesystem.html">Filesystem</a>&amp; fs, <a class="code" href="structcrown_1_1_array.html">Buffer</a>&amp; buffer, <span class="keyword">const</span> <span class="keywordtype">char</span>* platform)</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        : _fs(fs)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        , _bw(*out)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        , _buffer(buffer)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        , _platform(platform)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
@@ -134,38 +134,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        _fs.<a class="code" href="classcrown_1_1_filesystem.html#a1a940642b837c8c5be25d043d80b6819">delete_file</a>(path);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classcrown_1_1_binary_writer.html">BinaryWriter</a>&amp; write(<span class="keyword">const</span> <span class="keywordtype">void</span>* data, uint32_t size)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> write(<span class="keyword">const</span> <span class="keywordtype">void</span>* data, uint32_t size)</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        _bw.write(data, size);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> _bw;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="classcrown_1_1_binary_writer.html">BinaryWriter</a>&amp; write(<span class="keyword">const</span> T&amp; data)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        _bw.write(data);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> _bw;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classcrown_1_1_binary_writer.html">BinaryWriter</a>&amp; write(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_array.html">Buffer</a>&amp; data)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1array.html#abaf98f06451dd2a6f9d06378e3bd5cfa">array::size</a>(data))</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            _bw.write(array::begin(data), <a class="code" href="namespacecrown_1_1array.html#abaf98f06451dd2a6f9d06378e3bd5cfa">array::size</a>(data));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> _bw;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* platform()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> _platform;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classcrown_1_1_filesystem.html">Filesystem</a>&amp; _fs;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classcrown_1_1_binary_writer.html">BinaryWriter</a> _bw;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* _platform;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <span class="comment">// namespace crown</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="namespacecrown_1_1array.html#a294101d2bd4253b3e0aa06092ae88331">array::push</a>(_buffer, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)data, size);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> write(<span class="keyword">const</span> T&amp; data)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="namespacecrown_1_1array.html#a294101d2bd4253b3e0aa06092ae88331">array::push</a>(_buffer, (<span class="keyword">const</span> <span class="keywordtype">char</span>*)&amp;data, <span class="keyword">sizeof</span>(data));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> write(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_array.html">Buffer</a>&amp; data)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1array.html#abaf98f06451dd2a6f9d06378e3bd5cfa">array::size</a>(data))</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="namespacecrown_1_1array.html#a294101d2bd4253b3e0aa06092ae88331">array::push</a>(_buffer, array::begin(data), <a class="code" href="namespacecrown_1_1array.html#abaf98f06451dd2a6f9d06378e3bd5cfa">array::size</a>(data));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* platform()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> _platform;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classcrown_1_1_filesystem.html">Filesystem</a>&amp; _fs;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="structcrown_1_1_array.html">Buffer</a>&amp; _buffer;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* _platform;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} <span class="comment">// namespace crown</span></div>
 <div class="ttc" id="classcrown_1_1_filesystem_html_afc16b72a4214fe712a8b0b5ff62641f7"><div class="ttname"><a href="classcrown_1_1_filesystem.html#afc16b72a4214fe712a8b0b5ff62641f7">crown::Filesystem::open</a></div><div class="ttdeci">virtual File * open(const char *path, FileOpenMode mode)=0</div><div class="ttdoc">Opens the file at the given path with the given mode. </div></div>
 <div class="ttc" id="structcrown_1_1_array_html"><div class="ttname"><a href="structcrown_1_1_array.html">crown::Array&lt; char &gt;</a></div></div>
 <div class="ttc" id="classcrown_1_1_filesystem_html_a7434baa99779324b186ef4b9ae43f701"><div class="ttname"><a href="classcrown_1_1_filesystem.html#a7434baa99779324b186ef4b9ae43f701">crown::Filesystem::close</a></div><div class="ttdeci">virtual void close(File *file)=0</div><div class="ttdoc">Closes the given file. </div></div>
@@ -175,16 +171,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classcrown_1_1_dynamic_string_html"><div class="ttname"><a href="classcrown_1_1_dynamic_string.html">crown::DynamicString</a></div><div class="ttdef"><b>Definition:</b> dynamic_string.h:18</div></div>
 <div class="ttc" id="classcrown_1_1_filesystem_html"><div class="ttname"><a href="classcrown_1_1_filesystem.html">crown::Filesystem</a></div><div class="ttdoc">Provides a platform-independent way to access files and directories on the host filesystem. </div><div class="ttdef"><b>Definition:</b> filesystem.h:21</div></div>
 <div class="ttc" id="classcrown_1_1_filesystem_html_a1a940642b837c8c5be25d043d80b6819"><div class="ttname"><a href="classcrown_1_1_filesystem.html#a1a940642b837c8c5be25d043d80b6819">crown::Filesystem::delete_file</a></div><div class="ttdeci">virtual void delete_file(const char *path)=0</div><div class="ttdoc">Deletes the file at the given path. </div></div>
+<div class="ttc" id="namespacecrown_1_1array_html_a294101d2bd4253b3e0aa06092ae88331"><div class="ttname"><a href="namespacecrown_1_1array.html#a294101d2bd4253b3e0aa06092ae88331">crown::array::push</a></div><div class="ttdeci">uint32_t push(Array&lt; T &gt; &amp;a, const T *items, uint32_t count)</div><div class="ttdoc">Appends count items to the array a and returns the number of items in the array after the append oper...</div><div class="ttdef"><b>Definition:</b> array.h:173</div></div>
 <div class="ttc" id="namespacecrown_html"><div class="ttname"><a href="namespacecrown.html">crown</a></div><div class="ttdef"><b>Definition:</b> audio.h:8</div></div>
 <div class="ttc" id="structcrown_1_1_compile_options_html"><div class="ttname"><a href="structcrown_1_1_compile_options.html">crown::CompileOptions</a></div><div class="ttdef"><b>Definition:</b> compile_options.h:14</div></div>
 <div class="ttc" id="namespacecrown_1_1array_html_abaf98f06451dd2a6f9d06378e3bd5cfa"><div class="ttname"><a href="namespacecrown_1_1array.html#abaf98f06451dd2a6f9d06378e3bd5cfa">crown::array::size</a></div><div class="ttdeci">uint32_t size(const Array&lt; T &gt; &amp;a)</div><div class="ttdoc">Returns the number of items in the array a. </div><div class="ttdef"><b>Definition:</b> array.h:87</div></div>
 <div class="ttc" id="classcrown_1_1_filesystem_html_ad833e0da5c0dd7e1a5e25a9c278b6cb6"><div class="ttname"><a href="classcrown_1_1_filesystem.html#ad833e0da5c0dd7e1a5e25a9c278b6cb6">crown::Filesystem::get_absolute_path</a></div><div class="ttdeci">virtual void get_absolute_path(const char *path, DynamicString &amp;os_path)=0</div><div class="ttdoc">Returns the absolute path of the given path based on the root path of the file source. </div></div>
 <div class="ttc" id="classcrown_1_1_file_html"><div class="ttname"><a href="classcrown_1_1_file.html">crown::File</a></div><div class="ttdoc">An abstraction to access data files. </div><div class="ttdef"><b>Definition:</b> file.h:30</div></div>
-<div class="ttc" id="classcrown_1_1_binary_writer_html"><div class="ttname"><a href="classcrown_1_1_binary_writer.html">crown::BinaryWriter</a></div><div class="ttdoc">A writer that offers a convenient way to write to a File. </div><div class="ttdef"><b>Definition:</b> reader_writer.h:85</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 2 2015 17:54:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 7 2015 16:28:01 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
