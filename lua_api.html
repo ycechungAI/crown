@@ -469,7 +469,7 @@ tt.literal {
 <dd>Returns true whether the vectors <em>a</em> and <em>b</em> are equal.</dd>
 <dt><strong>length</strong> (a) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the lenght of <em>a</em>.</dd>
-<dt><strong>squared_length</strong> (a) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dt><strong>length_squared</strong> (a) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the squared length of <em>a</em>.</dd>
 <dt><strong>set_length</strong> (a, len)</dt>
 <dd>Sets the lenght of <em>a</em> to <em>len</em>.</dd>
@@ -477,12 +477,16 @@ tt.literal {
 <dd>Normalizes <em>a</em> and returns the result.</dd>
 <dt><strong>distance</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the distance between the points <em>a</em> and <em>b</em>.</dd>
+<dt><strong>distance_squared</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Returns the squared distance between the points <em>a</em> and <em>b</em>.</dd>
 <dt><strong>angle</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the angle between the vectors <em>a</em> and <em>b</em>.</dd>
 <dt><strong>max</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns a vector that contains the largest value for each component from <em>a</em> and <em>b</em>.</dd>
 <dt><strong>min</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns a vector that contains the smallest value for each component from <em>a</em> and <em>b</em>.</dd>
+<dt><strong>lerp</strong> (a, b, t) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
+<dd>Returns the linearly interpolated vector between <em>a</em> and <em>b</em> at time <em>t</em> in [0, 1].</dd>
 </dl>
 <p><strong>forward</strong> () : Vector3</p>
 <p><strong>backward</strong> () : Vector3</p>
@@ -1019,7 +1023,8 @@ instead, you have to poll for completion with has_loaded().</dd>
 <blockquote>
 <dl class="docutils">
 <dt><strong>platform</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns a string identifying what platform the engine is running on.</dd>
+<dd>Returns a string identifying what platform the engine is running on.
+It can be either <tt class="docutils literal">android</tt>, <tt class="docutils literal">linux</tt> or <tt class="docutils literal">windows</tt></dd>
 <dt><strong>architecture</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying what architecture the engine is running on.</dd>
 <dt><strong>version</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>

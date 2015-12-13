@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scale',['scale',['../group___math.html#gaa0883e530a5230305337c08601c197b5',1,'crown::scale(const Matrix3x3 &amp;m)'],['../group___math.html#ga73843b76c3913493fa6ff7af59c1c181',1,'crown::scale(const Matrix4x4 &amp;m)']]],
+  ['scan_5fsource_5fdir',['scan_source_dir',['../classcrown_1_1_bundle_compiler.html#acb597c12aedae01c185b6977b8276d1e',1,'crown::BundleCompiler']]],
   ['scenegraph',['SceneGraph',['../structcrown_1_1_scene_graph.html',1,'crown']]],
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html',1,'crown']]],
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html#a7570d50231c79bdc35ab942ff488b3ea',1,'crown::ScopedMutex']]],
@@ -56,7 +57,9 @@ var searchData=
   ['skip',['skip',['../classcrown_1_1_apk_file.html#a52fa2f2f4d22953f96d45809be528036',1,'crown::ApkFile::skip()'],['../classcrown_1_1_disk_file.html#a1fe5b16d1e32b1d95df4d89e9622991c',1,'crown::DiskFile::skip()'],['../classcrown_1_1_file.html#a4ea5296378c5bb5da248486a31722ed5',1,'crown::File::skip()'],['../classcrown_1_1_null_file.html#a9bf06bc38c72f2ab5bd1934b49e307c7',1,'crown::NullFile::skip()'],['../classcrown_1_1_os_file.html#a9122fac17d481280b408378bb18cc6d9',1,'crown::OsFile::skip()']]],
   ['sort',['sort',['../namespacecrown_1_1sort__map.html#ab16ab415a05343486a99bcdbddad0c83',1,'crown::sort_map']]],
   ['sortmap',['SortMap',['../structcrown_1_1_sort_map.html',1,'crown']]],
+  ['sortmap_3c_20crown_3a_3astringid64_2c_20resourcetypedata_20_3e',['SortMap&lt; crown::StringId64, ResourceTypeData &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20resourcepair_2c_20resourceentry_20_3e',['SortMap&lt; ResourcePair, ResourceEntry &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
+  ['sortmap_3c_20stringid64_2c_20resourcetypedata_20_3e',['SortMap&lt; StringId64, ResourceTypeData &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sound_5fworld',['sound_world',['../classcrown_1_1_world.html#a8275874f07bcc65744e343e4f283f4d9',1,'crown::World']]],
   ['soundresource',['SoundResource',['../structcrown_1_1_sound_resource.html',1,'crown']]],
   ['soundtype',['SoundType',['../structcrown_1_1_sound_type.html',1,'crown']]],
@@ -71,7 +74,6 @@ var searchData=
   ['spriteanimationplayer',['SpriteAnimationPlayer',['../structcrown_1_1_sprite_animation_player.html',1,'crown']]],
   ['spriteanimationresource',['SpriteAnimationResource',['../structcrown_1_1_sprite_animation_resource.html',1,'crown']]],
   ['spriteresource',['SpriteResource',['../structcrown_1_1_sprite_resource.html',1,'crown']]],
-  ['squared_5flength',['squared_length',['../group___math.html#ga1d36d98a95aca2b46dc1e2cad8f8b380',1,'crown::squared_length(const Vector2 &amp;a)'],['../group___math.html#ga807d9ea8a383d0380a10e1a82af2aabb',1,'crown::squared_length(const Vector3 &amp;a)'],['../group___math.html#ga944bbe40baa4a25ef1c249449d46189f',1,'crown::squared_length(const Vector4 &amp;a)']]],
   ['stackallocator',['StackAllocator',['../classcrown_1_1_stack_allocator.html',1,'crown']]],
   ['starts_5fwith',['starts_with',['../classcrown_1_1_dynamic_string.html#ab5a7da82ebd34dfddf35b0c5bf8ec649',1,'crown::DynamicString']]],
   ['stop',['stop',['../classcrown_1_1_sound_world.html#a4c7610911f773a246d078affb1792ed0',1,'crown::SoundWorld']]],

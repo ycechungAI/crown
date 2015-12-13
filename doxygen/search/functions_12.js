@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scale',['scale',['../group___math.html#gaa0883e530a5230305337c08601c197b5',1,'crown::scale(const Matrix3x3 &amp;m)'],['../group___math.html#ga73843b76c3913493fa6ff7af59c1c181',1,'crown::scale(const Matrix4x4 &amp;m)']]],
+  ['scan_5fsource_5fdir',['scan_source_dir',['../classcrown_1_1_bundle_compiler.html#acb597c12aedae01c185b6977b8276d1e',1,'crown::BundleCompiler']]],
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html#a7570d50231c79bdc35ab942ff488b3ea',1,'crown::ScopedMutex']]],
   ['screen_5fto_5fworld',['screen_to_world',['../structcrown_1_1_camera.html#a31fc4ceb00a4919586fd79d75f2d13fb',1,'crown::Camera']]],
   ['seek',['seek',['../classcrown_1_1_apk_file.html#ac3506e6ef17b09e7e9da87e741a8b0cc',1,'crown::ApkFile::seek()'],['../classcrown_1_1_disk_file.html#a8eb2b3a6f84b4e1316ccd00132db571d',1,'crown::DiskFile::seek()'],['../classcrown_1_1_file.html#a38071bc1808c4efe50a2475ffa52f931',1,'crown::File::seek()'],['../classcrown_1_1_null_file.html#a91d644d6759f30a4fe3159805bffcb0e',1,'crown::NullFile::seek()'],['../classcrown_1_1_os_file.html#ac7c920c27caa2455de9ee6673ebd644e',1,'crown::OsFile::seek()']]],
@@ -52,7 +53,6 @@ var searchData=
   ['sound_5fworld',['sound_world',['../classcrown_1_1_world.html#a8275874f07bcc65744e343e4f283f4d9',1,'crown::World']]],
   ['space',['space',['../namespacecrown_1_1queue.html#a14fde5936ffe88b0c24434a8284857ba',1,'crown::queue']]],
   ['spawn_5funit',['spawn_unit',['../classcrown_1_1_world.html#ad6d38d5868ebd5e094181b22f01191cf',1,'crown::World']]],
-  ['squared_5flength',['squared_length',['../group___math.html#ga1d36d98a95aca2b46dc1e2cad8f8b380',1,'crown::squared_length(const Vector2 &amp;a)'],['../group___math.html#ga807d9ea8a383d0380a10e1a82af2aabb',1,'crown::squared_length(const Vector3 &amp;a)'],['../group___math.html#ga944bbe40baa4a25ef1c249449d46189f',1,'crown::squared_length(const Vector4 &amp;a)']]],
   ['starts_5fwith',['starts_with',['../classcrown_1_1_dynamic_string.html#ab5a7da82ebd34dfddf35b0c5bf8ec649',1,'crown::DynamicString']]],
   ['stop',['stop',['../classcrown_1_1_sound_world.html#a4c7610911f773a246d078affb1792ed0',1,'crown::SoundWorld']]],
   ['stop_5fall',['stop_all',['../classcrown_1_1_sound_world.html#a84e1146efc2ea54a14656dd005f0fa8b',1,'crown::SoundWorld']]],

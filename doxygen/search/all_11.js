@@ -6,7 +6,7 @@ var searchData=
   ['raycast',['Raycast',['../structcrown_1_1_raycast.html',1,'crown']]],
   ['raycast',['Raycast',['../structcrown_1_1_raycast.html#a6ddb6020df95597d5fb3471fec0ba83f',1,'crown::Raycast']]],
   ['raycasthit',['RaycastHit',['../structcrown_1_1_raycast_hit.html',1,'crown']]],
-  ['read',['read',['../classcrown_1_1_apk_file.html#ae26bfcf8165180b3ba6fe0047ab0c9f6',1,'crown::ApkFile::read()'],['../classcrown_1_1_disk_file.html#a5c15a53b1e5e1d605cd264fd71f1445b',1,'crown::DiskFile::read()'],['../classcrown_1_1_file.html#ade0a01c5c70d6e5b781db63e6386a45a',1,'crown::File::read()'],['../classcrown_1_1_null_file.html#a84f03d53e0b107b984d5df9c7aa4e03b',1,'crown::NullFile::read()'],['../classcrown_1_1_os_file.html#a7731c51c45a79e9873eeb53b001ad94c',1,'crown::OsFile::read()']]],
+  ['read',['read',['../classcrown_1_1_apk_file.html#aed0ad86f0b2780606795fbeec73d27ec',1,'crown::ApkFile::read()'],['../classcrown_1_1_disk_file.html#a0f45d039e35d532c4c67f90e95a9a1c7',1,'crown::DiskFile::read()'],['../classcrown_1_1_file.html#a2333362694f0e7f83be07b8df0d611d6',1,'crown::File::read()'],['../classcrown_1_1_null_file.html#ada79f4d84ecc39c055161d7a9edc32ad',1,'crown::NullFile::read()'],['../classcrown_1_1_os_file.html#a7731c51c45a79e9873eeb53b001ad94c',1,'crown::OsFile::read()']]],
   ['read_5fstring',['read_string',['../classcrown_1_1_text_reader.html#a4f491155428989bee03f4d2d4208325e',1,'crown::TextReader']]],
   ['readresult',['ReadResult',['../structcrown_1_1_read_result.html',1,'crown']]],
   ['recordfloat',['RecordFloat',['../structcrown_1_1profiler_1_1_record_float.html',1,'crown::profiler']]],

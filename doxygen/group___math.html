@@ -180,10 +180,10 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>crown::next_pow_2
 <tr class="memitem:ga2ceb00699c6c4eade596dc84902505a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2ceb00699c6c4eade596dc84902505a3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::is_pow_2</b> (uint32_t x)</td></tr>
 <tr class="separator:ga2ceb00699c6c4eade596dc84902505a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac0158c1da73f6a0c7e777ffb69710e51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac0158c1da73f6a0c7e777ffb69710e51"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gac0158c1da73f6a0c7e777ffb69710e51">crown::linear</a> (const float p0, const float p1, float t)</td></tr>
-<tr class="memdesc:gac0158c1da73f6a0c7e777ffb69710e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linear interpolated value between <em>p0</em> and <em>p1</em> at time <em>t</em>. <br /></td></tr>
-<tr class="separator:gac0158c1da73f6a0c7e777ffb69710e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2c8df119f917c3f6f86d67a4869ccf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa2c8df119f917c3f6f86d67a4869ccf9"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa2c8df119f917c3f6f86d67a4869ccf9">crown::lerp</a> (const float p0, const float p1, float t)</td></tr>
+<tr class="memdesc:gaa2c8df119f917c3f6f86d67a4869ccf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linear interpolated value between <em>p0</em> and <em>p1</em> at time <em>t</em>. <br /></td></tr>
+<tr class="separator:gaa2c8df119f917c3f6f86d67a4869ccf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafd2760f440948ed29564825718de1324"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafd2760f440948ed29564825718de1324"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gafd2760f440948ed29564825718de1324">crown::cosine</a> (const float p0, const float p1, float t)</td></tr>
 <tr class="memdesc:gafd2760f440948ed29564825718de1324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cosine interpolated value between <em>p0</em> and <em>p1</em> at time <em>t</em>. <br /></td></tr>
@@ -559,22 +559,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga2db72b4171e2002949621776908a796b">crown::dot</a> (const Vector2 &amp;a, const Vector2 &amp;b)</td></tr>
 <tr class="memdesc:ga2db72b4171e2002949621776908a796b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dot product between the vectors <em>a</em> and <em>b</em>. <br /></td></tr>
 <tr class="separator:ga2db72b4171e2002949621776908a796b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7388cc7bed6c7cfe87ef4ee57b1a0291"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7388cc7bed6c7cfe87ef4ee57b1a0291"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga7388cc7bed6c7cfe87ef4ee57b1a0291">crown::length_squared</a> (const Vector2 &amp;a)</td></tr>
+<tr class="memdesc:ga7388cc7bed6c7cfe87ef4ee57b1a0291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared length of <em>a</em>. <br /></td></tr>
+<tr class="separator:ga7388cc7bed6c7cfe87ef4ee57b1a0291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga63f271dbd3752bb82b8d93463f9ca3e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga63f271dbd3752bb82b8d93463f9ca3e0"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga63f271dbd3752bb82b8d93463f9ca3e0">crown::length</a> (const Vector2 &amp;a)</td></tr>
-<tr class="memdesc:ga63f271dbd3752bb82b8d93463f9ca3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lenght of <em>a</em>. <br /></td></tr>
+<tr class="memdesc:ga63f271dbd3752bb82b8d93463f9ca3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of <em>a</em>. <br /></td></tr>
 <tr class="separator:ga63f271dbd3752bb82b8d93463f9ca3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1d36d98a95aca2b46dc1e2cad8f8b380"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1d36d98a95aca2b46dc1e2cad8f8b380"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga1d36d98a95aca2b46dc1e2cad8f8b380">crown::squared_length</a> (const Vector2 &amp;a)</td></tr>
-<tr class="memdesc:ga1d36d98a95aca2b46dc1e2cad8f8b380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared length of <em>a</em>. <br /></td></tr>
-<tr class="separator:ga1d36d98a95aca2b46dc1e2cad8f8b380"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa94c00ef818fbaa916016d08eeea7da0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa94c00ef818fbaa916016d08eeea7da0"></a>
 Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa94c00ef818fbaa916016d08eeea7da0">crown::normalize</a> (Vector2 &amp;a)</td></tr>
 <tr class="memdesc:gaa94c00ef818fbaa916016d08eeea7da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes <em>a</em> and returns the result. <br /></td></tr>
 <tr class="separator:gaa94c00ef818fbaa916016d08eeea7da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7d592cc3aa6fa20063a581a203a64a48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7d592cc3aa6fa20063a581a203a64a48"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga7d592cc3aa6fa20063a581a203a64a48">crown::set_length</a> (Vector2 &amp;a, float len)</td></tr>
-<tr class="memdesc:ga7d592cc3aa6fa20063a581a203a64a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lenght of <em>a</em> to <em>len</em>. <br /></td></tr>
+<tr class="memdesc:ga7d592cc3aa6fa20063a581a203a64a48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the length of <em>a</em> to <em>len</em>. <br /></td></tr>
 <tr class="separator:ga7d592cc3aa6fa20063a581a203a64a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c3e8eee70371fd53f1171bb94406705"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0c3e8eee70371fd53f1171bb94406705"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga0c3e8eee70371fd53f1171bb94406705">crown::distance_squared</a> (const Vector2 &amp;a, const Vector2 &amp;b)</td></tr>
+<tr class="memdesc:ga0c3e8eee70371fd53f1171bb94406705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared distance between the points <em>a</em> and <em>b</em>. <br /></td></tr>
+<tr class="separator:ga0c3e8eee70371fd53f1171bb94406705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga90e434918d67ef4311d68c834ae60a68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga90e434918d67ef4311d68c834ae60a68"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga90e434918d67ef4311d68c834ae60a68">crown::distance</a> (const Vector2 &amp;a, const Vector2 &amp;b)</td></tr>
 <tr class="memdesc:ga90e434918d67ef4311d68c834ae60a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance between the points <em>a</em> and <em>b</em>. <br /></td></tr>
@@ -591,6 +595,10 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga6d102ac898db4ba0d50c8a71f2deaff6">crown::min</a> (const Vector2 &amp;a, const Vector2 &amp;b)</td></tr>
 <tr class="memdesc:ga6d102ac898db4ba0d50c8a71f2deaff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector that contains the smallest value for each component from <em>a</em> and <em>b</em>. <br /></td></tr>
 <tr class="separator:ga6d102ac898db4ba0d50c8a71f2deaff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf8191dfd70d818f39246a541df72ce0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabf8191dfd70d818f39246a541df72ce0"></a>
+Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gabf8191dfd70d818f39246a541df72ce0">crown::lerp</a> (const Vector2 &amp;a, const Vector2 &amp;b, float t)</td></tr>
+<tr class="memdesc:gabf8191dfd70d818f39246a541df72ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linearly interpolated vector between <em>and</em> <b>at</b> time <em>t</em> in [0, 1]. <br /></td></tr>
+<tr class="separator:gabf8191dfd70d818f39246a541df72ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9b1e5ddf58961ff7da2faed9ab4b9274"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9b1e5ddf58961ff7da2faed9ab4b9274"></a>
 float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga9b1e5ddf58961ff7da2faed9ab4b9274">crown::to_float_ptr</a> (Vector2 &amp;a)</td></tr>
 <tr class="memdesc:ga9b1e5ddf58961ff7da2faed9ab4b9274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pointer to the data of <em>a</em>. <br /></td></tr>
@@ -650,22 +658,26 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gro
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f">crown::cross</a> (const Vector3 &amp;a, const Vector3 &amp;b)</td></tr>
 <tr class="memdesc:ga8c5246b6d0051fc25ef9cee87d0d8a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cross product between the vectors <em>a</em> and <em>b</em>. <br /></td></tr>
 <tr class="separator:ga8c5246b6d0051fc25ef9cee87d0d8a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad368e93c8394cd737d65aa1434641e8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad368e93c8394cd737d65aa1434641e8b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gad368e93c8394cd737d65aa1434641e8b">crown::length_squared</a> (const Vector3 &amp;a)</td></tr>
+<tr class="memdesc:gad368e93c8394cd737d65aa1434641e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared length of <em>a</em>. <br /></td></tr>
+<tr class="separator:gad368e93c8394cd737d65aa1434641e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafd529871971796570685ee7b66bdd22e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafd529871971796570685ee7b66bdd22e"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gafd529871971796570685ee7b66bdd22e">crown::length</a> (const Vector3 &amp;a)</td></tr>
-<tr class="memdesc:gafd529871971796570685ee7b66bdd22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lenght of <em>a</em>. <br /></td></tr>
+<tr class="memdesc:gafd529871971796570685ee7b66bdd22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of <em>a</em>. <br /></td></tr>
 <tr class="separator:gafd529871971796570685ee7b66bdd22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga807d9ea8a383d0380a10e1a82af2aabb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga807d9ea8a383d0380a10e1a82af2aabb"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga807d9ea8a383d0380a10e1a82af2aabb">crown::squared_length</a> (const Vector3 &amp;a)</td></tr>
-<tr class="memdesc:ga807d9ea8a383d0380a10e1a82af2aabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared length of <em>a</em>. <br /></td></tr>
-<tr class="separator:ga807d9ea8a383d0380a10e1a82af2aabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga90f52b9b9f0c0428102b68b2e2cbf3b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga90f52b9b9f0c0428102b68b2e2cbf3b8"></a>
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga90f52b9b9f0c0428102b68b2e2cbf3b8">crown::normalize</a> (Vector3 &amp;a)</td></tr>
 <tr class="memdesc:ga90f52b9b9f0c0428102b68b2e2cbf3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes <em>a</em> and returns the result. <br /></td></tr>
 <tr class="separator:ga90f52b9b9f0c0428102b68b2e2cbf3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5f26b00692aef8b35d20b50a2a05ded1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5f26b00692aef8b35d20b50a2a05ded1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga5f26b00692aef8b35d20b50a2a05ded1">crown::set_length</a> (Vector3 &amp;a, float len)</td></tr>
-<tr class="memdesc:ga5f26b00692aef8b35d20b50a2a05ded1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lenght of <em>a</em> to <em>len</em>. <br /></td></tr>
+<tr class="memdesc:ga5f26b00692aef8b35d20b50a2a05ded1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the length of <em>a</em> to <em>len</em>. <br /></td></tr>
 <tr class="separator:ga5f26b00692aef8b35d20b50a2a05ded1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47cd671e9c7a8520704b2e31e6b8be8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga47cd671e9c7a8520704b2e31e6b8be8c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga47cd671e9c7a8520704b2e31e6b8be8c">crown::distance_squared</a> (const Vector3 &amp;a, const Vector3 &amp;b)</td></tr>
+<tr class="memdesc:ga47cd671e9c7a8520704b2e31e6b8be8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared distance between the points <em>a</em> and <em>b</em>. <br /></td></tr>
+<tr class="separator:ga47cd671e9c7a8520704b2e31e6b8be8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac8edb94bfb7ad392916320ea15b20858"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac8edb94bfb7ad392916320ea15b20858"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gac8edb94bfb7ad392916320ea15b20858">crown::distance</a> (const Vector3 &amp;a, const Vector3 &amp;b)</td></tr>
 <tr class="memdesc:gac8edb94bfb7ad392916320ea15b20858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance between the points <em>a</em> and <em>b</em>. <br /></td></tr>
@@ -682,6 +694,10 @@ Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga8cee13ecf2d06e54f8306fc688b79603">crown::min</a> (const Vector3 &amp;a, const Vector3 &amp;b)</td></tr>
 <tr class="memdesc:ga8cee13ecf2d06e54f8306fc688b79603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector that contains the smallest value for each component from <em>a</em> and <em>b</em>. <br /></td></tr>
 <tr class="separator:ga8cee13ecf2d06e54f8306fc688b79603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8314bc04724629ffe5a274fe017cc8a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8314bc04724629ffe5a274fe017cc8a6"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga8314bc04724629ffe5a274fe017cc8a6">crown::lerp</a> (const Vector3 &amp;a, const Vector3 &amp;b, float t)</td></tr>
+<tr class="memdesc:ga8314bc04724629ffe5a274fe017cc8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linearly interpolated vector between <em>and</em> <b>at</b> time <em>t</em> in [0, 1]. <br /></td></tr>
+<tr class="separator:ga8314bc04724629ffe5a274fe017cc8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaec5deabde66a095b954b3c76fb9fe7ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaec5deabde66a095b954b3c76fb9fe7ea"></a>
 float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaec5deabde66a095b954b3c76fb9fe7ea">crown::to_float_ptr</a> (Vector3 &amp;a)</td></tr>
 <tr class="memdesc:gaec5deabde66a095b954b3c76fb9fe7ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pointer to the data of <em>a</em>. <br /></td></tr>
@@ -748,22 +764,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga4dcfc9faa116ab19dd03763e84f1531b">crown::dot</a> (const Vector4 &amp;a, const Vector4 &amp;b)</td></tr>
 <tr class="memdesc:ga4dcfc9faa116ab19dd03763e84f1531b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dot product between the vectors <em>a</em> and <em>b</em>. <br /></td></tr>
 <tr class="separator:ga4dcfc9faa116ab19dd03763e84f1531b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd4ba552eca5c7053fe1a66e722ad331"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabd4ba552eca5c7053fe1a66e722ad331"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gabd4ba552eca5c7053fe1a66e722ad331">crown::length_squared</a> (const Vector4 &amp;a)</td></tr>
+<tr class="memdesc:gabd4ba552eca5c7053fe1a66e722ad331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared length of <em>a</em>. <br /></td></tr>
+<tr class="separator:gabd4ba552eca5c7053fe1a66e722ad331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5207cc8c1bc06b356fcdf27342262433"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5207cc8c1bc06b356fcdf27342262433"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga5207cc8c1bc06b356fcdf27342262433">crown::length</a> (const Vector4 &amp;a)</td></tr>
-<tr class="memdesc:ga5207cc8c1bc06b356fcdf27342262433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lenght of <em>a</em>. <br /></td></tr>
+<tr class="memdesc:ga5207cc8c1bc06b356fcdf27342262433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of <em>a</em>. <br /></td></tr>
 <tr class="separator:ga5207cc8c1bc06b356fcdf27342262433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga944bbe40baa4a25ef1c249449d46189f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga944bbe40baa4a25ef1c249449d46189f"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga944bbe40baa4a25ef1c249449d46189f">crown::squared_length</a> (const Vector4 &amp;a)</td></tr>
-<tr class="memdesc:ga944bbe40baa4a25ef1c249449d46189f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared length of <em>a</em>. <br /></td></tr>
-<tr class="separator:ga944bbe40baa4a25ef1c249449d46189f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc418c58cab18b8fad7a8ea72eb8ac56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafc418c58cab18b8fad7a8ea72eb8ac56"></a>
 Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gafc418c58cab18b8fad7a8ea72eb8ac56">crown::normalize</a> (Vector4 &amp;a)</td></tr>
 <tr class="memdesc:gafc418c58cab18b8fad7a8ea72eb8ac56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalizes <em>a</em> and returns the result. <br /></td></tr>
 <tr class="separator:gafc418c58cab18b8fad7a8ea72eb8ac56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga558ce49e205c0a6aca63a5c5e074aef8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga558ce49e205c0a6aca63a5c5e074aef8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga558ce49e205c0a6aca63a5c5e074aef8">crown::set_length</a> (Vector4 &amp;a, float len)</td></tr>
-<tr class="memdesc:ga558ce49e205c0a6aca63a5c5e074aef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lenght of <em>a</em> to <em>len</em>. <br /></td></tr>
+<tr class="memdesc:ga558ce49e205c0a6aca63a5c5e074aef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the length of <em>a</em> to <em>len</em>. <br /></td></tr>
 <tr class="separator:ga558ce49e205c0a6aca63a5c5e074aef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa623c0c4bccb5693ae7e4fad82ecc049"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa623c0c4bccb5693ae7e4fad82ecc049"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa623c0c4bccb5693ae7e4fad82ecc049">crown::distance_squared</a> (const Vector4 &amp;a, const Vector4 &amp;b)</td></tr>
+<tr class="memdesc:gaa623c0c4bccb5693ae7e4fad82ecc049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squared distance between the points <em>a</em> and <em>b</em>. <br /></td></tr>
+<tr class="separator:gaa623c0c4bccb5693ae7e4fad82ecc049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga37990056c1623e22782b34126ca5e829"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga37990056c1623e22782b34126ca5e829"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga37990056c1623e22782b34126ca5e829">crown::distance</a> (const Vector4 &amp;a, const Vector4 &amp;b)</td></tr>
 <tr class="memdesc:ga37990056c1623e22782b34126ca5e829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance between the points <em>a</em> and <em>b</em>. <br /></td></tr>
@@ -780,6 +800,10 @@ Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaab2cdd0aad9a26e05874faf61ed62c3b">crown::min</a> (const Vector4 &amp;a, const Vector4 &amp;b)</td></tr>
 <tr class="memdesc:gaab2cdd0aad9a26e05874faf61ed62c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector that contains the smallest value for each component from <em>a</em> and <em>b</em>. <br /></td></tr>
 <tr class="separator:gaab2cdd0aad9a26e05874faf61ed62c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga439faa7853f702532711b137a27a1095"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga439faa7853f702532711b137a27a1095"></a>
+Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga439faa7853f702532711b137a27a1095">crown::lerp</a> (const Vector4 &amp;a, const Vector4 &amp;b, float t)</td></tr>
+<tr class="memdesc:ga439faa7853f702532711b137a27a1095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linearly interpolated vector between <em>and</em> <b>at</b> time <em>t</em> in [0, 1]. <br /></td></tr>
+<tr class="separator:ga439faa7853f702532711b137a27a1095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2a0c5067fc9e5410bda29963fca0d053"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2a0c5067fc9e5410bda29963fca0d053"></a>
 float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga2a0c5067fc9e5410bda29963fca0d053">crown::to_float_ptr</a> (Vector4 &amp;a)</td></tr>
 <tr class="memdesc:ga2a0c5067fc9e5410bda29963fca0d053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pointer to the data of <em>a</em>. <br /></td></tr>
@@ -1249,7 +1273,7 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_P
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 7 2015 16:28:02 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 13 2015 19:09:47 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

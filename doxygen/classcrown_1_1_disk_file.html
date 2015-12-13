@@ -122,12 +122,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fe5b16d1e32b1d95df4d89e9622991c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a1fe5b16d1e32b1d95df4d89e9622991c">skip</a> (uint32_t bytes)</td></tr>
 <tr class="memdesc:a1fe5b16d1e32b1d95df4d89e9622991c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position indicator to bytes after current position.  <a href="#a1fe5b16d1e32b1d95df4d89e9622991c">More...</a><br /></td></tr>
 <tr class="separator:a1fe5b16d1e32b1d95df4d89e9622991c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c15a53b1e5e1d605cd264fd71f1445b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a5c15a53b1e5e1d605cd264fd71f1445b">read</a> (void *buffer, uint32_t <a class="el" href="classcrown_1_1_disk_file.html#ae815ee6f94d29040247ae9190e08b6f5">size</a>)</td></tr>
-<tr class="memdesc:a5c15a53b1e5e1d605cd264fd71f1445b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a block of data from the file.  <a href="#a5c15a53b1e5e1d605cd264fd71f1445b">More...</a><br /></td></tr>
-<tr class="separator:a5c15a53b1e5e1d605cd264fd71f1445b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b8152b117c93524121d753ee3d43faa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a1b8152b117c93524121d753ee3d43faa">write</a> (const void *buffer, uint32_t <a class="el" href="classcrown_1_1_disk_file.html#ae815ee6f94d29040247ae9190e08b6f5">size</a>)</td></tr>
-<tr class="memdesc:a1b8152b117c93524121d753ee3d43faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block of data to the file.  <a href="#a1b8152b117c93524121d753ee3d43faa">More...</a><br /></td></tr>
-<tr class="separator:a1b8152b117c93524121d753ee3d43faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f45d039e35d532c4c67f90e95a9a1c7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a0f45d039e35d532c4c67f90e95a9a1c7">read</a> (void *buffer, uint32_t <a class="el" href="classcrown_1_1_disk_file.html#ae815ee6f94d29040247ae9190e08b6f5">size</a>)</td></tr>
+<tr class="memdesc:a0f45d039e35d532c4c67f90e95a9a1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a block of data from the file.  <a href="#a0f45d039e35d532c4c67f90e95a9a1c7">More...</a><br /></td></tr>
+<tr class="separator:a0f45d039e35d532c4c67f90e95a9a1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ac0af712a26fcc3aba5ec01070a635"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a76ac0af712a26fcc3aba5ec01070a635">write</a> (const void *buffer, uint32_t <a class="el" href="classcrown_1_1_disk_file.html#ae815ee6f94d29040247ae9190e08b6f5">size</a>)</td></tr>
+<tr class="memdesc:a76ac0af712a26fcc3aba5ec01070a635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block of data to the file.  <a href="#a76ac0af712a26fcc3aba5ec01070a635">More...</a><br /></td></tr>
+<tr class="separator:a76ac0af712a26fcc3aba5ec01070a635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85d95d80e03eef82eb90fea2dfcc7630"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a85d95d80e03eef82eb90fea2dfcc7630">copy_to</a> (<a class="el" href="classcrown_1_1_file.html">File</a> &amp;file, uint32_t <a class="el" href="classcrown_1_1_disk_file.html#ae815ee6f94d29040247ae9190e08b6f5">size</a>=0)</td></tr>
 <tr class="memdesc:a85d95d80e03eef82eb90fea2dfcc7630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a chunk of 'size' bytes of data from this to another file.  <a href="#a85d95d80e03eef82eb90fea2dfcc7630">More...</a><br /></td></tr>
 <tr class="separator:a85d95d80e03eef82eb90fea2dfcc7630"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +206,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 
 <p>Returns whether the file can be read. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a9516e130277284a86fd4d05ac42fffcc">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#acc597e7e432c0a3edcd3f83e64d5ecfa">crown::File</a>.</p>
 
 </div>
 </div>
@@ -233,7 +233,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 
 <p>Returns whether the file can be sought. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a6e3c8d994e0d538555eb2d9e08fe85a4">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#af1661e533980abc9c21c1821c3231e2d">crown::File</a>.</p>
 
 </div>
 </div>
@@ -260,7 +260,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 
 <p>Returns whether the file can be wrote. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a17f067c1f89b7d74f6d0e1adf9fb7226">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a66fe094d68cb0b22d4fa597dbe10dc31">crown::File</a>.</p>
 
 </div>
 </div>
@@ -413,7 +413,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 
 </div>
 </div>
-<a class="anchor" id="a5c15a53b1e5e1d605cd264fd71f1445b"></a>
+<a class="anchor" id="a0f45d039e35d532c4c67f90e95a9a1c7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -421,7 +421,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFile::read </td>
+          <td class="memname">uint32_t crown::DiskFile::read </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
@@ -447,7 +447,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 
 <p>Reads a block of data from the file. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#ade0a01c5c70d6e5b781db63e6386a45a">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a2333362694f0e7f83be07b8df0d611d6">crown::File</a>.</p>
 
 </div>
 </div>
@@ -561,7 +561,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 
 </div>
 </div>
-<a class="anchor" id="a1b8152b117c93524121d753ee3d43faa"></a>
+<a class="anchor" id="a76ac0af712a26fcc3aba5ec01070a635"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -569,7 +569,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFile::write </td>
+          <td class="memname">uint32_t crown::DiskFile::write </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
@@ -595,7 +595,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 
 <p>Writes a block of data to the file. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#ac159fff07636f5fe09f6e280910497aa">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a30e01d704c896f22d1bfabb8d977c549">crown::File</a>.</p>
 
 </div>
 </div>
@@ -606,7 +606,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 7 2015 16:28:02 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 13 2015 19:09:47 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

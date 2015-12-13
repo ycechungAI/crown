@@ -124,14 +124,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a4ea5296378c5bb5da248486a31722ed5">skip</a> (uint32_t bytes)=0</td></tr>
 <tr class="memdesc:a4ea5296378c5bb5da248486a31722ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position indicator to bytes after current position. <br /></td></tr>
 <tr class="separator:a4ea5296378c5bb5da248486a31722ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade0a01c5c70d6e5b781db63e6386a45a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade0a01c5c70d6e5b781db63e6386a45a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#ade0a01c5c70d6e5b781db63e6386a45a">read</a> (void *buffer, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
-<tr class="memdesc:ade0a01c5c70d6e5b781db63e6386a45a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a block of data from the file. <br /></td></tr>
-<tr class="separator:ade0a01c5c70d6e5b781db63e6386a45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac159fff07636f5fe09f6e280910497aa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac159fff07636f5fe09f6e280910497aa"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#ac159fff07636f5fe09f6e280910497aa">write</a> (const void *buffer, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
-<tr class="memdesc:ac159fff07636f5fe09f6e280910497aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block of data to the file. <br /></td></tr>
-<tr class="separator:ac159fff07636f5fe09f6e280910497aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2333362694f0e7f83be07b8df0d611d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2333362694f0e7f83be07b8df0d611d6"></a>
+virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a2333362694f0e7f83be07b8df0d611d6">read</a> (void *buffer, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
+<tr class="memdesc:a2333362694f0e7f83be07b8df0d611d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a block of data from the file. <br /></td></tr>
+<tr class="separator:a2333362694f0e7f83be07b8df0d611d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e01d704c896f22d1bfabb8d977c549"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30e01d704c896f22d1bfabb8d977c549"></a>
+virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a30e01d704c896f22d1bfabb8d977c549">write</a> (const void *buffer, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
+<tr class="memdesc:a30e01d704c896f22d1bfabb8d977c549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block of data to the file. <br /></td></tr>
+<tr class="separator:a30e01d704c896f22d1bfabb8d977c549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dcbfe46edc6a42531d2ff79c14088a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dcbfe46edc6a42531d2ff79c14088a9"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a9dcbfe46edc6a42531d2ff79c14088a9">copy_to</a> (<a class="el" href="classcrown_1_1_file.html">File</a> &amp;file, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>=0)=0</td></tr>
 <tr class="memdesc:a9dcbfe46edc6a42531d2ff79c14088a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a chunk of 'size' bytes of data from this to another file. <br /></td></tr>
@@ -153,18 +153,18 @@ virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="memitem:a50990912a0a73fa06199f12478537034"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">position</a> ()=0</td></tr>
 <tr class="memdesc:a50990912a0a73fa06199f12478537034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position in file.  <a href="#a50990912a0a73fa06199f12478537034">More...</a><br /></td></tr>
 <tr class="separator:a50990912a0a73fa06199f12478537034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9516e130277284a86fd4d05ac42fffcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9516e130277284a86fd4d05ac42fffcc"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a9516e130277284a86fd4d05ac42fffcc">can_read</a> () const  =0</td></tr>
-<tr class="memdesc:a9516e130277284a86fd4d05ac42fffcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be read. <br /></td></tr>
-<tr class="separator:a9516e130277284a86fd4d05ac42fffcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17f067c1f89b7d74f6d0e1adf9fb7226"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17f067c1f89b7d74f6d0e1adf9fb7226"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a17f067c1f89b7d74f6d0e1adf9fb7226">can_write</a> () const  =0</td></tr>
-<tr class="memdesc:a17f067c1f89b7d74f6d0e1adf9fb7226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be wrote. <br /></td></tr>
-<tr class="separator:a17f067c1f89b7d74f6d0e1adf9fb7226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e3c8d994e0d538555eb2d9e08fe85a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e3c8d994e0d538555eb2d9e08fe85a4"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a6e3c8d994e0d538555eb2d9e08fe85a4">can_seek</a> () const  =0</td></tr>
-<tr class="memdesc:a6e3c8d994e0d538555eb2d9e08fe85a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be sought. <br /></td></tr>
-<tr class="separator:a6e3c8d994e0d538555eb2d9e08fe85a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc597e7e432c0a3edcd3f83e64d5ecfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc597e7e432c0a3edcd3f83e64d5ecfa"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#acc597e7e432c0a3edcd3f83e64d5ecfa">can_read</a> () const =0</td></tr>
+<tr class="memdesc:acc597e7e432c0a3edcd3f83e64d5ecfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be read. <br /></td></tr>
+<tr class="separator:acc597e7e432c0a3edcd3f83e64d5ecfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fe094d68cb0b22d4fa597dbe10dc31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66fe094d68cb0b22d4fa597dbe10dc31"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a66fe094d68cb0b22d4fa597dbe10dc31">can_write</a> () const =0</td></tr>
+<tr class="memdesc:a66fe094d68cb0b22d4fa597dbe10dc31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be wrote. <br /></td></tr>
+<tr class="separator:a66fe094d68cb0b22d4fa597dbe10dc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1661e533980abc9c21c1821c3231e2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1661e533980abc9c21c1821c3231e2d"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#af1661e533980abc9c21c1821c3231e2d">can_seek</a> () const =0</td></tr>
+<tr class="memdesc:af1661e533980abc9c21c1821c3231e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be sought. <br /></td></tr>
+<tr class="separator:af1661e533980abc9c21c1821c3231e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -266,7 +266,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 7 2015 16:28:02 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 13 2015 19:09:47 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

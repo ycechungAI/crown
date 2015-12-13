@@ -122,127 +122,124 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespacecrown_1_1frustum.html#aa6506b04d0487bcb98597a929f4c6465">   47</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacecrown_1_1frustum.html#aa6506b04d0487bcb98597a929f4c6465">contains_point</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_frustum.html">Frustum</a>&amp; f, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; p)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.left, p) &lt; 0.0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.right, p) &lt; 0.0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.bottom, p) &lt; 0.0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.top, p) &lt; 0.0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.near, p) &lt; 0.0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.far, p) &lt; 0.0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">   59</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_frustum.html">Frustum</a>&amp; f, uint32_t index)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        CE_ASSERT(index &lt; 8, <span class="stringliteral">&quot;Index must be &lt; 8&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// 0 = Near bottom left</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// 1 = Near bottom right</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// 2 = Near top right</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// 3 = Near top left</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// 4 = Far bottom left</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// 5 = Far bottom right</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// 6 = Far top right</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// 7 = Far top left</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">const</span> <a class="code" href="structcrown_1_1_plane.html">Plane</a>* side = &amp;f.left;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> ip;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">switch</span> (index)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">case</span> 0: plane_3_intersection(side[4], side[0], side[2], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">case</span> 1: plane_3_intersection(side[4], side[1], side[2], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">case</span> 2: plane_3_intersection(side[4], side[1], side[3], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">case</span> 3: plane_3_intersection(side[4], side[0], side[3], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">case</span> 4: plane_3_intersection(side[5], side[0], side[2], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">case</span> 5: plane_3_intersection(side[5], side[1], side[2], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">case</span> 6: plane_3_intersection(side[5], side[1], side[3], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">case</span> 7: plane_3_intersection(side[5], side[0], side[3], ip); <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> ip;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6">   91</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6">from_matrix</a>(<a class="code" href="structcrown_1_1_frustum.html">Frustum</a>&amp; f, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&amp; m)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        f.left.n.x   = m.x.w + m.x.x;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        f.left.n.y   = m.y.w + m.y.x;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        f.left.n.z   = m.z.w + m.z.x;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        f.left.d     = m.t.w + m.t.x;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        f.right.n.x  = m.x.w - m.x.x;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        f.right.n.y  = m.y.w - m.y.x;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        f.right.n.z  = m.z.w - m.z.x;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        f.right.d    = m.t.w - m.t.x;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        f.bottom.n.x = m.x.w + m.x.y;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        f.bottom.n.y = m.y.w + m.y.y;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        f.bottom.n.z = m.z.w + m.z.y;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        f.bottom.d   = m.t.w + m.t.y;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        f.top.n.x    = m.x.w - m.x.y;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        f.top.n.y    = m.y.w - m.y.y;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        f.top.n.z    = m.z.w - m.z.y;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        f.top.d      = m.t.w - m.t.y;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        f.near.n.x   = m.x.w + m.x.z;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        f.near.n.y   = m.y.w + m.y.z;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        f.near.n.z   = m.z.w + m.z.z;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        f.near.d     = m.t.w + m.t.z;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        f.far.n.x    = m.x.w - m.x.z;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        f.far.n.y    = m.y.w - m.y.z;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        f.far.n.z    = m.z.w - m.z.z;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        f.far.d      = m.t.w - m.t.z;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.left);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.right);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.bottom);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.top);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.near);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.far);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4">  131</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="structcrown_1_1_a_a_b_b.html">AABB</a> <a class="code" href="namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4">to_aabb</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_frustum.html">Frustum</a>&amp; f)</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="structcrown_1_1_a_a_b_b.html">AABB</a> tmp;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        aabb::reset(tmp);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> vertices[8];</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        vertices[0] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 0);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        vertices[1] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 1);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        vertices[2] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 2);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        vertices[3] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 3);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        vertices[4] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 4);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        vertices[5] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 5);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        vertices[6] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 6);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        vertices[7] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 7);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="namespacecrown_1_1aabb.html#a84a1e8e28fab9c4a1e4524b041d87429">aabb::add_points</a>(tmp, 8, vertices);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> tmp;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;} <span class="comment">// namespace frustum</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;} <span class="comment">// namespace crown</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> !(<a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.left, p) &lt; 0.0f</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            || <a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.right, p) &lt; 0.0f</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            || <a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.bottom, p) &lt; 0.0f</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            || <a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.top, p) &lt; 0.0f</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            || <a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.near, p) &lt; 0.0f</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            || <a class="code" href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">plane::distance_to_point</a>(f.far, p) &lt; 0.0f</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">   58</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_frustum.html">Frustum</a>&amp; f, uint32_t index)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        CE_ASSERT(index &lt; 8, <span class="stringliteral">&quot;Index out of bounds&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// 0 = Near bottom left</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// 1 = Near bottom right</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// 2 = Near top right</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// 3 = Near top left</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// 4 = Far bottom left</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// 5 = Far bottom right</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// 6 = Far top right</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// 7 = Far top left</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> <a class="code" href="structcrown_1_1_plane.html">Plane</a>* side = &amp;f.left;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> ip;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">switch</span> (index)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">case</span> 0: plane_3_intersection(side[4], side[0], side[2], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">case</span> 1: plane_3_intersection(side[4], side[1], side[2], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">case</span> 2: plane_3_intersection(side[4], side[1], side[3], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">case</span> 3: plane_3_intersection(side[4], side[0], side[3], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">case</span> 4: plane_3_intersection(side[5], side[0], side[2], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">case</span> 5: plane_3_intersection(side[5], side[1], side[2], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">case</span> 6: plane_3_intersection(side[5], side[1], side[3], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">case</span> 7: plane_3_intersection(side[5], side[0], side[3], ip); <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">default</span>: <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> ip;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6">   90</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6">from_matrix</a>(<a class="code" href="structcrown_1_1_frustum.html">Frustum</a>&amp; f, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&amp; m)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        f.left.n.x   = m.x.w + m.x.x;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        f.left.n.y   = m.y.w + m.y.x;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        f.left.n.z   = m.z.w + m.z.x;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        f.left.d     = m.t.w + m.t.x;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        f.right.n.x  = m.x.w - m.x.x;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        f.right.n.y  = m.y.w - m.y.x;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        f.right.n.z  = m.z.w - m.z.x;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        f.right.d    = m.t.w - m.t.x;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        f.bottom.n.x = m.x.w + m.x.y;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        f.bottom.n.y = m.y.w + m.y.y;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        f.bottom.n.z = m.z.w + m.z.y;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        f.bottom.d   = m.t.w + m.t.y;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        f.top.n.x    = m.x.w - m.x.y;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        f.top.n.y    = m.y.w - m.y.y;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        f.top.n.z    = m.z.w - m.z.y;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        f.top.d      = m.t.w - m.t.y;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        f.near.n.x   = m.x.w + m.x.z;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        f.near.n.y   = m.y.w + m.y.z;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        f.near.n.z   = m.z.w + m.z.z;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        f.near.d     = m.t.w + m.t.z;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        f.far.n.x    = m.x.w - m.x.z;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        f.far.n.y    = m.y.w - m.y.z;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        f.far.n.z    = m.z.w - m.z.z;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        f.far.d      = m.t.w - m.t.z;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.left);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.right);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.bottom);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.top);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.near);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">plane::normalize</a>(f.far);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4">  130</a></span>&#160;    <span class="keyword">inline</span> <a class="code" href="structcrown_1_1_a_a_b_b.html">AABB</a> <a class="code" href="namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4">to_aabb</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_frustum.html">Frustum</a>&amp; f)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> vertices[8];</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        vertices[0] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 0);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        vertices[1] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 1);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        vertices[2] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 2);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        vertices[3] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 3);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        vertices[4] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 4);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        vertices[5] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 5);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        vertices[6] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 6);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        vertices[7] = <a class="code" href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">vertex</a>(f, 7);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="structcrown_1_1_a_a_b_b.html">AABB</a> aabb;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        aabb::reset(aabb);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="namespacecrown_1_1aabb.html#a84a1e8e28fab9c4a1e4524b041d87429">aabb::add_points</a>(aabb, 8, vertices);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> aabb;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;} <span class="comment">// namespace frustum</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;} <span class="comment">// namespace crown</span></div>
 <div class="ttc" id="namespacecrown_1_1frustum_html_aa6506b04d0487bcb98597a929f4c6465"><div class="ttname"><a href="namespacecrown_1_1frustum.html#aa6506b04d0487bcb98597a929f4c6465">crown::frustum::contains_point</a></div><div class="ttdeci">bool contains_point(const Frustum &amp;f, const Vector3 &amp;p)</div><div class="ttdoc">Returns whether the frustum f contains the point p. </div><div class="ttdef"><b>Definition:</b> frustum.h:47</div></div>
 <div class="ttc" id="structcrown_1_1_plane_html"><div class="ttname"><a href="structcrown_1_1_plane.html">crown::Plane</a></div><div class="ttdoc">3D Plane. </div><div class="ttdef"><b>Definition:</b> math_types.h:73</div></div>
 <div class="ttc" id="namespacecrown_1_1plane_html_a12dfa932936da847b1d37a8c5c9f278c"><div class="ttname"><a href="namespacecrown_1_1plane.html#a12dfa932936da847b1d37a8c5c9f278c">crown::plane::distance_to_point</a></div><div class="ttdeci">float distance_to_point(const Plane &amp;p, const Vector3 &amp;point)</div><div class="ttdoc">Returns the signed distance between plane p and point point. </div><div class="ttdef"><b>Definition:</b> plane.h:60</div></div>
 <div class="ttc" id="structcrown_1_1_a_a_b_b_html"><div class="ttname"><a href="structcrown_1_1_a_a_b_b.html">crown::AABB</a></div><div class="ttdef"><b>Definition:</b> math_types.h:55</div></div>
-<div class="ttc" id="namespacecrown_1_1aabb_html_a84a1e8e28fab9c4a1e4524b041d87429"><div class="ttname"><a href="namespacecrown_1_1aabb.html#a84a1e8e28fab9c4a1e4524b041d87429">crown::aabb::add_points</a></div><div class="ttdeci">void add_points(AABB &amp;b, uint32_t num, const Vector3 *points)</div><div class="ttdoc">Adds num points to the box b, expanding its bounds if necessary. </div><div class="ttdef"><b>Definition:</b> aabb.h:76</div></div>
-<div class="ttc" id="namespacecrown_1_1frustum_html_ab1c6a5398f07f1f66db3424e6bb7d4d6"><div class="ttname"><a href="namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6">crown::frustum::from_matrix</a></div><div class="ttdeci">void from_matrix(Frustum &amp;f, const Matrix4x4 &amp;m)</div><div class="ttdoc">Builds the frustum f from the view matrix m. </div><div class="ttdef"><b>Definition:</b> frustum.h:91</div></div>
+<div class="ttc" id="namespacecrown_1_1aabb_html_a84a1e8e28fab9c4a1e4524b041d87429"><div class="ttname"><a href="namespacecrown_1_1aabb.html#a84a1e8e28fab9c4a1e4524b041d87429">crown::aabb::add_points</a></div><div class="ttdeci">void add_points(AABB &amp;b, uint32_t num, const Vector3 *points)</div><div class="ttdoc">Adds num points to the box b, expanding its bounds if necessary. </div><div class="ttdef"><b>Definition:</b> aabb.h:75</div></div>
+<div class="ttc" id="namespacecrown_1_1frustum_html_ab1c6a5398f07f1f66db3424e6bb7d4d6"><div class="ttname"><a href="namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6">crown::frustum::from_matrix</a></div><div class="ttdeci">void from_matrix(Frustum &amp;f, const Matrix4x4 &amp;m)</div><div class="ttdoc">Builds the frustum f from the view matrix m. </div><div class="ttdef"><b>Definition:</b> frustum.h:90</div></div>
 <div class="ttc" id="structcrown_1_1_vector3_html"><div class="ttname"><a href="structcrown_1_1_vector3.html">crown::Vector3</a></div><div class="ttdef"><b>Definition:</b> math_types.h:22</div></div>
 <div class="ttc" id="namespacecrown_1_1plane_html_aafaec7797ad95a86d38e8ca2f42e3055"><div class="ttname"><a href="namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055">crown::plane::normalize</a></div><div class="ttdeci">Plane &amp; normalize(Plane &amp;p)</div><div class="ttdoc">Normalizes the plane p and returns its result. </div><div class="ttdef"><b>Definition:</b> plane.h:45</div></div>
 <div class="ttc" id="structcrown_1_1_frustum_html"><div class="ttname"><a href="structcrown_1_1_frustum.html">crown::Frustum</a></div><div class="ttdef"><b>Definition:</b> math_types.h:80</div></div>
 <div class="ttc" id="namespacecrown_html"><div class="ttname"><a href="namespacecrown.html">crown</a></div><div class="ttdef"><b>Definition:</b> audio.h:8</div></div>
-<div class="ttc" id="namespacecrown_1_1frustum_html_aca83980f3043f7d2be06f369ebf08963"><div class="ttname"><a href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">crown::frustum::vertex</a></div><div class="ttdeci">Vector3 vertex(const Frustum &amp;f, uint32_t index)</div><div class="ttdoc">Returns the corner index of the frustum f. </div><div class="ttdef"><b>Definition:</b> frustum.h:59</div></div>
-<div class="ttc" id="namespacecrown_1_1frustum_html_a3df4482f08383206fc35290be5674eb4"><div class="ttname"><a href="namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4">crown::frustum::to_aabb</a></div><div class="ttdeci">AABB to_aabb(const Frustum &amp;f)</div><div class="ttdoc">Returns the AABB enclosing the frustum f. </div><div class="ttdef"><b>Definition:</b> frustum.h:131</div></div>
+<div class="ttc" id="namespacecrown_1_1frustum_html_aca83980f3043f7d2be06f369ebf08963"><div class="ttname"><a href="namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963">crown::frustum::vertex</a></div><div class="ttdeci">Vector3 vertex(const Frustum &amp;f, uint32_t index)</div><div class="ttdoc">Returns the corner index of the frustum f. </div><div class="ttdef"><b>Definition:</b> frustum.h:58</div></div>
+<div class="ttc" id="namespacecrown_1_1frustum_html_a3df4482f08383206fc35290be5674eb4"><div class="ttname"><a href="namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4">crown::frustum::to_aabb</a></div><div class="ttdeci">AABB to_aabb(const Frustum &amp;f)</div><div class="ttdoc">Returns the AABB enclosing the frustum f. </div><div class="ttdef"><b>Definition:</b> frustum.h:130</div></div>
 <div class="ttc" id="structcrown_1_1_matrix4x4_html"><div class="ttname"><a href="structcrown_1_1_matrix4x4.html">crown::Matrix4x4</a></div><div class="ttdef"><b>Definition:</b> math_types.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 7 2015 16:28:02 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 13 2015 19:09:46 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

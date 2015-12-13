@@ -101,12 +101,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a749edf7b529787b44e8708e0b2c4812c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a749edf7b529787b44e8708e0b2c4812c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (<a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;fs, <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;buffer, const char *platform)</td></tr>
-<tr class="separator:a749edf7b529787b44e8708e0b2c4812c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ffec967f9a48422f34780c5a4e7a91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36ffec967f9a48422f34780c5a4e7a91"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (<a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;fs, <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;output, const char *platform, jmp_buf *buf)</td></tr>
+<tr class="separator:a36ffec967f9a48422f34780c5a4e7a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1dec190ec6081402da156378aa7cc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c1dec190ec6081402da156378aa7cc7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *msg, va_list args)</td></tr>
+<tr class="separator:a3c1dec190ec6081402da156378aa7cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cf3eadebc4e1e0eea8c964988e60b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13cf3eadebc4e1e0eea8c964988e60b0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *msg,...)</td></tr>
+<tr class="separator:a13cf3eadebc4e1e0eea8c964988e60b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af729a10a15ca324c96f785830a3be15d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af729a10a15ca324c96f785830a3be15d"></a>
+<a class="el" href="classcrown_1_1_file.html">File</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>open</b> (const char *path)</td></tr>
+<tr class="separator:af729a10a15ca324c96f785830a3be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3027a182e9c569b92084a81224ab9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b3027a182e9c569b92084a81224ab9d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> (<a class="el" href="classcrown_1_1_file.html">File</a> *f)</td></tr>
+<tr class="separator:a8b3027a182e9c569b92084a81224ab9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963e76a34b65f3e58239efa6dbb99802"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a963e76a34b65f3e58239efa6dbb99802"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>exists</b> (const char *path)</td></tr>
+<tr class="separator:a963e76a34b65f3e58239efa6dbb99802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e9dac36239a61ac0e258541eb0b2780"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e9dac36239a61ac0e258541eb0b2780"></a>
 <a class="el" href="structcrown_1_1_array.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (const char *path)</td></tr>
 <tr class="separator:a3e9dac36239a61ac0e258541eb0b2780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6df635d405efbbfad0fa78828942f38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6df635d405efbbfad0fa78828942f38"></a>
+<a class="el" href="structcrown_1_1_array.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read_no_dependency</b> (const char *path)</td></tr>
+<tr class="separator:aa6df635d405efbbfad0fa78828942f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb90b625d304cf6003dbf500343fdd7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb90b625d304cf6003dbf500343fdd7c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_absolute_path</b> (const char *path, <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a> &amp;abs)</td></tr>
 <tr class="separator:afb90b625d304cf6003dbf500343fdd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,18 +144,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (const <a c
 <tr class="memitem:a799b42515cdcd137ae829d16790273fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a799b42515cdcd137ae829d16790273fa"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>platform</b> () const </td></tr>
 <tr class="separator:a799b42515cdcd137ae829d16790273fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44ffc1fd906ce886eed109b22dad5aa0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44ffc1fd906ce886eed109b22dad5aa0"></a>
+const <a class="el" href="structcrown_1_1_vector.html">Vector</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>dependencies</b> () const </td></tr>
+<tr class="separator:a44ffc1fd906ce886eed109b22dad5aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f38afb2a125980a436fa22c376fbc77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f38afb2a125980a436fa22c376fbc77"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_dependency</b> (const char *path)</td></tr>
+<tr class="separator:a3f38afb2a125980a436fa22c376fbc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3406abf8693085d36a5fa361e6a76555"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3406abf8693085d36a5fa361e6a76555"></a>
 <a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_fs</b></td></tr>
 <tr class="separator:a3406abf8693085d36a5fa361e6a76555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a852aff124917eabf4d9e826df5a19f47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a852aff124917eabf4d9e826df5a19f47"></a>
-<a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_buffer</b></td></tr>
-<tr class="separator:a852aff124917eabf4d9e826df5a19f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dbd110eb2780a159703c31064e448b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dbd110eb2780a159703c31064e448b4"></a>
+<a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_output</b></td></tr>
+<tr class="separator:a6dbd110eb2780a159703c31064e448b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b0de803e348755463fe8d6685157109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b0de803e348755463fe8d6685157109"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>_platform</b></td></tr>
 <tr class="separator:a6b0de803e348755463fe8d6685157109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d13b58a44b4756b69d7db01e125a3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04d13b58a44b4756b69d7db01e125a3e"></a>
+jmp_buf *&#160;</td><td class="memItemRight" valign="bottom"><b>_jmpbuf</b></td></tr>
+<tr class="separator:a04d13b58a44b4756b69d7db01e125a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3b0b89bb447efc70f651dbae2f1749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb3b0b89bb447efc70f651dbae2f1749"></a>
+<a class="el" href="structcrown_1_1_vector.html">Vector</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_dependencies</b></td></tr>
+<tr class="separator:abb3b0b89bb447efc70f651dbae2f1749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/compilers/<a class="el" href="compile__options_8h_source.html">compile_options.h</a></li>
@@ -145,7 +175,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>_platform</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 7 2015 16:28:02 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 13 2015 19:09:47 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
