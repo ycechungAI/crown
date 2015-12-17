@@ -11,6 +11,7 @@ var searchData=
   ['entry',['Entry',['../structcrown_1_1_hash_1_1_entry.html',1,'crown::Hash']]],
   ['enum',['Enum',['../structcrown_1_1_os_event.html#a5cd5ac15275a6c9c77cf8ef585e54f89',1,'crown::OsEvent']]],
   ['eof',['eof',['../classcrown_1_1_os_file.html#a927daf07fc4ba0def158f89db7ab7280',1,'crown::OsFile']]],
+  ['equal_5fto',['equal_to',['../structcrown_1_1equal__to.html',1,'crown']]],
   ['eventstream',['EventStream',['../group___containers.html#gabf3f2058f3c0a30ddb3fa7b37663f783',1,'crown']]],
   ['eventtype',['EventType',['../structcrown_1_1_event_type.html',1,'crown']]],
   ['eventtype',['EventType',['../structcrown_1_1profiler_1_1_event_type.html',1,'crown::profiler']]],

@@ -51,7 +51,6 @@ var searchData=
   ['create_5fwindow_5fgui',['create_window_gui',['../classcrown_1_1_world.html#ae9f2f0fcba9441603098564c8ec7bd3a',1,'crown::World']]],
   ['create_5fworld',['create_world',['../structcrown_1_1_device.html#a05bf21977aca9128c5f8435cc3235170',1,'crown::Device']]],
   ['cross',['cross',['../group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f',1,'crown']]],
-  ['crownactivity',['CrownActivity',['../classcrown_1_1android_1_1_crown_activity.html',1,'crown::android']]],
   ['cubic',['cubic',['../group___math.html#ga85e4a6868db6c8f7dfb1713b180c936a',1,'crown']]],
   ['event_5fstream',['event_stream',['../namespacecrown_1_1event__stream.html',1,'crown']]],
   ['frustum',['frustum',['../namespacecrown_1_1frustum.html',1,'crown']]],

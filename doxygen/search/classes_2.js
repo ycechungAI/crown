@@ -13,6 +13,5 @@ var searchData=
   ['connectresult',['ConnectResult',['../structcrown_1_1_connect_result.html',1,'crown']]],
   ['consoleserver',['ConsoleServer',['../classcrown_1_1_console_server.html',1,'crown']]],
   ['controller',['Controller',['../structcrown_1_1_controller.html',1,'crown']]],
-  ['controllerresource',['ControllerResource',['../structcrown_1_1_controller_resource.html',1,'crown']]],
-  ['crownactivity',['CrownActivity',['../classcrown_1_1android_1_1_crown_activity.html',1,'crown::android']]]
+  ['controllerresource',['ControllerResource',['../structcrown_1_1_controller_resource.html',1,'crown']]]
 ];
