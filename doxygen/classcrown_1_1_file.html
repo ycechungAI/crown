@@ -108,10 +108,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a11e341607a52da5e4cf91e7565897ad3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11e341607a52da5e4cf91e7565897ad3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a11e341607a52da5e4cf91e7565897ad3">File</a> (FileOpenMode mode)</td></tr>
-<tr class="memdesc:a11e341607a52da5e4cf91e7565897ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file with the given <em>mode</em>. <br /></td></tr>
-<tr class="separator:a11e341607a52da5e4cf91e7565897ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b5021e35227359acf01f48d7848eab1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5021e35227359acf01f48d7848eab1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a3b5021e35227359acf01f48d7848eab1">File</a> (FileOpenMode::Enum mode)</td></tr>
+<tr class="memdesc:a3b5021e35227359acf01f48d7848eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file with the given <em>mode</em>. <br /></td></tr>
+<tr class="separator:a3b5021e35227359acf01f48d7848eab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38071bc1808c4efe50a2475ffa52f931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38071bc1808c4efe50a2475ffa52f931"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a38071bc1808c4efe50a2475ffa52f931">seek</a> (uint32_t <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">position</a>)=0</td></tr>
 <tr class="memdesc:a38071bc1808c4efe50a2475ffa52f931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position indicator of the file to position. <br /></td></tr>
@@ -124,20 +124,17 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a4ea5296378c5bb5da248486a31722ed5">skip</a> (uint32_t bytes)=0</td></tr>
 <tr class="memdesc:a4ea5296378c5bb5da248486a31722ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position indicator to bytes after current position. <br /></td></tr>
 <tr class="separator:a4ea5296378c5bb5da248486a31722ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2333362694f0e7f83be07b8df0d611d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2333362694f0e7f83be07b8df0d611d6"></a>
-virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a2333362694f0e7f83be07b8df0d611d6">read</a> (void *buffer, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
-<tr class="memdesc:a2333362694f0e7f83be07b8df0d611d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a block of data from the file. <br /></td></tr>
-<tr class="separator:a2333362694f0e7f83be07b8df0d611d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30e01d704c896f22d1bfabb8d977c549"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30e01d704c896f22d1bfabb8d977c549"></a>
-virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a30e01d704c896f22d1bfabb8d977c549">write</a> (const void *buffer, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
-<tr class="memdesc:a30e01d704c896f22d1bfabb8d977c549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block of data to the file. <br /></td></tr>
-<tr class="separator:a30e01d704c896f22d1bfabb8d977c549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dcbfe46edc6a42531d2ff79c14088a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9dcbfe46edc6a42531d2ff79c14088a9"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a9dcbfe46edc6a42531d2ff79c14088a9">copy_to</a> (<a class="el" href="classcrown_1_1_file.html">File</a> &amp;file, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>=0)=0</td></tr>
-<tr class="memdesc:a9dcbfe46edc6a42531d2ff79c14088a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies a chunk of 'size' bytes of data from this to another file. <br /></td></tr>
-<tr class="separator:a9dcbfe46edc6a42531d2ff79c14088a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57bdfab238a7e244a6e4237d66943da6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">flush</a> ()=0</td></tr>
-<tr class="memdesc:a57bdfab238a7e244a6e4237d66943da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces the previouses write operations to complete.  <a href="#a57bdfab238a7e244a6e4237d66943da6">More...</a><br /></td></tr>
+<tr class="memitem:ab9d905f2d2a3da5838267a356aae9fde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9d905f2d2a3da5838267a356aae9fde"></a>
+virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#ab9d905f2d2a3da5838267a356aae9fde">read</a> (void *data, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
+<tr class="memdesc:ab9d905f2d2a3da5838267a356aae9fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a block of data from the file. <br /></td></tr>
+<tr class="separator:ab9d905f2d2a3da5838267a356aae9fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a9ec189dc92a0e039efc98576ee897"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11a9ec189dc92a0e039efc98576ee897"></a>
+virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a11a9ec189dc92a0e039efc98576ee897">write</a> (const void *data, uint32_t <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">size</a>)=0</td></tr>
+<tr class="memdesc:a11a9ec189dc92a0e039efc98576ee897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a block of data to the file. <br /></td></tr>
+<tr class="separator:a11a9ec189dc92a0e039efc98576ee897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57bdfab238a7e244a6e4237d66943da6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57bdfab238a7e244a6e4237d66943da6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">flush</a> ()=0</td></tr>
+<tr class="memdesc:a57bdfab238a7e244a6e4237d66943da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forces the previouses write operations to complete. <br /></td></tr>
 <tr class="separator:a57bdfab238a7e244a6e4237d66943da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b91043cbaf88cddeefd4e12e2841822"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">is_valid</a> ()=0</td></tr>
 <tr class="memdesc:a0b91043cbaf88cddeefd4e12e2841822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file is valid.  <a href="#a0b91043cbaf88cddeefd4e12e2841822">More...</a><br /></td></tr>
@@ -153,57 +150,16 @@ virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="memitem:a50990912a0a73fa06199f12478537034"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">position</a> ()=0</td></tr>
 <tr class="memdesc:a50990912a0a73fa06199f12478537034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position in file.  <a href="#a50990912a0a73fa06199f12478537034">More...</a><br /></td></tr>
 <tr class="separator:a50990912a0a73fa06199f12478537034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc597e7e432c0a3edcd3f83e64d5ecfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc597e7e432c0a3edcd3f83e64d5ecfa"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#acc597e7e432c0a3edcd3f83e64d5ecfa">can_read</a> () const =0</td></tr>
-<tr class="memdesc:acc597e7e432c0a3edcd3f83e64d5ecfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be read. <br /></td></tr>
-<tr class="separator:acc597e7e432c0a3edcd3f83e64d5ecfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66fe094d68cb0b22d4fa597dbe10dc31"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66fe094d68cb0b22d4fa597dbe10dc31"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a66fe094d68cb0b22d4fa597dbe10dc31">can_write</a> () const =0</td></tr>
-<tr class="memdesc:a66fe094d68cb0b22d4fa597dbe10dc31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be wrote. <br /></td></tr>
-<tr class="separator:a66fe094d68cb0b22d4fa597dbe10dc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1661e533980abc9c21c1821c3231e2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1661e533980abc9c21c1821c3231e2d"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#af1661e533980abc9c21c1821c3231e2d">can_seek</a> () const =0</td></tr>
-<tr class="memdesc:af1661e533980abc9c21c1821c3231e2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the file can be sought. <br /></td></tr>
-<tr class="separator:af1661e533980abc9c21c1821c3231e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ac242f02996f683ed7aff987d0ce52378"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac242f02996f683ed7aff987d0ce52378"></a>
-FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b></td></tr>
-<tr class="separator:ac242f02996f683ed7aff987d0ce52378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb55e237ee582a75b00735566b3c7efd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb55e237ee582a75b00735566b3c7efd"></a>
+FileOpenMode::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b></td></tr>
+<tr class="separator:afb55e237ee582a75b00735566b3c7efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstraction to access data files. </p>
-<p>It represents a flow of data attached to a 'file' which can be an archived file, a regular file, a location in memory or anything that can be read or wrote. A <a class="el" href="classcrown_1_1_file.html" title="An abstraction to access data files. ">File</a> is an abstraction to interact with these in an uniform way; every file comes with a convenient set of methods to facilitate reading from it, writing to it and so on. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a57bdfab238a7e244a6e4237d66943da6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void crown::File::flush </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Forces the previouses write operations to complete. </p>
-<p>Generally, when a <a class="el" href="classcrown_1_1_file.html" title="An abstraction to access data files. ">File</a> is attached to a file, write operations are not performed instantly, the output data may be stored to a temporary buffer before making its way to the file. This method forces all the pending output operations to be written to the file. </p>
-
-<p>Implemented in <a class="el" href="classcrown_1_1_null_file.html#a598dd9cde7a130bb9ca97fff24e3cfeb">crown::NullFile</a>, <a class="el" href="classcrown_1_1_disk_file.html#a22f7edbb90a61e6bfe74a10f8f56d79f">crown::DiskFile</a>, and <a class="el" href="classcrown_1_1_apk_file.html#a8bcb97dda924008e2700d45e2de93ebf">crown::ApkFile</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0b91043cbaf88cddeefd4e12e2841822"></a>
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +222,7 @@ FileOpenMode&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 19:09:47 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 16:51:15 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

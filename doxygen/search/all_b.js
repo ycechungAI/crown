@@ -13,6 +13,7 @@ var searchData=
   ['linear_5fdamping',['linear_damping',['../structcrown_1_1_actor.html#a03c4b0b0f970634c24932b4b20eaa329',1,'crown::Actor']]],
   ['linear_5fvelocity',['linear_velocity',['../structcrown_1_1_actor.html#aeb8d6592e809621fc3334cdfecf820c3',1,'crown::Actor']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html',1,'crown']]],
+  ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html#a25d88d8144f1c729e6714f0493cdffeb',1,'crown::LinearAllocator::LinearAllocator(Allocator &amp;backing, uint32_t size)'],['../classcrown_1_1_linear_allocator.html#a688ad3dfa2cd9ba467dd8a4e9a6410d9',1,'crown::LinearAllocator::LinearAllocator(void *start, uint32_t size)']]],
   ['link',['link',['../structcrown_1_1_scene_graph.html#a43b254078e31ee496ec6e80db2f5124a',1,'crown::SceneGraph']]],
   ['link_5fsound',['link_sound',['../classcrown_1_1_world.html#a90dd4a7ce8f47bb6dc1487101efc9254',1,'crown::World']]],
   ['link_5funit',['link_unit',['../classcrown_1_1_world.html#a1501e08df16a08651832171a533461e8',1,'crown::World']]],

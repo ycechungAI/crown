@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Allocates memory linearly from a predefined chunk and frees all the allocations with a single call to <a class="el" href="classcrown_1_1_linear_allocator.html#a389c478af4225bd176e3efadb27c28ac" title="Frees all the allocations made by allocate() ">clear()</a>  
+<p>Allocates memory linearly from a fixed chunk of memory and frees all the allocations with a single call to <a class="el" href="classcrown_1_1_linear_allocator.html#a389c478af4225bd176e3efadb27c28ac" title="Frees all the allocations made by allocate() ">clear()</a>.  
  <a href="classcrown_1_1_linear_allocator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="linear__allocator_8h_source.html">linear_allocator.h</a>&gt;</code></p>
@@ -108,10 +108,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a25d88d8144f1c729e6714f0493cdffeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25d88d8144f1c729e6714f0493cdffeb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LinearAllocator</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;backing, uint32_t size)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_linear_allocator.html#a25d88d8144f1c729e6714f0493cdffeb">LinearAllocator</a> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;backing, uint32_t size)</td></tr>
+<tr class="memdesc:a25d88d8144f1c729e6714f0493cdffeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <em>size</em> bytes from <em>backing</em>. <br /></td></tr>
 <tr class="separator:a25d88d8144f1c729e6714f0493cdffeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a688ad3dfa2cd9ba467dd8a4e9a6410d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a688ad3dfa2cd9ba467dd8a4e9a6410d9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LinearAllocator</b> (void *start, uint32_t size)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_linear_allocator.html#a688ad3dfa2cd9ba467dd8a4e9a6410d9">LinearAllocator</a> (void *start, uint32_t size)</td></tr>
+<tr class="memdesc:a688ad3dfa2cd9ba467dd8a4e9a6410d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses <em>size</em> bytes of memory from <em>start</em>. <br /></td></tr>
 <tr class="separator:a688ad3dfa2cd9ba467dd8a4e9a6410d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80acb9deefb55ecd63c08ad97932303c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_linear_allocator.html#a80acb9deefb55ecd63c08ad97932303c">allocate</a> (uint32_t size, uint32_t align=<a class="el" href="classcrown_1_1_allocator.html#ad81573190e2c6c1c2a14589b81885cd4">Allocator::DEFAULT_ALIGN</a>)</td></tr>
 <tr class="memdesc:a80acb9deefb55ecd63c08ad97932303c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <em>size</em> bytes of memory aligned to the specified <em>align</em> byte and returns a pointer to the first allocated byte.  <a href="#a80acb9deefb55ecd63c08ad97932303c">More...</a><br /></td></tr>
@@ -142,7 +144,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
 <tr class="separator:a78086fc75853bc7e4cc1ea7583fda9f6 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Allocates memory linearly from a predefined chunk and frees all the allocations with a single call to <a class="el" href="classcrown_1_1_linear_allocator.html#a389c478af4225bd176e3efadb27c28ac" title="Frees all the allocations made by allocate() ">clear()</a> </p>
+<div class="textblock"><p>Allocates memory linearly from a fixed chunk of memory and frees all the allocations with a single call to <a class="el" href="classcrown_1_1_linear_allocator.html#a389c478af4225bd176e3efadb27c28ac" title="Frees all the allocations made by allocate() ">clear()</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a80acb9deefb55ecd63c08ad97932303c"></a>
 <div class="memitem">
@@ -274,7 +276,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 19:09:47 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 16:51:15 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

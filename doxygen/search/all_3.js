@@ -22,7 +22,7 @@ var searchData=
   ['disable_5fcollision',['disable_collision',['../structcrown_1_1_actor.html#a52d3c7a7a1fcdccbc7e978e708f7b275',1,'crown::Actor']]],
   ['disable_5fgravity',['disable_gravity',['../structcrown_1_1_actor.html#aead9065494b7a0e64d07a7135340eaed',1,'crown::Actor']]],
   ['diskfile',['DiskFile',['../classcrown_1_1_disk_file.html',1,'crown']]],
-  ['diskfile',['DiskFile',['../classcrown_1_1_disk_file.html#a5286242360d145dfd3c718382fed1c32',1,'crown::DiskFile']]],
+  ['diskfile',['DiskFile',['../classcrown_1_1_disk_file.html#a410ec2944efe7461ebca7712583bbc8c',1,'crown::DiskFile']]],
   ['diskfilesystem',['DiskFilesystem',['../classcrown_1_1_disk_filesystem.html#a06b0eb9b99c82ade29e380ac4342e4e0',1,'crown::DiskFilesystem::DiskFilesystem()'],['../classcrown_1_1_disk_filesystem.html#a782ae1bddf68dd1f14f85ac8ed459928',1,'crown::DiskFilesystem::DiskFilesystem(const char *prefix)']]],
   ['diskfilesystem',['DiskFilesystem',['../classcrown_1_1_disk_filesystem.html',1,'crown']]],
   ['distance',['distance',['../group___math.html#ga90e434918d67ef4311d68c834ae60a68',1,'crown::distance(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#gac8edb94bfb7ad392916320ea15b20858',1,'crown::distance(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#ga37990056c1623e22782b34126ca5e829',1,'crown::distance(const Vector4 &amp;a, const Vector4 &amp;b)']]],

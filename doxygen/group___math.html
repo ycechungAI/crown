@@ -99,6 +99,9 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacecrown_1_1plane"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1plane.html">crown::plane</a></td></tr>
 <tr class="memdesc:namespacecrown_1_1plane"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to manipulate <a class="el" href="structcrown_1_1_plane.html" title="3D Plane. ">Plane</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecrown_1_1sphere"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sphere.html">crown::sphere</a></td></tr>
+<tr class="memdesc:namespacecrown_1_1sphere"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to manipulate <a class="el" href="structcrown_1_1_sphere.html">Sphere</a>. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -156,6 +159,27 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gad8e57282e56786920c4fbe7c24053d12">crown::to_abgr</a> (const Color4 &amp;c)</td></tr>
 <tr class="memdesc:gad8e57282e56786920c4fbe7c24053d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color as a packed 32-bit integer. (ABGR order) <br /></td></tr>
 <tr class="separator:gad8e57282e56786920c4fbe7c24053d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1b44d4830d2fed61bceae9e974f6211"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa1b44d4830d2fed61bceae9e974f6211">crown::ray_plane_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Plane &amp;p)</td></tr>
+<tr class="memdesc:gaa1b44d4830d2fed61bceae9e974f6211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with plane <em>p</em> or -1.0 if no intersection.  <a href="group___math.html#gaa1b44d4830d2fed61bceae9e974f6211">More...</a><br /></td></tr>
+<tr class="separator:gaa1b44d4830d2fed61bceae9e974f6211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga489ccf29f46559514ca6a66f13a78897"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga489ccf29f46559514ca6a66f13a78897">crown::ray_disc_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Vector3 &amp;center, float radius, const Vector3 &amp;normal)</td></tr>
+<tr class="memdesc:ga489ccf29f46559514ca6a66f13a78897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with disc defined by <em>center</em>, <em>radius</em> and <em>normal</em> or -1.0 if no intersection.  <a href="group___math.html#ga489ccf29f46559514ca6a66f13a78897">More...</a><br /></td></tr>
+<tr class="separator:ga489ccf29f46559514ca6a66f13a78897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga789ea820016ded593ec509c1cbdd3323"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga789ea820016ded593ec509c1cbdd3323">crown::ray_sphere_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Sphere &amp;s)</td></tr>
+<tr class="memdesc:ga789ea820016ded593ec509c1cbdd3323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with sphere <em>s</em> or -1.0 if no intersection.  <a href="group___math.html#ga789ea820016ded593ec509c1cbdd3323">More...</a><br /></td></tr>
+<tr class="separator:ga789ea820016ded593ec509c1cbdd3323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab594c07f623cd5eec48472e0483a85d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gab594c07f623cd5eec48472e0483a85d7">crown::ray_obb_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Matrix4x4 &amp;tm, const Vector3 &amp;half_extents)</td></tr>
+<tr class="memdesc:gab594c07f623cd5eec48472e0483a85d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with the oriented bounding box (tm, half_extents) or -1.0 if no intersection.  <a href="group___math.html#gab594c07f623cd5eec48472e0483a85d7">More...</a><br /></td></tr>
+<tr class="separator:gab594c07f623cd5eec48472e0483a85d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga302a38e1e1be4a1efef45889a9584b83"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga302a38e1e1be4a1efef45889a9584b83"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::plane_3_intersection</b> (const Plane &amp;p1, const Plane &amp;p2, const Plane &amp;p3, Vector3 &amp;ip)</td></tr>
+<tr class="separator:ga302a38e1e1be4a1efef45889a9584b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga618bd1d60d10675ff3f77ab39f947e87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga618bd1d60d10675ff3f77ab39f947e87"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::frustum_sphere_intersection</b> (const Frustum &amp;f, const Sphere &amp;s)</td></tr>
+<tr class="separator:ga618bd1d60d10675ff3f77ab39f947e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d490762d4b506dd4f78412791339a59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1d490762d4b506dd4f78412791339a59"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::frustum_box_intersection</b> (const Frustum &amp;f, const AABB &amp;b)</td></tr>
+<tr class="separator:ga1d490762d4b506dd4f78412791339a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0e298654ebd17d350017ad71fd9e7525"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0e298654ebd17d350017ad71fd9e7525"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::fequal</b> (float a, float b, float precision=FLOAT_PRECISION)</td></tr>
 <tr class="separator:ga0e298654ebd17d350017ad71fd9e7525"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,12 +198,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>crown::to_rad</b> (f
 <tr class="memitem:ga6be1436e1e94f9900df42d22ef8c51b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6be1436e1e94f9900df42d22ef8c51b9"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>crown::to_deg</b> (float rad)</td></tr>
 <tr class="separator:ga6be1436e1e94f9900df42d22ef8c51b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5fe4e43970529dfce28b0de4fa93d109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5fe4e43970529dfce28b0de4fa93d109"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>crown::next_pow_2</b> (uint32_t x)</td></tr>
-<tr class="separator:ga5fe4e43970529dfce28b0de4fa93d109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ceb00699c6c4eade596dc84902505a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2ceb00699c6c4eade596dc84902505a3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::is_pow_2</b> (uint32_t x)</td></tr>
-<tr class="separator:ga2ceb00699c6c4eade596dc84902505a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa2c8df119f917c3f6f86d67a4869ccf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa2c8df119f917c3f6f86d67a4869ccf9"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa2c8df119f917c3f6f86d67a4869ccf9">crown::lerp</a> (const float p0, const float p1, float t)</td></tr>
 <tr class="memdesc:gaa2c8df119f917c3f6f86d67a4869ccf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linear interpolated value between <em>p0</em> and <em>p1</em> at time <em>t</em>. <br /></td></tr>
@@ -215,9 +233,6 @@ Matrix3x3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::ope
 <tr class="memitem:ga09e8399b12a1dcbf1a2a91009eb711a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga09e8399b12a1dcbf1a2a91009eb711a1"></a>
 Matrix3x3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator*=</b> (Matrix3x3 &amp;a, float k)</td></tr>
 <tr class="separator:ga09e8399b12a1dcbf1a2a91009eb711a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabc4b97e6d3b26fcf9b63014cd5f0ce04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabc4b97e6d3b26fcf9b63014cd5f0ce04"></a>
-Matrix3x3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator/=</b> (Matrix3x3 &amp;a, float k)</td></tr>
-<tr class="separator:gabc4b97e6d3b26fcf9b63014cd5f0ce04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga07a63807be36aca4d89302b1a068260d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga07a63807be36aca4d89302b1a068260d"></a>
 Matrix3x3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator*=</b> (Matrix3x3 &amp;a, const Matrix3x3 &amp;b)</td></tr>
 <tr class="separator:ga07a63807be36aca4d89302b1a068260d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,10 +252,6 @@ Matrix3x3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 Matrix3x3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga82a0dfb971810ccae3963fe46aeb815b">crown::operator*</a> (float k, Matrix3x3 a)</td></tr>
 <tr class="memdesc:ga82a0dfb971810ccae3963fe46aeb815b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the matrix <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
 <tr class="separator:ga82a0dfb971810ccae3963fe46aeb815b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ce2a980ca2bf1eec3efdfe1c829ffc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9ce2a980ca2bf1eec3efdfe1c829ffc3"></a>
-Matrix3x3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga9ce2a980ca2bf1eec3efdfe1c829ffc3">crown::operator/</a> (Matrix3x3 a, float k)</td></tr>
-<tr class="memdesc:ga9ce2a980ca2bf1eec3efdfe1c829ffc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides the matrix <em>a</em> by the scalar <em>k</em>. <br /></td></tr>
-<tr class="separator:ga9ce2a980ca2bf1eec3efdfe1c829ffc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga839c16c1ff1b1f46353a73651422b9ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga839c16c1ff1b1f46353a73651422b9ec"></a>
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga839c16c1ff1b1f46353a73651422b9ec">crown::operator*</a> (const Vector3 &amp;v, const Matrix3x3 &amp;a)</td></tr>
 <tr class="memdesc:ga839c16c1ff1b1f46353a73651422b9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the matrix <em>a</em> by the vector <em>v</em> and returns the result. <br /></td></tr>
@@ -313,9 +324,6 @@ Matrix4x4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::ope
 <tr class="memitem:gac8749e36fbc39846526e54f50d0c6433"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac8749e36fbc39846526e54f50d0c6433"></a>
 Matrix4x4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator*=</b> (Matrix4x4 &amp;a, float k)</td></tr>
 <tr class="separator:gac8749e36fbc39846526e54f50d0c6433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4041d674a27fef8f1676648153ab04a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4041d674a27fef8f1676648153ab04a4"></a>
-Matrix4x4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator/=</b> (Matrix4x4 &amp;a, float k)</td></tr>
-<tr class="separator:ga4041d674a27fef8f1676648153ab04a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51d7dbb2002c80c3fe27d72783e2890a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga51d7dbb2002c80c3fe27d72783e2890a"></a>
 Matrix4x4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator*=</b> (Matrix4x4 &amp;a, const Matrix4x4 &amp;b)</td></tr>
 <tr class="separator:ga51d7dbb2002c80c3fe27d72783e2890a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -335,10 +343,6 @@ Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gabf7c05589c872dd8ff311a9f8b4b6199">crown::operator*</a> (float k, Matrix4x4 a)</td></tr>
 <tr class="memdesc:gabf7c05589c872dd8ff311a9f8b4b6199"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the matrix <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
 <tr class="separator:gabf7c05589c872dd8ff311a9f8b4b6199"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga523bc39f9c673d4ab695fcaaf77f6909"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga523bc39f9c673d4ab695fcaaf77f6909"></a>
-Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga523bc39f9c673d4ab695fcaaf77f6909">crown::operator/</a> (Matrix4x4 a, float k)</td></tr>
-<tr class="memdesc:ga523bc39f9c673d4ab695fcaaf77f6909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides the matrix <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
-<tr class="separator:ga523bc39f9c673d4ab695fcaaf77f6909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga559812b1f960c0ff6c182dc8f8269850"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga559812b1f960c0ff6c182dc8f8269850"></a>
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga559812b1f960c0ff6c182dc8f8269850">crown::operator*</a> (const Vector3 &amp;v, const Matrix4x4 &amp;a)</td></tr>
 <tr class="memdesc:ga559812b1f960c0ff6c182dc8f8269850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the matrix <em>a</em> by the vector <em>v</em> and returns the result. <br /></td></tr>
@@ -524,9 +528,6 @@ Vector2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::opera
 <tr class="memitem:gaee41deae03ba621468eb721735a17c6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaee41deae03ba621468eb721735a17c6b"></a>
 Vector2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator*=</b> (Vector2 &amp;a, float k)</td></tr>
 <tr class="separator:gaee41deae03ba621468eb721735a17c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7a6a2ae9309e9988140b29c5bc6a714a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7a6a2ae9309e9988140b29c5bc6a714a"></a>
-Vector2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator/=</b> (Vector2 &amp;a, float k)</td></tr>
-<tr class="separator:ga7a6a2ae9309e9988140b29c5bc6a714a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga78a5f4f839f5b1028ea6ea3f22cd490a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga78a5f4f839f5b1028ea6ea3f22cd490a"></a>
 Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga78a5f4f839f5b1028ea6ea3f22cd490a">crown::operator-</a> (const Vector2 &amp;a)</td></tr>
 <tr class="memdesc:ga78a5f4f839f5b1028ea6ea3f22cd490a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negates <em>a</em> and returns the result. <br /></td></tr>
@@ -547,10 +548,6 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gad6f515f84a7082cc9828665d18ef084c">crown::operator*</a> (float k, Vector2 a)</td></tr>
 <tr class="memdesc:gad6f515f84a7082cc9828665d18ef084c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the vector <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
 <tr class="separator:gad6f515f84a7082cc9828665d18ef084c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga491b497daf83ca3ed013e41dd497ce9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga491b497daf83ca3ed013e41dd497ce9b"></a>
-Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga491b497daf83ca3ed013e41dd497ce9b">crown::operator/</a> (Vector2 a, float k)</td></tr>
-<tr class="memdesc:ga491b497daf83ca3ed013e41dd497ce9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides the vector <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
-<tr class="separator:ga491b497daf83ca3ed013e41dd497ce9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7afc5040d5d3c67e533214e34f014e67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7afc5040d5d3c67e533214e34f014e67"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga7afc5040d5d3c67e533214e34f014e67">crown::operator==</a> (const Vector2 &amp;a, const Vector2 &amp;b)</td></tr>
 <tr class="memdesc:ga7afc5040d5d3c67e533214e34f014e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true whether the vectors <em>a</em> and <em>b</em> are equal. <br /></td></tr>
@@ -619,9 +616,6 @@ Vector3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::opera
 <tr class="memitem:ga7b7bf94af99c314e3d85bad0023d8be3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7b7bf94af99c314e3d85bad0023d8be3"></a>
 Vector3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator*=</b> (Vector3 &amp;a, float k)</td></tr>
 <tr class="separator:ga7b7bf94af99c314e3d85bad0023d8be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa66b83924c9f67a6cf5c1e4f975d5c97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa66b83924c9f67a6cf5c1e4f975d5c97"></a>
-Vector3 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator/=</b> (Vector3 &amp;a, float k)</td></tr>
-<tr class="separator:gaa66b83924c9f67a6cf5c1e4f975d5c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1d3c8b104a68f137900b5c63d2aea9fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1d3c8b104a68f137900b5c63d2aea9fe"></a>
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga1d3c8b104a68f137900b5c63d2aea9fe">crown::operator-</a> (const Vector3 &amp;a)</td></tr>
 <tr class="memdesc:ga1d3c8b104a68f137900b5c63d2aea9fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negates <em>a</em> and returns the result. <br /></td></tr>
@@ -642,10 +636,6 @@ Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga7bad4ef9396969e8d018d57bafb7686a">crown::operator*</a> (float k, Vector3 a)</td></tr>
 <tr class="memdesc:ga7bad4ef9396969e8d018d57bafb7686a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the vector <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
 <tr class="separator:ga7bad4ef9396969e8d018d57bafb7686a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2c994e50f1e5d39c7c860bc09a18b54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa2c994e50f1e5d39c7c860bc09a18b54"></a>
-Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa2c994e50f1e5d39c7c860bc09a18b54">crown::operator/</a> (Vector3 a, float k)</td></tr>
-<tr class="memdesc:gaa2c994e50f1e5d39c7c860bc09a18b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides the vector <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
-<tr class="separator:gaa2c994e50f1e5d39c7c860bc09a18b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5b2ac2351c3ec666c15bc8a0e6eb0c2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5b2ac2351c3ec666c15bc8a0e6eb0c2f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga5b2ac2351c3ec666c15bc8a0e6eb0c2f">crown::operator==</a> (const Vector3 &amp;a, const Vector3 &amp;b)</td></tr>
 <tr class="memdesc:ga5b2ac2351c3ec666c15bc8a0e6eb0c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true whether the vectors <em>a</em> and <em>b</em> are equal. <br /></td></tr>
@@ -710,10 +700,6 @@ const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga4d41396043574e06e0228f605c1e5291">crown::to_vector2</a> (const Vector3 &amp;a)</td></tr>
 <tr class="memdesc:ga4d41396043574e06e0228f605c1e5291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> portion of <em>a</em>. (i.e. truncates z) <br /></td></tr>
 <tr class="separator:ga4d41396043574e06e0228f605c1e5291"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8d7612963bfa947d20c3e587eb7e2119"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8d7612963bfa947d20c3e587eb7e2119"></a>
-Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga8d7612963bfa947d20c3e587eb7e2119">crown::to_vector3</a> (const Vector4 &amp;a)</td></tr>
-<tr class="memdesc:ga8d7612963bfa947d20c3e587eb7e2119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> portion of <em>a</em>. (i.e. truncates w) <br /></td></tr>
-<tr class="separator:ga8d7612963bfa947d20c3e587eb7e2119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga65e01a0603b6e47d6a23bb1392e0487a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga65e01a0603b6e47d6a23bb1392e0487a"></a>
 Vector4&#160;</td><td class="memItemRight" valign="bottom"><b>crown::vector4</b> (float x, float y, float z, float w)</td></tr>
 <tr class="separator:ga65e01a0603b6e47d6a23bb1392e0487a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -729,9 +715,6 @@ Vector4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::opera
 <tr class="memitem:gad2089ead142b029d7d5dacd734315451"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad2089ead142b029d7d5dacd734315451"></a>
 Vector4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator*=</b> (Vector4 &amp;a, float k)</td></tr>
 <tr class="separator:gad2089ead142b029d7d5dacd734315451"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c20b2b3e4800302aa1f5b1786a3378d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6c20b2b3e4800302aa1f5b1786a3378d"></a>
-Vector4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>crown::operator/=</b> (Vector4 &amp;a, float k)</td></tr>
-<tr class="separator:ga6c20b2b3e4800302aa1f5b1786a3378d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6082cac48d870ec99f199d0bcc06a65b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga6082cac48d870ec99f199d0bcc06a65b"></a>
 Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga6082cac48d870ec99f199d0bcc06a65b">crown::operator-</a> (const Vector4 &amp;a)</td></tr>
 <tr class="memdesc:ga6082cac48d870ec99f199d0bcc06a65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Negates <em>a</em> and returns the result. <br /></td></tr>
@@ -752,10 +735,6 @@ Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga371f4c0aeb03505a58c784579a5d7cd0">crown::operator*</a> (float k, Vector4 a)</td></tr>
 <tr class="memdesc:ga371f4c0aeb03505a58c784579a5d7cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the vector <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
 <tr class="separator:ga371f4c0aeb03505a58c784579a5d7cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab15ecc39fb2285b3095036595cbfa1df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab15ecc39fb2285b3095036595cbfa1df"></a>
-Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gab15ecc39fb2285b3095036595cbfa1df">crown::operator/</a> (Vector4 a, float k)</td></tr>
-<tr class="memdesc:gab15ecc39fb2285b3095036595cbfa1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides the vector <em>a</em> by the scalar <em>k</em> and returns the result. <br /></td></tr>
-<tr class="separator:gab15ecc39fb2285b3095036595cbfa1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga97f846a6505634f42244fa86d0080047"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga97f846a6505634f42244fa86d0080047"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga97f846a6505634f42244fa86d0080047">crown::operator==</a> (const Vector4 &amp;a, const Vector4 &amp;b)</td></tr>
 <tr class="memdesc:ga97f846a6505634f42244fa86d0080047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true whether the vectors <em>a</em> and <em>b</em> are equal. <br /></td></tr>
@@ -812,6 +791,10 @@ float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 const float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa979af135a66437bcb112949d163758d">crown::to_float_ptr</a> (const Vector4 &amp;a)</td></tr>
 <tr class="memdesc:gaa979af135a66437bcb112949d163758d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pointer to the data of <em>a</em>. <br /></td></tr>
 <tr class="separator:gaa979af135a66437bcb112949d163758d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d7612963bfa947d20c3e587eb7e2119"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8d7612963bfa947d20c3e587eb7e2119"></a>
+Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga8d7612963bfa947d20c3e587eb7e2119">crown::to_vector3</a> (const Vector4 &amp;a)</td></tr>
+<tr class="memdesc:ga8d7612963bfa947d20c3e587eb7e2119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> portion of <em>a</em>. (i.e. truncates w) <br /></td></tr>
+<tr class="separator:ga8d7612963bfa947d20c3e587eb7e2119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -1270,10 +1253,165 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_P
 <tr class="separator:gae456055b7faa109b6cfb7c1cea6b3c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga489ccf29f46559514ca6a66f13a78897"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float crown::ray_disc_intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>normal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance along ray (from, dir) to intersection point with disc defined by <em>center</em>, <em>radius</em> and <em>normal</em> or -1.0 if no intersection. </p>
+
+</div>
+</div>
+<a class="anchor" id="gab594c07f623cd5eec48472e0483a85d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float crown::ray_obb_intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td>
+          <td class="paramname"><em>tm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>half_extents</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance along ray (from, dir) to intersection point with the oriented bounding box (tm, half_extents) or -1.0 if no intersection. </p>
+
+</div>
+</div>
+<a class="anchor" id="gaa1b44d4830d2fed61bceae9e974f6211"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float crown::ray_plane_intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_plane.html">Plane</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance along ray (from, dir) to intersection point with plane <em>p</em> or -1.0 if no intersection. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga789ea820016ded593ec509c1cbdd3323"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float crown::ray_sphere_intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_sphere.html">Sphere</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance along ray (from, dir) to intersection point with sphere <em>s</em> or -1.0 if no intersection. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 13 2015 19:09:47 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 17 2015 16:51:15 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

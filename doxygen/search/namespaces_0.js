@@ -19,6 +19,7 @@ var searchData=
   ['priority_5fqueue',['priority_queue',['../namespacecrown_1_1priority__queue.html',1,'crown']]],
   ['queue',['queue',['../namespacecrown_1_1queue.html',1,'crown']]],
   ['sort_5fmap',['sort_map',['../namespacecrown_1_1sort__map.html',1,'crown']]],
+  ['sphere',['sphere',['../namespacecrown_1_1sphere.html',1,'crown']]],
   ['string_5fstream',['string_stream',['../namespacecrown_1_1string__stream.html',1,'crown']]],
   ['vector',['vector',['../namespacecrown_1_1vector.html',1,'crown']]]
 ];
