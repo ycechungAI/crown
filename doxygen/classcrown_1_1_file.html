@@ -79,7 +79,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classcrown_1_1_file-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">crown::File Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group___filesystem.html">Filesystem</a></div></div>  </div>
@@ -95,10 +94,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3b5021e35227359acf01f48d7848eab1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5021e35227359acf01f48d7848eab1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a3b5021e35227359acf01f48d7848eab1">File</a> (FileOpenMode::Enum mode)</td></tr>
-<tr class="memdesc:a3b5021e35227359acf01f48d7848eab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file with the given <em>mode</em>. <br /></td></tr>
-<tr class="separator:a3b5021e35227359acf01f48d7848eab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0321f54c74c4ad4fc05939f4f426daf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0321f54c74c4ad4fc05939f4f426daf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#aa0321f54c74c4ad4fc05939f4f426daf">open</a> (const char *path, FileOpenMode::Enum mode)=0</td></tr>
+<tr class="memdesc:aa0321f54c74c4ad4fc05939f4f426daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file at <em>path</em> with specified <em>mode</em>. <br /></td></tr>
+<tr class="separator:aa0321f54c74c4ad4fc05939f4f426daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01dbe1272e8ab5e013338559cffcaf7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01dbe1272e8ab5e013338559cffcaf7f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">close</a> ()=0</td></tr>
+<tr class="memdesc:a01dbe1272e8ab5e013338559cffcaf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the file. <br /></td></tr>
+<tr class="separator:a01dbe1272e8ab5e013338559cffcaf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38071bc1808c4efe50a2475ffa52f931"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38071bc1808c4efe50a2475ffa52f931"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a38071bc1808c4efe50a2475ffa52f931">seek</a> (uint32_t <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">position</a>)=0</td></tr>
 <tr class="memdesc:a38071bc1808c4efe50a2475ffa52f931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position indicator of the file to position. <br /></td></tr>
@@ -137,12 +140,6 @@ virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <tr class="memitem:a50990912a0a73fa06199f12478537034"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">position</a> ()=0</td></tr>
 <tr class="memdesc:a50990912a0a73fa06199f12478537034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position in file.  <a href="#a50990912a0a73fa06199f12478537034">More...</a><br /></td></tr>
 <tr class="separator:a50990912a0a73fa06199f12478537034"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:afb55e237ee582a75b00735566b3c7efd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb55e237ee582a75b00735566b3c7efd"></a>
-FileOpenMode::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b></td></tr>
-<tr class="separator:afb55e237ee582a75b00735566b3c7efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An abstraction to access data files. </p>
@@ -199,7 +196,7 @@ FileOpenMode::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>_open_m
 <p>Returns the current position in file. </p>
 <p>Generally, for binary data, it means the number of bytes from the beginning of the file. </p>
 
-<p>Implemented in <a class="el" href="classcrown_1_1_null_file.html#a96c17fd641916f7bd5d3e4690782ae99">crown::NullFile</a>, <a class="el" href="classcrown_1_1_disk_file.html#a9ed82642143511a7d6d4e344503e725a">crown::DiskFile</a>, and <a class="el" href="classcrown_1_1_apk_file.html#a16ef18083592e473e15fcc3c73180977">crown::ApkFile</a>.</p>
+<p>Implemented in <a class="el" href="classcrown_1_1_null_file.html#a96c17fd641916f7bd5d3e4690782ae99">crown::NullFile</a>, <a class="el" href="classcrown_1_1_apk_file.html#a16ef18083592e473e15fcc3c73180977">crown::ApkFile</a>, and <a class="el" href="classcrown_1_1_disk_file.html#a9ed82642143511a7d6d4e344503e725a">crown::DiskFile</a>.</p>
 
 </div>
 </div>
@@ -209,7 +206,7 @@ FileOpenMode::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>_open_m
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 22:16:53 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 18 2015 16:30:09 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

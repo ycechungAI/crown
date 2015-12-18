@@ -96,10 +96,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a410ec2944efe7461ebca7712583bbc8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a410ec2944efe7461ebca7712583bbc8c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a410ec2944efe7461ebca7712583bbc8c">DiskFile</a> (const char *path, FileOpenMode::Enum mode)</td></tr>
-<tr class="memdesc:a410ec2944efe7461ebca7712583bbc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens <em>path</em> with specified <em>mode</em>. <br /></td></tr>
-<tr class="separator:a410ec2944efe7461ebca7712583bbc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6e6e1ea9b386609d1402ad289bc55e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a2f6e6e1ea9b386609d1402ad289bc55e">open</a> (const char *path, FileOpenMode::Enum mode)</td></tr>
+<tr class="memdesc:a2f6e6e1ea9b386609d1402ad289bc55e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file at <em>path</em> with specified <em>mode</em>.  <a href="#a2f6e6e1ea9b386609d1402ad289bc55e">More...</a><br /></td></tr>
+<tr class="separator:a2f6e6e1ea9b386609d1402ad289bc55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fb3f6787e6f4749ceb83d51b19de5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#ab3fb3f6787e6f4749ceb83d51b19de5f">close</a> ()</td></tr>
+<tr class="memdesc:ab3fb3f6787e6f4749ceb83d51b19de5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the file.  <a href="#ab3fb3f6787e6f4749ceb83d51b19de5f">More...</a><br /></td></tr>
+<tr class="separator:ab3fb3f6787e6f4749ceb83d51b19de5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eb2b3a6f84b4e1316ccd00132db571d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a8eb2b3a6f84b4e1316ccd00132db571d">seek</a> (uint32_t <a class="el" href="classcrown_1_1_disk_file.html#a9ed82642143511a7d6d4e344503e725a">position</a>)</td></tr>
 <tr class="memdesc:a8eb2b3a6f84b4e1316ccd00132db571d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position indicator of the file to position.  <a href="#a8eb2b3a6f84b4e1316ccd00132db571d">More...</a><br /></td></tr>
 <tr class="separator:a8eb2b3a6f84b4e1316ccd00132db571d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,11 +132,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ed82642143511a7d6d4e344503e725a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_file.html#a9ed82642143511a7d6d4e344503e725a">position</a> ()</td></tr>
 <tr class="memdesc:a9ed82642143511a7d6d4e344503e725a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current position in file.  <a href="#a9ed82642143511a7d6d4e344503e725a">More...</a><br /></td></tr>
 <tr class="separator:a9ed82642143511a7d6d4e344503e725a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classcrown_1_1_file"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcrown_1_1_file')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcrown_1_1_file.html">crown::File</a></td></tr>
-<tr class="memitem:a3b5021e35227359acf01f48d7848eab1 inherit pub_methods_classcrown_1_1_file"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b5021e35227359acf01f48d7848eab1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_file.html#a3b5021e35227359acf01f48d7848eab1">File</a> (FileOpenMode::Enum mode)</td></tr>
-<tr class="memdesc:a3b5021e35227359acf01f48d7848eab1 inherit pub_methods_classcrown_1_1_file"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file with the given <em>mode</em>. <br /></td></tr>
-<tr class="separator:a3b5021e35227359acf01f48d7848eab1 inherit pub_methods_classcrown_1_1_file"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -147,14 +144,37 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aff256b214504925a20af8d6b3db8a72b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff256b214504925a20af8d6b3db8a72b"></a>
 <a class="el" href="classcrown_1_1_os_file.html">OsFile</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_file</b></td></tr>
 <tr class="separator:aff256b214504925a20af8d6b3db8a72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classcrown_1_1_file"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcrown_1_1_file')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcrown_1_1_file.html">crown::File</a></td></tr>
-<tr class="memitem:afb55e237ee582a75b00735566b3c7efd inherit pro_attribs_classcrown_1_1_file"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb55e237ee582a75b00735566b3c7efd"></a>
-FileOpenMode::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>_open_mode</b></td></tr>
-<tr class="separator:afb55e237ee582a75b00735566b3c7efd inherit pro_attribs_classcrown_1_1_file"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides common facilities to access files on disk. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab3fb3f6787e6f4749ceb83d51b19de5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::DiskFile::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the file. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">crown::File</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af88737f2ed3fe43570380b98eb5bcc9c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -234,6 +254,44 @@ FileOpenMode::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>_open_m
 <p>A file is valid when the buffer where it operates exists. (i.e. a file descriptor is attached to the file, a memory area is attached to the file etc.) </p>
 
 <p>Implements <a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2f6e6e1ea9b386609d1402ad289bc55e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::DiskFile::open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FileOpenMode::Enum&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Opens the file at <em>path</em> with specified <em>mode</em>. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#aa0321f54c74c4ad4fc05939f4f426daf">crown::File</a>.</p>
 
 </div>
 </div>
@@ -458,7 +516,7 @@ FileOpenMode::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>_open_m
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 17 2015 22:16:53 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 18 2015 16:30:09 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

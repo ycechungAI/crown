@@ -21,7 +21,6 @@ var searchData=
   ['angular_5fvelocity',['angular_velocity',['../structcrown_1_1_actor.html#a476a02070ff7b0e4e4a1e5db0827dcc2',1,'crown::Actor']]],
   ['any_5fpressed',['any_pressed',['../structcrown_1_1_input_device.html#a7751e6c377b306a9fdf04205fdff0d04',1,'crown::InputDevice']]],
   ['any_5freleased',['any_released',['../structcrown_1_1_input_device.html#ae6f040dbe19fb26644d29a639ea4ba5d',1,'crown::InputDevice']]],
-  ['apkfile',['ApkFile',['../classcrown_1_1_apk_file.html#acd38e2648d435907ca372dcf1af61a35',1,'crown::ApkFile']]],
   ['architecture',['architecture',['../structcrown_1_1_device.html#a48d83182b610314e9eb4267d3539a9aa',1,'crown::Device']]],
   ['array',['Array',['../structcrown_1_1_array.html#a1200a321fb0104dcb9dfb2a3a0907363',1,'crown::Array']]],
   ['aspect',['aspect',['../structcrown_1_1_camera.html#afb7bdb670b09b07ae2a7c9b95453e58e',1,'crown::Camera']]],

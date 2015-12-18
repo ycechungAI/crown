@@ -8,7 +8,7 @@ var searchData=
   ['node',['Node',['../structcrown_1_1_map_1_1_node.html',1,'crown::Map']]],
   ['normalize',['normalize',['../namespacecrown_1_1plane.html#aafaec7797ad95a86d38e8ca2f42e3055',1,'crown::plane::normalize()'],['../group___math.html#ga5e22e7d2734ecd705703582119aad969',1,'crown::normalize(Quaternion &amp;q)'],['../group___math.html#gaa94c00ef818fbaa916016d08eeea7da0',1,'crown::normalize(Vector2 &amp;a)'],['../group___math.html#ga90f52b9b9f0c0428102b68b2e2cbf3b8',1,'crown::normalize(Vector3 &amp;a)'],['../group___math.html#gafc418c58cab18b8fad7a8ea72eb8ac56',1,'crown::normalize(Vector4 &amp;a)']]],
   ['not_5fequal_5fto',['not_equal_to',['../structcrown_1_1not__equal__to.html',1,'crown']]],
-  ['nullfile',['NullFile',['../classcrown_1_1_null_file.html#a1569cc71205280e034274e8c33e144bb',1,'crown::NullFile']]],
+  ['nullfile',['NullFile',['../classcrown_1_1_null_file.html#aa7b5fc1b5f53888e7b1df69c76c9565f',1,'crown::NullFile']]],
   ['nullfile',['NullFile',['../classcrown_1_1_null_file.html',1,'crown']]],
   ['num_5fargs',['num_args',['../structcrown_1_1_lua_stack.html#a41c25040850c35c8f4b545b5b5620ac4',1,'crown::LuaStack']]],
   ['num_5faxes',['num_axes',['../structcrown_1_1_input_device.html#adb1d45c3c9ffc397d6d45bf321937c6a',1,'crown::InputDevice']]],

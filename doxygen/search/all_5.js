@@ -2,7 +2,6 @@ var searchData=
 [
   ['far_5fclip_5fdistance',['far_clip_distance',['../structcrown_1_1_camera.html#a79d07332d4d762778e7dd406cae505b6',1,'crown::Camera']]],
   ['file',['File',['../classcrown_1_1_file.html',1,'crown']]],
-  ['file',['File',['../classcrown_1_1_file.html#a3b5021e35227359acf01f48d7848eab1',1,'crown::File']]],
   ['fileopenmode',['FileOpenMode',['../structcrown_1_1_file_open_mode.html',1,'crown']]],
   ['filesystem',['Filesystem',['../group___filesystem.html',1,'']]],
   ['filesystem',['Filesystem',['../classcrown_1_1_filesystem.html',1,'crown']]],
