@@ -7,5 +7,5 @@ var searchData=
   ['joypadbutton',['JoypadButton',['../structcrown_1_1_joypad_button.html',1,'crown']]],
   ['jsonelement',['JSONElement',['../classcrown_1_1_j_s_o_n_element.html',1,'crown']]],
   ['jsonparser',['JSONParser',['../classcrown_1_1_j_s_o_n_parser.html',1,'crown']]],
-  ['jsonvaluetype',['JSONValueType',['../structcrown_1_1_j_s_o_n_value_type.html',1,'crown']]]
+  ['jsonvaluetype',['JsonValueType',['../structcrown_1_1_json_value_type.html',1,'crown']]]
 ];

@@ -45,5 +45,5 @@ var searchData=
   ['translation',['translation',['../group___math.html#ga4bd6177e223a00b179b8b914c1c7422c',1,'crown']]],
   ['transpose',['transpose',['../group___math.html#gadc9e5f97d3f63ae101ba0256f1289027',1,'crown::transpose(Matrix3x3 &amp;m)'],['../group___math.html#gaed52a7b5c76ce533d79faf36f9159f52',1,'crown::transpose(Matrix4x4 &amp;m)']]],
   ['triggerevent',['TriggerEvent',['../structcrown_1_1physics__world_1_1_trigger_event.html',1,'crown::physics_world']]],
-  ['type',['type',['../namespacecrown_1_1json.html#a41f60a9b0c847e4d761e4c4271f00a83',1,'crown::json::type()'],['../namespacecrown_1_1njson.html#a27e741b1d125fe5c49bba0aee4fd11f0',1,'crown::njson::type()']]]
+  ['type',['type',['../namespacecrown_1_1json.html#affac38f2f84f04271e05809f9fd5d83f',1,'crown::json::type()'],['../namespacecrown_1_1njson.html#aceda8da800c6c35be24f07130f6cb982',1,'crown::njson::type()']]]
 ];
