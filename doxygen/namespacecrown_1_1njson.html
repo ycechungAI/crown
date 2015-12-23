@@ -76,7 +76,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">crown::njson Namespace Reference<div class="ingroups"><a class="el" href="group___j_s_o_n.html">JSON</a></div></div>  </div>
@@ -86,68 +85,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Functions to parse NJSON-encoded strings.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a0ca430fb7f011dd3ec6094fb8e67381f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ca430fb7f011dd3ec6094fb8e67381f"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorFunction</b>) (const char *format,...)</td></tr>
-<tr class="separator:a0ca430fb7f011dd3ec6094fb8e67381f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a81280a9609aba43123c931284aa9782a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81280a9609aba43123c931284aa9782a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>default_error_handler</b> (const char *format,...)</td></tr>
-<tr class="separator:a81280a9609aba43123c931284aa9782a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aceda8da800c6c35be24f07130f6cb982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aceda8da800c6c35be24f07130f6cb982"></a>
 JsonValueType::Enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#aceda8da800c6c35be24f07130f6cb982">type</a> (const char *json)</td></tr>
 <tr class="memdesc:aceda8da800c6c35be24f07130f6cb982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the data type of the NJSON string <em>json</em>. <br /></td></tr>
 <tr class="separator:aceda8da800c6c35be24f07130f6cb982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc25c034553808f04d87cf3c63ee2ad3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc25c034553808f04d87cf3c63ee2ad3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#abc25c034553808f04d87cf3c63ee2ad3">parse_string</a> (const char *json, <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a> &amp;string, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:abc25c034553808f04d87cf3c63ee2ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON string <em>json</em> ad puts it into <em>string</em>. <br /></td></tr>
-<tr class="separator:abc25c034553808f04d87cf3c63ee2ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cea20bf5bf8b714231fad5617315af6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cea20bf5bf8b714231fad5617315af6"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a7cea20bf5bf8b714231fad5617315af6">parse_number</a> (const char *json, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:a7cea20bf5bf8b714231fad5617315af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON number <em>json</em> as double. <br /></td></tr>
-<tr class="separator:a7cea20bf5bf8b714231fad5617315af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbce13562ed3b31e8de90a4b713926dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbce13562ed3b31e8de90a4b713926dd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#acbce13562ed3b31e8de90a4b713926dd">parse_bool</a> (const char *json, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:acbce13562ed3b31e8de90a4b713926dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON boolean <em>json</em> as bool. <br /></td></tr>
-<tr class="separator:acbce13562ed3b31e8de90a4b713926dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a394a25ca5de8e67af57cfeb2f385d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a394a25ca5de8e67af57cfeb2f385d3"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a6a394a25ca5de8e67af57cfeb2f385d3">parse_int</a> (const char *json, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:a6a394a25ca5de8e67af57cfeb2f385d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON number <em>json</em> as int. <br /></td></tr>
-<tr class="separator:a6a394a25ca5de8e67af57cfeb2f385d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a309b9844ecb7c3231d0d2e28d22dbd30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a309b9844ecb7c3231d0d2e28d22dbd30"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a309b9844ecb7c3231d0d2e28d22dbd30">parse_float</a> (const char *json, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:a309b9844ecb7c3231d0d2e28d22dbd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON number <em>json</em> as float. <br /></td></tr>
-<tr class="separator:a309b9844ecb7c3231d0d2e28d22dbd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34283cdb27f36574490124ee9be92558"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34283cdb27f36574490124ee9be92558"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_array</b> (const char *json, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; const char * &gt; &amp;array, ErrorFunction error)</td></tr>
-<tr class="separator:a34283cdb27f36574490124ee9be92558"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b97772a2b40ce31f59fab0bc47f7804"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b97772a2b40ce31f59fab0bc47f7804"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_root_object</b> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object, ErrorFunction error)</td></tr>
-<tr class="separator:a3b97772a2b40ce31f59fab0bc47f7804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e975e439b2772e31db58123443bc96b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a5e975e439b2772e31db58123443bc96b">parse_object</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:a5e975e439b2772e31db58123443bc96b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON object <em>json</em> and puts it into <em>object</em> as map from key to pointer to the corresponding value into the original string <em>json</em>.  <a href="#a5e975e439b2772e31db58123443bc96b">More...</a><br /></td></tr>
-<tr class="separator:a5e975e439b2772e31db58123443bc96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7a8eec19704cc22086803abb4963f98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7a8eec19704cc22086803abb4963f98"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#ab7a8eec19704cc22086803abb4963f98">parse</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:ab7a8eec19704cc22086803abb4963f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON-encoded <em>json</em>. <br /></td></tr>
-<tr class="separator:ab7a8eec19704cc22086803abb4963f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c9f5e49f1cc511c1647c9ed6e56a8b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c9f5e49f1cc511c1647c9ed6e56a8b7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_root_object</b> (const char *json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object, ErrorFunction error)</td></tr>
-<tr class="separator:a3c9f5e49f1cc511c1647c9ed6e56a8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ff86acf461b97cdfeff43ef10621659"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a7ff86acf461b97cdfeff43ef10621659">parse_object</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:a7ff86acf461b97cdfeff43ef10621659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON object <em>json</em> and puts it into <em>object</em> as map from key to pointer to the corresponding value into the original string <em>json</em>.  <a href="#a7ff86acf461b97cdfeff43ef10621659">More...</a><br /></td></tr>
-<tr class="separator:a7ff86acf461b97cdfeff43ef10621659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4ad02e1fd994b4323f748f94066e465"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4ad02e1fd994b4323f748f94066e465"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#aa4ad02e1fd994b4323f748f94066e465">parse</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:aa4ad02e1fd994b4323f748f94066e465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON-encoded <em>json</em>. <br /></td></tr>
-<tr class="separator:aa4ad02e1fd994b4323f748f94066e465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a107404ef8235f2befd17956c80564d91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a107404ef8235f2befd17956c80564d91"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a107404ef8235f2befd17956c80564d91">parse</a> (<a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:a107404ef8235f2befd17956c80564d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON-encoded <em>json</em>. <br /></td></tr>
-<tr class="separator:a107404ef8235f2befd17956c80564d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a707d1e2069b209d1c36fc072d19cdb94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a707d1e2069b209d1c36fc072d19cdb94"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a707d1e2069b209d1c36fc072d19cdb94">parse_string</a> (const char *json, <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a> &amp;string)</td></tr>
+<tr class="memdesc:a707d1e2069b209d1c36fc072d19cdb94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON string <em>json</em> ad puts it into <em>string</em>. <br /></td></tr>
+<tr class="separator:a707d1e2069b209d1c36fc072d19cdb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a554a243b9e60bfecf8b5b01662e44c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a554a243b9e60bfecf8b5b01662e44c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a9a554a243b9e60bfecf8b5b01662e44c">parse_number</a> (const char *json)</td></tr>
+<tr class="memdesc:a9a554a243b9e60bfecf8b5b01662e44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON number <em>json</em> as double. <br /></td></tr>
+<tr class="separator:a9a554a243b9e60bfecf8b5b01662e44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f525cfed04f6660a07ea03472b7a56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7f525cfed04f6660a07ea03472b7a56"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#af7f525cfed04f6660a07ea03472b7a56">parse_bool</a> (const char *json)</td></tr>
+<tr class="memdesc:af7f525cfed04f6660a07ea03472b7a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON boolean <em>json</em> as bool. <br /></td></tr>
+<tr class="separator:af7f525cfed04f6660a07ea03472b7a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebf1268bea8e52bc2976537aa00400d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ebf1268bea8e52bc2976537aa00400d"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a5ebf1268bea8e52bc2976537aa00400d">parse_int</a> (const char *json)</td></tr>
+<tr class="memdesc:a5ebf1268bea8e52bc2976537aa00400d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON number <em>json</em> as int. <br /></td></tr>
+<tr class="separator:a5ebf1268bea8e52bc2976537aa00400d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93319008bc3870099974655e0de02ef8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93319008bc3870099974655e0de02ef8"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a93319008bc3870099974655e0de02ef8">parse_float</a> (const char *json)</td></tr>
+<tr class="memdesc:a93319008bc3870099974655e0de02ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the NJSON number <em>json</em> as float. <br /></td></tr>
+<tr class="separator:a93319008bc3870099974655e0de02ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591b9379515208c7cdb108453aae5432"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a591b9379515208c7cdb108453aae5432"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_array</b> (const char *json, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; const char * &gt; &amp;array)</td></tr>
+<tr class="separator:a591b9379515208c7cdb108453aae5432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0017597c6103e67f82635cbf816dc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf0017597c6103e67f82635cbf816dc7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_root_object</b> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object)</td></tr>
+<tr class="separator:abf0017597c6103e67f82635cbf816dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa4f21a650122595b165624076e07fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a1fa4f21a650122595b165624076e07fa">parse_object</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object)</td></tr>
+<tr class="memdesc:a1fa4f21a650122595b165624076e07fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON object <em>json</em> and puts it into <em>object</em> as map from key to pointer to the corresponding value into the original string <em>json</em>.  <a href="#a1fa4f21a650122595b165624076e07fa">More...</a><br /></td></tr>
+<tr class="separator:a1fa4f21a650122595b165624076e07fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062a9a78647b40c8a2601ab82a148a43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a062a9a78647b40c8a2601ab82a148a43"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a062a9a78647b40c8a2601ab82a148a43">parse</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object)</td></tr>
+<tr class="memdesc:a062a9a78647b40c8a2601ab82a148a43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON-encoded <em>json</em>. <br /></td></tr>
+<tr class="separator:a062a9a78647b40c8a2601ab82a148a43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95390f39b805b68247188e28f0b27058"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95390f39b805b68247188e28f0b27058"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_root_object</b> (const char *json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object)</td></tr>
+<tr class="separator:a95390f39b805b68247188e28f0b27058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84bbdb9072d22eeaae1adbc1e2ef9edd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a84bbdb9072d22eeaae1adbc1e2ef9edd">parse_object</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object)</td></tr>
+<tr class="memdesc:a84bbdb9072d22eeaae1adbc1e2ef9edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON object <em>json</em> and puts it into <em>object</em> as map from key to pointer to the corresponding value into the original string <em>json</em>.  <a href="#a84bbdb9072d22eeaae1adbc1e2ef9edd">More...</a><br /></td></tr>
+<tr class="separator:a84bbdb9072d22eeaae1adbc1e2ef9edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab434e838eb3b8fc90c8a6d8044f615f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab434e838eb3b8fc90c8a6d8044f615f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#ab434e838eb3b8fc90c8a6d8044f615f9">parse</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object)</td></tr>
+<tr class="memdesc:ab434e838eb3b8fc90c8a6d8044f615f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON-encoded <em>json</em>. <br /></td></tr>
+<tr class="separator:ab434e838eb3b8fc90c8a6d8044f615f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f090e5489b47681cbcd585715022c56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f090e5489b47681cbcd585715022c56"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a5f090e5489b47681cbcd585715022c56">parse</a> (<a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;json, <a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;object)</td></tr>
+<tr class="memdesc:a5f090e5489b47681cbcd585715022c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON-encoded <em>json</em>. <br /></td></tr>
+<tr class="separator:a5f090e5489b47681cbcd585715022c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a159a481cf1d630133636c1d5e61547d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcrown_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#a159a481cf1d630133636c1d5e61547d8">parse_vector2</a> (const char *json)</td></tr>
 <tr class="memdesc:a159a481cf1d630133636c1d5e61547d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the array <em>json</em> as <a class="el" href="structcrown_1_1_vector2.html">Vector2</a>.  <a href="#a159a481cf1d630133636c1d5e61547d8">More...</a><br /></td></tr>
 <tr class="separator:a159a481cf1d630133636c1d5e61547d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,14 +161,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <a class="el" href="structcrown_1_1_string_id64.html">ResourceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#af624f7cca2d1c99b62c88ff8037c2d72">parse_resource_id</a> (const char *json)</td></tr>
 <tr class="memdesc:af624f7cca2d1c99b62c88ff8037c2d72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string <em>json</em> as ResourceId. <br /></td></tr>
 <tr class="separator:af624f7cca2d1c99b62c88ff8037c2d72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e1cd04f21b7a10020e199ec94c422c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#ae7e1cd04f21b7a10020e199ec94c422c">parse_array</a> (const char *json, <a class="el" href="structcrown_1_1_array.html">JsonArray</a> &amp;array, ErrorFunction error=default_error_handler)</td></tr>
-<tr class="memdesc:ae7e1cd04f21b7a10020e199ec94c422c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string.  <a href="#ae7e1cd04f21b7a10020e199ec94c422c">More...</a><br /></td></tr>
-<tr class="separator:ae7e1cd04f21b7a10020e199ec94c422c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0cc7888a49cbd6874ddc42961f416b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1njson.html#ac0cc7888a49cbd6874ddc42961f416b1">parse_array</a> (const char *json, <a class="el" href="structcrown_1_1_array.html">JsonArray</a> &amp;array)</td></tr>
+<tr class="memdesc:ac0cc7888a49cbd6874ddc42961f416b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the NJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string.  <a href="#ac0cc7888a49cbd6874ddc42961f416b1">More...</a><br /></td></tr>
+<tr class="separator:ac0cc7888a49cbd6874ddc42961f416b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to parse NJSON-encoded strings. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ae7e1cd04f21b7a10020e199ec94c422c"></a>
+<a class="anchor" id="ac0cc7888a49cbd6874ddc42961f416b1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -192,13 +182,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_array.html">JsonArray</a> &amp;&#160;</td>
-          <td class="paramname"><em>array</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ErrorFunction&#160;</td>
-          <td class="paramname"><em>error</em> = <code>default_error_handler</code>&#160;</td>
+          <td class="paramname"><em>array</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -208,6 +192,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
       </table>
 </div><div class="memdoc">
 
+<p>Parses the NJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string. </p>
 <p>Parses the NJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string. </p>
 
 </div>
@@ -231,7 +216,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 
 </div>
 </div>
-<a class="anchor" id="a5e975e439b2772e31db58123443bc96b"></a>
+<a class="anchor" id="a1fa4f21a650122595b165624076e07fa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -245,13 +230,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>object</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ErrorFunction&#160;</td>
-          <td class="paramname"><em>error</em> = <code>default_error_handler</code>&#160;</td>
+          <td class="paramname"><em>object</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -265,7 +244,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 
 </div>
 </div>
-<a class="anchor" id="a7ff86acf461b97cdfeff43ef10621659"></a>
+<a class="anchor" id="a84bbdb9072d22eeaae1adbc1e2ef9edd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -279,13 +258,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_map.html">JsonObject</a> &amp;&#160;</td>
-          <td class="paramname"><em>object</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ErrorFunction&#160;</td>
-          <td class="paramname"><em>error</em> = <code>default_error_handler</code>&#160;</td>
+          <td class="paramname"><em>object</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -378,7 +351,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 23 2015 19:47:40 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 23 2015 22:08:31 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
