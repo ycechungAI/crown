@@ -161,9 +161,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> stream_printf(s, <span class="stringliteral">&quot;%g&quot;</span>, val);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacecrown_1_1string__stream.html#a505cecb48df1bdaeba58dded29bfe1ab">   89</a></span>&#160;    <span class="keyword">inline</span> StringStream&amp; <a class="code" href="namespacecrown_1_1string__stream.html#ac9065ea5327e481028788a305ee20e73">operator&lt;&lt;</a>(StringStream&amp; s, <span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">string</span>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacecrown_1_1string__stream.html#a505cecb48df1bdaeba58dded29bfe1ab">   89</a></span>&#160;    <span class="keyword">inline</span> StringStream&amp; <a class="code" href="namespacecrown_1_1string__stream.html#ac9065ea5327e481028788a305ee20e73">operator&lt;&lt;</a>(StringStream&amp; s, <span class="keyword">const</span> <span class="keywordtype">char</span>* str)</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="namespacecrown_1_1array.html#a294101d2bd4253b3e0aa06092ae88331">array::push</a>(s, <span class="keywordtype">string</span>, (uint32_t)strlen(<span class="keywordtype">string</span>));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="namespacecrown_1_1array.html#a294101d2bd4253b3e0aa06092ae88331">array::push</a>(s, str, strlen32(str));</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> s;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
@@ -192,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 23 2015 22:08:31 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
