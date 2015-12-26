@@ -13,7 +13,7 @@ var searchData=
   ['collides_5fdown',['collides_down',['../structcrown_1_1_controller.html#ab7dbbcc92e51ea6f6455101868da02dc',1,'crown::Controller']]],
   ['collides_5fsides',['collides_sides',['../structcrown_1_1_controller.html#a553ec140e2e38f1847deb48f19053f1f',1,'crown::Controller']]],
   ['collides_5fup',['collides_up',['../structcrown_1_1_controller.html#a49e206fde3b4bbd66ded4fda58c04887',1,'crown::Controller']]],
-  ['color4',['color4',['../group___math.html#gab6102384742f512ecba7583bf585ea62',1,'crown']]],
+  ['color4',['color4',['../group___math.html#ga4d82d17a2c80efcaabb57888c7de2d1e',1,'crown']]],
   ['compile_5fall',['compile_all',['../classcrown_1_1_bundle_compiler.html#a2b888c84349ad09c4c107fcdd6373234',1,'crown::BundleCompiler']]],
   ['complete_5frequests',['complete_requests',['../classcrown_1_1_resource_manager.html#a438fc4ff03dde952938f960296ddbbe1',1,'crown::ResourceManager']]],
   ['condense',['condense',['../namespacecrown_1_1array.html#afa0f6a0fffeced013371f2b73db0d051',1,'crown::array::condense()'],['../namespacecrown_1_1vector.html#a26e09a38511ac2f0fdc56e929fc41d01',1,'crown::vector::condense()']]],

@@ -9,8 +9,8 @@ var searchData=
   ['frame_5fcount',['frame_count',['../structcrown_1_1_device.html#af9bc205a7cc669230bece1e8e8073c52',1,'crown::Device']]],
   ['from_5fmatrix',['from_matrix',['../namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6',1,'crown::frustum']]],
   ['from_5fpoint_5fand_5fnormal',['from_point_and_normal',['../namespacecrown_1_1plane.html#a517c3e04ebdaa9202b345367be57961f',1,'crown::plane']]],
-  ['from_5frgb',['from_rgb',['../group___math.html#gaa04ea19f58fde4a2daa456dc2c0d2e43',1,'crown']]],
-  ['from_5frgba',['from_rgba',['../group___math.html#ga964142b05387036612d477b6a7f7ba1b',1,'crown::from_rgba(uint8_t r, uint8_t g, uint8_t b, uint8_t a)'],['../group___math.html#gae1d75deb6dc65ef6f59426e271b2ec9e',1,'crown::from_rgba(uint32_t rgba)']]],
+  ['from_5frgb',['from_rgb',['../group___math.html#ga178a006b8c96d21e5f4c41be01e7ebf0',1,'crown']]],
+  ['from_5frgba',['from_rgba',['../group___math.html#gaa843dc258b48720dc9d36369e37ca814',1,'crown::from_rgba(uint8_t r, uint8_t g, uint8_t b, uint8_t a)'],['../group___math.html#gae1d75deb6dc65ef6f59426e271b2ec9e',1,'crown::from_rgba(uint32_t rgba)']]],
   ['frustum_5fbox_5fintersection',['frustum_box_intersection',['../group___math.html#ga1d490762d4b506dd4f78412791339a59',1,'crown']]],
   ['frustum_5fsphere_5fintersection',['frustum_sphere_intersection',['../group___math.html#ga618bd1d60d10675ff3f77ab39f947e87',1,'crown']]]
 ];
