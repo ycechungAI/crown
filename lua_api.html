@@ -433,7 +433,7 @@ tt.literal {
 <blockquote>
 <dl class="docutils">
 <dt><strong>Vector3</strong> (x, y, z) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
-<dd>Returns a new vector from individual components.</dd>
+<dd>Returns a new vector from individual elements.</dd>
 <dt><strong>x</strong> (v) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the x value of the vector.</dd>
 <dt><strong>y</strong> (v) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
@@ -481,9 +481,9 @@ tt.literal {
 <dt><strong>angle</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the angle between the vectors <em>a</em> and <em>b</em>.</dd>
 <dt><strong>max</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
-<dd>Returns a vector that contains the largest value for each component from <em>a</em> and <em>b</em>.</dd>
+<dd>Returns a vector that contains the largest value for each element from <em>a</em> and <em>b</em>.</dd>
 <dt><strong>min</strong> (a, b) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
-<dd>Returns a vector that contains the smallest value for each component from <em>a</em> and <em>b</em>.</dd>
+<dd>Returns a vector that contains the smallest value for each element from <em>a</em> and <em>b</em>.</dd>
 <dt><strong>lerp</strong> (a, b, t) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns the linearly interpolated vector between <em>a</em> and <em>b</em> at time <em>t</em> in [0, 1].</dd>
 </dl>
@@ -508,11 +508,11 @@ Returns the corresponding semantic axis.</blockquote>
 <blockquote>
 <dl class="docutils">
 <dt><strong>Vector3Box</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Vector3Box</span></dt>
-<dd>Returns a new Vector3Box.</dd>
+<dd>Returns a new Vector3Box initialized with the zero vector.</dd>
 <dt><strong>Vector3Box</strong> (v) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3Box</span></dt>
 <dd>Returns a new Vector3Box from the Vector3 <em>v</em>.</dd>
 <dt><strong>Vector3Box</strong> (x, y, z) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3Box</span></dt>
-<dd>Returns a new Vector3Box from components.</dd>
+<dd>Returns a new Vector3Box from individual elements.</dd>
 <dt><strong>store</strong> (v)</dt>
 <dd>Stores the Vector3 <em>v</em> in the box.</dd>
 <dt><strong>store</strong> (x, y, z)</dt>
@@ -572,11 +572,11 @@ It uses NLerp.</dd>
 <blockquote>
 <dl class="docutils">
 <dt><strong>QuaternionBox</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">QuaternionBox</span></dt>
-<dd>Returns a new QuaternionBox.</dd>
+<dd>Returns a new QuaternionBox initialized with the identity quaternion.</dd>
 <dt><strong>QuaternionBox</strong> (q) <span class="classifier-delimiter">:</span> <span class="classifier">QuaternionBox</span></dt>
 <dd>Returns a new QuaternionBox from the Quaternion <em>q</em>.</dd>
 <dt><strong>QuaternionBox</strong> (x, y, z, w) <span class="classifier-delimiter">:</span> <span class="classifier">QuaternionBox</span></dt>
-<dd>Returns a new QuaternionBox from elements.</dd>
+<dd>Returns a new QuaternionBox from individual elements.</dd>
 <dt><strong>store(q)</strong> ()</dt>
 <dd>Stores the Quaternion <em>q</em> in the box.</dd>
 <dt><strong>store</strong> (x, y, z, w)</dt>
@@ -591,7 +591,7 @@ It uses NLerp.</dd>
 <blockquote>
 <dl class="docutils">
 <dt><strong>Matrix4x4</strong> (xx, xy, xz, xw, yx, yy, yz, yw, zx, zy, zz, zw, tx, ty, tz, tw) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4</span></dt>
-<dd>Returns a new matrix from individual components.</dd>
+<dd>Returns a new matrix from individual elements.</dd>
 <dt><strong>from_quaternion</strong> (q) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4</span></dt>
 <dd>Returns a new matrix from <em>q</em>.</dd>
 <dt><strong>from_translation</strong> (t) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4</span></dt>
@@ -647,6 +647,8 @@ It uses NLerp.</dd>
 <h2><a class="toc-backref" href="#id8">Matrix4x4Box</a></h2>
 <blockquote>
 <dl class="docutils">
+<dt><strong>Matrix4x4Box</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4Box</span></dt>
+<dd>Returns a new Matrix4x4Box initialized with the identity matrix.</dd>
 <dt><strong>Matrix4x4Box</strong> (m) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4Box</span></dt>
 <dd>Returns a new Matrix4x4Box from the Matrix4x4 <em>m</em>.</dd>
 <dt><strong>store</strong> (m)</dt>
@@ -661,7 +663,7 @@ It uses NLerp.</dd>
 <blockquote>
 <dl class="docutils">
 <dt><strong>Color4</strong> (r, g, b, a) <span class="classifier-delimiter">:</span> <span class="classifier">Color4</span></dt>
-<dd>Returns a new Color4 from individual components.</dd>
+<dd>Returns a new Color4 from individual elements.</dd>
 <dt><strong>to_string</strong> (c) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string representing the color <em>c</em>.</dd>
 </dl>
@@ -1258,7 +1260,7 @@ None.</blockquote>
 <h3><a class="toc-backref" href="#id35">Pad Axis Names</a></h3>
 <blockquote>
 <ul class="simple">
-<li><tt class="docutils literal">left</tt>, <tt class="docutils literal">right</tt>: Returns the direction (x, y) of the left or right thumbstick [-1; +1]. The z component represents the left or right trigger [0; +1].</li>
+<li><tt class="docutils literal">left</tt>, <tt class="docutils literal">right</tt>: Returns the direction (x, y) of the left or right thumbstick [-1; +1]. The z element represents the left or right trigger [0; +1].</li>
 </ul>
 </blockquote>
 </div>
