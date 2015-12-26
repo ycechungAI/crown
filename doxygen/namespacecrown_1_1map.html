@@ -127,47 +127,6 @@ template&lt;typename TKey , typename TValue &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to manipulate <a class="el" href="structcrown_1_1_map.html" title="Map from key to value. ">Map</a>. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a3293d59f8f7bd9f7ff780fe1404f1932"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TKey , typename TValue &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; TKey, TValue &gt;::Node * crown::map::begin </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; TKey, TValue &gt; &amp;&#160;</td>
-          <td class="paramname"><em>m</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the first item in the map, can be used to efficiently iterate over the elements (in random order). </p>
-
-</div>
-</div>
-<a class="anchor" id="ab754b85003e5bce6496c39417196b59e"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename TKey , typename TValue &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::map::clear </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcrown_1_1_map.html">Map</a>&lt; TKey, TValue &gt; &amp;&#160;</td>
-          <td class="paramname"><em>m</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes all the items in the map. </p>
-<dl class="section note"><dt>Note</dt><dd>Calls destructor on the items. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="ac807928280afee534768767e5afa5175"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,10 +171,51 @@ template&lt;typename TKey , typename TValue &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ab754b85003e5bce6496c39417196b59e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TKey , typename TValue &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::map::clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_map.html">Map</a>&lt; TKey, TValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all the items in the map. </p>
+<dl class="section note"><dt>Note</dt><dd>Calls destructor on the items. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3293d59f8f7bd9f7ff780fe1404f1932"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TKey , typename TValue &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; TKey, TValue &gt;::Node * crown::map::begin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; TKey, TValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the first item in the map, can be used to efficiently iterate over the elements (in random order). </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

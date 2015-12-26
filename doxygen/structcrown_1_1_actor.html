@@ -263,6 +263,82 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>PhysicsWorld</b></td
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a rigid body. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aef3195a8641ef525eda73a7cddeb5a52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::Actor::set_kinematic </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>kinematic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets whether the actor is kinematic or not. </p>
+<dl class="section note"><dt>Note</dt><dd>This call has no effect on static actors. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0ea3e39642ea88cdff0148678b4b672c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::Actor::move </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Moves the actor to <em>pos</em>. </p>
+<dl class="section note"><dt>Note</dt><dd>This call only affects nonkinematic actors. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aad478f879d8e0ed138ee743388e703bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::Actor::set_linear_velocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>vel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the linear velocity of the actor. </p>
+<dl class="section note"><dt>Note</dt><dd>This call only affects nonkinematic actors. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a235efe2dac3e67606e9283de78b9d1b5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::Actor::set_angular_velocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>vel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the angular velocity of the actor. </p>
+<dl class="section note"><dt>Note</dt><dd>This call only affects nonkinematic actors. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ad577f1b9dc9c7b7f0da8a00afe79166e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -307,25 +383,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>PhysicsWorld</b></td
 </div><div class="memdoc">
 
 <p>Adds a linear impulse (acting along the world position <em>pos</em>) to the actor. </p>
-<dl class="section note"><dt>Note</dt><dd>This call only affects nonkinematic actors. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a0ea3e39642ea88cdff0148678b4b672c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Actor::move </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Moves the actor to <em>pos</em>. </p>
 <dl class="section note"><dt>Note</dt><dd>This call only affects nonkinematic actors. </dd></dl>
 
 </div>
@@ -394,63 +451,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>PhysicsWorld</b></td
 
 </div>
 </div>
-<a class="anchor" id="a235efe2dac3e67606e9283de78b9d1b5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Actor::set_angular_velocity </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>vel</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the angular velocity of the actor. </p>
-<dl class="section note"><dt>Note</dt><dd>This call only affects nonkinematic actors. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="aef3195a8641ef525eda73a7cddeb5a52"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Actor::set_kinematic </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>kinematic</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets whether the actor is kinematic or not. </p>
-<dl class="section note"><dt>Note</dt><dd>This call has no effect on static actors. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="aad478f879d8e0ed138ee743388e703bd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Actor::set_linear_velocity </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>vel</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the linear velocity of the actor. </p>
-<dl class="section note"><dt>Note</dt><dd>This call only affects nonkinematic actors. </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/physics/<a class="el" href="actor_8h_source.html">actor.h</a></li>
 <li>src/physics/actor.cpp</li>
@@ -458,7 +458,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>PhysicsWorld</b></td
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

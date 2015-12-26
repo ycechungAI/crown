@@ -111,12 +111,9 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sjson.html#af89a9d9c0a6fc7815bdef1d1ecbee204">parse_float</a> (const char *json)</td></tr>
 <tr class="memdesc:af89a9d9c0a6fc7815bdef1d1ecbee204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the SJSON number <em>json</em> as float. <br /></td></tr>
 <tr class="separator:af89a9d9c0a6fc7815bdef1d1ecbee204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39c71a5d10944908a5699746a2b912f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39c71a5d10944908a5699746a2b912f1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_array</b> (const char *json, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; const char * &gt; &amp;array)</td></tr>
-<tr class="separator:a39c71a5d10944908a5699746a2b912f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c62db38219b855b54804e3798971e4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c62db38219b855b54804e3798971e4d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_root_object</b> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object)</td></tr>
-<tr class="separator:a6c62db38219b855b54804e3798971e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cabc989ec0f80e6b9c3a65a3409b693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sjson.html#a7cabc989ec0f80e6b9c3a65a3409b693">parse_array</a> (const char *json, <a class="el" href="group___j_s_o_n.html#ga404c138ad8d8ab17c722dba841a5630d">JsonArray</a> &amp;array)</td></tr>
+<tr class="memdesc:a7cabc989ec0f80e6b9c3a65a3409b693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string.  <a href="#a7cabc989ec0f80e6b9c3a65a3409b693">More...</a><br /></td></tr>
+<tr class="separator:a7cabc989ec0f80e6b9c3a65a3409b693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5025b6bab854c3efee428f773372a6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sjson.html#ab5025b6bab854c3efee428f773372a6f">parse_object</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object)</td></tr>
 <tr class="memdesc:ab5025b6bab854c3efee428f773372a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SJSON object <em>json</em> and puts it into <em>object</em> as map from key to pointer to the corresponding value into the original string <em>json</em>.  <a href="#ab5025b6bab854c3efee428f773372a6f">More...</a><br /></td></tr>
 <tr class="separator:ab5025b6bab854c3efee428f773372a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,9 +121,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_root_object</b>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sjson.html#a94fafbc661b32cf21b844bba79e6592a">parse</a> (const char *json, <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="classcrown_1_1_dynamic_string.html">DynamicString</a>, const char * &gt; &amp;object)</td></tr>
 <tr class="memdesc:a94fafbc661b32cf21b844bba79e6592a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SJSON-encoded <em>json</em>. <br /></td></tr>
 <tr class="separator:a94fafbc661b32cf21b844bba79e6592a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dbc078ac1eae1ca6c3f858233d4d922"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dbc078ac1eae1ca6c3f858233d4d922"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_root_object</b> (const char *json, <a class="el" href="group___j_s_o_n.html#ga7b57437b2c91933b6edead9332796e23">JsonObject</a> &amp;object)</td></tr>
-<tr class="separator:a3dbc078ac1eae1ca6c3f858233d4d922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a408ecb5cf8206ee6572f7785aefcb209"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sjson.html#a408ecb5cf8206ee6572f7785aefcb209">parse_object</a> (const char *json, <a class="el" href="group___j_s_o_n.html#ga7b57437b2c91933b6edead9332796e23">JsonObject</a> &amp;object)</td></tr>
 <tr class="memdesc:a408ecb5cf8206ee6572f7785aefcb209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SJSON object <em>json</em> and puts it into <em>object</em> as map from key to pointer to the corresponding value into the original string <em>json</em>.  <a href="#a408ecb5cf8206ee6572f7785aefcb209">More...</a><br /></td></tr>
 <tr class="separator:a408ecb5cf8206ee6572f7785aefcb209"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,9 +155,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <a class="el" href="structcrown_1_1_string_id64.html">ResourceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sjson.html#a465fc1b10a93c2f8e9dbc5da22f43d69">parse_resource_id</a> (const char *json)</td></tr>
 <tr class="memdesc:a465fc1b10a93c2f8e9dbc5da22f43d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string <em>json</em> as ResourceId. <br /></td></tr>
 <tr class="separator:a465fc1b10a93c2f8e9dbc5da22f43d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cabc989ec0f80e6b9c3a65a3409b693"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sjson.html#a7cabc989ec0f80e6b9c3a65a3409b693">parse_array</a> (const char *json, <a class="el" href="group___j_s_o_n.html#ga404c138ad8d8ab17c722dba841a5630d">JsonArray</a> &amp;array)</td></tr>
-<tr class="memdesc:a7cabc989ec0f80e6b9c3a65a3409b693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string.  <a href="#a7cabc989ec0f80e6b9c3a65a3409b693">More...</a><br /></td></tr>
-<tr class="separator:a7cabc989ec0f80e6b9c3a65a3409b693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to parse SJSON-encoded data. </p>
@@ -193,26 +184,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </div><div class="memdoc">
 
 <p>Parses the SJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string. </p>
-<p>Parses the SJSON array <em>json</em> and puts it into <em>array</em> as pointers to the corresponding items into the original <em>json</em> string. </p>
-
-</div>
-</div>
-<a class="anchor" id="aca9763ed0b35cfda039f3bb276bf9e24"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> crown::sjson::parse_matrix4x4 </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>json</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the array <em>json</em> as <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>. </p>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> = [xx, xy, xz, xw, yx, yy, yz, yw, zx, zy, zz, zw, tx, ty, tz, tw] </dd></dl>
 
 </div>
 </div>
@@ -269,25 +240,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </div><div class="memdoc">
 
 <p>Parses the SJSON object <em>json</em> and puts it into <em>object</em> as map from key to pointer to the corresponding value into the original string <em>json</em>. </p>
-
-</div>
-</div>
-<a class="anchor" id="acfe6d0dbc224b8c28fd42aeedde4b7d8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> crown::sjson::parse_quaternion </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>json</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the array <em>json</em> as <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a>. </p>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> = [x, y, z, angle] </dd></dl>
 
 </div>
 </div>
@@ -348,10 +300,48 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 
 </div>
 </div>
+<a class="anchor" id="acfe6d0dbc224b8c28fd42aeedde4b7d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> crown::sjson::parse_quaternion </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>json</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the array <em>json</em> as <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a>. </p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> = [x, y, z, angle] </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aca9763ed0b35cfda039f3bb276bf9e24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> crown::sjson::parse_matrix4x4 </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>json</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the array <em>json</em> as <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>. </p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> = [xx, xy, xz, xw, yx, yy, yz, yw, zx, zy, zz, zw, tx, ty, tz, tw] </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

@@ -196,88 +196,6 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a collection of nodes, possibly linked together to form a tree. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a244f42be5eed086de40609ab6885453f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> crown::SceneGraph::local_pose </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the local position, rotation or pose of the given <em>node</em>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a488c5a199febec3f1b2c0a8795cc5f25"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> crown::SceneGraph::local_rotation </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the local position, rotation or pose of the given <em>node</em>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a3ab53d6a09fc7d5bda282c1d1eea97ab"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structcrown_1_1_vector3.html">Vector3</a> crown::SceneGraph::local_scale </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the local position, rotation or pose of the given <em>node</em>. </p>
-
-</div>
-</div>
-<a class="anchor" id="a35c820cafb4081b70e76377fea6f8e48"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::SceneGraph::set_local_pose </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td>
-          <td class="paramname"><em>pose</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the local position, rotation, scale or pose of the given <em>node</em>. </p>
-
-</div>
-</div>
 <a class="anchor" id="a0c3b137c0eb4eb72969cbcd282978361"></a>
 <div class="memitem">
 <div class="memproto">
@@ -334,31 +252,40 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae4918ba3f01aa2f67b07d664f0b9cf8b"></a>
+<a class="anchor" id="a35c820cafb4081b70e76377fea6f8e48"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::SceneGraph::unlink </td>
+          <td class="memname">void crown::SceneGraph::set_local_pose </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
-          <td class="paramname"><em>child</em></td><td>)</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unlinks the <em>child</em> node from its parent if it has any. </p>
-<p>After unlinking, the  local pose is set to its previous world pose. </p>
+<p>Sets the local position, rotation, scale or pose of the given <em>node</em>. </p>
 
 </div>
 </div>
-<a class="anchor" id="aac1d5dbf58ad71656ebed0159a4f3c05"></a>
+<a class="anchor" id="a488c5a199febec3f1b2c0a8795cc5f25"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> crown::SceneGraph::world_pose </td>
+          <td class="memname"><a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> crown::SceneGraph::local_rotation </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -367,7 +294,43 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the world position, rotation or pose of the given <em>node</em>. </p>
+<p>Returns the local position, rotation or pose of the given <em>node</em>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ab53d6a09fc7d5bda282c1d1eea97ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcrown_1_1_vector3.html">Vector3</a> crown::SceneGraph::local_scale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the local position, rotation or pose of the given <em>node</em>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a244f42be5eed086de40609ab6885453f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> crown::SceneGraph::local_pose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the local position, rotation or pose of the given <em>node</em>. </p>
 
 </div>
 </div>
@@ -389,6 +352,43 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aac1d5dbf58ad71656ebed0159a4f3c05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> crown::SceneGraph::world_pose </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the world position, rotation or pose of the given <em>node</em>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae4918ba3f01aa2f67b07d664f0b9cf8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::SceneGraph::unlink </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unlinks the <em>child</em> node from its parent if it has any. </p>
+<p>After unlinking, the  local pose is set to its previous world pose. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/world/<a class="el" href="scene__graph_8h_source.html">scene_graph.h</a></li>
 <li>src/world/scene_graph.cpp</li>
@@ -396,7 +396,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

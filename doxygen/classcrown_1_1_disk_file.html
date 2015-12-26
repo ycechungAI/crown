@@ -148,115 +148,6 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides common facilities to access files on disk. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab3fb3f6787e6f4749ceb83d51b19de5f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::DiskFile::close </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Closes the file. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af88737f2ed3fe43570380b98eb5bcc9c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool crown::DiskFile::end_of_file </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns whether the position is at end of file. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a22f7edbb90a61e6bfe74a10f8f56d79f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::DiskFile::flush </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Forces the previouses write operations to complete. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a264f230e4455fa32385891dc766145cf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool crown::DiskFile::is_valid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns whether the file is valid. </p>
-<p>A file is valid when the buffer where it operates exists. (i.e. a file descriptor is attached to the file, a memory area is attached to the file etc.) </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">crown::File</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a2f6e6e1ea9b386609d1402ad289bc55e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +186,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9ed82642143511a7d6d4e344503e725a"></a>
+<a class="anchor" id="ab3fb3f6787e6f4749ceb83d51b19de5f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -303,7 +194,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t crown::DiskFile::position </td>
+          <td class="memname">void crown::DiskFile::close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -316,48 +207,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the current position in file. </p>
-<p>Generally, for binary data, it means the number of bytes from the beginning of the file. </p>
+<p>Closes the file. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a71797ad8ed571ff17b1210c044703884"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t crown::DiskFile::read </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reads a block of data from the file. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#ab9d905f2d2a3da5838267a356aae9fde">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">crown::File</a>.</p>
 
 </div>
 </div>
@@ -416,33 +268,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae815ee6f94d29040247ae9190e08b6f5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t crown::DiskFile::size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the size of file in bytes. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">crown::File</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a1fe5b16d1e32b1d95df4d89e9622991c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -468,6 +293,44 @@ Protected Attributes</h2></td></tr>
 <p>Sets the position indicator to bytes after current position. </p>
 
 <p>Implements <a class="el" href="classcrown_1_1_file.html#a4ea5296378c5bb5da248486a31722ed5">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a71797ad8ed571ff17b1210c044703884"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::DiskFile::read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads a block of data from the file. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#ab9d905f2d2a3da5838267a356aae9fde">crown::File</a>.</p>
 
 </div>
 </div>
@@ -509,6 +372,143 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a22f7edbb90a61e6bfe74a10f8f56d79f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::DiskFile::flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forces the previouses write operations to complete. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af88737f2ed3fe43570380b98eb5bcc9c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::DiskFile::end_of_file </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the position is at end of file. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a264f230e4455fa32385891dc766145cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::DiskFile::is_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the file is valid. </p>
+<p>A file is valid when the buffer where it operates exists. (i.e. a file descriptor is attached to the file, a memory area is attached to the file etc.) </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae815ee6f94d29040247ae9190e08b6f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::DiskFile::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the size of file in bytes. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ed82642143511a7d6d4e344503e725a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::DiskFile::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current position in file. </p>
+<p>Generally, for binary data, it means the number of bytes from the beginning of the file. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">crown::File</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/core/filesystem/<a class="el" href="disk__file_8h_source.html">disk_file.h</a></li>
 <li>src/core/filesystem/disk_file.cpp</li>
@@ -516,7 +516,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

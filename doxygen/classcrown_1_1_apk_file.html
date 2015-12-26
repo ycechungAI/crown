@@ -137,115 +137,6 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides common facilities to access Android APK files. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a430dfea0fa6c6d773a8255d1d6e27b70"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::ApkFile::close </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Closes the file. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac5b6f521eca9f08e7a9ea38d89b6a9cf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool crown::ApkFile::end_of_file </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns whether the position is at end of file. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8bcb97dda924008e2700d45e2de93ebf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::ApkFile::flush </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Forces the previouses write operations to complete. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5317e7b8cbb6819df2f138f106d7b4e5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool crown::ApkFile::is_valid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns whether the file is valid. </p>
-<p>A file is valid when the buffer where it operates exists. (i.e. a file descriptor is attached to the file, a memory area is attached to the file etc.) </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">crown::File</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a81f544c8e6e928f8c3620357eb3e0bb4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +175,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a16ef18083592e473e15fcc3c73180977"></a>
+<a class="anchor" id="a430dfea0fa6c6d773a8255d1d6e27b70"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -292,7 +183,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t crown::ApkFile::position </td>
+          <td class="memname">void crown::ApkFile::close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -305,48 +196,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the current position in file. </p>
-<p>Generally, for binary data, it means the number of bytes from the beginning of the file. </p>
+<p>Closes the file. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9cd1d93270ba236f45af7a11c17ea6f2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t crown::ApkFile::read </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reads a block of data from the file. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#ab9d905f2d2a3da5838267a356aae9fde">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">crown::File</a>.</p>
 
 </div>
 </div>
@@ -405,33 +257,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4315f794d124c484da4ced3888ed5d24"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t crown::ApkFile::size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the size of file in bytes. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">crown::File</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a52fa2f2f4d22953f96d45809be528036"></a>
 <div class="memitem">
 <div class="memproto">
@@ -457,6 +282,44 @@ Public Member Functions</h2></td></tr>
 <p>Sets the position indicator to bytes after current position. </p>
 
 <p>Implements <a class="el" href="classcrown_1_1_file.html#a4ea5296378c5bb5da248486a31722ed5">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9cd1d93270ba236f45af7a11c17ea6f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::ApkFile::read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads a block of data from the file. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#ab9d905f2d2a3da5838267a356aae9fde">crown::File</a>.</p>
 
 </div>
 </div>
@@ -498,13 +361,150 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8bcb97dda924008e2700d45e2de93ebf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::ApkFile::flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forces the previouses write operations to complete. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5317e7b8cbb6819df2f138f106d7b4e5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::ApkFile::is_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the file is valid. </p>
+<p>A file is valid when the buffer where it operates exists. (i.e. a file descriptor is attached to the file, a memory area is attached to the file etc.) </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5b6f521eca9f08e7a9ea38d89b6a9cf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::ApkFile::end_of_file </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the position is at end of file. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4315f794d124c484da4ced3888ed5d24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::ApkFile::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the size of file in bytes. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16ef18083592e473e15fcc3c73180977"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::ApkFile::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current position in file. </p>
+<p>Generally, for binary data, it means the number of bytes from the beginning of the file. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">crown::File</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/core/filesystem/<a class="el" href="apk__file_8h_source.html">apk_file.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

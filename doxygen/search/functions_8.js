@@ -5,7 +5,7 @@ var searchData=
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a02d6ed555ce025f862ca69fb3604a2c9',1,'crown::queue']]],
   ['index',['index',['../classcrown_1_1_j_s_o_n_element.html#acdd5922d094ca8ed87882e0ff1a44ffb',1,'crown::JSONElement']]],
   ['index_5for_5fnil',['index_or_nil',['../classcrown_1_1_j_s_o_n_element.html#a24be12e353cac068e37808c76389a2dd',1,'crown::JSONElement']]],
-  ['init',['init',['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#af7b50d42374b9ebb8010602192ad6ef1',1,'crown::physics_globals::init()']]],
+  ['init',['init',['../structcrown_1_1_device.html#afa779586591964f8cb126087cea0682d',1,'crown::Device::init()'],['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#af7b50d42374b9ebb8010602192ad6ef1',1,'crown::physics_globals::init()']]],
   ['input_5fmanager',['input_manager',['../structcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],
   ['insert',['insert',['../namespacecrown_1_1multi__hash.html#a29aa9a88be7b442ba44d1a1d9719008b',1,'crown::multi_hash']]],
   ['integer',['integer',['../structcrown_1_1_random.html#a52ea383e91b54e4e5d159e3de44a8fdc',1,'crown::Random::integer()'],['../structcrown_1_1_random.html#a4f8c5ad17fa1a9cee89a22cef6b54592',1,'crown::Random::integer(int32_t max)']]],

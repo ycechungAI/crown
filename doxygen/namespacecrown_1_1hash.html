@@ -128,26 +128,6 @@ template&lt;typename T &gt; </td></tr>
 <div class="textblock"><p>The hash function stores its data in a "list-in-an-array" where indices are used instead of pointers. </p>
 <p>When items are removed, the array-list is repacked to always keep it tightly ordered. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ac2f2814dce01b67cf69fb6a6dfbbc8f2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt;::Entry * crown::hash::begin </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>h</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a pointer to the first entry in the hash table, can be used to efficiently iterate over the elements (in random order). </p>
-
-</div>
-</div>
 <a class="anchor" id="ab6a5541551689ff4c735467dd5a099c8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -215,10 +195,30 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ac2f2814dce01b67cf69fb6a6dfbbc8f2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt;::Entry * crown::hash::begin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the first entry in the hash table, can be used to efficiently iterate over the elements (in random order). </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

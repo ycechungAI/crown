@@ -179,7 +179,7 @@ template&lt;typename T &gt; </td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to manipulate <a class="el" href="structcrown_1_1_array.html" title="Dynamic array of POD items. ">Array</a>. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ac452114445036f32f15d05f862105284"></a>
+<a class="anchor" id="a5ea3a79de316d3aca3bc7b5e220febdf"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -189,11 +189,21 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::array::clear </td>
+          <td class="memname">void crown::array::resize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_array.html">Array</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -203,8 +213,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Clears the content of the array <em>a</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>Does not free memory nor call destructors, it only zeroes the number of items in the array. </dd></dl>
+<p>Resizes the array <em>a</em> to the given <em>size</em>. </p>
+<dl class="section note"><dt>Note</dt><dd>Old items will be copied to the newly created array. If the new capacity is smaller than the previous one, the array will be truncated. </dd></dl>
 
 </div>
 </div>
@@ -280,7 +290,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a5ea3a79de316d3aca3bc7b5e220febdf"></a>
+<a class="anchor" id="ac452114445036f32f15d05f862105284"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -290,21 +300,11 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::array::resize </td>
+          <td class="memname">void crown::array::clear </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_array.html">Array</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>a</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -314,15 +314,15 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Resizes the array <em>a</em> to the given <em>size</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>Old items will be copied to the newly created array. If the new capacity is smaller than the previous one, the array will be truncated. </dd></dl>
+<p>Clears the content of the array <em>a</em>. </p>
+<dl class="section note"><dt>Note</dt><dd>Does not free memory nor call destructors, it only zeroes the number of items in the array. </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

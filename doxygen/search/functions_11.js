@@ -24,6 +24,7 @@ var searchData=
   ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html#ac56e552f3417825f8da5ff3c1d26fa2e',1,'crown::ResourceLoader']]],
   ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#a3e117a0d3466aa31e8e587783d803aca',1,'crown::ResourceManager']]],
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],
+  ['right',['right',['../group___math.html#ga9340f3b72e9b7db6d4370d4493e33588',1,'crown']]],
   ['root',['root',['../classcrown_1_1_j_s_o_n_parser.html#af47e4b2cd2fcf24db1dfbf22d6f08be9',1,'crown::JSONParser']]],
   ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]]
 ];

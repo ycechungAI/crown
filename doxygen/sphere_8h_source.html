@@ -144,25 +144,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; num; ++i)</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> dist = <a class="code" href="group___math.html#ga7388cc7bed6c7cfe87ef4ee57b1a0291">length_squared</a>(spheres[i].c - s.c);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> (dist &lt; (spheres[i].r + s.r) * (spheres[i].r + s.r))</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">if</span> (spheres[i].r * spheres[i].r &gt; s.r * s.r)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    s.r = sqrtf(dist + spheres[i].r * spheres[i].r);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa">   86</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa">contains_point</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_sphere.html">Sphere</a>&amp; s, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; p)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">float</span> dist = <a class="code" href="group___math.html#ga7388cc7bed6c7cfe87ef4ee57b1a0291">length_squared</a>(p - s.c);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> dist &lt; s.r*s.r;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace sphere</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;} <span class="comment">// namespace crown</span></div>
-<div class="ttc" id="group___math_html_ga7388cc7bed6c7cfe87ef4ee57b1a0291"><div class="ttname"><a href="group___math.html#ga7388cc7bed6c7cfe87ef4ee57b1a0291">crown::length_squared</a></div><div class="ttdeci">float length_squared(const Vector2 &amp;a)</div><div class="ttdoc">Returns the squared length of a. </div><div class="ttdef"><b>Definition:</b> vector2.h:95</div></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keyword">const</span> <a class="code" href="structcrown_1_1_sphere.html">Sphere</a> si = spheres[i];</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">float</span> dist = <a class="code" href="group___math.html#ga7388cc7bed6c7cfe87ef4ee57b1a0291">length_squared</a>(si.c - s.c);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (dist &lt; (si.r + s.r) * (si.r + s.r))</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">if</span> (si.r*si.r &gt; s.r*s.r)</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    s.r = sqrtf(dist + si.r*si.r);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa">   87</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa">contains_point</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_sphere.html">Sphere</a>&amp; s, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; p)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">float</span> dist = <a class="code" href="group___math.html#ga7388cc7bed6c7cfe87ef4ee57b1a0291">length_squared</a>(p - s.c);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">return</span> dist &lt; s.r*s.r;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace sphere</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;} <span class="comment">// namespace crown</span></div>
+<div class="ttc" id="group___math_html_ga7388cc7bed6c7cfe87ef4ee57b1a0291"><div class="ttname"><a href="group___math.html#ga7388cc7bed6c7cfe87ef4ee57b1a0291">crown::length_squared</a></div><div class="ttdeci">float length_squared(const Vector2 &amp;a)</div><div class="ttdoc">Returns the squared length of a. </div><div class="ttdef"><b>Definition:</b> vector2.h:96</div></div>
 <div class="ttc" id="namespacecrown_1_1sphere_html_a555f04b0dd0a97ba0c4c3aefedcf3202"><div class="ttname"><a href="namespacecrown_1_1sphere.html#a555f04b0dd0a97ba0c4c3aefedcf3202">crown::sphere::add_points</a></div><div class="ttdeci">void add_points(Sphere &amp;s, uint32_t num, uint32_t stride, const void *points)</div><div class="ttdoc">Adds num points to the sphere s, expanding its bounds if necessary. </div><div class="ttdef"><b>Definition:</b> sphere.h:53</div></div>
 <div class="ttc" id="namespacecrown_1_1sphere_html_ad850a4b588b63981e1e22b0ea930dfea"><div class="ttname"><a href="namespacecrown_1_1sphere.html#ad850a4b588b63981e1e22b0ea930dfea">crown::sphere::volume</a></div><div class="ttdeci">float volume(const Sphere &amp;s)</div><div class="ttdoc">Returns the volume of the sphere s. </div><div class="ttdef"><b>Definition:</b> sphere.h:48</div></div>
 <div class="ttc" id="structcrown_1_1_vector3_html"><div class="ttname"><a href="structcrown_1_1_vector3.html">crown::Vector3</a></div><div class="ttdef"><b>Definition:</b> math_types.h:20</div></div>
@@ -170,11 +171,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="namespacecrown_html"><div class="ttname"><a href="namespacecrown.html">crown</a></div><div class="ttdef"><b>Definition:</b> audio.h:8</div></div>
 <div class="ttc" id="namespacecrown_1_1sphere_html_a058118a70214da8bc6d236582c59064b"><div class="ttname"><a href="namespacecrown_1_1sphere.html#a058118a70214da8bc6d236582c59064b">crown::sphere::reset</a></div><div class="ttdeci">void reset(Sphere &amp;s)</div><div class="ttdoc">Resets the sphere s. </div><div class="ttdef"><b>Definition:</b> sphere.h:42</div></div>
 <div class="ttc" id="structcrown_1_1_sphere_html"><div class="ttname"><a href="structcrown_1_1_sphere.html">crown::Sphere</a></div><div class="ttdef"><b>Definition:</b> math_types.h:89</div></div>
-<div class="ttc" id="namespacecrown_1_1sphere_html_a4d301efa896c88ae547815b01ff324aa"><div class="ttname"><a href="namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa">crown::sphere::contains_point</a></div><div class="ttdeci">bool contains_point(const Sphere &amp;s, const Vector3 &amp;p)</div><div class="ttdoc">Returns whether point p is contained into the sphere. </div><div class="ttdef"><b>Definition:</b> sphere.h:86</div></div>
+<div class="ttc" id="namespacecrown_1_1sphere_html_a4d301efa896c88ae547815b01ff324aa"><div class="ttname"><a href="namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa">crown::sphere::contains_point</a></div><div class="ttdeci">bool contains_point(const Sphere &amp;s, const Vector3 &amp;p)</div><div class="ttdoc">Returns whether point p is contained into the sphere. </div><div class="ttdef"><b>Definition:</b> sphere.h:87</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

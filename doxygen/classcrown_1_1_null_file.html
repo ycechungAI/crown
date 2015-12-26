@@ -190,116 +190,6 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3659e56055fa0e5add55abb2f4a0f506"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::NullFile::close </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Closes the file. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8efbb67f75059a9b3ede3541e87bca39"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool crown::NullFile::end_of_file </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns whether the position is at end of file. </p>
-<dl class="section note"><dt>Note</dt><dd>Returns always false </dd></dl>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a598dd9cde7a130bb9ca97fff24e3cfeb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::NullFile::flush </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Forces the previouses write operations to complete. </p>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="afa1f5a410008d7ba23393b6865396e67"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool crown::NullFile::is_valid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns whether the file is valid. </p>
-<p>A file is valid when the buffer where it operates exists. (i.e. a file descriptor is attached to the file, a memory area is attached to the file etc.) </p><dl class="section note"><dt>Note</dt><dd>Returns always true </dd></dl>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">crown::File</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="aaf3d06d363153656e69df91b082a739c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +228,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a96c17fd641916f7bd5d3e4690782ae99"></a>
+<a class="anchor" id="a3659e56055fa0e5add55abb2f4a0f506"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -346,7 +236,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t crown::NullFile::position </td>
+          <td class="memname">void crown::NullFile::close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -359,49 +249,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the current position in file. </p>
-<p>Generally, for binary data, it means the number of bytes from the beginning of the file. </p><dl class="section note"><dt>Note</dt><dd>Returns always zero </dd></dl>
+<p>Closes the file. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">crown::File</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aacbfb1ef13dbf6329b6b7408c8d688aa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t crown::NullFile::read </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reads a block of data from the file. </p>
-<dl class="section note"><dt>Note</dt><dd>Fills buffer with zeroes </dd></dl>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#ab9d905f2d2a3da5838267a356aae9fde">crown::File</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a01dbe1272e8ab5e013338559cffcaf7f">crown::File</a>.</p>
 
 </div>
 </div>
@@ -460,34 +310,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0fd00385e149563f31342b296aaf0f5a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t crown::NullFile::size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the size of file in bytes. </p>
-<dl class="section note"><dt>Note</dt><dd>Returns always 0xFFFFFFFF </dd></dl>
-
-<p>Implements <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">crown::File</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a9bf06bc38c72f2ab5bd1934b49e307c7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -513,6 +335,45 @@ Public Member Functions</h2></td></tr>
 <p>Sets the position indicator to bytes after current position. </p>
 
 <p>Implements <a class="el" href="classcrown_1_1_file.html#a4ea5296378c5bb5da248486a31722ed5">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aacbfb1ef13dbf6329b6b7408c8d688aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::NullFile::read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reads a block of data from the file. </p>
+<dl class="section note"><dt>Note</dt><dd>Fills buffer with zeroes </dd></dl>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#ab9d905f2d2a3da5838267a356aae9fde">crown::File</a>.</p>
 
 </div>
 </div>
@@ -554,13 +415,152 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a598dd9cde7a130bb9ca97fff24e3cfeb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::NullFile::flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Forces the previouses write operations to complete. </p>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa1f5a410008d7ba23393b6865396e67"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::NullFile::is_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the file is valid. </p>
+<p>A file is valid when the buffer where it operates exists. (i.e. a file descriptor is attached to the file, a memory area is attached to the file etc.) </p><dl class="section note"><dt>Note</dt><dd>Returns always true </dd></dl>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8efbb67f75059a9b3ede3541e87bca39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::NullFile::end_of_file </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns whether the position is at end of file. </p>
+<dl class="section note"><dt>Note</dt><dd>Returns always false </dd></dl>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0fd00385e149563f31342b296aaf0f5a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::NullFile::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the size of file in bytes. </p>
+<dl class="section note"><dt>Note</dt><dd>Returns always 0xFFFFFFFF </dd></dl>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a734edf1c865b29168e799dc8a2da5dea">crown::File</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a96c17fd641916f7bd5d3e4690782ae99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t crown::NullFile::position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the current position in file. </p>
+<p>Generally, for binary data, it means the number of bytes from the beginning of the file. </p><dl class="section note"><dt>Note</dt><dd>Returns always zero </dd></dl>
+
+<p>Implements <a class="el" href="classcrown_1_1_file.html#a50990912a0a73fa06199f12478537034">crown::File</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/core/filesystem/<a class="el" href="null__file_8h_source.html">null_file.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

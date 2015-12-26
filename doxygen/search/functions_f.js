@@ -18,6 +18,7 @@ var searchData=
   ['pause',['pause',['../structcrown_1_1_device.html#ad15c7cf4e6c05c7e53a07b3f00a0a491',1,'crown::Device']]],
   ['pause_5fall',['pause_all',['../classcrown_1_1_sound_world.html#a2347d390bb1d5802bc2c4fe64363c402',1,'crown::SoundWorld']]],
   ['physics_5fworld',['physics_world',['../classcrown_1_1_world.html#acd51df399d0aaa0195f677851dc605f7',1,'crown::World']]],
+  ['plane_5f3_5fintersection',['plane_3_intersection',['../group___math.html#gaacb9059f27a4b71ebc01c066fe373785',1,'crown']]],
   ['platform',['platform',['../structcrown_1_1_device.html#a604d747ea85507fa2eec87ba77a37b41',1,'crown::Device']]],
   ['play',['play',['../classcrown_1_1_sound_world.html#a02bb0f538260cf330386455465186006',1,'crown::SoundWorld']]],
   ['play_5fsound',['play_sound',['../classcrown_1_1_world.html#a476ab23e032314533a95f1fc2b9cf92d',1,'crown::World']]],

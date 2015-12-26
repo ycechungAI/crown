@@ -162,6 +162,41 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b></td>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages the rendering of GUI objects. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a88534e2e853aa64c57824c6cba1a9cad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::Gui::draw_rectangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em> = <code>COLOR4_WHITE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws a rectangle of size <em>size</em> at <em>pos</em>. </p>
+<dl class="section note"><dt>Note</dt><dd>Higher values of pos.z make the object appear in front of other objects. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a3ad4b12917968556e4a1a3f8c8edc92c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -256,41 +291,6 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b></td>
 
 </div>
 </div>
-<a class="anchor" id="a88534e2e853aa64c57824c6cba1a9cad"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Gui::draw_rectangle </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em> = <code>COLOR4_WHITE</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws a rectangle of size <em>size</em> at <em>pos</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>Higher values of pos.z make the object appear in front of other objects. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a972055755c678f8006b67d4151581c3c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -345,7 +345,7 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b></td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

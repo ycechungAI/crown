@@ -378,33 +378,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (
 
 </div>
 </div>
-<a class="anchor" id="a5a3e5dbf6bac0ae39633fb40d7c05609"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::LuaStack::push_table </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Pushes an empty table onto the stack. </p>
-<p>When you want to set keys on the table, you have to use <a class="el" href="structcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8" title="See Stack::push_table() ">LuaStack::push_key_begin()</a> and <a class="el" href="structcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed" title="See Stack::push_table() ">LuaStack::push_key_end()</a> as in the following example:</p>
-<p><a class="el" href="structcrown_1_1_lua_stack.html">LuaStack</a> stack(L) stack.push_table() stack.push_key_begin("foo"); stack.push_foo(); stack.push_key_end() stack.push_key_begin("bar"); stack.push_bar(); stack.push_key_end() return 1; </p>
-
-</div>
-</div>
 <a class="anchor" id="a85f7573434313a31bbba707951f2ddad"></a>
 <div class="memitem">
 <div class="memproto">
@@ -432,6 +405,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (
 
 </div>
 </div>
+<a class="anchor" id="a5a3e5dbf6bac0ae39633fb40d7c05609"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crown::LuaStack::push_table </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes an empty table onto the stack. </p>
+<p>When you want to set keys on the table, you have to use <a class="el" href="structcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8" title="See Stack::push_table() ">LuaStack::push_key_begin()</a> and <a class="el" href="structcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed" title="See Stack::push_table() ">LuaStack::push_key_end()</a> as in the following example:</p>
+<p><a class="el" href="structcrown_1_1_lua_stack.html">LuaStack</a> stack(L) stack.push_table() stack.push_key_begin("foo"); stack.push_foo(); stack.push_key_end() stack.push_key_begin("bar"); stack.push_bar(); stack.push_key_end() return 1; </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/lua/<a class="el" href="lua__stack_8h_source.html">lua_stack.h</a></li>
 <li>src/lua/lua_stack.cpp</li>
@@ -439,7 +439,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 24 2015 03:40:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 26 2015 11:41:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>
