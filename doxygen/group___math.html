@@ -356,14 +356,14 @@ Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="g
 Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gae7660cc5d53c00b8f9f9dcd89f46f12b">crown::operator*</a> (Matrix4x4 a, const Matrix4x4 &amp;b)</td></tr>
 <tr class="memdesc:gae7660cc5d53c00b8f9f9dcd89f46f12b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies the matrix <em>a</em> by <em>b</em> and returns the result. (i.e. transforms first by <em>a</em> then by <em>b</em>) <br /></td></tr>
 <tr class="separator:gae7660cc5d53c00b8f9f9dcd89f46f12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2431fb23c01e23a8c3ad7d5499ad2fd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2431fb23c01e23a8c3ad7d5499ad2fd0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga2431fb23c01e23a8c3ad7d5499ad2fd0">crown::set_perspective</a> (Matrix4x4 &amp;m, float fovy, float aspect, float near, float far)</td></tr>
-<tr class="memdesc:ga2431fb23c01e23a8c3ad7d5499ad2fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the matrix <em>m</em> to perspective. <br /></td></tr>
-<tr class="separator:ga2431fb23c01e23a8c3ad7d5499ad2fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ca09f6d091a818a65fdb4a82bbb323b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga2ca09f6d091a818a65fdb4a82bbb323b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga2ca09f6d091a818a65fdb4a82bbb323b">crown::set_orthographic</a> (Matrix4x4 &amp;m, float left, float right, float bottom, float top, float near, float far)</td></tr>
-<tr class="memdesc:ga2ca09f6d091a818a65fdb4a82bbb323b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the matrix <em>m</em> to orthographic. <br /></td></tr>
-<tr class="separator:ga2ca09f6d091a818a65fdb4a82bbb323b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0993e71cf7b35920427231aacf7a087e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0993e71cf7b35920427231aacf7a087e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga0993e71cf7b35920427231aacf7a087e">crown::perspective</a> (Matrix4x4 &amp;m, float fovy, float aspect, float near, float far)</td></tr>
+<tr class="memdesc:ga0993e71cf7b35920427231aacf7a087e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the matrix <em>m</em> to perspective. <br /></td></tr>
+<tr class="separator:ga0993e71cf7b35920427231aacf7a087e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48d3a3b1c95caa40748eb78591bd2ec8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga48d3a3b1c95caa40748eb78591bd2ec8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga48d3a3b1c95caa40748eb78591bd2ec8">crown::orthographic</a> (Matrix4x4 &amp;m, float left, float right, float bottom, float top, float near, float far)</td></tr>
+<tr class="memdesc:ga48d3a3b1c95caa40748eb78591bd2ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the matrix <em>m</em> to orthographic. <br /></td></tr>
+<tr class="separator:ga48d3a3b1c95caa40748eb78591bd2ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaed52a7b5c76ce533d79faf36f9159f52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaed52a7b5c76ce533d79faf36f9159f52"></a>
 Matrix4x4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaed52a7b5c76ce533d79faf36f9159f52">crown::transpose</a> (Matrix4x4 &amp;m)</td></tr>
 <tr class="memdesc:gaed52a7b5c76ce533d79faf36f9159f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transposes the matrix <em>m</em> and returns the result. <br /></td></tr>
@@ -372,10 +372,10 @@ Matrix4x4 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga7cfc892e0f08adcdfd463e978cf72675">crown::get_transposed</a> (Matrix4x4 m)</td></tr>
 <tr class="memdesc:ga7cfc892e0f08adcdfd463e978cf72675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the transposed of the matrix <em>m</em>. <br /></td></tr>
 <tr class="separator:ga7cfc892e0f08adcdfd463e978cf72675"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga63106d8e10514eb0ac1644d9f8da70ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga63106d8e10514eb0ac1644d9f8da70ed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga63106d8e10514eb0ac1644d9f8da70ed">crown::set_look</a> (Matrix4x4 &amp;m, const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)</td></tr>
-<tr class="memdesc:ga63106d8e10514eb0ac1644d9f8da70ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the matrix <em>m</em> to look. <br /></td></tr>
-<tr class="separator:ga63106d8e10514eb0ac1644d9f8da70ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40b84e237af5771786011fd2cb64135c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga40b84e237af5771786011fd2cb64135c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga40b84e237af5771786011fd2cb64135c">crown::look</a> (Matrix4x4 &amp;m, const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)</td></tr>
+<tr class="memdesc:ga40b84e237af5771786011fd2cb64135c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the matrix <em>m</em> to look. <br /></td></tr>
+<tr class="separator:ga40b84e237af5771786011fd2cb64135c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga798aa4cc5098fd449d8988cf6e916196"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga798aa4cc5098fd449d8988cf6e916196"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga798aa4cc5098fd449d8988cf6e916196">crown::determinant</a> (const Matrix4x4 &amp;m)</td></tr>
 <tr class="memdesc:ga798aa4cc5098fd449d8988cf6e916196"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the determinant of the matrix <em>m</em>. <br /></td></tr>
@@ -507,7 +507,8 @@ Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <tr class="memdesc:ga5424026de5caf47d8018b8781f639215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quaternion <em>q</em> raised to the power of <em>exp</em>. <br /></td></tr>
 <tr class="separator:ga5424026de5caf47d8018b8781f639215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8aac76709334bbb7528a08b5cf7c3261"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga8aac76709334bbb7528a08b5cf7c3261"></a>
-Quaternion&#160;</td><td class="memItemRight" valign="bottom"><b>crown::look</b> (const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)</td></tr>
+Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga8aac76709334bbb7528a08b5cf7c3261">crown::look</a> (const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)</td></tr>
+<tr class="memdesc:ga8aac76709334bbb7528a08b5cf7c3261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quaternion describing the rotation needed to face towards <em>dir</em>. <br /></td></tr>
 <tr class="separator:ga8aac76709334bbb7528a08b5cf7c3261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9340f3b72e9b7db6d4370d4493e33588"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9340f3b72e9b7db6d4370d4493e33588"></a>
 Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">crown::right</a> (const Quaternion &amp;q)</td></tr>
@@ -1439,7 +1440,7 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_P
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 26 2015 13:23:55 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2015 10:43:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

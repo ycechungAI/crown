@@ -20,5 +20,6 @@ var searchData=
   ['local_5fposition',['local_position',['../structcrown_1_1_scene_graph.html#a56e884ec51356a54290b62fcda13d9f4',1,'crown::SceneGraph::local_position()'],['../structcrown_1_1_unit.html#ae26098ee2c699ffee2124f1ff37b7c74',1,'crown::Unit::local_position()']]],
   ['local_5frotation',['local_rotation',['../structcrown_1_1_scene_graph.html#a488c5a199febec3f1b2c0a8795cc5f25',1,'crown::SceneGraph::local_rotation()'],['../structcrown_1_1_unit.html#a1153ca2e38f5733635c02db042bfbc0c',1,'crown::Unit::local_rotation()']]],
   ['local_5fscale',['local_scale',['../structcrown_1_1_scene_graph.html#a3ab53d6a09fc7d5bda282c1d1eea97ab',1,'crown::SceneGraph::local_scale()'],['../structcrown_1_1_unit.html#a758fa397bdf17540ca81c4a57177734f',1,'crown::Unit::local_scale()']]],
+  ['look',['look',['../group___math.html#ga40b84e237af5771786011fd2cb64135c',1,'crown::look(Matrix4x4 &amp;m, const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)'],['../group___math.html#ga8aac76709334bbb7528a08b5cf7c3261',1,'crown::look(const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)']]],
   ['lua_5fenvironment',['lua_environment',['../structcrown_1_1_device.html#a8246aa006dce69152886d0b8e93e3a4b',1,'crown::Device']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['leaveprofilescope',['LeaveProfileScope',['../structcrown_1_1profiler_1_1_leave_profile_scope.html',1,'crown::profiler']]],
+  ['leaveprofilescope',['LeaveProfileScope',['../structcrown_1_1_leave_profile_scope.html',1,'crown']]],
   ['less',['less',['../structcrown_1_1less.html',1,'crown']]],
   ['less_5fequal',['less_equal',['../structcrown_1_1less__equal.html',1,'crown']]],
   ['levelloadedevent',['LevelLoadedEvent',['../structcrown_1_1_level_loaded_event.html',1,'crown']]],

@@ -213,73 +213,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> q;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">inline</span> Quaternion look(<span class="keyword">const</span> Vector3&amp; dir, <span class="keyword">const</span> Vector3&amp; <a class="code" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">up</a> = VECTOR3_YAXIS)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">const</span> Vector3 <a class="code" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">right</a> = <a class="code" href="group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f">cross</a>(dir, <a class="code" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">up</a>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">const</span> Vector3 nup = <a class="code" href="group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f">cross</a>(right, dir);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    Matrix3x3 m;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    m.x = -<a class="code" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">right</a>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    m.y = nup;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    m.z = dir;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___math.html#ga37993773775da41b1550b07155ce5270">quaternion</a>(m);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">  163</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">right</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; q)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix3x3.html">Matrix3x3</a> m = <a class="code" href="group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b">matrix3x3</a>(q);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> m.x;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">  170</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">up</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; q)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;{</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix3x3.html">Matrix3x3</a> m = <a class="code" href="group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b">matrix3x3</a>(q);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">return</span> m.y;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="group___math.html#gab505715176e1ac1985e7092af7d1d6d2">  177</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="group___math.html#gab505715176e1ac1985e7092af7d1d6d2">forward</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; q)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix3x3.html">Matrix3x3</a> m = <a class="code" href="group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b">matrix3x3</a>(q);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordflow">return</span> m.z;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="group___math.html#gaca7e972ba7ec87e81b2c776cd0de361b">  184</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a> <a class="code" href="group___math.html#gaca7e972ba7ec87e81b2c776cd0de361b">lerp</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; b, <span class="keywordtype">float</span> t)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> t1 = 1.0f - t;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a> r;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___math.html#ga1ea40f05c401b910770b17f0b02b2150">dot</a>(a, b) &lt; 0.0f)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        r.x = t1*a.x + t*-b.x;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        r.y = t1*a.y + t*-b.y;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        r.z = t1*a.z + t*-b.z;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        r.w = t1*a.w + t*-b.w;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    {</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        r.x = t1*a.x + t*b.x;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        r.y = t1*a.y + t*b.y;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        r.z = t1*a.z + t*b.z;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        r.w = t1*a.w + t*b.w;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___math.html#ga5e22e7d2734ecd705703582119aad969">normalize</a>(r);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment">// @}</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;} <span class="comment">// namespace crown</span></div>
-<div class="ttc" id="group___math_html_gaca7e972ba7ec87e81b2c776cd0de361b"><div class="ttname"><a href="group___math.html#gaca7e972ba7ec87e81b2c776cd0de361b">crown::lerp</a></div><div class="ttdeci">Quaternion lerp(const Quaternion &amp;a, const Quaternion &amp;b, float t)</div><div class="ttdoc">Returns the linearly interpolated quaternion between a and b at time t in [0, 1]. It uses NLerp...</div><div class="ttdef"><b>Definition:</b> quaternion.h:184</div></div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="group___math.html#ga8aac76709334bbb7528a08b5cf7c3261">  151</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a> <a class="code" href="group___math.html#ga8aac76709334bbb7528a08b5cf7c3261">look</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; dir, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a>&amp; <a class="code" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">up</a> = VECTOR3_YAXIS)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">right</a> = <a class="code" href="group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f">cross</a>(dir, <a class="code" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">up</a>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> nup = <a class="code" href="group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f">cross</a>(right, dir);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="structcrown_1_1_matrix3x3.html">Matrix3x3</a> m;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    m.x = -<a class="code" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">right</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    m.y = nup;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    m.z = dir;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___math.html#ga37993773775da41b1550b07155ce5270">quaternion</a>(m);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">  164</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">right</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; q)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix3x3.html">Matrix3x3</a> m = <a class="code" href="group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b">matrix3x3</a>(q);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">return</span> m.x;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">  171</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">up</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; q)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix3x3.html">Matrix3x3</a> m = <a class="code" href="group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b">matrix3x3</a>(q);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> m.y;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="group___math.html#gab505715176e1ac1985e7092af7d1d6d2">  178</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_vector3.html">Vector3</a> <a class="code" href="group___math.html#gab505715176e1ac1985e7092af7d1d6d2">forward</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; q)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">const</span> <a class="code" href="structcrown_1_1_matrix3x3.html">Matrix3x3</a> m = <a class="code" href="group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b">matrix3x3</a>(q);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> m.z;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="group___math.html#gaca7e972ba7ec87e81b2c776cd0de361b">  185</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a> <a class="code" href="group___math.html#gaca7e972ba7ec87e81b2c776cd0de361b">lerp</a>(<span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; a, <span class="keyword">const</span> <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a>&amp; b, <span class="keywordtype">float</span> t)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">float</span> t1 = 1.0f - t;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="structcrown_1_1_quaternion.html">Quaternion</a> r;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="group___math.html#ga1ea40f05c401b910770b17f0b02b2150">dot</a>(a, b) &lt; 0.0f)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        r.x = t1*a.x + t*-b.x;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        r.y = t1*a.y + t*-b.y;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        r.z = t1*a.z + t*-b.z;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        r.w = t1*a.w + t*-b.w;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        r.x = t1*a.x + t*b.x;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        r.y = t1*a.y + t*b.y;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        r.z = t1*a.z + t*b.z;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        r.w = t1*a.w + t*b.w;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group___math.html#ga5e22e7d2734ecd705703582119aad969">normalize</a>(r);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment">// @}</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;} <span class="comment">// namespace crown</span></div>
+<div class="ttc" id="group___math_html_gaca7e972ba7ec87e81b2c776cd0de361b"><div class="ttname"><a href="group___math.html#gaca7e972ba7ec87e81b2c776cd0de361b">crown::lerp</a></div><div class="ttdeci">Quaternion lerp(const Quaternion &amp;a, const Quaternion &amp;b, float t)</div><div class="ttdoc">Returns the linearly interpolated quaternion between a and b at time t in [0, 1]. It uses NLerp...</div><div class="ttdef"><b>Definition:</b> quaternion.h:185</div></div>
 <div class="ttc" id="group___math_html_ga363fd10e945361cfc4115d6f87a2422e"><div class="ttname"><a href="group___math.html#ga363fd10e945361cfc4115d6f87a2422e">crown::y</a></div><div class="ttdeci">Vector3 y(const Matrix4x4 &amp;m)</div><div class="ttdoc">Returns the y axis of the matrix m. </div><div class="ttdef"><b>Definition:</b> matrix4x4.h:501</div></div>
 <div class="ttc" id="group___math_html_ga2866013315cf7692a1b13a35efec05ff"><div class="ttname"><a href="group___math.html#ga2866013315cf7692a1b13a35efec05ff">crown::operator-</a></div><div class="ttdeci">Quaternion operator-(const Quaternion &amp;q)</div><div class="ttdoc">Negates the quaternion q and returns the result. </div><div class="ttdef"><b>Definition:</b> quaternion.h:59</div></div>
 <div class="ttc" id="structcrown_1_1_matrix3x3_html"><div class="ttname"><a href="structcrown_1_1_matrix3x3.html">crown::Matrix3x3</a></div><div class="ttdef"><b>Definition:</b> math_types.h:41</div></div>
 <div class="ttc" id="group___math_html_ga5615e87e847333d958f435856030bfcd"><div class="ttname"><a href="group___math.html#ga5615e87e847333d958f435856030bfcd">crown::operator*</a></div><div class="ttdeci">Quaternion operator*(const Quaternion &amp;q, float k)</div><div class="ttdoc">Multiplies the quaternion a by the scalar k. </div><div class="ttdef"><b>Definition:</b> quaternion.h:77</div></div>
-<div class="ttc" id="group___math_html_ga9340f3b72e9b7db6d4370d4493e33588"><div class="ttname"><a href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">crown::right</a></div><div class="ttdeci">Vector3 right(const Quaternion &amp;q)</div><div class="ttdoc">Returns the right axis of the rotation represented by q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:163</div></div>
-<div class="ttc" id="group___math_html_gab505715176e1ac1985e7092af7d1d6d2"><div class="ttname"><a href="group___math.html#gab505715176e1ac1985e7092af7d1d6d2">crown::forward</a></div><div class="ttdeci">Vector3 forward(const Quaternion &amp;q)</div><div class="ttdoc">Returns the forward axis of the rotation represented by q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:177</div></div>
+<div class="ttc" id="group___math_html_ga9340f3b72e9b7db6d4370d4493e33588"><div class="ttname"><a href="group___math.html#ga9340f3b72e9b7db6d4370d4493e33588">crown::right</a></div><div class="ttdeci">Vector3 right(const Quaternion &amp;q)</div><div class="ttdoc">Returns the right axis of the rotation represented by q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:164</div></div>
+<div class="ttc" id="group___math_html_ga8aac76709334bbb7528a08b5cf7c3261"><div class="ttname"><a href="group___math.html#ga8aac76709334bbb7528a08b5cf7c3261">crown::look</a></div><div class="ttdeci">Quaternion look(const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)</div><div class="ttdoc">Returns the quaternion describing the rotation needed to face towards dir. </div><div class="ttdef"><b>Definition:</b> quaternion.h:151</div></div>
+<div class="ttc" id="group___math_html_gab505715176e1ac1985e7092af7d1d6d2"><div class="ttname"><a href="group___math.html#gab505715176e1ac1985e7092af7d1d6d2">crown::forward</a></div><div class="ttdeci">Vector3 forward(const Quaternion &amp;q)</div><div class="ttdoc">Returns the forward axis of the rotation represented by q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:178</div></div>
 <div class="ttc" id="structcrown_1_1_vector3_html"><div class="ttname"><a href="structcrown_1_1_vector3.html">crown::Vector3</a></div><div class="ttdef"><b>Definition:</b> math_types.h:20</div></div>
 <div class="ttc" id="group___math_html_ga6e70e917f2e3bff02d5d0d0329d8c511"><div class="ttname"><a href="group___math.html#ga6e70e917f2e3bff02d5d0d0329d8c511">crown::angle</a></div><div class="ttdeci">float angle(const Vector2 &amp;a, const Vector2 &amp;b)</div><div class="ttdoc">Returns the angle between the vectors a and b. </div><div class="ttdef"><b>Definition:</b> vector2.h:138</div></div>
 <div class="ttc" id="group___math_html_ga6835c8b01e6d4b9384b4ba7d26b5775b"><div class="ttname"><a href="group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b">crown::matrix3x3</a></div><div class="ttdeci">Matrix3x3 matrix3x3(const Vector3 &amp;x, const Vector3 &amp;y, const Vector3 &amp;z)</div><div class="ttdoc">Returns a new matrix from axes x, y and z. </div><div class="ttdef"><b>Definition:</b> matrix3x3.h:17</div></div>
-<div class="ttc" id="group___math_html_ga95de9230cfa21f2eb5cb13493b01faca"><div class="ttname"><a href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">crown::up</a></div><div class="ttdeci">Vector3 up(const Quaternion &amp;q)</div><div class="ttdoc">Returns the up axis of the rotation represented by q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:170</div></div>
+<div class="ttc" id="group___math_html_ga95de9230cfa21f2eb5cb13493b01faca"><div class="ttname"><a href="group___math.html#ga95de9230cfa21f2eb5cb13493b01faca">crown::up</a></div><div class="ttdeci">Vector3 up(const Quaternion &amp;q)</div><div class="ttdoc">Returns the up axis of the rotation represented by q. </div><div class="ttdef"><b>Definition:</b> quaternion.h:171</div></div>
 <div class="ttc" id="group___math_html_ga8c5246b6d0051fc25ef9cee87d0d8a7f"><div class="ttname"><a href="group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f">crown::cross</a></div><div class="ttdeci">Vector3 cross(const Vector3 &amp;a, const Vector3 &amp;b)</div><div class="ttdoc">Returns the cross product between the vectors a and b. </div><div class="ttdef"><b>Definition:</b> vector3.h:101</div></div>
 <div class="ttc" id="structcrown_1_1_quaternion_html"><div class="ttname"><a href="structcrown_1_1_quaternion.html">crown::Quaternion</a></div><div class="ttdef"><b>Definition:</b> math_types.h:35</div></div>
 <div class="ttc" id="namespacecrown_html"><div class="ttname"><a href="namespacecrown.html">crown</a></div><div class="ttdef"><b>Definition:</b> audio.h:8</div></div>
@@ -295,7 +296,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 26 2015 13:23:55 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2015 10:43:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

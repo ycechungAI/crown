@@ -110,14 +110,14 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#adb1d45c3c9ffc397d6d45bf321937c6a">num_axes</a> () const </td></tr>
 <tr class="memdesc:adb1d45c3c9ffc397d6d45bf321937c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of axes of the input devices. <br /></td></tr>
 <tr class="separator:adb1d45c3c9ffc397d6d45bf321937c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8ad951ce45cadac99f25b025af52008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8ad951ce45cadac99f25b025af52008"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#ac8ad951ce45cadac99f25b025af52008">pressed</a> (uint8_t i) const </td></tr>
-<tr class="memdesc:ac8ad951ce45cadac99f25b025af52008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the specified <em>b</em> button is pressed in the current frame. <br /></td></tr>
-<tr class="separator:ac8ad951ce45cadac99f25b025af52008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a326c610e78ad6e4b41b401a47d933b18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a326c610e78ad6e4b41b401a47d933b18"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a326c610e78ad6e4b41b401a47d933b18">released</a> (uint8_t i) const </td></tr>
-<tr class="memdesc:a326c610e78ad6e4b41b401a47d933b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the specified <em>b</em> button is released in the current frame. <br /></td></tr>
-<tr class="separator:a326c610e78ad6e4b41b401a47d933b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47474e72ec103a49d2b649b8cccd872"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab47474e72ec103a49d2b649b8cccd872"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#ab47474e72ec103a49d2b649b8cccd872">pressed</a> (uint8_t id) const </td></tr>
+<tr class="memdesc:ab47474e72ec103a49d2b649b8cccd872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the button <em>id</em> is pressed in the current frame. <br /></td></tr>
+<tr class="separator:ab47474e72ec103a49d2b649b8cccd872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1713894844d05a2b4064fc44fbee82d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1713894844d05a2b4064fc44fbee82d3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a1713894844d05a2b4064fc44fbee82d3">released</a> (uint8_t id) const </td></tr>
+<tr class="memdesc:a1713894844d05a2b4064fc44fbee82d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the button <em>id</em> is released in the current frame. <br /></td></tr>
+<tr class="separator:a1713894844d05a2b4064fc44fbee82d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7751e6c377b306a9fdf04205fdff0d04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7751e6c377b306a9fdf04205fdff0d04"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a7751e6c377b306a9fdf04205fdff0d04">any_pressed</a> () const </td></tr>
 <tr class="memdesc:a7751e6c377b306a9fdf04205fdff0d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any button is pressed in the current frame. <br /></td></tr>
@@ -126,10 +126,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#ae6f040dbe19fb26644d29a639ea4ba5d">any_released</a> () const </td></tr>
 <tr class="memdesc:ae6f040dbe19fb26644d29a639ea4ba5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any button is released in the current frame. <br /></td></tr>
 <tr class="separator:ae6f040dbe19fb26644d29a639ea4ba5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05aa10a238afcdbaa73337c058c70e80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05aa10a238afcdbaa73337c058c70e80"></a>
-<a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a05aa10a238afcdbaa73337c058c70e80">axis</a> (uint8_t i) const </td></tr>
-<tr class="memdesc:a05aa10a238afcdbaa73337c058c70e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the axis <em>i</em>. <br /></td></tr>
-<tr class="separator:a05aa10a238afcdbaa73337c058c70e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae224b21b27974302e14c017425110fdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae224b21b27974302e14c017425110fdc"></a>
+<a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#ae224b21b27974302e14c017425110fdc">axis</a> (uint8_t id) const </td></tr>
+<tr class="memdesc:ae224b21b27974302e14c017425110fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the axis <em>id</em>. <br /></td></tr>
+<tr class="separator:ae224b21b27974302e14c017425110fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b57384a6b9ff647f9a1ef9ebea4a5a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b57384a6b9ff647f9a1ef9ebea4a5a3"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a8b57384a6b9ff647f9a1ef9ebea4a5a3">button_name</a> (uint8_t id)</td></tr>
+<tr class="memdesc:a8b57384a6b9ff647f9a1ef9ebea4a5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the button <em>id</em>. <br /></td></tr>
+<tr class="separator:a8b57384a6b9ff647f9a1ef9ebea4a5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1d180e8737212b3daaffd6f743aee4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee1d180e8737212b3daaffd6f743aee4"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#aee1d180e8737212b3daaffd6f743aee4">axis_name</a> (uint8_t id)</td></tr>
+<tr class="memdesc:aee1d180e8737212b3daaffd6f743aee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the axis <em>id</em>. <br /></td></tr>
+<tr class="separator:aee1d180e8737212b3daaffd6f743aee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15067037132dbc8eb01dea1df4c86b0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15067037132dbc8eb01dea1df4c86b0f"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a15067037132dbc8eb01dea1df4c86b0f">button_id</a> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> <a class="el" href="structcrown_1_1_input_device.html#a77cdbecc53b949e4bc61302ab5c7500d">name</a>)</td></tr>
+<tr class="memdesc:a15067037132dbc8eb01dea1df4c86b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the button <em>name</em>. <br /></td></tr>
+<tr class="separator:a15067037132dbc8eb01dea1df4c86b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44342fa82329054a6c88b06ad1ab42a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae44342fa82329054a6c88b06ad1ab42a"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#ae44342fa82329054a6c88b06ad1ab42a">axis_id</a> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> <a class="el" href="structcrown_1_1_input_device.html#a77cdbecc53b949e4bc61302ab5c7500d">name</a>)</td></tr>
+<tr class="memdesc:ae44342fa82329054a6c88b06ad1ab42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the axis <em>name</em>. <br /></td></tr>
+<tr class="separator:ae44342fa82329054a6c88b06ad1ab42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6950cdaab08a3c4ce5616d283fbc5654"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6950cdaab08a3c4ce5616d283fbc5654"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_connected</b> (bool <a class="el" href="structcrown_1_1_input_device.html#afb6497e2fdcb8497cdf1445a3c51d14c">connected</a>)</td></tr>
 <tr class="separator:a6950cdaab08a3c4ce5616d283fbc5654"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,9 +161,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></t
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a062e2b9abb37919c8fc4f6fb7b1336c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a062e2b9abb37919c8fc4f6fb7b1336c7"></a>
-static <a class="el" href="structcrown_1_1_input_device.html">InputDevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, const char *<a class="el" href="structcrown_1_1_input_device.html#a77cdbecc53b949e4bc61302ab5c7500d">name</a>, uint8_t <a class="el" href="structcrown_1_1_input_device.html#aaf3e9e77d3d29caba898ae7da5533eae">num_buttons</a>, uint8_t <a class="el" href="structcrown_1_1_input_device.html#adb1d45c3c9ffc397d6d45bf321937c6a">num_axes</a>)</td></tr>
-<tr class="separator:a062e2b9abb37919c8fc4f6fb7b1336c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cbf28029b3e37f62b51a4cc9e7a2bb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cbf28029b3e37f62b51a4cc9e7a2bb6"></a>
+static <a class="el" href="structcrown_1_1_input_device.html">InputDevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, const char *<a class="el" href="structcrown_1_1_input_device.html#a77cdbecc53b949e4bc61302ab5c7500d">name</a>, uint8_t <a class="el" href="structcrown_1_1_input_device.html#aaf3e9e77d3d29caba898ae7da5533eae">num_buttons</a>, uint8_t <a class="el" href="structcrown_1_1_input_device.html#adb1d45c3c9ffc397d6d45bf321937c6a">num_axes</a>, const char **button_names, const char **axis_names)</td></tr>
+<tr class="separator:a7cbf28029b3e37f62b51a4cc9e7a2bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa1d2b7c14656521e7b3079e9b431356"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa1d2b7c14656521e7b3079e9b431356"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="structcrown_1_1_input_device.html">InputDevice</a> *id)</td></tr>
 <tr class="separator:aaa1d2b7c14656521e7b3079e9b431356"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +191,18 @@ uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>_current_state</
 <tr class="memitem:a10eae51c6e7ab440e20ae5b028de125c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10eae51c6e7ab440e20ae5b028de125c"></a>
 <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_axis</b></td></tr>
 <tr class="separator:a10eae51c6e7ab440e20ae5b028de125c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dd08dfd0e176f6eaeb1b7f2691d645a"></a>
+const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_button_name</b></td></tr>
+<tr class="separator:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4eedb1ebeb9e2de257207ff833ae07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e4eedb1ebeb9e2de257207ff833ae07"></a>
+const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_axis_name</b></td></tr>
+<tr class="separator:a0e4eedb1ebeb9e2de257207ff833ae07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe37a1ee3cb1994bf7b3388ef323fec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fe37a1ee3cb1994bf7b3388ef323fec"></a>
+<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_button_hash</b></td></tr>
+<tr class="separator:a4fe37a1ee3cb1994bf7b3388ef323fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12fef1e529a6431367f807c92933aafc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12fef1e529a6431367f807c92933aafc"></a>
+<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_axis_hash</b></td></tr>
+<tr class="separator:a12fef1e529a6431367f807c92933aafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe37926e117e731ab4ad8aea1e8beaf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe37926e117e731ab4ad8aea1e8beaf4"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>_name</b></td></tr>
 <tr class="separator:abe37926e117e731ab4ad8aea1e8beaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,7 +216,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>_name</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 26 2015 13:23:55 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 30 2015 10:43:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.10
 </small></address>

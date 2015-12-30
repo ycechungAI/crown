@@ -6,7 +6,7 @@ var searchData=
   ['actorflags',['ActorFlags',['../structcrown_1_1_actor_flags.html',1,'crown']]],
   ['actorresource',['ActorResource',['../structcrown_1_1_actor_resource.html',1,'crown']]],
   ['actortype',['ActorType',['../structcrown_1_1_actor_type.html',1,'crown']]],
-  ['allocatememory',['AllocateMemory',['../structcrown_1_1profiler_1_1_allocate_memory.html',1,'crown::profiler']]],
+  ['allocatememory',['AllocateMemory',['../structcrown_1_1_allocate_memory.html',1,'crown']]],
   ['allocator',['Allocator',['../classcrown_1_1_allocator.html',1,'crown']]],
   ['apkfile',['ApkFile',['../classcrown_1_1_apk_file.html',1,'crown']]],
   ['array',['Array',['../structcrown_1_1_array.html',1,'crown']]],

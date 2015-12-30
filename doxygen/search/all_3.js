@@ -1,7 +1,7 @@
 var searchData=
 [
   ['deallocate',['deallocate',['../classcrown_1_1_allocator.html#a3debe272ab5b34a6ece7c912a97d676d',1,'crown::Allocator::deallocate()'],['../classcrown_1_1_linear_allocator.html#a8d6f377e17871f2d4df13a5ba31ecbaa',1,'crown::LinearAllocator::deallocate()'],['../classcrown_1_1_pool_allocator.html#ac15ed63df4521d1db62202c240e7610e',1,'crown::PoolAllocator::deallocate()'],['../classcrown_1_1_proxy_allocator.html#ac6ddfcdbff12abf62a6d895ab86819a2',1,'crown::ProxyAllocator::deallocate()'],['../classcrown_1_1_stack_allocator.html#a75886a62b1aa559dca3cce7566335d49',1,'crown::StackAllocator::deallocate()'],['../classcrown_1_1_temp_allocator.html#a75d2f05cdc0b59d097fff601f7521b18',1,'crown::TempAllocator::deallocate()']]],
-  ['deallocatememory',['DeallocateMemory',['../structcrown_1_1profiler_1_1_deallocate_memory.html',1,'crown::profiler']]],
+  ['deallocatememory',['DeallocateMemory',['../structcrown_1_1_deallocate_memory.html',1,'crown']]],
   ['debugline',['DebugLine',['../structcrown_1_1_debug_line.html',1,'crown']]],
   ['debugline',['DebugLine',['../structcrown_1_1_debug_line.html#a3dfed75a8fbf782c589c22d308cd96da',1,'crown::DebugLine']]],
   ['default_5falign',['DEFAULT_ALIGN',['../classcrown_1_1_allocator.html#ad81573190e2c6c1c2a14589b81885cd4',1,'crown::Allocator']]],
