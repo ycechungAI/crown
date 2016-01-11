@@ -6,6 +6,5 @@ var searchData=
   ['vector4',['vector4',['../group___math.html#ga65e01a0603b6e47d6a23bb1392e0487a',1,'crown']]],
   ['version',['version',['../structcrown_1_1_device.html#aaed00161204fdc77f9d5e9ae474b8f0c',1,'crown::Device']]],
   ['vertex',['vertex',['../namespacecrown_1_1aabb.html#ab0b9da9c98d660f76e92719bd4435bf6',1,'crown::aabb::vertex()'],['../namespacecrown_1_1frustum.html#aca83980f3043f7d2be06f369ebf08963',1,'crown::frustum::vertex()']]],
-  ['view_5fmatrix',['view_matrix',['../structcrown_1_1_camera.html#a2acf268df12a1eb98751191df3991bfb',1,'crown::Camera']]],
   ['volume',['volume',['../namespacecrown_1_1aabb.html#a542e3dc1ec1eacab7809868bc327b512',1,'crown::aabb::volume()'],['../namespacecrown_1_1sphere.html#ad850a4b588b63981e1e22b0ea930dfea',1,'crown::sphere::volume()']]]
 ];

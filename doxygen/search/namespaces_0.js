@@ -7,8 +7,6 @@ var searchData=
   ['event_5fstream',['event_stream',['../namespacecrown_1_1event__stream.html',1,'crown']]],
   ['frustum',['frustum',['../namespacecrown_1_1frustum.html',1,'crown']]],
   ['hash',['hash',['../namespacecrown_1_1hash.html',1,'crown']]],
-  ['id_5farray',['id_array',['../namespacecrown_1_1id__array.html',1,'crown']]],
-  ['id_5ftable',['id_table',['../namespacecrown_1_1id__table.html',1,'crown']]],
   ['json',['json',['../namespacecrown_1_1json.html',1,'crown']]],
   ['map',['map',['../namespacecrown_1_1map.html',1,'crown']]],
   ['multi_5fhash',['multi_hash',['../namespacecrown_1_1multi__hash.html',1,'crown']]],

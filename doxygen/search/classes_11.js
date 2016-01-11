@@ -1,8 +1,8 @@
 var searchData=
 [
   ['random',['Random',['../structcrown_1_1_random.html',1,'crown']]],
-  ['raycast',['Raycast',['../structcrown_1_1_raycast.html',1,'crown']]],
   ['raycasthit',['RaycastHit',['../structcrown_1_1_raycast_hit.html',1,'crown']]],
+  ['raycastmode',['RaycastMode',['../structcrown_1_1_raycast_mode.html',1,'crown']]],
   ['readresult',['ReadResult',['../structcrown_1_1_read_result.html',1,'crown']]],
   ['recordfloat',['RecordFloat',['../structcrown_1_1_record_float.html',1,'crown']]],
   ['recordvector3',['RecordVector3',['../structcrown_1_1_record_vector3.html',1,'crown']]],

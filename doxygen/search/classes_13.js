@@ -10,6 +10,6 @@ var searchData=
   ['textwriter',['TextWriter',['../classcrown_1_1_text_writer.html',1,'crown']]],
   ['thread',['Thread',['../structcrown_1_1_thread.html',1,'crown']]],
   ['touchbutton',['TouchButton',['../structcrown_1_1_touch_button.html',1,'crown']]],
-  ['transforminstance',['TransformInstance',['../structcrown_1_1_transform_instance.html',1,'crown']]],
-  ['triggerevent',['TriggerEvent',['../structcrown_1_1physics__world_1_1_trigger_event.html',1,'crown::physics_world']]]
+  ['transformdesc',['TransformDesc',['../structcrown_1_1_transform_desc.html',1,'crown']]],
+  ['transforminstance',['TransformInstance',['../structcrown_1_1_transform_instance.html',1,'crown']]]
 ];
