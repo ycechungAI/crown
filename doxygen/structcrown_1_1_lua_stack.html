@@ -81,9 +81,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="structcrown_1_1_lua_stack-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::LuaStack Struct Reference</div>  </div>
+<div class="title">crown::LuaStack Struct Reference<div class="ingroups"><a class="el" href="group___lua.html">Lua</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Wrapper to manipulate Lua stack.  
+ <a href="structcrown_1_1_lua_stack.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="lua__stack_8h_source.html">lua_stack.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -131,48 +136,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_matrix4x4</b> (int
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a253e2ed1389b426d4db867e609f560e1">value_type</a> (int i)</td></tr>
 <tr class="memdesc:a253e2ed1389b426d4db867e609f560e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps lua_type. <br /></td></tr>
 <tr class="separator:a253e2ed1389b426d4db867e609f560e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a668a1a41614cb12d276c58a864db97c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a668a1a41614cb12d276c58a864db97c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_nil</b> ()</td></tr>
-<tr class="separator:a668a1a41614cb12d276c58a864db97c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2fc753b68ca91d4c6333454e1ae5dc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2fc753b68ca91d4c6333454e1ae5dc7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_bool</b> (bool value)</td></tr>
-<tr class="separator:ac2fc753b68ca91d4c6333454e1ae5dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab579f9280a006db8a261d0e257224907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab579f9280a006db8a261d0e257224907"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_int</b> (int value)</td></tr>
-<tr class="separator:ab579f9280a006db8a261d0e257224907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee9f3b98ca12ca19eb3f90c12842151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ee9f3b98ca12ca19eb3f90c12842151"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_id</b> (uint32_t value)</td></tr>
-<tr class="separator:a4ee9f3b98ca12ca19eb3f90c12842151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c24996888fb7eeb35dd916b9a97fb8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c24996888fb7eeb35dd916b9a97fb8c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_string_id</b> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> value)</td></tr>
-<tr class="separator:a3c24996888fb7eeb35dd916b9a97fb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae83f6927f144ccc0de0446bc52abd0dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae83f6927f144ccc0de0446bc52abd0dc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_float</b> (float value)</td></tr>
-<tr class="separator:ae83f6927f144ccc0de0446bc52abd0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92095584ee6b32f1d138bf238d91afa2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92095584ee6b32f1d138bf238d91afa2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_string</b> (const char *s)</td></tr>
-<tr class="separator:a92095584ee6b32f1d138bf238d91afa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b53873ee1ae2f241e04675c51cdbe68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b53873ee1ae2f241e04675c51cdbe68"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_fstring</b> (const char *fmt,...)</td></tr>
-<tr class="separator:a7b53873ee1ae2f241e04675c51cdbe68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a518932ef170bb4a334347b9a9c060a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a518932ef170bb4a334347b9a9c060a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_lstring</b> (const char *s, uint32_t len)</td></tr>
-<tr class="separator:a9a518932ef170bb4a334347b9a9c060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada2b2031ce4e29cb2ef554bad710ee22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2b2031ce4e29cb2ef554bad710ee22"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_pointer</b> (void *p)</td></tr>
-<tr class="separator:ada2b2031ce4e29cb2ef554bad710ee22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57785a335febebed066a2b615634282e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57785a335febebed066a2b615634282e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_bool</b> (int i)</td></tr>
 <tr class="separator:a57785a335febebed066a2b615634282e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40353f759eb414c4d1f54399d02dadaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40353f759eb414c4d1f54399d02dadaf"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>get_int</b> (int i)</td></tr>
 <tr class="separator:a40353f759eb414c4d1f54399d02dadaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59fabfa29f8211c1e949ea07f6db72b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59fabfa29f8211c1e949ea07f6db72b2"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_id</b> (int i)</td></tr>
-<tr class="separator:a59fabfa29f8211c1e949ea07f6db72b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097d801b462c0604f063623d096d8be7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a097d801b462c0604f063623d096d8be7"></a>
-<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_string_id</b> (int i)</td></tr>
-<tr class="separator:a097d801b462c0604f063623d096d8be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb6c35c3fa8050b12926207ab71f6713"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb6c35c3fa8050b12926207ab71f6713"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>get_float</b> (int i)</td></tr>
 <tr class="separator:abb6c35c3fa8050b12926207ab71f6713"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,138 +151,72 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>get_string</b
 <tr class="memitem:afabdb3c81712dd7a83e86b2c23892f4a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afabdb3c81712dd7a83e86b2c23892f4a"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>get_pointer</b> (int i)</td></tr>
 <tr class="separator:afabdb3c81712dd7a83e86b2c23892f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e6faa8297ad98dcf9c01694ded8200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a68e6faa8297ad98dcf9c01694ded8200">push_table</a> (int narr=0, int nrec=0)</td></tr>
-<tr class="memdesc:a68e6faa8297ad98dcf9c01694ded8200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes an empty table onto the stack.  <a href="#a68e6faa8297ad98dcf9c01694ded8200">More...</a><br /></td></tr>
-<tr class="separator:a68e6faa8297ad98dcf9c01694ded8200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2233d68bbbdd82a1fd083a9a7d44fc8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8">push_key_begin</a> (const char *key)</td></tr>
-<tr class="memdesc:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
-<tr class="separator:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29c120db37460849e6111b93e74d12e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29c120db37460849e6111b93e74d12e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a29c120db37460849e6111b93e74d12e2">push_key_begin</a> (int i)</td></tr>
-<tr class="memdesc:a29c120db37460849e6111b93e74d12e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
-<tr class="separator:a29c120db37460849e6111b93e74d12e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79a8a3b906dd30a1c6c6a328745a3aed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed">push_key_end</a> ()</td></tr>
-<tr class="memdesc:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
-<tr class="separator:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f72b2b82297197b0ac55565d8592a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7f72b2b82297197b0ac55565d8592a5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> (int i)</td></tr>
-<tr class="separator:ad7f72b2b82297197b0ac55565d8592a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fabfa29f8211c1e949ea07f6db72b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59fabfa29f8211c1e949ea07f6db72b2"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_id</b> (int i)</td></tr>
+<tr class="separator:a59fabfa29f8211c1e949ea07f6db72b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3749a5d93e6fb172111774836bc574df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3749a5d93e6fb172111774836bc574df"></a>
+<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_string_id_32</b> (int i)</td></tr>
+<tr class="separator:a3749a5d93e6fb172111774836bc574df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092aa5e53d8d74a9a1504b4f068ce8c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a092aa5e53d8d74a9a1504b4f068ce8c1"></a>
+<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_string_id_64</b> (int i)</td></tr>
+<tr class="separator:a092aa5e53d8d74a9a1504b4f068ce8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a534e8bf5de8249c733d90c201da5c28d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a534e8bf5de8249c733d90c201da5c28d"></a>
 <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_resource_id</b> (int i)</td></tr>
 <tr class="separator:a534e8bf5de8249c733d90c201da5c28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f973e5fa9f6115928507b8ff6f8e884"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f973e5fa9f6115928507b8ff6f8e884"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_debug_line</b> (<a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *line)</td></tr>
-<tr class="separator:a1f973e5fa9f6115928507b8ff6f8e884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2161991748e98aca9e13d73c8113fbb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2161991748e98aca9e13d73c8113fbb0"></a>
 <a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_debug_line</b> (int i)</td></tr>
 <tr class="separator:a2161991748e98aca9e13d73c8113fbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eb52ea7d38599ad1c4c885d80efe3bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4eb52ea7d38599ad1c4c885d80efe3bb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_resource_package</b> (<a class="el" href="structcrown_1_1_resource_package.html">ResourcePackage</a> *package)</td></tr>
-<tr class="separator:a4eb52ea7d38599ad1c4c885d80efe3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a5b132d60eb27194aab88b89c186ba5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a5b132d60eb27194aab88b89c186ba5"></a>
 <a class="el" href="structcrown_1_1_resource_package.html">ResourcePackage</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_resource_package</b> (int i)</td></tr>
 <tr class="separator:a2a5b132d60eb27194aab88b89c186ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfa68edf0f9d8ffbc73f0231badbf71a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfa68edf0f9d8ffbc73f0231badbf71a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_world</b> (<a class="el" href="classcrown_1_1_world.html">World</a> *world)</td></tr>
-<tr class="separator:adfa68edf0f9d8ffbc73f0231badbf71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad448bff23ee9dc47072501e2a1e1f66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad448bff23ee9dc47072501e2a1e1f66"></a>
 <a class="el" href="classcrown_1_1_world.html">World</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_world</b> (int i)</td></tr>
 <tr class="separator:aad448bff23ee9dc47072501e2a1e1f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebb01d3c4811354aaecb9643c4740fde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebb01d3c4811354aaecb9643c4740fde"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_scene_graph</b> (<a class="el" href="structcrown_1_1_scene_graph.html">SceneGraph</a> *sg)</td></tr>
-<tr class="separator:aebb01d3c4811354aaecb9643c4740fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4702b2d7daaaeaa40847d7cb9dc5fc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4702b2d7daaaeaa40847d7cb9dc5fc6"></a>
 <a class="el" href="structcrown_1_1_scene_graph.html">SceneGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_scene_graph</b> (int i)</td></tr>
 <tr class="separator:ad4702b2d7daaaeaa40847d7cb9dc5fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee4b4d954311421d71f21770b274be10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee4b4d954311421d71f21770b274be10"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_level</b> (<a class="el" href="classcrown_1_1_level.html">Level</a> *level)</td></tr>
-<tr class="separator:aee4b4d954311421d71f21770b274be10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d578ab7f603154b8df1e9560cd4ed59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d578ab7f603154b8df1e9560cd4ed59"></a>
 <a class="el" href="classcrown_1_1_level.html">Level</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_level</b> (int i)</td></tr>
 <tr class="separator:a9d578ab7f603154b8df1e9560cd4ed59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9932fd1ae443aedd750cbecb4f6be8f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9932fd1ae443aedd750cbecb4f6be8f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_render_world</b> (<a class="el" href="classcrown_1_1_render_world.html">RenderWorld</a> *world)</td></tr>
-<tr class="separator:a9932fd1ae443aedd750cbecb4f6be8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab14d637b4ef8c90064ebd2d397aa0919"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab14d637b4ef8c90064ebd2d397aa0919"></a>
 <a class="el" href="classcrown_1_1_render_world.html">RenderWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_render_world</b> (int i)</td></tr>
 <tr class="separator:ab14d637b4ef8c90064ebd2d397aa0919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2c84635c3c23c269b088d3cff501bef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2c84635c3c23c269b088d3cff501bef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_physics_world</b> (<a class="el" href="classcrown_1_1_physics_world.html">PhysicsWorld</a> *world)</td></tr>
-<tr class="separator:ad2c84635c3c23c269b088d3cff501bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bab4994a0d5c80f46644eb7928fb74a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bab4994a0d5c80f46644eb7928fb74a"></a>
 <a class="el" href="classcrown_1_1_physics_world.html">PhysicsWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_physics_world</b> (int i)</td></tr>
 <tr class="separator:a6bab4994a0d5c80f46644eb7928fb74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34ac6556fc845f7a40d85f8cde6f73cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34ac6556fc845f7a40d85f8cde6f73cd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_sound_world</b> (<a class="el" href="classcrown_1_1_sound_world.html">SoundWorld</a> *world)</td></tr>
-<tr class="separator:a34ac6556fc845f7a40d85f8cde6f73cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b01fb647e74d731841b4aaced887d58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b01fb647e74d731841b4aaced887d58"></a>
 <a class="el" href="classcrown_1_1_sound_world.html">SoundWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_sound_world</b> (int i)</td></tr>
 <tr class="separator:a9b01fb647e74d731841b4aaced887d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff0abce9fde584665e8fcadc0380267b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff0abce9fde584665e8fcadc0380267b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_unit</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
-<tr class="separator:aff0abce9fde584665e8fcadc0380267b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39d4bcdf9b138082dbe19a7bdd7cea96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39d4bcdf9b138082dbe19a7bdd7cea96"></a>
 <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_unit</b> (int i)</td></tr>
 <tr class="separator:a39d4bcdf9b138082dbe19a7bdd7cea96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6f91d3fb970d0d928a07b5ec3f5acc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6f91d3fb970d0d928a07b5ec3f5acc6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_camera</b> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i)</td></tr>
-<tr class="separator:ad6f91d3fb970d0d928a07b5ec3f5acc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6abdc7c27164d02d2009b677475ffc89"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6abdc7c27164d02d2009b677475ffc89"></a>
 <a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_camera</b> (int i)</td></tr>
 <tr class="separator:a6abdc7c27164d02d2009b677475ffc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c54401b2bb5a76bb4aac8e65aaaf302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c54401b2bb5a76bb4aac8e65aaaf302"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_transform</b> (<a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a> i)</td></tr>
-<tr class="separator:a7c54401b2bb5a76bb4aac8e65aaaf302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae848dfd7da6e903b974fd0634aeb429"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae848dfd7da6e903b974fd0634aeb429"></a>
 <a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_transform</b> (int i)</td></tr>
 <tr class="separator:aae848dfd7da6e903b974fd0634aeb429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaedb440ae90e4606ff004440fe8ed623"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaedb440ae90e4606ff004440fe8ed623"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_mesh_instance</b> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i)</td></tr>
-<tr class="separator:aaedb440ae90e4606ff004440fe8ed623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a992b837b62adf30229577917977f7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a992b837b62adf30229577917977f7a"></a>
 <a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_mesh_instance</b> (int i)</td></tr>
 <tr class="separator:a9a992b837b62adf30229577917977f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb839a220205b42a6f09ac0c7399a35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb839a220205b42a6f09ac0c7399a35"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_sprite_instance</b> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i)</td></tr>
-<tr class="separator:a9bb839a220205b42a6f09ac0c7399a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98e5562a8c60d8205f472702b663b351"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98e5562a8c60d8205f472702b663b351"></a>
 <a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_sprite_instance</b> (int i)</td></tr>
 <tr class="separator:a98e5562a8c60d8205f472702b663b351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9b01ceeadf4eb396ce13fa64cfdbb87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9b01ceeadf4eb396ce13fa64cfdbb87"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_light_instance</b> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i)</td></tr>
-<tr class="separator:ac9b01ceeadf4eb396ce13fa64cfdbb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7364d23523f5244282d3511538f5c190"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7364d23523f5244282d3511538f5c190"></a>
 <a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_light_instance</b> (int i)</td></tr>
 <tr class="separator:a7364d23523f5244282d3511538f5c190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadf18e8df473e9ff2a921e3129938fb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadf18e8df473e9ff2a921e3129938fb6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_material</b> (<a class="el" href="structcrown_1_1_material.html">Material</a> *material)</td></tr>
-<tr class="separator:aadf18e8df473e9ff2a921e3129938fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea97d6f6e294cae1d56d7428d90d4147"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea97d6f6e294cae1d56d7428d90d4147"></a>
 <a class="el" href="structcrown_1_1_material.html">Material</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_material</b> (int i)</td></tr>
 <tr class="separator:aea97d6f6e294cae1d56d7428d90d4147"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae524fb14ec2531e2dfb0473bcf691df5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae524fb14ec2531e2dfb0473bcf691df5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_actor</b> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)</td></tr>
-<tr class="separator:ae524fb14ec2531e2dfb0473bcf691df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cfee5adf2f1e9231d7c9103d7105b10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cfee5adf2f1e9231d7c9103d7105b10"></a>
 <a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_actor</b> (int i)</td></tr>
 <tr class="separator:a6cfee5adf2f1e9231d7c9103d7105b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fa7238189cdb55800d60a2edabfa527"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fa7238189cdb55800d60a2edabfa527"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_controller</b> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i)</td></tr>
-<tr class="separator:a1fa7238189cdb55800d60a2edabfa527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b360d81b4045c093933f2861ce34a36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b360d81b4045c093933f2861ce34a36"></a>
 <a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_controller</b> (int i)</td></tr>
 <tr class="separator:a1b360d81b4045c093933f2861ce34a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a140e27a3b0d5941a805b6dff28af2213"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a140e27a3b0d5941a805b6dff28af2213"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_sound_instance_id</b> (const SoundInstanceId id)</td></tr>
-<tr class="separator:a140e27a3b0d5941a805b6dff28af2213"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adce8d5b7f5027142d12d490d8fbfef1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adce8d5b7f5027142d12d490d8fbfef1e"></a>
 SoundInstanceId&#160;</td><td class="memItemRight" valign="bottom"><b>get_sound_instance_id</b> (int i)</td></tr>
 <tr class="separator:adce8d5b7f5027142d12d490d8fbfef1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b864964143328f4a4b5f8c88eb32341"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b864964143328f4a4b5f8c88eb32341"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push_gui</b> (<a class="el" href="structcrown_1_1_gui.html">Gui</a> *gui)</td></tr>
-<tr class="separator:a6b864964143328f4a4b5f8c88eb32341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd877cf69240b1c793784355ceee2b03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd877cf69240b1c793784355ceee2b03"></a>
 <a class="el" href="structcrown_1_1_gui.html">Gui</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_gui</b> (int i)</td></tr>
 <tr class="separator:acd877cf69240b1c793784355ceee2b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -332,6 +235,126 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_gui</b> (<a clas
 <tr class="memitem:a50d8ca4b0e26a5b722315c0fc8d9be98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50d8ca4b0e26a5b722315c0fc8d9be98"></a>
 <a class="el" href="structcrown_1_1_vector4.html">Color4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_color4</b> (int i)</td></tr>
 <tr class="separator:a50d8ca4b0e26a5b722315c0fc8d9be98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1817beb99dec9ee1b513d51a123301"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe1817beb99dec9ee1b513d51a123301"></a>
+<a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_vector2box</b> (int i)</td></tr>
+<tr class="separator:afe1817beb99dec9ee1b513d51a123301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c49356a39c2f42ef4f74f94905553e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60c49356a39c2f42ef4f74f94905553e"></a>
+<a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_vector3box</b> (int i)</td></tr>
+<tr class="separator:a60c49356a39c2f42ef4f74f94905553e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b30f3797d6cbe5e8352ea18b2872dba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b30f3797d6cbe5e8352ea18b2872dba"></a>
+<a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_quaternionbox</b> (int i)</td></tr>
+<tr class="separator:a0b30f3797d6cbe5e8352ea18b2872dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20ede60a53f3cb89f7f8474c0f4cc91e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20ede60a53f3cb89f7f8474c0f4cc91e"></a>
+<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_matrix4x4box</b> (int i)</td></tr>
+<tr class="separator:a20ede60a53f3cb89f7f8474c0f4cc91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668a1a41614cb12d276c58a864db97c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a668a1a41614cb12d276c58a864db97c0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_nil</b> ()</td></tr>
+<tr class="separator:a668a1a41614cb12d276c58a864db97c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2fc753b68ca91d4c6333454e1ae5dc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2fc753b68ca91d4c6333454e1ae5dc7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_bool</b> (bool value)</td></tr>
+<tr class="separator:ac2fc753b68ca91d4c6333454e1ae5dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab579f9280a006db8a261d0e257224907"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab579f9280a006db8a261d0e257224907"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_int</b> (int value)</td></tr>
+<tr class="separator:ab579f9280a006db8a261d0e257224907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83f6927f144ccc0de0446bc52abd0dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae83f6927f144ccc0de0446bc52abd0dc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_float</b> (float value)</td></tr>
+<tr class="separator:ae83f6927f144ccc0de0446bc52abd0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92095584ee6b32f1d138bf238d91afa2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92095584ee6b32f1d138bf238d91afa2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_string</b> (const char *s)</td></tr>
+<tr class="separator:a92095584ee6b32f1d138bf238d91afa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b53873ee1ae2f241e04675c51cdbe68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b53873ee1ae2f241e04675c51cdbe68"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_fstring</b> (const char *fmt,...)</td></tr>
+<tr class="separator:a7b53873ee1ae2f241e04675c51cdbe68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a518932ef170bb4a334347b9a9c060a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a518932ef170bb4a334347b9a9c060a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_lstring</b> (const char *s, uint32_t len)</td></tr>
+<tr class="separator:a9a518932ef170bb4a334347b9a9c060a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c24996888fb7eeb35dd916b9a97fb8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c24996888fb7eeb35dd916b9a97fb8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_string_id</b> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> value)</td></tr>
+<tr class="separator:a3c24996888fb7eeb35dd916b9a97fb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2b2031ce4e29cb2ef554bad710ee22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada2b2031ce4e29cb2ef554bad710ee22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_pointer</b> (void *p)</td></tr>
+<tr class="separator:ada2b2031ce4e29cb2ef554bad710ee22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f9f7e66c82bcec0d964bf3ea3115f65"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f9f7e66c82bcec0d964bf3ea3115f65"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_function</b> (lua_CFunction f)</td></tr>
+<tr class="separator:a4f9f7e66c82bcec0d964bf3ea3115f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee9f3b98ca12ca19eb3f90c12842151"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ee9f3b98ca12ca19eb3f90c12842151"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_id</b> (uint32_t value)</td></tr>
+<tr class="separator:a4ee9f3b98ca12ca19eb3f90c12842151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e6faa8297ad98dcf9c01694ded8200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a68e6faa8297ad98dcf9c01694ded8200">push_table</a> (int narr=0, int nrec=0)</td></tr>
+<tr class="memdesc:a68e6faa8297ad98dcf9c01694ded8200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes an empty table onto the stack.  <a href="#a68e6faa8297ad98dcf9c01694ded8200">More...</a><br /></td></tr>
+<tr class="separator:a68e6faa8297ad98dcf9c01694ded8200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2233d68bbbdd82a1fd083a9a7d44fc8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8">push_key_begin</a> (const char *key)</td></tr>
+<tr class="memdesc:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
+<tr class="separator:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c120db37460849e6111b93e74d12e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29c120db37460849e6111b93e74d12e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a29c120db37460849e6111b93e74d12e2">push_key_begin</a> (int i)</td></tr>
+<tr class="memdesc:a29c120db37460849e6111b93e74d12e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
+<tr class="separator:a29c120db37460849e6111b93e74d12e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79a8a3b906dd30a1c6c6a328745a3aed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed">push_key_end</a> ()</td></tr>
+<tr class="memdesc:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
+<tr class="separator:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f72b2b82297197b0ac55565d8592a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7f72b2b82297197b0ac55565d8592a5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> (int i)</td></tr>
+<tr class="separator:ad7f72b2b82297197b0ac55565d8592a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f973e5fa9f6115928507b8ff6f8e884"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f973e5fa9f6115928507b8ff6f8e884"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_debug_line</b> (<a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *line)</td></tr>
+<tr class="separator:a1f973e5fa9f6115928507b8ff6f8e884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb52ea7d38599ad1c4c885d80efe3bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4eb52ea7d38599ad1c4c885d80efe3bb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_resource_package</b> (<a class="el" href="structcrown_1_1_resource_package.html">ResourcePackage</a> *package)</td></tr>
+<tr class="separator:a4eb52ea7d38599ad1c4c885d80efe3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa68edf0f9d8ffbc73f0231badbf71a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfa68edf0f9d8ffbc73f0231badbf71a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_world</b> (<a class="el" href="classcrown_1_1_world.html">World</a> *world)</td></tr>
+<tr class="separator:adfa68edf0f9d8ffbc73f0231badbf71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb01d3c4811354aaecb9643c4740fde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebb01d3c4811354aaecb9643c4740fde"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_scene_graph</b> (<a class="el" href="structcrown_1_1_scene_graph.html">SceneGraph</a> *sg)</td></tr>
+<tr class="separator:aebb01d3c4811354aaecb9643c4740fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4b4d954311421d71f21770b274be10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee4b4d954311421d71f21770b274be10"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_level</b> (<a class="el" href="classcrown_1_1_level.html">Level</a> *level)</td></tr>
+<tr class="separator:aee4b4d954311421d71f21770b274be10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9932fd1ae443aedd750cbecb4f6be8f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9932fd1ae443aedd750cbecb4f6be8f5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_render_world</b> (<a class="el" href="classcrown_1_1_render_world.html">RenderWorld</a> *world)</td></tr>
+<tr class="separator:a9932fd1ae443aedd750cbecb4f6be8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c84635c3c23c269b088d3cff501bef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2c84635c3c23c269b088d3cff501bef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_physics_world</b> (<a class="el" href="classcrown_1_1_physics_world.html">PhysicsWorld</a> *world)</td></tr>
+<tr class="separator:ad2c84635c3c23c269b088d3cff501bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ac6556fc845f7a40d85f8cde6f73cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34ac6556fc845f7a40d85f8cde6f73cd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_sound_world</b> (<a class="el" href="classcrown_1_1_sound_world.html">SoundWorld</a> *world)</td></tr>
+<tr class="separator:a34ac6556fc845f7a40d85f8cde6f73cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0abce9fde584665e8fcadc0380267b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff0abce9fde584665e8fcadc0380267b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_unit</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
+<tr class="separator:aff0abce9fde584665e8fcadc0380267b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f91d3fb970d0d928a07b5ec3f5acc6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6f91d3fb970d0d928a07b5ec3f5acc6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_camera</b> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i)</td></tr>
+<tr class="separator:ad6f91d3fb970d0d928a07b5ec3f5acc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c54401b2bb5a76bb4aac8e65aaaf302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c54401b2bb5a76bb4aac8e65aaaf302"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_transform</b> (<a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a> i)</td></tr>
+<tr class="separator:a7c54401b2bb5a76bb4aac8e65aaaf302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaedb440ae90e4606ff004440fe8ed623"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaedb440ae90e4606ff004440fe8ed623"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_mesh_instance</b> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i)</td></tr>
+<tr class="separator:aaedb440ae90e4606ff004440fe8ed623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb839a220205b42a6f09ac0c7399a35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb839a220205b42a6f09ac0c7399a35"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_sprite_instance</b> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i)</td></tr>
+<tr class="separator:a9bb839a220205b42a6f09ac0c7399a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b01ceeadf4eb396ce13fa64cfdbb87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9b01ceeadf4eb396ce13fa64cfdbb87"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_light_instance</b> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i)</td></tr>
+<tr class="separator:ac9b01ceeadf4eb396ce13fa64cfdbb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf18e8df473e9ff2a921e3129938fb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadf18e8df473e9ff2a921e3129938fb6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_material</b> (<a class="el" href="structcrown_1_1_material.html">Material</a> *material)</td></tr>
+<tr class="separator:aadf18e8df473e9ff2a921e3129938fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae524fb14ec2531e2dfb0473bcf691df5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae524fb14ec2531e2dfb0473bcf691df5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_actor</b> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)</td></tr>
+<tr class="separator:ae524fb14ec2531e2dfb0473bcf691df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa7238189cdb55800d60a2edabfa527"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fa7238189cdb55800d60a2edabfa527"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_controller</b> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i)</td></tr>
+<tr class="separator:a1fa7238189cdb55800d60a2edabfa527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140e27a3b0d5941a805b6dff28af2213"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a140e27a3b0d5941a805b6dff28af2213"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_sound_instance_id</b> (const SoundInstanceId id)</td></tr>
+<tr class="separator:a140e27a3b0d5941a805b6dff28af2213"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b864964143328f4a4b5f8c88eb32341"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b864964143328f4a4b5f8c88eb32341"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_gui</b> (<a class="el" href="structcrown_1_1_gui.html">Gui</a> *gui)</td></tr>
+<tr class="separator:a6b864964143328f4a4b5f8c88eb32341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a532e3ae1afdf320948f2b45d8989c109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a532e3ae1afdf320948f2b45d8989c109"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_vector2</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;v)</td></tr>
 <tr class="separator:a532e3ae1afdf320948f2b45d8989c109"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -350,56 +373,46 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_color4</b> (cons
 <tr class="memitem:acbde71fff145b24d7120a76b2ddc7cba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbde71fff145b24d7120a76b2ddc7cba"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_vector2box</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;v)</td></tr>
 <tr class="separator:acbde71fff145b24d7120a76b2ddc7cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe1817beb99dec9ee1b513d51a123301"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe1817beb99dec9ee1b513d51a123301"></a>
-<a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_vector2box</b> (int i)</td></tr>
-<tr class="separator:afe1817beb99dec9ee1b513d51a123301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae84ff5bf73b6adb0c74dea11af70d640"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae84ff5bf73b6adb0c74dea11af70d640"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_vector3box</b> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;v)</td></tr>
 <tr class="separator:ae84ff5bf73b6adb0c74dea11af70d640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60c49356a39c2f42ef4f74f94905553e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60c49356a39c2f42ef4f74f94905553e"></a>
-<a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_vector3box</b> (int i)</td></tr>
-<tr class="separator:a60c49356a39c2f42ef4f74f94905553e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3acfc0b414aab3733754601d5b5a3ceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3acfc0b414aab3733754601d5b5a3ceb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_quaternionbox</b> (const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;q)</td></tr>
 <tr class="separator:a3acfc0b414aab3733754601d5b5a3ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b30f3797d6cbe5e8352ea18b2872dba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b30f3797d6cbe5e8352ea18b2872dba"></a>
-<a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_quaternionbox</b> (int i)</td></tr>
-<tr class="separator:a0b30f3797d6cbe5e8352ea18b2872dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6948e948ed2e1e8b3044270871ea2ce2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6948e948ed2e1e8b3044270871ea2ce2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_matrix4x4box</b> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;m)</td></tr>
 <tr class="separator:a6948e948ed2e1e8b3044270871ea2ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20ede60a53f3cb89f7f8474c0f4cc91e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20ede60a53f3cb89f7f8474c0f4cc91e"></a>
-<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_matrix4x4box</b> (int i)</td></tr>
-<tr class="separator:a20ede60a53f3cb89f7f8474c0f4cc91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a402c1dc0befa3b810d1c0043bf5c0337"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a402c1dc0befa3b810d1c0043bf5c0337"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *p)</td></tr>
-<tr class="separator:a402c1dc0befa3b810d1c0043bf5c0337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af38286a44a791d569fa35f5d3c736b2d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af38286a44a791d569fa35f5d3c736b2d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> *p)</td></tr>
-<tr class="separator:af38286a44a791d569fa35f5d3c736b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a754327576ce7394cbf980fc966859601"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a754327576ce7394cbf980fc966859601"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *p)</td></tr>
-<tr class="separator:a754327576ce7394cbf980fc966859601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979aa467e1f34c52e27d2f6c71d84c03"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a979aa467e1f34c52e27d2f6c71d84c03"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, <a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *p)</td></tr>
-<tr class="separator:a979aa467e1f34c52e27d2f6c71d84c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0d83e4c4cf5a8016b3296cf01fd9d99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0d83e4c4cf5a8016b3296cf01fd9d99"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, <a class="el" href="structcrown_1_1_resource_package.html">ResourcePackage</a> *p)</td></tr>
-<tr class="separator:ac0d83e4c4cf5a8016b3296cf01fd9d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1381f03caa5686947b9f4573c8354c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1381f03caa5686947b9f4573c8354c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, <a class="el" href="classcrown_1_1_world.html">World</a> *p)</td></tr>
-<tr class="separator:ac1381f03caa5686947b9f4573c8354c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f17a3cb4bda8b716c8c122f708bfa6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f17a3cb4bda8b716c8c122f708bfa6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, <a class="el" href="structcrown_1_1_scene_graph.html">SceneGraph</a> *p)</td></tr>
-<tr class="separator:a9f17a3cb4bda8b716c8c122f708bfa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf6e78ec19da35c3adf0b712e4f9ce86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf6e78ec19da35c3adf0b712e4f9ce86"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, <a class="el" href="classcrown_1_1_render_world.html">RenderWorld</a> *p)</td></tr>
-<tr class="separator:acf6e78ec19da35c3adf0b712e4f9ce86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81bd412a238d1dd9a144053f14858886"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81bd412a238d1dd9a144053f14858886"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, <a class="el" href="classcrown_1_1_level.html">Level</a> *p)</td></tr>
-<tr class="separator:a81bd412a238d1dd9a144053f14858886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f0e5ce0eed11e35079f72551394f295"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f0e5ce0eed11e35079f72551394f295"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *p)</td></tr>
+<tr class="separator:a2f0e5ce0eed11e35079f72551394f295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc814d8ec4c0d948044829ed2356d3a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefc814d8ec4c0d948044829ed2356d3a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> *p)</td></tr>
+<tr class="separator:aefc814d8ec4c0d948044829ed2356d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac09a2c80e3b314d76377852eddd9ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ac09a2c80e3b314d76377852eddd9ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_temporary</b> (int i, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *p)</td></tr>
+<tr class="separator:a6ac09a2c80e3b314d76377852eddd9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855a1fe9209337175fc06ad6b5a5b1f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a855a1fe9209337175fc06ad6b5a5b1f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *p)</td></tr>
+<tr class="separator:a855a1fe9209337175fc06ad6b5a5b1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf08f653d194f9c0b4f6c47a8f201812"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf08f653d194f9c0b4f6c47a8f201812"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_resource_package.html">ResourcePackage</a> *p)</td></tr>
+<tr class="separator:acf08f653d194f9c0b4f6c47a8f201812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea919fe0a8b77dd83fa4003d183b2bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abea919fe0a8b77dd83fa4003d183b2bf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="classcrown_1_1_world.html">World</a> *p)</td></tr>
+<tr class="separator:abea919fe0a8b77dd83fa4003d183b2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06e34604f6fdccca4e22211b836ea75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac06e34604f6fdccca4e22211b836ea75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_scene_graph.html">SceneGraph</a> *p)</td></tr>
+<tr class="separator:ac06e34604f6fdccca4e22211b836ea75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a676c5b0584b040bd44a7e4760d09d7f0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a676c5b0584b040bd44a7e4760d09d7f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="classcrown_1_1_render_world.html">RenderWorld</a> *p)</td></tr>
+<tr class="separator:a676c5b0584b040bd44a7e4760d09d7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774b33d615e844612726fae1aad8f847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a774b33d615e844612726fae1aad8f847"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="classcrown_1_1_level.html">Level</a> *p)</td></tr>
+<tr class="separator:a774b33d615e844612726fae1aad8f847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Wrapper to manipulate Lua stack. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a41c25040850c35c8f4b545b5b5620ac4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -487,7 +500,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i
 
 <p>Pushes an empty table onto the stack. </p>
 <p>When you want to set keys on the table, you have to use <a class="el" href="structcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8" title="See Stack::push_table() ">LuaStack::push_key_begin()</a> and <a class="el" href="structcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed" title="See Stack::push_table() ">LuaStack::push_key_end()</a> as in the following example:</p>
-<p><a class="el" href="structcrown_1_1_lua_stack.html">LuaStack</a> stack(L) stack.push_table() stack.push_key_begin("foo"); stack.push_foo(); stack.push_key_end() stack.push_key_begin("bar"); stack.push_bar(); stack.push_key_end() return 1; </p>
+<p><a class="el" href="structcrown_1_1_lua_stack.html" title="Wrapper to manipulate Lua stack. ">LuaStack</a> stack(L) stack.push_table() stack.push_key_begin("foo"); stack.push_foo(); stack.push_key_end() stack.push_key_begin("bar"); stack.push_bar(); stack.push_key_end() return 1; </p>
 
 </div>
 </div>
@@ -498,7 +511,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 11 2016 17:42:54 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 15 2016 14:59:16 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -36,6 +36,7 @@ var searchData=
   ['local_5fscale',['local_scale',['../structcrown_1_1_scene_graph.html#a3ab53d6a09fc7d5bda282c1d1eea97ab',1,'crown::SceneGraph']]],
   ['logseverity',['LogSeverity',['../structcrown_1_1_log_severity.html',1,'crown']]],
   ['look',['look',['../group___math.html#ga40b84e237af5771786011fd2cb64135c',1,'crown::look(Matrix4x4 &amp;m, const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)'],['../group___math.html#ga8aac76709334bbb7528a08b5cf7c3261',1,'crown::look(const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)']]],
+  ['lua',['Lua',['../group___lua.html',1,'']]],
   ['lua_5fenvironment',['lua_environment',['../structcrown_1_1_device.html#a8246aa006dce69152886d0b8e93e3a4b',1,'crown::Device']]],
   ['luaenvironment',['LuaEnvironment',['../structcrown_1_1_lua_environment.html',1,'crown']]],
   ['luaresource',['LuaResource',['../structcrown_1_1_lua_resource.html',1,'crown']]],

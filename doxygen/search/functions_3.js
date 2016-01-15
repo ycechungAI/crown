@@ -9,7 +9,7 @@ var searchData=
   ['destroy_5fcamera',['destroy_camera',['../classcrown_1_1_world.html#ac07b357ceebb68330df6f86827eefb83',1,'crown::World']]],
   ['destroy_5fdebug_5fline',['destroy_debug_line',['../classcrown_1_1_world.html#adc63cc0dffebb78c41a36b5f4396fd50',1,'crown::World']]],
   ['destroy_5flight',['destroy_light',['../classcrown_1_1_render_world.html#a1eb828b11ea54fc56c96a49a5d8a7741',1,'crown::RenderWorld']]],
-  ['destroy_5fmaterial',['destroy_material',['../structcrown_1_1_material_manager.html#a89361a98a3905cd8ae436fae8adc0f94',1,'crown::MaterialManager']]],
+  ['destroy_5fmaterial',['destroy_material',['../classcrown_1_1_material_manager.html#a89361a98a3905cd8ae436fae8adc0f94',1,'crown::MaterialManager']]],
   ['destroy_5fmesh',['destroy_mesh',['../classcrown_1_1_render_world.html#a488539603071da8019d76b4ca1826a1c',1,'crown::RenderWorld']]],
   ['destroy_5fresource_5fpackage',['destroy_resource_package',['../structcrown_1_1_device.html#ae09c348ff702ee8e3c158f8acfab3994',1,'crown::Device']]],
   ['destroy_5fsprite',['destroy_sprite',['../classcrown_1_1_render_world.html#ac8d3e596201b325a2d6ce300f7fca23d',1,'crown::RenderWorld']]],
