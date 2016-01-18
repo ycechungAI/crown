@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lua',['Lua',['../group___lua.html',1,'']]]
+  ['profiler',['Profiler',['../group___profiler.html',1,'']]]
 ];

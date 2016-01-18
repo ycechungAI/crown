@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['default_5falign',['DEFAULT_ALIGN',['../classcrown_1_1_allocator.html#ad81573190e2c6c1c2a14589b81885cd4',1,'crown::Allocator']]]
+  ['actor_5fclass',['actor_class',['../structcrown_1_1_actor_resource.html#a01da7fa26054bb4734c6811a6290ef76',1,'crown::ActorResource']]]
 ];

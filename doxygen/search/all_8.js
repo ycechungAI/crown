@@ -1,6 +1,7 @@
 var searchData=
 [
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a02d6ed555ce025f862ca69fb3604a2c9',1,'crown::queue']]],
+  ['indexdata',['IndexData',['../structcrown_1_1_index_data.html',1,'crown']]],
   ['init',['init',['../structcrown_1_1_device.html#afa779586591964f8cb126087cea0682d',1,'crown::Device::init()'],['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#af7b50d42374b9ebb8010602192ad6ef1',1,'crown::physics_globals::init()']]],
   ['input',['Input',['../group___input.html',1,'']]],
   ['input_5fmanager',['input_manager',['../structcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],

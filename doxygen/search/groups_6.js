@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['json',['JSON',['../group___j_s_o_n.html',1,'']]]
+  ['math',['Math',['../group___math.html',1,'']]],
+  ['memory',['Memory',['../group___memory.html',1,'']]]
 ];

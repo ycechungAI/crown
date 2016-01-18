@@ -79,11 +79,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structcrown_1_1_debug_line-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::DebugLine Struct Reference<div class="ingroups"><a class="el" href="group___graphics.html">Graphics</a></div></div>  </div>
+<div class="title">crown::DebugLine Struct Reference<div class="ingroups"><a class="el" href="group___world.html">World</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -92,12 +92,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="debug__line_8h_source.html">debug_line.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a85e4a2780bd5c0c87cf40893074704ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85e4a2780bd5c0c87cf40893074704ee"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>MARKER</b> = 0xd7c17715
- }</td></tr>
-<tr class="separator:a85e4a2780bd5c0c87cf40893074704ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3dfed75a8fbf782c589c22d308cd96da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3dfed75a8fbf782c589c22d308cd96da"></a>
@@ -112,18 +106,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#ae39f4e9ec06099aaef65e4727bcce4b7">add_axes</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;m, float length=1.0f)</td></tr>
 <tr class="memdesc:ae39f4e9ec06099aaef65e4727bcce4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds lines for each axis with the given <em>length</em>. <br /></td></tr>
 <tr class="separator:ae39f4e9ec06099aaef65e4727bcce4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc666a6fa7f54bd2f74423ca1b1ff923"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc666a6fa7f54bd2f74423ca1b1ff923"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#adc666a6fa7f54bd2f74423ca1b1ff923">add_circle</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;center, float radius, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;normal, const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;color, uint32_t segments=36)</td></tr>
-<tr class="memdesc:adc666a6fa7f54bd2f74423ca1b1ff923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a circle at <em>center</em> with the given <em>radius</em> and <em>normal</em> vector. <br /></td></tr>
-<tr class="separator:adc666a6fa7f54bd2f74423ca1b1ff923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a236f23c6936caf4ac2b6dc1928eaf79c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a236f23c6936caf4ac2b6dc1928eaf79c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#a236f23c6936caf4ac2b6dc1928eaf79c">add_cone</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;to, float radius, const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;color, uint32_t segments=36)</td></tr>
-<tr class="memdesc:a236f23c6936caf4ac2b6dc1928eaf79c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cone with the base centered at <em>from</em> and the tip at <em>to</em>. <br /></td></tr>
-<tr class="separator:a236f23c6936caf4ac2b6dc1928eaf79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a35524cb9b4b7db0aa00f7fe091f1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9a35524cb9b4b7db0aa00f7fe091f1a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#af9a35524cb9b4b7db0aa00f7fe091f1a">add_sphere</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;center, const float radius, const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;color, uint32_t segments=36)</td></tr>
-<tr class="memdesc:af9a35524cb9b4b7db0aa00f7fe091f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a sphere at <em>center</em> with the given <em>radius</em> and <em>color</em>. <br /></td></tr>
-<tr class="separator:af9a35524cb9b4b7db0aa00f7fe091f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d14b4dcee80f6c56ed786ca0a7526b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07d14b4dcee80f6c56ed786ca0a7526b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#a07d14b4dcee80f6c56ed786ca0a7526b">add_circle</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;center, float radius, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;normal, const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;color, uint32_t segments=<a class="el" href="structcrown_1_1_debug_line.html#aac926dad78a94d8afcb18da63e14a1e0">NUM_SEGMENTS</a>)</td></tr>
+<tr class="memdesc:a07d14b4dcee80f6c56ed786ca0a7526b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a circle at <em>center</em> with the given <em>radius</em> and <em>normal</em> vector. <br /></td></tr>
+<tr class="separator:a07d14b4dcee80f6c56ed786ca0a7526b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3df9c1ed7abe817e226a8208d78e58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c3df9c1ed7abe817e226a8208d78e58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#a7c3df9c1ed7abe817e226a8208d78e58">add_cone</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;to, float radius, const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;color, uint32_t segments=<a class="el" href="structcrown_1_1_debug_line.html#aac926dad78a94d8afcb18da63e14a1e0">NUM_SEGMENTS</a>)</td></tr>
+<tr class="memdesc:a7c3df9c1ed7abe817e226a8208d78e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cone with the base centered at <em>from</em> and the tip at <em>to</em>. <br /></td></tr>
+<tr class="separator:a7c3df9c1ed7abe817e226a8208d78e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af331f4e3b8b0a5cba29233d1afe043db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af331f4e3b8b0a5cba29233d1afe043db"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#af331f4e3b8b0a5cba29233d1afe043db">add_sphere</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;center, const float radius, const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;color, uint32_t segments=<a class="el" href="structcrown_1_1_debug_line.html#aac926dad78a94d8afcb18da63e14a1e0">NUM_SEGMENTS</a>)</td></tr>
+<tr class="memdesc:af331f4e3b8b0a5cba29233d1afe043db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a sphere at <em>center</em> with the given <em>radius</em> and <em>color</em>. <br /></td></tr>
+<tr class="separator:af331f4e3b8b0a5cba29233d1afe043db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29d500c765de6529d1285a77a68064d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#a29d500c765de6529d1285a77a68064d9">add_obb</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tm, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;half_extents, const <a class="el" href="structcrown_1_1_vector4.html">Color4</a> &amp;color)</td></tr>
 <tr class="memdesc:a29d500c765de6529d1285a77a68064d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an orientd bounding box.  <a href="#a29d500c765de6529d1285a77a68064d9">More...</a><br /></td></tr>
 <tr class="separator:a29d500c765de6529d1285a77a68064d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +129,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#aeb338a656490c118533ece64a3887bd8">submit</a> ()</td></tr>
 <tr class="memdesc:aeb338a656490c118533ece64a3887bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits the lines to renderer for drawing. <br /></td></tr>
 <tr class="separator:aeb338a656490c118533ece64a3887bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aac926dad78a94d8afcb18da63e14a1e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac926dad78a94d8afcb18da63e14a1e0"></a>
+static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_debug_line.html#aac926dad78a94d8afcb18da63e14a1e0">NUM_SEGMENTS</a> = 36</td></tr>
+<tr class="memdesc:aac926dad78a94d8afcb18da63e14a1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default number of segments. <br /></td></tr>
+<tr class="separator:aac926dad78a94d8afcb18da63e14a1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab00dd307ea8645b101f31281f31e4e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab00dd307ea8645b101f31281f31e4e6"></a>
+static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MARKER</b> = 0xd7c17715</td></tr>
+<tr class="separator:aab00dd307ea8645b101f31281f31e4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Draws lines. </p>
@@ -175,13 +179,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>src/renderers/<a class="el" href="debug__line_8h_source.html">debug_line.h</a></li>
-<li>src/renderers/debug_line.cpp</li>
+<li>src/world/<a class="el" href="debug__line_8h_source.html">debug_line.h</a></li>
+<li>src/world/debug_line.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 15 2016 14:59:16 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 18 2016 12:56:19 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

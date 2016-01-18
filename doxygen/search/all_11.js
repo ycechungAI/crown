@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['radius',['radius',['../namespacecrown_1_1aabb.html#ae9abc39fb5ee70da843bf8d57a038c54',1,'crown::aabb']]],
+  ['radius',['radius',['../structcrown_1_1_controller_desc.html#a3e140a6d82194254ae28c5fe406f083d',1,'crown::ControllerDesc::radius()'],['../namespacecrown_1_1aabb.html#ae9abc39fb5ee70da843bf8d57a038c54',1,'crown::aabb::radius()']]],
   ['random',['Random',['../structcrown_1_1_random.html',1,'crown']]],
   ['random',['Random',['../structcrown_1_1_random.html#ab071d5d65b3e159ee6173408a76799a2',1,'crown::Random']]],
+  ['range',['range',['../structcrown_1_1_light_desc.html#a15a8eee44dc5ceafe66545321b38d446',1,'crown::LightDesc']]],
   ['ray_5fdisc_5fintersection',['ray_disc_intersection',['../group___math.html#ga489ccf29f46559514ca6a66f13a78897',1,'crown']]],
   ['ray_5fobb_5fintersection',['ray_obb_intersection',['../group___math.html#gab594c07f623cd5eec48472e0483a85d7',1,'crown']]],
   ['ray_5fplane_5fintersection',['ray_plane_intersection',['../group___math.html#gaa1b44d4830d2fed61bceae9e974f6211',1,'crown']]],
@@ -31,10 +32,10 @@ var searchData=
   ['resource',['Resource',['../group___resource.html',1,'']]],
   ['resource',['Resource',['../structcrown_1_1_package_resource_1_1_resource.html',1,'crown::PackageResource']]],
   ['resource_5fmanager',['resource_manager',['../structcrown_1_1_device.html#aaf61aaf38128a36942ccb49e1b417300',1,'crown::Device']]],
-  ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html#ac56e552f3417825f8da5ff3c1d26fa2e',1,'crown::ResourceLoader']]],
   ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html',1,'crown']]],
-  ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html',1,'crown']]],
+  ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html#ac56e552f3417825f8da5ff3c1d26fa2e',1,'crown::ResourceLoader']]],
   ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#a3e117a0d3466aa31e8e587783d803aca',1,'crown::ResourceManager']]],
+  ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html',1,'crown']]],
   ['resourcepackage',['ResourcePackage',['../structcrown_1_1_resource_package.html',1,'crown']]],
   ['resourcerequest',['ResourceRequest',['../structcrown_1_1_resource_request.html',1,'crown']]],
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],

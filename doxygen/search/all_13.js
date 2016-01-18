@@ -35,5 +35,5 @@ var searchData=
   ['transforminstance',['TransformInstance',['../structcrown_1_1_transform_instance.html',1,'crown']]],
   ['translation',['translation',['../group___math.html#ga4bd6177e223a00b179b8b914c1c7422c',1,'crown']]],
   ['transpose',['transpose',['../group___math.html#gadc9e5f97d3f63ae101ba0256f1289027',1,'crown::transpose(Matrix3x3 &amp;m)'],['../group___math.html#gaed52a7b5c76ce533d79faf36f9159f52',1,'crown::transpose(Matrix4x4 &amp;m)']]],
-  ['type',['type',['../namespacecrown_1_1json.html#affac38f2f84f04271e05809f9fd5d83f',1,'crown::json::type()'],['../namespacecrown_1_1sjson.html#a9845bfa42084357ada3f0e6959eb0fe0',1,'crown::sjson::type()']]]
+  ['type',['type',['../structcrown_1_1_light_desc.html#ae58a9f826b16fd7e2cf671c06cf6276b',1,'crown::LightDesc::type()'],['../structcrown_1_1_camera_desc.html#a3e0eda1fef6926f215b2bd715ce66cfa',1,'crown::CameraDesc::type()'],['../structcrown_1_1_shape_desc.html#a50ddf18cf32a41ae16141cfc662898b6',1,'crown::ShapeDesc::type()'],['../structcrown_1_1_joint_desc.html#aba729d83e86a0fe69cdc3ee044348e8c',1,'crown::JointDesc::type()'],['../namespacecrown_1_1json.html#affac38f2f84f04271e05809f9fd5d83f',1,'crown::json::type()'],['../namespacecrown_1_1sjson.html#a9845bfa42084357ada3f0e6959eb0fe0',1,'crown::sjson::type()']]]
 ];
