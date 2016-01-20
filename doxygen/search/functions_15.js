@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['value_5ftype',['value_type',['../structcrown_1_1_lua_stack.html#a253e2ed1389b426d4db867e609f560e1',1,'crown::LuaStack']]],
+  ['value_5ftype',['value_type',['../classcrown_1_1_lua_stack.html#a253e2ed1389b426d4db867e609f560e1',1,'crown::LuaStack']]],
   ['vector2',['vector2',['../group___math.html#ga36f7ba48394d1e8c65c0f7b10d9aa1fb',1,'crown']]],
   ['vector3',['vector3',['../group___math.html#ga381cb3323142eb066e99c2a48e71e3c5',1,'crown']]],
   ['vector4',['vector4',['../group___math.html#ga65e01a0603b6e47d6a23bb1392e0487a',1,'crown']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['where',['where',['../structcrown_1_1_physics_collision_event.html#a6323781999548235916ddd4c73571c08',1,'crown::PhysicsCollisionEvent']]]
+  ['visible',['visible',['../structcrown_1_1_mesh_renderer_desc.html#ac7cc6319729a63258484d1b230acca2e',1,'crown::MeshRendererDesc::visible()'],['../structcrown_1_1_sprite_renderer_desc.html#aeeeaa6f138e021d5f55a34ccd6d532a8',1,'crown::SpriteRendererDesc::visible()']]]
 ];

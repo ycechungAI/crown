@@ -2,7 +2,7 @@ var searchData=
 [
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a02d6ed555ce025f862ca69fb3604a2c9',1,'crown::queue']]],
   ['indexdata',['IndexData',['../structcrown_1_1_index_data.html',1,'crown']]],
-  ['init',['init',['../structcrown_1_1_device.html#afa779586591964f8cb126087cea0682d',1,'crown::Device::init()'],['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#af7b50d42374b9ebb8010602192ad6ef1',1,'crown::physics_globals::init()']]],
+  ['init',['init',['../classcrown_1_1_console_server.html#a048855917c5e3c06f89d05b112b7d5ce',1,'crown::ConsoleServer::init()'],['../structcrown_1_1_device.html#afa779586591964f8cb126087cea0682d',1,'crown::Device::init()'],['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#af7b50d42374b9ebb8010602192ad6ef1',1,'crown::physics_globals::init()']]],
   ['input',['Input',['../group___input.html',1,'']]],
   ['input_5fmanager',['input_manager',['../structcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],
   ['inputdevice',['InputDevice',['../structcrown_1_1_input_device.html',1,'crown']]],
@@ -18,14 +18,14 @@ var searchData=
   ['is_5fdynamic',['is_dynamic',['../classcrown_1_1_physics_world.html#a7dca195068620574407def4a7ec1905f',1,'crown::PhysicsWorld']]],
   ['is_5ffile',['is_file',['../classcrown_1_1_disk_filesystem.html#a621d6ea6886e31b2951a4a29b5483812',1,'crown::DiskFilesystem::is_file()'],['../classcrown_1_1_filesystem.html#a5f5cc9a1cab36e7e20b0233d9a884474',1,'crown::Filesystem::is_file()']]],
   ['is_5fkinematic',['is_kinematic',['../classcrown_1_1_physics_world.html#ac0e9ef6ccfaebeac584f79d81bfeaf0a',1,'crown::PhysicsWorld']]],
-  ['is_5fmatrix4x4',['is_matrix4x4',['../structcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053',1,'crown::LuaEnvironment']]],
+  ['is_5fmatrix4x4',['is_matrix4x4',['../classcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053',1,'crown::LuaEnvironment']]],
   ['is_5fnonkinematic',['is_nonkinematic',['../classcrown_1_1_physics_world.html#ae382f6b64f480a7adfe452b244634e24',1,'crown::PhysicsWorld']]],
   ['is_5fplaying',['is_playing',['../classcrown_1_1_sound_world.html#a9c072650bed66bb2802343af954eef96',1,'crown::SoundWorld']]],
-  ['is_5fquaternion',['is_quaternion',['../structcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440',1,'crown::LuaEnvironment']]],
+  ['is_5fquaternion',['is_quaternion',['../classcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440',1,'crown::LuaEnvironment']]],
   ['is_5froot_5fpath',['is_root_path',['../namespacecrown_1_1path.html#aa1ab22d094de2c8773841f7931a9ef8d',1,'crown::path']]],
   ['is_5frunning',['is_running',['../structcrown_1_1_device.html#a47a272de70b847996435d66b152f7608',1,'crown::Device']]],
   ['is_5fsleeping',['is_sleeping',['../classcrown_1_1_physics_world.html#a944580fb755792318b5de66167f1a8a0',1,'crown::PhysicsWorld']]],
   ['is_5fstatic',['is_static',['../classcrown_1_1_physics_world.html#a671a06ac879da730cb1084d6594b6f37',1,'crown::PhysicsWorld']]],
   ['is_5fvalid',['is_valid',['../classcrown_1_1_apk_file.html#a5317e7b8cbb6819df2f138f106d7b4e5',1,'crown::ApkFile::is_valid()'],['../classcrown_1_1_disk_file.html#a264f230e4455fa32385891dc766145cf',1,'crown::DiskFile::is_valid()'],['../classcrown_1_1_file.html#a0b91043cbaf88cddeefd4e12e2841822',1,'crown::File::is_valid()'],['../classcrown_1_1_null_file.html#afa1f5a410008d7ba23393b6865396e67',1,'crown::NullFile::is_valid()']]],
-  ['is_5fvector3',['is_vector3',['../structcrown_1_1_lua_environment.html#a10501619ca797e39d31aa262596ea160',1,'crown::LuaEnvironment']]]
+  ['is_5fvector3',['is_vector3',['../classcrown_1_1_lua_environment.html#a10501619ca797e39d31aa262596ea160',1,'crown::LuaEnvironment']]]
 ];

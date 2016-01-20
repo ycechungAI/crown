@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unit',['unit',['../structcrown_1_1_unit_spawned_event.html#ac985abf3d51c3be14f10d8fe1a6e40db',1,'crown::UnitSpawnedEvent::unit()'],['../structcrown_1_1_unit_destroyed_event.html#a721c5127458e3296ec79401bbc5ef201',1,'crown::UnitDestroyedEvent::unit()']]]
+  ['type',['type',['../structcrown_1_1_light_desc.html#ae58a9f826b16fd7e2cf671c06cf6276b',1,'crown::LightDesc::type()'],['../structcrown_1_1_camera_desc.html#a3e0eda1fef6926f215b2bd715ce66cfa',1,'crown::CameraDesc::type()'],['../structcrown_1_1_shape_desc.html#a50ddf18cf32a41ae16141cfc662898b6',1,'crown::ShapeDesc::type()'],['../structcrown_1_1_joint_desc.html#aba729d83e86a0fe69cdc3ee044348e8c',1,'crown::JointDesc::type()']]]
 ];

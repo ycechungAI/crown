@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c_5fstr',['c_str',['../namespacecrown_1_1string__stream.html#aecf9041eaf7334b2cd1a6bf11ce8d8ac',1,'crown::string_stream']]],
-  ['call_5fglobal',['call_global',['../structcrown_1_1_lua_environment.html#ad45463fea21b10f35814373d639b72ae',1,'crown::LuaEnvironment']]],
+  ['call_5fglobal',['call_global',['../classcrown_1_1_lua_environment.html#ad45463fea21b10f35814373d639b72ae',1,'crown::LuaEnvironment']]],
   ['camera',['camera',['../classcrown_1_1_world.html#aa0d527512e166741e9b3e987f3488c66',1,'crown::World']]],
   ['camera_5faspect',['camera_aspect',['../classcrown_1_1_world.html#a53d0706f74dddcd88672e8c5179ffb5e',1,'crown::World']]],
   ['camera_5ffar_5fclip_5fdistance',['camera_far_clip_distance',['../classcrown_1_1_world.html#a855197112ebb6342f7fe7f041cdaa741',1,'crown::World']]],
@@ -29,7 +29,6 @@ var searchData=
   ['conjugate',['conjugate',['../group___math.html#ga295c42b0881f56c53f0d3b14e282d2b3',1,'crown']]],
   ['connected',['connected',['../structcrown_1_1_input_device.html#afb6497e2fdcb8497cdf1445a3c51d14c',1,'crown::InputDevice']]],
   ['console',['console',['../namespacecrown_1_1console__server__globals.html#a9db7021a3b363465aa6e1f79d3a33666',1,'crown::console_server_globals']]],
-  ['consoleserver',['ConsoleServer',['../classcrown_1_1_console_server.html#a88a53e6294101fd5ad5a4d5bf05bfe63',1,'crown::ConsoleServer']]],
   ['contains_5fpoint',['contains_point',['../namespacecrown_1_1aabb.html#a125ada6a172b5a285e4315b2b7cb08a5',1,'crown::aabb::contains_point()'],['../namespacecrown_1_1frustum.html#aa6506b04d0487bcb98597a929f4c6465',1,'crown::frustum::contains_point()'],['../namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa',1,'crown::sphere::contains_point()']]],
   ['cosine',['cosine',['../group___math.html#gafd2760f440948ed29564825718de1324',1,'crown']]],
   ['count',['count',['../namespacecrown_1_1multi__hash.html#a0ea6c86988bb7ca1c40e89933dfcbafd',1,'crown::multi_hash']]],

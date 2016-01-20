@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['near_5frange',['near_range',['../structcrown_1_1_camera_desc.html#a489fd83745e770c33e64f75d9287b113',1,'crown::CameraDesc']]],
-  ['normal',['normal',['../structcrown_1_1_raycast_hit.html#a668fe3687724e0ed1b5dd3ba88386e30',1,'crown::RaycastHit::normal()'],['../structcrown_1_1_physics_collision_event.html#aef9b29a23af38dd8d3b72f2a68eb5faf',1,'crown::PhysicsCollisionEvent::normal()']]],
-  ['num_5fsegments',['NUM_SEGMENTS',['../structcrown_1_1_debug_line.html#aac926dad78a94d8afcb18da63e14a1e0',1,'crown::DebugLine']]]
+  ['mass',['mass',['../structcrown_1_1_actor_resource.html#af4fadddc9088061e318184203c6e4fd2',1,'crown::ActorResource']]],
+  ['material',['material',['../structcrown_1_1_shape_desc.html#a42825be9e9228fe8281cae7d6c337896',1,'crown::ShapeDesc']]],
+  ['material_5fresource',['material_resource',['../structcrown_1_1_mesh_renderer_desc.html#a47a0f7ced2a4f1aa6b473aab2ff65f90',1,'crown::MeshRendererDesc::material_resource()'],['../structcrown_1_1_sprite_renderer_desc.html#a22766e349b922b1a3937cf662b85ef3e',1,'crown::SpriteRendererDesc::material_resource()']]],
+  ['mesh_5fresource',['mesh_resource',['../structcrown_1_1_mesh_renderer_desc.html#a27b018d0dd5944b4e9ea82730a523f0b',1,'crown::MeshRendererDesc']]]
 ];

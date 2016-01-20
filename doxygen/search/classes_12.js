@@ -3,7 +3,7 @@ var searchData=
   ['scenegraph',['SceneGraph',['../structcrown_1_1_scene_graph.html',1,'crown']]],
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html',1,'crown']]],
   ['semaphore',['Semaphore',['../structcrown_1_1_semaphore.html',1,'crown']]],
-  ['shaderdata',['ShaderData',['../structcrown_1_1_shader_manager_1_1_shader_data.html',1,'crown::ShaderManager']]],
+  ['shaderdata',['ShaderData',['../structcrown_1_1_shader_data.html',1,'crown']]],
   ['shadermanager',['ShaderManager',['../classcrown_1_1_shader_manager.html',1,'crown']]],
   ['shaderresource',['ShaderResource',['../structcrown_1_1_shader_resource.html',1,'crown']]],
   ['shapedesc',['ShapeDesc',['../structcrown_1_1_shape_desc.html',1,'crown']]],
