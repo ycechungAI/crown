@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Crown: crown::ShaderManager::ShaderData Struct Reference</title>
+<title>Crown: crown::CommandLine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,34 +73,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_shader_manager.html">ShaderManager</a></li><li class="navelem"><a class="el" href="structcrown_1_1_shader_manager_1_1_shader_data.html">ShaderData</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_command_line.html">CommandLine</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structcrown_1_1_shader_manager_1_1_shader_data-members.html">List of all members</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classcrown_1_1_command_line-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::ShaderManager::ShaderData Struct Reference</div>  </div>
+<div class="title">crown::CommandLine Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Helper for parsing command line.  
+ <a href="classcrown_1_1_command_line.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="command__line_8h_source.html">command_line.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ab7341b4a6d65a605bcd4e1ed2c626ef4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7341b4a6d65a605bcd4e1ed2c626ef4"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
-<tr class="separator:ab7341b4a6d65a605bcd4e1ed2c626ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01097f24d939624edcd85384b16f2032"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01097f24d939624edcd85384b16f2032"></a>
-bgfx::ProgramHandle&#160;</td><td class="memItemRight" valign="bottom"><b>program</b></td></tr>
-<tr class="separator:a01097f24d939624edcd85384b16f2032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a09a568a99416911060e2b0a0e433549c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09a568a99416911060e2b0a0e433549c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CommandLine</b> (int argc, char **argv)</td></tr>
+<tr class="separator:a09a568a99416911060e2b0a0e433549c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa31939f1d4ff53a840cc9ff0a3c6b0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa31939f1d4ff53a840cc9ff0a3c6b0b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>find_argument</b> (const char *longopt, char shortopt)</td></tr>
+<tr class="separator:aaa31939f1d4ff53a840cc9ff0a3c6b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954fdb0288af21d52479d2b20fc0c286"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a954fdb0288af21d52479d2b20fc0c286"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_shortopt</b> (const char *arg, char shortopt)</td></tr>
+<tr class="separator:a954fdb0288af21d52479d2b20fc0c286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ba486a28c3a7912bb6b5be8e14db33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71ba486a28c3a7912bb6b5be8e14db33"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_longopt</b> (const char *arg, const char *longopt)</td></tr>
+<tr class="separator:a71ba486a28c3a7912bb6b5be8e14db33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c4527f9d2c4d2819f971f20be862d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40c4527f9d2c4d2819f971f20be862d8"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>get_parameter</b> (const char *longopt, char shortopt= '\0')</td></tr>
+<tr class="separator:a40c4527f9d2c4d2819f971f20be862d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c45b22669ac41d71ed772dd49e470cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c45b22669ac41d71ed772dd49e470cf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_argument</b> (const char *longopt, char shortopt= '\0')</td></tr>
+<tr class="separator:a8c45b22669ac41d71ed772dd49e470cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/world/<a class="el" href="shader__manager_8h_source.html">shader_manager.h</a></li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Helper for parsing command line. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>src/core/<a class="el" href="command__line_8h_source.html">command_line.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 19 2016 11:38:57 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 22 2016 22:39:15 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

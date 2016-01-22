@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Crown: crown::DeviceOptions Struct Reference</title>
+<title>Crown: crown::DeviceOptions Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,32 +73,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_device_options.html">DeviceOptions</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_device_options.html">DeviceOptions</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="structcrown_1_1_device_options-members.html">List of all members</a>  </div>
+<a href="classcrown_1_1_device_options-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::DeviceOptions Struct Reference</div>  </div>
+<div class="title">crown::DeviceOptions Class Reference<div class="ingroups"><a class="el" href="group___device.html">Device</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Holds device options.  
+ <a href="classcrown_1_1_device_options.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="device__options_8h_source.html">device_options.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae05f8fc1da285b76deb6861b7f20f75e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae05f8fc1da285b76deb6861b7f20f75e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DeviceOptions</b> (int argc, char **argv)</td></tr>
 <tr class="separator:ae05f8fc1da285b76deb6861b7f20f75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c089953f1fe132e47c0f8991ee17940"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device_options.html#a1c089953f1fe132e47c0f8991ee17940">parse</a> ()</td></tr>
+<tr class="memdesc:a1c089953f1fe132e47c0f8991ee17940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the command line and returns EXIT_SUCCESS if no error is found.  <a href="#a1c089953f1fe132e47c0f8991ee17940">More...</a><br /></td></tr>
+<tr class="separator:a1c089953f1fe132e47c0f8991ee17940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49b0b71c363732fbf8f9e4b8ae4b21d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae49b0b71c363732fbf8f9e4b8ae4b21d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>argc</b> () const </td></tr>
+<tr class="separator:ae49b0b71c363732fbf8f9e4b8ae4b21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2228ee885d70e3d7256479ac3a255dcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2228ee885d70e3d7256479ac3a255dcb"></a>
+const char **&#160;</td><td class="memItemRight" valign="bottom"><b>argv</b> () const </td></tr>
+<tr class="separator:a2228ee885d70e3d7256479ac3a255dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfc14094713b7a5d0847284c7f651ed5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfc14094713b7a5d0847284c7f651ed5"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>source_dir</b> () const </td></tr>
 <tr class="separator:adfc14094713b7a5d0847284c7f651ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83777604b51e4b5c22cb81ff42c1932b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83777604b51e4b5c22cb81ff42c1932b"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>bundle_dir</b> () const </td></tr>
 <tr class="separator:a83777604b51e4b5c22cb81ff42c1932b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a891241c67863c3d659f05274ade622c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a891241c67863c3d659f05274ade622c9"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>project</b> () const </td></tr>
-<tr class="separator:a891241c67863c3d659f05274ade622c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d144f19b57c8b5d93c4d4c247a6c6a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d144f19b57c8b5d93c4d4c247a6c6a5"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>boot_dir</b> () const </td></tr>
+<tr class="separator:a1d144f19b57c8b5d93c4d4c247a6c6a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a395641e0c6269cad918caa73d8fde964"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a395641e0c6269cad918caa73d8fde964"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>platform</b> () const </td></tr>
 <tr class="separator:a395641e0c6269cad918caa73d8fde964"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,14 +144,34 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>window_width</b> 
 uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>window_height</b> () const </td></tr>
 <tr class="separator:a4f7dd732178e2e5a96e4fd8d521e2d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Holds device options. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1c089953f1fe132e47c0f8991ee17940"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crown::DeviceOptions::parse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parses the command line and returns EXIT_SUCCESS if no error is found. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="device__options_8h_source.html">device_options.h</a></li>
 <li>src/device_options.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 20 2016 18:59:43 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 22 2016 22:39:15 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

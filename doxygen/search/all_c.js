@@ -8,7 +8,7 @@ var searchData=
   ['mass',['mass',['../structcrown_1_1_actor_resource.html#af4fadddc9088061e318184203c6e4fd2',1,'crown::ActorResource']]],
   ['material',['material',['../structcrown_1_1_shape_desc.html#a42825be9e9228fe8281cae7d6c337896',1,'crown::ShapeDesc']]],
   ['material',['Material',['../structcrown_1_1_material.html',1,'crown']]],
-  ['material_5fmanager',['material_manager',['../structcrown_1_1_device.html#a5e4fd04e42349af94872ff61ab1bf47b',1,'crown::Device']]],
+  ['material_5fmanager',['material_manager',['../classcrown_1_1_device.html#a5e4fd04e42349af94872ff61ab1bf47b',1,'crown::Device']]],
   ['material_5fresource',['material_resource',['../structcrown_1_1_mesh_renderer_desc.html#a47a0f7ced2a4f1aa6b473aab2ff65f90',1,'crown::MeshRendererDesc::material_resource()'],['../structcrown_1_1_sprite_renderer_desc.html#a22766e349b922b1a3937cf662b85ef3e',1,'crown::SpriteRendererDesc::material_resource()']]],
   ['materialmanager',['MaterialManager',['../classcrown_1_1_material_manager.html',1,'crown']]],
   ['materialresource',['MaterialResource',['../structcrown_1_1_material_resource.html',1,'crown']]],

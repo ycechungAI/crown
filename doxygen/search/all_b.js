@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['last_5fdelta_5ftime',['last_delta_time',['../structcrown_1_1_device.html#afc5cdb1f3941883c768f738c5931a55b',1,'crown::Device']]],
+  ['last_5fdelta_5ftime',['last_delta_time',['../classcrown_1_1_device.html#afc5cdb1f3941883c768f738c5931a55b',1,'crown::Device']]],
   ['last_5fmodified_5ftime',['last_modified_time',['../classcrown_1_1_disk_filesystem.html#a611507f296fe4e8bbef67a96b0187e61',1,'crown::DiskFilesystem::last_modified_time()'],['../classcrown_1_1_filesystem.html#a53d4e31cef11a24c7ac386eb66d70767',1,'crown::Filesystem::last_modified_time()']]],
   ['leave_5fprofile_5fscope',['leave_profile_scope',['../namespacecrown_1_1profiler.html#a50e52e1cabd46da042dd3f125545f2f8',1,'crown::profiler']]],
   ['leaveprofilescope',['LeaveProfileScope',['../structcrown_1_1_leave_profile_scope.html',1,'crown']]],
@@ -38,7 +38,7 @@ var searchData=
   ['logseverity',['LogSeverity',['../structcrown_1_1_log_severity.html',1,'crown']]],
   ['look',['look',['../group___math.html#ga40b84e237af5771786011fd2cb64135c',1,'crown::look(Matrix4x4 &amp;m, const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)'],['../group___math.html#ga8aac76709334bbb7528a08b5cf7c3261',1,'crown::look(const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)']]],
   ['lua',['Lua',['../group___lua.html',1,'']]],
-  ['lua_5fenvironment',['lua_environment',['../structcrown_1_1_device.html#a8246aa006dce69152886d0b8e93e3a4b',1,'crown::Device']]],
+  ['lua_5fenvironment',['lua_environment',['../classcrown_1_1_device.html#a8246aa006dce69152886d0b8e93e3a4b',1,'crown::Device']]],
   ['luaenvironment',['LuaEnvironment',['../classcrown_1_1_lua_environment.html',1,'crown']]],
   ['luaresource',['LuaResource',['../structcrown_1_1_lua_resource.html',1,'crown']]],
   ['luastack',['LuaStack',['../classcrown_1_1_lua_stack.html',1,'crown']]]

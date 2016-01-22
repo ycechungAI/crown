@@ -18,7 +18,7 @@ var searchData=
   ['fontresource',['FontResource',['../structcrown_1_1_font_resource.html',1,'crown']]],
   ['forward',['forward',['../group___math.html#gab505715176e1ac1985e7092af7d1d6d2',1,'crown']]],
   ['fov',['fov',['../structcrown_1_1_camera_desc.html#ab531391a294b7a8a472d903320d7d8bb',1,'crown::CameraDesc']]],
-  ['frame_5fcount',['frame_count',['../structcrown_1_1_device.html#af9bc205a7cc669230bece1e8e8073c52',1,'crown::Device']]],
+  ['frame_5fcount',['frame_count',['../classcrown_1_1_device.html#af9bc205a7cc669230bece1e8e8073c52',1,'crown::Device']]],
   ['from_5fmatrix',['from_matrix',['../namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6',1,'crown::frustum']]],
   ['from_5fpoint_5fand_5fnormal',['from_point_and_normal',['../namespacecrown_1_1plane.html#a517c3e04ebdaa9202b345367be57961f',1,'crown::plane']]],
   ['from_5frgb',['from_rgb',['../group___math.html#ga178a006b8c96d21e5f4c41be01e7ebf0',1,'crown']]],

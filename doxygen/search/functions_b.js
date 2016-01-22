@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['last_5fdelta_5ftime',['last_delta_time',['../structcrown_1_1_device.html#afc5cdb1f3941883c768f738c5931a55b',1,'crown::Device']]],
+  ['last_5fdelta_5ftime',['last_delta_time',['../classcrown_1_1_device.html#afc5cdb1f3941883c768f738c5931a55b',1,'crown::Device']]],
   ['last_5fmodified_5ftime',['last_modified_time',['../classcrown_1_1_disk_filesystem.html#a611507f296fe4e8bbef67a96b0187e61',1,'crown::DiskFilesystem::last_modified_time()'],['../classcrown_1_1_filesystem.html#a53d4e31cef11a24c7ac386eb66d70767',1,'crown::Filesystem::last_modified_time()']]],
   ['leave_5fprofile_5fscope',['leave_profile_scope',['../namespacecrown_1_1profiler.html#a50e52e1cabd46da042dd3f125545f2f8',1,'crown::profiler']]],
   ['length',['length',['../group___math.html#ga966f45c47ad5ddefc427537d03b7f3a4',1,'crown::length(const Quaternion &amp;q)'],['../group___math.html#ga63f271dbd3752bb82b8d93463f9ca3e0',1,'crown::length(const Vector2 &amp;a)'],['../group___math.html#gafd529871971796570685ee7b66bdd22e',1,'crown::length(const Vector3 &amp;a)'],['../group___math.html#ga5207cc8c1bc06b356fcdf27342262433',1,'crown::length(const Vector4 &amp;a)']]],
@@ -24,5 +24,5 @@ var searchData=
   ['local_5frotation',['local_rotation',['../structcrown_1_1_scene_graph.html#a488c5a199febec3f1b2c0a8795cc5f25',1,'crown::SceneGraph']]],
   ['local_5fscale',['local_scale',['../structcrown_1_1_scene_graph.html#a3ab53d6a09fc7d5bda282c1d1eea97ab',1,'crown::SceneGraph']]],
   ['look',['look',['../group___math.html#ga40b84e237af5771786011fd2cb64135c',1,'crown::look(Matrix4x4 &amp;m, const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)'],['../group___math.html#ga8aac76709334bbb7528a08b5cf7c3261',1,'crown::look(const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)']]],
-  ['lua_5fenvironment',['lua_environment',['../structcrown_1_1_device.html#a8246aa006dce69152886d0b8e93e3a4b',1,'crown::Device']]]
+  ['lua_5fenvironment',['lua_environment',['../classcrown_1_1_device.html#a8246aa006dce69152886d0b8e93e3a4b',1,'crown::Device']]]
 ];

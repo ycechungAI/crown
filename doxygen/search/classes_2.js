@@ -5,7 +5,7 @@ var searchData=
   ['capsuleshape',['CapsuleShape',['../structcrown_1_1_capsule_shape.html',1,'crown']]],
   ['colliderinstance',['ColliderInstance',['../structcrown_1_1_collider_instance.html',1,'crown']]],
   ['collisiongroup',['CollisionGroup',['../structcrown_1_1_collision_group.html',1,'crown']]],
-  ['commandline',['CommandLine',['../structcrown_1_1_command_line.html',1,'crown']]],
+  ['commandline',['CommandLine',['../classcrown_1_1_command_line.html',1,'crown']]],
   ['compareentry',['CompareEntry',['../structcrown_1_1sort__map__internal_1_1_compare_entry.html',1,'crown::sort_map_internal']]],
   ['compileoptions',['CompileOptions',['../structcrown_1_1_compile_options.html',1,'crown']]],
   ['componentdata',['ComponentData',['../structcrown_1_1_component_data.html',1,'crown']]],

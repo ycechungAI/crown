@@ -41,9 +41,9 @@ var searchData=
   ['create_5flight',['create_light',['../classcrown_1_1_render_world.html#a4a393d3cc9bc748bbc717ca8aae4ccb9',1,'crown::RenderWorld']]],
   ['create_5fmaterial',['create_material',['../classcrown_1_1_material_manager.html#a77d2fb39e58b8eb265737c09df9d0901',1,'crown::MaterialManager']]],
   ['create_5fmesh',['create_mesh',['../classcrown_1_1_render_world.html#a0de310ede1b4e6a84ea6de52bd13c9ff',1,'crown::RenderWorld']]],
-  ['create_5fresource_5fpackage',['create_resource_package',['../structcrown_1_1_device.html#a0e6069641781ee8d9b0d722f13e0e23b',1,'crown::Device']]],
+  ['create_5fresource_5fpackage',['create_resource_package',['../classcrown_1_1_device.html#a0e6069641781ee8d9b0d722f13e0e23b',1,'crown::Device']]],
   ['create_5fsprite',['create_sprite',['../classcrown_1_1_render_world.html#a777829e9e829ec67f7370fe8a7d09043',1,'crown::RenderWorld']]],
-  ['create_5fworld',['create_world',['../structcrown_1_1_device.html#a05bf21977aca9128c5f8435cc3235170',1,'crown::Device']]],
+  ['create_5fworld',['create_world',['../classcrown_1_1_device.html#a05bf21977aca9128c5f8435cc3235170',1,'crown::Device']]],
   ['cross',['cross',['../group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f',1,'crown']]],
   ['cubic',['cubic',['../group___math.html#ga85e4a6868db6c8f7dfb1713b180c936a',1,'crown']]]
 ];

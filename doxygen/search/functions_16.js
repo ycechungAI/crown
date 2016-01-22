@@ -1,6 +1,7 @@
 var searchData=
 [
   ['wake_5fup',['wake_up',['../classcrown_1_1_physics_world.html#a423f4c0702c6be5800d6b7ac41646748',1,'crown::PhysicsWorld']]],
+  ['window',['window',['../classcrown_1_1_device.html#a4fae94a286e748df59cf32df4cccce77',1,'crown::Device']]],
   ['world_5fpose',['world_pose',['../structcrown_1_1_scene_graph.html#aac1d5dbf58ad71656ebed0159a4f3c05',1,'crown::SceneGraph']]],
   ['world_5fposition',['world_position',['../structcrown_1_1_scene_graph.html#a41ec9fb7a52e669da50830f058984458',1,'crown::SceneGraph']]],
   ['world_5frotation',['world_rotation',['../structcrown_1_1_scene_graph.html#a91d53e90ee56ae383fa0ab70c7b02dba',1,'crown::SceneGraph']]],
