@@ -32,7 +32,6 @@ var searchData=
   ['architecture',['architecture',['../classcrown_1_1_device.html#a48d83182b610314e9eb4267d3539a9aa',1,'crown::Device']]],
   ['argc',['argc',['../classcrown_1_1_device.html#a660e83de8f547b2886b5ebd473e0357e',1,'crown::Device']]],
   ['argv',['argv',['../classcrown_1_1_device.html#ab1437d6b252194f420182610494cb9ea',1,'crown::Device']]],
-  ['array',['Array',['../structcrown_1_1_array.html#a1200a321fb0104dcb9dfb2a3a0907363',1,'crown::Array']]],
   ['axis',['axis',['../structcrown_1_1_input_device.html#ae224b21b27974302e14c017425110fdc',1,'crown::InputDevice']]],
   ['axis_5fid',['axis_id',['../structcrown_1_1_input_device.html#ae44342fa82329054a6c88b06ad1ab42a',1,'crown::InputDevice']]],
   ['axis_5fname',['axis_name',['../structcrown_1_1_input_device.html#aee1d180e8737212b3daaffd6f743aee4',1,'crown::InputDevice']]]

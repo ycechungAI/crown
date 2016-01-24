@@ -97,15 +97,13 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Array</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
 <tr class="separator:af05aa2752be46d82cd2d0b78667a7f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1200a321fb0104dcb9dfb2a3a0907363"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1200a321fb0104dcb9dfb2a3a0907363"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_array.html#a1200a321fb0104dcb9dfb2a3a0907363">Array</a> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, uint32_t capacity)</td></tr>
-<tr class="memdesc:a1200a321fb0104dcb9dfb2a3a0907363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates capacity * sizeof(T) bytes. <br /></td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Array</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, uint32_t capacity)</td></tr>
 <tr class="separator:a1200a321fb0104dcb9dfb2a3a0907363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb22d6113ed375ce140779815114c7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3eb22d6113ed375ce140779815114c7c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Array</b> (const <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; T &gt; &amp;other)</td></tr>
 <tr class="separator:a3eb22d6113ed375ce140779815114c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ecbe59f1c73a6fdacd756326772a9a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ecbe59f1c73a6fdacd756326772a9a3"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_array.html#a3ecbe59f1c73a6fdacd756326772a9a3">operator[]</a> (uint32_t index)</td></tr>
-<tr class="memdesc:a3ecbe59f1c73a6fdacd756326772a9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structcrown_1_1_random.html" title="Pseudo-random number generator. ">Random</a> access by index. <br /></td></tr>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (uint32_t index)</td></tr>
 <tr class="separator:a3ecbe59f1c73a6fdacd756326772a9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa574b84dd246ddcfde48494fd4e9417"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa574b84dd246ddcfde48494fd4e9417"></a>
 const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (uint32_t index) const </td></tr>
@@ -116,6 +114,9 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a8968c657cec3256eabcb08b670cc8dc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8968c657cec3256eabcb08b670cc8dc3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ALLOCATOR_AWARE</b></td></tr>
+<tr class="separator:a8968c657cec3256eabcb08b670cc8dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a030301d4162a395a73c37fcdc6ae1e1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a030301d4162a395a73c37fcdc6ae1e1c"></a>
 <a class="el" href="classcrown_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_allocator</b></td></tr>
 <tr class="separator:a030301d4162a395a73c37fcdc6ae1e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,9 +129,6 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>_size</b></td></t
 <tr class="memitem:a0f08637c075347ab16674f4312f99f50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f08637c075347ab16674f4312f99f50"></a>
 T *&#160;</td><td class="memItemRight" valign="bottom"><b>_data</b></td></tr>
 <tr class="separator:a0f08637c075347ab16674f4312f99f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8968c657cec3256eabcb08b670cc8dc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8968c657cec3256eabcb08b670cc8dc3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ALLOCATOR_AWARE</b></td></tr>
-<tr class="separator:a8968c657cec3256eabcb08b670cc8dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -145,7 +143,7 @@ struct crown::Array&lt; T &gt;</h3>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 22 2016 22:39:15 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 24 2016 22:32:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

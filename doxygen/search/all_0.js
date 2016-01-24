@@ -42,7 +42,6 @@ var searchData=
   ['architecture',['architecture',['../classcrown_1_1_device.html#a48d83182b610314e9eb4267d3539a9aa',1,'crown::Device']]],
   ['argc',['argc',['../classcrown_1_1_device.html#a660e83de8f547b2886b5ebd473e0357e',1,'crown::Device']]],
   ['argv',['argv',['../classcrown_1_1_device.html#ab1437d6b252194f420182610494cb9ea',1,'crown::Device']]],
-  ['array',['Array',['../structcrown_1_1_array.html#a1200a321fb0104dcb9dfb2a3a0907363',1,'crown::Array']]],
   ['array',['Array',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20camera_20_3e',['Array&lt; Camera &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20char_20_3e',['Array&lt; char &gt;',['../structcrown_1_1_array.html',1,'crown']]],

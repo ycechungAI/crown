@@ -32,7 +32,7 @@ var searchData=
   ['pressed',['pressed',['../structcrown_1_1_input_device.html#ab47474e72ec103a49d2b649b8cccd872',1,'crown::InputDevice']]],
   ['previous_5fmesh',['previous_mesh',['../classcrown_1_1_render_world.html#a7476ed48e12564978d19119e490d0ba7',1,'crown::RenderWorld']]],
   ['previous_5fsprite',['previous_sprite',['../classcrown_1_1_render_world.html#a8a627e36e45a0355c0d1b5fcab99f1a1',1,'crown::RenderWorld']]],
-  ['proxyallocator',['ProxyAllocator',['../classcrown_1_1_proxy_allocator.html#ab05e3a4050473c0101b479d6ab8b903a',1,'crown::ProxyAllocator']]],
+  ['proxyallocator',['ProxyAllocator',['../classcrown_1_1_proxy_allocator.html#aaf3611a873ea1781c432050df656c6a9',1,'crown::ProxyAllocator']]],
   ['push',['push',['../namespacecrown_1_1array.html#a294101d2bd4253b3e0aa06092ae88331',1,'crown::array::push()'],['../namespacecrown_1_1priority__queue.html#af662d97f8a7b3c4cfdf8beeb90a41302',1,'crown::priority_queue::push()'],['../namespacecrown_1_1queue.html#a523499c4e053b90e5cd55c7ffe588dbd',1,'crown::queue::push()'],['../namespacecrown_1_1vector.html#a24bdaefee1e4b323a927a24adebc7a17',1,'crown::vector::push()']]],
   ['push_5factor',['push_actor',['../classcrown_1_1_physics_world.html#a2db2a0e01d5b448044f05ea9ea4dabee',1,'crown::PhysicsWorld']]],
   ['push_5factor_5fat',['push_actor_at',['../classcrown_1_1_physics_world.html#abf74780cfaedfb139009c6e14761f752',1,'crown::PhysicsWorld']]],
