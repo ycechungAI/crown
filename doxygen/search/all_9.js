@@ -4,7 +4,7 @@ var searchData=
   ['jointdesc',['JointDesc',['../structcrown_1_1_joint_desc.html',1,'crown']]],
   ['jointinstance',['JointInstance',['../structcrown_1_1_joint_instance.html',1,'crown']]],
   ['jointtype',['JointType',['../structcrown_1_1_joint_type.html',1,'crown']]],
-  ['joypad',['joypad',['../classcrown_1_1_input_manager.html#a3b2e5bc4c14d0dc6b392e16b5a758a45',1,'crown::InputManager']]],
+  ['joypad',['joypad',['../classcrown_1_1_input_manager.html#ab8d051c2d903689389fa2c7883589f63',1,'crown::InputManager']]],
   ['joypadaxis',['JoypadAxis',['../structcrown_1_1_joypad_axis.html',1,'crown']]],
   ['joypadbutton',['JoypadButton',['../structcrown_1_1_joypad_button.html',1,'crown']]],
   ['json',['JSON',['../group___j_s_o_n.html',1,'']]],

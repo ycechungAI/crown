@@ -93,9 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a93908b48c3e9e599d475850d1c0debb8"><td class="memItemLeft" align="right" valign="top">virtual SoundInstanceId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#a93908b48c3e9e599d475850d1c0debb8">play</a> (const <a class="el" href="structcrown_1_1_sound_resource.html">SoundResource</a> &amp;sr, bool loop, float volume, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
-<tr class="memdesc:a93908b48c3e9e599d475850d1c0debb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the sound <em>sr</em> at the given <em>volume</em> [0 .  <a href="#a93908b48c3e9e599d475850d1c0debb8">More...</a><br /></td></tr>
-<tr class="separator:a93908b48c3e9e599d475850d1c0debb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bdbc08a4db1104a03247f8ce1b14a77"><td class="memItemLeft" align="right" valign="top">virtual SoundInstanceId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#a5bdbc08a4db1104a03247f8ce1b14a77">play</a> (const <a class="el" href="structcrown_1_1_sound_resource.html">SoundResource</a> &amp;sr, bool loop, f32 volume, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
+<tr class="memdesc:a5bdbc08a4db1104a03247f8ce1b14a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the sound <em>sr</em> at the given <em>volume</em> [0 .  <a href="#a5bdbc08a4db1104a03247f8ce1b14a77">More...</a><br /></td></tr>
+<tr class="separator:a5bdbc08a4db1104a03247f8ce1b14a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c7610911f773a246d078affb1792ed0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#a4c7610911f773a246d078affb1792ed0">stop</a> (SoundInstanceId id)=0</td></tr>
 <tr class="memdesc:a4c7610911f773a246d078affb1792ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the sound with the given <em>id</em>.  <a href="#a4c7610911f773a246d078affb1792ed0">More...</a><br /></td></tr>
 <tr class="separator:a4c7610911f773a246d078affb1792ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,18 +115,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3">resume_all</a> ()=0</td></tr>
 <tr class="memdesc:a681baabfd39d69cd9b2bc49d512c2bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resumes all previously paused sounds in the world. <br /></td></tr>
 <tr class="separator:a681baabfd39d69cd9b2bc49d512c2bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd2dc0ecbaacce297e05ee571c556499"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd2dc0ecbaacce297e05ee571c556499"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#abd2dc0ecbaacce297e05ee571c556499">set_sound_positions</a> (uint32_t num, const SoundInstanceId *ids, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *positions)=0</td></tr>
-<tr class="memdesc:abd2dc0ecbaacce297e05ee571c556499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>positions</em> (in world space) of <em>num</em> sound instances <em>ids</em>. <br /></td></tr>
-<tr class="separator:abd2dc0ecbaacce297e05ee571c556499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fb394b83c35df9444aa12e187340537"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fb394b83c35df9444aa12e187340537"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#a2fb394b83c35df9444aa12e187340537">set_sound_ranges</a> (uint32_t num, const SoundInstanceId *ids, const float *ranges)=0</td></tr>
-<tr class="memdesc:a2fb394b83c35df9444aa12e187340537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>ranges</em> (in meters) of <em>num</em> sound instances <em>ids</em>. <br /></td></tr>
-<tr class="separator:a2fb394b83c35df9444aa12e187340537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3c186baa770b933781403683e55d20f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3c186baa770b933781403683e55d20f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#aa3c186baa770b933781403683e55d20f">set_sound_volumes</a> (uint32_t num, const SoundInstanceId *ids, const float *volumes)=0</td></tr>
-<tr class="memdesc:aa3c186baa770b933781403683e55d20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>volumes</em> of <em>num</em> sound instances <em>ids</em>. <br /></td></tr>
-<tr class="separator:aa3c186baa770b933781403683e55d20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110b8612cf318335e7855009517659da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a110b8612cf318335e7855009517659da"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#a110b8612cf318335e7855009517659da">set_sound_positions</a> (u32 num, const SoundInstanceId *ids, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *positions)=0</td></tr>
+<tr class="memdesc:a110b8612cf318335e7855009517659da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>positions</em> (in world space) of <em>num</em> sound instances <em>ids</em>. <br /></td></tr>
+<tr class="separator:a110b8612cf318335e7855009517659da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17eb5844bf0adea3fa3c033496992dcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17eb5844bf0adea3fa3c033496992dcc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#a17eb5844bf0adea3fa3c033496992dcc">set_sound_ranges</a> (u32 num, const SoundInstanceId *ids, const f32 *ranges)=0</td></tr>
+<tr class="memdesc:a17eb5844bf0adea3fa3c033496992dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>ranges</em> (in meters) of <em>num</em> sound instances <em>ids</em>. <br /></td></tr>
+<tr class="separator:a17eb5844bf0adea3fa3c033496992dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ae1e1b4377ea6dc0b05aa56e7291ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5ae1e1b4377ea6dc0b05aa56e7291ff"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_sound_world.html#af5ae1e1b4377ea6dc0b05aa56e7291ff">set_sound_volumes</a> (u32 num, const SoundInstanceId *ids, const f32 *volumes)=0</td></tr>
+<tr class="memdesc:af5ae1e1b4377ea6dc0b05aa56e7291ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>volumes</em> of <em>num</em> sound instances <em>ids</em>. <br /></td></tr>
+<tr class="separator:af5ae1e1b4377ea6dc0b05aa56e7291ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50591d8c56899b899b94537f644571da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50591d8c56899b899b94537f644571da"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>reload_sounds</b> (const <a class="el" href="structcrown_1_1_sound_resource.html">SoundResource</a> &amp;old_sr, const <a class="el" href="structcrown_1_1_sound_resource.html">SoundResource</a> &amp;new_sr)=0</td></tr>
 <tr class="separator:a50591d8c56899b899b94537f644571da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,7 +150,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> (<
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages sound objects in a <a class="el" href="classcrown_1_1_world.html" title="Represents a game world. ">World</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a93908b48c3e9e599d475850d1c0debb8"></a>
+<a class="anchor" id="a5bdbc08a4db1104a03247f8ce1b14a77"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -172,7 +172,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> (<
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">f32&#160;</td>
           <td class="paramname"><em>volume</em>, </td>
         </tr>
         <tr>
@@ -232,7 +232,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> (<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 24 2016 22:32:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 30 2016 19:06:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

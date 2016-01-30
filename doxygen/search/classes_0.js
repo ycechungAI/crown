@@ -8,7 +8,6 @@ var searchData=
   ['actortype',['ActorType',['../structcrown_1_1_actor_type.html',1,'crown']]],
   ['allocatememory',['AllocateMemory',['../structcrown_1_1_allocate_memory.html',1,'crown']]],
   ['allocator',['Allocator',['../classcrown_1_1_allocator.html',1,'crown']]],
-  ['apkfile',['ApkFile',['../classcrown_1_1_apk_file.html',1,'crown']]],
   ['array',['Array',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20camera_20_3e',['Array&lt; Camera &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20char_20_3e',['Array&lt; char &gt;',['../structcrown_1_1_array.html',1,'crown']]],
@@ -25,9 +24,9 @@ var searchData=
   ['array_3c_20crown_3a_3aunitid_20_3e',['Array&lt; crown::UnitId &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3aworld_20_2a_20_3e',['Array&lt; crown::World * &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20destroydata_20_3e',['Array&lt; DestroyData &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['array_3c_20float_20_3e',['Array&lt; float &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['array_3c_20uint16_5ft_20_3e',['Array&lt; uint16_t &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['array_3c_20uint32_5ft_20_3e',['Array&lt; uint32_t &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['array_3c_20uint8_5ft_20_3e',['Array&lt; uint8_t &gt;',['../structcrown_1_1_array.html',1,'crown']]],
+  ['array_3c_20f32_20_3e',['Array&lt; f32 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
+  ['array_3c_20u16_20_3e',['Array&lt; u16 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
+  ['array_3c_20u32_20_3e',['Array&lt; u32 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
+  ['array_3c_20u8_20_3e',['Array&lt; u8 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['atomicint',['AtomicInt',['../structcrown_1_1_atomic_int.html',1,'crown']]]
 ];

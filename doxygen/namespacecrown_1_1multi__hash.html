@@ -82,50 +82,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Functions to manipulate <a class="el" href="structcrown_1_1_hash.html" title="Hash from an uint64_t to POD items. ">Hash</a> as a multi-hash.  
+<p>Functions to manipulate <a class="el" href="structcrown_1_1_hash.html" title="Hash from an u64 to POD items. ">Hash</a> as a multi-hash.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5a7ee0968edd6d480c80ad26d13f4a93"><td class="memTemplParams" colspan="2"><a class="anchor" id="a5a7ee0968edd6d480c80ad26d13f4a93"></a>
+<tr class="memitem:a3376706cc097958ce2c8d2dbe097fe9e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3376706cc097958ce2c8d2dbe097fe9e"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5a7ee0968edd6d480c80ad26d13f4a93"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt;::Entry *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a5a7ee0968edd6d480c80ad26d13f4a93">find_first</a> (const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, uint64_t key)</td></tr>
-<tr class="memdesc:a5a7ee0968edd6d480c80ad26d13f4a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the first entry with the specified key. <br /></td></tr>
-<tr class="separator:a5a7ee0968edd6d480c80ad26d13f4a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3376706cc097958ce2c8d2dbe097fe9e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt;::Entry *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a3376706cc097958ce2c8d2dbe097fe9e">find_first</a> (const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, u64 key)</td></tr>
+<tr class="memdesc:a3376706cc097958ce2c8d2dbe097fe9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the first entry with the specified key. <br /></td></tr>
+<tr class="separator:a3376706cc097958ce2c8d2dbe097fe9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4afd634a984b9e288da60894f635361b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a4afd634a984b9e288da60894f635361b"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4afd634a984b9e288da60894f635361b"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt;::Entry *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a4afd634a984b9e288da60894f635361b">find_next</a> (const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, const typename <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt;::Entry *e)</td></tr>
 <tr class="memdesc:a4afd634a984b9e288da60894f635361b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the next entry with the same key as e. <br /></td></tr>
 <tr class="separator:a4afd634a984b9e288da60894f635361b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea6c86988bb7ca1c40e89933dfcbafd"><td class="memTemplParams" colspan="2"><a class="anchor" id="a0ea6c86988bb7ca1c40e89933dfcbafd"></a>
+<tr class="memitem:af505ac13f335eb90390bde2194aed8b1"><td class="memTemplParams" colspan="2"><a class="anchor" id="af505ac13f335eb90390bde2194aed8b1"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0ea6c86988bb7ca1c40e89933dfcbafd"><td class="memTemplItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a0ea6c86988bb7ca1c40e89933dfcbafd">count</a> (const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, uint64_t key)</td></tr>
-<tr class="memdesc:a0ea6c86988bb7ca1c40e89933dfcbafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of entries with the key. <br /></td></tr>
-<tr class="separator:a0ea6c86988bb7ca1c40e89933dfcbafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac15758e9a77ab50b53952dbc8678f12"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aac15758e9a77ab50b53952dbc8678f12"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#aac15758e9a77ab50b53952dbc8678f12">get</a> (const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, uint64_t key, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; T &gt; &amp;items)</td></tr>
-<tr class="memdesc:aac15758e9a77ab50b53952dbc8678f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all the entries with the specified key.  <a href="#aac15758e9a77ab50b53952dbc8678f12">More...</a><br /></td></tr>
-<tr class="separator:aac15758e9a77ab50b53952dbc8678f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29aa9a88be7b442ba44d1a1d9719008b"><td class="memTemplParams" colspan="2"><a class="anchor" id="a29aa9a88be7b442ba44d1a1d9719008b"></a>
+<tr class="memitem:af505ac13f335eb90390bde2194aed8b1"><td class="memTemplItemLeft" align="right" valign="top">u32&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#af505ac13f335eb90390bde2194aed8b1">count</a> (const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, u64 key)</td></tr>
+<tr class="memdesc:af505ac13f335eb90390bde2194aed8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of entries with the key. <br /></td></tr>
+<tr class="separator:af505ac13f335eb90390bde2194aed8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44768b66c9af214aaf89a1674e892cb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae44768b66c9af214aaf89a1674e892cb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#ae44768b66c9af214aaf89a1674e892cb">get</a> (const <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, u64 key, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; T &gt; &amp;items)</td></tr>
+<tr class="memdesc:ae44768b66c9af214aaf89a1674e892cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all the entries with the specified key.  <a href="#ae44768b66c9af214aaf89a1674e892cb">More...</a><br /></td></tr>
+<tr class="separator:ae44768b66c9af214aaf89a1674e892cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a93c0d8de7756c6fce671909aad78d9"><td class="memTemplParams" colspan="2"><a class="anchor" id="a1a93c0d8de7756c6fce671909aad78d9"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a29aa9a88be7b442ba44d1a1d9719008b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a29aa9a88be7b442ba44d1a1d9719008b">insert</a> (<a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, uint64_t key, const T &amp;value)</td></tr>
-<tr class="memdesc:a29aa9a88be7b442ba44d1a1d9719008b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts the value as an aditional value for the key. <br /></td></tr>
-<tr class="separator:a29aa9a88be7b442ba44d1a1d9719008b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a93c0d8de7756c6fce671909aad78d9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a1a93c0d8de7756c6fce671909aad78d9">insert</a> (<a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, u64 key, const T &amp;value)</td></tr>
+<tr class="memdesc:a1a93c0d8de7756c6fce671909aad78d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts the value as an aditional value for the key. <br /></td></tr>
+<tr class="separator:a1a93c0d8de7756c6fce671909aad78d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af085a52d9537ba8b3f2990567be294a6"><td class="memTemplParams" colspan="2"><a class="anchor" id="af085a52d9537ba8b3f2990567be294a6"></a>
 template&lt;typename T &gt; </td></tr>
 <tr class="memitem:af085a52d9537ba8b3f2990567be294a6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#af085a52d9537ba8b3f2990567be294a6">remove</a> (<a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, const typename <a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt;::Entry *e)</td></tr>
 <tr class="memdesc:af085a52d9537ba8b3f2990567be294a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the specified entry. <br /></td></tr>
 <tr class="separator:af085a52d9537ba8b3f2990567be294a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2045f9bd62c7dcbc51b418cb1e673000"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2045f9bd62c7dcbc51b418cb1e673000"></a>
+<tr class="memitem:a9956741fda9f23716775821dc1c12d4e"><td class="memTemplParams" colspan="2"><a class="anchor" id="a9956741fda9f23716775821dc1c12d4e"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a2045f9bd62c7dcbc51b418cb1e673000"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a2045f9bd62c7dcbc51b418cb1e673000">remove_all</a> (<a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, uint64_t key)</td></tr>
-<tr class="memdesc:a2045f9bd62c7dcbc51b418cb1e673000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all entries with the specified key. <br /></td></tr>
-<tr class="separator:a2045f9bd62c7dcbc51b418cb1e673000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9956741fda9f23716775821dc1c12d4e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1multi__hash.html#a9956741fda9f23716775821dc1c12d4e">remove_all</a> (<a class="el" href="structcrown_1_1_hash.html">Hash</a>&lt; T &gt; &amp;h, u64 key)</td></tr>
+<tr class="memdesc:a9956741fda9f23716775821dc1c12d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all entries with the specified key. <br /></td></tr>
+<tr class="separator:a9956741fda9f23716775821dc1c12d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functions to manipulate <a class="el" href="structcrown_1_1_hash.html" title="Hash from an uint64_t to POD items. ">Hash</a> as a multi-hash. </p>
+<div class="textblock"><p>Functions to manipulate <a class="el" href="structcrown_1_1_hash.html" title="Hash from an u64 to POD items. ">Hash</a> as a multi-hash. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="aac15758e9a77ab50b53952dbc8678f12"></a>
+<a class="anchor" id="ae44768b66c9af214aaf89a1674e892cb"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -140,7 +140,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype">u64&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
@@ -165,7 +165,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 24 2016 22:32:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 30 2016 19:06:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

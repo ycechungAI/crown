@@ -95,38 +95,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a05bbf93690306535c58f731df9763a94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05bbf93690306535c58f731df9763a94"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StackAllocator</b> (char *begin, uint32_t size)</td></tr>
-<tr class="separator:a05bbf93690306535c58f731df9763a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed69bdcee630e36bd5219b27ec8e9f2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_stack_allocator.html#a8ed69bdcee630e36bd5219b27ec8e9f2">allocate</a> (uint32_t size, uint32_t align=<a class="el" href="classcrown_1_1_allocator.html#ad81573190e2c6c1c2a14589b81885cd4">Allocator::DEFAULT_ALIGN</a>)</td></tr>
-<tr class="memdesc:a8ed69bdcee630e36bd5219b27ec8e9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <em>size</em> bytes of memory aligned to the specified <em>align</em> byte and returns a pointer to the first allocated byte.  <a href="#a8ed69bdcee630e36bd5219b27ec8e9f2">More...</a><br /></td></tr>
-<tr class="separator:a8ed69bdcee630e36bd5219b27ec8e9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44baae20832c222113b14db3a49f6c1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44baae20832c222113b14db3a49f6c1c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>StackAllocator</b> (char *begin, u32 size)</td></tr>
+<tr class="separator:a44baae20832c222113b14db3a49f6c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa883ef09ddda733127fe1bdbcdfff8be"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_stack_allocator.html#aa883ef09ddda733127fe1bdbcdfff8be">allocate</a> (u32 size, u32 align=<a class="el" href="classcrown_1_1_allocator.html#a483b4059b1bfbf1581532b6f0d3a9df1">Allocator::DEFAULT_ALIGN</a>)</td></tr>
+<tr class="memdesc:aa883ef09ddda733127fe1bdbcdfff8be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <em>size</em> bytes of memory aligned to the specified <em>align</em> byte and returns a pointer to the first allocated byte.  <a href="#aa883ef09ddda733127fe1bdbcdfff8be">More...</a><br /></td></tr>
+<tr class="separator:aa883ef09ddda733127fe1bdbcdfff8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75886a62b1aa559dca3cce7566335d49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_stack_allocator.html#a75886a62b1aa559dca3cce7566335d49">deallocate</a> (void *data)</td></tr>
 <tr class="memdesc:a75886a62b1aa559dca3cce7566335d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocates a previously allocated block of memory pointed by <em>data</em>.  <a href="#a75886a62b1aa559dca3cce7566335d49">More...</a><br /></td></tr>
 <tr class="separator:a75886a62b1aa559dca3cce7566335d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96313078f7cd55522d04b2f65b678aff"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_stack_allocator.html#a96313078f7cd55522d04b2f65b678aff">allocated_size</a> (const void *)</td></tr>
-<tr class="memdesc:a96313078f7cd55522d04b2f65b678aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the memory block pointed by <em>ptr</em> or SIZE_NOT_TRACKED if the allocator does not support memory tracking.  <a href="#a96313078f7cd55522d04b2f65b678aff">More...</a><br /></td></tr>
-<tr class="separator:a96313078f7cd55522d04b2f65b678aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab33bafb2d6fcb4e9591eee889395d748"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_stack_allocator.html#ab33bafb2d6fcb4e9591eee889395d748">total_allocated</a> ()</td></tr>
-<tr class="memdesc:ab33bafb2d6fcb4e9591eee889395d748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of bytes allocated.  <a href="#ab33bafb2d6fcb4e9591eee889395d748">More...</a><br /></td></tr>
-<tr class="separator:ab33bafb2d6fcb4e9591eee889395d748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb99c514cc210844ea743dee8ad28d6"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_stack_allocator.html#a7bb99c514cc210844ea743dee8ad28d6">allocated_size</a> (const void *)</td></tr>
+<tr class="memdesc:a7bb99c514cc210844ea743dee8ad28d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the memory block pointed by <em>ptr</em> or SIZE_NOT_TRACKED if the allocator does not support memory tracking.  <a href="#a7bb99c514cc210844ea743dee8ad28d6">More...</a><br /></td></tr>
+<tr class="separator:a7bb99c514cc210844ea743dee8ad28d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92ea02c634f145ad4cc9dff997c0351"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_stack_allocator.html#ad92ea02c634f145ad4cc9dff997c0351">total_allocated</a> ()</td></tr>
+<tr class="memdesc:ad92ea02c634f145ad4cc9dff997c0351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of bytes allocated.  <a href="#ad92ea02c634f145ad4cc9dff997c0351">More...</a><br /></td></tr>
+<tr class="separator:ad92ea02c634f145ad4cc9dff997c0351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_attribs_classcrown_1_1_allocator"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classcrown_1_1_allocator')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classcrown_1_1_allocator.html">crown::Allocator</a></td></tr>
-<tr class="memitem:ad81573190e2c6c1c2a14589b81885cd4 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad81573190e2c6c1c2a14589b81885cd4"></a>
-static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_allocator.html#ad81573190e2c6c1c2a14589b81885cd4">DEFAULT_ALIGN</a> = 4</td></tr>
-<tr class="memdesc:ad81573190e2c6c1c2a14589b81885cd4 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default memory alignment in bytes. <br /></td></tr>
-<tr class="separator:ad81573190e2c6c1c2a14589b81885cd4 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78086fc75853bc7e4cc1ea7583fda9f6 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78086fc75853bc7e4cc1ea7583fda9f6"></a>
-static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE_NOT_TRACKED</b> = 0xffffffffu</td></tr>
-<tr class="separator:a78086fc75853bc7e4cc1ea7583fda9f6 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483b4059b1bfbf1581532b6f0d3a9df1 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a483b4059b1bfbf1581532b6f0d3a9df1"></a>
+static const u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_allocator.html#a483b4059b1bfbf1581532b6f0d3a9df1">DEFAULT_ALIGN</a> = 4</td></tr>
+<tr class="memdesc:a483b4059b1bfbf1581532b6f0d3a9df1 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default memory alignment in bytes. <br /></td></tr>
+<tr class="separator:a483b4059b1bfbf1581532b6f0d3a9df1 inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1051e8a2d17d3ef2bfcd958011b81c4f inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1051e8a2d17d3ef2bfcd958011b81c4f"></a>
+static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE_NOT_TRACKED</b> = 0xffffffffu</td></tr>
+<tr class="separator:a1051e8a2d17d3ef2bfcd958011b81c4f inherit pub_static_attribs_classcrown_1_1_allocator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Allocates memory linearly in a stack-like fashion from a predefined chunk. </p>
 <p>All deallocations must occur in LIFO order. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8ed69bdcee630e36bd5219b27ec8e9f2"></a>
+<a class="anchor" id="aa883ef09ddda733127fe1bdbcdfff8be"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -136,14 +136,14 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
         <tr>
           <td class="memname">void * crown::StackAllocator::allocate </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">u32&#160;</td>
           <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>align</em> = <code><a class="el" href="classcrown_1_1_allocator.html#ad81573190e2c6c1c2a14589b81885cd4">Allocator::DEFAULT_ALIGN</a></code>&#160;</td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>align</em> = <code><a class="el" href="classcrown_1_1_allocator.html#a483b4059b1bfbf1581532b6f0d3a9df1">Allocator::DEFAULT_ALIGN</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -160,7 +160,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
 
 <p>Allocates <em>size</em> bytes of memory aligned to the specified <em>align</em> byte and returns a pointer to the first allocated byte. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_allocator.html#aa9420cdb24650268bdbb5430fbad1c7d">crown::Allocator</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_allocator.html#ac96c267f0558b8b460d5a2663fb6e8e9">crown::Allocator</a>.</p>
 
 </div>
 </div>
@@ -193,7 +193,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
 
 </div>
 </div>
-<a class="anchor" id="a96313078f7cd55522d04b2f65b678aff"></a>
+<a class="anchor" id="a7bb99c514cc210844ea743dee8ad28d6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -201,7 +201,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t crown::StackAllocator::allocated_size </td>
+          <td class="memname">u32 crown::StackAllocator::allocated_size </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -216,13 +216,13 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
 </div><div class="memdoc">
 
 <p>Returns the size of the memory block pointed by <em>ptr</em> or SIZE_NOT_TRACKED if the allocator does not support memory tracking. </p>
-<p><em>ptr</em> must be a pointer returned by <a class="el" href="classcrown_1_1_allocator.html#aa9420cdb24650268bdbb5430fbad1c7d" title="Allocates size bytes of memory aligned to the specified align byte and returns a pointer to the first...">Allocator::allocate()</a>. </p>
+<p><em>ptr</em> must be a pointer returned by <a class="el" href="classcrown_1_1_allocator.html#ac96c267f0558b8b460d5a2663fb6e8e9" title="Allocates size bytes of memory aligned to the specified align byte and returns a pointer to the first...">Allocator::allocate()</a>. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_allocator.html#a749e8d9d76f87cdb68183cb8dea0ac89">crown::Allocator</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_allocator.html#abfda6554be8e5a79053d7d2b84c50cb8">crown::Allocator</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab33bafb2d6fcb4e9591eee889395d748"></a>
+<a class="anchor" id="ad92ea02c634f145ad4cc9dff997c0351"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -230,7 +230,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t crown::StackAllocator::total_allocated </td>
+          <td class="memname">u32 crown::StackAllocator::total_allocated </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -245,7 +245,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
 
 <p>Returns the total number of bytes allocated. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_allocator.html#a31611cfd73940c0c8e855e3d66161712">crown::Allocator</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_allocator.html#a84fc840df70e6cb9945eaab3118ca9e4">crown::Allocator</a>.</p>
 
 </div>
 </div>
@@ -256,7 +256,7 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 24 2016 22:32:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 30 2016 19:06:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

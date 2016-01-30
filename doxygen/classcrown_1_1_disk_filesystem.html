@@ -94,12 +94,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a06b0eb9b99c82ade29e380ac4342e4e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a06b0eb9b99c82ade29e380ac4342e4e0">DiskFilesystem</a> ()</td></tr>
-<tr class="memdesc:a06b0eb9b99c82ade29e380ac4342e4e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the current working directory of the engine executable.  <a href="#a06b0eb9b99c82ade29e380ac4342e4e0">More...</a><br /></td></tr>
-<tr class="separator:a06b0eb9b99c82ade29e380ac4342e4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a782ae1bddf68dd1f14f85ac8ed459928"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a782ae1bddf68dd1f14f85ac8ed459928">DiskFilesystem</a> (const char *prefix)</td></tr>
-<tr class="memdesc:a782ae1bddf68dd1f14f85ac8ed459928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the given <em>prefix</em>.  <a href="#a782ae1bddf68dd1f14f85ac8ed459928">More...</a><br /></td></tr>
-<tr class="separator:a782ae1bddf68dd1f14f85ac8ed459928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049b425324bdce2184dd3bb6818bd8d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a049b425324bdce2184dd3bb6818bd8d7">DiskFilesystem</a> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
+<tr class="memdesc:a049b425324bdce2184dd3bb6818bd8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the current working directory of the engine executable.  <a href="#a049b425324bdce2184dd3bb6818bd8d7">More...</a><br /></td></tr>
+<tr class="separator:a049b425324bdce2184dd3bb6818bd8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e16f6feee6773019e854abb24f3180"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a76e16f6feee6773019e854abb24f3180">DiskFilesystem</a> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, const char *prefix)</td></tr>
+<tr class="memdesc:a76e16f6feee6773019e854abb24f3180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the given <em>prefix</em>.  <a href="#a76e16f6feee6773019e854abb24f3180">More...</a><br /></td></tr>
+<tr class="separator:a76e16f6feee6773019e854abb24f3180"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf1a1f31422e22f67d05f874fb5a700e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrown_1_1_file.html">File</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#aaf1a1f31422e22f67d05f874fb5a700e">open</a> (const char *path, FileOpenMode::Enum mode)</td></tr>
 <tr class="memdesc:aaf1a1f31422e22f67d05f874fb5a700e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file at the given <em>path</em> with the given <em>mode</em>.  <a href="#aaf1a1f31422e22f67d05f874fb5a700e">More...</a><br /></td></tr>
 <tr class="separator:aaf1a1f31422e22f67d05f874fb5a700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,9 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a621d6ea6886e31b2951a4a29b5483812"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a621d6ea6886e31b2951a4a29b5483812">is_file</a> (const char *path)</td></tr>
 <tr class="memdesc:a621d6ea6886e31b2951a4a29b5483812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <em>path</em> is a regular file.  <a href="#a621d6ea6886e31b2951a4a29b5483812">More...</a><br /></td></tr>
 <tr class="separator:a621d6ea6886e31b2951a4a29b5483812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a611507f296fe4e8bbef67a96b0187e61"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a611507f296fe4e8bbef67a96b0187e61">last_modified_time</a> (const char *path)</td></tr>
-<tr class="memdesc:a611507f296fe4e8bbef67a96b0187e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time of last modify operaton to <em>path</em>.  <a href="#a611507f296fe4e8bbef67a96b0187e61">More...</a><br /></td></tr>
-<tr class="separator:a611507f296fe4e8bbef67a96b0187e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3df7e81f5b2b285694adb1cdeefe15b"><td class="memItemLeft" align="right" valign="top">u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#ae3df7e81f5b2b285694adb1cdeefe15b">last_modified_time</a> (const char *path)</td></tr>
+<tr class="memdesc:ae3df7e81f5b2b285694adb1cdeefe15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time of last modify operaton to <em>path</em>.  <a href="#ae3df7e81f5b2b285694adb1cdeefe15b">More...</a><br /></td></tr>
+<tr class="separator:ae3df7e81f5b2b285694adb1cdeefe15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb4e3dda5ce8a0bc1c9f126eb3e7f3c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#adb4e3dda5ce8a0bc1c9f126eb3e7f3c5">create_directory</a> (const char *path)</td></tr>
 <tr class="memdesc:adb4e3dda5ce8a0bc1c9f126eb3e7f3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the directory at the given <em>path</em>.  <a href="#adb4e3dda5ce8a0bc1c9f126eb3e7f3c5">More...</a><br /></td></tr>
 <tr class="separator:adb4e3dda5ce8a0bc1c9f126eb3e7f3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,14 +141,15 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Access files on disk. </p>
 <p>All the file paths can be either relative or absolute. When a relative path is given, it is automatically translated to its absolute counterpart based on the file source's root path. Accessing files using absolute path directly is also possible, but platform-specific and thus generally not recommended. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a06b0eb9b99c82ade29e380ac4342e4e0"></a>
+<a class="anchor" id="a049b425324bdce2184dd3bb6818bd8d7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">crown::DiskFilesystem::DiskFilesystem </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -158,16 +159,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a782ae1bddf68dd1f14f85ac8ed459928"></a>
+<a class="anchor" id="a76e16f6feee6773019e854abb24f3180"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">crown::DiskFilesystem::DiskFilesystem </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>prefix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -328,7 +339,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a611507f296fe4e8bbef67a96b0187e61"></a>
+<a class="anchor" id="ae3df7e81f5b2b285694adb1cdeefe15b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -336,7 +347,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t crown::DiskFilesystem::last_modified_time </td>
+          <td class="memname">u64 crown::DiskFilesystem::last_modified_time </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -352,7 +363,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the time of last modify operaton to <em>path</em>. </p>
 
-<p>Implements <a class="el" href="classcrown_1_1_filesystem.html#a53d4e31cef11a24c7ac386eb66d70767">crown::Filesystem</a>.</p>
+<p>Implements <a class="el" href="classcrown_1_1_filesystem.html#ae8f30341292298ddcd5d6a7697cb0dea">crown::Filesystem</a>.</p>
 
 </div>
 </div>
@@ -552,7 +563,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 24 2016 22:32:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 30 2016 19:06:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Circular buffer double-ended queue of POD items.  
+<p>Circular buffer f64-ended queue of POD items.  
  <a href="structcrown_1_1_queue.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="container__types_8h_source.html">container_types.h</a>&gt;</code></p>
@@ -96,24 +96,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a1780232f0b32050c2d1e5dadfd48c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a1780232f0b32050c2d1e5dadfd48c1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Queue</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
 <tr class="separator:a1a1780232f0b32050c2d1e5dadfd48c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77bca896819908259f3d1605ebb70076"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77bca896819908259f3d1605ebb70076"></a>
-T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (uint32_t index)</td></tr>
-<tr class="separator:a77bca896819908259f3d1605ebb70076"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfd1d8f8a63a25107d1d87d16fbe9621"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfd1d8f8a63a25107d1d87d16fbe9621"></a>
-const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (uint32_t index) const </td></tr>
-<tr class="separator:acfd1d8f8a63a25107d1d87d16fbe9621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03e834ea80af94f2467d8ee3bb46708"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad03e834ea80af94f2467d8ee3bb46708"></a>
+T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (u32 index)</td></tr>
+<tr class="separator:ad03e834ea80af94f2467d8ee3bb46708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f8095dd8060c10124d9fc7f86708f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58f8095dd8060c10124d9fc7f86708f7"></a>
+const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (u32 index) const </td></tr>
+<tr class="separator:a58f8095dd8060c10124d9fc7f86708f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ae0aa1ad771f8744ce90179336fe55187"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0aa1ad771f8744ce90179336fe55187"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ALLOCATOR_AWARE</b></td></tr>
 <tr class="separator:ae0aa1ad771f8744ce90179336fe55187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56ae83d668198c198558ead06a42d73b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56ae83d668198c198558ead06a42d73b"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>_read</b></td></tr>
-<tr class="separator:a56ae83d668198c198558ead06a42d73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46bfd116ce6555f1713afa8220af8ffa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46bfd116ce6555f1713afa8220af8ffa"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>_size</b></td></tr>
-<tr class="separator:a46bfd116ce6555f1713afa8220af8ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f824c16af8179f25254224ef7c41cb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f824c16af8179f25254224ef7c41cb2"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>_read</b></td></tr>
+<tr class="separator:a3f824c16af8179f25254224ef7c41cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abead264ad2969b537712116cfbd5a107"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abead264ad2969b537712116cfbd5a107"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>_size</b></td></tr>
+<tr class="separator:abead264ad2969b537712116cfbd5a107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d92ec011efa21443e85d047cf62c63"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4d92ec011efa21443e85d047cf62c63"></a>
 <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_queue</b></td></tr>
 <tr class="separator:aa4d92ec011efa21443e85d047cf62c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,7 +122,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>_size</b></td></t
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 struct crown::Queue&lt; T &gt;</h3>
 
-<p>Circular buffer double-ended queue of POD items. </p>
+<p>Circular buffer f64-ended queue of POD items. </p>
 <dl class="section note"><dt>Note</dt><dd>Does not call constructors/destructors so it is not very suitable for non-POD items. </dd></dl>
 </div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/core/containers/<a class="el" href="container__types_8h_source.html">container_types.h</a></li>
@@ -131,7 +131,7 @@ struct crown::Queue&lt; T &gt;</h3>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 24 2016 22:32:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 30 2016 19:06:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
