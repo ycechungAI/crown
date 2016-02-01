@@ -721,7 +721,7 @@ that world.</dd>
 <dd>Destroys the given <em>unit</em>.</dd>
 <dt><strong>num_units</strong> (world) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
 <dd>Returns the number of units in the <em>world</em>.</dd>
-<dt><strong>units</strong> (world) <span class="classifier-delimiter">:</span> <span class="classifier">Table</span></dt>
+<dt><strong>units</strong> (world) <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
 <dd>Returns all the the units in the world in a table.</dd>
 <dt><strong>update_animations</strong> (world, dt)</dt>
 <dd>Update all animations with <em>dt</em>.</dd>
@@ -1048,15 +1048,17 @@ instead, you have to poll for completion with has_loaded().</dd>
 <dd>Returns a string identifying what platform the engine is running on.
 It can be either <tt class="docutils literal">android</tt>, <tt class="docutils literal">linux</tt> or <tt class="docutils literal">windows</tt></dd>
 <dt><strong>architecture</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns a string identifying what architecture the engine is running on.</dd>
+<dd>Returns a string identifying what architecture the engine is running on.
+It can be either <tt class="docutils literal"><span class="pre">32-bit</span></tt> or <tt class="docutils literal"><span class="pre">64-bit</span></tt>.</dd>
 <dt><strong>version</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns a string identifying the engine version.</dd>
+<dd>Returns a string identifying the engine version.
+The form is &quot;major.minor.micro&quot;.</dd>
 <dt><strong>last_delta_time</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the time in seconds needed to render the last frame</dd>
 <dt><strong>quit</strong> ()</dt>
 <dd>Quits the application.</dd>
-<dt><strong>resolution</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Table</span></dt>
-<dd>Returns the main window resolution.</dd>
+<dt><strong>resolution</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">float, float</span></dt>
+<dd>Returns the main window resolution (width, height).</dd>
 <dt><strong>create_world</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">World</span></dt>
 <dd>Creates a new world.</dd>
 <dt><strong>destroy_world</strong> (world)</dt>

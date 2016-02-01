@@ -3,6 +3,7 @@ var searchData=
   ['map',['Map',['../structcrown_1_1_map.html',1,'crown']]],
   ['map_3c_20crown_3a_3adynamicstring_2c_20bgfxshader_20_3e',['Map&lt; crown::DynamicString, BgfxShader &gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['map_3c_20crown_3a_3adynamicstring_2c_20renderstate_20_3e',['Map&lt; crown::DynamicString, RenderState &gt;',['../structcrown_1_1_map.html',1,'crown']]],
+  ['map_3c_20crown_3a_3adynamicstring_2c_20samplerstate_20_3e',['Map&lt; crown::DynamicString, SamplerState &gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['map_3c_20crown_3a_3adynamicstring_2c_20shaderpermutation_20_3e',['Map&lt; crown::DynamicString, ShaderPermutation &gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['map_3c_20crown_3a_3astringid32_2c_20u32_20_3e',['Map&lt; crown::StringId32, u32 &gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['material',['Material',['../structcrown_1_1_material.html',1,'crown']]],
