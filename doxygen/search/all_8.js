@@ -2,7 +2,7 @@ var searchData=
 [
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a211ff1e8f278ddfd69a0bd143547051c',1,'crown::queue']]],
   ['indexdata',['IndexData',['../structcrown_1_1_index_data.html',1,'crown']]],
-  ['init',['init',['../classcrown_1_1_console_server.html#a1c621fa90447a2a0507774cda4946216',1,'crown::ConsoleServer::init()'],['../classcrown_1_1_device.html#afa779586591964f8cb126087cea0682d',1,'crown::Device::init()'],['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#af7b50d42374b9ebb8010602192ad6ef1',1,'crown::physics_globals::init()']]],
+  ['init',['init',['../classcrown_1_1_console_server.html#a1c621fa90447a2a0507774cda4946216',1,'crown::ConsoleServer::init()'],['../classcrown_1_1_device.html#afa779586591964f8cb126087cea0682d',1,'crown::Device::init()'],['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#ad43baed76132fa8f741f13d6982c2868',1,'crown::physics_globals::init()']]],
   ['input',['Input',['../group___input.html',1,'']]],
   ['input_5fmanager',['input_manager',['../classcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],
   ['inputdevice',['InputDevice',['../classcrown_1_1_input_device.html',1,'crown']]],

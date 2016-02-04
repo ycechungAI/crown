@@ -13,7 +13,7 @@ var searchData=
   ['to_5frgb',['to_rgb',['../group___math.html#ga7a427da31a608404c7d0e30e23014bc8',1,'crown']]],
   ['to_5frgba',['to_rgba',['../group___math.html#gafd1d800db48dc014c7835080f8081307',1,'crown']]],
   ['to_5fsphere',['to_sphere',['../namespacecrown_1_1aabb.html#a94dd6e49eb9e306559fa4fc802cc0812',1,'crown::aabb']]],
-  ['to_5fstring_5fid',['to_string_id',['../classcrown_1_1_dynamic_string.html#abd57971e45470d3d046f097cb716392e',1,'crown::DynamicString']]],
+  ['to_5fstring_5fid',['to_string_id',['../structcrown_1_1_dynamic_string.html#abd57971e45470d3d046f097cb716392e',1,'crown::DynamicString']]],
   ['to_5fvector2',['to_vector2',['../group___math.html#ga4d41396043574e06e0228f605c1e5291',1,'crown']]],
   ['to_5fvector3',['to_vector3',['../group___math.html#ga8d7612963bfa947d20c3e587eb7e2119',1,'crown']]],
   ['to_5fvertices',['to_vertices',['../namespacecrown_1_1aabb.html#aeb35560b88c9391d2e9e8163c9a90f05',1,'crown::aabb']]],

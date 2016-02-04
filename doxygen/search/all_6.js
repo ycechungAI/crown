@@ -6,6 +6,7 @@ var searchData=
   ['get_5finverted',['get_inverted',['../group___math.html#ga2b07ef3a6d72871c35dd8d3bb8dbaffb',1,'crown::get_inverted(Matrix3x3 m)'],['../group___math.html#ga978a90980194f410b68083eecd8392f6',1,'crown::get_inverted(Matrix4x4 m)']]],
   ['get_5floaded',['get_loaded',['../classcrown_1_1_resource_loader.html#a243c71b6ac1f4d08d84e3499888d2855',1,'crown::ResourceLoader']]],
   ['get_5ftransposed',['get_transposed',['../group___math.html#ga480af5946b986fd9395d7fb74a9641f4',1,'crown::get_transposed(Matrix3x3 m)'],['../group___math.html#ga7cfc892e0f08adcdfd463e978cf72675',1,'crown::get_transposed(Matrix4x4 m)']]],
+  ['glyphdata',['GlyphData',['../structcrown_1_1_glyph_data.html',1,'crown']]],
   ['gravity',['gravity',['../classcrown_1_1_physics_world.html#a66e0084f719f285fb6357b3d1cd87882',1,'crown::PhysicsWorld']]],
   ['greater',['greater',['../structcrown_1_1greater.html',1,'crown']]],
   ['greater_5fequal',['greater_equal',['../structcrown_1_1greater__equal.html',1,'crown']]],

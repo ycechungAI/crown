@@ -174,9 +174,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga1d490762d4b506dd4f78412791339a59">crown::frustum_box_intersection</a> (const Frustum &amp;f, const AABB &amp;b)</td></tr>
 <tr class="memdesc:ga1d490762d4b506dd4f78412791339a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the frustum <em>f</em> and the <a class="el" href="structcrown_1_1_a_a_b_b.html">AABB</a> <em>b</em> intersects. <br /></td></tr>
 <tr class="separator:ga1d490762d4b506dd4f78412791339a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga32db2ff9469c4d636d7b8d21a5d2dc8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga32db2ff9469c4d636d7b8d21a5d2dc8c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::fequal</b> (f32 a, f32 b, f32 precision=FLOAT_PRECISION)</td></tr>
-<tr class="separator:ga32db2ff9469c4d636d7b8d21a5d2dc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9370f904c105e1d86a7df603c8dc0f6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9370f904c105e1d86a7df603c8dc0f6b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>crown::fequal</b> (f32 a, f32 b, f32 epsilon=FLOAT_EPSILON)</td></tr>
+<tr class="separator:ga9370f904c105e1d86a7df603c8dc0f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf10b2ed34b27cd06bca36718b0dd2f8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf10b2ed34b27cd06bca36718b0dd2f8d"></a>
 f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::fmin</b> (f32 a, f32 b)</td></tr>
 <tr class="separator:gaf10b2ed34b27cd06bca36718b0dd2f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1252,15 +1252,15 @@ const Color4&#160;</td><td class="memItemRight" valign="bottom"><b>crown::COLOR4
 <tr class="memitem:gab3aa40d9a57a68f566b60606f02a09ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab3aa40d9a57a68f566b60606f02a09ed"></a>
 const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PI</b> = 3.1415926535897932f</td></tr>
 <tr class="separator:gab3aa40d9a57a68f566b60606f02a09ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7804903a7936b2cc8d75165aa3156ceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7804903a7936b2cc8d75165aa3156ceb"></a>
-const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::TWO_PI</b> = PI * 2.0f</td></tr>
-<tr class="separator:ga7804903a7936b2cc8d75165aa3156ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03efd539b6fe6d7a3c8be1273104ab08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga03efd539b6fe6d7a3c8be1273104ab08"></a>
-const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::HALF_PI</b> = PI * 0.5f</td></tr>
-<tr class="separator:ga03efd539b6fe6d7a3c8be1273104ab08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac5b7d4a6426cb4df1eb6442a132d4209"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac5b7d4a6426cb4df1eb6442a132d4209"></a>
-const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_PRECISION</b> = 1.0e-7f</td></tr>
-<tr class="separator:gac5b7d4a6426cb4df1eb6442a132d4209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45b77192e0247a58c2ca52b128d9a676"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga45b77192e0247a58c2ca52b128d9a676"></a>
+const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PI_TWO</b> = PI * 2.0f</td></tr>
+<tr class="separator:ga45b77192e0247a58c2ca52b128d9a676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga808e24edec2113ffc0c567cd9c4daa21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga808e24edec2113ffc0c567cd9c4daa21"></a>
+const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PI_HALF</b> = PI * 0.5f</td></tr>
+<tr class="separator:ga808e24edec2113ffc0c567cd9c4daa21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa83dea4bbd6b470cea72052ddcb52b8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa83dea4bbd6b470cea72052ddcb52b8c"></a>
+const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_EPSILON</b> = 1.0e-7f</td></tr>
+<tr class="separator:gaa83dea4bbd6b470cea72052ddcb52b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -1440,7 +1440,7 @@ const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_PRE
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 1 2016 09:04:26 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 4 2016 22:08:06 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

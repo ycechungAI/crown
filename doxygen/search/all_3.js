@@ -38,5 +38,5 @@ var searchData=
   ['draw_5fimage_5fuv',['draw_image_uv',['../structcrown_1_1_gui.html#a615a78b4c7327dc2da72f9538e904b3a',1,'crown::Gui']]],
   ['draw_5frectangle',['draw_rectangle',['../structcrown_1_1_gui.html#a88534e2e853aa64c57824c6cba1a9cad',1,'crown::Gui']]],
   ['draw_5ftext',['draw_text',['../structcrown_1_1_gui.html#a27066bd4ff249d570216d79f3c914d94',1,'crown::Gui']]],
-  ['dynamicstring',['DynamicString',['../classcrown_1_1_dynamic_string.html',1,'crown']]]
+  ['dynamicstring',['DynamicString',['../structcrown_1_1_dynamic_string.html',1,'crown']]]
 ];

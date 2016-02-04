@@ -7,5 +7,5 @@ var searchData=
   ['deviceoptions',['DeviceOptions',['../classcrown_1_1_device_options.html',1,'crown']]],
   ['diskfile',['DiskFile',['../classcrown_1_1_disk_file.html',1,'crown']]],
   ['diskfilesystem',['DiskFilesystem',['../classcrown_1_1_disk_filesystem.html',1,'crown']]],
-  ['dynamicstring',['DynamicString',['../classcrown_1_1_dynamic_string.html',1,'crown']]]
+  ['dynamicstring',['DynamicString',['../structcrown_1_1_dynamic_string.html',1,'crown']]]
 ];
