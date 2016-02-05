@@ -1063,8 +1063,8 @@ The form is &quot;major.minor.micro&quot;.</dd>
 <dd>Creates a new world.</dd>
 <dt><strong>destroy_world</strong> (world)</dt>
 <dd>Destroys the given <em>world</em>.</dd>
-<dt><strong>render_world</strong> (world, camera)</dt>
-<dd>Renders the given <em>world</em> from the point of view of the given <em>camera</em>.</dd>
+<dt><strong>render</strong> (world, camera)</dt>
+<dd>Renders <em>world</em> using <em>camera</em>.</dd>
 <dt><strong>create_resource_package</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">ResourcePackage</span></dt>
 <dd>Returns the resource package with the given <em>package_name</em> name.</dd>
 <dt><strong>destroy_resource_package</strong> (package)</dt>
@@ -1113,13 +1113,13 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns the name of the input device.</dd>
+<dd>Returns the name of keyboard.</dd>
 <dt><strong>connected</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd>Returns whether the input device is connected and functioning.</dd>
+<dd>Returns whether the keyboard is connected and functioning.</dd>
 <dt><strong>num_buttons</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of buttons of the input device.</dd>
+<dd>Returns the number of buttons of the keyboard.</dd>
 <dt><strong>num_axes</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of axes of the input device.</dd>
+<dd>Returns the number of axes of the keyboard.</dd>
 <dt><strong>pressed</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the button <em>id</em> is pressed in the current frame.</dd>
 <dt><strong>released</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
@@ -1141,7 +1141,7 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <li><tt class="docutils literal">tab</tt>, <tt class="docutils literal">enter</tt>, <tt class="docutils literal">escape</tt>, <tt class="docutils literal">space</tt>, <tt class="docutils literal">backspace</tt></li>
 <li><tt class="docutils literal">num_lock</tt>, <tt class="docutils literal">numpad_enter</tt>, <tt class="docutils literal">numpad_.</tt>, <tt class="docutils literal">numpad_*</tt>, <tt class="docutils literal">numpad_+</tt>, <tt class="docutils literal">numpad_-</tt>, <tt class="docutils literal">numpad_/</tt>, <tt class="docutils literal">numpad_0</tt>, <tt class="docutils literal">numpad_1</tt>, <tt class="docutils literal">numpad_2</tt>, <tt class="docutils literal">numpad_3</tt>, <tt class="docutils literal">numpad_4</tt>, <tt class="docutils literal">numpad_5</tt>, <tt class="docutils literal">numpad_6</tt>, <tt class="docutils literal">numpad_7</tt>, <tt class="docutils literal">numpad_8</tt>, <tt class="docutils literal">numpad_9</tt></li>
 <li><tt class="docutils literal">f1</tt>, <tt class="docutils literal">f2</tt>, <tt class="docutils literal">f3</tt>, <tt class="docutils literal">f4</tt>, <tt class="docutils literal">f5</tt>, <tt class="docutils literal">f6</tt>, <tt class="docutils literal">f7</tt>, <tt class="docutils literal">f8</tt>, <tt class="docutils literal">f9</tt>, <tt class="docutils literal">f10</tt>, <tt class="docutils literal">f11</tt>, <tt class="docutils literal">f12</tt></li>
-<li><tt class="docutils literal">home</tt>, <tt class="docutils literal">left</tt>, <tt class="docutils literal">up</tt>, <tt class="docutils literal">right</tt>, <tt class="docutils literal">down</tt>, <tt class="docutils literal">page_up</tt>, <tt class="docutils literal">page_down</tt>, <tt class="docutils literal">delete</tt>, <tt class="docutils literal">end</tt></li>
+<li><tt class="docutils literal">home</tt>, <tt class="docutils literal">left</tt>, <tt class="docutils literal">up</tt>, <tt class="docutils literal">right</tt>, <tt class="docutils literal">down</tt>, <tt class="docutils literal">page_up</tt>, <tt class="docutils literal">page_down</tt>, <tt class="docutils literal">insert</tt>, <tt class="docutils literal">delete</tt>, <tt class="docutils literal">end</tt></li>
 <li><tt class="docutils literal">left_ctrl</tt>, <tt class="docutils literal">right_ctrl</tt>, <tt class="docutils literal">left_shift</tt>, <tt class="docutils literal">right_shift</tt>, <tt class="docutils literal">caps_lock</tt>, <tt class="docutils literal">left_alt</tt>, <tt class="docutils literal">right_alt</tt>, <tt class="docutils literal">left_super</tt>, <tt class="docutils literal">right_super</tt></li>
 <li><tt class="docutils literal">0</tt>, <tt class="docutils literal">1</tt>, <tt class="docutils literal">2</tt>, <tt class="docutils literal">3</tt>, <tt class="docutils literal">4</tt>, <tt class="docutils literal">5</tt>, <tt class="docutils literal">6</tt>, <tt class="docutils literal">7</tt>, <tt class="docutils literal">8</tt>, <tt class="docutils literal">9</tt></li>
 <li><tt class="docutils literal">a</tt>, <tt class="docutils literal">b</tt>, <tt class="docutils literal">c</tt>, <tt class="docutils literal">d</tt>, <tt class="docutils literal">e</tt>, <tt class="docutils literal">f</tt>, <tt class="docutils literal">g</tt>, <tt class="docutils literal">h</tt>, <tt class="docutils literal">i</tt>, <tt class="docutils literal">j</tt>, <tt class="docutils literal">k</tt>, <tt class="docutils literal">l</tt>, <tt class="docutils literal">m</tt>, <tt class="docutils literal">n</tt>, <tt class="docutils literal">o</tt>, <tt class="docutils literal">p</tt>, <tt class="docutils literal">q</tt>, <tt class="docutils literal">r</tt>, <tt class="docutils literal">s</tt>, <tt class="docutils literal">t</tt>, <tt class="docutils literal">u</tt>, <tt class="docutils literal">v</tt>, <tt class="docutils literal">w</tt>, <tt class="docutils literal">x</tt>, <tt class="docutils literal">y</tt>, <tt class="docutils literal">z</tt></li>
@@ -1159,13 +1159,13 @@ None.</blockquote>
 <blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns the name of the input device.</dd>
+<dd>Returns the name of the mouse.</dd>
 <dt><strong>connected</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd>Returns whether the input device is connected and functioning.</dd>
+<dd>Returns whether the mouse is connected and functioning.</dd>
 <dt><strong>num_buttons</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of buttons of the input device.</dd>
+<dd>Returns the number of buttons of the mouse.</dd>
 <dt><strong>num_axes</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of axes of the input device.</dd>
+<dd>Returns the number of axes of the mouse.</dd>
 <dt><strong>pressed</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the button <em>id</em> is pressed in the current frame.</dd>
 <dt><strong>released</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
@@ -1207,13 +1207,13 @@ None.</blockquote>
 <blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns the name of the input device.</dd>
+<dd>Returns the name of the touch.</dd>
 <dt><strong>connected</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd>Returns whether the input device is connected and functioning.</dd>
+<dd>Returns whether the touch is connected and functioning.</dd>
 <dt><strong>num_buttons</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of buttons of the input device.</dd>
+<dd>Returns the number of buttons of the touch.</dd>
 <dt><strong>num_axes</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of axes of the input device.</dd>
+<dd>Returns the number of axes of the touch.</dd>
 <dt><strong>pressed</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the button <em>id</em> is pressed in the current frame.</dd>
 <dt><strong>released</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
@@ -1240,13 +1240,13 @@ None.</blockquote>
 <blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns the name of the input device.</dd>
+<dd>Returns the name of the pad.</dd>
 <dt><strong>connected</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd>Returns whether the input device is connected and functioning.</dd>
+<dd>Returns whether the pad is connected and functioning.</dd>
 <dt><strong>num_buttons</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of buttons of the input device.</dd>
+<dd>Returns the number of buttons of the pad.</dd>
 <dt><strong>num_axes</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the number of axes of the input device.</dd>
+<dd>Returns the number of axes of the pad.</dd>
 <dt><strong>pressed</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the button <em>id</em> is pressed in the current frame.</dd>
 <dt><strong>released</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
