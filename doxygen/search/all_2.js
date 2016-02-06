@@ -32,7 +32,7 @@ var searchData=
   ['collision_5ffilter',['collision_filter',['../structcrown_1_1_controller_desc.html#ae070e815e204dfd4f7d5551bc9b66866',1,'crown::ControllerDesc::collision_filter()'],['../structcrown_1_1_actor_resource.html#a9ebcd85ac2702dc1f9eb3dd54871fe44',1,'crown::ActorResource::collision_filter()']]],
   ['collisiongroup',['CollisionGroup',['../structcrown_1_1_collision_group.html',1,'crown']]],
   ['color',['color',['../structcrown_1_1_light_desc.html#ad6ccbce92a98f1e0a9936111d5b4654a',1,'crown::LightDesc']]],
-  ['color4',['color4',['../group___math.html#ga67d7a79b7a5f10ff0ed71bbbc115157d',1,'crown']]],
+  ['color4',['Color4',['../group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18',1,'crown::Color4()'],['../group___math.html#ga67d7a79b7a5f10ff0ed71bbbc115157d',1,'crown::color4(f32 r, f32 g, f32 b, f32 a)']]],
   ['commandline',['CommandLine',['../classcrown_1_1_command_line.html',1,'crown']]],
   ['compareentry',['CompareEntry',['../structcrown_1_1sort__map__internal_1_1_compare_entry.html',1,'crown::sort_map_internal']]],
   ['compile_5fall',['compile_all',['../classcrown_1_1_bundle_compiler.html#a2b888c84349ad09c4c107fcdd6373234',1,'crown::BundleCompiler']]],
