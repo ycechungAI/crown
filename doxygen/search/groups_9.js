@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['thread',['Thread',['../group___thread.html',1,'']]]
+  ['string',['String',['../group___string.html',1,'']]]
 ];

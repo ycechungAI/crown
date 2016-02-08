@@ -5,7 +5,7 @@ var searchData=
   ['init',['init',['../classcrown_1_1_console_server.html#a1c621fa90447a2a0507774cda4946216',1,'crown::ConsoleServer::init()'],['../classcrown_1_1_device.html#afa779586591964f8cb126087cea0682d',1,'crown::Device::init()'],['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#ad43baed76132fa8f741f13d6982c2868',1,'crown::physics_globals::init()']]],
   ['input',['Input',['../group___input.html',1,'']]],
   ['input_5fmanager',['input_manager',['../classcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],
-  ['inputdevice',['InputDevice',['../classcrown_1_1_input_device.html',1,'crown']]],
+  ['inputdevice',['InputDevice',['../structcrown_1_1_input_device.html',1,'crown']]],
   ['inputmanager',['InputManager',['../classcrown_1_1_input_manager.html',1,'crown']]],
   ['insert',['insert',['../namespacecrown_1_1multi__hash.html#a1a93c0d8de7756c6fce671909aad78d9',1,'crown::multi_hash']]],
   ['int2type',['Int2Type',['../structcrown_1_1_int2_type.html',1,'crown']]],

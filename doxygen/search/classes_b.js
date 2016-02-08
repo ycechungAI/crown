@@ -9,6 +9,7 @@ var searchData=
   ['levelsound',['LevelSound',['../structcrown_1_1_level_sound.html',1,'crown']]],
   ['lightdesc',['LightDesc',['../structcrown_1_1_light_desc.html',1,'crown']]],
   ['lightinstance',['LightInstance',['../structcrown_1_1_light_instance.html',1,'crown']]],
+  ['lightinstancedata',['LightInstanceData',['../structcrown_1_1_render_world_1_1_light_manager_1_1_light_instance_data.html',1,'crown::RenderWorld::LightManager']]],
   ['lighttype',['LightType',['../structcrown_1_1_light_type.html',1,'crown']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html',1,'crown']]],
   ['logseverity',['LogSeverity',['../structcrown_1_1_log_severity.html',1,'crown']]],

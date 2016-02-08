@@ -36,8 +36,8 @@ var searchData=
   ['allocatememory',['AllocateMemory',['../structcrown_1_1_allocate_memory.html',1,'crown']]],
   ['allocator',['Allocator',['../classcrown_1_1_allocator.html',1,'crown']]],
   ['angle',['angle',['../group___math.html#ga2e490c006d641557c03f98e9c6c9d133',1,'crown::angle(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#ga6bb2a6d17667136abd9b44d8b5b0e419',1,'crown::angle(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gadb460d88274f37a515055f880376b53f',1,'crown::angle(const Vector4 &amp;a, const Vector4 &amp;b)']]],
-  ['any_5fpressed',['any_pressed',['../classcrown_1_1_input_device.html#a7751e6c377b306a9fdf04205fdff0d04',1,'crown::InputDevice']]],
-  ['any_5freleased',['any_released',['../classcrown_1_1_input_device.html#ae6f040dbe19fb26644d29a639ea4ba5d',1,'crown::InputDevice']]],
+  ['any_5fpressed',['any_pressed',['../structcrown_1_1_input_device.html#a7751e6c377b306a9fdf04205fdff0d04',1,'crown::InputDevice']]],
+  ['any_5freleased',['any_released',['../structcrown_1_1_input_device.html#ae6f040dbe19fb26644d29a639ea4ba5d',1,'crown::InputDevice']]],
   ['architecture',['architecture',['../classcrown_1_1_device.html#a48d83182b610314e9eb4267d3539a9aa',1,'crown::Device']]],
   ['argc',['argc',['../classcrown_1_1_device.html#a660e83de8f547b2886b5ebd473e0357e',1,'crown::Device']]],
   ['argv',['argv',['../classcrown_1_1_device.html#ab1437d6b252194f420182610494cb9ea',1,'crown::Device']]],
@@ -62,7 +62,7 @@ var searchData=
   ['array_3c_20u32_20_3e',['Array&lt; u32 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20u8_20_3e',['Array&lt; u8 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['atomicint',['AtomicInt',['../structcrown_1_1_atomic_int.html',1,'crown']]],
-  ['axis',['axis',['../classcrown_1_1_input_device.html#a7ef01da8b3a7c622ed9f8d78dd695d69',1,'crown::InputDevice']]],
-  ['axis_5fid',['axis_id',['../classcrown_1_1_input_device.html#a6344b6a1c79ab9fd931ce544fb37315d',1,'crown::InputDevice']]],
-  ['axis_5fname',['axis_name',['../classcrown_1_1_input_device.html#aabdadc51422fef8b006c2e74ab21cc68',1,'crown::InputDevice']]]
+  ['axis',['axis',['../structcrown_1_1_input_device.html#a7ef01da8b3a7c622ed9f8d78dd695d69',1,'crown::InputDevice']]],
+  ['axis_5fid',['axis_id',['../structcrown_1_1_input_device.html#a6344b6a1c79ab9fd931ce544fb37315d',1,'crown::InputDevice']]],
+  ['axis_5fname',['axis_name',['../structcrown_1_1_input_device.html#aabdadc51422fef8b006c2e74ab21cc68',1,'crown::InputDevice']]]
 ];

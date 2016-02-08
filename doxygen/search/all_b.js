@@ -21,6 +21,7 @@ var searchData=
   ['light_5ftype',['light_type',['../classcrown_1_1_render_world.html#ac8e29f415ea39aebb8b245e014abaedb',1,'crown::RenderWorld']]],
   ['lightdesc',['LightDesc',['../structcrown_1_1_light_desc.html',1,'crown']]],
   ['lightinstance',['LightInstance',['../structcrown_1_1_light_instance.html',1,'crown']]],
+  ['lightinstancedata',['LightInstanceData',['../structcrown_1_1_render_world_1_1_light_manager_1_1_light_instance_data.html',1,'crown::RenderWorld::LightManager']]],
   ['lighttype',['LightType',['../structcrown_1_1_light_type.html',1,'crown']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html',1,'crown']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html#aa5e4ec1b5564b8f3580ba2330f753eab',1,'crown::LinearAllocator::LinearAllocator(Allocator &amp;backing, u32 size)'],['../classcrown_1_1_linear_allocator.html#ac88a3dd1a1901d6b0d5be9fe2488c408',1,'crown::LinearAllocator::LinearAllocator(void *start, u32 size)']]],
