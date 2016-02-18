@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Crown: crown::FixedString Class Reference</title>
+<title>Crown: crown::FixedString Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,20 +73,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_fixed_string.html">FixedString</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_fixed_string-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structcrown_1_1_fixed_string-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::FixedString Class Reference<div class="ingroups"><a class="el" href="group___string.html">String</a></div></div>  </div>
+<div class="title">crown::FixedString Struct Reference<div class="ingroups"><a class="el" href="group___string.html">String</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Fixed string.  
- <a href="classcrown_1_1_fixed_string.html#details">More...</a></p>
+ <a href="structcrown_1_1_fixed_string.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="fixed__string_8h_source.html">fixed_string.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -99,16 +100,16 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>FixedString</b> (const char *str, u32 len)</td></tr>
 <tr class="separator:a0f94df147d1495bd2d83813071eb73cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbc2761385a99f6b59b3ea9aa1a9cbcc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbc2761385a99f6b59b3ea9aa1a9cbcc"></a>
-<a class="el" href="classcrown_1_1_fixed_string.html">FixedString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char *str)</td></tr>
+<a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const char *str)</td></tr>
 <tr class="separator:abbc2761385a99f6b59b3ea9aa1a9cbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abafc68325a7bcbe65ada51614bca318b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abafc68325a7bcbe65ada51614bca318b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const char *str) const </td></tr>
 <tr class="separator:abafc68325a7bcbe65ada51614bca318b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7188d87a2be3395b641ae42414631041"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7188d87a2be3395b641ae42414631041"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classcrown_1_1_fixed_string.html">FixedString</a> &amp;b) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a> &amp;b) const </td></tr>
 <tr class="separator:a7188d87a2be3395b641ae42414631041"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0c84110c7474bf72cdda36f53ce050"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd0c84110c7474bf72cdda36f53ce050"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classcrown_1_1_fixed_string.html">FixedString</a> &amp;b) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a> &amp;b) const </td></tr>
 <tr class="separator:acd0c84110c7474bf72cdda36f53ce050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff7cf876a9d0f07bb5689d54ca5ddbbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff7cf876a9d0f07bb5689d54ca5ddbbc"></a>
 u32&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> () const </td></tr>
@@ -116,16 +117,25 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>length</b> () const </
 <tr class="memitem:aa058be16976ed61e613bfc380c63eb57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa058be16976ed61e613bfc380c63eb57"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> () const </td></tr>
 <tr class="separator:aa058be16976ed61e613bfc380c63eb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:adb423aa15afec0c136c5bf4b11de81c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb423aa15afec0c136c5bf4b11de81c9"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>_length</b></td></tr>
+<tr class="separator:adb423aa15afec0c136c5bf4b11de81c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8705d912dc27a11dcaec63b671f08fb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8705d912dc27a11dcaec63b671f08fb8"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>_data</b></td></tr>
+<tr class="separator:a8705d912dc27a11dcaec63b671f08fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Fixed string. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/core/strings/<a class="el" href="fixed__string_8h_source.html">fixed_string.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 8 2016 16:20:05 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 18 2016 20:11:28 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

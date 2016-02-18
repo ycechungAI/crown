@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Crown: crown::LuaStack Class Reference</title>
+<title>Crown: crown::LuaStack Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,20 +73,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_lua_stack.html">LuaStack</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_lua_stack.html">LuaStack</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_lua_stack-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structcrown_1_1_lua_stack-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::LuaStack Class Reference<div class="ingroups"><a class="el" href="group___lua.html">Lua</a></div></div>  </div>
+<div class="title">crown::LuaStack Struct Reference<div class="ingroups"><a class="el" href="group___lua.html">Lua</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Wrapper to manipulate Lua stack.  
- <a href="classcrown_1_1_lua_stack.html#details">More...</a></p>
+ <a href="structcrown_1_1_lua_stack.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="lua__stack_8h_source.html">lua_stack.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -95,17 +96,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ca7cbb935dbfbb526794aa1a3e27681"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ca7cbb935dbfbb526794aa1a3e27681"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>LuaStack</b> (lua_State *L)</td></tr>
 <tr class="separator:a9ca7cbb935dbfbb526794aa1a3e27681"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a89354e16d5098c83baede40a93933f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a89354e16d5098c83baede40a93933f"></a>
-lua_State *&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> ()</td></tr>
-<tr class="separator:a3a89354e16d5098c83baede40a93933f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41c25040850c35c8f4b545b5b5620ac4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#a41c25040850c35c8f4b545b5b5620ac4">num_args</a> ()</td></tr>
+<tr class="memitem:a41c25040850c35c8f4b545b5b5620ac4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a41c25040850c35c8f4b545b5b5620ac4">num_args</a> ()</td></tr>
 <tr class="memdesc:a41c25040850c35c8f4b545b5b5620ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements in the stack.  <a href="#a41c25040850c35c8f4b545b5b5620ac4">More...</a><br /></td></tr>
 <tr class="separator:a41c25040850c35c8f4b545b5b5620ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85f7573434313a31bbba707951f2ddad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#a85f7573434313a31bbba707951f2ddad">remove</a> (int i)</td></tr>
+<tr class="memitem:a85f7573434313a31bbba707951f2ddad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a85f7573434313a31bbba707951f2ddad">remove</a> (int i)</td></tr>
 <tr class="memdesc:a85f7573434313a31bbba707951f2ddad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the element at the given valid index, shifting down the elements above this index to fill the gap.  <a href="#a85f7573434313a31bbba707951f2ddad">More...</a><br /></td></tr>
 <tr class="separator:a85f7573434313a31bbba707951f2ddad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9379212a62b8678527730218894e7be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9379212a62b8678527730218894e7be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#ac9379212a62b8678527730218894e7be">pop</a> (int n)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#ac9379212a62b8678527730218894e7be">pop</a> (int n)</td></tr>
 <tr class="memdesc:ac9379212a62b8678527730218894e7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops <em>n</em> elements from the stack. <br /></td></tr>
 <tr class="separator:ac9379212a62b8678527730218894e7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab03621fc0d9d47a4274346b3cbc7065c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab03621fc0d9d47a4274346b3cbc7065c"></a>
@@ -133,7 +131,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_quaternion</b> (in
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_matrix4x4</b> (int i)</td></tr>
 <tr class="separator:a5bf0311a449577ea8c2e815ce5f77f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a253e2ed1389b426d4db867e609f560e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a253e2ed1389b426d4db867e609f560e1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#a253e2ed1389b426d4db867e609f560e1">value_type</a> (int i)</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a253e2ed1389b426d4db867e609f560e1">value_type</a> (int i)</td></tr>
 <tr class="memdesc:a253e2ed1389b426d4db867e609f560e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps lua_type. <br /></td></tr>
 <tr class="separator:a253e2ed1389b426d4db867e609f560e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57785a335febebed066a2b615634282e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57785a335febebed066a2b615634282e"></a>
@@ -280,19 +278,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_function</b> (lu
 <tr class="memitem:a310070aa6d3eb7aeec7fc8ea568beab0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a310070aa6d3eb7aeec7fc8ea568beab0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_id</b> (u32 value)</td></tr>
 <tr class="separator:a310070aa6d3eb7aeec7fc8ea568beab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e6faa8297ad98dcf9c01694ded8200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#a68e6faa8297ad98dcf9c01694ded8200">push_table</a> (int narr=0, int nrec=0)</td></tr>
+<tr class="memitem:a68e6faa8297ad98dcf9c01694ded8200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a68e6faa8297ad98dcf9c01694ded8200">push_table</a> (int narr=0, int nrec=0)</td></tr>
 <tr class="memdesc:a68e6faa8297ad98dcf9c01694ded8200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes an empty table onto the stack.  <a href="#a68e6faa8297ad98dcf9c01694ded8200">More...</a><br /></td></tr>
 <tr class="separator:a68e6faa8297ad98dcf9c01694ded8200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2233d68bbbdd82a1fd083a9a7d44fc8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8">push_key_begin</a> (const char *key)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8">push_key_begin</a> (const char *key)</td></tr>
 <tr class="memdesc:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
 <tr class="separator:ab2233d68bbbdd82a1fd083a9a7d44fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29c120db37460849e6111b93e74d12e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29c120db37460849e6111b93e74d12e2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#a29c120db37460849e6111b93e74d12e2">push_key_begin</a> (int i)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a29c120db37460849e6111b93e74d12e2">push_key_begin</a> (int i)</td></tr>
 <tr class="memdesc:a29c120db37460849e6111b93e74d12e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
 <tr class="separator:a29c120db37460849e6111b93e74d12e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79a8a3b906dd30a1c6c6a328745a3aed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed">push_key_end</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed">push_key_end</a> ()</td></tr>
 <tr class="memdesc:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">See Stack::push_table() <br /></td></tr>
 <tr class="separator:a79a8a3b906dd30a1c6c6a328745a3aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f72b2b82297197b0ac55565d8592a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7f72b2b82297197b0ac55565d8592a5"></a>
@@ -409,6 +407,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i
 <tr class="memitem:a774b33d615e844612726fae1aad8f847"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a774b33d615e844612726fae1aad8f847"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="classcrown_1_1_level.html">Level</a> *p)</td></tr>
 <tr class="separator:a774b33d615e844612726fae1aad8f847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a8d41eb72adb01847a9c0dfaaa25f8f75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d41eb72adb01847a9c0dfaaa25f8f75"></a>
+lua_State *&#160;</td><td class="memItemRight" valign="bottom"><b>L</b></td></tr>
+<tr class="separator:a8d41eb72adb01847a9c0dfaaa25f8f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wrapper to manipulate Lua stack. </p>
@@ -499,19 +503,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i
 </div><div class="memdoc">
 
 <p>Pushes an empty table onto the stack. </p>
-<p>When you want to set keys on the table, you have to use <a class="el" href="classcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8" title="See Stack::push_table() ">LuaStack::push_key_begin()</a> and <a class="el" href="classcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed" title="See Stack::push_table() ">LuaStack::push_key_end()</a> as in the following example:</p>
-<p><a class="el" href="classcrown_1_1_lua_stack.html" title="Wrapper to manipulate Lua stack. ">LuaStack</a> stack(L) stack.push_table() stack.push_key_begin("foo"); stack.push_foo(); stack.push_key_end() stack.push_key_begin("bar"); stack.push_bar(); stack.push_key_end() return 1; </p>
+<p>When you want to set keys on the table, you have to use <a class="el" href="structcrown_1_1_lua_stack.html#ab2233d68bbbdd82a1fd083a9a7d44fc8" title="See Stack::push_table() ">LuaStack::push_key_begin()</a> and <a class="el" href="structcrown_1_1_lua_stack.html#a79a8a3b906dd30a1c6c6a328745a3aed" title="See Stack::push_table() ">LuaStack::push_key_end()</a> as in the following example:</p>
+<p><a class="el" href="structcrown_1_1_lua_stack.html" title="Wrapper to manipulate Lua stack. ">LuaStack</a> stack(L) stack.push_table() stack.push_key_begin("foo"); stack.push_foo(); stack.push_key_end() stack.push_key_begin("bar"); stack.push_bar(); stack.push_key_end() return 1; </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/lua/<a class="el" href="lua__stack_8h_source.html">lua_stack.h</a></li>
 <li>src/lua/lua_stack.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 8 2016 16:20:05 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 18 2016 20:11:28 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

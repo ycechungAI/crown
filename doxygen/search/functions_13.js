@@ -24,5 +24,6 @@ var searchData=
   ['transformed',['transformed',['../namespacecrown_1_1aabb.html#aba40b08e30dcb5e90a1cf8a6191567c8',1,'crown::aabb']]],
   ['translation',['translation',['../group___math.html#ga4bd6177e223a00b179b8b914c1c7422c',1,'crown']]],
   ['transpose',['transpose',['../group___math.html#gadc9e5f97d3f63ae101ba0256f1289027',1,'crown::transpose(Matrix3x3 &amp;m)'],['../group___math.html#gaed52a7b5c76ce533d79faf36f9159f52',1,'crown::transpose(Matrix4x4 &amp;m)']]],
+  ['trim',['trim',['../structcrown_1_1_dynamic_string.html#aed30b1dae1d44156c1c6d0dac5bca21a',1,'crown::DynamicString']]],
   ['type',['type',['../namespacecrown_1_1json.html#affac38f2f84f04271e05809f9fd5d83f',1,'crown::json::type()'],['../namespacecrown_1_1sjson.html#a9845bfa42084357ada3f0e6959eb0fe0',1,'crown::sjson::type()']]]
 ];

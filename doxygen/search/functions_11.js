@@ -12,13 +12,13 @@ var searchData=
   ['record_5fvector3',['record_vector3',['../namespacecrown_1_1profiler.html#a13c2d80e128516bc6984954a9d8a1013',1,'crown::profiler']]],
   ['released',['released',['../structcrown_1_1_input_device.html#aca5505507065f99d02f9f1f1a8cf526e',1,'crown::InputDevice']]],
   ['reload',['reload',['../classcrown_1_1_device.html#afae63663bdee167465f128a8e56754c9',1,'crown::Device::reload()'],['../classcrown_1_1_resource_manager.html#ad7cbd469b0c3c9e953b003dff71f5aba',1,'crown::ResourceManager::reload()']]],
-  ['remove',['remove',['../classcrown_1_1_lua_stack.html#a85f7573434313a31bbba707951f2ddad',1,'crown::LuaStack::remove()'],['../namespacecrown_1_1hash.html#a2aac94995f4308efc5298ed9b8b96561',1,'crown::hash::remove()'],['../namespacecrown_1_1multi__hash.html#af085a52d9537ba8b3f2990567be294a6',1,'crown::multi_hash::remove()'],['../namespacecrown_1_1map.html#acdb50c479bf00d6f711e083444fa76ea',1,'crown::map::remove()'],['../namespacecrown_1_1sort__map.html#a803bbac65db43e1449a2363a62e360e2',1,'crown::sort_map::remove()']]],
+  ['remove',['remove',['../structcrown_1_1_lua_stack.html#a85f7573434313a31bbba707951f2ddad',1,'crown::LuaStack::remove()'],['../namespacecrown_1_1hash.html#a2aac94995f4308efc5298ed9b8b96561',1,'crown::hash::remove()'],['../namespacecrown_1_1multi__hash.html#af085a52d9537ba8b3f2990567be294a6',1,'crown::multi_hash::remove()'],['../namespacecrown_1_1map.html#acdb50c479bf00d6f711e083444fa76ea',1,'crown::map::remove()'],['../namespacecrown_1_1sort__map.html#a803bbac65db43e1449a2363a62e360e2',1,'crown::sort_map::remove()']]],
   ['remove_5fall',['remove_all',['../namespacecrown_1_1multi__hash.html#a9956741fda9f23716775821dc1c12d4e',1,'crown::multi_hash']]],
   ['render',['render',['../classcrown_1_1_device.html#a2f5d67f6089395a436d5cfb6074c4ffb',1,'crown::Device::render()'],['../classcrown_1_1_world.html#ab446436cec7985f3d43b2ff23580a22c',1,'crown::World::render()']]],
   ['render_5fworld',['render_world',['../classcrown_1_1_world.html#aff28e2323bf4bbd31ce63b0b742f8951',1,'crown::World']]],
   ['reserve',['reserve',['../structcrown_1_1_dynamic_string.html#a2c4416cae09e624f264010c5493d3a41',1,'crown::DynamicString::reserve()'],['../namespacecrown_1_1array.html#ab003a60a04129ed6b85a7ca5eb19d4df',1,'crown::array::reserve()'],['../namespacecrown_1_1hash.html#a697ab5ff7fc8bc21ac15d56739f8ef61',1,'crown::hash::reserve()'],['../namespacecrown_1_1vector.html#ab4dcca25b33248ed2812e67852f73bbd',1,'crown::vector::reserve()']]],
   ['reset',['reset',['../structcrown_1_1_debug_line.html#a8a48b86120d5919d167f4882fd5bfc6b',1,'crown::DebugLine::reset()'],['../namespacecrown_1_1aabb.html#aa8fadd4a25e87be5ab9470f5d40de01c',1,'crown::aabb::reset()'],['../namespacecrown_1_1sphere.html#a058118a70214da8bc6d236582c59064b',1,'crown::sphere::reset()']]],
-  ['reset_5ftemporaries',['reset_temporaries',['../classcrown_1_1_lua_environment.html#a0cacc689637757c82bf35a157ad3af45',1,'crown::LuaEnvironment']]],
+  ['reset_5ftemporaries',['reset_temporaries',['../structcrown_1_1_lua_environment.html#a0cacc689637757c82bf35a157ad3af45',1,'crown::LuaEnvironment']]],
   ['resize',['resize',['../structcrown_1_1_window.html#a2e0c84cdf44dca7c5a54d06d57773be0',1,'crown::Window::resize()'],['../namespacecrown_1_1array.html#aab67eb96e4f6e26ece77b81a57637de9',1,'crown::array::resize()'],['../namespacecrown_1_1vector.html#a9e29ab2ec5090b1a5156599e61d74d68',1,'crown::vector::resize()']]],
   ['resolution',['resolution',['../classcrown_1_1_device.html#a42944015e4989ccafcad7730ce9d3f91',1,'crown::Device']]],
   ['resource_5fmanager',['resource_manager',['../classcrown_1_1_device.html#aaf61aaf38128a36942ccb49e1b417300',1,'crown::Device']]],
@@ -27,5 +27,6 @@ var searchData=
   ['restore',['restore',['../structcrown_1_1_window.html#a66da1ae8f0f1e4cf51d6b250f7dfad4c',1,'crown::Window']]],
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],
   ['right',['right',['../group___math.html#ga9340f3b72e9b7db6d4370d4493e33588',1,'crown']]],
-  ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]]
+  ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]],
+  ['rtrim',['rtrim',['../structcrown_1_1_dynamic_string.html#aa6de3c5f496d1423d3a82152f8cb488b',1,'crown::DynamicString']]]
 ];

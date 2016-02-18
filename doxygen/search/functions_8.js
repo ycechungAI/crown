@@ -12,13 +12,13 @@ var searchData=
   ['is_5fdynamic',['is_dynamic',['../classcrown_1_1_physics_world.html#a7dca195068620574407def4a7ec1905f',1,'crown::PhysicsWorld']]],
   ['is_5ffile',['is_file',['../classcrown_1_1_disk_filesystem.html#a621d6ea6886e31b2951a4a29b5483812',1,'crown::DiskFilesystem::is_file()'],['../classcrown_1_1_filesystem.html#a5f5cc9a1cab36e7e20b0233d9a884474',1,'crown::Filesystem::is_file()']]],
   ['is_5fkinematic',['is_kinematic',['../classcrown_1_1_physics_world.html#ac0e9ef6ccfaebeac584f79d81bfeaf0a',1,'crown::PhysicsWorld']]],
-  ['is_5fmatrix4x4',['is_matrix4x4',['../classcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053',1,'crown::LuaEnvironment']]],
+  ['is_5fmatrix4x4',['is_matrix4x4',['../structcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053',1,'crown::LuaEnvironment']]],
   ['is_5fnonkinematic',['is_nonkinematic',['../classcrown_1_1_physics_world.html#ae382f6b64f480a7adfe452b244634e24',1,'crown::PhysicsWorld']]],
   ['is_5fplaying',['is_playing',['../classcrown_1_1_sound_world.html#a9c072650bed66bb2802343af954eef96',1,'crown::SoundWorld']]],
-  ['is_5fquaternion',['is_quaternion',['../classcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440',1,'crown::LuaEnvironment']]],
+  ['is_5fquaternion',['is_quaternion',['../structcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440',1,'crown::LuaEnvironment']]],
   ['is_5froot',['is_root',['../namespacecrown_1_1path.html#a87c6298b23d5423c5306e7754a86aba5',1,'crown::path']]],
   ['is_5frunning',['is_running',['../classcrown_1_1_device.html#a47a272de70b847996435d66b152f7608',1,'crown::Device']]],
   ['is_5fsleeping',['is_sleeping',['../classcrown_1_1_physics_world.html#a944580fb755792318b5de66167f1a8a0',1,'crown::PhysicsWorld']]],
   ['is_5fstatic',['is_static',['../classcrown_1_1_physics_world.html#a671a06ac879da730cb1084d6594b6f37',1,'crown::PhysicsWorld']]],
-  ['is_5fvector3',['is_vector3',['../classcrown_1_1_lua_environment.html#a10501619ca797e39d31aa262596ea160',1,'crown::LuaEnvironment']]]
+  ['is_5fvector3',['is_vector3',['../structcrown_1_1_lua_environment.html#a10501619ca797e39d31aa262596ea160',1,'crown::LuaEnvironment']]]
 ];

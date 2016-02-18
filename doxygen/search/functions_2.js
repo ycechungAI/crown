@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c_5fstr',['c_str',['../structcrown_1_1_dynamic_string.html#aeac24042d121bd93cff0bba2bc15e203',1,'crown::DynamicString::c_str()'],['../namespacecrown_1_1string__stream.html#aecf9041eaf7334b2cd1a6bf11ce8d8ac',1,'crown::string_stream::c_str()']]],
-  ['call_5fglobal',['call_global',['../classcrown_1_1_lua_environment.html#aaa5d0facd74cc4dfe51096954e2c9aa2',1,'crown::LuaEnvironment']]],
+  ['call_5fglobal',['call_global',['../structcrown_1_1_lua_environment.html#aaa5d0facd74cc4dfe51096954e2c9aa2',1,'crown::LuaEnvironment']]],
   ['camera',['camera',['../classcrown_1_1_world.html#aa0d527512e166741e9b3e987f3488c66',1,'crown::World']]],
   ['camera_5faspect',['camera_aspect',['../classcrown_1_1_world.html#a453b1c2671e705765bba17c95df4d8da',1,'crown::World']]],
   ['camera_5ffar_5fclip_5fdistance',['camera_far_clip_distance',['../classcrown_1_1_world.html#a9667a3dfb085e8047ddb0446f723ecab',1,'crown::World']]],

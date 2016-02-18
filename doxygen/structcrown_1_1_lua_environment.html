@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Crown: crown::LuaEnvironment Class Reference</title>
+<title>Crown: crown::LuaEnvironment Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,20 +73,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_lua_environment.html">LuaEnvironment</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_lua_environment.html">LuaEnvironment</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_lua_environment-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structcrown_1_1_lua_environment-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::LuaEnvironment Class Reference<div class="ingroups"><a class="el" href="group___lua.html">Lua</a></div></div>  </div>
+<div class="title">crown::LuaEnvironment Struct Reference<div class="ingroups"><a class="el" href="group___lua.html">Lua</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Wraps a subset of Lua functions and provides utilities for extending Lua.  
- <a href="classcrown_1_1_lua_environment.html#details">More...</a></p>
+ <a href="structcrown_1_1_lua_environment.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="lua__environment_8h_source.html">lua_environment.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -99,11 +100,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>load_libs</b> ()</td>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> (const <a class="el" href="structcrown_1_1_lua_resource.html">LuaResource</a> *lr)</td></tr>
 <tr class="separator:a39a718470a6a3aa2fb674df9efce97eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33a440a05b30383dfc5d0ba35e9ea103"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33a440a05b30383dfc5d0ba35e9ea103"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a33a440a05b30383dfc5d0ba35e9ea103">execute_string</a> (const char *s)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a33a440a05b30383dfc5d0ba35e9ea103">execute_string</a> (const char *s)</td></tr>
 <tr class="memdesc:a33a440a05b30383dfc5d0ba35e9ea103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and executes the given <em>s</em> lua string. <br /></td></tr>
 <tr class="separator:a33a440a05b30383dfc5d0ba35e9ea103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b076366f49d6405751abc78e3f11e1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b076366f49d6405751abc78e3f11e1c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a5b076366f49d6405751abc78e3f11e1c">load_module_function</a> (const char *module, const char *name, const lua_CFunction func)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a5b076366f49d6405751abc78e3f11e1c">load_module_function</a> (const char *module, const char *name, const lua_CFunction func)</td></tr>
 <tr class="memdesc:a5b076366f49d6405751abc78e3f11e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the function with the given <em>name</em> and <em>func</em> into the table <em>module</em>. <br /></td></tr>
 <tr class="separator:a5b076366f49d6405751abc78e3f11e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3e5e8cbea92d00a2350c405912f15b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3e5e8cbea92d00a2350c405912f15b4"></a>
@@ -112,37 +113,61 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>load_module_function<
 <tr class="memitem:a5153b506cbd42c2f57045891f2ef3215"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5153b506cbd42c2f57045891f2ef3215"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>load_module_constructor</b> (const char *module, const lua_CFunction func)</td></tr>
 <tr class="separator:a5153b506cbd42c2f57045891f2ef3215"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa5d0facd74cc4dfe51096954e2c9aa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#aaa5d0facd74cc4dfe51096954e2c9aa2">call_global</a> (const char *func, u8 argc,...)</td></tr>
+<tr class="memitem:aaa5d0facd74cc4dfe51096954e2c9aa2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#aaa5d0facd74cc4dfe51096954e2c9aa2">call_global</a> (const char *func, u8 argc,...)</td></tr>
 <tr class="memdesc:aaa5d0facd74cc4dfe51096954e2c9aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the global function <em>func</em> with <em>argc</em> argument number.  <a href="#aaa5d0facd74cc4dfe51096954e2c9aa2">More...</a><br /></td></tr>
 <tr class="separator:aaa5d0facd74cc4dfe51096954e2c9aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cacc689637757c82bf35a157ad3af45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cacc689637757c82bf35a157ad3af45"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a0cacc689637757c82bf35a157ad3af45">reset_temporaries</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a0cacc689637757c82bf35a157ad3af45">reset_temporaries</a> ()</td></tr>
 <tr class="memdesc:a0cacc689637757c82bf35a157ad3af45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets temporary types. <br /></td></tr>
 <tr class="separator:a0cacc689637757c82bf35a157ad3af45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cc6bb8feab98f9052bf05e1b6792576"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cc6bb8feab98f9052bf05e1b6792576"></a>
-<a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a7cc6bb8feab98f9052bf05e1b6792576">next_vector3</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;v)</td></tr>
+<a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a7cc6bb8feab98f9052bf05e1b6792576">next_vector3</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;v)</td></tr>
 <tr class="memdesc:a7cc6bb8feab98f9052bf05e1b6792576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new temporary <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>. <br /></td></tr>
 <tr class="separator:a7cc6bb8feab98f9052bf05e1b6792576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310af148897a887d8840a33491dc81be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a310af148897a887d8840a33491dc81be"></a>
-<a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a310af148897a887d8840a33491dc81be">next_quaternion</a> (const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;q)</td></tr>
+<a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a310af148897a887d8840a33491dc81be">next_quaternion</a> (const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;q)</td></tr>
 <tr class="memdesc:a310af148897a887d8840a33491dc81be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new temporary <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a>. <br /></td></tr>
 <tr class="separator:a310af148897a887d8840a33491dc81be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1fe23bc5051b9ab99a09d3eb755b980"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1fe23bc5051b9ab99a09d3eb755b980"></a>
-<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#af1fe23bc5051b9ab99a09d3eb755b980">next_matrix4x4</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;m)</td></tr>
+<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#af1fe23bc5051b9ab99a09d3eb755b980">next_matrix4x4</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;m)</td></tr>
 <tr class="memdesc:af1fe23bc5051b9ab99a09d3eb755b980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new temporary <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>. <br /></td></tr>
 <tr class="separator:af1fe23bc5051b9ab99a09d3eb755b980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10501619ca797e39d31aa262596ea160"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10501619ca797e39d31aa262596ea160"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a10501619ca797e39d31aa262596ea160">is_vector3</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *p) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a10501619ca797e39d31aa262596ea160">is_vector3</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *p) const </td></tr>
 <tr class="memdesc:a10501619ca797e39d31aa262596ea160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <em>p</em> is a temporary <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>. <br /></td></tr>
 <tr class="separator:a10501619ca797e39d31aa262596ea160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17823d5e6cbf2c29288a87c7f343b440"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17823d5e6cbf2c29288a87c7f343b440"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440">is_quaternion</a> (const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> *p) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440">is_quaternion</a> (const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> *p) const </td></tr>
 <tr class="memdesc:a17823d5e6cbf2c29288a87c7f343b440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <em>p</em> is a temporary <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a>. <br /></td></tr>
 <tr class="separator:a17823d5e6cbf2c29288a87c7f343b440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cfd7d319890836562a7e51bbe76b053"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cfd7d319890836562a7e51bbe76b053"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053">is_matrix4x4</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *p) const </td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053">is_matrix4x4</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *p) const </td></tr>
 <tr class="memdesc:a6cfd7d319890836562a7e51bbe76b053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <em>p</em> is a temporary <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>. <br /></td></tr>
 <tr class="separator:a6cfd7d319890836562a7e51bbe76b053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:abd0ee98942f758f4846cb03016243ddc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd0ee98942f758f4846cb03016243ddc"></a>
+lua_State *&#160;</td><td class="memItemRight" valign="bottom"><b>L</b></td></tr>
+<tr class="separator:abd0ee98942f758f4846cb03016243ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5b224299db3f616dc914a4459cf40b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef5b224299db3f616dc914a4459cf40b"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>_vec3_used</b></td></tr>
+<tr class="separator:aef5b224299db3f616dc914a4459cf40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c88d3aa320863f8fe95f3e78302a92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35c88d3aa320863f8fe95f3e78302a92"></a>
+<a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_vec3_buffer</b> [CROWN_MAX_LUA_VECTOR3]</td></tr>
+<tr class="separator:a35c88d3aa320863f8fe95f3e78302a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefcc8c1b196b3d1dd1c432bde9fc150b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefcc8c1b196b3d1dd1c432bde9fc150b"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>_quat_used</b></td></tr>
+<tr class="separator:aefcc8c1b196b3d1dd1c432bde9fc150b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc59429ded5bf556fd5ef5f873260d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cc59429ded5bf556fd5ef5f873260d8"></a>
+<a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_quat_buffer</b> [CROWN_MAX_LUA_QUATERNION]</td></tr>
+<tr class="separator:a5cc59429ded5bf556fd5ef5f873260d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa47e32728d91ba3aa70432a268df81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaa47e32728d91ba3aa70432a268df81"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>_mat4_used</b></td></tr>
+<tr class="separator:aeaa47e32728d91ba3aa70432a268df81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d2fe3ffdecc12adc54ef006e112eee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7d2fe3ffdecc12adc54ef006e112eee"></a>
+<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>s_mat4_buffer</b> [CROWN_MAX_LUA_MATRIX4X4]</td></tr>
+<tr class="separator:ae7d2fe3ffdecc12adc54ef006e112eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Wraps a subset of Lua functions and provides utilities for extending Lua. </p>
@@ -182,14 +207,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/lua/<a class="el" href="lua__environment_8h_source.html">lua_environment.h</a></li>
 <li>src/lua/lua_environment.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 8 2016 16:20:05 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 18 2016 20:11:28 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
