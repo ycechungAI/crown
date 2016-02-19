@@ -23,7 +23,7 @@ var searchData=
   ['determinant',['determinant',['../group___math.html#ga73fe335f38752e2fe20fbd8713269a1e',1,'crown::determinant(const Matrix3x3 &amp;m)'],['../group___math.html#ga35411994177d07ddc83486cceecc1b1c',1,'crown::determinant(const Matrix4x4 &amp;m)']]],
   ['device',['Device',['../group___device.html',1,'']]],
   ['device',['Device',['../classcrown_1_1_device.html',1,'crown']]],
-  ['deviceoptions',['DeviceOptions',['../classcrown_1_1_device_options.html',1,'crown']]],
+  ['deviceoptions',['DeviceOptions',['../structcrown_1_1_device_options.html',1,'crown']]],
   ['disable_5factor_5fcollision',['disable_actor_collision',['../classcrown_1_1_physics_world.html#a47daaeaeac10cc5b94218bfa542db6fc',1,'crown::PhysicsWorld']]],
   ['disable_5factor_5fgravity',['disable_actor_gravity',['../classcrown_1_1_physics_world.html#a6f0bdba97804fb7c0419a7db4f2a7471',1,'crown::PhysicsWorld']]],
   ['diskfile',['DiskFile',['../classcrown_1_1_disk_file.html',1,'crown']]],

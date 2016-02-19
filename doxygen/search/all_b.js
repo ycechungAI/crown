@@ -30,7 +30,7 @@ var searchData=
   ['list_5ffiles',['list_files',['../classcrown_1_1_disk_filesystem.html#a4d7a6b630493d44f166cbd6a72fa5a80',1,'crown::DiskFilesystem::list_files()'],['../classcrown_1_1_filesystem.html#a382672dc39bc55ceab172b3c479074c3',1,'crown::Filesystem::list_files()']]],
   ['load',['load',['../classcrown_1_1_resource_manager.html#a4d0320bb66c272c82bd9b806770181d1',1,'crown::ResourceManager::load()'],['../structcrown_1_1_resource_package.html#a788f7fa52db81d6fd985a8683dcc06a2',1,'crown::ResourcePackage::load()']]],
   ['load_5flevel',['load_level',['../classcrown_1_1_world.html#a304747813047e9d286d496ab8ecabd21',1,'crown::World']]],
-  ['load_5fmodule_5ffunction',['load_module_function',['../structcrown_1_1_lua_environment.html#a5b076366f49d6405751abc78e3f11e1c',1,'crown::LuaEnvironment']]],
+  ['load_5flibs',['load_libs',['../structcrown_1_1_lua_environment.html#a2d7d36d685027854c30fe48a6e21aad2',1,'crown::LuaEnvironment']]],
   ['local_5fpose',['local_pose',['../structcrown_1_1_scene_graph.html#a244f42be5eed086de40609ab6885453f',1,'crown::SceneGraph']]],
   ['local_5fposition',['local_position',['../structcrown_1_1_scene_graph.html#a56e884ec51356a54290b62fcda13d9f4',1,'crown::SceneGraph']]],
   ['local_5frotation',['local_rotation',['../structcrown_1_1_scene_graph.html#a488c5a199febec3f1b2c0a8795cc5f25',1,'crown::SceneGraph']]],

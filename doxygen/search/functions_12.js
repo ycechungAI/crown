@@ -37,6 +37,7 @@ var searchData=
   ['set_5flocal_5frotation',['set_local_rotation',['../structcrown_1_1_scene_graph.html#a0c3b137c0eb4eb72969cbcd282978361',1,'crown::SceneGraph']]],
   ['set_5flocal_5fscale',['set_local_scale',['../structcrown_1_1_scene_graph.html#ab05acd7e1c0451607c543d97096c97f7',1,'crown::SceneGraph']]],
   ['set_5fmode',['set_mode',['../structcrown_1_1_display.html#a347187da2901ace2e10c62fd5f28981f',1,'crown::Display']]],
+  ['set_5fmodule_5fconstructor',['set_module_constructor',['../structcrown_1_1_lua_environment.html#a1a160bd5484dc82be50fe68786328db5',1,'crown::LuaEnvironment']]],
   ['set_5frotation',['set_rotation',['../group___math.html#gac76f5db064ce45028a62eeeae6cfe997',1,'crown::set_rotation(Matrix4x4 &amp;m, const Matrix3x3 &amp;rot)'],['../group___math.html#ga68154889c10dcc8c4d4f9af51fc37f05',1,'crown::set_rotation(Matrix4x4 &amp;m, const Quaternion &amp;rot)']]],
   ['set_5fscale',['set_scale',['../group___math.html#gadbd9403b6d423aaaf2da4c04d8f98d86',1,'crown::set_scale(Matrix3x3 &amp;m, const Vector3 &amp;s)'],['../group___math.html#ga4cb3a1da7a62f575ecec7c85efbf9491',1,'crown::set_scale(Matrix4x4 &amp;m, const Vector3 &amp;s)']]],
   ['set_5fsound_5fposition',['set_sound_position',['../classcrown_1_1_world.html#aef62f93e020c28f62200e635caf0ddc8',1,'crown::World']]],
