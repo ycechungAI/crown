@@ -11,7 +11,7 @@ var searchData=
   ['raycast',['raycast',['../classcrown_1_1_physics_world.html#ad66a38380cca75c082463b3c9786594e',1,'crown::PhysicsWorld']]],
   ['raycasthit',['RaycastHit',['../structcrown_1_1_raycast_hit.html',1,'crown']]],
   ['raycastmode',['RaycastMode',['../structcrown_1_1_raycast_mode.html',1,'crown']]],
-  ['read',['read',['../classcrown_1_1_disk_file.html#a8f722c96aa47f18b8f2e19bdd6335342',1,'crown::DiskFile::read()'],['../classcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../classcrown_1_1_null_file.html#a41616641260fc1d2a03d8616d77d02ab',1,'crown::NullFile::read()'],['../classcrown_1_1_os_file.html#ac350bab51145df5a7cc05c2ecc7cbd7a',1,'crown::OsFile::read()']]],
+  ['read',['read',['../classcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../classcrown_1_1_null_file.html#a41616641260fc1d2a03d8616d77d02ab',1,'crown::NullFile::read()']]],
   ['readresult',['ReadResult',['../structcrown_1_1_read_result.html',1,'crown']]],
   ['record_5ffloat',['record_float',['../namespacecrown_1_1profiler.html#a6010b0da2baf3016924042529a1b046c',1,'crown::profiler']]],
   ['record_5fvector3',['record_vector3',['../namespacecrown_1_1profiler.html#a13c2d80e128516bc6984954a9d8a1013',1,'crown::profiler']]],

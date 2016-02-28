@@ -9,6 +9,7 @@ var searchData=
   ['destroy',['destroy',['../structcrown_1_1_scene_graph.html#a12d7138264e1eda2a5215dc3c593ece0',1,'crown::SceneGraph::destroy()'],['../classcrown_1_1_unit_manager.html#aa860d341c7ed480b57938ece7e8eb299',1,'crown::UnitManager::destroy()'],['../namespacecrown_1_1display.html#aba6eb94302361ea2f9af0ebccbd3343c',1,'crown::display::destroy()'],['../namespacecrown_1_1input__device.html#a3d0b88e9253d2b78c2af835d909da38a',1,'crown::input_device::destroy()'],['../namespacecrown_1_1window.html#a6652a5dc7c1c4488179c5e554d221420',1,'crown::window::destroy()']]],
   ['destroy_5fcamera',['destroy_camera',['../classcrown_1_1_world.html#ac07b357ceebb68330df6f86827eefb83',1,'crown::World']]],
   ['destroy_5fdebug_5fline',['destroy_debug_line',['../classcrown_1_1_world.html#adc63cc0dffebb78c41a36b5f4396fd50',1,'crown::World']]],
+  ['destroy_5fgui',['destroy_gui',['../classcrown_1_1_world.html#ad7ea11ad19368f7df26fcd72eb3a2b6d',1,'crown::World']]],
   ['destroy_5flight',['destroy_light',['../classcrown_1_1_render_world.html#a1eb828b11ea54fc56c96a49a5d8a7741',1,'crown::RenderWorld']]],
   ['destroy_5fmaterial',['destroy_material',['../classcrown_1_1_material_manager.html#a89361a98a3905cd8ae436fae8adc0f94',1,'crown::MaterialManager']]],
   ['destroy_5fmesh',['destroy_mesh',['../classcrown_1_1_render_world.html#a488539603071da8019d76b4ca1826a1c',1,'crown::RenderWorld']]],
@@ -25,9 +26,5 @@ var searchData=
   ['distance_5fsquared',['distance_squared',['../group___math.html#ga32fdda0e26720f8a198ce349e9e925f8',1,'crown::distance_squared(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#ga8ca11400b8a604b6a7b53fa9cafc0f47',1,'crown::distance_squared(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gad3eb1a8c171ffc45025921a6e405e1a2',1,'crown::distance_squared(const Vector4 &amp;a, const Vector4 &amp;b)']]],
   ['distance_5fto_5fpoint',['distance_to_point',['../namespacecrown_1_1plane.html#a0658dd91db95eb7c6c577bb115adece3',1,'crown::plane']]],
   ['dot',['dot',['../group___math.html#ga2700eaa4ac075b6b8b713535ec4b330b',1,'crown::dot(const Quaternion &amp;a, const Quaternion &amp;b)'],['../group___math.html#gaae9a2bae1e07a43b18f1491c0f2f190c',1,'crown::dot(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#gad1c2f701385a5a987f3d47e1a98a7b99',1,'crown::dot(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gadcec8c8f9a4e57d1962aa3efec81391d',1,'crown::dot(const Vector4 &amp;a, const Vector4 &amp;b)']]],
-  ['draw_5fdebug',['draw_debug',['../classcrown_1_1_physics_world.html#a8cd9f4148c3c862a11bb41ebbeedfb69',1,'crown::PhysicsWorld::draw_debug()'],['../classcrown_1_1_render_world.html#a193c2029d2a5296dee5d38b18a0137a4',1,'crown::RenderWorld::draw_debug()']]],
-  ['draw_5fimage',['draw_image',['../structcrown_1_1_gui.html#a3ad4b12917968556e4a1a3f8c8edc92c',1,'crown::Gui']]],
-  ['draw_5fimage_5fuv',['draw_image_uv',['../structcrown_1_1_gui.html#a615a78b4c7327dc2da72f9538e904b3a',1,'crown::Gui']]],
-  ['draw_5frectangle',['draw_rectangle',['../structcrown_1_1_gui.html#a88534e2e853aa64c57824c6cba1a9cad',1,'crown::Gui']]],
-  ['draw_5ftext',['draw_text',['../structcrown_1_1_gui.html#a27066bd4ff249d570216d79f3c914d94',1,'crown::Gui']]]
+  ['draw_5fdebug',['draw_debug',['../classcrown_1_1_physics_world.html#a8cd9f4148c3c862a11bb41ebbeedfb69',1,'crown::PhysicsWorld::draw_debug()'],['../classcrown_1_1_render_world.html#a193c2029d2a5296dee5d38b18a0137a4',1,'crown::RenderWorld::draw_debug()']]]
 ];

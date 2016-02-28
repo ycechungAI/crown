@@ -5,7 +5,6 @@ var searchData=
   ['osevent',['OsEvent',['../structcrown_1_1_os_event.html',1,'crown']]],
   ['oseventqueue',['OsEventQueue',['../structcrown_1_1_os_event_queue.html',1,'crown']]],
   ['osexitevent',['OsExitEvent',['../structcrown_1_1_os_exit_event.html',1,'crown']]],
-  ['osfile',['OsFile',['../classcrown_1_1_os_file.html',1,'crown']]],
   ['osjoypadevent',['OsJoypadEvent',['../structcrown_1_1_os_joypad_event.html',1,'crown']]],
   ['oskeyboardevent',['OsKeyboardEvent',['../structcrown_1_1_os_keyboard_event.html',1,'crown']]],
   ['osmetricsevent',['OsMetricsEvent',['../structcrown_1_1_os_metrics_event.html',1,'crown']]],

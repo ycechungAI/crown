@@ -78,8 +78,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structcrown_1_1_gui-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -87,16 +87,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Manages the rendering of GUI objects.  
+<p>Immediate mode <a class="el" href="structcrown_1_1_gui.html" title="Immediate mode Gui. ">Gui</a>.  
  <a href="structcrown_1_1_gui.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="gui_8h_source.html">gui.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_gui_1_1_index_data.html">IndexData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_gui_1_1_vertex_data.html">VertexData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad87ba663cdb9104c50d79a2d1ec9d680"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad87ba663cdb9104c50d79a2d1ec9d680"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Gui</b> (u16 width, u16 height, const char *material)</td></tr>
-<tr class="separator:ad87ba663cdb9104c50d79a2d1ec9d680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af83172d53f5f0d361ce0addd22baeec9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af83172d53f5f0d361ce0addd22baeec9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Gui</b> (<a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> &amp;rm, <a class="el" href="classcrown_1_1_shader_manager.html">ShaderManager</a> &amp;sm, <a class="el" href="classcrown_1_1_material_manager.html">MaterialManager</a> &amp;mm, u16 width, u16 height)</td></tr>
+<tr class="separator:af83172d53f5f0d361ce0addd22baeec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64bebbfd5ec381078476e0d6b3b68fdb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64bebbfd5ec381078476e0d6b3b68fdb"></a>
 <a class="el" href="structcrown_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>resolution</b> () const </td></tr>
 <tr class="separator:a64bebbfd5ec381078476e0d6b3b68fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,227 +113,71 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (const <a cl
 <tr class="memitem:a2612f1b766447d901643f48bddc1ed3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2612f1b766447d901643f48bddc1ed3e"></a>
 <a class="el" href="structcrown_1_1_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>screen_to_gui</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;pos)</td></tr>
 <tr class="separator:a2612f1b766447d901643f48bddc1ed3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88534e2e853aa64c57824c6cba1a9cad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_gui.html#a88534e2e853aa64c57824c6cba1a9cad">draw_rectangle</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color=COLOR4_WHITE)</td></tr>
-<tr class="memdesc:a88534e2e853aa64c57824c6cba1a9cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a rectangle of size <em>size</em> at <em>pos</em>.  <a href="#a88534e2e853aa64c57824c6cba1a9cad">More...</a><br /></td></tr>
-<tr class="separator:a88534e2e853aa64c57824c6cba1a9cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ad4b12917968556e4a1a3f8c8edc92c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_gui.html#a3ad4b12917968556e4a1a3f8c8edc92c">draw_image</a> (const char *material, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color=COLOR4_WHITE)</td></tr>
-<tr class="memdesc:a3ad4b12917968556e4a1a3f8c8edc92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an image with the given <em>material</em>.  <a href="#a3ad4b12917968556e4a1a3f8c8edc92c">More...</a><br /></td></tr>
-<tr class="separator:a3ad4b12917968556e4a1a3f8c8edc92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a615a78b4c7327dc2da72f9538e904b3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_gui.html#a615a78b4c7327dc2da72f9538e904b3a">draw_image_uv</a> (const char *material, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;uv0, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;uv1, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color=COLOR4_WHITE)</td></tr>
-<tr class="memdesc:a615a78b4c7327dc2da72f9538e904b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an image with the given <em>material</em> and <em>uv0</em> and <em>uv1</em> coordinates.  <a href="#a615a78b4c7327dc2da72f9538e904b3a">More...</a><br /></td></tr>
-<tr class="separator:a615a78b4c7327dc2da72f9538e904b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27066bd4ff249d570216d79f3c914d94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_gui.html#a27066bd4ff249d570216d79f3c914d94">draw_text</a> (const char *str, const char *font, u32 font_size, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color=COLOR4_WHITE)</td></tr>
-<tr class="memdesc:a27066bd4ff249d570216d79f3c914d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the text <em>str</em> with the given <em>font</em> and <em>font_size</em>.  <a href="#a27066bd4ff249d570216d79f3c914d94">More...</a><br /></td></tr>
-<tr class="separator:a27066bd4ff249d570216d79f3c914d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a05ccb13e986dbb641e6b7688b96981da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05ccb13e986dbb641e6b7688b96981da"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
-<tr class="separator:a05ccb13e986dbb641e6b7688b96981da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77f85bbb152d017978e088301c0351ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77f85bbb152d017978e088301c0351ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>triangle</b> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;a, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;b, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;c, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:a77f85bbb152d017978e088301c0351ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accdad347041463b71e0f3429a9787b6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accdad347041463b71e0f3429a9787b6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rect3d</b> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:accdad347041463b71e0f3429a9787b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc9e6b2d99f0460bff3c8aabb2697fb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc9e6b2d99f0460bff3c8aabb2697fb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rect</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:afc9e6b2d99f0460bff3c8aabb2697fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8aeb86d371771a428d30e5e7afff6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb8aeb86d371771a428d30e5e7afff6e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>image_uv3d</b> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;uv0, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;uv1, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:abb8aeb86d371771a428d30e5e7afff6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdbbaf6778b2f808241bca50ce0f7f2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdbbaf6778b2f808241bca50ce0f7f2e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>image_uv</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;uv0, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;uv1, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:afdbbaf6778b2f808241bca50ce0f7f2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080203f92d5a6657bec7c35b3e72f41a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a080203f92d5a6657bec7c35b3e72f41a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>image3d</b> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:a080203f92d5a6657bec7c35b3e72f41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fa4631919ce7b5736411004e0e580b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2fa4631919ce7b5736411004e0e580b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;pos, const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;size, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:ae2fa4631919ce7b5736411004e0e580b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3362d19cfc1c45ddcfc0c458777b478c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3362d19cfc1c45ddcfc0c458777b478c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>text3d</b> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, u32 font_size, const char *str, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> font, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:a3362d19cfc1c45ddcfc0c458777b478c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bf8bf9744d096ae28bd73858f8655c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9bf8bf9744d096ae28bd73858f8655c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>text</b> (const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;pos, u32 font_size, const char *str, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> font, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> material, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="separator:ac9bf8bf9744d096ae28bd73858f8655c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ad8b90264ea1f77dceb1023f7f834c4c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8b90264ea1f77dceb1023f7f834c4c6"></a>
-u16&#160;</td><td class="memItemRight" valign="bottom"><b>m_width</b></td></tr>
-<tr class="separator:ad8b90264ea1f77dceb1023f7f834c4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a886c98a0d9b762b398a41a39bda09b3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a886c98a0d9b762b398a41a39bda09b3e"></a>
-u16&#160;</td><td class="memItemRight" valign="bottom"><b>m_height</b></td></tr>
-<tr class="separator:a886c98a0d9b762b398a41a39bda09b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a255b25b94810c39f832fe7fa69d3d4dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a255b25b94810c39f832fe7fa69d3d4dd"></a>
-<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_projection</b></td></tr>
-<tr class="separator:a255b25b94810c39f832fe7fa69d3d4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af04ff7db1a4638b20f59e2ae9b0a3d6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af04ff7db1a4638b20f59e2ae9b0a3d6e"></a>
-<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_pose</b></td></tr>
-<tr class="separator:af04ff7db1a4638b20f59e2ae9b0a3d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af165faa94aec89d33efc437d8e7c8067"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af165faa94aec89d33efc437d8e7c8067"></a>
+<a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_resource_manager</b></td></tr>
+<tr class="separator:af165faa94aec89d33efc437d8e7c8067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2e0c82ab62c72a604a31ae49a3338a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae2e0c82ab62c72a604a31ae49a3338a"></a>
+<a class="el" href="classcrown_1_1_shader_manager.html">ShaderManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_shader_manager</b></td></tr>
+<tr class="separator:aae2e0c82ab62c72a604a31ae49a3338a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb5276b82df0492baf1d257f22202c9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb5276b82df0492baf1d257f22202c9e"></a>
+<a class="el" href="classcrown_1_1_material_manager.html">MaterialManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_material_manager</b></td></tr>
+<tr class="separator:adb5276b82df0492baf1d257f22202c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde81b32871dc5560e9d7dc1d8bbdb67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acde81b32871dc5560e9d7dc1d8bbdb67"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>_width</b></td></tr>
+<tr class="separator:acde81b32871dc5560e9d7dc1d8bbdb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953e80819ec7215f63e8290e2dfc459c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a953e80819ec7215f63e8290e2dfc459c"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>_height</b></td></tr>
+<tr class="separator:a953e80819ec7215f63e8290e2dfc459c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77696ca43104ac682dcfb08f1364daa9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77696ca43104ac682dcfb08f1364daa9"></a>
+<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_projection</b></td></tr>
+<tr class="separator:a77696ca43104ac682dcfb08f1364daa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3a9c6da84236f0a2949a4db54613da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c3a9c6da84236f0a2949a4db54613da"></a>
+<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_world</b></td></tr>
+<tr class="separator:a5c3a9c6da84236f0a2949a4db54613da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b14b7f3db45d09d61d2911e44ebabb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b14b7f3db45d09d61d2911e44ebabb8"></a>
+bgfx::VertexDecl&#160;</td><td class="memItemRight" valign="bottom"><b>_pos_tex_col</b></td></tr>
+<tr class="separator:a3b14b7f3db45d09d61d2911e44ebabb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manages the rendering of GUI objects. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a88534e2e853aa64c57824c6cba1a9cad"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Gui::draw_rectangle </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em> = <code>COLOR4_WHITE</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws a rectangle of size <em>size</em> at <em>pos</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>Higher values of pos.z make the object appear in front of other objects. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a3ad4b12917968556e4a1a3f8c8edc92c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Gui::draw_image </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>material</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em> = <code>COLOR4_WHITE</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws an image with the given <em>material</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>Higher values of pos.z make the object appear in front of other objects. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a615a78b4c7327dc2da72f9538e904b3a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Gui::draw_image_uv </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>material</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
-          <td class="paramname"><em>uv0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector2.html">Vector2</a> &amp;&#160;</td>
-          <td class="paramname"><em>uv1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em> = <code>COLOR4_WHITE</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws an image with the given <em>material</em> and <em>uv0</em> and <em>uv1</em> coordinates. </p>
-<dl class="section note"><dt>Note</dt><dd>Higher values of pos.z make the object appear in front of other objects. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a27066bd4ff249d570216d79f3c914d94"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void crown::Gui::draw_text </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>font</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">u32&#160;</td>
-          <td class="paramname"><em>font_size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
-          <td class="paramname"><em>pos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;&#160;</td>
-          <td class="paramname"><em>color</em> = <code>COLOR4_WHITE</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draws the text <em>str</em> with the given <em>font</em> and <em>font_size</em>. </p>
-<dl class="section note"><dt>Note</dt><dd>Higher values of pos.z make the object appear in front of other objects. </dd></dl>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
+<div class="textblock"><p>Immediate mode <a class="el" href="structcrown_1_1_gui.html" title="Immediate mode Gui. ">Gui</a>. </p>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/world/<a class="el" href="gui_8h_source.html">gui.h</a></li>
 <li>src/world/gui.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2016 19:39:27 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 28 2016 23:05:17 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

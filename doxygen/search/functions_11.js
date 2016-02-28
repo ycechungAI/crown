@@ -7,7 +7,7 @@ var searchData=
   ['ray_5fplane_5fintersection',['ray_plane_intersection',['../group___math.html#ga5bab0b687e8fd89bec7be31f7a919eb1',1,'crown']]],
   ['ray_5fsphere_5fintersection',['ray_sphere_intersection',['../group___math.html#gaf2b6f91858fd117c1c59564d81076aa6',1,'crown']]],
   ['raycast',['raycast',['../classcrown_1_1_physics_world.html#ad66a38380cca75c082463b3c9786594e',1,'crown::PhysicsWorld']]],
-  ['read',['read',['../classcrown_1_1_disk_file.html#a8f722c96aa47f18b8f2e19bdd6335342',1,'crown::DiskFile::read()'],['../classcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../classcrown_1_1_null_file.html#a41616641260fc1d2a03d8616d77d02ab',1,'crown::NullFile::read()'],['../classcrown_1_1_os_file.html#ac350bab51145df5a7cc05c2ecc7cbd7a',1,'crown::OsFile::read()']]],
+  ['read',['read',['../classcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../classcrown_1_1_null_file.html#a41616641260fc1d2a03d8616d77d02ab',1,'crown::NullFile::read()']]],
   ['record_5ffloat',['record_float',['../namespacecrown_1_1profiler.html#a6010b0da2baf3016924042529a1b046c',1,'crown::profiler']]],
   ['record_5fvector3',['record_vector3',['../namespacecrown_1_1profiler.html#a13c2d80e128516bc6984954a9d8a1013',1,'crown::profiler']]],
   ['released',['released',['../structcrown_1_1_input_device.html#aca5505507065f99d02f9f1f1a8cf526e',1,'crown::InputDevice']]],

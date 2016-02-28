@@ -6,8 +6,6 @@ var searchData=
   ['shaderdata',['ShaderData',['../structcrown_1_1_shader_data.html',1,'crown']]],
   ['shadermanager',['ShaderManager',['../classcrown_1_1_shader_manager.html',1,'crown']]],
   ['shaderresource',['ShaderResource',['../structcrown_1_1_shader_resource.html',1,'crown']]],
-  ['shapedesc',['ShapeDesc',['../structcrown_1_1_shape_desc.html',1,'crown']]],
-  ['shapetype',['ShapeType',['../structcrown_1_1_shape_type.html',1,'crown']]],
   ['sortmap',['SortMap',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20crown_3a_3astringid64_2c_20crown_3a_3amaterial_20_2a_20_3e',['SortMap&lt; crown::StringId64, crown::Material * &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20crown_3a_3astringid64_2c_20resourcetypedata_20_3e',['SortMap&lt; crown::StringId64, ResourceTypeData &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],

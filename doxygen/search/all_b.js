@@ -35,7 +35,7 @@ var searchData=
   ['local_5fposition',['local_position',['../structcrown_1_1_scene_graph.html#a56e884ec51356a54290b62fcda13d9f4',1,'crown::SceneGraph']]],
   ['local_5frotation',['local_rotation',['../structcrown_1_1_scene_graph.html#a488c5a199febec3f1b2c0a8795cc5f25',1,'crown::SceneGraph']]],
   ['local_5fscale',['local_scale',['../structcrown_1_1_scene_graph.html#a3ab53d6a09fc7d5bda282c1d1eea97ab',1,'crown::SceneGraph']]],
-  ['local_5ftm',['local_tm',['../structcrown_1_1_shape_desc.html#ac00c814391fe48363991fc7fd620c0a6',1,'crown::ShapeDesc']]],
+  ['local_5ftm',['local_tm',['../structcrown_1_1_collider_desc.html#ac1827738a0d893bff1ce0ae65b6a5225',1,'crown::ColliderDesc']]],
   ['lock',['lock',['../structcrown_1_1_mutex.html#a93f3cd263b8241415bc6b3976beb3781',1,'crown::Mutex']]],
   ['logseverity',['LogSeverity',['../structcrown_1_1_log_severity.html',1,'crown']]],
   ['look',['look',['../group___math.html#ga40b84e237af5771786011fd2cb64135c',1,'crown::look(Matrix4x4 &amp;m, const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)'],['../group___math.html#ga8aac76709334bbb7528a08b5cf7c3261',1,'crown::look(const Vector3 &amp;dir, const Vector3 &amp;up=VECTOR3_YAXIS)']]],
