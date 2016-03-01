@@ -94,9 +94,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a049b425324bdce2184dd3bb6818bd8d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a049b425324bdce2184dd3bb6818bd8d7">DiskFilesystem</a> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
-<tr class="memdesc:a049b425324bdce2184dd3bb6818bd8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the current working directory of the engine executable.  <a href="#a049b425324bdce2184dd3bb6818bd8d7">More...</a><br /></td></tr>
-<tr class="separator:a049b425324bdce2184dd3bb6818bd8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76e16f6feee6773019e854abb24f3180"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a76e16f6feee6773019e854abb24f3180">DiskFilesystem</a> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, const char *prefix)</td></tr>
 <tr class="memdesc:a76e16f6feee6773019e854abb24f3180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the given <em>prefix</em>.  <a href="#a76e16f6feee6773019e854abb24f3180">More...</a><br /></td></tr>
 <tr class="separator:a76e16f6feee6773019e854abb24f3180"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,24 +138,6 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Access files on disk. </p>
 <p>All the file paths can be either relative or absolute. When a relative path is given, it is automatically translated to its absolute counterpart based on the file source's root path. Accessing files using absolute path directly is also possible, but platform-specific and thus generally not recommended. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a049b425324bdce2184dd3bb6818bd8d7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">crown::DiskFilesystem::DiskFilesystem </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;&#160;</td>
-          <td class="paramname"><em>a</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the root path to the current working directory of the engine executable. </p>
-
-</div>
-</div>
 <a class="anchor" id="a76e16f6feee6773019e854abb24f3180"></a>
 <div class="memitem">
 <div class="memproto">
@@ -563,7 +542,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 28 2016 23:05:17 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 1 2016 18:19:16 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -5,6 +5,7 @@ var searchData=
   ['audio_5fglobals',['audio_globals',['../namespacecrown_1_1audio__globals.html',1,'crown']]],
   ['console_5fserver_5fglobals',['console_server_globals',['../namespacecrown_1_1console__server__globals.html',1,'crown']]],
   ['display',['display',['../namespacecrown_1_1display.html',1,'crown']]],
+  ['error',['error',['../namespacecrown_1_1error.html',1,'crown']]],
   ['event_5fstream',['event_stream',['../namespacecrown_1_1event__stream.html',1,'crown']]],
   ['frustum',['frustum',['../namespacecrown_1_1frustum.html',1,'crown']]],
   ['hash',['hash',['../namespacecrown_1_1hash.html',1,'crown']]],

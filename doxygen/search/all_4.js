@@ -13,6 +13,7 @@ var searchData=
   ['entry',['Entry',['../structcrown_1_1_hash_1_1_entry.html',1,'crown::Hash']]],
   ['enum',['Enum',['../structcrown_1_1_os_event.html#a5cd5ac15275a6c9c77cf8ef585e54f89',1,'crown::OsEvent']]],
   ['equal_5fto',['equal_to',['../structcrown_1_1equal__to.html',1,'crown']]],
+  ['error',['Error',['../group___error.html',1,'']]],
   ['events',['events',['../classcrown_1_1_world.html#a240fb1754119bbb8183e146ec6d67cda',1,'crown::World']]],
   ['eventstream',['EventStream',['../group___containers.html#gabf3f2058f3c0a30ddb3fa7b37663f783',1,'crown']]],
   ['eventtype',['EventType',['../structcrown_1_1_event_type.html',1,'crown']]],

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Crown: crown::CompileOptions Struct Reference</title>
+<title>Crown: crown::CompileOptions Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,16 +73,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_compile_options.html">CompileOptions</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_compile_options.html">CompileOptions</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structcrown_1_1_compile_options-members.html">List of all members</a>  </div>
+<a href="classcrown_1_1_compile_options-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::CompileOptions Struct Reference</div>  </div>
+<div class="title">crown::CompileOptions Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -103,6 +102,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>file_exists</b> (cons
 <tr class="memitem:ac2b8fe9012ae47e2ccf901be0b5bf060"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2b8fe9012ae47e2ccf901be0b5bf060"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>resource_exists</b> (const char *type, const char *name)</td></tr>
 <tr class="separator:ac2b8fe9012ae47e2ccf901be0b5bf060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af139044a197b2c9ae39f44352ebc3cc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af139044a197b2c9ae39f44352ebc3cc1"></a>
+<a class="el" href="structcrown_1_1_array.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read_temporary</b> (const char *path)</td></tr>
+<tr class="separator:af139044a197b2c9ae39f44352ebc3cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2295026f6ff4f684259ff57eb0732d69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2295026f6ff4f684259ff57eb0732d69"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_temporary</b> (const char *path, const char *data, u32 size)</td></tr>
+<tr class="separator:a2295026f6ff4f684259ff57eb0732d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d55cc2df5dd53d7c599d5eaa7294b4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d55cc2df5dd53d7c599d5eaa7294b4f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_temporary</b> (const char *path, const <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;data)</td></tr>
+<tr class="separator:a4d55cc2df5dd53d7c599d5eaa7294b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e9dac36239a61ac0e258541eb0b2780"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e9dac36239a61ac0e258541eb0b2780"></a>
 <a class="el" href="structcrown_1_1_array.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (const char *path)</td></tr>
 <tr class="separator:a3e9dac36239a61ac0e258541eb0b2780"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,32 +139,14 @@ const <a class="el" href="structcrown_1_1_vector.html">Vector</a>&lt; <a class="
 <tr class="memitem:a3f38afb2a125980a436fa22c376fbc77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f38afb2a125980a436fa22c376fbc77"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_dependency</b> (const char *path)</td></tr>
 <tr class="separator:a3f38afb2a125980a436fa22c376fbc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a3406abf8693085d36a5fa361e6a76555"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3406abf8693085d36a5fa361e6a76555"></a>
-<a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_fs</b></td></tr>
-<tr class="separator:a3406abf8693085d36a5fa361e6a76555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dbd110eb2780a159703c31064e448b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dbd110eb2780a159703c31064e448b4"></a>
-<a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_output</b></td></tr>
-<tr class="separator:a6dbd110eb2780a159703c31064e448b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0de803e348755463fe8d6685157109"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b0de803e348755463fe8d6685157109"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>_platform</b></td></tr>
-<tr class="separator:a6b0de803e348755463fe8d6685157109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04d13b58a44b4756b69d7db01e125a3e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04d13b58a44b4756b69d7db01e125a3e"></a>
-jmp_buf *&#160;</td><td class="memItemRight" valign="bottom"><b>_jmpbuf</b></td></tr>
-<tr class="separator:a04d13b58a44b4756b69d7db01e125a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb3b0b89bb447efc70f651dbae2f1749"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb3b0b89bb447efc70f651dbae2f1749"></a>
-<a class="el" href="structcrown_1_1_vector.html">Vector</a>&lt; <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_dependencies</b></td></tr>
-<tr class="separator:abb3b0b89bb447efc70f651dbae2f1749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/resource/<a class="el" href="compile__options_8h_source.html">compile_options.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 28 2016 23:05:17 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 1 2016 18:19:16 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
