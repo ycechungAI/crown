@@ -8,7 +8,7 @@ var searchData=
   ['unlock',['unlock',['../structcrown_1_1_mutex.html#a40ad27c8b1c244d5c156687086b32633',1,'crown::Mutex']]],
   ['unpause',['unpause',['../classcrown_1_1_device.html#aa87b62fff8199694dac0e9222ee66e84',1,'crown::Device']]],
   ['up',['up',['../group___math.html#ga95de9230cfa21f2eb5cb13493b01faca',1,'crown']]],
-  ['update',['update',['../classcrown_1_1_console_server.html#a926e0ce3bf4788d72ae453d5d74f1cfe',1,'crown::ConsoleServer::update()'],['../classcrown_1_1_device.html#a24e92274ccece343451b634cb695fd57',1,'crown::Device::update()'],['../classcrown_1_1_input_manager.html#a4d8b1493055ea64aedc8630401d91a27',1,'crown::InputManager::update()'],['../classcrown_1_1_physics_world.html#a77fecbc29d6e7963b17a901f5d37df3a',1,'crown::PhysicsWorld::update()'],['../classcrown_1_1_world.html#af11629a836727966af7ad1b6ec484dad',1,'crown::World::update()'],['../namespacecrown_1_1console__server__globals.html#a97863fc67bd799191e1deee489ceae36',1,'crown::console_server_globals::update()']]],
+  ['update',['update',['../classcrown_1_1_console_server.html#a926e0ce3bf4788d72ae453d5d74f1cfe',1,'crown::ConsoleServer::update()'],['../classcrown_1_1_input_manager.html#a4d8b1493055ea64aedc8630401d91a27',1,'crown::InputManager::update()'],['../classcrown_1_1_physics_world.html#a77fecbc29d6e7963b17a901f5d37df3a',1,'crown::PhysicsWorld::update()'],['../classcrown_1_1_world.html#af11629a836727966af7ad1b6ec484dad',1,'crown::World::update()']]],
   ['update_5fanimations',['update_animations',['../classcrown_1_1_world.html#aa3ccd3ff490052af75d8313ee46e5fae',1,'crown::World']]],
   ['update_5fscene',['update_scene',['../classcrown_1_1_world.html#a6b51d033c4386657d6ed9f459c9c20a3',1,'crown::World']]]
 ];

@@ -28,5 +28,6 @@ var searchData=
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],
   ['right',['right',['../group___math.html#ga9340f3b72e9b7db6d4370d4493e33588',1,'crown']]],
   ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]],
-  ['rtrim',['rtrim',['../structcrown_1_1_dynamic_string.html#aa6de3c5f496d1423d3a82152f8cb488b',1,'crown::DynamicString']]]
+  ['rtrim',['rtrim',['../structcrown_1_1_dynamic_string.html#aa6de3c5f496d1423d3a82152f8cb488b',1,'crown::DynamicString']]],
+  ['run',['run',['../classcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device']]]
 ];

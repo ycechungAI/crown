@@ -95,14 +95,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a596bb0489e64caf33f4e52c46be3cc40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a596bb0489e64caf33f4e52c46be3cc40"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Device</b> (const <a class="el" href="structcrown_1_1_device_options.html">DeviceOptions</a> &amp;opts)</td></tr>
 <tr class="separator:a596bb0489e64caf33f4e52c46be3cc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa779586591964f8cb126087cea0682d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa779586591964f8cb126087cea0682d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#afa779586591964f8cb126087cea0682d">init</a> ()</td></tr>
-<tr class="memdesc:afa779586591964f8cb126087cea0682d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the engine. <br /></td></tr>
-<tr class="separator:afa779586591964f8cb126087cea0682d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64897279f023b23c2cd682a8fa2b106e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64897279f023b23c2cd682a8fa2b106e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#a64897279f023b23c2cd682a8fa2b106e">shutdown</a> ()</td></tr>
-<tr class="memdesc:a64897279f023b23c2cd682a8fa2b106e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdowns the engine freeing all the allocated resources. <br /></td></tr>
-<tr class="separator:a64897279f023b23c2cd682a8fa2b106e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a55464f42fa29940670268644b7cf0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8a55464f42fa29940670268644b7cf0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0">run</a> ()</td></tr>
+<tr class="memdesc:aa8a55464f42fa29940670268644b7cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the engine. <br /></td></tr>
+<tr class="separator:aa8a55464f42fa29940670268644b7cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a660e83de8f547b2886b5ebd473e0357e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a660e83de8f547b2886b5ebd473e0357e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#a660e83de8f547b2886b5ebd473e0357e">argc</a> () const </td></tr>
 <tr class="memdesc:a660e83de8f547b2886b5ebd473e0357e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of command line parameters. <br /></td></tr>
@@ -123,10 +119,6 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#aaed00161204fdc77f9d5e9ae474b8f0c">version</a> () const </td></tr>
 <tr class="memdesc:aaed00161204fdc77f9d5e9ae474b8f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying the engine version. <br /></td></tr>
 <tr class="separator:aaed00161204fdc77f9d5e9ae474b8f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47a272de70b847996435d66b152f7608"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47a272de70b847996435d66b152f7608"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#a47a272de70b847996435d66b152f7608">is_running</a> () const </td></tr>
-<tr class="memdesc:a47a272de70b847996435d66b152f7608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns wheter the engine is running. <br /></td></tr>
-<tr class="separator:a47a272de70b847996435d66b152f7608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa152b26b4d9d19ea8e04937ff83d5627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa152b26b4d9d19ea8e04937ff83d5627"></a>
 u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#aa152b26b4d9d19ea8e04937ff83d5627">frame_count</a> () const </td></tr>
 <tr class="memdesc:aa152b26b4d9d19ea8e04937ff83d5627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of frames rendered. <br /></td></tr>
@@ -155,10 +147,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#a42944015e4989ccafcad7730ce9d3f91">resolution</a> (u16 &amp;width, u16 &amp;height)</td></tr>
 <tr class="memdesc:a42944015e4989ccafcad7730ce9d3f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the main window resolution. <br /></td></tr>
 <tr class="separator:a42944015e4989ccafcad7730ce9d3f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24e92274ccece343451b634cb695fd57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24e92274ccece343451b634cb695fd57"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#a24e92274ccece343451b634cb695fd57">update</a> ()</td></tr>
-<tr class="memdesc:a24e92274ccece343451b634cb695fd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all the subsystems. <br /></td></tr>
-<tr class="separator:a24e92274ccece343451b634cb695fd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5d67f6089395a436d5cfb6074c4ffb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f5d67f6089395a436d5cfb6074c4ffb"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#a2f5d67f6089395a436d5cfb6074c4ffb">render</a> (<a class="el" href="classcrown_1_1_world.html">World</a> &amp;world, <a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> camera)</td></tr>
 <tr class="memdesc:a2f5d67f6089395a436d5cfb6074c4ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders <em>world</em> using <em>camera</em>. <br /></td></tr>
@@ -182,9 +170,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#afae63663bdee167465f128a8e56754c9">reload</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name)</td></tr>
 <tr class="memdesc:afae63663bdee167465f128a8e56754c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads the resource <em>type</em> <em>name</em>. <br /></td></tr>
 <tr class="separator:afae63663bdee167465f128a8e56754c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9edbf18cc925fcc35095d164fd8ae3ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9edbf18cc925fcc35095d164fd8ae3ff"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (const char *msg)</td></tr>
-<tr class="separator:a9edbf18cc925fcc35095d164fd8ae3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad35ccff9c1681865b26e3d548798d3de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad35ccff9c1681865b26e3d548798d3de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#ad35ccff9c1681865b26e3d548798d3de">log</a> (const char *msg, LogSeverity::Enum severity)</td></tr>
+<tr class="memdesc:ad35ccff9c1681865b26e3d548798d3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs <em>msg</em> to log file and console. <br /></td></tr>
+<tr class="separator:ad35ccff9c1681865b26e3d548798d3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4bf6dd82781517c419cfcfdd314145"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d4bf6dd82781517c419cfcfdd314145"></a>
+<a class="el" href="classcrown_1_1_console_server.html">ConsoleServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#a0d4bf6dd82781517c419cfcfdd314145">console_server</a> ()</td></tr>
+<tr class="memdesc:a0d4bf6dd82781517c419cfcfdd314145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the console server. <br /></td></tr>
+<tr class="separator:a0d4bf6dd82781517c419cfcfdd314145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1d156cc8bccbec0a3475a2d64287af9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1d156cc8bccbec0a3475a2d64287af9"></a>
+<a class="el" href="classcrown_1_1_bundle_compiler.html">BundleCompiler</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#ad1d156cc8bccbec0a3475a2d64287af9">bundle_compiler</a> ()</td></tr>
+<tr class="memdesc:ad1d156cc8bccbec0a3475a2d64287af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bundle compiler. <br /></td></tr>
+<tr class="separator:ad1d156cc8bccbec0a3475a2d64287af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf61aaf38128a36942ccb49e1b417300"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf61aaf38128a36942ccb49e1b417300"></a>
 <a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_device.html#aaf61aaf38128a36942ccb49e1b417300">resource_manager</a> ()</td></tr>
 <tr class="memdesc:aaf61aaf38128a36942ccb49e1b417300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the resource manager. <br /></td></tr>
@@ -247,7 +244,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>log</b> (const char *
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 1 2016 18:19:16 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 7 2016 18:44:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

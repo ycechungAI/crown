@@ -385,6 +385,7 @@ tt.literal {
 <li><a class="reference internal" href="#example" id="id6">3.1&nbsp;&nbsp;&nbsp;Example</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#command-line-reference" id="id7">4&nbsp;&nbsp;&nbsp;Command line reference</a></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -421,6 +422,54 @@ tt.literal {
 *.txt
 </pre>
 </div>
+</div>
+<div class="section" id="command-line-reference">
+<h1><a class="toc-backref" href="#id7">4&nbsp;&nbsp;&nbsp;Command line reference</a></h1>
+<blockquote>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-h</span> <span class="pre">--help</span></tt></dt>
+<dd>Display the help.</dd>
+<dt><tt class="docutils literal"><span class="pre">-v</span> <span class="pre">--version</span></tt></dt>
+<dd>Display engine version.</dd>
+<dt><tt class="docutils literal"><span class="pre">--source-dir</span> &lt;path&gt;</tt></dt>
+<dd><p class="first">Use &lt;path&gt; as the source directory for resource compilation.</p>
+<p class="last">The &lt;path&gt; must be absolute.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--bundle-dir</span> &lt;path&gt;</tt></dt>
+<dd><p class="first">Use &lt;path&gt; as the destination directory for compiled resources.</p>
+<p class="last">The &lt;path&gt; must be absolute.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--boot-dir</span> &lt;path&gt;</tt></dt>
+<dd><p class="first">Boot the engine with the <tt class="docutils literal">boot.config</tt> from given &lt;path&gt;.</p>
+<p class="last">The &lt;path&gt; must be relative.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--compile</span></tt></dt>
+<dd><p class="first">Do a full compile of the resources.</p>
+<p class="last">When using this option you must also specify <tt class="docutils literal"><span class="pre">--platform</span></tt>, <tt class="docutils literal"><span class="pre">--source-dir</span></tt> and <tt class="docutils literal"><span class="pre">--bundle-dir</span></tt>.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--platform</span> &lt;platform&gt;</tt></dt>
+<dd><p class="first">Compile resources for the given &lt;platform&gt;.
+Possible values for &lt;platform&gt; are:</p>
+<ul class="last simple">
+<li><tt class="docutils literal">linux</tt></li>
+<li><tt class="docutils literal">windows</tt></li>
+<li><tt class="docutils literal">android</tt></li>
+</ul>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--continue</span></tt></dt>
+<dd>Run the engine after resource compilation.</dd>
+<dt><tt class="docutils literal"><span class="pre">--console-port</span> &lt;port&gt;</tt></dt>
+<dd><p class="first">Set port of the console.</p>
+<p class="last">When no port is specified, the engine uses the port 10001.</p>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">--wait-console</span></tt></dt>
+<dd>Wait for a console connection before starting up.</dd>
+<dt><tt class="docutils literal"><span class="pre">--parent-window</span> &lt;handle&gt;</tt></dt>
+<dd><p class="first">Set the parent window &lt;handle&gt; of the main window.</p>
+<p class="last">This option should be used only by the tools.</p>
+</dd>
+</dl>
+</blockquote>
 </div>
 </div>
 </body>
