@@ -1100,7 +1100,7 @@ Note that to unload the resources loaded by the package, you have to call
 ResourcePackage.unload() first.</dd>
 <dt><strong>console_send</strong> (table)</dt>
 <dd>Sends the given lua <em>table</em> to clients connected to the engine.
-Note that the current version only supports explicitly escaped strings as key/value pairs.</dd>
+Values can be either nil, bool, number, string, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
 <dt><strong>can_get</strong> (type, name) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the resource (type, name) is loaded.
 When resource autoload is enabled it always returns true.</dd>
