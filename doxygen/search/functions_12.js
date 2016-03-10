@@ -60,7 +60,7 @@ var searchData=
   ['sort',['sort',['../namespacecrown_1_1sort__map.html#ab16ab415a05343486a99bcdbddad0c83',1,'crown::sort_map']]],
   ['sound_5fworld',['sound_world',['../classcrown_1_1_world.html#a8275874f07bcc65744e343e4f283f4d9',1,'crown::World']]],
   ['space',['space',['../namespacecrown_1_1queue.html#a804f7008578e8e36b401bd95d6b5bbbd',1,'crown::queue']]],
-  ['spawn_5fempty_5funit',['spawn_empty_unit',['../classcrown_1_1_world.html#a16d241f5246d618a0c3a8ad7ea9a0bbc',1,'crown::World']]],
+  ['spawn_5fempty_5funit',['spawn_empty_unit',['../classcrown_1_1_world.html#a20a69bb631bca10443962de49d992f02',1,'crown::World']]],
   ['spawn_5funit',['spawn_unit',['../classcrown_1_1_world.html#ac7f415d100fefa4f03ccab6dbc068633',1,'crown::World']]],
   ['sprite_5finstances',['sprite_instances',['../classcrown_1_1_render_world.html#a0dcef533f3f2642b023b291b62e7f3ea',1,'crown::RenderWorld']]],
   ['starts_5fwith',['starts_with',['../structcrown_1_1_dynamic_string.html#ab5a7da82ebd34dfddf35b0c5bf8ec649',1,'crown::DynamicString']]],

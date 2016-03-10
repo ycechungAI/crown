@@ -44,6 +44,7 @@ var searchData=
   ['pop',['pop',['../structcrown_1_1_lua_stack.html#ac9379212a62b8678527730218894e7be',1,'crown::LuaStack::pop()'],['../namespacecrown_1_1priority__queue.html#af6c5dfe11266b53b6c162ed33f173474',1,'crown::priority_queue::pop()'],['../namespacecrown_1_1queue.html#abee6d9b92fc48acee546176fe744a219',1,'crown::queue::pop()']]],
   ['pop_5fback',['pop_back',['../namespacecrown_1_1array.html#a1f1ff1109a78a27a59aaab9f6fa7712d',1,'crown::array::pop_back()'],['../namespacecrown_1_1queue.html#a27df0669c8ec6687932fa861e754f0c8',1,'crown::queue::pop_back()'],['../namespacecrown_1_1vector.html#affa1e11905f198c1c3c7418cf3605a17',1,'crown::vector::pop_back()']]],
   ['pop_5ffront',['pop_front',['../namespacecrown_1_1queue.html#a13a36d2a8c6e8f754b64d0d43ae7ce77',1,'crown::queue']]],
+  ['pose',['Pose',['../structcrown_1_1_scene_graph_1_1_pose.html',1,'crown::SceneGraph']]],
   ['position',['position',['../structcrown_1_1_raycast_hit.html#a9b9b487ba20dc315fd7012c71d999904',1,'crown::RaycastHit::position()'],['../classcrown_1_1_file.html#a31b2b660e3b55d72c2d56abe7c1410ad',1,'crown::File::position()'],['../classcrown_1_1_null_file.html#ab014bafa2525ad2dd0dbb8e82e6d5ce0',1,'crown::NullFile::position()'],['../classcrown_1_1_physics_world.html#ae54fef28b7b164784da2b9727c432229',1,'crown::PhysicsWorld::position()']]],
   ['power',['power',['../group___math.html#ga3e49f37ab1a6e99960a3efec2c9717fa',1,'crown']]],
   ['pressed',['pressed',['../structcrown_1_1_input_device.html#a56c5527e5924b5df7773a744d46b6380',1,'crown::InputDevice']]],

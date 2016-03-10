@@ -78,7 +78,7 @@ var searchData=
   ['soundtype',['SoundType',['../structcrown_1_1_sound_type.html',1,'crown']]],
   ['soundworld',['SoundWorld',['../classcrown_1_1_sound_world.html',1,'crown']]],
   ['space',['space',['../namespacecrown_1_1queue.html#a804f7008578e8e36b401bd95d6b5bbbd',1,'crown::queue']]],
-  ['spawn_5fempty_5funit',['spawn_empty_unit',['../classcrown_1_1_world.html#a16d241f5246d618a0c3a8ad7ea9a0bbc',1,'crown::World']]],
+  ['spawn_5fempty_5funit',['spawn_empty_unit',['../classcrown_1_1_world.html#a20a69bb631bca10443962de49d992f02',1,'crown::World']]],
   ['spawn_5funit',['spawn_unit',['../classcrown_1_1_world.html#ac7f415d100fefa4f03ccab6dbc068633',1,'crown::World']]],
   ['sphere',['Sphere',['../structcrown_1_1_sphere.html',1,'crown']]],
   ['sphereshape',['SphereShape',['../structcrown_1_1_sphere_shape.html',1,'crown']]],
