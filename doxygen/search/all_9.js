@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['join',['join',['../namespacecrown_1_1path.html#a1d0b119d8f4511e73004673e2832ae2a',1,'crown::path']]],
+  ['join',['join',['../namespacecrown_1_1path.html#a0af8ce6a17bf3cb2611ffb44810e50ca',1,'crown::path']]],
   ['jointdesc',['JointDesc',['../structcrown_1_1_joint_desc.html',1,'crown']]],
   ['jointinstance',['JointInstance',['../structcrown_1_1_joint_instance.html',1,'crown']]],
   ['jointtype',['JointType',['../structcrown_1_1_joint_type.html',1,'crown']]],

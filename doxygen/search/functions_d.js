@@ -1,7 +1,6 @@
 var searchData=
 [
   ['name',['name',['../classcrown_1_1_proxy_allocator.html#add272685dfbef5868815f98e9257e51f',1,'crown::ProxyAllocator::name()'],['../structcrown_1_1_input_device.html#a77cdbecc53b949e4bc61302ab5c7500d',1,'crown::InputDevice::name()']]],
-  ['netaddress',['NetAddress',['../structcrown_1_1_net_address.html#a7fcce5ffdaf998b3d707d839f39e79b2',1,'crown::NetAddress']]],
   ['next_5fmatrix4x4',['next_matrix4x4',['../structcrown_1_1_lua_environment.html#af1fe23bc5051b9ab99a09d3eb755b980',1,'crown::LuaEnvironment']]],
   ['next_5fquaternion',['next_quaternion',['../structcrown_1_1_lua_environment.html#a310af148897a887d8840a33491dc81be',1,'crown::LuaEnvironment']]],
   ['next_5fvector3',['next_vector3',['../structcrown_1_1_lua_environment.html#a7cc6bb8feab98f9052bf05e1b6792576',1,'crown::LuaEnvironment']]],
