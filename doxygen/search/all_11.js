@@ -34,14 +34,14 @@ var searchData=
   ['resource_5fmanager',['resource_manager',['../classcrown_1_1_device.html#aaf61aaf38128a36942ccb49e1b417300',1,'crown::Device']]],
   ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html',1,'crown']]],
   ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html#ac56e552f3417825f8da5ff3c1d26fa2e',1,'crown::ResourceLoader']]],
-  ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#a3e117a0d3466aa31e8e587783d803aca',1,'crown::ResourceManager']]],
   ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html',1,'crown']]],
+  ['resourcemanager',['ResourceManager',['../classcrown_1_1_resource_manager.html#a3e117a0d3466aa31e8e587783d803aca',1,'crown::ResourceManager']]],
   ['resourcepackage',['ResourcePackage',['../structcrown_1_1_resource_package.html',1,'crown']]],
   ['resourcerequest',['ResourceRequest',['../structcrown_1_1_resource_request.html',1,'crown']]],
   ['restore',['restore',['../structcrown_1_1_window.html#a66da1ae8f0f1e4cf51d6b250f7dfad4c',1,'crown::Window']]],
   ['resume_5fall',['resume_all',['../classcrown_1_1_sound_world.html#a681baabfd39d69cd9b2bc49d512c2bf3',1,'crown::SoundWorld']]],
   ['right',['right',['../group___math.html#ga9340f3b72e9b7db6d4370d4493e33588',1,'crown']]],
-  ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]],
+  ['rotation',['rotation',['../structcrown_1_1_physics_transform_event.html#a43fb68e2820b8604695df9dcb6dc60bb',1,'crown::PhysicsTransformEvent::rotation()'],['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown::rotation()']]],
   ['rtrim',['rtrim',['../structcrown_1_1_dynamic_string.html#aa6de3c5f496d1423d3a82152f8cb488b',1,'crown::DynamicString']]],
   ['run',['run',['../classcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device']]]
 ];

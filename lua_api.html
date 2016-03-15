@@ -541,6 +541,8 @@ tt.literal {
 <dl class="docutils">
 <dt><strong>Quaternion</strong> (axis, angle) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
 <dd>Returns a new quaternion from <em>axis</em> and <em>angle</em>.</dd>
+<dt><strong>from_elements</strong> (x, y, z, w) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
+<dd>Returns a new quaternion from individual elements.</dd>
 <dt><strong>negate</strong> (q) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
 <dd>Negates the quaternion <em>q</em> and returns the result.</dd>
 <dt><strong>identity</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
@@ -877,7 +879,7 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <h2><a class="toc-backref" href="#id19">Mesh</a></h2>
 <blockquote>
 <dl class="docutils">
-<dt><strong>create_mesh</strong> (rw, unit, mesh_resource, geometry_name, material_resource, visible) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
+<dt><strong>create_mesh</strong> (rw, unit, mesh_resource, geometry_name, material_resource, visible, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates a new mesh instance for <em>unit</em> and returns its id.</dd>
 <dt><strong>destroy_mesh</strong> (rw, id)</dt>
 <dd>Destroys the mesh <em>id</em>.</dd>

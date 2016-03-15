@@ -10,7 +10,7 @@ var searchData=
   ['seek_5fto_5fend',['seek_to_end',['../classcrown_1_1_file.html#ab045f19a41718fa85a71ac4d4c9d6870',1,'crown::File::seek_to_end()'],['../classcrown_1_1_null_file.html#ac27f8739e145abea99ee1f90cf58cc75',1,'crown::NullFile::seek_to_end()']]],
   ['semaphore',['Semaphore',['../structcrown_1_1_semaphore.html',1,'crown']]],
   ['send',['send',['../classcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73',1,'crown::ConsoleServer']]],
-  ['set',['set',['../structcrown_1_1_dynamic_string.html#a55117f82a541c49bdd0c7ef933285a55',1,'crown::DynamicString::set()'],['../namespacecrown_1_1hash.html#adc3f9283e32babee1138a897c122e908',1,'crown::hash::set()'],['../namespacecrown_1_1map.html#aea7e2bdf60ff931d446a3e2e305815af',1,'crown::map::set()']]],
+  ['set',['set',['../structcrown_1_1_i_p_address.html#ac828ab082c0ce30d2f24841913d52d07',1,'crown::IPAddress::set()'],['../structcrown_1_1_dynamic_string.html#a55117f82a541c49bdd0c7ef933285a55',1,'crown::DynamicString::set()'],['../namespacecrown_1_1hash.html#adc3f9283e32babee1138a897c122e908',1,'crown::hash::set()'],['../namespacecrown_1_1map.html#aea7e2bdf60ff931d446a3e2e305815af',1,'crown::map::set()']]],
   ['set_5factor_5fangular_5fdamping',['set_actor_angular_damping',['../classcrown_1_1_physics_world.html#a0deb1ecacaa1a53b25a99b1a286e5ae4',1,'crown::PhysicsWorld']]],
   ['set_5factor_5fangular_5fvelocity',['set_actor_angular_velocity',['../classcrown_1_1_physics_world.html#ae284a5c559ba91e325759b39c918d325',1,'crown::PhysicsWorld']]],
   ['set_5factor_5fcollision_5ffilter',['set_actor_collision_filter',['../classcrown_1_1_physics_world.html#a0cbf7a1e0fb5bfe478b2f191094d7f1f',1,'crown::PhysicsWorld']]],
