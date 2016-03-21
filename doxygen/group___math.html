@@ -170,6 +170,12 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group
 <tr class="memitem:ga342ce1be8389270ca2fced2859f787ad"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga342ce1be8389270ca2fced2859f787ad">crown::ray_obb_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Matrix4x4 &amp;tm, const Vector3 &amp;half_extents)</td></tr>
 <tr class="memdesc:ga342ce1be8389270ca2fced2859f787ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with the oriented bounding box (tm, half_extents) or -1.0 if no intersection.  <a href="group___math.html#ga342ce1be8389270ca2fced2859f787ad">More...</a><br /></td></tr>
 <tr class="separator:ga342ce1be8389270ca2fced2859f787ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0611bb224786987a21b03b87b20e8638"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga0611bb224786987a21b03b87b20e8638">crown::ray_triangle_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Vector3 &amp;v0, const Vector3 &amp;v1, const Vector3 &amp;v2)</td></tr>
+<tr class="memdesc:ga0611bb224786987a21b03b87b20e8638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with the triangle (v0, v1, v2) or -1.0 if no intersection.  <a href="group___math.html#ga0611bb224786987a21b03b87b20e8638">More...</a><br /></td></tr>
+<tr class="separator:ga0611bb224786987a21b03b87b20e8638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55966cae0ae6ceef84a396766304aeba"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga55966cae0ae6ceef84a396766304aeba">crown::ray_mesh_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Matrix4x4 &amp;tm, const void *vertices, u32 stride, const u16 *indices, u32 num)</td></tr>
+<tr class="memdesc:ga55966cae0ae6ceef84a396766304aeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with the triangle mesh defined by (vertices, stride, indices, num) or -1.0 if no intersection.  <a href="group___math.html#ga55966cae0ae6ceef84a396766304aeba">More...</a><br /></td></tr>
+<tr class="separator:ga55966cae0ae6ceef84a396766304aeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaacb9059f27a4b71ebc01c066fe373785"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaacb9059f27a4b71ebc01c066fe373785"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaacb9059f27a4b71ebc01c066fe373785">crown::plane_3_intersection</a> (const Plane &amp;a, const Plane &amp;b, const Plane &amp;c, Vector3 &amp;ip)</td></tr>
 <tr class="memdesc:gaacb9059f27a4b71ebc01c066fe373785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the planes <em>a</em>, <em>b</em> and <em>c</em> intersects and if so fills <em>ip</em> with the intersection point. <br /></td></tr>
@@ -1100,6 +1106,110 @@ const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_EPS
 
 </div>
 </div>
+<a class="anchor" id="ga0611bb224786987a21b03b87b20e8638"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 crown::ray_triangle_intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance along ray (from, dir) to intersection point with the triangle (v0, v1, v2) or -1.0 if no intersection. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga55966cae0ae6ceef84a396766304aeba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 crown::ray_mesh_intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td>
+          <td class="paramname"><em>tm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const u16 *&#160;</td>
+          <td class="paramname"><em>indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance along ray (from, dir) to intersection point with the triangle mesh defined by (vertices, stride, indices, num) or -1.0 if no intersection. </p>
+
+</div>
+</div>
 <a class="anchor" id="ga2711089b6282a6c31a5e571f56232fb8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1122,7 +1232,7 @@ const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_EPS
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 15 2016 02:58:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 21 2016 21:57:45 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

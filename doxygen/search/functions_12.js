@@ -46,6 +46,7 @@ var searchData=
   ['set_5fsound_5franges',['set_sound_ranges',['../classcrown_1_1_sound_world.html#a17eb5844bf0adea3fa3c033496992dcc',1,'crown::SoundWorld']]],
   ['set_5fsound_5fvolume',['set_sound_volume',['../classcrown_1_1_world.html#af5d6a6fa15fb4b5c7907091777dd5bda',1,'crown::World']]],
   ['set_5fsound_5fvolumes',['set_sound_volumes',['../classcrown_1_1_sound_world.html#af5ae1e1b4377ea6dc0b05aa56e7291ff',1,'crown::SoundWorld']]],
+  ['set_5ftemp_5fcount',['set_temp_count',['../structcrown_1_1_lua_environment.html#aa3efda6f2a72e24532de0d34915aab73',1,'crown::LuaEnvironment']]],
   ['set_5ftitle',['set_title',['../structcrown_1_1_window.html#a29515206b814c387e0d44bd3ca926392',1,'crown::Window']]],
   ['set_5ftranslation',['set_translation',['../group___math.html#gad1df732d592f5d17b52a0069d9203e63',1,'crown']]],
   ['set_5fx',['set_x',['../group___math.html#gaaddcbaf1b8c3af08d8fa22e0ee60e164',1,'crown']]],

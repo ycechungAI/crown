@@ -4,6 +4,7 @@ var searchData=
   ['teleport_5factor_5fworld_5fpose',['teleport_actor_world_pose',['../classcrown_1_1_physics_world.html#a030aa75b4c4483fd5003fdf1686a4154',1,'crown::PhysicsWorld']]],
   ['teleport_5factor_5fworld_5fposition',['teleport_actor_world_position',['../classcrown_1_1_physics_world.html#a431d44184651cd242037b9e6cce69988',1,'crown::PhysicsWorld']]],
   ['teleport_5factor_5fworld_5frotation',['teleport_actor_world_rotation',['../classcrown_1_1_physics_world.html#a363dfc6b072cb69897fa02148e958d3c',1,'crown::PhysicsWorld']]],
+  ['temp_5fcount',['temp_count',['../structcrown_1_1_lua_environment.html#a51d9a99f527a1519ab0825ef0845a737',1,'crown::LuaEnvironment']]],
   ['tempallocator',['TempAllocator',['../classcrown_1_1_temp_allocator.html',1,'crown']]],
   ['tempallocator',['TempAllocator',['../classcrown_1_1_temp_allocator.html#a8b83308ebc2f54f58d2ae584ab777103',1,'crown::TempAllocator']]],
   ['texturedata',['TextureData',['../structcrown_1_1_texture_data.html',1,'crown']]],
