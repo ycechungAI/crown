@@ -11,6 +11,7 @@ var searchData=
   ['lightinstance',['LightInstance',['../structcrown_1_1_light_instance.html',1,'crown']]],
   ['lightinstancedata',['LightInstanceData',['../structcrown_1_1_render_world_1_1_light_manager_1_1_light_instance_data.html',1,'crown::RenderWorld::LightManager']]],
   ['lighttype',['LightType',['../structcrown_1_1_light_type.html',1,'crown']]],
+  ['line',['Line',['../structcrown_1_1_debug_line_1_1_line.html',1,'crown::DebugLine']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html',1,'crown']]],
   ['logseverity',['LogSeverity',['../structcrown_1_1_log_severity.html',1,'crown']]],
   ['luaenvironment',['LuaEnvironment',['../structcrown_1_1_lua_environment.html',1,'crown']]],

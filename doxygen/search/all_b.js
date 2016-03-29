@@ -23,6 +23,7 @@ var searchData=
   ['lightinstance',['LightInstance',['../structcrown_1_1_light_instance.html',1,'crown']]],
   ['lightinstancedata',['LightInstanceData',['../structcrown_1_1_render_world_1_1_light_manager_1_1_light_instance_data.html',1,'crown::RenderWorld::LightManager']]],
   ['lighttype',['LightType',['../structcrown_1_1_light_type.html',1,'crown']]],
+  ['line',['Line',['../structcrown_1_1_debug_line_1_1_line.html',1,'crown::DebugLine']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html',1,'crown']]],
   ['linearallocator',['LinearAllocator',['../classcrown_1_1_linear_allocator.html#aa5e4ec1b5564b8f3580ba2330f753eab',1,'crown::LinearAllocator::LinearAllocator(Allocator &amp;backing, u32 size)'],['../classcrown_1_1_linear_allocator.html#ac88a3dd1a1901d6b0d5be9fe2488c408',1,'crown::LinearAllocator::LinearAllocator(void *start, u32 size)']]],
   ['link',['link',['../structcrown_1_1_scene_graph.html#a7959a3406ebe3131523015107d3fa3eb',1,'crown::SceneGraph']]],
