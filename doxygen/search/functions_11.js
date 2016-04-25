@@ -1,7 +1,7 @@
 var searchData=
 [
   ['radius',['radius',['../namespacecrown_1_1aabb.html#af93c53a098c88e8f7355776d5acabe33',1,'crown::aabb']]],
-  ['random',['Random',['../structcrown_1_1_random.html#a68932de32823bfa656c46b2004955624',1,'crown::Random']]],
+  ['random',['Random',['../classcrown_1_1_random.html#a68932de32823bfa656c46b2004955624',1,'crown::Random']]],
   ['ray_5fdisc_5fintersection',['ray_disc_intersection',['../group___math.html#ga23fbe04c191b3c6d9ccdf0529eeff8fe',1,'crown']]],
   ['ray_5fmesh_5fintersection',['ray_mesh_intersection',['../group___math.html#ga55966cae0ae6ceef84a396766304aeba',1,'crown']]],
   ['ray_5fobb_5fintersection',['ray_obb_intersection',['../group___math.html#ga342ce1be8389270ca2fced2859f787ad',1,'crown']]],

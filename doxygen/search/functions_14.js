@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['unit_5ffloat',['unit_float',['../structcrown_1_1_random.html#ad2b22d2ab8387791232d4e1f25fe8ceb',1,'crown::Random']]],
+  ['unit_5ffloat',['unit_float',['../classcrown_1_1_random.html#ad2b22d2ab8387791232d4e1f25fe8ceb',1,'crown::Random']]],
   ['unit_5fmanager',['unit_manager',['../classcrown_1_1_device.html#a7d3be9c2a1b6796a7249d0d1cd240b5c',1,'crown::Device']]],
   ['units',['units',['../classcrown_1_1_world.html#ab11898294e9fdfc2b45636f3ddf498bb',1,'crown::World']]],
   ['unlink',['unlink',['../structcrown_1_1_scene_graph.html#ae4918ba3f01aa2f67b07d664f0b9cf8b',1,'crown::SceneGraph']]],

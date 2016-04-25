@@ -1,8 +1,8 @@
 var searchData=
 [
   ['radius',['radius',['../structcrown_1_1_controller_desc.html#a8a866dca84e78145838cf14abd094c98',1,'crown::ControllerDesc::radius()'],['../namespacecrown_1_1aabb.html#af93c53a098c88e8f7355776d5acabe33',1,'crown::aabb::radius()']]],
-  ['random',['Random',['../structcrown_1_1_random.html',1,'crown']]],
-  ['random',['Random',['../structcrown_1_1_random.html#a68932de32823bfa656c46b2004955624',1,'crown::Random']]],
+  ['random',['Random',['../classcrown_1_1_random.html',1,'crown']]],
+  ['random',['Random',['../classcrown_1_1_random.html#a68932de32823bfa656c46b2004955624',1,'crown::Random']]],
   ['range',['range',['../structcrown_1_1_light_desc.html#aede144d16e5318bc377769adaf00bb87',1,'crown::LightDesc']]],
   ['ray_5fdisc_5fintersection',['ray_disc_intersection',['../group___math.html#ga23fbe04c191b3c6d9ccdf0529eeff8fe',1,'crown']]],
   ['ray_5fmesh_5fintersection',['ray_mesh_intersection',['../group___math.html#ga55966cae0ae6ceef84a396766304aeba',1,'crown']]],

@@ -11,7 +11,7 @@ var searchData=
   ['insert',['insert',['../namespacecrown_1_1multi__hash.html#a1a93c0d8de7756c6fce671909aad78d9',1,'crown::multi_hash']]],
   ['instancedata',['InstanceData',['../structcrown_1_1_scene_graph_1_1_instance_data.html',1,'crown::SceneGraph']]],
   ['int2type',['Int2Type',['../structcrown_1_1_int2_type.html',1,'crown']]],
-  ['integer',['integer',['../structcrown_1_1_random.html#ab4956a161d6d6bf873ffb3430be84629',1,'crown::Random::integer()'],['../structcrown_1_1_random.html#afd852a78f53cfe80e0e0489bbc021e31',1,'crown::Random::integer(s32 max)']]],
+  ['integer',['integer',['../classcrown_1_1_random.html#ab4956a161d6d6bf873ffb3430be84629',1,'crown::Random::integer()'],['../classcrown_1_1_random.html#afd852a78f53cfe80e0e0489bbc021e31',1,'crown::Random::integer(s32 max)']]],
   ['inverse',['inverse',['../group___math.html#ga9cd98e06e9e2a526e0ed4b16256b8991',1,'crown']]],
   ['invert',['invert',['../group___math.html#ga49e9eab02bdd09c779b4266d0c911a9a',1,'crown::invert(Matrix3x3 &amp;m)'],['../group___math.html#gada803116bb9cbed485fe9368bb22c489',1,'crown::invert(Matrix4x4 &amp;m)']]],
   ['ipaddress',['IPAddress',['../structcrown_1_1_i_p_address.html#a766b9bfdaf98a8ce4c31f664f2a18e39',1,'crown::IPAddress::IPAddress()'],['../structcrown_1_1_i_p_address.html#a5c54498e38bf7f90d14c82f595475687',1,'crown::IPAddress::IPAddress(u8 a, u8 b, u8 c, u8 d)']]],

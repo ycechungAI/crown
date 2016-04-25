@@ -4,7 +4,7 @@ var searchData=
   ['uniformhandle',['UniformHandle',['../structcrown_1_1_uniform_handle.html',1,'crown']]],
   ['uniformtype',['UniformType',['../structcrown_1_1_uniform_type.html',1,'crown']]],
   ['unit',['unit',['../structcrown_1_1_unit_spawned_event.html#ac985abf3d51c3be14f10d8fe1a6e40db',1,'crown::UnitSpawnedEvent::unit()'],['../structcrown_1_1_unit_destroyed_event.html#a721c5127458e3296ec79401bbc5ef201',1,'crown::UnitDestroyedEvent::unit()']]],
-  ['unit_5ffloat',['unit_float',['../structcrown_1_1_random.html#ad2b22d2ab8387791232d4e1f25fe8ceb',1,'crown::Random']]],
+  ['unit_5ffloat',['unit_float',['../classcrown_1_1_random.html#ad2b22d2ab8387791232d4e1f25fe8ceb',1,'crown::Random']]],
   ['unit_5fmanager',['unit_manager',['../classcrown_1_1_device.html#a7d3be9c2a1b6796a7249d0d1cd240b5c',1,'crown::Device']]],
   ['unitcompiler',['UnitCompiler',['../classcrown_1_1_unit_compiler.html',1,'crown']]],
   ['unitdestroyedevent',['UnitDestroyedEvent',['../structcrown_1_1_unit_destroyed_event.html',1,'crown']]],
