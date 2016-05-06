@@ -8,7 +8,6 @@ var searchData=
   ['input_5fmanager',['input_manager',['../classcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],
   ['inputdevice',['InputDevice',['../structcrown_1_1_input_device.html',1,'crown']]],
   ['inputmanager',['InputManager',['../classcrown_1_1_input_manager.html',1,'crown']]],
-  ['insert',['insert',['../namespacecrown_1_1multi__hash.html#a1a93c0d8de7756c6fce671909aad78d9',1,'crown::multi_hash']]],
   ['instancedata',['InstanceData',['../structcrown_1_1_scene_graph_1_1_instance_data.html',1,'crown::SceneGraph']]],
   ['int2type',['Int2Type',['../structcrown_1_1_int2_type.html',1,'crown']]],
   ['integer',['integer',['../classcrown_1_1_random.html#ab4956a161d6d6bf873ffb3430be84629',1,'crown::Random::integer()'],['../classcrown_1_1_random.html#afd852a78f53cfe80e0e0489bbc021e31',1,'crown::Random::integer(s32 max)']]],

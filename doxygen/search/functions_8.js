@@ -3,7 +3,6 @@ var searchData=
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a211ff1e8f278ddfd69a0bd143547051c',1,'crown::queue']]],
   ['init',['init',['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#ad43baed76132fa8f741f13d6982c2868',1,'crown::physics_globals::init()']]],
   ['input_5fmanager',['input_manager',['../classcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],
-  ['insert',['insert',['../namespacecrown_1_1multi__hash.html#a1a93c0d8de7756c6fce671909aad78d9',1,'crown::multi_hash']]],
   ['integer',['integer',['../classcrown_1_1_random.html#ab4956a161d6d6bf873ffb3430be84629',1,'crown::Random::integer()'],['../classcrown_1_1_random.html#afd852a78f53cfe80e0e0489bbc021e31',1,'crown::Random::integer(s32 max)']]],
   ['inverse',['inverse',['../group___math.html#ga9cd98e06e9e2a526e0ed4b16256b8991',1,'crown']]],
   ['invert',['invert',['../group___math.html#ga49e9eab02bdd09c779b4266d0c911a9a',1,'crown::invert(Matrix3x3 &amp;m)'],['../group___math.html#gada803116bb9cbed485fe9368bb22c489',1,'crown::invert(Matrix4x4 &amp;m)']]],
