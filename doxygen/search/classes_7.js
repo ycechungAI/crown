@@ -2,6 +2,8 @@ var searchData=
 [
   ['hash',['hash',['../structcrown_1_1hash.html',1,'crown']]],
   ['hash_3c_20bool_20_3e',['hash&lt; bool &gt;',['../structcrown_1_1hash_3_01bool_01_4.html',1,'crown']]],
+  ['hash_3c_20f32_20_3e',['hash&lt; f32 &gt;',['../structcrown_1_1hash_3_01f32_01_4.html',1,'crown']]],
+  ['hash_3c_20f64_20_3e',['hash&lt; f64 &gt;',['../structcrown_1_1hash_3_01f64_01_4.html',1,'crown']]],
   ['hash_3c_20s16_20_3e',['hash&lt; s16 &gt;',['../structcrown_1_1hash_3_01s16_01_4.html',1,'crown']]],
   ['hash_3c_20s32_20_3e',['hash&lt; s32 &gt;',['../structcrown_1_1hash_3_01s32_01_4.html',1,'crown']]],
   ['hash_3c_20s64_20_3e',['hash&lt; s64 &gt;',['../structcrown_1_1hash_3_01s64_01_4.html',1,'crown']]],

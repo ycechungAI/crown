@@ -15,6 +15,7 @@ var searchData=
   ['to_5frgb',['to_rgb',['../group___math.html#ga7a427da31a608404c7d0e30e23014bc8',1,'crown']]],
   ['to_5frgba',['to_rgba',['../group___math.html#gafd1d800db48dc014c7835080f8081307',1,'crown']]],
   ['to_5fsphere',['to_sphere',['../namespacecrown_1_1aabb.html#a94dd6e49eb9e306559fa4fc802cc0812',1,'crown::aabb']]],
+  ['to_5fstring',['to_string',['../namespacecrown_1_1guid.html#aa00a213780c2ce7fcc57d535a84d542b',1,'crown::guid']]],
   ['to_5fstring_5fid',['to_string_id',['../structcrown_1_1_dynamic_string.html#abd57971e45470d3d046f097cb716392e',1,'crown::DynamicString']]],
   ['to_5fvector2',['to_vector2',['../group___math.html#ga4d41396043574e06e0228f605c1e5291',1,'crown']]],
   ['to_5fvector3',['to_vector3',['../group___math.html#ga8d7612963bfa947d20c3e587eb7e2119',1,'crown']]],
@@ -26,5 +27,6 @@ var searchData=
   ['translation',['translation',['../group___math.html#ga4bd6177e223a00b179b8b914c1c7422c',1,'crown']]],
   ['transpose',['transpose',['../group___math.html#gadc9e5f97d3f63ae101ba0256f1289027',1,'crown::transpose(Matrix3x3 &amp;m)'],['../group___math.html#gaed52a7b5c76ce533d79faf36f9159f52',1,'crown::transpose(Matrix4x4 &amp;m)']]],
   ['trim',['trim',['../structcrown_1_1_dynamic_string.html#aed30b1dae1d44156c1c6d0dac5bca21a',1,'crown::DynamicString']]],
+  ['try_5fparse',['try_parse',['../namespacecrown_1_1guid.html#adf6137ffd3cd6c3b28f4c58bf4393169',1,'crown::guid']]],
   ['type',['type',['../namespacecrown_1_1json.html#affac38f2f84f04271e05809f9fd5d83f',1,'crown::json::type()'],['../namespacecrown_1_1sjson.html#a9845bfa42084357ada3f0e6959eb0fe0',1,'crown::sjson::type()']]]
 ];

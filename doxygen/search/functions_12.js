@@ -7,7 +7,7 @@ var searchData=
   ['seek',['seek',['../classcrown_1_1_file.html#a6d849fb4fdb16ffc33f24ffef4c111a9',1,'crown::File::seek()'],['../classcrown_1_1_null_file.html#af865cfdbca7e7b31c70864a8fdf3c231',1,'crown::NullFile::seek()']]],
   ['seek_5fto_5fend',['seek_to_end',['../classcrown_1_1_file.html#ab045f19a41718fa85a71ac4d4c9d6870',1,'crown::File::seek_to_end()'],['../classcrown_1_1_null_file.html#ac27f8739e145abea99ee1f90cf58cc75',1,'crown::NullFile::seek_to_end()']]],
   ['send',['send',['../classcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73',1,'crown::ConsoleServer']]],
-  ['set',['set',['../structcrown_1_1_i_p_address.html#ac828ab082c0ce30d2f24841913d52d07',1,'crown::IPAddress::set()'],['../structcrown_1_1_dynamic_string.html#a55117f82a541c49bdd0c7ef933285a55',1,'crown::DynamicString::set()'],['../namespacecrown_1_1hash__map.html#ae1f9943c9834a6cb37f4df0981679c05',1,'crown::hash_map::set()'],['../namespacecrown_1_1map.html#aea7e2bdf60ff931d446a3e2e305815af',1,'crown::map::set()']]],
+  ['set',['set',['../structcrown_1_1_i_p_address.html#ac828ab082c0ce30d2f24841913d52d07',1,'crown::IPAddress::set()'],['../structcrown_1_1_dynamic_string.html#a86af0d8dfb2ab56c814bc14ed5019059',1,'crown::DynamicString::set()'],['../namespacecrown_1_1hash__map.html#ae1f9943c9834a6cb37f4df0981679c05',1,'crown::hash_map::set()'],['../namespacecrown_1_1map.html#aea7e2bdf60ff931d446a3e2e305815af',1,'crown::map::set()']]],
   ['set_5factor_5fangular_5fdamping',['set_actor_angular_damping',['../classcrown_1_1_physics_world.html#a0deb1ecacaa1a53b25a99b1a286e5ae4',1,'crown::PhysicsWorld']]],
   ['set_5factor_5fangular_5fvelocity',['set_actor_angular_velocity',['../classcrown_1_1_physics_world.html#ae284a5c559ba91e325759b39c918d325',1,'crown::PhysicsWorld']]],
   ['set_5factor_5fcollision_5ffilter',['set_actor_collision_filter',['../classcrown_1_1_physics_world.html#a0cbf7a1e0fb5bfe478b2f191094d7f1f',1,'crown::PhysicsWorld']]],
@@ -67,11 +67,8 @@ var searchData=
   ['spawn_5fempty_5funit',['spawn_empty_unit',['../classcrown_1_1_world.html#a20a69bb631bca10443962de49d992f02',1,'crown::World']]],
   ['spawn_5funit',['spawn_unit',['../classcrown_1_1_world.html#a43fa063295d6559a07bc838078195861',1,'crown::World']]],
   ['sprite_5finstances',['sprite_instances',['../classcrown_1_1_render_world.html#a0dcef533f3f2642b023b291b62e7f3ea',1,'crown::RenderWorld']]],
-  ['starts_5fwith',['starts_with',['../structcrown_1_1_dynamic_string.html#ab5a7da82ebd34dfddf35b0c5bf8ec649',1,'crown::DynamicString']]],
   ['stop',['stop',['../classcrown_1_1_sound_world.html#a4c7610911f773a246d078affb1792ed0',1,'crown::SoundWorld']]],
   ['stop_5fall',['stop_all',['../classcrown_1_1_sound_world.html#a84e1146efc2ea54a14656dd005f0fa8b',1,'crown::SoundWorld']]],
   ['stop_5fsound',['stop_sound',['../classcrown_1_1_world.html#a5b31d017ca5cfc3c61f112f44464095b',1,'crown::World']]],
-  ['strip_5fleading',['strip_leading',['../structcrown_1_1_dynamic_string.html#a399ba48e4432426293aebe8b48c57fc6',1,'crown::DynamicString']]],
-  ['strip_5ftrailing',['strip_trailing',['../structcrown_1_1_dynamic_string.html#ac16108c1524efee68086a6067612abe4',1,'crown::DynamicString']]],
   ['submit',['submit',['../structcrown_1_1_debug_line.html#aeb338a656490c118533ece64a3887bd8',1,'crown::DebugLine']]]
 ];

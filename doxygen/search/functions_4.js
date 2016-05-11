@@ -6,7 +6,6 @@ var searchData=
   ['enable_5fautoload',['enable_autoload',['../classcrown_1_1_resource_manager.html#a938076a08326753b8a2fb0831366d0b6',1,'crown::ResourceManager']]],
   ['enable_5fdebug_5fdrawing',['enable_debug_drawing',['../classcrown_1_1_render_world.html#aa957594822e8e38327bdd5a18a7d9a5e',1,'crown::RenderWorld']]],
   ['end_5fof_5ffile',['end_of_file',['../classcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e',1,'crown::File::end_of_file()'],['../classcrown_1_1_null_file.html#a8efbb67f75059a9b3ede3541e87bca39',1,'crown::NullFile::end_of_file()']]],
-  ['ends_5fwith',['ends_with',['../structcrown_1_1_dynamic_string.html#abe1f513944cd635fbcb177c7bef2d78e',1,'crown::DynamicString']]],
   ['enter_5fprofile_5fscope',['enter_profile_scope',['../namespacecrown_1_1profiler.html#a8edd34577531cd95acb365bd9dc31c14',1,'crown::profiler']]],
   ['events',['events',['../classcrown_1_1_world.html#a240fb1754119bbb8183e146ec6d67cda',1,'crown::World']]],
   ['execute',['execute',['../structcrown_1_1_lua_environment.html#a39a718470a6a3aa2fb674df9efce97eb',1,'crown::LuaEnvironment']]],
