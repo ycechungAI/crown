@@ -16,7 +16,6 @@ var searchData=
   ['physics_5fglobals',['physics_globals',['../namespacecrown_1_1physics__globals.html',1,'crown']]],
   ['physics_5fworld',['physics_world',['../namespacecrown_1_1physics__world.html',1,'crown']]],
   ['plane',['plane',['../namespacecrown_1_1plane.html',1,'crown']]],
-  ['priority_5fqueue',['priority_queue',['../namespacecrown_1_1priority__queue.html',1,'crown']]],
   ['profiler',['profiler',['../namespacecrown_1_1profiler.html',1,'crown']]],
   ['queue',['queue',['../namespacecrown_1_1queue.html',1,'crown']]],
   ['sjson',['sjson',['../namespacecrown_1_1sjson.html',1,'crown']]],

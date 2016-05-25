@@ -1,6 +1,7 @@
 var searchData=
 [
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a211ff1e8f278ddfd69a0bd143547051c',1,'crown::queue']]],
+  ['index',['Index',['../structcrown_1_1_hash_map_1_1_index.html',1,'crown::HashMap']]],
   ['indexdata',['IndexData',['../structcrown_1_1_index_data.html',1,'crown']]],
   ['indexdata',['IndexData',['../structcrown_1_1_gui_1_1_index_data.html',1,'crown::Gui']]],
   ['init',['init',['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#ad43baed76132fa8f741f13d6982c2868',1,'crown::physics_globals::init()']]],
@@ -13,8 +14,8 @@ var searchData=
   ['integer',['integer',['../classcrown_1_1_random.html#ab4956a161d6d6bf873ffb3430be84629',1,'crown::Random::integer()'],['../classcrown_1_1_random.html#afd852a78f53cfe80e0e0489bbc021e31',1,'crown::Random::integer(s32 max)']]],
   ['inverse',['inverse',['../group___math.html#ga9cd98e06e9e2a526e0ed4b16256b8991',1,'crown']]],
   ['invert',['invert',['../group___math.html#ga49e9eab02bdd09c779b4266d0c911a9a',1,'crown::invert(Matrix3x3 &amp;m)'],['../group___math.html#gada803116bb9cbed485fe9368bb22c489',1,'crown::invert(Matrix4x4 &amp;m)']]],
-  ['ipaddress',['IPAddress',['../structcrown_1_1_i_p_address.html#a766b9bfdaf98a8ce4c31f664f2a18e39',1,'crown::IPAddress::IPAddress()'],['../structcrown_1_1_i_p_address.html#a5c54498e38bf7f90d14c82f595475687',1,'crown::IPAddress::IPAddress(u8 a, u8 b, u8 c, u8 d)']]],
   ['ipaddress',['IPAddress',['../structcrown_1_1_i_p_address.html',1,'crown']]],
+  ['ipaddress',['IPAddress',['../structcrown_1_1_i_p_address.html#a766b9bfdaf98a8ce4c31f664f2a18e39',1,'crown::IPAddress::IPAddress()'],['../structcrown_1_1_i_p_address.html#a5c54498e38bf7f90d14c82f595475687',1,'crown::IPAddress::IPAddress(u8 a, u8 b, u8 c, u8 d)']]],
   ['is_5fabsolute',['is_absolute',['../namespacecrown_1_1path.html#a8290f0dc478fa56398ca62f629b7cdaa',1,'crown::path']]],
   ['is_5fallocator_5faware',['is_allocator_aware',['../structcrown_1_1is__allocator__aware.html',1,'crown']]],
   ['is_5fdirectory',['is_directory',['../classcrown_1_1_disk_filesystem.html#a9e9c8ba255330080a82505a186c840fd',1,'crown::DiskFilesystem::is_directory()'],['../classcrown_1_1_filesystem.html#a73280b7dd4d7c9c6d534b8bb13967dac',1,'crown::Filesystem::is_directory()']]],

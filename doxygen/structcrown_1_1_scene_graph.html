@@ -80,8 +80,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structcrown_1_1_scene_graph-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">crown::SceneGraph Struct Reference<div class="ingroups"><a class="el" href="group___world.html">World</a></div></div>  </div>
@@ -111,9 +111,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>allocate</b> (u32 num
 <tr class="memitem:acb3c649c215293649ee90d2e8c8a5072"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb3c649c215293649ee90d2e8c8a5072"></a>
 <a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>make_instance</b> (u32 i)</td></tr>
 <tr class="separator:acb3c649c215293649ee90d2e8c8a5072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae58847f568aef338e1cf1bd7a56bc8a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae58847f568aef338e1cf1bd7a56bc8a7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SceneGraph</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
-<tr class="separator:ae58847f568aef338e1cf1bd7a56bc8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b68124278c3ca4ad307c91a2dc1367"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3b68124278c3ca4ad307c91a2dc1367"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>unit_destroyed_callback</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
+<tr class="separator:ae3b68124278c3ca4ad307c91a2dc1367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a995499d3ccbc9ab5b29fab8802ce2b40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a995499d3ccbc9ab5b29fab8802ce2b40"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SceneGraph</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="classcrown_1_1_unit_manager.html">UnitManager</a> &amp;um)</td></tr>
+<tr class="separator:a995499d3ccbc9ab5b29fab8802ce2b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8bb7d313fd4e7c1fd54453db4a60a5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8bb7d313fd4e7c1fd54453db4a60a5d"></a>
 <a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_scene_graph.html#ae8bb7d313fd4e7c1fd54453db4a60a5d">create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;pose)</td></tr>
 <tr class="memdesc:ae8bb7d313fd4e7c1fd54453db4a60a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new transform instance for unit <em>id</em>. <br /></td></tr>
@@ -196,26 +199,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_local</b> (<a cla
 void&#160;</td><td class="memItemRight" valign="bottom"><b>transform</b> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;parent, <a class="el" href="structcrown_1_1_transform_instance.html">TransformInstance</a> i)</td></tr>
 <tr class="separator:a801e880236739f194c8d79756b68d623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a3de1596b893c4138eab94c1682644320"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3de1596b893c4138eab94c1682644320"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>unit_destroyed_callback</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, void *user_ptr)</td></tr>
+<tr class="separator:a3de1596b893c4138eab94c1682644320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a1c041e8e9ebec6318dc4aca3aa7b7e76"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c041e8e9ebec6318dc4aca3aa7b7e76"></a>
 u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 <tr class="separator:a1c041e8e9ebec6318dc4aca3aa7b7e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4828a6e46dd34f69ae71eabbf321ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d4828a6e46dd34f69ae71eabbf321ae"></a>
-<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_allocator</b></td></tr>
-<tr class="separator:a2d4828a6e46dd34f69ae71eabbf321ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f8ceb33d9052910af2c90075cd03a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00f8ceb33d9052910af2c90075cd03a1"></a>
+<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_allocator</b></td></tr>
+<tr class="separator:a00f8ceb33d9052910af2c90075cd03a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d84c05515243f4888a8e4345f31e7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9d84c05515243f4888a8e4345f31e7c"></a>
+<a class="el" href="classcrown_1_1_unit_manager.html">UnitManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_unit_manager</b></td></tr>
+<tr class="separator:ad9d84c05515243f4888a8e4345f31e7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1158f6e36572621e91e2e1f32886564"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1158f6e36572621e91e2e1f32886564"></a>
 <a class="el" href="structcrown_1_1_scene_graph_1_1_instance_data.html">InstanceData</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_data</b></td></tr>
 <tr class="separator:aa1158f6e36572621e91e2e1f32886564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a355c9edd185e748b7d06205141baa8a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a355c9edd185e748b7d06205141baa8a4"></a>
 <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>, u32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_map</b></td></tr>
 <tr class="separator:a355c9edd185e748b7d06205141baa8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a23d675a5c75112e652f0293dc9ed33cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23d675a5c75112e652f0293dc9ed33cc"></a>
-static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>MARKER</b> = 0x63a44dbf</td></tr>
-<tr class="separator:a23d675a5c75112e652f0293dc9ed33cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a collection of nodes, possibly linked together to form a tree. </p>
@@ -420,7 +426,7 @@ static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>MARKER</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 11 2016 17:46:13 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 25 2016 22:20:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

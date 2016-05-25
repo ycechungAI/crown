@@ -88,31 +88,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a72abf4ff57c0f684c3a3b4df25175547"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72abf4ff57c0f684c3a3b4df25175547"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BundleCompiler</b> (const char *source_dir, const char *bundle_dir)</td></tr>
-<tr class="separator:a72abf4ff57c0f684c3a3b4df25175547"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac729f7915a05cbb94aa9cb28b2f0f085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac729f7915a05cbb94aa9cb28b2f0f085"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>compile</b> (const char *type, const char *name, const char *platform)</td></tr>
-<tr class="separator:ac729f7915a05cbb94aa9cb28b2f0f085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b888c84349ad09c4c107fcdd6373234"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#a2b888c84349ad09c4c107fcdd6373234">compile_all</a> (const char *platform)</td></tr>
-<tr class="memdesc:a2b888c84349ad09c4c107fcdd6373234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in <em>source_dir</em> and puts them in <em>bundle_dir</em>.  <a href="#a2b888c84349ad09c4c107fcdd6373234">More...</a><br /></td></tr>
-<tr class="separator:a2b888c84349ad09c4c107fcdd6373234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb597c12aedae01c185b6977b8276d1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb597c12aedae01c185b6977b8276d1e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#acb597c12aedae01c185b6977b8276d1e">scan_source_dir</a> (const char *path)</td></tr>
-<tr class="memdesc:acb597c12aedae01c185b6977b8276d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans the source directory for resources. <br /></td></tr>
-<tr class="separator:acb597c12aedae01c185b6977b8276d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26035641c3c0e74516297fdd65ed25c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26035641c3c0e74516297fdd65ed25c8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#a26035641c3c0e74516297fdd65ed25c8">scan</a> (const char *source_dir)</td></tr>
+<tr class="memdesc:a26035641c3c0e74516297fdd65ed25c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans <em>source_dir</em> for resources. <br /></td></tr>
+<tr class="separator:a26035641c3c0e74516297fdd65ed25c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefae41eb2d603c9ff9aef795ca7c46c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#aefae41eb2d603c9ff9aef795ca7c46c4">compile</a> (const char *bundle_dir, const char *platform)</td></tr>
+<tr class="memdesc:aefae41eb2d603c9ff9aef795ca7c46c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in <em>source_dir</em> and puts them in <em>bundle_dir</em>.  <a href="#aefae41eb2d603c9ff9aef795ca7c46c4">More...</a><br /></td></tr>
+<tr class="separator:aefae41eb2d603c9ff9aef795ca7c46c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9acc3a66be0cea8da597e341f65e132"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9acc3a66be0cea8da597e341f65e132"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#ae9acc3a66be0cea8da597e341f65e132">register_compiler</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, u32 version, CompileFunction compiler)</td></tr>
+<tr class="memdesc:ae9acc3a66be0cea8da597e341f65e132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the resource <em>compiler</em> for the given resource <em>type</em> and <em>version</em>. <br /></td></tr>
+<tr class="separator:ae9acc3a66be0cea8da597e341f65e132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4046e9b3227e2f634ecac3340aae50ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4046e9b3227e2f634ecac3340aae50ec"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>version</b> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type)</td></tr>
+<tr class="separator:a4046e9b3227e2f634ecac3340aae50ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2b888c84349ad09c4c107fcdd6373234"></a>
+<a class="anchor" id="aefae41eb2d603c9ff9aef795ca7c46c4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool crown::BundleCompiler::compile_all </td>
+          <td class="memname">bool crown::BundleCompiler::compile </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>platform</em></td><td>)</td>
+          <td class="paramname"><em>bundle_dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>platform</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -129,7 +140,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 11 2016 17:46:13 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 25 2016 22:20:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

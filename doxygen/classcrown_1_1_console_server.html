@@ -78,6 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classcrown_1_1_console_server-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -110,6 +111,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73">send</a> (const char *json)</td></tr>
 <tr class="memdesc:ae7d1ed1a7627749db5dded030f130f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the given JSON-encoded string to all clients. <br /></td></tr>
 <tr class="separator:ae7d1ed1a7627749db5dded030f130f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570ee0747ae53f23d5ee22a026b37b08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a570ee0747ae53f23d5ee22a026b37b08"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#a570ee0747ae53f23d5ee22a026b37b08">send</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *json)</td></tr>
+<tr class="memdesc:a570ee0747ae53f23d5ee22a026b37b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the given JSON-encoded string to <em>client</em>. <br /></td></tr>
+<tr class="separator:a570ee0747ae53f23d5ee22a026b37b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58d7054fc7f242650bad1f02cf81382"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af58d7054fc7f242650bad1f02cf81382"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#af58d7054fc7f242650bad1f02cf81382">error</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *msg)</td></tr>
+<tr class="memdesc:af58d7054fc7f242650bad1f02cf81382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an error message to <em>client</em>. <br /></td></tr>
+<tr class="separator:af58d7054fc7f242650bad1f02cf81382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80c40b3afbda9b813cdd64c462b65c39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80c40b3afbda9b813cdd64c462b65c39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#a80c40b3afbda9b813cdd64c462b65c39">success</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *msg)</td></tr>
+<tr class="memdesc:a80c40b3afbda9b813cdd64c462b65c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a success message to <em>client</em>. <br /></td></tr>
+<tr class="separator:a80c40b3afbda9b813cdd64c462b65c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e1dbb89d74ba5a06c62b247f8a99b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47e1dbb89d74ba5a06c62b247f8a99b8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#a47e1dbb89d74ba5a06c62b247f8a99b8">register_command</a> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> type, CommandFunction cmd, void *data)</td></tr>
+<tr class="memdesc:a47e1dbb89d74ba5a06c62b247f8a99b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the command <em>type</em>. <br /></td></tr>
+<tr class="separator:a47e1dbb89d74ba5a06c62b247f8a99b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides service to communicate with engine via TCP/IP. </p>
@@ -150,7 +167,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 11 2016 17:46:13 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 25 2016 22:20:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

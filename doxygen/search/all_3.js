@@ -28,7 +28,6 @@ var searchData=
   ['disable_5factor_5fcollision',['disable_actor_collision',['../classcrown_1_1_physics_world.html#a47daaeaeac10cc5b94218bfa542db6fc',1,'crown::PhysicsWorld']]],
   ['disable_5factor_5fgravity',['disable_actor_gravity',['../classcrown_1_1_physics_world.html#a6f0bdba97804fb7c0419a7db4f2a7471',1,'crown::PhysicsWorld']]],
   ['diskfilesystem',['DiskFilesystem',['../classcrown_1_1_disk_filesystem.html',1,'crown']]],
-  ['diskfilesystem',['DiskFilesystem',['../classcrown_1_1_disk_filesystem.html#a76e16f6feee6773019e854abb24f3180',1,'crown::DiskFilesystem']]],
   ['display',['display',['../classcrown_1_1_device.html#a7a310f575b15148e3c7e0430a8dd8380',1,'crown::Device']]],
   ['display',['Display',['../structcrown_1_1_display.html',1,'crown']]],
   ['displaymode',['DisplayMode',['../structcrown_1_1_display_mode.html',1,'crown']]],

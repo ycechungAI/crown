@@ -1,15 +1,15 @@
 var searchData=
 [
   ['scale',['scale',['../group___math.html#gaa0883e530a5230305337c08601c197b5',1,'crown::scale(const Matrix3x3 &amp;m)'],['../group___math.html#ga73843b76c3913493fa6ff7af59c1c181',1,'crown::scale(const Matrix4x4 &amp;m)']]],
-  ['scan_5fsource_5fdir',['scan_source_dir',['../classcrown_1_1_bundle_compiler.html#acb597c12aedae01c185b6977b8276d1e',1,'crown::BundleCompiler']]],
+  ['scan',['scan',['../classcrown_1_1_bundle_compiler.html#a26035641c3c0e74516297fdd65ed25c8',1,'crown::BundleCompiler']]],
   ['scene_5fgraph',['scene_graph',['../classcrown_1_1_world.html#a2ad4157d95cb1d0e764648381848cb83',1,'crown::World']]],
   ['scenegraph',['SceneGraph',['../structcrown_1_1_scene_graph.html',1,'crown']]],
-  ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html#a7570d50231c79bdc35ab942ff488b3ea',1,'crown::ScopedMutex']]],
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html',1,'crown']]],
+  ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html#a7570d50231c79bdc35ab942ff488b3ea',1,'crown::ScopedMutex']]],
   ['seek',['seek',['../classcrown_1_1_file.html#a6d849fb4fdb16ffc33f24ffef4c111a9',1,'crown::File::seek()'],['../classcrown_1_1_null_file.html#af865cfdbca7e7b31c70864a8fdf3c231',1,'crown::NullFile::seek()']]],
   ['seek_5fto_5fend',['seek_to_end',['../classcrown_1_1_file.html#ab045f19a41718fa85a71ac4d4c9d6870',1,'crown::File::seek_to_end()'],['../classcrown_1_1_null_file.html#ac27f8739e145abea99ee1f90cf58cc75',1,'crown::NullFile::seek_to_end()']]],
   ['semaphore',['Semaphore',['../structcrown_1_1_semaphore.html',1,'crown']]],
-  ['send',['send',['../classcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73',1,'crown::ConsoleServer']]],
+  ['send',['send',['../classcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73',1,'crown::ConsoleServer::send(const char *json)'],['../classcrown_1_1_console_server.html#a570ee0747ae53f23d5ee22a026b37b08',1,'crown::ConsoleServer::send(TCPSocket client, const char *json)']]],
   ['set',['set',['../structcrown_1_1_i_p_address.html#ac828ab082c0ce30d2f24841913d52d07',1,'crown::IPAddress::set()'],['../structcrown_1_1_dynamic_string.html#a86af0d8dfb2ab56c814bc14ed5019059',1,'crown::DynamicString::set()'],['../namespacecrown_1_1hash__map.html#ae1f9943c9834a6cb37f4df0981679c05',1,'crown::hash_map::set()'],['../namespacecrown_1_1map.html#aea7e2bdf60ff931d446a3e2e305815af',1,'crown::map::set()']]],
   ['set_5factor_5fangular_5fdamping',['set_actor_angular_damping',['../classcrown_1_1_physics_world.html#a0deb1ecacaa1a53b25a99b1a286e5ae4',1,'crown::PhysicsWorld']]],
   ['set_5factor_5fangular_5fvelocity',['set_actor_angular_velocity',['../classcrown_1_1_physics_world.html#ae284a5c559ba91e325759b39c918d325',1,'crown::PhysicsWorld']]],
@@ -42,6 +42,7 @@ var searchData=
   ['set_5flocal_5fscale',['set_local_scale',['../structcrown_1_1_scene_graph.html#ab05acd7e1c0451607c543d97096c97f7',1,'crown::SceneGraph']]],
   ['set_5fmode',['set_mode',['../structcrown_1_1_display.html#a347187da2901ace2e10c62fd5f28981f',1,'crown::Display']]],
   ['set_5fmodule_5fconstructor',['set_module_constructor',['../structcrown_1_1_lua_environment.html#a1a160bd5484dc82be50fe68786328db5',1,'crown::LuaEnvironment']]],
+  ['set_5fprefix',['set_prefix',['../classcrown_1_1_disk_filesystem.html#a7376177e7249d069b69488cca34181ec',1,'crown::DiskFilesystem']]],
   ['set_5frotation',['set_rotation',['../group___math.html#gac76f5db064ce45028a62eeeae6cfe997',1,'crown::set_rotation(Matrix4x4 &amp;m, const Matrix3x3 &amp;rot)'],['../group___math.html#ga68154889c10dcc8c4d4f9af51fc37f05',1,'crown::set_rotation(Matrix4x4 &amp;m, const Quaternion &amp;rot)']]],
   ['set_5fscale',['set_scale',['../group___math.html#gadbd9403b6d423aaaf2da4c04d8f98d86',1,'crown::set_scale(Matrix3x3 &amp;m, const Vector3 &amp;s)'],['../group___math.html#ga4cb3a1da7a62f575ecec7c85efbf9491',1,'crown::set_scale(Matrix4x4 &amp;m, const Vector3 &amp;s)']]],
   ['set_5fsound_5fposition',['set_sound_position',['../classcrown_1_1_world.html#aef62f93e020c28f62200e635caf0ddc8',1,'crown::World']]],
@@ -71,6 +72,7 @@ var searchData=
   ['slope_5flimit',['slope_limit',['../structcrown_1_1_controller_desc.html#ad4416d7d9e01d40955beecd94bd47e86',1,'crown::ControllerDesc']]],
   ['sort',['sort',['../namespacecrown_1_1sort__map.html#ab16ab415a05343486a99bcdbddad0c83',1,'crown::sort_map']]],
   ['sortmap',['SortMap',['../structcrown_1_1_sort_map.html',1,'crown']]],
+  ['sortmap_3c_20crown_3a_3astringid32_2c_20commanddata_20_3e',['SortMap&lt; crown::StringId32, CommandData &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20crown_3a_3astringid64_2c_20crown_3a_3amaterial_20_2a_20_3e',['SortMap&lt; crown::StringId64, crown::Material * &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20crown_3a_3astringid64_2c_20resourcetypedata_20_3e',['SortMap&lt; crown::StringId64, ResourceTypeData &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20resourcepair_2c_20resourceentry_20_3e',['SortMap&lt; ResourcePair, ResourceEntry &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
@@ -106,5 +108,6 @@ var searchData=
   ['stringid32',['StringId32',['../structcrown_1_1_string_id32.html',1,'crown']]],
   ['stringid64',['StringId64',['../structcrown_1_1_string_id64.html',1,'crown']]],
   ['stringstream',['StringStream',['../group___string.html#gabb8d0cc45a7450fd244c57c4308e5bc8',1,'crown']]],
-  ['submit',['submit',['../structcrown_1_1_debug_line.html#aeb338a656490c118533ece64a3887bd8',1,'crown::DebugLine']]]
+  ['submit',['submit',['../structcrown_1_1_debug_line.html#aeb338a656490c118533ece64a3887bd8',1,'crown::DebugLine']]],
+  ['success',['success',['../classcrown_1_1_console_server.html#a80c40b3afbda9b813cdd64c462b65c39',1,'crown::ConsoleServer']]]
 ];

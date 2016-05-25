@@ -87,9 +87,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a36ffec967f9a48422f34780c5a4e7a91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36ffec967f9a48422f34780c5a4e7a91"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (<a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;fs, <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;output, const char *platform, jmp_buf *buf)</td></tr>
-<tr class="separator:a36ffec967f9a48422f34780c5a4e7a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0f9efe3933356430d1589b6a36e845f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0f9efe3933356430d1589b6a36e845f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (<a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;source_fs, <a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;bundle_fs, <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;output, const char *platform, jmp_buf *buf)</td></tr>
+<tr class="separator:ad0f9efe3933356430d1589b6a36e845f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1dec190ec6081402da156378aa7cc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c1dec190ec6081402da156378aa7cc7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *msg, va_list args)</td></tr>
 <tr class="separator:a3c1dec190ec6081402da156378aa7cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +117,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_temporary</b> (
 <tr class="memitem:afb90b625d304cf6003dbf500343fdd7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb90b625d304cf6003dbf500343fdd7c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>get_absolute_path</b> (const char *path, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;abs)</td></tr>
 <tr class="separator:afb90b625d304cf6003dbf500343fdd7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae66fa93e85c248f56711e988d7528e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae66fa93e85c248f56711e988d7528e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>get_temporary_path</b> (const char *suffix, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;abs)</td></tr>
+<tr class="separator:aae66fa93e85c248f56711e988d7528e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad2ab0126a99fb5868738ad6f7d58a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ad2ab0126a99fb5868738ad6f7d58a5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>delete_file</b> (const char *path)</td></tr>
 <tr class="separator:a4ad2ab0126a99fb5868738ad6f7d58a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,7 +149,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>add_dependency</b> (c
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 11 2016 17:46:13 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 25 2016 22:20:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
