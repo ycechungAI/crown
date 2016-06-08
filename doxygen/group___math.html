@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Crown: Math</title>
+<title>Pepper: Math</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">Math</div>  </div>
+<div class="title">Math<div class="ingroups"><a class="el" href="group___core.html">Core</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
@@ -84,8 +84,8 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacecrown_1_1frustum"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1frustum.html">crown::frustum</a></td></tr>
 <tr class="memdesc:namespacecrown_1_1frustum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to manipulate <a class="el" href="structcrown_1_1_frustum.html">Frustum</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecrown_1_1plane"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1plane.html">crown::plane</a></td></tr>
-<tr class="memdesc:namespacecrown_1_1plane"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to manipulate <a class="el" href="structcrown_1_1_plane.html" title="3D Plane. ">Plane</a>. <br /></td></tr>
+<tr class="memitem:namespacecrown_1_1plane3"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1plane3.html">crown::plane3</a></td></tr>
+<tr class="memdesc:namespacecrown_1_1plane3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to manipulate <a class="el" href="structcrown_1_1_plane3.html" title="3D Plane. ">Plane3</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecrown_1_1sphere"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1sphere.html">crown::sphere</a></td></tr>
 <tr class="memdesc:namespacecrown_1_1sphere"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions to manipulate <a class="el" href="structcrown_1_1_sphere.html">Sphere</a>. <br /></td></tr>
@@ -109,8 +109,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_o_b_b.html">crown::OBB</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_plane.html">crown::Plane</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D <a class="el" href="structcrown_1_1_plane.html" title="3D Plane. ">Plane</a>.  <a href="structcrown_1_1_plane.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_plane3.html">crown::Plane3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D Plane.  <a href="structcrown_1_1_plane3.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_frustum.html">crown::Frustum</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +158,9 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group
 u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gada442382ca06957608b55038994e44ef">crown::to_abgr</a> (const Color4 &amp;c)</td></tr>
 <tr class="memdesc:gada442382ca06957608b55038994e44ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color as a packed 32-bit integer. (ABGR order) <br /></td></tr>
 <tr class="separator:gada442382ca06957608b55038994e44ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5bab0b687e8fd89bec7be31f7a919eb1"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga5bab0b687e8fd89bec7be31f7a919eb1">crown::ray_plane_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Plane &amp;p)</td></tr>
-<tr class="memdesc:ga5bab0b687e8fd89bec7be31f7a919eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with plane <em>p</em> or -1.0 if no intersection.  <a href="group___math.html#ga5bab0b687e8fd89bec7be31f7a919eb1">More...</a><br /></td></tr>
-<tr class="separator:ga5bab0b687e8fd89bec7be31f7a919eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga968d9722db1b957700e89bb1ec32b8a3"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga968d9722db1b957700e89bb1ec32b8a3">crown::ray_plane_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Plane3 &amp;p)</td></tr>
+<tr class="memdesc:ga968d9722db1b957700e89bb1ec32b8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with plane <em>p</em> or -1.0 if no intersection.  <a href="group___math.html#ga968d9722db1b957700e89bb1ec32b8a3">More...</a><br /></td></tr>
+<tr class="separator:ga968d9722db1b957700e89bb1ec32b8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga23fbe04c191b3c6d9ccdf0529eeff8fe"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga23fbe04c191b3c6d9ccdf0529eeff8fe">crown::ray_disc_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Vector3 &amp;center, f32 radius, const Vector3 &amp;normal)</td></tr>
 <tr class="memdesc:ga23fbe04c191b3c6d9ccdf0529eeff8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with disc defined by <em>center</em>, <em>radius</em> and <em>normal</em> or -1.0 if no intersection.  <a href="group___math.html#ga23fbe04c191b3c6d9ccdf0529eeff8fe">More...</a><br /></td></tr>
 <tr class="separator:ga23fbe04c191b3c6d9ccdf0529eeff8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,10 +176,10 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group
 <tr class="memitem:ga55966cae0ae6ceef84a396766304aeba"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga55966cae0ae6ceef84a396766304aeba">crown::ray_mesh_intersection</a> (const Vector3 &amp;from, const Vector3 &amp;dir, const Matrix4x4 &amp;tm, const void *vertices, u32 stride, const u16 *indices, u32 num)</td></tr>
 <tr class="memdesc:ga55966cae0ae6ceef84a396766304aeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with the triangle mesh defined by (vertices, stride, indices, num) or -1.0 if no intersection.  <a href="group___math.html#ga55966cae0ae6ceef84a396766304aeba">More...</a><br /></td></tr>
 <tr class="separator:ga55966cae0ae6ceef84a396766304aeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaacb9059f27a4b71ebc01c066fe373785"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaacb9059f27a4b71ebc01c066fe373785"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaacb9059f27a4b71ebc01c066fe373785">crown::plane_3_intersection</a> (const Plane &amp;a, const Plane &amp;b, const Plane &amp;c, Vector3 &amp;ip)</td></tr>
-<tr class="memdesc:gaacb9059f27a4b71ebc01c066fe373785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the planes <em>a</em>, <em>b</em> and <em>c</em> intersects and if so fills <em>ip</em> with the intersection point. <br /></td></tr>
-<tr class="separator:gaacb9059f27a4b71ebc01c066fe373785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa73a3b394f357863ec839c425201ce0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa73a3b394f357863ec839c425201ce0b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#gaa73a3b394f357863ec839c425201ce0b">crown::plane_3_intersection</a> (const Plane3 &amp;a, const Plane3 &amp;b, const Plane3 &amp;c, Vector3 &amp;ip)</td></tr>
+<tr class="memdesc:gaa73a3b394f357863ec839c425201ce0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the planes <em>a</em>, <em>b</em> and <em>c</em> intersects and if so fills <em>ip</em> with the intersection point. <br /></td></tr>
+<tr class="separator:gaa73a3b394f357863ec839c425201ce0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga618bd1d60d10675ff3f77ab39f947e87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga618bd1d60d10675ff3f77ab39f947e87"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___math.html#ga618bd1d60d10675ff3f77ab39f947e87">crown::frustum_sphere_intersection</a> (const Frustum &amp;f, const Sphere &amp;s)</td></tr>
 <tr class="memdesc:ga618bd1d60d10675ff3f77ab39f947e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the frustum <em>f</em> and the sphere <em>s</em> intersects. <br /></td></tr>
@@ -950,18 +950,18 @@ const Matrix3x3&#160;</td><td class="memItemRight" valign="bottom"><b>crown::MAT
 <tr class="memitem:gaf8c530b030bc5f36304221f5b1465a98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf8c530b030bc5f36304221f5b1465a98"></a>
 const Matrix4x4&#160;</td><td class="memItemRight" valign="bottom"><b>crown::MATRIX4X4_IDENTITY</b> = { VECTOR4_XAXIS, VECTOR4_YAXIS, VECTOR4_ZAXIS, VECTOR4_WAXIS }</td></tr>
 <tr class="separator:gaf8c530b030bc5f36304221f5b1465a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad45019446f6214b886b8d45b4d2ca3c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad45019446f6214b886b8d45b4d2ca3c7"></a>
-const Plane&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE_ZERO</b> = { VECTOR3_ZERO, 0.0f }</td></tr>
-<tr class="separator:gad45019446f6214b886b8d45b4d2ca3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d9ff26b2ce161a622942348036c5a20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7d9ff26b2ce161a622942348036c5a20"></a>
-const Plane&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE_XAXIS</b> = { VECTOR3_XAXIS, 0.0f }</td></tr>
-<tr class="separator:ga7d9ff26b2ce161a622942348036c5a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5acccfb24ce778cf458b89b8593d9dac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5acccfb24ce778cf458b89b8593d9dac"></a>
-const Plane&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE_YAXIS</b> = { VECTOR3_YAXIS, 0.0f }</td></tr>
-<tr class="separator:ga5acccfb24ce778cf458b89b8593d9dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9e6e571ec155eeda79341165a93a0bb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9e6e571ec155eeda79341165a93a0bb8"></a>
-const Plane&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE_ZAXIS</b> = { VECTOR3_ZAXIS, 0.0f }</td></tr>
-<tr class="separator:ga9e6e571ec155eeda79341165a93a0bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1110889293fe0731f1ba4cb74bef9369"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1110889293fe0731f1ba4cb74bef9369"></a>
+const Plane3&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE3_ZERO</b> = { VECTOR3_ZERO, 0.0f }</td></tr>
+<tr class="separator:ga1110889293fe0731f1ba4cb74bef9369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94e84b888e27a0e8784b01c95b72ddcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga94e84b888e27a0e8784b01c95b72ddcf"></a>
+const Plane3&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE3_XAXIS</b> = { VECTOR3_XAXIS, 0.0f }</td></tr>
+<tr class="separator:ga94e84b888e27a0e8784b01c95b72ddcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd1c4cb92fd373d0f50b4270fa808ec2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafd1c4cb92fd373d0f50b4270fa808ec2"></a>
+const Plane3&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE3_YAXIS</b> = { VECTOR3_YAXIS, 0.0f }</td></tr>
+<tr class="separator:gafd1c4cb92fd373d0f50b4270fa808ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4f58329803171ba19b182faa9c02e29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae4f58329803171ba19b182faa9c02e29"></a>
+const Plane3&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PLANE3_ZAXIS</b> = { VECTOR3_ZAXIS, 0.0f }</td></tr>
+<tr class="separator:gae4f58329803171ba19b182faa9c02e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab3aa40d9a57a68f566b60606f02a09ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gab3aa40d9a57a68f566b60606f02a09ed"></a>
 const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::PI</b> = 3.14159265358979323846f</td></tr>
 <tr class="separator:gab3aa40d9a57a68f566b60606f02a09ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -977,7 +977,7 @@ const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_EPS
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga5bab0b687e8fd89bec7be31f7a919eb1"></a>
+<a class="anchor" id="ga968d9722db1b957700e89bb1ec32b8a3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -996,7 +996,7 @@ const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_EPS
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structcrown_1_1_plane.html">Plane</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_plane3.html">Plane3</a> &amp;&#160;</td>
           <td class="paramname"><em>p</em>&#160;</td>
         </tr>
         <tr>
@@ -1257,7 +1257,7 @@ const f32&#160;</td><td class="memItemRight" valign="bottom"><b>crown::FLOAT_EPS
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 29 2016 22:21:15 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 8 2016 21:04:31 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

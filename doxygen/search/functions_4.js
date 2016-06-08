@@ -11,7 +11,8 @@ var searchData=
   ['error',['error',['../classcrown_1_1_console_server.html#af58d7054fc7f242650bad1f02cf81382',1,'crown::ConsoleServer']]],
   ['events',['events',['../classcrown_1_1_world.html#a240fb1754119bbb8183e146ec6d67cda',1,'crown::World']]],
   ['execute',['execute',['../structcrown_1_1_lua_environment.html#a39a718470a6a3aa2fb674df9efce97eb',1,'crown::LuaEnvironment']]],
+  ['execute_5fprocess',['execute_process',['../namespacecrown_1_1os.html#a1396fc42b8ed54add06d2892ee3ea0ac',1,'crown::os']]],
   ['execute_5fstring',['execute_string',['../structcrown_1_1_lua_environment.html#a054ed2210d4b13e1ee12249fb6faef5e',1,'crown::LuaEnvironment']]],
-  ['exists',['exists',['../classcrown_1_1_disk_filesystem.html#a20cbe4f7dd6c4b039b3a4ad4f4e7a01a',1,'crown::DiskFilesystem::exists()'],['../classcrown_1_1_filesystem.html#a60ffbd7fae7d1fcd0c34b17f95483874',1,'crown::Filesystem::exists()']]],
+  ['exists',['exists',['../classcrown_1_1_disk_filesystem.html#a20cbe4f7dd6c4b039b3a4ad4f4e7a01a',1,'crown::DiskFilesystem::exists()'],['../classcrown_1_1_filesystem.html#a60ffbd7fae7d1fcd0c34b17f95483874',1,'crown::Filesystem::exists()'],['../namespacecrown_1_1os.html#a54032cedeae72ca265a64981e5e3ba22',1,'crown::os::exists()']]],
   ['extension',['extension',['../namespacecrown_1_1path.html#a898603050e2b4573e894aff42793f35a',1,'crown::path']]]
 ];
