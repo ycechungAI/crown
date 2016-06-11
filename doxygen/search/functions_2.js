@@ -40,7 +40,7 @@ var searchData=
   ['create_5fmaterial',['create_material',['../classcrown_1_1_material_manager.html#a77d2fb39e58b8eb265737c09df9d0901',1,'crown::MaterialManager']]],
   ['create_5fmesh',['create_mesh',['../classcrown_1_1_render_world.html#a0de310ede1b4e6a84ea6de52bd13c9ff',1,'crown::RenderWorld']]],
   ['create_5fresource_5fpackage',['create_resource_package',['../classcrown_1_1_device.html#a0e6069641781ee8d9b0d722f13e0e23b',1,'crown::Device']]],
-  ['create_5fscreen_5fgui',['create_screen_gui',['../classcrown_1_1_world.html#a53a403d4e930b545d6e4ef913728923b',1,'crown::World']]],
+  ['create_5fscreen_5fdebug_5fgui',['create_screen_debug_gui',['../classcrown_1_1_world.html#a9b1966ff724dfe500d32ff78e63ed41d',1,'crown::World']]],
   ['create_5fsprite',['create_sprite',['../classcrown_1_1_render_world.html#a777829e9e829ec67f7370fe8a7d09043',1,'crown::RenderWorld']]],
   ['create_5fworld',['create_world',['../classcrown_1_1_device.html#a05bf21977aca9128c5f8435cc3235170',1,'crown::Device']]],
   ['cross',['cross',['../group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f',1,'crown']]],

@@ -422,20 +422,20 @@ tt.literal {
 </li>
 <li><a class="reference internal" href="#scenegraph" id="id41">SceneGraph</a></li>
 <li><a class="reference internal" href="#material" id="id42">Material</a></li>
-<li><a class="reference internal" href="#gui" id="id43">Gui</a></li>
-<li><a class="reference internal" href="#renderworld" id="id44">RenderWorld</a><ul>
-<li><a class="reference internal" href="#mesh" id="id45">Mesh</a></li>
-<li><a class="reference internal" href="#sprite" id="id46">Sprite</a></li>
-<li><a class="reference internal" href="#light" id="id47">Light</a></li>
+<li><a class="reference internal" href="#renderworld" id="id43">RenderWorld</a><ul>
+<li><a class="reference internal" href="#mesh" id="id44">Mesh</a></li>
+<li><a class="reference internal" href="#sprite" id="id45">Sprite</a></li>
+<li><a class="reference internal" href="#light" id="id46">Light</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#physicsworld" id="id48">PhysicsWorld</a><ul>
-<li><a class="reference internal" href="#actor" id="id49">Actor</a></li>
+<li><a class="reference internal" href="#physicsworld" id="id47">PhysicsWorld</a><ul>
+<li><a class="reference internal" href="#actor" id="id48">Actor</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#soundworld" id="id50">SoundWorld</a></li>
-<li><a class="reference internal" href="#resourcepackage" id="id51">ResourcePackage</a></li>
-<li><a class="reference internal" href="#device" id="id52">Device</a></li>
+<li><a class="reference internal" href="#soundworld" id="id49">SoundWorld</a></li>
+<li><a class="reference internal" href="#resourcepackage" id="id50">ResourcePackage</a></li>
+<li><a class="reference internal" href="#device" id="id51">Device</a></li>
+<li><a class="reference internal" href="#debuggui" id="id52">DebugGui</a></li>
 <li><a class="reference internal" href="#debugline" id="id53">DebugLine</a></li>
 <li><a class="reference internal" href="#input" id="id54">Input</a><ul>
 <li><a class="reference internal" href="#keyboard" id="id55">Keyboard</a><ul>
@@ -953,23 +953,8 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 </dl>
 </blockquote>
 </div>
-<div class="section" id="gui">
-<h1><a class="toc-backref" href="#id43">Gui</a></h1>
-<blockquote>
-<dl class="docutils">
-<dt><strong>rect</strong> (pos, size, material_resource, color)</dt>
-<dd>Draws a rectangle.</dd>
-<dt><strong>image</strong> (pos, size, material_resource, color)</dt>
-<dd>Draws an image.</dd>
-<dt><strong>image_uv</strong> (pos, size, uv0, uv1, material_resource, color)</dt>
-<dd>Draws an image with explicit UV coordinates.</dd>
-<dt><strong>text</strong> (pos, font_size, str, font_resource, material_resource, color)</dt>
-<dd>Draws text.</dd>
-</dl>
-</blockquote>
-</div>
 <div class="section" id="renderworld">
-<h1><a class="toc-backref" href="#id44">RenderWorld</a></h1>
+<h1><a class="toc-backref" href="#id43">RenderWorld</a></h1>
 <blockquote>
 <dl class="docutils">
 <dt><strong>enable_debug_drawing</strong> (rw, enable)</dt>
@@ -977,7 +962,7 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 </dl>
 </blockquote>
 <div class="section" id="mesh">
-<h2><a class="toc-backref" href="#id45">Mesh</a></h2>
+<h2><a class="toc-backref" href="#id44">Mesh</a></h2>
 <blockquote>
 <dl class="docutils">
 <dt><strong>create_mesh</strong> (rw, unit, mesh_resource, geometry_name, material_resource, visible, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
@@ -992,7 +977,7 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 </blockquote>
 </div>
 <div class="section" id="sprite">
-<h2><a class="toc-backref" href="#id46">Sprite</a></h2>
+<h2><a class="toc-backref" href="#id45">Sprite</a></h2>
 <blockquote>
 <dl class="docutils">
 <dt><strong>create_sprite</strong> (rw, unit, sprite_resource, material_resource, visible, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
@@ -1005,7 +990,7 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 </blockquote>
 </div>
 <div class="section" id="light">
-<h2><a class="toc-backref" href="#id47">Light</a></h2>
+<h2><a class="toc-backref" href="#id46">Light</a></h2>
 <blockquote>
 <dl class="docutils">
 <dt><strong>create_light</strong> (rw, unit, type, range, intensity, spot_angle, color, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
@@ -1041,7 +1026,7 @@ It can be either <tt class="docutils literal">directional</tt>, <tt class="docut
 </div>
 </div>
 <div class="section" id="physicsworld">
-<h1><a class="toc-backref" href="#id48">PhysicsWorld</a></h1>
+<h1><a class="toc-backref" href="#id47">PhysicsWorld</a></h1>
 <blockquote>
 <dl class="docutils">
 <dt><strong>gravity</strong> (pw) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
@@ -1056,7 +1041,7 @@ Mode can be either <tt class="docutils literal">closest</tt> or <tt class="docut
 </dl>
 </blockquote>
 <div class="section" id="actor">
-<h2><a class="toc-backref" href="#id49">Actor</a></h2>
+<h2><a class="toc-backref" href="#id48">Actor</a></h2>
 <blockquote>
 <dl class="docutils">
 <dt><strong>actor_instances</strong> (pw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
@@ -1141,7 +1126,7 @@ Note that this call only affects nonkinematic actors.</dd>
 </div>
 </div>
 <div class="section" id="soundworld">
-<h1><a class="toc-backref" href="#id50">SoundWorld</a></h1>
+<h1><a class="toc-backref" href="#id49">SoundWorld</a></h1>
 <blockquote>
 <dl class="docutils">
 <dt><strong>stop_all</strong> (sound_world)</dt>
@@ -1156,7 +1141,7 @@ Note that this call only affects nonkinematic actors.</dd>
 </blockquote>
 </div>
 <div class="section" id="resourcepackage">
-<h1><a class="toc-backref" href="#id51">ResourcePackage</a></h1>
+<h1><a class="toc-backref" href="#id50">ResourcePackage</a></h1>
 <blockquote>
 <dl class="docutils">
 <dt><strong>load</strong> (package)</dt>
@@ -1173,7 +1158,7 @@ instead, you have to poll for completion with has_loaded().</dd>
 </blockquote>
 </div>
 <div class="section" id="device">
-<h1><a class="toc-backref" href="#id52">Device</a></h1>
+<h1><a class="toc-backref" href="#id51">Device</a></h1>
 <blockquote>
 <dl class="docutils">
 <dt><strong>argv</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
@@ -1219,6 +1204,21 @@ When resource autoload is enabled it always returns true.</dd>
 <dd>Sets the number of temporary objects used by Lua.</dd>
 <dt><strong>guid</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a new GUID.</dd>
+</dl>
+</blockquote>
+</div>
+<div class="section" id="debuggui">
+<h1><a class="toc-backref" href="#id52">DebugGui</a></h1>
+<blockquote>
+<dl class="docutils">
+<dt><strong>rect</strong> (pos, size, material_resource, color)</dt>
+<dd>Draws a rectangle.</dd>
+<dt><strong>image</strong> (pos, size, material_resource, color)</dt>
+<dd>Draws an image.</dd>
+<dt><strong>image_uv</strong> (pos, size, uv0, uv1, material_resource, color)</dt>
+<dd>Draws an image with explicit UV coordinates.</dd>
+<dt><strong>text</strong> (pos, font_size, str, font_resource, material_resource, color)</dt>
+<dd>Draws text.</dd>
 </dl>
 </blockquote>
 </div>
