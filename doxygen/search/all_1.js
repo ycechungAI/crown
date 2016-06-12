@@ -6,6 +6,8 @@ var searchData=
   ['bezier',['bezier',['../group___math.html#ga1ead6336710e53fb7ab9f13bbee7347f',1,'crown']]],
   ['binaryreader',['BinaryReader',['../classcrown_1_1_binary_reader.html',1,'crown']]],
   ['binarywriter',['BinaryWriter',['../classcrown_1_1_binary_writer.html',1,'crown']]],
+  ['bind',['bind',['../structcrown_1_1_t_c_p_socket.html#af292f8c60c065148ef2b23b717716643',1,'crown::TCPSocket']]],
+  ['bindresult',['BindResult',['../structcrown_1_1_bind_result.html',1,'crown']]],
   ['boxshape',['BoxShape',['../structcrown_1_1_box_shape.html',1,'crown']]],
   ['bundle_5fcompiler',['bundle_compiler',['../classcrown_1_1_device.html#ad1d156cc8bccbec0a3475a2d64287af9',1,'crown::Device']]],
   ['bundlecompiler',['BundleCompiler',['../classcrown_1_1_bundle_compiler.html',1,'crown']]],

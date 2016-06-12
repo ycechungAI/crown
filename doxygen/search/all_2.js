@@ -42,6 +42,7 @@ var searchData=
   ['componentdata',['ComponentData',['../structcrown_1_1_component_data.html',1,'crown']]],
   ['condense',['condense',['../namespacecrown_1_1array.html#afa0f6a0fffeced013371f2b73db0d051',1,'crown::array::condense()'],['../namespacecrown_1_1vector.html#a26e09a38511ac2f0fdc56e929fc41d01',1,'crown::vector::condense()']]],
   ['conjugate',['conjugate',['../group___math.html#ga295c42b0881f56c53f0d3b14e282d2b3',1,'crown']]],
+  ['connect',['connect',['../structcrown_1_1_t_c_p_socket.html#a56bef5687d72cd7bb524c0739e168d05',1,'crown::TCPSocket']]],
   ['connected',['connected',['../structcrown_1_1_input_device.html#afb6497e2fdcb8497cdf1445a3c51d14c',1,'crown::InputDevice']]],
   ['connectresult',['ConnectResult',['../structcrown_1_1_connect_result.html',1,'crown']]],
   ['console_5fserver',['console_server',['../classcrown_1_1_device.html#a0d4bf6dd82781517c419cfcfdd314145',1,'crown::Device']]],

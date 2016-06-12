@@ -26,6 +26,7 @@ var searchData=
   ['complete_5frequests',['complete_requests',['../classcrown_1_1_resource_manager.html#a438fc4ff03dde952938f960296ddbbe1',1,'crown::ResourceManager']]],
   ['condense',['condense',['../namespacecrown_1_1array.html#afa0f6a0fffeced013371f2b73db0d051',1,'crown::array::condense()'],['../namespacecrown_1_1vector.html#a26e09a38511ac2f0fdc56e929fc41d01',1,'crown::vector::condense()']]],
   ['conjugate',['conjugate',['../group___math.html#ga295c42b0881f56c53f0d3b14e282d2b3',1,'crown']]],
+  ['connect',['connect',['../structcrown_1_1_t_c_p_socket.html#a56bef5687d72cd7bb524c0739e168d05',1,'crown::TCPSocket']]],
   ['connected',['connected',['../structcrown_1_1_input_device.html#afb6497e2fdcb8497cdf1445a3c51d14c',1,'crown::InputDevice']]],
   ['console_5fserver',['console_server',['../classcrown_1_1_device.html#a0d4bf6dd82781517c419cfcfdd314145',1,'crown::Device']]],
   ['contains_5fpoint',['contains_point',['../namespacecrown_1_1aabb.html#a125ada6a172b5a285e4315b2b7cb08a5',1,'crown::aabb::contains_point()'],['../namespacecrown_1_1frustum.html#aa6506b04d0487bcb98597a929f4c6465',1,'crown::frustum::contains_point()'],['../namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa',1,'crown::sphere::contains_point()']]],
