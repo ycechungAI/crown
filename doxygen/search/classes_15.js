@@ -9,6 +9,6 @@ var searchData=
   ['vector_3c_20crown_3a_3asortmap_3a_3aentry_20_3e',['Vector&lt; crown::SortMap::Entry &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
   ['vector_3c_20crown_3a_3atcpsocket_20_3e',['Vector&lt; crown::TCPSocket &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
   ['vector_3c_20staticcompile_20_3e',['Vector&lt; StaticCompile &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
-  ['vertexdata',['VertexData',['../structcrown_1_1_vertex_data.html',1,'crown']]],
-  ['vertexdata',['VertexData',['../structcrown_1_1_debug_gui_1_1_vertex_data.html',1,'crown::DebugGui']]]
+  ['vertexdata',['VertexData',['../structcrown_1_1_debug_gui_1_1_vertex_data.html',1,'crown::DebugGui']]],
+  ['vertexdata',['VertexData',['../structcrown_1_1_vertex_data.html',1,'crown']]]
 ];

@@ -92,24 +92,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5c319d98d2b44dfab52a588e4f63f5a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c319d98d2b44dfab52a588e4f63f5a6"></a>
-virtual <a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>create_collider</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_collider_desc.html">ColliderDesc</a> *sd)=0</td></tr>
-<tr class="separator:a5c319d98d2b44dfab52a588e4f63f5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79791b9703c47aee1335712a62bfd958"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79791b9703c47aee1335712a62bfd958"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy_collider</b> (<a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a> i)=0</td></tr>
-<tr class="separator:a79791b9703c47aee1335712a62bfd958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17b19746ecc23feab1f2045b2c0f5a42"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17b19746ecc23feab1f2045b2c0f5a42"></a>
-virtual <a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>first_collider</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)=0</td></tr>
-<tr class="separator:a17b19746ecc23feab1f2045b2c0f5a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5f693802774888c36914a6e36e56d3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5f693802774888c36914a6e36e56d3c"></a>
-virtual <a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>next_collider</b> (<a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a> i)=0</td></tr>
-<tr class="separator:ac5f693802774888c36914a6e36e56d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7fd3bc90e8d227cb2e8de6f697c1fb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7fd3bc90e8d227cb2e8de6f697c1fb8"></a>
-virtual <a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>create_actor</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_actor_resource.html">ActorResource</a> *ar, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tm)=0</td></tr>
-<tr class="separator:aa7fd3bc90e8d227cb2e8de6f697c1fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02896afd10d3b5d6472cc40604524521"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02896afd10d3b5d6472cc40604524521"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy_actor</b> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
-<tr class="separator:a02896afd10d3b5d6472cc40604524521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e31b5dc9e5ac073f59118b19ec71f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12e31b5dc9e5ac073f59118b19ec71f6"></a>
+virtual <a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>collider_create</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_collider_desc.html">ColliderDesc</a> *sd)=0</td></tr>
+<tr class="separator:a12e31b5dc9e5ac073f59118b19ec71f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2360712be5c0c814a34bbc014ec069ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2360712be5c0c814a34bbc014ec069ac"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>collider_destroy</b> (<a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a> i)=0</td></tr>
+<tr class="separator:a2360712be5c0c814a34bbc014ec069ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7b5b086f6df58ac971795afbdb2bde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a7b5b086f6df58ac971795afbdb2bde"></a>
+virtual <a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>collider_first</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)=0</td></tr>
+<tr class="separator:a8a7b5b086f6df58ac971795afbdb2bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cb3dda75d9eaaafdd9486fc3ae1b0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5cb3dda75d9eaaafdd9486fc3ae1b0f"></a>
+virtual <a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>collider_next</b> (<a class="el" href="structcrown_1_1_collider_instance.html">ColliderInstance</a> i)=0</td></tr>
+<tr class="separator:ac5cb3dda75d9eaaafdd9486fc3ae1b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ffef011a8fb00141ba5a191ea39d810"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ffef011a8fb00141ba5a191ea39d810"></a>
+virtual <a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>actor_create</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_actor_resource.html">ActorResource</a> *ar, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tm)=0</td></tr>
+<tr class="separator:a1ffef011a8fb00141ba5a191ea39d810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42c2e7bdb2d2b58c993993289d40716"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae42c2e7bdb2d2b58c993993289d40716"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>actor_destroy</b> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
+<tr class="separator:ae42c2e7bdb2d2b58c993993289d40716"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681d7a6858c228f5513fd73e1228059e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a681d7a6858c228f5513fd73e1228059e"></a>
 virtual <a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>actor</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)=0</td></tr>
 <tr class="separator:a681d7a6858c228f5513fd73e1228059e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,158 +125,158 @@ virtual <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a>&#160
 virtual <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a69d9ec1eb4841771fd44aa7b43242b6a">actor_world_pose</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
 <tr class="memdesc:a69d9ec1eb4841771fd44aa7b43242b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the world pose of the actor. <br /></td></tr>
 <tr class="separator:a69d9ec1eb4841771fd44aa7b43242b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a431d44184651cd242037b9e6cce69988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a431d44184651cd242037b9e6cce69988"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a431d44184651cd242037b9e6cce69988">teleport_actor_world_position</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;p)=0</td></tr>
-<tr class="memdesc:a431d44184651cd242037b9e6cce69988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teleports the actor to the given world position. <br /></td></tr>
-<tr class="separator:a431d44184651cd242037b9e6cce69988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a363dfc6b072cb69897fa02148e958d3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a363dfc6b072cb69897fa02148e958d3c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a363dfc6b072cb69897fa02148e958d3c">teleport_actor_world_rotation</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;r)=0</td></tr>
-<tr class="memdesc:a363dfc6b072cb69897fa02148e958d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teleports the actor to the given world rotation. <br /></td></tr>
-<tr class="separator:a363dfc6b072cb69897fa02148e958d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a030aa75b4c4483fd5003fdf1686a4154"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a030aa75b4c4483fd5003fdf1686a4154"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a030aa75b4c4483fd5003fdf1686a4154">teleport_actor_world_pose</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;m)=0</td></tr>
-<tr class="memdesc:a030aa75b4c4483fd5003fdf1686a4154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teleports the actor to the given world pose. <br /></td></tr>
-<tr class="separator:a030aa75b4c4483fd5003fdf1686a4154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3766f06424ce3ca27b017a31c5950a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f3766f06424ce3ca27b017a31c5950a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a6f3766f06424ce3ca27b017a31c5950a">actor_teleport_world_position</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;p)=0</td></tr>
+<tr class="memdesc:a6f3766f06424ce3ca27b017a31c5950a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teleports the actor to the given world position. <br /></td></tr>
+<tr class="separator:a6f3766f06424ce3ca27b017a31c5950a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77374011cf15b9bc5be6da4f94ad02b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77374011cf15b9bc5be6da4f94ad02b3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a77374011cf15b9bc5be6da4f94ad02b3">actor_teleport_world_rotation</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;r)=0</td></tr>
+<tr class="memdesc:a77374011cf15b9bc5be6da4f94ad02b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teleports the actor to the given world rotation. <br /></td></tr>
+<tr class="separator:a77374011cf15b9bc5be6da4f94ad02b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e72369bef998cc64ef9a7d8c6538522"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e72369bef998cc64ef9a7d8c6538522"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a8e72369bef998cc64ef9a7d8c6538522">actor_teleport_world_pose</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;m)=0</td></tr>
+<tr class="memdesc:a8e72369bef998cc64ef9a7d8c6538522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Teleports the actor to the given world pose. <br /></td></tr>
+<tr class="separator:a8e72369bef998cc64ef9a7d8c6538522"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa104ba377f3080b9b1155b06b24a391a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa104ba377f3080b9b1155b06b24a391a"></a>
 virtual <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#aa104ba377f3080b9b1155b06b24a391a">actor_center_of_mass</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
 <tr class="memdesc:aa104ba377f3080b9b1155b06b24a391a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the center of mass of the actor. <br /></td></tr>
 <tr class="separator:aa104ba377f3080b9b1155b06b24a391a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4828a1f85a1c18bd93e526414a35d5a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4828a1f85a1c18bd93e526414a35d5a6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a4828a1f85a1c18bd93e526414a35d5a6">enable_actor_gravity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
-<tr class="memdesc:a4828a1f85a1c18bd93e526414a35d5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables gravity for the actor. <br /></td></tr>
-<tr class="separator:a4828a1f85a1c18bd93e526414a35d5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f0bdba97804fb7c0419a7db4f2a7471"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f0bdba97804fb7c0419a7db4f2a7471"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a6f0bdba97804fb7c0419a7db4f2a7471">disable_actor_gravity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
-<tr class="memdesc:a6f0bdba97804fb7c0419a7db4f2a7471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables gravity for the actor. <br /></td></tr>
-<tr class="separator:a6f0bdba97804fb7c0419a7db4f2a7471"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af23fec112ef739bf5c9b465bcef5b7cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af23fec112ef739bf5c9b465bcef5b7cf"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#af23fec112ef739bf5c9b465bcef5b7cf">enable_actor_collision</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
-<tr class="memdesc:af23fec112ef739bf5c9b465bcef5b7cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables collision detection for the actor. <br /></td></tr>
-<tr class="separator:af23fec112ef739bf5c9b465bcef5b7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47daaeaeac10cc5b94218bfa542db6fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47daaeaeac10cc5b94218bfa542db6fc"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a47daaeaeac10cc5b94218bfa542db6fc">disable_actor_collision</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
-<tr class="memdesc:a47daaeaeac10cc5b94218bfa542db6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables collision detection for the actor. <br /></td></tr>
-<tr class="separator:a47daaeaeac10cc5b94218bfa542db6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cbf7a1e0fb5bfe478b2f191094d7f1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cbf7a1e0fb5bfe478b2f191094d7f1f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a0cbf7a1e0fb5bfe478b2f191094d7f1f">set_actor_collision_filter</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, <a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> filter)=0</td></tr>
-<tr class="memdesc:a0cbf7a1e0fb5bfe478b2f191094d7f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the collision filter of the actor. <br /></td></tr>
-<tr class="separator:a0cbf7a1e0fb5bfe478b2f191094d7f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef81be0bf58b14a9aa265d17ddcbac0e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#aef81be0bf58b14a9aa265d17ddcbac0e">set_actor_kinematic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, bool kinematic)=0</td></tr>
-<tr class="memdesc:aef81be0bf58b14a9aa265d17ddcbac0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the actor is kinematic or not.  <a href="#aef81be0bf58b14a9aa265d17ddcbac0e">More...</a><br /></td></tr>
-<tr class="separator:aef81be0bf58b14a9aa265d17ddcbac0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b133530879f14082a984427950402a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a0b133530879f14082a984427950402a0">move_actor</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
-<tr class="memdesc:a0b133530879f14082a984427950402a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the actor to <em>pos</em>.  <a href="#a0b133530879f14082a984427950402a0">More...</a><br /></td></tr>
-<tr class="separator:a0b133530879f14082a984427950402a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a671a06ac879da730cb1084d6594b6f37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a671a06ac879da730cb1084d6594b6f37"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a671a06ac879da730cb1084d6594b6f37">is_static</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
-<tr class="memdesc:a671a06ac879da730cb1084d6594b6f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is static. <br /></td></tr>
-<tr class="separator:a671a06ac879da730cb1084d6594b6f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dca195068620574407def4a7ec1905f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7dca195068620574407def4a7ec1905f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a7dca195068620574407def4a7ec1905f">is_dynamic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
-<tr class="memdesc:a7dca195068620574407def4a7ec1905f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is dynamic. <br /></td></tr>
-<tr class="separator:a7dca195068620574407def4a7ec1905f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0e9ef6ccfaebeac584f79d81bfeaf0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0e9ef6ccfaebeac584f79d81bfeaf0a"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ac0e9ef6ccfaebeac584f79d81bfeaf0a">is_kinematic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
-<tr class="memdesc:ac0e9ef6ccfaebeac584f79d81bfeaf0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is kinematic (keyframed). <br /></td></tr>
-<tr class="separator:ac0e9ef6ccfaebeac584f79d81bfeaf0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae382f6b64f480a7adfe452b244634e24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae382f6b64f480a7adfe452b244634e24"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ae382f6b64f480a7adfe452b244634e24">is_nonkinematic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
-<tr class="memdesc:ae382f6b64f480a7adfe452b244634e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is nonkinematic (i.e. dynamic and not kinematic). <br /></td></tr>
-<tr class="separator:ae382f6b64f480a7adfe452b244634e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98dafc8eafa1b164243e9056376d6b1d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98dafc8eafa1b164243e9056376d6b1d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a98dafc8eafa1b164243e9056376d6b1d">actor_enable_gravity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
+<tr class="memdesc:a98dafc8eafa1b164243e9056376d6b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables gravity for the actor. <br /></td></tr>
+<tr class="separator:a98dafc8eafa1b164243e9056376d6b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751a17a009af7c95d564f30691b38017"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a751a17a009af7c95d564f30691b38017"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a751a17a009af7c95d564f30691b38017">actor_disable_gravity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
+<tr class="memdesc:a751a17a009af7c95d564f30691b38017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables gravity for the actor. <br /></td></tr>
+<tr class="separator:a751a17a009af7c95d564f30691b38017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8aea691ccff5b9fbca005e6f202ab1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a8aea691ccff5b9fbca005e6f202ab1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a1a8aea691ccff5b9fbca005e6f202ab1">actor_enable_collision</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
+<tr class="memdesc:a1a8aea691ccff5b9fbca005e6f202ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables collision detection for the actor. <br /></td></tr>
+<tr class="separator:a1a8aea691ccff5b9fbca005e6f202ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1d692a58d219527fe4d46deed0ad5e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d1d692a58d219527fe4d46deed0ad5e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a5d1d692a58d219527fe4d46deed0ad5e">actor_disable_collision</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
+<tr class="memdesc:a5d1d692a58d219527fe4d46deed0ad5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables collision detection for the actor. <br /></td></tr>
+<tr class="separator:a5d1d692a58d219527fe4d46deed0ad5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e585fb0b8b8e0c0dd9c661e424cc42c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e585fb0b8b8e0c0dd9c661e424cc42c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a7e585fb0b8b8e0c0dd9c661e424cc42c">actor_set_collision_filter</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, <a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> filter)=0</td></tr>
+<tr class="memdesc:a7e585fb0b8b8e0c0dd9c661e424cc42c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the collision filter of the actor. <br /></td></tr>
+<tr class="separator:a7e585fb0b8b8e0c0dd9c661e424cc42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b412b017f78d5e79f46dc10cf72bed0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a0b412b017f78d5e79f46dc10cf72bed0">actor_set_kinematic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, bool kinematic)=0</td></tr>
+<tr class="memdesc:a0b412b017f78d5e79f46dc10cf72bed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the actor is kinematic or not.  <a href="#a0b412b017f78d5e79f46dc10cf72bed0">More...</a><br /></td></tr>
+<tr class="separator:a0b412b017f78d5e79f46dc10cf72bed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e327d69411b55033a29596edefc540"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a36e327d69411b55033a29596edefc540">actor_move</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
+<tr class="memdesc:a36e327d69411b55033a29596edefc540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the actor to <em>pos</em>.  <a href="#a36e327d69411b55033a29596edefc540">More...</a><br /></td></tr>
+<tr class="separator:a36e327d69411b55033a29596edefc540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73456f3a9901314b50d24aa53b813766"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73456f3a9901314b50d24aa53b813766"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a73456f3a9901314b50d24aa53b813766">actor_is_static</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
+<tr class="memdesc:a73456f3a9901314b50d24aa53b813766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is static. <br /></td></tr>
+<tr class="separator:a73456f3a9901314b50d24aa53b813766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92622dcf04cde14163a5bfd6e5f7589a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92622dcf04cde14163a5bfd6e5f7589a"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a92622dcf04cde14163a5bfd6e5f7589a">actor_is_dynamic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
+<tr class="memdesc:a92622dcf04cde14163a5bfd6e5f7589a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is dynamic. <br /></td></tr>
+<tr class="separator:a92622dcf04cde14163a5bfd6e5f7589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23181d18ff91f461e17232a7f04ba7dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23181d18ff91f461e17232a7f04ba7dc"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a23181d18ff91f461e17232a7f04ba7dc">actor_is_kinematic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
+<tr class="memdesc:a23181d18ff91f461e17232a7f04ba7dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is kinematic (keyframed). <br /></td></tr>
+<tr class="separator:a23181d18ff91f461e17232a7f04ba7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751dee9ee151ca155550ddb7df137c28"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a751dee9ee151ca155550ddb7df137c28"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a751dee9ee151ca155550ddb7df137c28">actor_is_nonkinematic</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
+<tr class="memdesc:a751dee9ee151ca155550ddb7df137c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is nonkinematic (i.e. dynamic and not kinematic). <br /></td></tr>
+<tr class="separator:a751dee9ee151ca155550ddb7df137c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fd2698a69818a68e3aebb4f4f61ae33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fd2698a69818a68e3aebb4f4f61ae33"></a>
 virtual f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a6fd2698a69818a68e3aebb4f4f61ae33">actor_linear_damping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
 <tr class="memdesc:a6fd2698a69818a68e3aebb4f4f61ae33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linear damping of the actor. <br /></td></tr>
 <tr class="separator:a6fd2698a69818a68e3aebb4f4f61ae33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb63d97ca4fbf33774f55f39da1c8b15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb63d97ca4fbf33774f55f39da1c8b15"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#abb63d97ca4fbf33774f55f39da1c8b15">set_actor_linear_damping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, f32 rate)=0</td></tr>
-<tr class="memdesc:abb63d97ca4fbf33774f55f39da1c8b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear damping of the actor. <br /></td></tr>
-<tr class="separator:abb63d97ca4fbf33774f55f39da1c8b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18d1c112a5044520d1e3fd59b119eef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af18d1c112a5044520d1e3fd59b119eef"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#af18d1c112a5044520d1e3fd59b119eef">actor_set_linear_damping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, f32 rate)=0</td></tr>
+<tr class="memdesc:af18d1c112a5044520d1e3fd59b119eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear damping of the actor. <br /></td></tr>
+<tr class="separator:af18d1c112a5044520d1e3fd59b119eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5522bccac56252c3ef43baf39b424c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5522bccac56252c3ef43baf39b424c5d"></a>
 virtual f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a5522bccac56252c3ef43baf39b424c5d">actor_angular_damping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
 <tr class="memdesc:a5522bccac56252c3ef43baf39b424c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the angular damping of the actor. <br /></td></tr>
 <tr class="separator:a5522bccac56252c3ef43baf39b424c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0deb1ecacaa1a53b25a99b1a286e5ae4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0deb1ecacaa1a53b25a99b1a286e5ae4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a0deb1ecacaa1a53b25a99b1a286e5ae4">set_actor_angular_damping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, f32 rate)=0</td></tr>
-<tr class="memdesc:a0deb1ecacaa1a53b25a99b1a286e5ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the angular damping of the actor. <br /></td></tr>
-<tr class="separator:a0deb1ecacaa1a53b25a99b1a286e5ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7508637d9a001104255a548c4e3c45a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7508637d9a001104255a548c4e3c45a7"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a7508637d9a001104255a548c4e3c45a7">actor_set_angular_damping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, f32 rate)=0</td></tr>
+<tr class="memdesc:a7508637d9a001104255a548c4e3c45a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the angular damping of the actor. <br /></td></tr>
+<tr class="separator:a7508637d9a001104255a548c4e3c45a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af057137636f9957b9348342ae405b6dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af057137636f9957b9348342ae405b6dc"></a>
 virtual <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#af057137636f9957b9348342ae405b6dc">actor_linear_velocity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
 <tr class="memdesc:af057137636f9957b9348342ae405b6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the linear velocity of the actor. <br /></td></tr>
 <tr class="separator:af057137636f9957b9348342ae405b6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbccce5eba9278833995fcfeb69d19b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#afbccce5eba9278833995fcfeb69d19b8">set_actor_linear_velocity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel)=0</td></tr>
-<tr class="memdesc:afbccce5eba9278833995fcfeb69d19b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear velocity of the actor.  <a href="#afbccce5eba9278833995fcfeb69d19b8">More...</a><br /></td></tr>
-<tr class="separator:afbccce5eba9278833995fcfeb69d19b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8e2aee1ae225ff2205d2087678d84b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#af8e2aee1ae225ff2205d2087678d84b3">actor_set_linear_velocity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel)=0</td></tr>
+<tr class="memdesc:af8e2aee1ae225ff2205d2087678d84b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the linear velocity of the actor.  <a href="#af8e2aee1ae225ff2205d2087678d84b3">More...</a><br /></td></tr>
+<tr class="separator:af8e2aee1ae225ff2205d2087678d84b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a421d9d11693443dc2c00bf0cecfc101a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a421d9d11693443dc2c00bf0cecfc101a"></a>
 virtual <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a421d9d11693443dc2c00bf0cecfc101a">actor_angular_velocity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i) const =0</td></tr>
 <tr class="memdesc:a421d9d11693443dc2c00bf0cecfc101a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the angular velocity of the actor. <br /></td></tr>
 <tr class="separator:a421d9d11693443dc2c00bf0cecfc101a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae284a5c559ba91e325759b39c918d325"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ae284a5c559ba91e325759b39c918d325">set_actor_angular_velocity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel)=0</td></tr>
-<tr class="memdesc:ae284a5c559ba91e325759b39c918d325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the angular velocity of the actor.  <a href="#ae284a5c559ba91e325759b39c918d325">More...</a><br /></td></tr>
-<tr class="separator:ae284a5c559ba91e325759b39c918d325"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a302fc16f6c618d55d73126c80ce3bd41"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a302fc16f6c618d55d73126c80ce3bd41">add_actor_impulse</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;impulse)=0</td></tr>
-<tr class="memdesc:a302fc16f6c618d55d73126c80ce3bd41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear impulse (acting along the center of mass) to the actor.  <a href="#a302fc16f6c618d55d73126c80ce3bd41">More...</a><br /></td></tr>
-<tr class="separator:a302fc16f6c618d55d73126c80ce3bd41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cde60cad12ed8b4d6a20fe883942de6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a1cde60cad12ed8b4d6a20fe883942de6">add_actor_impulse_at</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;impulse, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
-<tr class="memdesc:a1cde60cad12ed8b4d6a20fe883942de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear impulse (acting along the world position <em>pos</em>) to the actor.  <a href="#a1cde60cad12ed8b4d6a20fe883942de6">More...</a><br /></td></tr>
-<tr class="separator:a1cde60cad12ed8b4d6a20fe883942de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadb7c3f6c220c30c1b42830cf6d29b6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadb7c3f6c220c30c1b42830cf6d29b6a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#aadb7c3f6c220c30c1b42830cf6d29b6a">add_actor_torque_impulse</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;imp)=0</td></tr>
-<tr class="memdesc:aadb7c3f6c220c30c1b42830cf6d29b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a torque impulse to the actor. <br /></td></tr>
-<tr class="separator:aadb7c3f6c220c30c1b42830cf6d29b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87763308e11f3188209073f7841a4254"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a87763308e11f3188209073f7841a4254">push_actor</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel, f32 mass)=0</td></tr>
-<tr class="memdesc:a87763308e11f3188209073f7841a4254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the actor as if it was hit by a point object with the given <em>mass</em> travelling at the given <em>velocity</em>.  <a href="#a87763308e11f3188209073f7841a4254">More...</a><br /></td></tr>
-<tr class="separator:a87763308e11f3188209073f7841a4254"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b4c04c954bb8dfc77e1b68a7372ba69"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a4b4c04c954bb8dfc77e1b68a7372ba69">push_actor_at</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel, f32 mass, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
-<tr class="memdesc:a4b4c04c954bb8dfc77e1b68a7372ba69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like push() but applies the force at the world position <em>pos</em>.  <a href="#a4b4c04c954bb8dfc77e1b68a7372ba69">More...</a><br /></td></tr>
-<tr class="separator:a4b4c04c954bb8dfc77e1b68a7372ba69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a944580fb755792318b5de66167f1a8a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a944580fb755792318b5de66167f1a8a0"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a944580fb755792318b5de66167f1a8a0">is_sleeping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
-<tr class="memdesc:a944580fb755792318b5de66167f1a8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is sleeping. <br /></td></tr>
-<tr class="separator:a944580fb755792318b5de66167f1a8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a423f4c0702c6be5800d6b7ac41646748"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a423f4c0702c6be5800d6b7ac41646748"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a423f4c0702c6be5800d6b7ac41646748">wake_up</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
-<tr class="memdesc:a423f4c0702c6be5800d6b7ac41646748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakes the actor up. <br /></td></tr>
-<tr class="separator:a423f4c0702c6be5800d6b7ac41646748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f5bf47135a616076b25873f41225fe4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f5bf47135a616076b25873f41225fe4"></a>
-virtual <a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>create_controller</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_controller_desc.html">ControllerDesc</a> &amp;cd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tm)=0</td></tr>
-<tr class="separator:a3f5bf47135a616076b25873f41225fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f06f33e76025ae31ed97ed78c0ac9a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f06f33e76025ae31ed97ed78c0ac9a7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy_controller</b> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> id)=0</td></tr>
-<tr class="separator:a2f06f33e76025ae31ed97ed78c0ac9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af503f0d3d8773f8c68820a12189a7d4d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#af503f0d3d8773f8c68820a12189a7d4d">actor_set_angular_velocity</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel)=0</td></tr>
+<tr class="memdesc:af503f0d3d8773f8c68820a12189a7d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the angular velocity of the actor.  <a href="#af503f0d3d8773f8c68820a12189a7d4d">More...</a><br /></td></tr>
+<tr class="separator:af503f0d3d8773f8c68820a12189a7d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d73e3a9453da636ad6601db4c74ca7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a56d73e3a9453da636ad6601db4c74ca7">actor_add_impulse</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;impulse)=0</td></tr>
+<tr class="memdesc:a56d73e3a9453da636ad6601db4c74ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear impulse (acting along the center of mass) to the actor.  <a href="#a56d73e3a9453da636ad6601db4c74ca7">More...</a><br /></td></tr>
+<tr class="separator:a56d73e3a9453da636ad6601db4c74ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0daa7f846085867a4adf8ce5cbe523b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ac0daa7f846085867a4adf8ce5cbe523b">actor_add_impulse_at</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;impulse, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
+<tr class="memdesc:ac0daa7f846085867a4adf8ce5cbe523b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear impulse (acting along the world position <em>pos</em>) to the actor.  <a href="#ac0daa7f846085867a4adf8ce5cbe523b">More...</a><br /></td></tr>
+<tr class="separator:ac0daa7f846085867a4adf8ce5cbe523b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965976730509c506253423978909f623"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a965976730509c506253423978909f623"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a965976730509c506253423978909f623">actor_add_torque_impulse</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;imp)=0</td></tr>
+<tr class="memdesc:a965976730509c506253423978909f623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a torque impulse to the actor. <br /></td></tr>
+<tr class="separator:a965976730509c506253423978909f623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c64f93b3cdf92397df00103d23be6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a97c64f93b3cdf92397df00103d23be6f">actor_push</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel, f32 mass)=0</td></tr>
+<tr class="memdesc:a97c64f93b3cdf92397df00103d23be6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the actor as if it was hit by a point object with the given <em>mass</em> travelling at the given <em>velocity</em>.  <a href="#a97c64f93b3cdf92397df00103d23be6f">More...</a><br /></td></tr>
+<tr class="separator:a97c64f93b3cdf92397df00103d23be6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad932a863493717771ce1e6b70da99223"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ad932a863493717771ce1e6b70da99223">actor_push_at</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;vel, f32 mass, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
+<tr class="memdesc:ad932a863493717771ce1e6b70da99223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like push() but applies the force at the world position <em>pos</em>.  <a href="#ad932a863493717771ce1e6b70da99223">More...</a><br /></td></tr>
+<tr class="separator:ad932a863493717771ce1e6b70da99223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76afdd89c81b9f87aa9bddc353ba5c55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76afdd89c81b9f87aa9bddc353ba5c55"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a76afdd89c81b9f87aa9bddc353ba5c55">actor_is_sleeping</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
+<tr class="memdesc:a76afdd89c81b9f87aa9bddc353ba5c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the actor is sleeping. <br /></td></tr>
+<tr class="separator:a76afdd89c81b9f87aa9bddc353ba5c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6d0c44c13c7770e91f3c89a96c93fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf6d0c44c13c7770e91f3c89a96c93fd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#adf6d0c44c13c7770e91f3c89a96c93fd">actor_wake_up</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> i)=0</td></tr>
+<tr class="memdesc:adf6d0c44c13c7770e91f3c89a96c93fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wakes the actor up. <br /></td></tr>
+<tr class="separator:adf6d0c44c13c7770e91f3c89a96c93fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6ae0be38f853ffdad03c9eeeafe181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f6ae0be38f853ffdad03c9eeeafe181"></a>
+virtual <a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>controller_create</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_controller_desc.html">ControllerDesc</a> &amp;cd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tm)=0</td></tr>
+<tr class="separator:a9f6ae0be38f853ffdad03c9eeeafe181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7670951b8e16ac7ac876130caacda3f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7670951b8e16ac7ac876130caacda3f8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>controller_destroy</b> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> id)=0</td></tr>
+<tr class="separator:a7670951b8e16ac7ac876130caacda3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a901383df6489c2499da8d7aedbce3d98"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a901383df6489c2499da8d7aedbce3d98"></a>
 virtual <a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>controller</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)=0</td></tr>
 <tr class="separator:a901383df6489c2499da8d7aedbce3d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae54fef28b7b164784da2b9727c432229"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae54fef28b7b164784da2b9727c432229"></a>
-virtual <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ae54fef28b7b164784da2b9727c432229">position</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
-<tr class="memdesc:ae54fef28b7b164784da2b9727c432229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the controller. <br /></td></tr>
-<tr class="separator:ae54fef28b7b164784da2b9727c432229"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb6b2cc91b19f8eba6c3412c17ba74b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bb6b2cc91b19f8eba6c3412c17ba74b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a7bb6b2cc91b19f8eba6c3412c17ba74b">move_controller</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
-<tr class="memdesc:a7bb6b2cc91b19f8eba6c3412c17ba74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the controller to <em>pos</em>. <br /></td></tr>
-<tr class="separator:a7bb6b2cc91b19f8eba6c3412c17ba74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cd1bc50a94eb2a2fa39e1f731bc4650"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cd1bc50a94eb2a2fa39e1f731bc4650"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a2cd1bc50a94eb2a2fa39e1f731bc4650">set_height</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i, f32 height)=0</td></tr>
-<tr class="memdesc:a2cd1bc50a94eb2a2fa39e1f731bc4650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the contoller height. <br /></td></tr>
-<tr class="separator:a2cd1bc50a94eb2a2fa39e1f731bc4650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5e1eab4a55c77321c27df1ae33f6988"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5e1eab4a55c77321c27df1ae33f6988"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#af5e1eab4a55c77321c27df1ae33f6988">collides_up</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
-<tr class="memdesc:af5e1eab4a55c77321c27df1ae33f6988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the contoller collides upwards. <br /></td></tr>
-<tr class="separator:af5e1eab4a55c77321c27df1ae33f6988"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40aff716a816b06834acd980ae632724"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40aff716a816b06834acd980ae632724"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a40aff716a816b06834acd980ae632724">collides_down</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
-<tr class="memdesc:a40aff716a816b06834acd980ae632724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the controller collides downwards. <br /></td></tr>
-<tr class="separator:a40aff716a816b06834acd980ae632724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ab886c4136685e050d4f83dddd8e7f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ab886c4136685e050d4f83dddd8e7f7"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a8ab886c4136685e050d4f83dddd8e7f7">collides_sides</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
-<tr class="memdesc:a8ab886c4136685e050d4f83dddd8e7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the controller collides sidewards. <br /></td></tr>
-<tr class="separator:a8ab886c4136685e050d4f83dddd8e7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1330c2847335b1b54020d9688b2b35d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1330c2847335b1b54020d9688b2b35d"></a>
-virtual <a class="el" href="structcrown_1_1_joint_instance.html">JointInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ad1330c2847335b1b54020d9688b2b35d">create_joint</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> a0, <a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> a1, const <a class="el" href="structcrown_1_1_joint_desc.html">JointDesc</a> &amp;jd)=0</td></tr>
-<tr class="memdesc:ad1330c2847335b1b54020d9688b2b35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates joint. <br /></td></tr>
-<tr class="separator:ad1330c2847335b1b54020d9688b2b35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9aa757c661ca2777b750b6ec9a8b9c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9aa757c661ca2777b750b6ec9a8b9c4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>destroy_joint</b> (<a class="el" href="structcrown_1_1_joint_instance.html">JointInstance</a> i)=0</td></tr>
-<tr class="separator:aa9aa757c661ca2777b750b6ec9a8b9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad335f5e2531bdbeafbbc57051e6a9c60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad335f5e2531bdbeafbbc57051e6a9c60"></a>
+virtual <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ad335f5e2531bdbeafbbc57051e6a9c60">controller_position</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
+<tr class="memdesc:ad335f5e2531bdbeafbbc57051e6a9c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the controller. <br /></td></tr>
+<tr class="separator:ad335f5e2531bdbeafbbc57051e6a9c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede179f868813f9d4c168c2de51ba08c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aede179f868813f9d4c168c2de51ba08c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#aede179f868813f9d4c168c2de51ba08c">controller_move</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)=0</td></tr>
+<tr class="memdesc:aede179f868813f9d4c168c2de51ba08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the controller to <em>pos</em>. <br /></td></tr>
+<tr class="separator:aede179f868813f9d4c168c2de51ba08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2daf7371186ea18f9be08f3c4dfd3ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2daf7371186ea18f9be08f3c4dfd3ba"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ab2daf7371186ea18f9be08f3c4dfd3ba">controller_set_height</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i, f32 height)=0</td></tr>
+<tr class="memdesc:ab2daf7371186ea18f9be08f3c4dfd3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the contoller height. <br /></td></tr>
+<tr class="separator:ab2daf7371186ea18f9be08f3c4dfd3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af99d7db9b9dcfebb0b84ce3ff86687c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af99d7db9b9dcfebb0b84ce3ff86687c1"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#af99d7db9b9dcfebb0b84ce3ff86687c1">controller_collides_up</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
+<tr class="memdesc:af99d7db9b9dcfebb0b84ce3ff86687c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the contoller collides upwards. <br /></td></tr>
+<tr class="separator:af99d7db9b9dcfebb0b84ce3ff86687c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef05667834350ed27137eb46e0ce5248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef05667834350ed27137eb46e0ce5248"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#aef05667834350ed27137eb46e0ce5248">controller_collides_down</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
+<tr class="memdesc:aef05667834350ed27137eb46e0ce5248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the controller collides downwards. <br /></td></tr>
+<tr class="separator:aef05667834350ed27137eb46e0ce5248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8e07fea7df85aea950e175bb537580"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b8e07fea7df85aea950e175bb537580"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#a5b8e07fea7df85aea950e175bb537580">controller_collides_sides</a> (<a class="el" href="structcrown_1_1_controller_instance.html">ControllerInstance</a> i) const =0</td></tr>
+<tr class="memdesc:a5b8e07fea7df85aea950e175bb537580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the controller collides sidewards. <br /></td></tr>
+<tr class="separator:a5b8e07fea7df85aea950e175bb537580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab933c1c1fbf71972cc8561586639018c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab933c1c1fbf71972cc8561586639018c"></a>
+virtual <a class="el" href="structcrown_1_1_joint_instance.html">JointInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ab933c1c1fbf71972cc8561586639018c">joint_create</a> (<a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> a0, <a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a> a1, const <a class="el" href="structcrown_1_1_joint_desc.html">JointDesc</a> &amp;jd)=0</td></tr>
+<tr class="memdesc:ab933c1c1fbf71972cc8561586639018c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates joint. <br /></td></tr>
+<tr class="separator:ab933c1c1fbf71972cc8561586639018c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c638091e1905e985871bdd67d85ebb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97c638091e1905e985871bdd67d85ebb"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>joint_destroy</b> (<a class="el" href="structcrown_1_1_joint_instance.html">JointInstance</a> i)=0</td></tr>
+<tr class="separator:a97c638091e1905e985871bdd67d85ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad66a38380cca75c082463b3c9786594e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad66a38380cca75c082463b3c9786594e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_physics_world.html#ad66a38380cca75c082463b3c9786594e">raycast</a> (const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir, f32 len, RaycastMode::Enum mode, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_raycast_hit.html">RaycastHit</a> &gt; &amp;hits)=0</td></tr>
 <tr class="memdesc:ad66a38380cca75c082463b3c9786594e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a raycast. <br /></td></tr>
@@ -310,7 +310,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages physics objects in a <a class="el" href="classcrown_1_1_world.html" title="Represents a game world. ">World</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aef81be0bf58b14a9aa265d17ddcbac0e"></a>
+<a class="anchor" id="a0b412b017f78d5e79f46dc10cf72bed0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -318,7 +318,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::set_actor_kinematic </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_set_kinematic </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -347,7 +347,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 
 </div>
 </div>
-<a class="anchor" id="a0b133530879f14082a984427950402a0"></a>
+<a class="anchor" id="a36e327d69411b55033a29596edefc540"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -355,7 +355,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::move_actor </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_move </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -384,7 +384,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 
 </div>
 </div>
-<a class="anchor" id="afbccce5eba9278833995fcfeb69d19b8"></a>
+<a class="anchor" id="af8e2aee1ae225ff2205d2087678d84b3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -392,7 +392,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::set_actor_linear_velocity </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_set_linear_velocity </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -421,7 +421,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 
 </div>
 </div>
-<a class="anchor" id="ae284a5c559ba91e325759b39c918d325"></a>
+<a class="anchor" id="af503f0d3d8773f8c68820a12189a7d4d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -429,7 +429,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::set_actor_angular_velocity </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_set_angular_velocity </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -458,7 +458,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 
 </div>
 </div>
-<a class="anchor" id="a302fc16f6c618d55d73126c80ce3bd41"></a>
+<a class="anchor" id="a56d73e3a9453da636ad6601db4c74ca7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -466,7 +466,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::add_actor_impulse </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_add_impulse </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -495,7 +495,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 
 </div>
 </div>
-<a class="anchor" id="a1cde60cad12ed8b4d6a20fe883942de6"></a>
+<a class="anchor" id="ac0daa7f846085867a4adf8ce5cbe523b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -503,7 +503,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::add_actor_impulse_at </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_add_impulse_at </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -538,7 +538,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 
 </div>
 </div>
-<a class="anchor" id="a87763308e11f3188209073f7841a4254"></a>
+<a class="anchor" id="a97c64f93b3cdf92397df00103d23be6f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -546,7 +546,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::push_actor </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_push </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -581,7 +581,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 
 </div>
 </div>
-<a class="anchor" id="a4b4c04c954bb8dfc77e1b68a7372ba69"></a>
+<a class="anchor" id="ad932a863493717771ce1e6b70da99223"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -589,7 +589,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void crown::PhysicsWorld::push_actor_at </td>
+          <td class="memname">virtual void crown::PhysicsWorld::actor_push_at </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_actor_instance.html">ActorInstance</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -636,7 +636,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>enable_debug_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 12 2016 15:46:54 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 25 2016 00:39:49 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -13,7 +13,7 @@ var searchData=
   ['raycast',['raycast',['../classcrown_1_1_physics_world.html#ad66a38380cca75c082463b3c9786594e',1,'crown::PhysicsWorld']]],
   ['raycasthit',['RaycastHit',['../structcrown_1_1_raycast_hit.html',1,'crown']]],
   ['raycastmode',['RaycastMode',['../structcrown_1_1_raycast_mode.html',1,'crown']]],
-  ['read',['read',['../classcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../classcrown_1_1_null_file.html#a41616641260fc1d2a03d8616d77d02ab',1,'crown::NullFile::read()'],['../structcrown_1_1_t_c_p_socket.html#ac751152281c78d8afa53bf80f9199429',1,'crown::TCPSocket::read()']]],
+  ['read',['read',['../classcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../structcrown_1_1_t_c_p_socket.html#ac751152281c78d8afa53bf80f9199429',1,'crown::TCPSocket::read()']]],
   ['read_5fnonblock',['read_nonblock',['../structcrown_1_1_t_c_p_socket.html#aa250047ef7a3fa4f49d41dd5af322a48',1,'crown::TCPSocket']]],
   ['readresult',['ReadResult',['../structcrown_1_1_read_result.html',1,'crown']]],
   ['record_5ffloat',['record_float',['../namespacecrown_1_1profiler.html#a6010b0da2baf3016924042529a1b046c',1,'crown::profiler']]],

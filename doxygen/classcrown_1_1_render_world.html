@@ -96,26 +96,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad75d0a92e4d4e300b266ea4f3e84fb23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad75d0a92e4d4e300b266ea4f3e84fb23"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RenderWorld</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> &amp;rm, <a class="el" href="classcrown_1_1_shader_manager.html">ShaderManager</a> &amp;sm, <a class="el" href="classcrown_1_1_material_manager.html">MaterialManager</a> &amp;mm, <a class="el" href="classcrown_1_1_unit_manager.html">UnitManager</a> &amp;um)</td></tr>
 <tr class="separator:ad75d0a92e4d4e300b266ea4f3e84fb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de310ede1b4e6a84ea6de52bd13c9ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0de310ede1b4e6a84ea6de52bd13c9ff"></a>
-<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a0de310ede1b4e6a84ea6de52bd13c9ff">create_mesh</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_mesh_renderer_desc.html">MeshRendererDesc</a> &amp;mrd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
-<tr class="memdesc:a0de310ede1b4e6a84ea6de52bd13c9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new mesh instance. <br /></td></tr>
-<tr class="separator:a0de310ede1b4e6a84ea6de52bd13c9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a488539603071da8019d76b4ca1826a1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a488539603071da8019d76b4ca1826a1c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a488539603071da8019d76b4ca1826a1c">destroy_mesh</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i)</td></tr>
-<tr class="memdesc:a488539603071da8019d76b4ca1826a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the mesh <em>i</em>. <br /></td></tr>
-<tr class="separator:a488539603071da8019d76b4ca1826a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada59b9db23dfb856e80265ade3f0da2c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada59b9db23dfb856e80265ade3f0da2c"></a>
+<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#ada59b9db23dfb856e80265ade3f0da2c">mesh_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_mesh_renderer_desc.html">MeshRendererDesc</a> &amp;mrd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
+<tr class="memdesc:ada59b9db23dfb856e80265ade3f0da2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new mesh instance. <br /></td></tr>
+<tr class="separator:ada59b9db23dfb856e80265ade3f0da2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f59b5f74224b276136da7be06d95baf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f59b5f74224b276136da7be06d95baf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a7f59b5f74224b276136da7be06d95baf">mesh_destroy</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i)</td></tr>
+<tr class="memdesc:a7f59b5f74224b276136da7be06d95baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the mesh <em>i</em>. <br /></td></tr>
+<tr class="separator:a7f59b5f74224b276136da7be06d95baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9700a40dbe19b1dbdd93af5d223c495a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9700a40dbe19b1dbdd93af5d223c495a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a9700a40dbe19b1dbdd93af5d223c495a">mesh_instances</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> &gt; &amp;instances)</td></tr>
 <tr class="memdesc:a9700a40dbe19b1dbdd93af5d223c495a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mesh instances of the unit <em>id</em>. <br /></td></tr>
 <tr class="separator:a9700a40dbe19b1dbdd93af5d223c495a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dcc79a23597b9d99c1289303af4fea6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5dcc79a23597b9d99c1289303af4fea6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a5dcc79a23597b9d99c1289303af4fea6">set_mesh_material</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> id)</td></tr>
-<tr class="memdesc:a5dcc79a23597b9d99c1289303af4fea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the material <em>id</em> of the mesh <em>i</em>. <br /></td></tr>
-<tr class="separator:a5dcc79a23597b9d99c1289303af4fea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4df6ba8348a552b57d1cf7ec44195f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4df6ba8348a552b57d1cf7ec44195f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#ae4df6ba8348a552b57d1cf7ec44195f2">set_mesh_visible</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i, bool visible)</td></tr>
-<tr class="memdesc:ae4df6ba8348a552b57d1cf7ec44195f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the mesh <em>i</em> is <em>visible</em>. <br /></td></tr>
-<tr class="separator:ae4df6ba8348a552b57d1cf7ec44195f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703d32543f7297c4a5ddbfedb0aedd86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a703d32543f7297c4a5ddbfedb0aedd86"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a703d32543f7297c4a5ddbfedb0aedd86">mesh_set_material</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> id)</td></tr>
+<tr class="memdesc:a703d32543f7297c4a5ddbfedb0aedd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the material <em>id</em> of the mesh <em>i</em>. <br /></td></tr>
+<tr class="separator:a703d32543f7297c4a5ddbfedb0aedd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65e87b8621a500790893760034358ff9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65e87b8621a500790893760034358ff9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a65e87b8621a500790893760034358ff9">mesh_set_visible</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i, bool visible)</td></tr>
+<tr class="memdesc:a65e87b8621a500790893760034358ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the mesh <em>i</em> is <em>visible</em>. <br /></td></tr>
+<tr class="separator:a65e87b8621a500790893760034358ff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a539b535db7d07e58940975dd128785bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a539b535db7d07e58940975dd128785bc"></a>
 <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a539b535db7d07e58940975dd128785bc">mesh_obb</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i)</td></tr>
 <tr class="memdesc:a539b535db7d07e58940975dd128785bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a> of the mesh <em>i</em>. <br /></td></tr>
@@ -123,38 +123,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aa7ee88ca2277b8485eb3bdc86b231205"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7ee88ca2277b8485eb3bdc86b231205"></a>
 f32&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_raycast</b> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir)</td></tr>
 <tr class="separator:aa7ee88ca2277b8485eb3bdc86b231205"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a777829e9e829ec67f7370fe8a7d09043"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a777829e9e829ec67f7370fe8a7d09043"></a>
-<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a777829e9e829ec67f7370fe8a7d09043">create_sprite</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_sprite_renderer_desc.html">SpriteRendererDesc</a> &amp;srd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
-<tr class="memdesc:a777829e9e829ec67f7370fe8a7d09043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new sprite instance. <br /></td></tr>
-<tr class="separator:a777829e9e829ec67f7370fe8a7d09043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8d3e596201b325a2d6ce300f7fca23d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8d3e596201b325a2d6ce300f7fca23d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#ac8d3e596201b325a2d6ce300f7fca23d">destroy_sprite</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i)</td></tr>
-<tr class="memdesc:ac8d3e596201b325a2d6ce300f7fca23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the sprite <em>i</em>. <br /></td></tr>
-<tr class="separator:ac8d3e596201b325a2d6ce300f7fca23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5f851379059feeaefd9a296d579ce8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b5f851379059feeaefd9a296d579ce8"></a>
+<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a0b5f851379059feeaefd9a296d579ce8">sprite_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_sprite_renderer_desc.html">SpriteRendererDesc</a> &amp;srd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
+<tr class="memdesc:a0b5f851379059feeaefd9a296d579ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new sprite instance. <br /></td></tr>
+<tr class="separator:a0b5f851379059feeaefd9a296d579ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dfa6221dc87196d81051a844b582a22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dfa6221dc87196d81051a844b582a22"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a4dfa6221dc87196d81051a844b582a22">sprite_destroy</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i)</td></tr>
+<tr class="memdesc:a4dfa6221dc87196d81051a844b582a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the sprite <em>i</em>. <br /></td></tr>
+<tr class="separator:a4dfa6221dc87196d81051a844b582a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dcef533f3f2642b023b291b62e7f3ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dcef533f3f2642b023b291b62e7f3ea"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a0dcef533f3f2642b023b291b62e7f3ea">sprite_instances</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> &gt; &amp;instances)</td></tr>
 <tr class="memdesc:a0dcef533f3f2642b023b291b62e7f3ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sprite instances of the unit <em>id</em>. <br /></td></tr>
 <tr class="separator:a0dcef533f3f2642b023b291b62e7f3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad7aa27d9e5a5ea2558108fed40f0b90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad7aa27d9e5a5ea2558108fed40f0b90"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#aad7aa27d9e5a5ea2558108fed40f0b90">set_sprite_material</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> id)</td></tr>
-<tr class="memdesc:aad7aa27d9e5a5ea2558108fed40f0b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the material <em>id</em> of the sprite <em>i</em>. <br /></td></tr>
-<tr class="separator:aad7aa27d9e5a5ea2558108fed40f0b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5be9b766772688e0d38f33c30707d2b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5be9b766772688e0d38f33c30707d2b2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a5be9b766772688e0d38f33c30707d2b2">set_sprite_frame</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i, u32 index)</td></tr>
-<tr class="memdesc:a5be9b766772688e0d38f33c30707d2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the frame <em>index</em> of the sprite <em>i</em>. <br /></td></tr>
-<tr class="separator:a5be9b766772688e0d38f33c30707d2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a595f165d7ba483171a2e1e6d1001623a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a595f165d7ba483171a2e1e6d1001623a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a595f165d7ba483171a2e1e6d1001623a">set_sprite_visible</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i, bool visible)</td></tr>
-<tr class="memdesc:a595f165d7ba483171a2e1e6d1001623a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the sprite <em>i</em> is <em>visible</em>. <br /></td></tr>
-<tr class="separator:a595f165d7ba483171a2e1e6d1001623a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a393d3cc9bc748bbc717ca8aae4ccb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a393d3cc9bc748bbc717ca8aae4ccb9"></a>
-<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a4a393d3cc9bc748bbc717ca8aae4ccb9">create_light</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_light_desc.html">LightDesc</a> &amp;ld, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
-<tr class="memdesc:a4a393d3cc9bc748bbc717ca8aae4ccb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new light instance. <br /></td></tr>
-<tr class="separator:a4a393d3cc9bc748bbc717ca8aae4ccb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eb828b11ea54fc56c96a49a5d8a7741"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eb828b11ea54fc56c96a49a5d8a7741"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a1eb828b11ea54fc56c96a49a5d8a7741">destroy_light</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i)</td></tr>
-<tr class="memdesc:a1eb828b11ea54fc56c96a49a5d8a7741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the light <em>i</em>. <br /></td></tr>
-<tr class="separator:a1eb828b11ea54fc56c96a49a5d8a7741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a242c8e3825632c566139b0b5ec1c4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a242c8e3825632c566139b0b5ec1c4e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a8a242c8e3825632c566139b0b5ec1c4e">sprite_set_material</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> id)</td></tr>
+<tr class="memdesc:a8a242c8e3825632c566139b0b5ec1c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the material <em>id</em> of the sprite <em>i</em>. <br /></td></tr>
+<tr class="separator:a8a242c8e3825632c566139b0b5ec1c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bff1bd22427603a35ce12868d655dd3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0bff1bd22427603a35ce12868d655dd3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a0bff1bd22427603a35ce12868d655dd3">sprite_set_frame</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i, u32 index)</td></tr>
+<tr class="memdesc:a0bff1bd22427603a35ce12868d655dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the frame <em>index</em> of the sprite <em>i</em>. <br /></td></tr>
+<tr class="separator:a0bff1bd22427603a35ce12868d655dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bab5fcf3d18f29adbf1cc6dc7fa6aea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bab5fcf3d18f29adbf1cc6dc7fa6aea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a1bab5fcf3d18f29adbf1cc6dc7fa6aea">sprite_set_visible</a> (<a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a> i, bool visible)</td></tr>
+<tr class="memdesc:a1bab5fcf3d18f29adbf1cc6dc7fa6aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the sprite <em>i</em> is <em>visible</em>. <br /></td></tr>
+<tr class="separator:a1bab5fcf3d18f29adbf1cc6dc7fa6aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106fb972cd5e73213db79c8934b68d43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a106fb972cd5e73213db79c8934b68d43"></a>
+<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a106fb972cd5e73213db79c8934b68d43">light_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_light_desc.html">LightDesc</a> &amp;ld, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
+<tr class="memdesc:a106fb972cd5e73213db79c8934b68d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new light instance. <br /></td></tr>
+<tr class="separator:a106fb972cd5e73213db79c8934b68d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed4f3edb465cc5bd8634c94dce3155c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ed4f3edb465cc5bd8634c94dce3155c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a4ed4f3edb465cc5bd8634c94dce3155c">light_destroy</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i)</td></tr>
+<tr class="memdesc:a4ed4f3edb465cc5bd8634c94dce3155c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the light <em>i</em>. <br /></td></tr>
+<tr class="separator:a4ed4f3edb465cc5bd8634c94dce3155c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47868a24fd5982b8916e81e37cc3ca90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47868a24fd5982b8916e81e37cc3ca90"></a>
 <a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a47868a24fd5982b8916e81e37cc3ca90">light</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="memdesc:a47868a24fd5982b8916e81e37cc3ca90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the light of the unit <em>id</em>. <br /></td></tr>
@@ -179,26 +179,26 @@ f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#ac60f2495d6fc6182d73e7b70e4e414bb">light_spot_angle</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i)</td></tr>
 <tr class="memdesc:ac60f2495d6fc6182d73e7b70e4e414bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the spot angle of the light <em>i</em>. <br /></td></tr>
 <tr class="separator:ac60f2495d6fc6182d73e7b70e4e414bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a06c902eede6c108b908d7f0ad9e646"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a06c902eede6c108b908d7f0ad9e646"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a0a06c902eede6c108b908d7f0ad9e646">set_light_type</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, LightType::Enum type)</td></tr>
-<tr class="memdesc:a0a06c902eede6c108b908d7f0ad9e646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>type</em> of the light <em>i</em>. <br /></td></tr>
-<tr class="separator:a0a06c902eede6c108b908d7f0ad9e646"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae7858942245a9e3d29ae8d02c1d7ceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae7858942245a9e3d29ae8d02c1d7ceb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#aae7858942245a9e3d29ae8d02c1d7ceb">set_light_color</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
-<tr class="memdesc:aae7858942245a9e3d29ae8d02c1d7ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>color</em> of the light <em>i</em>. <br /></td></tr>
-<tr class="separator:aae7858942245a9e3d29ae8d02c1d7ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab58306a426ce8221cbd14058fadb7b6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab58306a426ce8221cbd14058fadb7b6d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#ab58306a426ce8221cbd14058fadb7b6d">set_light_range</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, f32 range)</td></tr>
-<tr class="memdesc:ab58306a426ce8221cbd14058fadb7b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>range</em> of the light <em>i</em>. <br /></td></tr>
-<tr class="separator:ab58306a426ce8221cbd14058fadb7b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17af28610514a30f70e08c3bc811daf4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17af28610514a30f70e08c3bc811daf4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a17af28610514a30f70e08c3bc811daf4">set_light_intensity</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, f32 intensity)</td></tr>
-<tr class="memdesc:a17af28610514a30f70e08c3bc811daf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>intensity</em> of the light <em>i</em>. <br /></td></tr>
-<tr class="separator:a17af28610514a30f70e08c3bc811daf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a405c74faa9ab860afd688d8d2c0ee372"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a405c74faa9ab860afd688d8d2c0ee372"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a405c74faa9ab860afd688d8d2c0ee372">set_light_spot_angle</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, f32 angle)</td></tr>
-<tr class="memdesc:a405c74faa9ab860afd688d8d2c0ee372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the spot <em>angle</em> of the light <em>i</em>. <br /></td></tr>
-<tr class="separator:a405c74faa9ab860afd688d8d2c0ee372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0c2a5fecd3a0a3cc7ec8a36e67332c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e0c2a5fecd3a0a3cc7ec8a36e67332c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a2e0c2a5fecd3a0a3cc7ec8a36e67332c">light_set_type</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, LightType::Enum type)</td></tr>
+<tr class="memdesc:a2e0c2a5fecd3a0a3cc7ec8a36e67332c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>type</em> of the light <em>i</em>. <br /></td></tr>
+<tr class="separator:a2e0c2a5fecd3a0a3cc7ec8a36e67332c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e3759ed2f4362eb60312cf7f7c11a19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e3759ed2f4362eb60312cf7f7c11a19"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a4e3759ed2f4362eb60312cf7f7c11a19">light_set_color</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, const <a class="el" href="group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18">Color4</a> &amp;color)</td></tr>
+<tr class="memdesc:a4e3759ed2f4362eb60312cf7f7c11a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>color</em> of the light <em>i</em>. <br /></td></tr>
+<tr class="separator:a4e3759ed2f4362eb60312cf7f7c11a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac072f2a8a6c0d22eba0214b402ae2598"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac072f2a8a6c0d22eba0214b402ae2598"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#ac072f2a8a6c0d22eba0214b402ae2598">light_set_range</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, f32 range)</td></tr>
+<tr class="memdesc:ac072f2a8a6c0d22eba0214b402ae2598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>range</em> of the light <em>i</em>. <br /></td></tr>
+<tr class="separator:ac072f2a8a6c0d22eba0214b402ae2598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65046eaec2dce05b9b1873602c9440d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa65046eaec2dce05b9b1873602c9440d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#aa65046eaec2dce05b9b1873602c9440d">light_set_intensity</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, f32 intensity)</td></tr>
+<tr class="memdesc:aa65046eaec2dce05b9b1873602c9440d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>intensity</em> of the light <em>i</em>. <br /></td></tr>
+<tr class="separator:aa65046eaec2dce05b9b1873602c9440d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936d85de10fbc12dcf39c84095ca3227"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a936d85de10fbc12dcf39c84095ca3227"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a936d85de10fbc12dcf39c84095ca3227">light_set_spot_angle</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, f32 angle)</td></tr>
+<tr class="memdesc:a936d85de10fbc12dcf39c84095ca3227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the spot <em>angle</em> of the light <em>i</em>. <br /></td></tr>
+<tr class="separator:a936d85de10fbc12dcf39c84095ca3227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78b7f73c2fd9b7079d05e70829edf3ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78b7f73c2fd9b7079d05e70829edf3ef"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>update_transforms</b> (const <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> *begin, const <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> *end, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> *world)</td></tr>
 <tr class="separator:a78b7f73c2fd9b7079d05e70829edf3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,10 +209,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> (const <a 
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#aa957594822e8e38327bdd5a18a7d9a5e">enable_debug_drawing</a> (bool enable)</td></tr>
 <tr class="memdesc:aa957594822e8e38327bdd5a18a7d9a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether to <em>enable</em> debug drawing. <br /></td></tr>
 <tr class="separator:aa957594822e8e38327bdd5a18a7d9a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a154695278d1e457b62e0b237112960c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a154695278d1e457b62e0b237112960c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a154695278d1e457b62e0b237112960c8">debug_draw_light</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, <a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> &amp;dl)</td></tr>
-<tr class="memdesc:a154695278d1e457b62e0b237112960c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills <em>dl</em> with debug lines from light <em>i</em>. <br /></td></tr>
-<tr class="separator:a154695278d1e457b62e0b237112960c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1944a0bc3353dec3c1ec1a9d9030641e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1944a0bc3353dec3c1ec1a9d9030641e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a1944a0bc3353dec3c1ec1a9d9030641e">light_debug_draw</a> (<a class="el" href="structcrown_1_1_light_instance.html">LightInstance</a> i, <a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> &amp;dl)</td></tr>
+<tr class="memdesc:a1944a0bc3353dec3c1ec1a9d9030641e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills <em>dl</em> with debug lines from light <em>i</em>. <br /></td></tr>
+<tr class="separator:a1944a0bc3353dec3c1ec1a9d9030641e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed2daffa59ca58a3118427e624d4a8cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed2daffa59ca58a3118427e624d4a8cd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#aed2daffa59ca58a3118427e624d4a8cd">debug_draw</a> (<a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> &amp;dl)</td></tr>
 <tr class="memdesc:aed2daffa59ca58a3118427e624d4a8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills <em>dl</em> with debug lines. <br /></td></tr>
@@ -227,7 +227,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 12 2016 15:46:54 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 25 2016 00:39:49 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

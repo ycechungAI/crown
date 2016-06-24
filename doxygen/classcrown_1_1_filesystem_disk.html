@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Pepper: crown::DiskFilesystem Class Reference</title>
+<title>Pepper: crown::FilesystemDisk Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,80 +73,80 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_disk_filesystem.html">DiskFilesystem</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_filesystem_disk.html">FilesystemDisk</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_disk_filesystem-members.html">List of all members</a>  </div>
+<a href="classcrown_1_1_filesystem_disk-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::DiskFilesystem Class Reference<div class="ingroups"><a class="el" href="group___core.html">Core</a> &raquo; <a class="el" href="group___filesystem.html">Filesystem</a></div></div>  </div>
+<div class="title">crown::FilesystemDisk Class Reference<div class="ingroups"><a class="el" href="group___core.html">Core</a> &raquo; <a class="el" href="group___filesystem.html">Filesystem</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Access files on disk.  
- <a href="classcrown_1_1_disk_filesystem.html#details">More...</a></p>
+ <a href="classcrown_1_1_filesystem_disk.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="disk__filesystem_8h_source.html">disk_filesystem.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="filesystem__disk_8h_source.html">filesystem_disk.h</a>&gt;</code></p>
 
 <p>Inherits <a class="el" href="classcrown_1_1_filesystem.html">crown::Filesystem</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a049b425324bdce2184dd3bb6818bd8d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a049b425324bdce2184dd3bb6818bd8d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DiskFilesystem</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
-<tr class="separator:a049b425324bdce2184dd3bb6818bd8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7376177e7249d069b69488cca34181ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a7376177e7249d069b69488cca34181ec">set_prefix</a> (const char *prefix)</td></tr>
-<tr class="memdesc:a7376177e7249d069b69488cca34181ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the given <em>prefix</em>.  <a href="#a7376177e7249d069b69488cca34181ec">More...</a><br /></td></tr>
-<tr class="separator:a7376177e7249d069b69488cca34181ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf1a1f31422e22f67d05f874fb5a700e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrown_1_1_file.html">File</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#aaf1a1f31422e22f67d05f874fb5a700e">open</a> (const char *path, FileOpenMode::Enum mode)</td></tr>
-<tr class="memdesc:aaf1a1f31422e22f67d05f874fb5a700e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file at the given <em>path</em> with the given <em>mode</em>.  <a href="#aaf1a1f31422e22f67d05f874fb5a700e">More...</a><br /></td></tr>
-<tr class="separator:aaf1a1f31422e22f67d05f874fb5a700e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeea01bfb0de9cc454db3f5d579e867fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#aeea01bfb0de9cc454db3f5d579e867fb">close</a> (<a class="el" href="classcrown_1_1_file.html">File</a> &amp;file)</td></tr>
-<tr class="memdesc:aeea01bfb0de9cc454db3f5d579e867fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given <em>file</em>.  <a href="#aeea01bfb0de9cc454db3f5d579e867fb">More...</a><br /></td></tr>
-<tr class="separator:aeea01bfb0de9cc454db3f5d579e867fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20cbe4f7dd6c4b039b3a4ad4f4e7a01a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a20cbe4f7dd6c4b039b3a4ad4f4e7a01a">exists</a> (const char *path)</td></tr>
-<tr class="memdesc:a20cbe4f7dd6c4b039b3a4ad4f4e7a01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <em>path</em> exists.  <a href="#a20cbe4f7dd6c4b039b3a4ad4f4e7a01a">More...</a><br /></td></tr>
-<tr class="separator:a20cbe4f7dd6c4b039b3a4ad4f4e7a01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e9c8ba255330080a82505a186c840fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a9e9c8ba255330080a82505a186c840fd">is_directory</a> (const char *path)</td></tr>
-<tr class="memdesc:a9e9c8ba255330080a82505a186c840fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <em>path</em> is a directory.  <a href="#a9e9c8ba255330080a82505a186c840fd">More...</a><br /></td></tr>
-<tr class="separator:a9e9c8ba255330080a82505a186c840fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a621d6ea6886e31b2951a4a29b5483812"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a621d6ea6886e31b2951a4a29b5483812">is_file</a> (const char *path)</td></tr>
-<tr class="memdesc:a621d6ea6886e31b2951a4a29b5483812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <em>path</em> is a regular file.  <a href="#a621d6ea6886e31b2951a4a29b5483812">More...</a><br /></td></tr>
-<tr class="separator:a621d6ea6886e31b2951a4a29b5483812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3df7e81f5b2b285694adb1cdeefe15b"><td class="memItemLeft" align="right" valign="top">u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#ae3df7e81f5b2b285694adb1cdeefe15b">last_modified_time</a> (const char *path)</td></tr>
-<tr class="memdesc:ae3df7e81f5b2b285694adb1cdeefe15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time of last modify operaton to <em>path</em>.  <a href="#ae3df7e81f5b2b285694adb1cdeefe15b">More...</a><br /></td></tr>
-<tr class="separator:ae3df7e81f5b2b285694adb1cdeefe15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb4e3dda5ce8a0bc1c9f126eb3e7f3c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#adb4e3dda5ce8a0bc1c9f126eb3e7f3c5">create_directory</a> (const char *path)</td></tr>
-<tr class="memdesc:adb4e3dda5ce8a0bc1c9f126eb3e7f3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the directory at the given <em>path</em>.  <a href="#adb4e3dda5ce8a0bc1c9f126eb3e7f3c5">More...</a><br /></td></tr>
-<tr class="separator:adb4e3dda5ce8a0bc1c9f126eb3e7f3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22c4aba09501f9c8f434e57c2759141a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a22c4aba09501f9c8f434e57c2759141a">delete_directory</a> (const char *path)</td></tr>
-<tr class="memdesc:a22c4aba09501f9c8f434e57c2759141a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the directory at the given <em>path</em>.  <a href="#a22c4aba09501f9c8f434e57c2759141a">More...</a><br /></td></tr>
-<tr class="separator:a22c4aba09501f9c8f434e57c2759141a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97375a7d2f8eed1c5f5e86883b8ce9c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a97375a7d2f8eed1c5f5e86883b8ce9c2">create_file</a> (const char *path)</td></tr>
-<tr class="memdesc:a97375a7d2f8eed1c5f5e86883b8ce9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the file at the given <em>path</em>.  <a href="#a97375a7d2f8eed1c5f5e86883b8ce9c2">More...</a><br /></td></tr>
-<tr class="separator:a97375a7d2f8eed1c5f5e86883b8ce9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb6ca78849e80486e15d8199ca61152b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#acb6ca78849e80486e15d8199ca61152b">delete_file</a> (const char *path)</td></tr>
-<tr class="memdesc:acb6ca78849e80486e15d8199ca61152b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the file at the given <em>path</em>.  <a href="#acb6ca78849e80486e15d8199ca61152b">More...</a><br /></td></tr>
-<tr class="separator:acb6ca78849e80486e15d8199ca61152b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d7a6b630493d44f166cbd6a72fa5a80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a4d7a6b630493d44f166cbd6a72fa5a80">list_files</a> (const char *path, <a class="el" href="structcrown_1_1_vector.html">Vector</a>&lt; <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &gt; &amp;files)</td></tr>
-<tr class="memdesc:a4d7a6b630493d44f166cbd6a72fa5a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the relative file names in the given <em>path</em>.  <a href="#a4d7a6b630493d44f166cbd6a72fa5a80">More...</a><br /></td></tr>
-<tr class="separator:a4d7a6b630493d44f166cbd6a72fa5a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66e23a8bdfda5fd623974a87f218bead"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_disk_filesystem.html#a66e23a8bdfda5fd623974a87f218bead">get_absolute_path</a> (const char *path, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;os_path)</td></tr>
-<tr class="memdesc:a66e23a8bdfda5fd623974a87f218bead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the absolute path of the given <em>path</em> based on the root path of the file source.  <a href="#a66e23a8bdfda5fd623974a87f218bead">More...</a><br /></td></tr>
-<tr class="separator:a66e23a8bdfda5fd623974a87f218bead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b46ecbb497fab400d69e8f60f13b2a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b46ecbb497fab400d69e8f60f13b2a5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FilesystemDisk</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
+<tr class="separator:a0b46ecbb497fab400d69e8f60f13b2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6079519310a3b072b8a2807d0cf64549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a6079519310a3b072b8a2807d0cf64549">set_prefix</a> (const char *prefix)</td></tr>
+<tr class="memdesc:a6079519310a3b072b8a2807d0cf64549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the root path to the given <em>prefix</em>.  <a href="#a6079519310a3b072b8a2807d0cf64549">More...</a><br /></td></tr>
+<tr class="separator:a6079519310a3b072b8a2807d0cf64549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ad31da75f23c73bec5d33f9e696797"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrown_1_1_file.html">File</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a48ad31da75f23c73bec5d33f9e696797">open</a> (const char *path, FileOpenMode::Enum mode)</td></tr>
+<tr class="memdesc:a48ad31da75f23c73bec5d33f9e696797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the file at the given <em>path</em> with the given <em>mode</em>.  <a href="#a48ad31da75f23c73bec5d33f9e696797">More...</a><br /></td></tr>
+<tr class="separator:a48ad31da75f23c73bec5d33f9e696797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcb0fad78817da6167e1a16284b233f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a1dcb0fad78817da6167e1a16284b233f">close</a> (<a class="el" href="classcrown_1_1_file.html">File</a> &amp;file)</td></tr>
+<tr class="memdesc:a1dcb0fad78817da6167e1a16284b233f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given <em>file</em>.  <a href="#a1dcb0fad78817da6167e1a16284b233f">More...</a><br /></td></tr>
+<tr class="separator:a1dcb0fad78817da6167e1a16284b233f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f42101c2a48dcb57428fbfdb0fed33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a16f42101c2a48dcb57428fbfdb0fed33">exists</a> (const char *path)</td></tr>
+<tr class="memdesc:a16f42101c2a48dcb57428fbfdb0fed33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <em>path</em> exists.  <a href="#a16f42101c2a48dcb57428fbfdb0fed33">More...</a><br /></td></tr>
+<tr class="separator:a16f42101c2a48dcb57428fbfdb0fed33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7398056057e3b75ad867c54fb0ca1474"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a7398056057e3b75ad867c54fb0ca1474">is_directory</a> (const char *path)</td></tr>
+<tr class="memdesc:a7398056057e3b75ad867c54fb0ca1474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <em>path</em> is a directory.  <a href="#a7398056057e3b75ad867c54fb0ca1474">More...</a><br /></td></tr>
+<tr class="separator:a7398056057e3b75ad867c54fb0ca1474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605de84d6f0268c3557ef0a2e001979b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a605de84d6f0268c3557ef0a2e001979b">is_file</a> (const char *path)</td></tr>
+<tr class="memdesc:a605de84d6f0268c3557ef0a2e001979b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <em>path</em> is a regular file.  <a href="#a605de84d6f0268c3557ef0a2e001979b">More...</a><br /></td></tr>
+<tr class="separator:a605de84d6f0268c3557ef0a2e001979b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e1b93fa9745d473b6af3939c8fb603"><td class="memItemLeft" align="right" valign="top">u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#ab4e1b93fa9745d473b6af3939c8fb603">last_modified_time</a> (const char *path)</td></tr>
+<tr class="memdesc:ab4e1b93fa9745d473b6af3939c8fb603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time of last modify operaton to <em>path</em>.  <a href="#ab4e1b93fa9745d473b6af3939c8fb603">More...</a><br /></td></tr>
+<tr class="separator:ab4e1b93fa9745d473b6af3939c8fb603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cfeba51caaddb18af599bd4f9205340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a7cfeba51caaddb18af599bd4f9205340">create_directory</a> (const char *path)</td></tr>
+<tr class="memdesc:a7cfeba51caaddb18af599bd4f9205340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the directory at the given <em>path</em>.  <a href="#a7cfeba51caaddb18af599bd4f9205340">More...</a><br /></td></tr>
+<tr class="separator:a7cfeba51caaddb18af599bd4f9205340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4296a60db3459e0403f51d55ab8d5625"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a4296a60db3459e0403f51d55ab8d5625">delete_directory</a> (const char *path)</td></tr>
+<tr class="memdesc:a4296a60db3459e0403f51d55ab8d5625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the directory at the given <em>path</em>.  <a href="#a4296a60db3459e0403f51d55ab8d5625">More...</a><br /></td></tr>
+<tr class="separator:a4296a60db3459e0403f51d55ab8d5625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd84cd770dcd5c40729f6847134ba6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a2cd84cd770dcd5c40729f6847134ba6c">create_file</a> (const char *path)</td></tr>
+<tr class="memdesc:a2cd84cd770dcd5c40729f6847134ba6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the file at the given <em>path</em>.  <a href="#a2cd84cd770dcd5c40729f6847134ba6c">More...</a><br /></td></tr>
+<tr class="separator:a2cd84cd770dcd5c40729f6847134ba6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005f8f1c13678d23f709a1bba56a0aea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a005f8f1c13678d23f709a1bba56a0aea">delete_file</a> (const char *path)</td></tr>
+<tr class="memdesc:a005f8f1c13678d23f709a1bba56a0aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the file at the given <em>path</em>.  <a href="#a005f8f1c13678d23f709a1bba56a0aea">More...</a><br /></td></tr>
+<tr class="separator:a005f8f1c13678d23f709a1bba56a0aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7862642485c04495e595e54367515e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#ac7862642485c04495e595e54367515e5">list_files</a> (const char *path, <a class="el" href="structcrown_1_1_vector.html">Vector</a>&lt; <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &gt; &amp;files)</td></tr>
+<tr class="memdesc:ac7862642485c04495e595e54367515e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the relative file names in the given <em>path</em>.  <a href="#ac7862642485c04495e595e54367515e5">More...</a><br /></td></tr>
+<tr class="separator:ac7862642485c04495e595e54367515e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f164ec40def2238464a2b9f3182f75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_filesystem_disk.html#a69f164ec40def2238464a2b9f3182f75">get_absolute_path</a> (const char *path, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;os_path)</td></tr>
+<tr class="memdesc:a69f164ec40def2238464a2b9f3182f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the absolute path of the given <em>path</em> based on the root path of the file source.  <a href="#a69f164ec40def2238464a2b9f3182f75">More...</a><br /></td></tr>
+<tr class="separator:a69f164ec40def2238464a2b9f3182f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Access files on disk. </p>
 <p>All the file paths can be either relative or absolute. When a relative path is given, it is automatically translated to its absolute counterpart based on the file source's root path. Accessing files using absolute path directly is also possible, but platform-specific and thus generally not recommended. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a7376177e7249d069b69488cca34181ec"></a>
+<a class="anchor" id="a6079519310a3b072b8a2807d0cf64549"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::set_prefix </td>
+          <td class="memname">void crown::FilesystemDisk::set_prefix </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>prefix</em></td><td>)</td>
@@ -160,7 +160,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaf1a1f31422e22f67d05f874fb5a700e"></a>
+<a class="anchor" id="a48ad31da75f23c73bec5d33f9e696797"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -168,7 +168,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcrown_1_1_file.html">File</a> * crown::DiskFilesystem::open </td>
+          <td class="memname"><a class="el" href="classcrown_1_1_file.html">File</a> * crown::FilesystemDisk::open </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -198,7 +198,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeea01bfb0de9cc454db3f5d579e867fb"></a>
+<a class="anchor" id="a1dcb0fad78817da6167e1a16284b233f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -206,7 +206,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::close </td>
+          <td class="memname">void crown::FilesystemDisk::close </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcrown_1_1_file.html">File</a> &amp;&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
@@ -226,7 +226,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a20cbe4f7dd6c4b039b3a4ad4f4e7a01a"></a>
+<a class="anchor" id="a16f42101c2a48dcb57428fbfdb0fed33"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -234,7 +234,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool crown::DiskFilesystem::exists </td>
+          <td class="memname">bool crown::FilesystemDisk::exists </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -254,7 +254,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9e9c8ba255330080a82505a186c840fd"></a>
+<a class="anchor" id="a7398056057e3b75ad867c54fb0ca1474"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -262,7 +262,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool crown::DiskFilesystem::is_directory </td>
+          <td class="memname">bool crown::FilesystemDisk::is_directory </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -282,7 +282,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a621d6ea6886e31b2951a4a29b5483812"></a>
+<a class="anchor" id="a605de84d6f0268c3557ef0a2e001979b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -290,7 +290,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool crown::DiskFilesystem::is_file </td>
+          <td class="memname">bool crown::FilesystemDisk::is_file </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -310,7 +310,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae3df7e81f5b2b285694adb1cdeefe15b"></a>
+<a class="anchor" id="ab4e1b93fa9745d473b6af3939c8fb603"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -318,7 +318,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">u64 crown::DiskFilesystem::last_modified_time </td>
+          <td class="memname">u64 crown::FilesystemDisk::last_modified_time </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -338,7 +338,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adb4e3dda5ce8a0bc1c9f126eb3e7f3c5"></a>
+<a class="anchor" id="a7cfeba51caaddb18af599bd4f9205340"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -346,7 +346,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::create_directory </td>
+          <td class="memname">void crown::FilesystemDisk::create_directory </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -366,7 +366,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a22c4aba09501f9c8f434e57c2759141a"></a>
+<a class="anchor" id="a4296a60db3459e0403f51d55ab8d5625"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -374,7 +374,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::delete_directory </td>
+          <td class="memname">void crown::FilesystemDisk::delete_directory </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -394,7 +394,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a97375a7d2f8eed1c5f5e86883b8ce9c2"></a>
+<a class="anchor" id="a2cd84cd770dcd5c40729f6847134ba6c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -402,7 +402,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::create_file </td>
+          <td class="memname">void crown::FilesystemDisk::create_file </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -422,7 +422,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acb6ca78849e80486e15d8199ca61152b"></a>
+<a class="anchor" id="a005f8f1c13678d23f709a1bba56a0aea"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -430,7 +430,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::delete_file </td>
+          <td class="memname">void crown::FilesystemDisk::delete_file </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -450,7 +450,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4d7a6b630493d44f166cbd6a72fa5a80"></a>
+<a class="anchor" id="ac7862642485c04495e595e54367515e5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -458,7 +458,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::list_files </td>
+          <td class="memname">void crown::FilesystemDisk::list_files </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -488,7 +488,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a66e23a8bdfda5fd623974a87f218bead"></a>
+<a class="anchor" id="a69f164ec40def2238464a2b9f3182f75"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -496,7 +496,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void crown::DiskFilesystem::get_absolute_path </td>
+          <td class="memname">void crown::FilesystemDisk::get_absolute_path </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>path</em>, </td>
@@ -528,13 +528,13 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/core/filesystem/<a class="el" href="disk__filesystem_8h_source.html">disk_filesystem.h</a></li>
-<li>src/core/filesystem/disk_filesystem.cpp</li>
+<li>src/core/filesystem/<a class="el" href="filesystem__disk_8h_source.html">filesystem_disk.h</a></li>
+<li>src/core/filesystem/filesystem_disk.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jun 12 2016 15:46:54 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 25 2016 00:39:49 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

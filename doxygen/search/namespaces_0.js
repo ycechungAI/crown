@@ -11,6 +11,7 @@ var searchData=
   ['hash_5fmap',['hash_map',['../namespacecrown_1_1hash__map.html',1,'crown']]],
   ['input_5fdevice',['input_device',['../namespacecrown_1_1input__device.html',1,'crown']]],
   ['json',['json',['../namespacecrown_1_1json.html',1,'crown']]],
+  ['json_5fobject',['json_object',['../namespacecrown_1_1json__object.html',1,'crown']]],
   ['map',['map',['../namespacecrown_1_1map.html',1,'crown']]],
   ['os',['os',['../namespacecrown_1_1os.html',1,'crown']]],
   ['path',['path',['../namespacecrown_1_1path.html',1,'crown']]],
