@@ -1,6 +1,8 @@
 var searchData=
 [
   ['data',['Data',['../structcrown_1_1_shader_resource_1_1_data.html',1,'crown::ShaderResource']]],
+  ['data_5fcompiler',['data_compiler',['../classcrown_1_1_device.html#aa2eb788d429183cbd793d276609586fb',1,'crown::Device']]],
+  ['datacompiler',['DataCompiler',['../classcrown_1_1_data_compiler.html',1,'crown']]],
   ['deallocate',['deallocate',['../classcrown_1_1_allocator.html#a3debe272ab5b34a6ece7c912a97d676d',1,'crown::Allocator::deallocate()'],['../classcrown_1_1_linear_allocator.html#a8d6f377e17871f2d4df13a5ba31ecbaa',1,'crown::LinearAllocator::deallocate()'],['../classcrown_1_1_pool_allocator.html#ac15ed63df4521d1db62202c240e7610e',1,'crown::PoolAllocator::deallocate()'],['../classcrown_1_1_proxy_allocator.html#ac6ddfcdbff12abf62a6d895ab86819a2',1,'crown::ProxyAllocator::deallocate()'],['../classcrown_1_1_stack_allocator.html#a75886a62b1aa559dca3cce7566335d49',1,'crown::StackAllocator::deallocate()'],['../classcrown_1_1_temp_allocator.html#a890e65c5536f557181cb2413719ed4cf',1,'crown::TempAllocator::deallocate()']]],
   ['deallocate_5fmemory',['deallocate_memory',['../namespacecrown_1_1profiler.html#a48f7625e0478ee4ff4ec5c07cf340388',1,'crown::profiler']]],
   ['deallocatememory',['DeallocateMemory',['../structcrown_1_1_deallocate_memory.html',1,'crown']]],
@@ -20,11 +22,11 @@ var searchData=
   ['destroy_5funit',['destroy_unit',['../classcrown_1_1_world.html#a7901f69df610c922b7ad8cb703064b95',1,'crown::World']]],
   ['destroy_5fworld',['destroy_world',['../classcrown_1_1_device.html#afbf3f1608e5cf24ced11ba3bd2af4728',1,'crown::Device']]],
   ['determinant',['determinant',['../group___math.html#ga73fe335f38752e2fe20fbd8713269a1e',1,'crown::determinant(const Matrix3x3 &amp;m)'],['../group___math.html#ga35411994177d07ddc83486cceecc1b1c',1,'crown::determinant(const Matrix4x4 &amp;m)']]],
-  ['device',['Device',['../classcrown_1_1_device.html',1,'crown']]],
   ['device',['Device',['../group___device.html',1,'']]],
+  ['device',['Device',['../classcrown_1_1_device.html',1,'crown']]],
   ['deviceoptions',['DeviceOptions',['../structcrown_1_1_device_options.html',1,'crown']]],
-  ['display',['display',['../classcrown_1_1_device.html#a7a310f575b15148e3c7e0430a8dd8380',1,'crown::Device']]],
   ['display',['Display',['../structcrown_1_1_display.html',1,'crown']]],
+  ['display',['display',['../classcrown_1_1_device.html#a7a310f575b15148e3c7e0430a8dd8380',1,'crown::Device']]],
   ['displaymode',['DisplayMode',['../structcrown_1_1_display_mode.html',1,'crown']]],
   ['distance',['distance',['../group___math.html#gaf45d3bfb4eee023a0b130effdd6bbb18',1,'crown::distance(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#gaf9ff0472898d088a1f4b86f823d1d744',1,'crown::distance(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gab7d0ea44d405273d16feda800bce5640',1,'crown::distance(const Vector4 &amp;a, const Vector4 &amp;b)']]],
   ['distance_5fsquared',['distance_squared',['../group___math.html#ga32fdda0e26720f8a198ce349e9e925f8',1,'crown::distance_squared(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#ga8ca11400b8a604b6a7b53fa9cafc0f47',1,'crown::distance_squared(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gad3eb1a8c171ffc45025921a6e405e1a2',1,'crown::distance_squared(const Vector4 &amp;a, const Vector4 &amp;b)']]],

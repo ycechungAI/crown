@@ -42,7 +42,7 @@ var searchData=
   ['color4',['Color4',['../group___math.html#ga768a26cbc0ee4ae7e0a6c8fa71d20d18',1,'crown::Color4()'],['../group___math.html#ga67d7a79b7a5f10ff0ed71bbbc115157d',1,'crown::color4(f32 r, f32 g, f32 b, f32 a)']]],
   ['commandline',['CommandLine',['../structcrown_1_1_command_line.html',1,'crown']]],
   ['compareentry',['CompareEntry',['../structcrown_1_1sort__map__internal_1_1_compare_entry.html',1,'crown::sort_map_internal']]],
-  ['compile',['compile',['../classcrown_1_1_bundle_compiler.html#aefae41eb2d603c9ff9aef795ca7c46c4',1,'crown::BundleCompiler']]],
+  ['compile',['compile',['../classcrown_1_1_data_compiler.html#ad68d12db5b4209761166d801d314ab5c',1,'crown::DataCompiler']]],
   ['compileoptions',['CompileOptions',['../classcrown_1_1_compile_options.html',1,'crown']]],
   ['complete_5frequests',['complete_requests',['../classcrown_1_1_resource_manager.html#a438fc4ff03dde952938f960296ddbbe1',1,'crown::ResourceManager']]],
   ['componentdata',['ComponentData',['../structcrown_1_1_component_data.html',1,'crown']]],

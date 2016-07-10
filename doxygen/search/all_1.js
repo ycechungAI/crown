@@ -8,9 +8,8 @@ var searchData=
   ['binarywriter',['BinaryWriter',['../classcrown_1_1_binary_writer.html',1,'crown']]],
   ['bind',['bind',['../structcrown_1_1_t_c_p_socket.html#af292f8c60c065148ef2b23b717716643',1,'crown::TCPSocket']]],
   ['bindresult',['BindResult',['../structcrown_1_1_bind_result.html',1,'crown']]],
+  ['bootconfig',['BootConfig',['../structcrown_1_1_boot_config.html',1,'crown']]],
   ['boxshape',['BoxShape',['../structcrown_1_1_box_shape.html',1,'crown']]],
-  ['bundle_5fcompiler',['bundle_compiler',['../classcrown_1_1_device.html#ad1d156cc8bccbec0a3475a2d64287af9',1,'crown::Device']]],
-  ['bundlecompiler',['BundleCompiler',['../classcrown_1_1_bundle_compiler.html',1,'crown']]],
   ['button_5fid',['button_id',['../structcrown_1_1_input_device.html#a6b4dfd4b3b27c2de717cd8673c877856',1,'crown::InputDevice']]],
   ['button_5fname',['button_name',['../structcrown_1_1_input_device.html#a3124f9c4de10a18c6ac3bbc944e19fd6',1,'crown::InputDevice']]]
 ];

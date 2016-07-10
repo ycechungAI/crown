@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['data_5fcompiler',['data_compiler',['../classcrown_1_1_device.html#aa2eb788d429183cbd793d276609586fb',1,'crown::Device']]],
   ['deallocate',['deallocate',['../classcrown_1_1_allocator.html#a3debe272ab5b34a6ece7c912a97d676d',1,'crown::Allocator::deallocate()'],['../classcrown_1_1_linear_allocator.html#a8d6f377e17871f2d4df13a5ba31ecbaa',1,'crown::LinearAllocator::deallocate()'],['../classcrown_1_1_pool_allocator.html#ac15ed63df4521d1db62202c240e7610e',1,'crown::PoolAllocator::deallocate()'],['../classcrown_1_1_proxy_allocator.html#ac6ddfcdbff12abf62a6d895ab86819a2',1,'crown::ProxyAllocator::deallocate()'],['../classcrown_1_1_stack_allocator.html#a75886a62b1aa559dca3cce7566335d49',1,'crown::StackAllocator::deallocate()'],['../classcrown_1_1_temp_allocator.html#a890e65c5536f557181cb2413719ed4cf',1,'crown::TempAllocator::deallocate()']]],
   ['deallocate_5fmemory',['deallocate_memory',['../namespacecrown_1_1profiler.html#a48f7625e0478ee4ff4ec5c07cf340388',1,'crown::profiler']]],
   ['debug_5fdraw',['debug_draw',['../classcrown_1_1_physics_world.html#a0c614fedc672452290c2bc1926cea455',1,'crown::PhysicsWorld::debug_draw()'],['../classcrown_1_1_render_world.html#aed2daffa59ca58a3118427e624d4a8cd',1,'crown::RenderWorld::debug_draw()']]],

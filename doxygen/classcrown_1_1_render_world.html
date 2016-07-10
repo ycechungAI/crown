@@ -120,8 +120,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a539b535db7d07e58940975dd128785bc">mesh_obb</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i)</td></tr>
 <tr class="memdesc:a539b535db7d07e58940975dd128785bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a> of the mesh <em>i</em>. <br /></td></tr>
 <tr class="separator:a539b535db7d07e58940975dd128785bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7ee88ca2277b8485eb3bdc86b231205"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7ee88ca2277b8485eb3bdc86b231205"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>mesh_raycast</b> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir)</td></tr>
+<tr class="memitem:aa7ee88ca2277b8485eb3bdc86b231205"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#aa7ee88ca2277b8485eb3bdc86b231205">mesh_raycast</a> (<a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir)</td></tr>
+<tr class="memdesc:aa7ee88ca2277b8485eb3bdc86b231205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with mesh <em>i</em> or -1.0 if no intersection.  <a href="#aa7ee88ca2277b8485eb3bdc86b231205">More...</a><br /></td></tr>
 <tr class="separator:aa7ee88ca2277b8485eb3bdc86b231205"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b5f851379059feeaefd9a296d579ce8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b5f851379059feeaefd9a296d579ce8"></a>
 <a class="el" href="structcrown_1_1_sprite_instance.html">SpriteInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_render_world.html#a0b5f851379059feeaefd9a296d579ce8">sprite_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_sprite_renderer_desc.html">SpriteRendererDesc</a> &amp;srd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
@@ -220,14 +220,49 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages graphics objects in a <a class="el" href="classcrown_1_1_world.html" title="Represents a game world. ">World</a>. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa7ee88ca2277b8485eb3bdc86b231205"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 crown::RenderWorld::mesh_raycast </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_mesh_instance.html">MeshInstance</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the distance along ray (from, dir) to intersection point with mesh <em>i</em> or -1.0 if no intersection. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/world/<a class="el" href="render__world_8h_source.html">render_world.h</a></li>
 <li>src/world/render_world.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 25 2016 00:39:49 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 10 2016 18:30:19 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

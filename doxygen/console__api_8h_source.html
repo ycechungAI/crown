@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Pepper: Member List</title>
+<title>Pepper: src/device/console_api.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -51,10 +51,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -73,26 +70,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_bundle_compiler.html">BundleCompiler</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_16dc92632bab467dc50b01bd02b3341a.html">device</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">crown::BundleCompiler Member List</div>  </div>
+<div class="title">console_api.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is the complete list of members for <a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a>, including all inherited members.</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>BundleCompiler</b>() (defined in <a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a>)</td><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html#aefae41eb2d603c9ff9aef795ca7c46c4">compile</a>(const char *bundle_dir, const char *platform)</td><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html#ae9acc3a66be0cea8da597e341f65e132">register_compiler</a>(StringId64 type, u32 version, CompileFunction compiler)</td><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html#a26035641c3c0e74516297fdd65ed25c8">scan</a>(const char *source_dir)</td><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>version</b>(StringId64 type) (defined in <a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a>)</td><td class="entry"><a class="el" href="classcrown_1_1_bundle_compiler.html">crown::BundleCompiler</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c) 2012-2016 Daniele Bartolini and individual contributors.</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * License: https://github.com/taylor001/crown/blob/master/LICENSE</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;console_server.h&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecrown.html">crown</a></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> load_console_api(ConsoleServer&amp; cs);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;} <span class="comment">// namespace crown</span></div><div class="ttc" id="namespacecrown_html"><div class="ttname"><a href="namespacecrown.html">crown</a></div><div class="ttdef"><b>Definition:</b> command_line.h:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 25 2016 00:39:49 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 10 2016 18:30:19 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

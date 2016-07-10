@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Pepper: crown::BundleCompiler Class Reference</title>
+<title>Pepper: crown::DataCompiler Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,43 +73,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_bundle_compiler.html">BundleCompiler</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_data_compiler.html">DataCompiler</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_bundle_compiler-members.html">List of all members</a>  </div>
+<a href="classcrown_1_1_data_compiler-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::BundleCompiler Class Reference</div>  </div>
+<div class="title">crown::DataCompiler Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26035641c3c0e74516297fdd65ed25c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26035641c3c0e74516297fdd65ed25c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#a26035641c3c0e74516297fdd65ed25c8">scan</a> (const char *source_dir)</td></tr>
-<tr class="memdesc:a26035641c3c0e74516297fdd65ed25c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans <em>source_dir</em> for resources. <br /></td></tr>
-<tr class="separator:a26035641c3c0e74516297fdd65ed25c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefae41eb2d603c9ff9aef795ca7c46c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#aefae41eb2d603c9ff9aef795ca7c46c4">compile</a> (const char *bundle_dir, const char *platform)</td></tr>
-<tr class="memdesc:aefae41eb2d603c9ff9aef795ca7c46c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in <em>source_dir</em> and puts them in <em>bundle_dir</em>.  <a href="#aefae41eb2d603c9ff9aef795ca7c46c4">More...</a><br /></td></tr>
-<tr class="separator:aefae41eb2d603c9ff9aef795ca7c46c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9acc3a66be0cea8da597e341f65e132"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9acc3a66be0cea8da597e341f65e132"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_bundle_compiler.html#ae9acc3a66be0cea8da597e341f65e132">register_compiler</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, u32 version, CompileFunction compiler)</td></tr>
-<tr class="memdesc:ae9acc3a66be0cea8da597e341f65e132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the resource <em>compiler</em> for the given resource <em>type</em> and <em>version</em>. <br /></td></tr>
-<tr class="separator:ae9acc3a66be0cea8da597e341f65e132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4046e9b3227e2f634ecac3340aae50ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4046e9b3227e2f634ecac3340aae50ec"></a>
+<tr class="memitem:abf8b79e734a7aa8fa5f090b11a99d443"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf8b79e734a7aa8fa5f090b11a99d443"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>map_source_dir</b> (const char *name, const char *source_dir)</td></tr>
+<tr class="separator:abf8b79e734a7aa8fa5f090b11a99d443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af127380d2c60c3c9819cf5880141487e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af127380d2c60c3c9819cf5880141487e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>source_dir</b> (const char *resource_name, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;source_dir)</td></tr>
+<tr class="separator:af127380d2c60c3c9819cf5880141487e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8357db97728b6288dfad60f3a29a6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb8357db97728b6288dfad60f3a29a6e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_ignore_glob</b> (const char *glob)</td></tr>
+<tr class="separator:abb8357db97728b6288dfad60f3a29a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4db347d93bcf6b2104090f712e66c501"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4db347d93bcf6b2104090f712e66c501"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#a4db347d93bcf6b2104090f712e66c501">scan</a> ()</td></tr>
+<tr class="memdesc:a4db347d93bcf6b2104090f712e66c501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans source tree for resources. <br /></td></tr>
+<tr class="separator:a4db347d93bcf6b2104090f712e66c501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad68d12db5b4209761166d801d314ab5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#ad68d12db5b4209761166d801d314ab5c">compile</a> (const char *bundle_dir, const char *platform)</td></tr>
+<tr class="memdesc:ad68d12db5b4209761166d801d314ab5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in the source tree and puts them in <em>bundle_dir</em>.  <a href="#ad68d12db5b4209761166d801d314ab5c">More...</a><br /></td></tr>
+<tr class="separator:ad68d12db5b4209761166d801d314ab5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b6b21708cd324e8b7bbba07c14b306"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4b6b21708cd324e8b7bbba07c14b306"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#aa4b6b21708cd324e8b7bbba07c14b306">register_compiler</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, u32 version, CompileFunction compiler)</td></tr>
+<tr class="memdesc:aa4b6b21708cd324e8b7bbba07c14b306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the resource <em>compiler</em> for the given resource <em>type</em> and <em>version</em>. <br /></td></tr>
+<tr class="separator:aa4b6b21708cd324e8b7bbba07c14b306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3979031f96a20577758844a74fbb6c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3979031f96a20577758844a74fbb6c6"></a>
 u32&#160;</td><td class="memItemRight" valign="bottom"><b>version</b> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type)</td></tr>
-<tr class="separator:a4046e9b3227e2f634ecac3340aae50ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:af3979031f96a20577758844a74fbb6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aefae41eb2d603c9ff9aef795ca7c46c4"></a>
+<a class="anchor" id="ad68d12db5b4209761166d801d314ab5c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool crown::BundleCompiler::compile </td>
+          <td class="memname">bool crown::DataCompiler::compile </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>bundle_dir</em>, </td>
@@ -128,19 +137,19 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>version</b> (<a class=
       </table>
 </div><div class="memdoc">
 
-<p>Compiles all the resources found in <em>source_dir</em> and puts them in <em>bundle_dir</em>. </p>
+<p>Compiles all the resources found in the source tree and puts them in <em>bundle_dir</em>. </p>
 <p>Returns true on success, false otherwise. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/resource/<a class="el" href="bundle__compiler_8h_source.html">bundle_compiler.h</a></li>
-<li>src/resource/bundle_compiler.cpp</li>
+<li>src/resource/<a class="el" href="data__compiler_8h_source.html">data_compiler.h</a></li>
+<li>src/resource/data_compiler.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 25 2016 00:39:49 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 10 2016 18:30:19 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
