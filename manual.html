@@ -394,27 +394,32 @@ a.toc-backref {
 <ul class="auto-toc simple">
 <li><a class="reference internal" href="#introduction" id="id1">1&nbsp;&nbsp;&nbsp;Introduction</a><ul class="auto-toc">
 <li><a class="reference internal" href="#what-is-it" id="id2">1.1&nbsp;&nbsp;&nbsp;What is it?</a></li>
-<li><a class="reference internal" href="#supported-platforms" id="id3">1.2&nbsp;&nbsp;&nbsp;Supported platforms</a></li>
+<li><a class="reference internal" href="#system-requirements" id="id3">1.2&nbsp;&nbsp;&nbsp;System requirements</a><ul class="auto-toc">
+<li><a class="reference internal" href="#software" id="id4">1.2.1&nbsp;&nbsp;&nbsp;Software</a></li>
+<li><a class="reference internal" href="#hardware" id="id5">1.2.2&nbsp;&nbsp;&nbsp;Hardware</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#basic-concepts" id="id4">2&nbsp;&nbsp;&nbsp;Basic concepts</a><ul class="auto-toc">
-<li><a class="reference internal" href="#the-source-directory" id="id5">2.1&nbsp;&nbsp;&nbsp;The source directory</a></li>
-<li><a class="reference internal" href="#the-boot-directory-and-the-boot-config-file" id="id6">2.2&nbsp;&nbsp;&nbsp;The boot directory and the boot.config file</a></li>
-<li><a class="reference internal" href="#the-bundle-directory" id="id7">2.3&nbsp;&nbsp;&nbsp;The bundle directory</a></li>
-<li><a class="reference internal" href="#the-bundleignore-file" id="id8">2.4&nbsp;&nbsp;&nbsp;The .bundleignore file</a></li>
-<li><a class="reference internal" href="#units-of-measurement" id="id9">2.5&nbsp;&nbsp;&nbsp;Units of measurement</a></li>
+<li><a class="reference internal" href="#deployment-platforms" id="id6">1.3&nbsp;&nbsp;&nbsp;Deployment platforms</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#boot-config-file-reference" id="id10">3&nbsp;&nbsp;&nbsp;boot.config file reference</a><ul class="auto-toc">
-<li><a class="reference internal" href="#generic-configurations" id="id11">3.1&nbsp;&nbsp;&nbsp;Generic configurations</a></li>
-<li><a class="reference internal" href="#platform-specific-configurations" id="id12">3.2&nbsp;&nbsp;&nbsp;Platform-specific configurations</a><ul class="auto-toc">
-<li><a class="reference internal" href="#renderer-configurations" id="id13">3.2.1&nbsp;&nbsp;&nbsp;Renderer configurations</a></li>
+<li><a class="reference internal" href="#basic-concepts" id="id7">2&nbsp;&nbsp;&nbsp;Basic concepts</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-source-directory" id="id8">2.1&nbsp;&nbsp;&nbsp;The source directory</a></li>
+<li><a class="reference internal" href="#the-boot-directory-and-the-boot-config-file" id="id9">2.2&nbsp;&nbsp;&nbsp;The boot directory and the boot.config file</a></li>
+<li><a class="reference internal" href="#the-data-directory" id="id10">2.3&nbsp;&nbsp;&nbsp;The data directory</a></li>
+<li><a class="reference internal" href="#the-bundleignore-file" id="id11">2.4&nbsp;&nbsp;&nbsp;The .bundleignore file</a></li>
+<li><a class="reference internal" href="#units-of-measurement" id="id12">2.5&nbsp;&nbsp;&nbsp;Units of measurement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#boot-config-file-reference" id="id13">3&nbsp;&nbsp;&nbsp;boot.config file reference</a><ul class="auto-toc">
+<li><a class="reference internal" href="#generic-configurations" id="id14">3.1&nbsp;&nbsp;&nbsp;Generic configurations</a></li>
+<li><a class="reference internal" href="#platform-specific-configurations" id="id15">3.2&nbsp;&nbsp;&nbsp;Platform-specific configurations</a><ul class="auto-toc">
+<li><a class="reference internal" href="#renderer-configurations" id="id16">3.2.1&nbsp;&nbsp;&nbsp;Renderer configurations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#command-line-reference" id="id14">4&nbsp;&nbsp;&nbsp;Command line reference</a></li>
-<li><a class="reference internal" href="#api-reference" id="id15">5&nbsp;&nbsp;&nbsp;API reference</a></li>
+<li><a class="reference internal" href="#command-line-reference" id="id17">4&nbsp;&nbsp;&nbsp;Command line reference</a></li>
+<li><a class="reference internal" href="#api-reference" id="id18">5&nbsp;&nbsp;&nbsp;API reference</a></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -424,19 +429,38 @@ a.toc-backref {
 <p>Pepper is a general purpose data-driven game engine, written from scratch in orthodox C++ with a minimalistic and data-oriented design philosophy in mind.</p>
 <p>It is loosely inspired by Bitsquid (now Stingray) engine and its design principles.</p>
 </div>
-<div class="section" id="supported-platforms">
-<h2><a class="toc-backref" href="#id3">1.2&nbsp;&nbsp;&nbsp;Supported platforms</a></h2>
+<div class="section" id="system-requirements">
+<h2><a class="toc-backref" href="#id3">1.2&nbsp;&nbsp;&nbsp;System requirements</a></h2>
+<div class="section" id="software">
+<h3><a class="toc-backref" href="#id4">1.2.1&nbsp;&nbsp;&nbsp;Software</a></h3>
 <ul class="simple">
-<li>Android (14+, ARM)</li>
-<li>Linux</li>
-<li>Windows</li>
+<li>Ubuntu 16.04+ or any other distribution with GTK+3.14 or newer.</li>
+</ul>
+</div>
+<div class="section" id="hardware">
+<h3><a class="toc-backref" href="#id5">1.2.2&nbsp;&nbsp;&nbsp;Hardware</a></h3>
+<ul class="simple">
+<li>64-bit quad-core CPU</li>
+<li>4 GB of RAM</li>
+<li>OpenGL 3.2 compatible graphics card</li>
+<li>1280x768 display</li>
+</ul>
+</div>
+</div>
+<div class="section" id="deployment-platforms">
+<h2><a class="toc-backref" href="#id6">1.3&nbsp;&nbsp;&nbsp;Deployment platforms</a></h2>
+<p>You can deploy applications made with Pepper to the following platforms:</p>
+<ul class="simple">
+<li>Android 2.3.7+ (ARM)</li>
+<li>Ubuntu 12.04+</li>
+<li>Windows 7, 8, 10</li>
 </ul>
 </div>
 </div>
 <div class="section" id="basic-concepts">
-<h1><a class="toc-backref" href="#id4">2&nbsp;&nbsp;&nbsp;Basic concepts</a></h1>
+<h1><a class="toc-backref" href="#id7">2&nbsp;&nbsp;&nbsp;Basic concepts</a></h1>
 <div class="section" id="the-source-directory">
-<h2><a class="toc-backref" href="#id5">2.1&nbsp;&nbsp;&nbsp;The source directory</a></h2>
+<h2><a class="toc-backref" href="#id8">2.1&nbsp;&nbsp;&nbsp;The source directory</a></h2>
 <p>The source directory contains all the files that make up the game.</p>
 <pre class="code literal-block">
 .
@@ -448,7 +472,7 @@ a.toc-backref {
 </pre>
 </div>
 <div class="section" id="the-boot-directory-and-the-boot-config-file">
-<h2><a class="toc-backref" href="#id6">2.2&nbsp;&nbsp;&nbsp;The boot directory and the boot.config file</a></h2>
+<h2><a class="toc-backref" href="#id9">2.2&nbsp;&nbsp;&nbsp;The boot directory and the boot.config file</a></h2>
 <p>Any directory containing the file named <tt class="docutils literal">boot.config</tt> is a boot directory.
 The <tt class="docutils literal">boot.config</tt> file specifies a number of options.</p>
 <p>In the example below, the engine is told to load the package <tt class="docutils literal">boot</tt> and run the Lua script <tt class="docutils literal">lua/game</tt>.</p>
@@ -458,10 +482,10 @@ boot_script  = &quot;lua/game&quot;  // Lua script to execute on boot
 </pre>
 <p>Within <a class="reference internal" href="#the-source-directory">the source directory</a>, there can be an arbitrary number of boot directories. You can specify the boot directory using the switch <tt class="docutils literal"><span class="pre">--boot-dir</span></tt>.</p>
 </div>
-<div class="section" id="the-bundle-directory">
-<h2><a class="toc-backref" href="#id7">2.3&nbsp;&nbsp;&nbsp;The bundle directory</a></h2>
+<div class="section" id="the-data-directory">
+<h2><a class="toc-backref" href="#id10">2.3&nbsp;&nbsp;&nbsp;The data directory</a></h2>
 <p>Pepper reads source data from <a class="reference internal" href="#the-source-directory">the source directory</a> and compiles it into efficient binary representation.
-The result of the compilation process is stored in the bundle directory.</p>
+The result of the compilation process is stored in the data directory.</p>
 <pre class="code literal-block">
 .
 ├── data                                   // &lt;- Contains compiled data files
@@ -473,7 +497,7 @@ The result of the compilation process is stored in the bundle directory.</p>
 </pre>
 </div>
 <div class="section" id="the-bundleignore-file">
-<h2><a class="toc-backref" href="#id8">2.4&nbsp;&nbsp;&nbsp;The .bundleignore file</a></h2>
+<h2><a class="toc-backref" href="#id11">2.4&nbsp;&nbsp;&nbsp;The .bundleignore file</a></h2>
 <p>Many programs store metadata files alongside edited files. This is often the case with text editors and version control systems.</p>
 <p>When Pepper bumps into unknown files in the source directory, it quits the compilation and reports an error.</p>
 <p>The <tt class="docutils literal">.bundleignore</tt> file specifies files that Pepper should ignore when compiling data.</p>
@@ -487,14 +511,14 @@ The result of the compilation process is stored in the bundle directory.</p>
 </pre>
 </div>
 <div class="section" id="units-of-measurement">
-<h2><a class="toc-backref" href="#id9">2.5&nbsp;&nbsp;&nbsp;Units of measurement</a></h2>
+<h2><a class="toc-backref" href="#id12">2.5&nbsp;&nbsp;&nbsp;Units of measurement</a></h2>
 <p>Pepper uses MKS (meters, kilograms and seconds) units and radians for angles.</p>
 </div>
 </div>
 <div class="section" id="boot-config-file-reference">
-<h1><a class="toc-backref" href="#id10">3&nbsp;&nbsp;&nbsp;boot.config file reference</a></h1>
+<h1><a class="toc-backref" href="#id13">3&nbsp;&nbsp;&nbsp;boot.config file reference</a></h1>
 <div class="section" id="generic-configurations">
-<h2><a class="toc-backref" href="#id11">3.1&nbsp;&nbsp;&nbsp;Generic configurations</a></h2>
+<h2><a class="toc-backref" href="#id14">3.1&nbsp;&nbsp;&nbsp;Generic configurations</a></h2>
 <blockquote>
 <dl class="docutils">
 <dt><tt class="docutils literal">boot_script = &quot;lua/game&quot;</tt></dt>
@@ -505,7 +529,7 @@ The result of the compilation process is stored in the bundle directory.</p>
 </blockquote>
 </div>
 <div class="section" id="platform-specific-configurations">
-<h2><a class="toc-backref" href="#id12">3.2&nbsp;&nbsp;&nbsp;Platform-specific configurations</a></h2>
+<h2><a class="toc-backref" href="#id15">3.2&nbsp;&nbsp;&nbsp;Platform-specific configurations</a></h2>
 <p>All configurations for a given <em>platform</em> are placed under a key named <em>platform</em>. E.g.:</p>
 <pre class="code literal-block">
 // Linux-only configs
@@ -518,22 +542,25 @@ linux = {
 }
 </pre>
 <div class="section" id="renderer-configurations">
-<h3><a class="toc-backref" href="#id13">3.2.1&nbsp;&nbsp;&nbsp;Renderer configurations</a></h3>
+<h3><a class="toc-backref" href="#id16">3.2.1&nbsp;&nbsp;&nbsp;Renderer configurations</a></h3>
 <blockquote>
 <dl class="docutils">
 <dt><tt class="docutils literal">window_width = 1280</tt></dt>
-<dd>Main window width.</dd>
+<dd>Sets the width of the main window.</dd>
 <dt><tt class="docutils literal">window_height = 720</tt></dt>
-<dd>Main window height.</dd>
+<dd>Sets the height of the main window.</dd>
+<dt><tt class="docutils literal">aspect_ratio = <span class="pre">-1</span></tt></dt>
+<dd>Sets the aspect ratio.
+If the value is set to <tt class="docutils literal"><span class="pre">-1</span></tt>, the aspect ratio is computed as <cite>width</cite>/<cite>height</cite> of the main window.</dd>
 <dt><tt class="docutils literal">vsync = true</tt></dt>
-<dd>Whether to enable vsync.</dd>
+<dd>Sets whether to enable the vsync.</dd>
 </dl>
 </blockquote>
 </div>
 </div>
 </div>
 <div class="section" id="command-line-reference">
-<h1><a class="toc-backref" href="#id14">4&nbsp;&nbsp;&nbsp;Command line reference</a></h1>
+<h1><a class="toc-backref" href="#id17">4&nbsp;&nbsp;&nbsp;Command line reference</a></h1>
 <blockquote>
 <dl class="docutils">
 <dt><tt class="docutils literal"><span class="pre">-h</span> <span class="pre">--help</span></tt></dt>
@@ -544,7 +571,7 @@ linux = {
 <dd><p class="first">Use &lt;path&gt; as the source directory for resource compilation.</p>
 <p class="last">The &lt;path&gt; must be absolute.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--bundle-dir</span> &lt;path&gt;</tt></dt>
+<dt><tt class="docutils literal"><span class="pre">--data-dir</span> &lt;path&gt;</tt></dt>
 <dd><p class="first">Use &lt;path&gt; as the destination directory for compiled resources.</p>
 <p class="last">The &lt;path&gt; must be absolute.</p>
 </dd>
@@ -554,7 +581,7 @@ linux = {
 </dd>
 <dt><tt class="docutils literal"><span class="pre">--compile</span></tt></dt>
 <dd><p class="first">Do a full compile of the resources.</p>
-<p class="last">When using this option you must also specify <tt class="docutils literal"><span class="pre">--platform</span></tt>, <tt class="docutils literal"><span class="pre">--source-dir</span></tt> and <tt class="docutils literal"><span class="pre">--bundle-dir</span></tt>.</p>
+<p class="last">When using this option you must also specify <tt class="docutils literal"><span class="pre">--platform</span></tt>, <tt class="docutils literal"><span class="pre">--source-dir</span></tt> and <tt class="docutils literal"><span class="pre">--data-dir</span></tt>.</p>
 </dd>
 <dt><tt class="docutils literal"><span class="pre">--platform</span> &lt;platform&gt;</tt></dt>
 <dd><p class="first">Compile resources for the given &lt;platform&gt;.
@@ -587,7 +614,7 @@ Possible values for &lt;platform&gt; are:</p>
 </blockquote>
 </div>
 <div class="section" id="api-reference">
-<h1><a class="toc-backref" href="#id15">5&nbsp;&nbsp;&nbsp;API reference</a></h1>
+<h1><a class="toc-backref" href="#id18">5&nbsp;&nbsp;&nbsp;API reference</a></h1>
 <ul class="simple">
 <li><a class="reference external" href="lua_api.html">Lua API Reference</a></li>
 <li><a class="reference external" href="doxygen/modules.html">C++ API Reference</a></li>
