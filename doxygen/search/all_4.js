@@ -12,6 +12,7 @@ var searchData=
   ['enum',['Enum',['../structcrown_1_1_os_event.html#a5cd5ac15275a6c9c77cf8ef585e54f89',1,'crown::OsEvent']]],
   ['equal_5fto',['equal_to',['../structcrown_1_1equal__to.html',1,'crown']]],
   ['error',['error',['../classcrown_1_1_console_server.html#af58d7054fc7f242650bad1f02cf81382',1,'crown::ConsoleServer::error()'],['../group___error.html',1,'(Global Namespace)']]],
+  ['eventheader',['EventHeader',['../structcrown_1_1_event_header.html',1,'crown']]],
   ['events',['events',['../classcrown_1_1_world.html#a240fb1754119bbb8183e146ec6d67cda',1,'crown::World']]],
   ['eventstream',['EventStream',['../group___containers.html#gabf3f2058f3c0a30ddb3fa7b37663f783',1,'crown']]],
   ['eventtype',['EventType',['../structcrown_1_1_event_type.html',1,'crown']]],
