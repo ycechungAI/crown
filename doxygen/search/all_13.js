@@ -26,6 +26,7 @@ var searchData=
   ['to_5fvertices',['to_vertices',['../namespacecrown_1_1aabb.html#aeb35560b88c9391d2e9e8163c9a90f05',1,'crown::aabb']]],
   ['total_5fallocated',['total_allocated',['../classcrown_1_1_allocator.html#a84fc840df70e6cb9945eaab3118ca9e4',1,'crown::Allocator::total_allocated()'],['../classcrown_1_1_linear_allocator.html#aa9f21bce78b13746cdefff3b1c3e24b1',1,'crown::LinearAllocator::total_allocated()'],['../classcrown_1_1_pool_allocator.html#a633ccc68cde3216b6a609c23c9a97dd0',1,'crown::PoolAllocator::total_allocated()'],['../classcrown_1_1_proxy_allocator.html#a6b24726c0ea9c1824ab2a3efd72a9a68',1,'crown::ProxyAllocator::total_allocated()'],['../classcrown_1_1_stack_allocator.html#ad92ea02c634f145ad4cc9dff997c0351',1,'crown::StackAllocator::total_allocated()'],['../classcrown_1_1_temp_allocator.html#a8bee5c9e92bf7c8f5797efe7dcb04a27',1,'crown::TempAllocator::total_allocated()']]],
   ['touch',['touch',['../classcrown_1_1_input_manager.html#a72b97caad8ca1d80bb5a89714757f4e0',1,'crown::InputManager']]],
+  ['touchaxis',['TouchAxis',['../structcrown_1_1_touch_axis.html',1,'crown']]],
   ['touchbutton',['TouchButton',['../structcrown_1_1_touch_button.html',1,'crown']]],
   ['transformdesc',['TransformDesc',['../structcrown_1_1_transform_desc.html',1,'crown']]],
   ['transformed',['transformed',['../namespacecrown_1_1aabb.html#aba40b08e30dcb5e90a1cf8a6191567c8',1,'crown::aabb']]],
