@@ -6,7 +6,7 @@ var searchData=
   ['c_5fstr',['c_str',['../structcrown_1_1_dynamic_string.html#aeac24042d121bd93cff0bba2bc15e203',1,'crown::DynamicString::c_str()'],['../namespacecrown_1_1string__stream.html#aecf9041eaf7334b2cd1a6bf11ce8d8ac',1,'crown::string_stream::c_str()']]],
   ['call_5fglobal',['call_global',['../structcrown_1_1_lua_environment.html#aaa5d0facd74cc4dfe51096954e2c9aa2',1,'crown::LuaEnvironment']]],
   ['camera',['camera',['../classcrown_1_1_world.html#aa0d527512e166741e9b3e987f3488c66',1,'crown::World']]],
-  ['camera_5fcreate',['camera_create',['../classcrown_1_1_world.html#ac4c9dfdaa42fa746c741a8c8b4d33ae0',1,'crown::World']]],
+  ['camera_5fcreate',['camera_create',['../classcrown_1_1_world.html#a276705cf28c640236abcaf5e2dc11832',1,'crown::World']]],
   ['camera_5fdestroy',['camera_destroy',['../classcrown_1_1_world.html#ae3222886e62d56dd40ca0c3d33e28dd0',1,'crown::World']]],
   ['camera_5ffar_5fclip_5fdistance',['camera_far_clip_distance',['../classcrown_1_1_world.html#a9667a3dfb085e8047ddb0446f723ecab',1,'crown::World']]],
   ['camera_5ffov',['camera_fov',['../classcrown_1_1_world.html#ad432b5f4cbd40bed6e08f4e68a11cb78',1,'crown::World']]],

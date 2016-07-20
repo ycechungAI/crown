@@ -896,6 +896,9 @@ enable depth test when rendering the lines.</dd>
 <dl class="docutils">
 <dt><strong>camera</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the camera owned by unit <em>id</em>.</dd>
+<dt><strong>camera_create</strong> (world, unit, projection, fov, far_range, near_range, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
+<dd>Creates a new camera for <em>unit</em> and returns its id.
+Projection can be either <tt class="docutils literal">orthographic</tt> or <tt class="docutils literal">perspective</tt>.</dd>
 <dt><strong>camera_set_projection_type</strong> (world, camera, projection)</dt>
 <dd>Sets the projection type of the camera.
 Projection can be either <tt class="docutils literal">orthographic</tt> or <tt class="docutils literal">perspective</tt>.</dd>
@@ -1054,7 +1057,7 @@ Type can be either <tt class="docutils literal">directional</tt>, <tt class="doc
 <dt><strong>light_destroy</strong> (rw, id)</dt>
 <dd>Destroys the light <em>id</em>.</dd>
 <dt><strong>light_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
-<dd>Returns the light of the <em>unit</em>.</dd>
+<dd>Returns the light of the <em>unit</em> or nil.</dd>
 <dt><strong>light_type</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the type of the light <em>id</em>.
 It can be either <tt class="docutils literal">directional</tt>, <tt class="docutils literal">omni</tt> or <tt class="docutils literal">spot</tt>.</dd>
