@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>Pepper: crown::OsMouseEvent Struct Reference</title>
+<title>Pepper: crown::InputDeviceType Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,66 +73,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_os_mouse_event.html">OsMouseEvent</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_input_device_type.html">InputDeviceType</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structcrown_1_1_os_mouse_event-members.html">List of all members</a>  </div>
+<a href="structcrown_1_1_input_device_type-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::OsMouseEvent Struct Reference</div>  </div>
+<div class="title">crown::InputDeviceType Struct Reference<div class="ingroups"><a class="el" href="group___device.html">Device</a> &raquo; <a class="el" href="group___input.html">Input</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Represents an event fired by mouse.  
- <a href="structcrown_1_1_os_mouse_event.html#details">More...</a></p>
+<p>Enumerates input device types.  
+ <a href="structcrown_1_1_input_device_type.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="os__event__queue_8h_source.html">os_event_queue.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="input__types_8h_source.html">input_types.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a8207d234386dbe5f13ae51b4f28cea8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8207d234386dbe5f13ae51b4f28cea8f"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Enum</b> { <br />
-&#160;&#160;<b>BUTTON</b>, 
+<tr class="memitem:aa7506ec4c2800cf1729658b305aebecd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa7506ec4c2800cf1729658b305aebecd"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Enum</b> { <br />
+&#160;&#160;<b>KEYBOARD</b>, 
 <br />
-&#160;&#160;<b>WHEEL</b>, 
+&#160;&#160;<b>MOUSE</b>, 
 <br />
-&#160;&#160;<b>MOVE</b>
+&#160;&#160;<b>TOUCHSCREEN</b>, 
+<br />
+&#160;&#160;<b>JOYPAD</b>
 <br />
  }</td></tr>
-<tr class="separator:a8207d234386dbe5f13ae51b4f28cea8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a5ec69c1febdab2694b5b4f9180520fce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ec69c1febdab2694b5b4f9180520fce"></a>
-OsMouseEvent::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
-<tr class="separator:a5ec69c1febdab2694b5b4f9180520fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad684f1de42e4bb01fa5cb1dd61c14911"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad684f1de42e4bb01fa5cb1dd61c14911"></a>
-MouseButton::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>button</b></td></tr>
-<tr class="separator:ad684f1de42e4bb01fa5cb1dd61c14911"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac56725af00f0de107c8927c9a46cf3d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac56725af00f0de107c8927c9a46cf3d6"></a>
-s16&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
-<tr class="separator:ac56725af00f0de107c8927c9a46cf3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b3838c7a47ba596ea3efb0083ccd68b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b3838c7a47ba596ea3efb0083ccd68b"></a>
-s16&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
-<tr class="separator:a4b3838c7a47ba596ea3efb0083ccd68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57fdd9e0c16d7cbf800544d3a72fbd8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57fdd9e0c16d7cbf800544d3a72fbd8e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>pressed</b></td></tr>
-<tr class="separator:a57fdd9e0c16d7cbf800544d3a72fbd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f8c2307fead96ff6af736367e75b7b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f8c2307fead96ff6af736367e75b7b6"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>wheel</b></td></tr>
-<tr class="separator:a8f8c2307fead96ff6af736367e75b7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aa7506ec4c2800cf1729658b305aebecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents an event fired by mouse. </p>
+<div class="textblock"><p>Enumerates input device types. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/device/<a class="el" href="os__event__queue_8h_source.html">os_event_queue.h</a></li>
+<li>src/device/<a class="el" href="input__types_8h_source.html">input_types.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 20 2016 23:23:20 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 23 2016 21:34:42 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

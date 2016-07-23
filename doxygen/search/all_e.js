@@ -13,13 +13,6 @@ var searchData=
   ['operator_5b_5d',['operator[]',['../structcrown_1_1_json_object.html#af8e5dcca6807eacc226916260defb42a',1,'crown::JsonObject::operator[](const char *key) const '],['../structcrown_1_1_json_object.html#a42d9530e4a0b602ea257368de0b369dd',1,'crown::JsonObject::operator[](const FixedString &amp;key) const ']]],
   ['orthographic',['orthographic',['../group___math.html#gabb89a394e076427ec08cc6e88b8c6030',1,'crown']]],
   ['os',['OS',['../group___o_s.html',1,'']]],
-  ['osaccelerometerevent',['OsAccelerometerEvent',['../structcrown_1_1_os_accelerometer_event.html',1,'crown']]],
-  ['osevent',['OsEvent',['../structcrown_1_1_os_event.html',1,'crown']]],
-  ['oseventqueue',['OsEventQueue',['../structcrown_1_1_os_event_queue.html',1,'crown']]],
-  ['osexitevent',['OsExitEvent',['../structcrown_1_1_os_exit_event.html',1,'crown']]],
-  ['osjoypadevent',['OsJoypadEvent',['../structcrown_1_1_os_joypad_event.html',1,'crown']]],
-  ['oskeyboardevent',['OsKeyboardEvent',['../structcrown_1_1_os_keyboard_event.html',1,'crown']]],
-  ['osmetricsevent',['OsMetricsEvent',['../structcrown_1_1_os_metrics_event.html',1,'crown']]],
-  ['osmouseevent',['OsMouseEvent',['../structcrown_1_1_os_mouse_event.html',1,'crown']]],
-  ['ostouchevent',['OsTouchEvent',['../structcrown_1_1_os_touch_event.html',1,'crown']]]
+  ['osevent',['OsEvent',['../unioncrown_1_1_os_event.html',1,'crown']]],
+  ['oseventtype',['OsEventType',['../structcrown_1_1_os_event_type.html',1,'crown']]]
 ];

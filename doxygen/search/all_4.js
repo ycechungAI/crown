@@ -9,7 +9,6 @@ var searchData=
   ['enterprofilescope',['EnterProfileScope',['../structcrown_1_1_enter_profile_scope.html',1,'crown']]],
   ['entry',['Entry',['../structcrown_1_1_hash_map_1_1_entry.html',1,'crown::HashMap']]],
   ['entry',['Entry',['../structcrown_1_1_sort_map_1_1_entry.html',1,'crown::SortMap']]],
-  ['enum',['Enum',['../structcrown_1_1_os_event.html#a5cd5ac15275a6c9c77cf8ef585e54f89',1,'crown::OsEvent']]],
   ['equal_5fto',['equal_to',['../structcrown_1_1equal__to.html',1,'crown']]],
   ['error',['error',['../classcrown_1_1_console_server.html#af58d7054fc7f242650bad1f02cf81382',1,'crown::ConsoleServer::error()'],['../group___error.html',1,'(Global Namespace)']]],
   ['eventheader',['EventHeader',['../structcrown_1_1_event_header.html',1,'crown']]],

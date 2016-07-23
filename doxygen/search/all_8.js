@@ -8,6 +8,7 @@ var searchData=
   ['input',['Input',['../group___input.html',1,'']]],
   ['input_5fmanager',['input_manager',['../classcrown_1_1_device.html#ae070f0b24bcc7b787e5459716002906c',1,'crown::Device']]],
   ['inputdevice',['InputDevice',['../structcrown_1_1_input_device.html',1,'crown']]],
+  ['inputdevicetype',['InputDeviceType',['../structcrown_1_1_input_device_type.html',1,'crown']]],
   ['inputmanager',['InputManager',['../classcrown_1_1_input_manager.html',1,'crown']]],
   ['instancedata',['InstanceData',['../structcrown_1_1_scene_graph_1_1_instance_data.html',1,'crown::SceneGraph']]],
   ['int2type',['Int2Type',['../structcrown_1_1_int2_type.html',1,'crown']]],

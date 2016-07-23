@@ -28,5 +28,6 @@ var searchData=
   ['array_3c_20u16_20_3e',['Array&lt; u16 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20u32_20_3e',['Array&lt; u32 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20u8_20_3e',['Array&lt; u8 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['atomicint',['AtomicInt',['../structcrown_1_1_atomic_int.html',1,'crown']]]
+  ['atomicint',['AtomicInt',['../structcrown_1_1_atomic_int.html',1,'crown']]],
+  ['axisevent',['AxisEvent',['../structcrown_1_1_axis_event.html',1,'crown']]]
 ];

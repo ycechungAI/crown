@@ -90,6 +90,7 @@ var searchData=
   ['spriterendererdesc',['SpriteRendererDesc',['../structcrown_1_1_sprite_renderer_desc.html',1,'crown']]],
   ['spriteresource',['SpriteResource',['../structcrown_1_1_sprite_resource.html',1,'crown']]],
   ['stackallocator',['StackAllocator',['../classcrown_1_1_stack_allocator.html',1,'crown']]],
+  ['statusevent',['StatusEvent',['../structcrown_1_1_status_event.html',1,'crown']]],
   ['step_5foffset',['step_offset',['../structcrown_1_1_controller_desc.html#a20082a1b4845a82068f26f4dd9cefb02',1,'crown::ControllerDesc']]],
   ['stop',['stop',['../classcrown_1_1_sound_world.html#a4c7610911f773a246d078affb1792ed0',1,'crown::SoundWorld']]],
   ['stop_5fall',['stop_all',['../classcrown_1_1_sound_world.html#a84e1146efc2ea54a14656dd005f0fa8b',1,'crown::SoundWorld']]],

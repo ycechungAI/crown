@@ -28,6 +28,7 @@ var searchData=
   ['spriterendererdesc',['SpriteRendererDesc',['../structcrown_1_1_sprite_renderer_desc.html',1,'crown']]],
   ['spriteresource',['SpriteResource',['../structcrown_1_1_sprite_resource.html',1,'crown']]],
   ['stackallocator',['StackAllocator',['../classcrown_1_1_stack_allocator.html',1,'crown']]],
+  ['statusevent',['StatusEvent',['../structcrown_1_1_status_event.html',1,'crown']]],
   ['stringid32',['StringId32',['../structcrown_1_1_string_id32.html',1,'crown']]],
   ['stringid64',['StringId64',['../structcrown_1_1_string_id64.html',1,'crown']]]
 ];

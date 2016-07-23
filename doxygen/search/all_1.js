@@ -11,5 +11,6 @@ var searchData=
   ['bootconfig',['BootConfig',['../structcrown_1_1_boot_config.html',1,'crown']]],
   ['boxshape',['BoxShape',['../structcrown_1_1_box_shape.html',1,'crown']]],
   ['button_5fid',['button_id',['../structcrown_1_1_input_device.html#a6b4dfd4b3b27c2de717cd8673c877856',1,'crown::InputDevice']]],
-  ['button_5fname',['button_name',['../structcrown_1_1_input_device.html#a3124f9c4de10a18c6ac3bbc944e19fd6',1,'crown::InputDevice']]]
+  ['button_5fname',['button_name',['../structcrown_1_1_input_device.html#a3124f9c4de10a18c6ac3bbc944e19fd6',1,'crown::InputDevice']]],
+  ['buttonevent',['ButtonEvent',['../structcrown_1_1_button_event.html',1,'crown']]]
 ];

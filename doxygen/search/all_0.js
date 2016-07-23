@@ -92,5 +92,6 @@ var searchData=
   ['atomicint',['AtomicInt',['../structcrown_1_1_atomic_int.html',1,'crown']]],
   ['axis',['axis',['../structcrown_1_1_input_device.html#a7ef01da8b3a7c622ed9f8d78dd695d69',1,'crown::InputDevice']]],
   ['axis_5fid',['axis_id',['../structcrown_1_1_input_device.html#a6344b6a1c79ab9fd931ce544fb37315d',1,'crown::InputDevice']]],
-  ['axis_5fname',['axis_name',['../structcrown_1_1_input_device.html#aabdadc51422fef8b006c2e74ab21cc68',1,'crown::InputDevice']]]
+  ['axis_5fname',['axis_name',['../structcrown_1_1_input_device.html#aabdadc51422fef8b006c2e74ab21cc68',1,'crown::InputDevice']]],
+  ['axisevent',['AxisEvent',['../structcrown_1_1_axis_event.html',1,'crown']]]
 ];
