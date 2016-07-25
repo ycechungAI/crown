@@ -976,7 +976,7 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <dt><strong>destroy</strong> (sg, id)</dt>
 <dd>Destroys the transform <em>id</em>.</dd>
 <dt><strong>transform_instances</strong> (sg, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
-<dd>Returns the transform of the <em>unit</em> or nil.</dd>
+<dd>Returns the transform of the <em>unit</em> or <tt class="docutils literal">nil</tt>.</dd>
 <dt><strong>local_position</strong> (sg, id) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns the local position of the transform <em>id</em>.</dd>
 <dt><strong>local_rotation</strong> (sg, id) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
@@ -1065,7 +1065,7 @@ Type can be either <tt class="docutils literal">directional</tt>, <tt class="doc
 <dt><strong>light_destroy</strong> (rw, id)</dt>
 <dd>Destroys the light <em>id</em>.</dd>
 <dt><strong>light_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
-<dd>Returns the light of the <em>unit</em> or nil.</dd>
+<dd>Returns the light of the <em>unit</em> or <tt class="docutils literal">nil</tt>.</dd>
 <dt><strong>light_type</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the type of the light <em>id</em>.
 It can be either <tt class="docutils literal">directional</tt>, <tt class="docutils literal">omni</tt> or <tt class="docutils literal">spot</tt>.</dd>
@@ -1258,7 +1258,7 @@ Note that to unload the resources loaded by the package, you have to call
 ResourcePackage.unload() first.</dd>
 <dt><strong>console_send</strong> (table)</dt>
 <dd>Sends the given lua <em>table</em> to clients connected to the engine.
-Values can be either nil, bool, number, string, table, array, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
+Values can be either <tt class="docutils literal">nil</tt>, bool, number, string, table, array, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
 <dt><strong>can_get</strong> (type, name) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the resource (type, name) is loaded.
 When resource autoload is enabled it always returns true.</dd>
@@ -1339,7 +1339,7 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <dt><strong>button_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the button <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em>.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
 </dl>
 </blockquote>
 <div class="section" id="keyboard-button-names">
@@ -1389,9 +1389,9 @@ None.</blockquote>
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em>.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em>.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <tt class="docutils literal">nil</tt> if no matching axis is found.</dd>
 </dl>
 </blockquote>
 <div class="section" id="mouse-button-names">
@@ -1437,9 +1437,9 @@ None.</blockquote>
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em>.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em>.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <tt class="docutils literal">nil</tt> if no matching axis is found.</dd>
 </dl>
 </blockquote>
 </div>
@@ -1470,9 +1470,9 @@ None.</blockquote>
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em>.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em>.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <tt class="docutils literal">nil</tt> if no matching axis is found.</dd>
 </dl>
 </blockquote>
 <div class="section" id="pad-button-names">
