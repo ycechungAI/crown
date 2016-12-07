@@ -357,6 +357,7 @@ body {
 div.topic {
 	border: 1px solid #aaa;
 	background-color: #f9f9f9;
+	margin: 0;
 }
 
 cite {
@@ -376,6 +377,13 @@ blockquote {
 	margin-bottom: 16px;
 	padding: 0 1em;
 	border-left: 0.25em solid #ddd;
+}
+
+pre.code {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 16px;
+	overflow: auto;
 }
 
 h1, h2, h3 {
@@ -489,12 +497,12 @@ boot_script  = &quot;lua/game&quot;  // Lua script to execute on boot
 The result of the compilation process is stored in the data directory.</p>
 <pre class="code literal-block">
 .
-├── data                                   &lt;- Contains compiled data files
-|   ├── a14e8dfa2cd117e2-9dea40fdc2245efc  &lt;- Compiled file
-|   ├── 72e3cc03787a11a1-0b2f08fe66e395c0  &lt;- Another compiled file
+├── data                &lt;- Contains compiled data files
+|   ├── a14e8dfa2cd...  &lt;- Compiled file
+|   ├── 72e3cc03787...  &lt;- Another compiled file
 |   └── ...
-├── temp                                   &lt;- Temporary files from data compilers
-└── last.log                               &lt;- Text log from the last engine execution
+├── temp                &lt;- Temporary files from data compilers
+└── last.log            &lt;- Text log from the last engine execution
 </pre>
 </div>
 <div class="section" id="the-bundleignore-file">
