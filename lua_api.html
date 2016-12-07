@@ -343,8 +343,6 @@ ul.auto-toc {
  * License: https://github.com/taylor001/crown/blob/master/LICENSE
  */
 
-@import url(html4css1.css);
-
 body {
 	font-family: sans-serif;
 	font-size: 14px;
@@ -356,22 +354,32 @@ body {
 	background-color: #f6f6f6;
 }
 
-h1,h2,h3 {
-	line-height:1.2
-}
-
 div.topic {
 	border: 1px solid #aaa;
 	background-color: #f9f9f9;
 }
 
-tt.literal {
-	background-color: #fafafa;
+cite {
+	font-family: monospace;
+	font-style: normal;
+	background-color: #fbfbfb;
 	border-radius: 2px;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #e7e7e7;
+	border-color: #dedede;
 	padding: 1px 7px 1px 7px;
+}
+
+blockquote {
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 16px;
+	padding: 0 1em;
+	border-left: 0.25em solid #ddd;
+}
+
+h1, h2, h3 {
+	line-height:1.2
 }
 
 a {
@@ -389,14 +397,6 @@ a:visited {
 
 a.toc-backref {
 	color: #4078c0;
-}
-
-blockquote {
-	margin-left: 0;
-	margin-top: 0;
-	margin-bottom: 16px;
-	padding: 0 1em;
-	border-left: 0.25em solid #ddd;
 }
 
 </style>
@@ -504,16 +504,13 @@ blockquote {
 <h2><a class="toc-backref" href="#id15">Vector3</a></h2>
 <div class="section" id="constructors">
 <h3><a class="toc-backref" href="#id16">Constructors</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>Vector3</strong> (x, y, z) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns a new vector from individual elements.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="functions">
 <h3><a class="toc-backref" href="#id17">Functions</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>x</strong> (v) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the x value of the vector.</dd>
@@ -585,14 +582,12 @@ blockquote {
 <dt><strong>to_string</strong> (v) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string representing the vector <em>v</em>.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="vector3box">
 <h2><a class="toc-backref" href="#id18">Vector3Box</a></h2>
 <div class="section" id="id1">
 <h3><a class="toc-backref" href="#id19">Constructors</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>Vector3Box</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Vector3Box</span></dt>
 <dd>Returns a new Vector3Box initialized with the zero vector.</dd>
@@ -601,11 +596,9 @@ blockquote {
 <dt><strong>Vector3Box</strong> (x, y, z) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3Box</span></dt>
 <dd>Returns a new Vector3Box from individual elements.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="id2">
 <h3><a class="toc-backref" href="#id20">Functions</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>store</strong> (v)</dt>
 <dd>Stores the Vector3 <em>v</em> in the box.</dd>
@@ -614,14 +607,12 @@ blockquote {
 <dt><strong>unbox</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns the stored vector from the box.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="quaternion">
 <h2><a class="toc-backref" href="#id21">Quaternion</a></h2>
 <div class="section" id="id3">
 <h3><a class="toc-backref" href="#id22">Constructors</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>Quaternion</strong> (axis, angle) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
 <dd>Returns a new quaternion from <em>axis</em> and <em>angle</em>.</dd>
@@ -630,11 +621,9 @@ blockquote {
 <dt><strong>from_axis_angle</strong> (axis, angle) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
 <dd>Returns a new quaternion from <em>axis</em> and <em>angle</em>.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="id4">
 <h3><a class="toc-backref" href="#id23">Functions</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>negate</strong> (q) <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
 <dd>Negates the quaternion <em>q</em> and returns the result.</dd>
@@ -673,14 +662,12 @@ It uses NLerp.</dd>
 <dt><strong>to_string</strong> (q) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string representing the quaternion <em>q</em>.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="quaternionbox">
 <h2><a class="toc-backref" href="#id24">QuaternionBox</a></h2>
 <div class="section" id="id5">
 <h3><a class="toc-backref" href="#id25">Constructors</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>QuaternionBox</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">QuaternionBox</span></dt>
 <dd>Returns a new QuaternionBox initialized with the identity quaternion.</dd>
@@ -689,11 +676,9 @@ It uses NLerp.</dd>
 <dt><strong>QuaternionBox</strong> (x, y, z, w) <span class="classifier-delimiter">:</span> <span class="classifier">QuaternionBox</span></dt>
 <dd>Returns a new QuaternionBox from individual elements.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="id6">
 <h3><a class="toc-backref" href="#id26">Functions</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>store</strong> (q)</dt>
 <dd>Stores the Quaternion <em>q</em> in the box.</dd>
@@ -702,14 +687,12 @@ It uses NLerp.</dd>
 <dt><strong>unbox</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Quaternion</span></dt>
 <dd>Returns the stored quaternion from the box.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="matrix4x4">
 <h2><a class="toc-backref" href="#id27">Matrix4x4</a></h2>
 <div class="section" id="id7">
 <h3><a class="toc-backref" href="#id28">Constructors</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>Matrix4x4</strong> (xx, xy, xz, xw, yx, yy, yz, yw, zx, zy, zz, zw, tx, ty, tz, tw) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4</span></dt>
 <dd>Returns a new matrix from individual elements.</dd>
@@ -722,11 +705,9 @@ It uses NLerp.</dd>
 <dt><strong>from_axes</strong> (x, y, z, t) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4</span></dt>
 <dd>Returns a new matrix from <em>x</em>, <em>y</em>, <em>z</em> and <em>t</em>.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="id8">
 <h3><a class="toc-backref" href="#id29">Functions</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>copy</strong> (m) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4</span></dt>
 <dd>Returns a copy of the matrix <em>m</em>.</dd>
@@ -769,48 +750,40 @@ It uses NLerp.</dd>
 <dt><strong>to_string</strong> (m) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string representing the matrix <em>m</em>.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="matrix4x4box">
 <h2><a class="toc-backref" href="#id30">Matrix4x4Box</a></h2>
 <div class="section" id="id9">
 <h3><a class="toc-backref" href="#id31">Constructors</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>Matrix4x4Box</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4Box</span></dt>
 <dd>Returns a new Matrix4x4Box initialized with the identity matrix.</dd>
 <dt><strong>Matrix4x4Box</strong> (m) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4Box</span></dt>
 <dd>Returns a new Matrix4x4Box from the Matrix4x4 <em>m</em>.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="id10">
 <h3><a class="toc-backref" href="#id32">Functions</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>store</strong> (m)</dt>
 <dd>Stores the Matrix4x4 <em>m</em> in the box.</dd>
 <dt><strong>unbox</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4</span></dt>
 <dd>Returns the stored matrix from the box.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="color4">
 <h2><a class="toc-backref" href="#id33">Color4</a></h2>
 <div class="section" id="id11">
 <h3><a class="toc-backref" href="#id34">Constructors</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>Color4</strong> (r, g, b, a) <span class="classifier-delimiter">:</span> <span class="classifier">Color4</span></dt>
 <dd>Returns a new Color4 from individual elements.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="id12">
 <h3><a class="toc-backref" href="#id35">Functions</a></h3>
-<blockquote>
 <dl class="docutils">
 <dt><strong>lerp</strong> (a, b, t) <span class="classifier-delimiter">:</span> <span class="classifier">Color4</span></dt>
 <dd>Returns the linearly interpolated color between <em>a</em> and <em>b</em> at time <em>t</em> in [0, 1].</dd>
@@ -831,12 +804,10 @@ It uses NLerp.</dd>
 <dt><strong>to_string</strong> (c) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string representing the color <em>c</em>.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="id13">
 <h2><a class="toc-backref" href="#id36">Math</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>ray_plane_intersection</strong> (from, dir, point, normal) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the distance along ray (from, dir) to intersection point with plane defined by
@@ -854,12 +825,10 @@ bounding box (tm, half_extents) or -1.0 if no intersection.</dd>
 <dd>Returns the distance along ray (from, dir) to intersection point with the triangle
 (v0, v1, v2) or -1.0 if no intersection.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="unitmanager">
 <h1><a class="toc-backref" href="#id37">UnitManager</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>create</strong> ([world]) <span class="classifier-delimiter">:</span> <span class="classifier">UnitId</span></dt>
 <dd>Creates a new empty unit. If <em>world</em> is specified, the unit will be owned by
@@ -869,11 +838,9 @@ that world.</dd>
 <dt><strong>alive</strong> (unit) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the unit is alive.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="world">
 <h1><a class="toc-backref" href="#id38">World</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>spawn_unit</strong> (world, name, [position, rotation]) <span class="classifier-delimiter">:</span> <span class="classifier">UnitId</span></dt>
 <dd>Spawns a new instance of the unit <em>name</em> at the given <em>position</em> and <em>rotation</em>.</dd>
@@ -905,22 +872,20 @@ enable depth test when rendering the lines.</dd>
 <dt><strong>sound_world</strong> (world) <span class="classifier-delimiter">:</span> <span class="classifier">SoundWorld</span></dt>
 <dd>Returns the sound sub-world.</dd>
 </dl>
-</blockquote>
 <div class="section" id="camera">
 <h2><a class="toc-backref" href="#id39">Camera</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>camera_create</strong> (world, unit, projection, fov, far_range, near_range, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates a new camera for <em>unit</em> and returns its id.
-Projection can be either <tt class="docutils literal">orthographic</tt> or <tt class="docutils literal">perspective</tt>.</dd>
+Projection can be either <cite>orthographic</cite> or <cite>perspective</cite>.</dd>
 <dt><strong>camera_instances</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the cameras of the <em>unit</em>.</dd>
 <dt><strong>camera_set_projection_type</strong> (world, camera, projection)</dt>
 <dd>Sets the projection type of the camera.
-Projection can be either <tt class="docutils literal">orthographic</tt> or <tt class="docutils literal">perspective</tt>.</dd>
+Projection can be either <cite>orthographic</cite> or <cite>perspective</cite>.</dd>
 <dt><strong>camera_projection_type</strong> (world, camera) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the projection type of the camera.
-It can be either <tt class="docutils literal">orthographic</tt> or <tt class="docutils literal">perspective</tt>.</dd>
+It can be either <cite>orthographic</cite> or <cite>perspective</cite>.</dd>
 <dt><strong>camera_fov</strong> (world, camera) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the field-of-view of the camera in degrees.</dd>
 <dt><strong>camera_set_fov</strong> (world, camera, fov)</dt>
@@ -940,11 +905,9 @@ It can be either <tt class="docutils literal">orthographic</tt> or <tt class="do
 <dt><strong>camera_world_to_screen</strong> (world, camera, pos) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns <em>pos</em> from world-space to screen-space coordinates.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="sound">
 <h2><a class="toc-backref" href="#id40">Sound</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>play_sound</strong> (world, name, [loop, volume, position, range]) <span class="classifier-delimiter">:</span> <span class="classifier">SoundInstanceId</span></dt>
 <dd>Plays the sound with the given <em>name</em> at the given <em>position</em>, with the given
@@ -963,21 +926,17 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <dt><strong>set_sound_volume</strong> (world, id, volume)</dt>
 <dd>Sets the <em>volume</em> of the sound <em>id</em>.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="level">
 <h2><a class="toc-backref" href="#id41">Level</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>load_level</strong> (world, name, [pos, rot]) <span class="classifier-delimiter">:</span> <span class="classifier">Level</span></dt>
 <dd>Loads the level <em>name</em> into the world at the given <em>position</em> and <em>rotation</em>.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="scenegraph">
 <h1><a class="toc-backref" href="#id42">SceneGraph</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>create</strong> (sg, unit, position, rotation, scale) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates the transform for the <em>unit</em>.</dd>
@@ -1012,11 +971,9 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <dt><strong>unlink</strong> (sg, id)</dt>
 <dd>Unlinks <em>id</em> transform from its parent, if any.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="material">
 <h1><a class="toc-backref" href="#id43">Material</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>set_float</strong> (material, name, value)</dt>
 <dd>Sets the <em>value</em> of the variable <em>name</em>.</dd>
@@ -1025,19 +982,15 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <dt><strong>set_vector3</strong> (material, name, value)</dt>
 <dd>Sets the <em>value</em> of the variable <em>name</em>.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="renderworld">
 <h1><a class="toc-backref" href="#id44">RenderWorld</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>enable_debug_drawing</strong> (rw, enable)</dt>
 <dd>Sets whether to <em>enable</em> debug drawing.</dd>
 </dl>
-</blockquote>
 <div class="section" id="mesh">
 <h2><a class="toc-backref" href="#id45">Mesh</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>mesh_create</strong> (rw, unit, mesh_resource, geometry_name, material_resource, visible, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates a new mesh instance for <em>unit</em> and returns its id.</dd>
@@ -1048,11 +1001,9 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <dt><strong>mesh_raycast</strong> (rw, id, from, dir) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the distance along ray (from, dir) to intersection point with the mesh <em>id</em> or -1.0 if no intersection.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="sprite">
 <h2><a class="toc-backref" href="#id46">Sprite</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>sprite_create</strong> (rw, unit, sprite_resource, material_resource, visible, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates a new sprite instance for <em>unit</em> and returns its id.</dd>
@@ -1061,22 +1012,20 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <dt><strong>sprite_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the sprites of the <em>unit</em>.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="light">
 <h2><a class="toc-backref" href="#id47">Light</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>light_create</strong> (rw, unit, type, range, intensity, spot_angle, color, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates a new light for <em>unit</em> and returns its id.
-Type can be either <tt class="docutils literal">directional</tt>, <tt class="docutils literal">omni</tt> or <tt class="docutils literal">spot</tt>.</dd>
+Type can be either <cite>directional</cite>, <cite>omni</cite> or <cite>spot</cite>.</dd>
 <dt><strong>light_destroy</strong> (rw, id)</dt>
 <dd>Destroys the light <em>id</em>.</dd>
 <dt><strong>light_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the lights of the <em>unit</em>.</dd>
 <dt><strong>light_type</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the type of the light <em>id</em>.
-It can be either <tt class="docutils literal">directional</tt>, <tt class="docutils literal">omni</tt> or <tt class="docutils literal">spot</tt>.</dd>
+It can be either <cite>directional</cite>, <cite>omni</cite> or <cite>spot</cite>.</dd>
 <dt><strong>light_color</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">Color4</span></dt>
 <dd>Returns the color of the light <em>id</em>.</dd>
 <dt><strong>light_range</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
@@ -1096,12 +1045,10 @@ It can be either <tt class="docutils literal">directional</tt>, <tt class="docut
 <dt><strong>light_set_spot_angle</strong> (rw, id, angle)</dt>
 <dd>Sets the spot <em>angle</em> of the light <em>id</em>.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="physicsworld">
 <h1><a class="toc-backref" href="#id48">PhysicsWorld</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>gravity</strong> (pw) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns the gravity.</dd>
@@ -1109,14 +1056,12 @@ It can be either <tt class="docutils literal">directional</tt>, <tt class="docut
 <dd>Sets the gravity.</dd>
 <dt><strong>raycast</strong> (pw, from, dir, length, mode) <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
 <dd>Returns the actors which intersects the raycast.
-Mode can be either <tt class="docutils literal">closest</tt> or <tt class="docutils literal">all</tt>.</dd>
+Mode can be either <cite>closest</cite> or <cite>all</cite>.</dd>
 <dt><strong>enable_debug_drawing</strong> (pw, enable)</dt>
 <dd>Sets whether to <em>enable</em> debug drawing.</dd>
 </dl>
-</blockquote>
 <div class="section" id="actor">
 <h2><a class="toc-backref" href="#id49">Actor</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>actor_instances</strong> (pw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the actors of the <em>unit</em>.</dd>
@@ -1196,12 +1141,10 @@ Note that this call only affects nonkinematic actors.</dd>
 <dt><strong>actor_wake_up</strong> (pw, actor)</dt>
 <dd>Wakes the actor up.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 <div class="section" id="soundworld">
 <h1><a class="toc-backref" href="#id50">SoundWorld</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>stop_all</strong> (sound_world)</dt>
 <dd>Stops all the sounds in the world.</dd>
@@ -1212,11 +1155,9 @@ Note that this call only affects nonkinematic actors.</dd>
 <dt><strong>is_playing</strong> (sound_world, id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the sound <em>id</em> is playing.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="resourcepackage">
 <h1><a class="toc-backref" href="#id51">ResourcePackage</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>load</strong> (package)</dt>
 <dd>Loads all the resources in the package.
@@ -1229,20 +1170,18 @@ instead, you have to poll for completion with has_loaded().</dd>
 <dt><strong>has_loaded</strong> (package) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the package has been loaded.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="device">
 <h1><a class="toc-backref" href="#id52">Device</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>argv</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
 <dd>Returns a table containing the command line parameters the engine was started with.</dd>
 <dt><strong>platform</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying what platform the engine is running on.
-It can be either <tt class="docutils literal">android</tt>, <tt class="docutils literal">linux</tt> or <tt class="docutils literal">windows</tt></dd>
+It can be either <cite>android</cite>, <cite>linux</cite> or <cite>windows</cite></dd>
 <dt><strong>architecture</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying what architecture the engine is running on.
-It can be either <tt class="docutils literal"><span class="pre">32-bit</span></tt> or <tt class="docutils literal"><span class="pre">64-bit</span></tt>.</dd>
+It can be either <cite>32-bit</cite> or <cite>64-bit</cite>.</dd>
 <dt><strong>version</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying the engine version.
 The form is &quot;major.minor.micro&quot;.</dd>
@@ -1266,7 +1205,7 @@ Note that to unload the resources loaded by the package, you have to call
 ResourcePackage.unload() first.</dd>
 <dt><strong>console_send</strong> (table)</dt>
 <dd>Sends the given lua <em>table</em> to clients connected to the engine.
-Values can be either <tt class="docutils literal">nil</tt>, bool, number, string, table, array, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
+Values can be either <cite>nil</cite>, bool, number, string, table, array, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
 <dt><strong>can_get</strong> (type, name) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the resource (type, name) is loaded.
 When resource autoload is enabled it always returns true.</dd>
@@ -1279,11 +1218,9 @@ When resource autoload is enabled it always returns true.</dd>
 <dt><strong>guid</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a new GUID.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="debuggui">
 <h1><a class="toc-backref" href="#id53">DebugGui</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>rect</strong> (pos, size, material_resource, color)</dt>
 <dd>Draws a rectangle.</dd>
@@ -1294,11 +1231,9 @@ When resource autoload is enabled it always returns true.</dd>
 <dt><strong>text</strong> (pos, font_size, str, font_resource, material_resource, color)</dt>
 <dd>Draws text.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="debugline">
 <h1><a class="toc-backref" href="#id54">DebugLine</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>add_line</strong> (debug_line, start, end, color)</dt>
 <dd>Adds a line from <em>start</em> to <em>end</em> with the given <em>color</em>.</dd>
@@ -1320,13 +1255,11 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <dt><strong>submit</strong> (debug_line)</dt>
 <dd>Submits the lines to renderer for drawing.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="input">
 <h1><a class="toc-backref" href="#id55">Input</a></h1>
 <div class="section" id="keyboard">
 <h2><a class="toc-backref" href="#id56">Keyboard</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of keyboard.</dd>
@@ -1347,32 +1280,27 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <dt><strong>button_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the button <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <cite>nil</cite> if no matching button is found.</dd>
 </dl>
-</blockquote>
 <div class="section" id="keyboard-button-names">
 <h3><a class="toc-backref" href="#id57">Keyboard Button Names</a></h3>
-<blockquote>
 <ul class="simple">
-<li><tt class="docutils literal">tab</tt>, <tt class="docutils literal">enter</tt>, <tt class="docutils literal">escape</tt>, <tt class="docutils literal">space</tt>, <tt class="docutils literal">backspace</tt></li>
-<li><tt class="docutils literal">num_lock</tt>, <tt class="docutils literal">numpad_enter</tt>, <tt class="docutils literal">numpad_.</tt>, <tt class="docutils literal">numpad_*</tt>, <tt class="docutils literal">numpad_+</tt>, <tt class="docutils literal">numpad_-</tt>, <tt class="docutils literal">numpad_/</tt>, <tt class="docutils literal">numpad_0</tt>, <tt class="docutils literal">numpad_1</tt>, <tt class="docutils literal">numpad_2</tt>, <tt class="docutils literal">numpad_3</tt>, <tt class="docutils literal">numpad_4</tt>, <tt class="docutils literal">numpad_5</tt>, <tt class="docutils literal">numpad_6</tt>, <tt class="docutils literal">numpad_7</tt>, <tt class="docutils literal">numpad_8</tt>, <tt class="docutils literal">numpad_9</tt></li>
-<li><tt class="docutils literal">f1</tt>, <tt class="docutils literal">f2</tt>, <tt class="docutils literal">f3</tt>, <tt class="docutils literal">f4</tt>, <tt class="docutils literal">f5</tt>, <tt class="docutils literal">f6</tt>, <tt class="docutils literal">f7</tt>, <tt class="docutils literal">f8</tt>, <tt class="docutils literal">f9</tt>, <tt class="docutils literal">f10</tt>, <tt class="docutils literal">f11</tt>, <tt class="docutils literal">f12</tt></li>
-<li><tt class="docutils literal">home</tt>, <tt class="docutils literal">left</tt>, <tt class="docutils literal">up</tt>, <tt class="docutils literal">right</tt>, <tt class="docutils literal">down</tt>, <tt class="docutils literal">page_up</tt>, <tt class="docutils literal">page_down</tt>, <tt class="docutils literal">ins</tt>, <tt class="docutils literal">del</tt>, <tt class="docutils literal">end</tt></li>
-<li><tt class="docutils literal">ctrl_left</tt>, <tt class="docutils literal">ctrl_right</tt>, <tt class="docutils literal">shift_left</tt>, <tt class="docutils literal">shift_right</tt>, <tt class="docutils literal">caps_lock</tt>, <tt class="docutils literal">alt_left</tt>, <tt class="docutils literal">alt_right</tt>, <tt class="docutils literal">super_left</tt>, <tt class="docutils literal">super_right</tt></li>
-<li><tt class="docutils literal">0</tt>, <tt class="docutils literal">1</tt>, <tt class="docutils literal">2</tt>, <tt class="docutils literal">3</tt>, <tt class="docutils literal">4</tt>, <tt class="docutils literal">5</tt>, <tt class="docutils literal">6</tt>, <tt class="docutils literal">7</tt>, <tt class="docutils literal">8</tt>, <tt class="docutils literal">9</tt></li>
-<li><tt class="docutils literal">a</tt>, <tt class="docutils literal">b</tt>, <tt class="docutils literal">c</tt>, <tt class="docutils literal">d</tt>, <tt class="docutils literal">e</tt>, <tt class="docutils literal">f</tt>, <tt class="docutils literal">g</tt>, <tt class="docutils literal">h</tt>, <tt class="docutils literal">i</tt>, <tt class="docutils literal">j</tt>, <tt class="docutils literal">k</tt>, <tt class="docutils literal">l</tt>, <tt class="docutils literal">m</tt>, <tt class="docutils literal">n</tt>, <tt class="docutils literal">o</tt>, <tt class="docutils literal">p</tt>, <tt class="docutils literal">q</tt>, <tt class="docutils literal">r</tt>, <tt class="docutils literal">s</tt>, <tt class="docutils literal">t</tt>, <tt class="docutils literal">u</tt>, <tt class="docutils literal">v</tt>, <tt class="docutils literal">w</tt>, <tt class="docutils literal">x</tt>, <tt class="docutils literal">y</tt>, <tt class="docutils literal">z</tt></li>
+<li><cite>tab</cite>, <cite>enter</cite>, <cite>escape</cite>, <cite>space</cite>, <cite>backspace</cite></li>
+<li><cite>num_lock</cite>, <cite>numpad_enter</cite>, <cite>numpad_.</cite>, <cite>numpad_*</cite>, <cite>numpad_+</cite>, <cite>numpad_-</cite>, <cite>numpad_/</cite>, <cite>numpad_0</cite>, <cite>numpad_1</cite>, <cite>numpad_2</cite>, <cite>numpad_3</cite>, <cite>numpad_4</cite>, <cite>numpad_5</cite>, <cite>numpad_6</cite>, <cite>numpad_7</cite>, <cite>numpad_8</cite>, <cite>numpad_9</cite></li>
+<li><cite>f1</cite>, <cite>f2</cite>, <cite>f3</cite>, <cite>f4</cite>, <cite>f5</cite>, <cite>f6</cite>, <cite>f7</cite>, <cite>f8</cite>, <cite>f9</cite>, <cite>f10</cite>, <cite>f11</cite>, <cite>f12</cite></li>
+<li><cite>home</cite>, <cite>left</cite>, <cite>up</cite>, <cite>right</cite>, <cite>down</cite>, <cite>page_up</cite>, <cite>page_down</cite>, <cite>ins</cite>, <cite>del</cite>, <cite>end</cite></li>
+<li><cite>ctrl_left</cite>, <cite>ctrl_right</cite>, <cite>shift_left</cite>, <cite>shift_right</cite>, <cite>caps_lock</cite>, <cite>alt_left</cite>, <cite>alt_right</cite>, <cite>super_left</cite>, <cite>super_right</cite></li>
+<li><cite>0</cite>, <cite>1</cite>, <cite>2</cite>, <cite>3</cite>, <cite>4</cite>, <cite>5</cite>, <cite>6</cite>, <cite>7</cite>, <cite>8</cite>, <cite>9</cite></li>
+<li><cite>a</cite>, <cite>b</cite>, <cite>c</cite>, <cite>d</cite>, <cite>e</cite>, <cite>f</cite>, <cite>g</cite>, <cite>h</cite>, <cite>i</cite>, <cite>j</cite>, <cite>k</cite>, <cite>l</cite>, <cite>m</cite>, <cite>n</cite>, <cite>o</cite>, <cite>p</cite>, <cite>q</cite>, <cite>r</cite>, <cite>s</cite>, <cite>t</cite>, <cite>u</cite>, <cite>v</cite>, <cite>w</cite>, <cite>x</cite>, <cite>y</cite>, <cite>z</cite></li>
 </ul>
-</blockquote>
 </div>
 <div class="section" id="keyboard-axis-names">
 <h3><a class="toc-backref" href="#id58">Keyboard Axis Names</a></h3>
-<blockquote>
-None.</blockquote>
+<p>None.</p>
 </div>
 </div>
 <div class="section" id="mouse">
 <h2><a class="toc-backref" href="#id59">Mouse</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the mouse.</dd>
@@ -1397,30 +1325,25 @@ None.</blockquote>
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <cite>nil</cite> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em> or <tt class="docutils literal">nil</tt> if no matching axis is found.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <cite>nil</cite> if no matching axis is found.</dd>
 </dl>
-</blockquote>
 <div class="section" id="mouse-button-names">
 <h3><a class="toc-backref" href="#id60">Mouse Button Names</a></h3>
-<blockquote>
-<tt class="docutils literal">left</tt>, <tt class="docutils literal">middle</tt>, <tt class="docutils literal">right</tt>, <tt class="docutils literal">extra_1</tt>, <tt class="docutils literal">extra_2</tt></blockquote>
+<p><cite>left</cite>, <cite>middle</cite>, <cite>right</cite>, <cite>extra_1</cite>, <cite>extra_2</cite></p>
 </div>
 <div class="section" id="mouse-axis-names">
 <h3><a class="toc-backref" href="#id61">Mouse Axis Names</a></h3>
-<blockquote>
 <ul class="simple">
-<li><tt class="docutils literal">cursor</tt>: Returns the cursor position (x, y) in screen coordinates.</li>
-<li><tt class="docutils literal">cursor_delta</tt>: Returns the delta of the cursor position (x, y) since last frame.</li>
-<li><tt class="docutils literal">wheel</tt>: Returns the movement of the mouse wheel in the y axis. Positive values of y mean upward scrolling, negative values mean downward scrolling.</li>
+<li><cite>cursor</cite>: Returns the cursor position (x, y) in screen coordinates.</li>
+<li><cite>cursor_delta</cite>: Returns the delta of the cursor position (x, y) since last frame.</li>
+<li><cite>wheel</cite>: Returns the movement of the mouse wheel in the y axis. Positive values of y mean upward scrolling, negative values mean downward scrolling.</li>
 </ul>
-</blockquote>
 </div>
 </div>
 <div class="section" id="touch">
 <h2><a class="toc-backref" href="#id62">Touch</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the touch.</dd>
@@ -1445,15 +1368,13 @@ None.</blockquote>
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <cite>nil</cite> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em> or <tt class="docutils literal">nil</tt> if no matching axis is found.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <cite>nil</cite> if no matching axis is found.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="pad1-pad2-pad3-pad4">
 <h2><a class="toc-backref" href="#id63">Pad1, Pad2, Pad3, Pad4</a></h2>
-<blockquote>
 <dl class="docutils">
 <dt><strong>name</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the pad.</dd>
@@ -1478,36 +1399,30 @@ None.</blockquote>
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <tt class="docutils literal">nil</tt> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <cite>nil</cite> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em> or <tt class="docutils literal">nil</tt> if no matching axis is found.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <cite>nil</cite> if no matching axis is found.</dd>
 </dl>
-</blockquote>
 <div class="section" id="pad-button-names">
 <h3><a class="toc-backref" href="#id64">Pad Button Names</a></h3>
-<blockquote>
 <ul class="simple">
-<li><tt class="docutils literal">up</tt>, <tt class="docutils literal">down</tt>, <tt class="docutils literal">left</tt>, <tt class="docutils literal">right</tt></li>
-<li><tt class="docutils literal">start</tt>, <tt class="docutils literal">back</tt>, <tt class="docutils literal">guide</tt></li>
-<li><tt class="docutils literal">thumb_left</tt>, <tt class="docutils literal">thumb_right</tt></li>
-<li><tt class="docutils literal">shoulder_left</tt>, <tt class="docutils literal">shoulder_right</tt></li>
-<li><tt class="docutils literal">a</tt>, <tt class="docutils literal">b</tt>, <tt class="docutils literal">x</tt>, <tt class="docutils literal">y</tt></li>
+<li><cite>up</cite>, <cite>down</cite>, <cite>left</cite>, <cite>right</cite></li>
+<li><cite>start</cite>, <cite>back</cite>, <cite>guide</cite></li>
+<li><cite>thumb_left</cite>, <cite>thumb_right</cite></li>
+<li><cite>shoulder_left</cite>, <cite>shoulder_right</cite></li>
+<li><cite>a</cite>, <cite>b</cite>, <cite>x</cite>, <cite>y</cite></li>
 </ul>
-</blockquote>
 </div>
 <div class="section" id="pad-axis-names">
 <h3><a class="toc-backref" href="#id65">Pad Axis Names</a></h3>
-<blockquote>
 <ul class="simple">
-<li><tt class="docutils literal">left</tt>, <tt class="docutils literal">right</tt>: Returns the direction (x, y) of the left or right thumbstick [-1; +1]. The z element represents the left or right trigger [0; +1].</li>
+<li><cite>left</cite>, <cite>right</cite>: Returns the direction (x, y) of the left or right thumbstick [-1; +1]. The z element represents the left or right trigger [0; +1].</li>
 </ul>
-</blockquote>
 </div>
 </div>
 </div>
 <div class="section" id="profiler">
 <h1><a class="toc-backref" href="#id66">Profiler</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>enter_scope</strong> (name)</dt>
 <dd>Starts a new profile scope with the given <em>name</em>.</dd>
@@ -1516,11 +1431,9 @@ None.</blockquote>
 <dt><strong>record</strong> (name, value)</dt>
 <dd>Records <em>value</em> with the given <em>name</em>. Value can be either number or Vector3.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="display">
 <h1><a class="toc-backref" href="#id67">Display</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>modes</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
 <dd>Returns an array of display modes. See <a class="reference internal" href="#display-mode">Display Mode</a>.</dd>
@@ -1528,22 +1441,18 @@ None.</blockquote>
 <dd>Sets the display mode <em>id</em>.
 The initial display mode is automatically reset when the program terminates.</dd>
 </dl>
-</blockquote>
 <div class="section" id="display-mode">
 <h2><a class="toc-backref" href="#id68">Display Mode</a></h2>
-<blockquote>
 <p>Display mode is a lua table with 3 fields:</p>
 <ul class="simple">
-<li><tt class="docutils literal">id</tt>: The id of the display mode.</li>
-<li><tt class="docutils literal">width</tt>: The width of the display mode.</li>
-<li><tt class="docutils literal">height</tt>: The height of the display mode.</li>
+<li><cite>id</cite>: The id of the display mode.</li>
+<li><cite>width</cite>: The width of the display mode.</li>
+<li><cite>height</cite>: The height of the display mode.</li>
 </ul>
-</blockquote>
 </div>
 </div>
 <div class="section" id="window">
 <h1><a class="toc-backref" href="#id69">Window</a></h1>
-<blockquote>
 <dl class="docutils">
 <dt><strong>show</strong> ()</dt>
 <dd>Shows the window.</dd>
@@ -1564,7 +1473,6 @@ The initial display mode is automatically reset when the program terminates.</dd
 <dt><strong>show_cursor</strong> (show)</dt>
 <dd>Sets whether to <em>show</em> the cursor.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 </body>

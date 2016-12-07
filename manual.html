@@ -343,8 +343,6 @@ ul.auto-toc {
  * License: https://github.com/taylor001/crown/blob/master/LICENSE
  */
 
-@import url(html4css1.css);
-
 body {
 	font-family: sans-serif;
 	font-size: 14px;
@@ -356,22 +354,32 @@ body {
 	background-color: #f6f6f6;
 }
 
-h1,h2,h3 {
-	line-height:1.2
-}
-
 div.topic {
 	border: 1px solid #aaa;
 	background-color: #f9f9f9;
 }
 
-tt.literal {
-	background-color: #fafafa;
+cite {
+	font-family: monospace;
+	font-style: normal;
+	background-color: #fbfbfb;
 	border-radius: 2px;
 	border-width: 1px;
 	border-style: solid;
-	border-color: #e7e7e7;
+	border-color: #dedede;
 	padding: 1px 7px 1px 7px;
+}
+
+blockquote {
+	margin-left: 0;
+	margin-top: 0;
+	margin-bottom: 16px;
+	padding: 0 1em;
+	border-left: 0.25em solid #ddd;
+}
+
+h1, h2, h3 {
+	line-height:1.2
 }
 
 a {
@@ -389,14 +397,6 @@ a:visited {
 
 a.toc-backref {
 	color: #4078c0;
-}
-
-blockquote {
-	margin-left: 0;
-	margin-top: 0;
-	margin-bottom: 16px;
-	padding: 0 1em;
-	border-left: 0.25em solid #ddd;
 }
 
 </style>
@@ -474,10 +474,10 @@ blockquote {
 </div>
 <div class="section" id="the-boot-directory-and-the-boot-config-file">
 <h2><a class="toc-backref" href="#id6">2.2&nbsp;&nbsp;&nbsp;The boot directory and the boot.config file</a></h2>
-<p>Any directory within <a class="reference internal" href="#the-source-directory">the source directory</a> containing the file named <tt class="docutils literal">boot.config</tt> is a boot directory.</p>
-<p>The <tt class="docutils literal">boot.config</tt> is the first file loaded by Pepper; it specifies the package to load and the lua script to execute on boot and various other boot-time settings. See <a class="reference internal" href="#boot-config-file-reference">boot.config file reference</a> for more details.</p>
-<p>There can be an arbitrary number of boot directories. You can set which boot directory Pepper should use with the switch <tt class="docutils literal"><span class="pre">--boot-dir</span></tt>.</p>
-<p>In the example below, the engine is told to load the package <tt class="docutils literal">boot</tt> and run the Lua script <tt class="docutils literal">lua/game</tt>.</p>
+<p>Any directory within <a class="reference internal" href="#the-source-directory">the source directory</a> containing the file named <cite>boot.config</cite> is a boot directory.</p>
+<p>The <cite>boot.config</cite> is the first file loaded by Pepper; it specifies the package to load and the lua script to execute on boot and various other boot-time settings. See <a class="reference internal" href="#boot-config-file-reference">boot.config file reference</a> for more details.</p>
+<p>There can be an arbitrary number of boot directories. You can set which boot directory Pepper should use with the switch <cite>--boot-dir</cite>.</p>
+<p>In the example below, the engine is told to load the package <cite>boot</cite> and run the Lua script <cite>lua/game</cite>.</p>
 <pre class="code literal-block">
 boot_package = &quot;boot&quot;      // Package to load on boot
 boot_script  = &quot;lua/game&quot;  // Lua script to execute on boot
@@ -501,7 +501,7 @@ The result of the compilation process is stored in the data directory.</p>
 <h2><a class="toc-backref" href="#id8">2.4&nbsp;&nbsp;&nbsp;The .bundleignore file</a></h2>
 <p>Many programs store metadata files alongside edited files. This is often the case with text editors and version control systems.</p>
 <p>When Pepper bumps into unknown files in the source directory, it quits the compilation and reports an error.</p>
-<p>The <tt class="docutils literal">.bundleignore</tt> file specifies files that Pepper should ignore when compiling data.</p>
+<p>The <cite>.bundleignore</cite> file specifies files that Pepper should ignore when compiling data.</p>
 <p>Example:</p>
 <pre class="code literal-block">
 # This is a comment.
@@ -520,16 +520,14 @@ The result of the compilation process is stored in the data directory.</p>
 <h1><a class="toc-backref" href="#id10">3&nbsp;&nbsp;&nbsp;boot.config file reference</a></h1>
 <div class="section" id="generic-configurations">
 <h2><a class="toc-backref" href="#id11">3.1&nbsp;&nbsp;&nbsp;Generic configurations</a></h2>
-<blockquote>
 <dl class="docutils">
-<dt><tt class="docutils literal">boot_script = &quot;lua/game&quot;</tt></dt>
+<dt><cite>boot_script = &quot;lua/game&quot;</cite></dt>
 <dd>Lua script to launch on boot.</dd>
-<dt><tt class="docutils literal">boot_package = &quot;boot&quot;</tt></dt>
+<dt><cite>boot_package = &quot;boot&quot;</cite></dt>
 <dd>Package to load on boot.</dd>
-<dt><tt class="docutils literal">window_title = &quot;My window&quot;</tt></dt>
+<dt><cite>window_title = &quot;My window&quot;</cite></dt>
 <dd>Title of the main window on platforms that support it.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="platform-specific-configurations">
 <h2><a class="toc-backref" href="#id12">3.2&nbsp;&nbsp;&nbsp;Platform-specific configurations</a></h2>
@@ -537,84 +535,80 @@ The result of the compilation process is stored in the data directory.</p>
 <pre class="code literal-block">
 // Linux-only configs
 linux = {
-    renderer = {
-        resolution = [ 1280 720 ]
-        aspect_ratio = -1
-        vsync = true
-    }
+  renderer = {
+      resolution = [ 1280 720 ]
+      aspect_ratio = -1
+      vsync = true
+  }
 }
 </pre>
 <div class="section" id="renderer-configurations">
 <h3><a class="toc-backref" href="#id13">3.2.1&nbsp;&nbsp;&nbsp;Renderer configurations</a></h3>
-<blockquote>
 <dl class="docutils">
-<dt><tt class="docutils literal">resolution = [ 1280 720 ]</tt></dt>
+<dt><cite>resolution = [ 1280 720 ]</cite></dt>
 <dd>Sets the width and height of the main window.</dd>
-<dt><tt class="docutils literal">aspect_ratio = <span class="pre">-1</span></tt></dt>
+<dt><cite>aspect_ratio = -1</cite></dt>
 <dd>Sets the aspect ratio.
-If the value is set to <tt class="docutils literal"><span class="pre">-1</span></tt>, the aspect ratio is computed as <tt class="docutils literal">width/height</tt> of the main window.</dd>
-<dt><tt class="docutils literal">vsync = true</tt></dt>
+If the value is set to <cite>-1</cite>, the aspect ratio is computed as <cite>width/height</cite> of the main window.</dd>
+<dt><cite>vsync = true</cite></dt>
 <dd>Sets whether to enable the vsync.</dd>
-<dt><tt class="docutils literal">fullscreen = false</tt></dt>
+<dt><cite>fullscreen = false</cite></dt>
 <dd>Sets whether to enable fullscreen.</dd>
 </dl>
-</blockquote>
 </div>
 </div>
 </div>
 <div class="section" id="command-line-reference">
 <h1><a class="toc-backref" href="#id14">4&nbsp;&nbsp;&nbsp;Command line reference</a></h1>
-<blockquote>
 <dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">-h</span> <span class="pre">--help</span></tt></dt>
+<dt><cite>-h</cite> <cite>--help</cite></dt>
 <dd>Display the help and quit.</dd>
-<dt><tt class="docutils literal"><span class="pre">-v</span> <span class="pre">--version</span></tt></dt>
+<dt><cite>-v</cite> <cite>--version</cite></dt>
 <dd>Display engine version and quit.</dd>
-<dt><tt class="docutils literal"><span class="pre">--source-dir</span> &lt;path&gt;</tt></dt>
+<dt><cite>--source-dir &lt;path&gt;</cite></dt>
 <dd><p class="first">Use &lt;path&gt; as the source directory for resource compilation.</p>
 <p class="last">The &lt;path&gt; must be absolute.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--data-dir</span> &lt;path&gt;</tt></dt>
+<dt><cite>--data-dir &lt;path&gt;</cite></dt>
 <dd><p class="first">Use &lt;path&gt; as the destination directory for compiled resources.</p>
 <p class="last">The &lt;path&gt; must be absolute.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--boot-dir</span> &lt;path&gt;</tt></dt>
-<dd><p class="first">Boot the engine with the <tt class="docutils literal">boot.config</tt> from given &lt;path&gt;.</p>
+<dt><cite>--boot-dir &lt;path&gt;</cite></dt>
+<dd><p class="first">Boot the engine with the <cite>boot.config</cite> from given &lt;path&gt;.</p>
 <p class="last">The &lt;path&gt; must be relative.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--compile</span></tt></dt>
+<dt><cite>--compile</cite></dt>
 <dd><p class="first">Do a full compile of the resources.</p>
-<p class="last">When using this option you must also specify <tt class="docutils literal"><span class="pre">--platform</span></tt>, <tt class="docutils literal"><span class="pre">--source-dir</span></tt> and <tt class="docutils literal"><span class="pre">--data-dir</span></tt>.</p>
+<p class="last">When using this option you must also specify <cite>--platform</cite>, <cite>--source-dir</cite> and <cite>--data-dir</cite>.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--platform</span> &lt;platform&gt;</tt></dt>
+<dt><cite>--platform &lt;platform&gt;</cite></dt>
 <dd><p class="first">Compile resources for the given &lt;platform&gt;.
 Possible values for &lt;platform&gt; are:</p>
 <ul class="last simple">
-<li><tt class="docutils literal">android</tt></li>
-<li><tt class="docutils literal">linux</tt></li>
-<li><tt class="docutils literal">windows</tt></li>
+<li><cite>android</cite></li>
+<li><cite>linux</cite></li>
+<li><cite>windows</cite></li>
 </ul>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--continue</span></tt></dt>
+<dt><cite>--continue</cite></dt>
 <dd>Run the engine after resource compilation.</dd>
-<dt><tt class="docutils literal"><span class="pre">--console-port</span> &lt;port&gt;</tt></dt>
+<dt><cite>--console-port &lt;port&gt;</cite></dt>
 <dd><p class="first">Set port of the console.</p>
 <p class="last">When no port is specified, the engine uses the port 10001.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--wait-console</span></tt></dt>
+<dt><cite>--wait-console</cite></dt>
 <dd>Wait for a console connection before starting up.</dd>
-<dt><tt class="docutils literal"><span class="pre">--parent-window</span> &lt;handle&gt;</tt></dt>
+<dt><cite>--parent-window &lt;handle&gt;</cite></dt>
 <dd><p class="first">Set the parent window &lt;handle&gt; of the main window.</p>
 <p class="last">This option should be used only by the tools.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--server</span></tt></dt>
+<dt><cite>--server</cite></dt>
 <dd><p class="first">Run the engine in server mode.</p>
-<p class="last">When using this option you must also specify <tt class="docutils literal"><span class="pre">--source-dir</span></tt>.</p>
+<p class="last">When using this option you must also specify <cite>--source-dir</cite>.</p>
 </dd>
-<dt><tt class="docutils literal"><span class="pre">--run-unit-tests</span></tt></dt>
-<dd>Run unit tests and quit. Available only on <tt class="docutils literal">linux</tt> and <tt class="docutils literal">windows</tt>.</dd>
+<dt><cite>--run-unit-tests</cite></dt>
+<dd>Run unit tests and quit. Available only on <cite>linux</cite> and <cite>windows</cite>.</dd>
 </dl>
-</blockquote>
 </div>
 <div class="section" id="api-reference">
 <h1><a class="toc-backref" href="#id15">5&nbsp;&nbsp;&nbsp;API reference</a></h1>
