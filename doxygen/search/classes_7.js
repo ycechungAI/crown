@@ -8,6 +8,8 @@ var searchData=
   ['hash_3c_20s32_20_3e',['hash&lt; s32 &gt;',['../structcrown_1_1hash_3_01s32_01_4.html',1,'crown']]],
   ['hash_3c_20s64_20_3e',['hash&lt; s64 &gt;',['../structcrown_1_1hash_3_01s64_01_4.html',1,'crown']]],
   ['hash_3c_20s8_20_3e',['hash&lt; s8 &gt;',['../structcrown_1_1hash_3_01s8_01_4.html',1,'crown']]],
+  ['hash_3c_20stringid32_20_3e',['hash&lt; StringId32 &gt;',['../structcrown_1_1hash_3_01_string_id32_01_4.html',1,'crown']]],
+  ['hash_3c_20stringid64_20_3e',['hash&lt; StringId64 &gt;',['../structcrown_1_1hash_3_01_string_id64_01_4.html',1,'crown']]],
   ['hash_3c_20u16_20_3e',['hash&lt; u16 &gt;',['../structcrown_1_1hash_3_01u16_01_4.html',1,'crown']]],
   ['hash_3c_20u32_20_3e',['hash&lt; u32 &gt;',['../structcrown_1_1hash_3_01u32_01_4.html',1,'crown']]],
   ['hash_3c_20u64_20_3e',['hash&lt; u64 &gt;',['../structcrown_1_1hash_3_01u64_01_4.html',1,'crown']]],

@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
-<title>Pepper: crown::World Class Reference</title>
+<title>Pepper: crown::World Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,205 +46,194 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_world.html">World</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_world.html">World</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_world-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structcrown_1_1_world-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::World Class Reference<div class="ingroups"><a class="el" href="group___world.html">World</a></div></div>  </div>
+<div class="title">crown::World Struct Reference<div class="ingroups"><a class="el" href="group___world.html">World</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Represents a game world.  
- <a href="classcrown_1_1_world.html#details">More...</a></p>
+ <a href="structcrown_1_1_world.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="world_8h_source.html">world.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world_1_1_camera.html">Camera</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4be3b46dfa33c9b19afaa36dd2d89415"><td class="memItemLeft" align="right" valign="top"><a id="a4be3b46dfa33c9b19afaa36dd2d89415"></a>
+<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>make_camera_instance</b> (u32 i)</td></tr>
+<tr class="separator:a4be3b46dfa33c9b19afaa36dd2d89415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6214e129fb1d74b269451b1ce195afe3"><td class="memItemLeft" align="right" valign="top"><a id="a6214e129fb1d74b269451b1ce195afe3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>World</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> &amp;rm, <a class="el" href="classcrown_1_1_shader_manager.html">ShaderManager</a> &amp;sm, <a class="el" href="classcrown_1_1_material_manager.html">MaterialManager</a> &amp;mm, <a class="el" href="classcrown_1_1_unit_manager.html">UnitManager</a> &amp;um, <a class="el" href="structcrown_1_1_lua_environment.html">LuaEnvironment</a> &amp;env)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>World</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> &amp;rm, <a class="el" href="structcrown_1_1_shader_manager.html">ShaderManager</a> &amp;sm, <a class="el" href="structcrown_1_1_material_manager.html">MaterialManager</a> &amp;mm, <a class="el" href="structcrown_1_1_unit_manager.html">UnitManager</a> &amp;um, <a class="el" href="structcrown_1_1_lua_environment.html">LuaEnvironment</a> &amp;env)</td></tr>
 <tr class="separator:a6214e129fb1d74b269451b1ce195afe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43fa063295d6559a07bc838078195861"><td class="memItemLeft" align="right" valign="top"><a id="a43fa063295d6559a07bc838078195861"></a>
-<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a43fa063295d6559a07bc838078195861">spawn_unit</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos=VECTOR3_ZERO, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot=QUATERNION_IDENTITY)</td></tr>
+<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a43fa063295d6559a07bc838078195861">spawn_unit</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos=VECTOR3_ZERO, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot=QUATERNION_IDENTITY)</td></tr>
 <tr class="memdesc:a43fa063295d6559a07bc838078195861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new instance of the unit <em>name</em> at the given <em>position</em> and <em>rotation</em>. <br /></td></tr>
 <tr class="separator:a43fa063295d6559a07bc838078195861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20a69bb631bca10443962de49d992f02"><td class="memItemLeft" align="right" valign="top"><a id="a20a69bb631bca10443962de49d992f02"></a>
-<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a20a69bb631bca10443962de49d992f02">spawn_empty_unit</a> ()</td></tr>
+<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a20a69bb631bca10443962de49d992f02">spawn_empty_unit</a> ()</td></tr>
 <tr class="memdesc:a20a69bb631bca10443962de49d992f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new empty unit and returns its id. <br /></td></tr>
 <tr class="separator:a20a69bb631bca10443962de49d992f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7901f69df610c922b7ad8cb703064b95"><td class="memItemLeft" align="right" valign="top"><a id="a7901f69df610c922b7ad8cb703064b95"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a7901f69df610c922b7ad8cb703064b95">destroy_unit</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a7901f69df610c922b7ad8cb703064b95">destroy_unit</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="memdesc:a7901f69df610c922b7ad8cb703064b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the unit with the given <em>id</em>. <br /></td></tr>
 <tr class="separator:a7901f69df610c922b7ad8cb703064b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f3dd841fc9019e2dfe102c97c127885"><td class="memItemLeft" align="right" valign="top"><a id="a2f3dd841fc9019e2dfe102c97c127885"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a2f3dd841fc9019e2dfe102c97c127885">num_units</a> () const</td></tr>
+u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a2f3dd841fc9019e2dfe102c97c127885">num_units</a> () const</td></tr>
 <tr class="memdesc:a2f3dd841fc9019e2dfe102c97c127885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of units in the world. <br /></td></tr>
 <tr class="separator:a2f3dd841fc9019e2dfe102c97c127885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdd055fcbf6d7186c09434a5dea26173"><td class="memItemLeft" align="right" valign="top"><a id="acdd055fcbf6d7186c09434a5dea26173"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#acdd055fcbf6d7186c09434a5dea26173">units</a> (<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> &gt; &amp;units) const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#acdd055fcbf6d7186c09434a5dea26173">units</a> (<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> &gt; &amp;units) const</td></tr>
 <tr class="memdesc:acdd055fcbf6d7186c09434a5dea26173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all the the units in the world. <br /></td></tr>
 <tr class="separator:acdd055fcbf6d7186c09434a5dea26173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276705cf28c640236abcaf5e2dc11832"><td class="memItemLeft" align="right" valign="top"><a id="a276705cf28c640236abcaf5e2dc11832"></a>
-<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a276705cf28c640236abcaf5e2dc11832">camera_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_camera_desc.html">CameraDesc</a> &amp;cd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
+<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a276705cf28c640236abcaf5e2dc11832">camera_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_camera_desc.html">CameraDesc</a> &amp;cd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
 <tr class="memdesc:a276705cf28c640236abcaf5e2dc11832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new camera. <br /></td></tr>
 <tr class="separator:a276705cf28c640236abcaf5e2dc11832"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3222886e62d56dd40ca0c3d33e28dd0"><td class="memItemLeft" align="right" valign="top"><a id="ae3222886e62d56dd40ca0c3d33e28dd0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ae3222886e62d56dd40ca0c3d33e28dd0">camera_destroy</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ae3222886e62d56dd40ca0c3d33e28dd0">camera_destroy</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i)</td></tr>
 <tr class="memdesc:ae3222886e62d56dd40ca0c3d33e28dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the camera <em>id</em>. <br /></td></tr>
 <tr class="separator:ae3222886e62d56dd40ca0c3d33e28dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6eaeb9be52eac626b02c26b33406de8"><td class="memItemLeft" align="right" valign="top"><a id="ab6eaeb9be52eac626b02c26b33406de8"></a>
-<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ab6eaeb9be52eac626b02c26b33406de8">camera_instances</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
+<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ab6eaeb9be52eac626b02c26b33406de8">camera_instances</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="memdesc:ab6eaeb9be52eac626b02c26b33406de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the camera owned by unit <em>id</em>. <br /></td></tr>
 <tr class="separator:ab6eaeb9be52eac626b02c26b33406de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66fad832af0db15a22e7d24d8866438"><td class="memItemLeft" align="right" valign="top"><a id="ae66fad832af0db15a22e7d24d8866438"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ae66fad832af0db15a22e7d24d8866438">camera_set_projection_type</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, ProjectionType::Enum type)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ae66fad832af0db15a22e7d24d8866438">camera_set_projection_type</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, ProjectionType::Enum type)</td></tr>
 <tr class="memdesc:ae66fad832af0db15a22e7d24d8866438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the projection type of the camera. <br /></td></tr>
 <tr class="separator:ae66fad832af0db15a22e7d24d8866438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac39b95f15e04201cf92a4e4a508507ef"><td class="memItemLeft" align="right" valign="top"><a id="ac39b95f15e04201cf92a4e4a508507ef"></a>
-ProjectionType::Enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ac39b95f15e04201cf92a4e4a508507ef">camera_projection_type</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
+ProjectionType::Enum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ac39b95f15e04201cf92a4e4a508507ef">camera_projection_type</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
 <tr class="memdesc:ac39b95f15e04201cf92a4e4a508507ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the projection type of the camera. <br /></td></tr>
 <tr class="separator:ac39b95f15e04201cf92a4e4a508507ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36a6e47659663c53866104ffde2f2b4d"><td class="memItemLeft" align="right" valign="top"><a id="a36a6e47659663c53866104ffde2f2b4d"></a>
-const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a36a6e47659663c53866104ffde2f2b4d">camera_projection_matrix</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
+const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a36a6e47659663c53866104ffde2f2b4d">camera_projection_matrix</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
 <tr class="memdesc:a36a6e47659663c53866104ffde2f2b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the projection matrix of the camera. <br /></td></tr>
 <tr class="separator:a36a6e47659663c53866104ffde2f2b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7155ae1738e4a36286cb502abc4d4099"><td class="memItemLeft" align="right" valign="top"><a id="a7155ae1738e4a36286cb502abc4d4099"></a>
-<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a7155ae1738e4a36286cb502abc4d4099">camera_view_matrix</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
+<a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a7155ae1738e4a36286cb502abc4d4099">camera_view_matrix</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
 <tr class="memdesc:a7155ae1738e4a36286cb502abc4d4099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the view matrix of the camera. <br /></td></tr>
 <tr class="separator:a7155ae1738e4a36286cb502abc4d4099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f5e069f7dec5aab8fc2c0c0ad142482"><td class="memItemLeft" align="right" valign="top"><a id="a6f5e069f7dec5aab8fc2c0c0ad142482"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a6f5e069f7dec5aab8fc2c0c0ad142482">camera_fov</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
+f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a6f5e069f7dec5aab8fc2c0c0ad142482">camera_fov</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
 <tr class="memdesc:a6f5e069f7dec5aab8fc2c0c0ad142482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the field-of-view of the camera in degrees. <br /></td></tr>
 <tr class="separator:a6f5e069f7dec5aab8fc2c0c0ad142482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c369a10f8c625de5a6982ac08ba7e74"><td class="memItemLeft" align="right" valign="top"><a id="a5c369a10f8c625de5a6982ac08ba7e74"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a5c369a10f8c625de5a6982ac08ba7e74">camera_set_fov</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 fov)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a5c369a10f8c625de5a6982ac08ba7e74">camera_set_fov</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 fov)</td></tr>
 <tr class="memdesc:a5c369a10f8c625de5a6982ac08ba7e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the field-of-view of the camera in degrees. <br /></td></tr>
 <tr class="separator:a5c369a10f8c625de5a6982ac08ba7e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56d69bec15fff652f14609780a4057a9"><td class="memItemLeft" align="right" valign="top"><a id="a56d69bec15fff652f14609780a4057a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a56d69bec15fff652f14609780a4057a9">camera_set_aspect</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 aspect)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a56d69bec15fff652f14609780a4057a9">camera_set_aspect</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 aspect)</td></tr>
 <tr class="memdesc:a56d69bec15fff652f14609780a4057a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the aspect ratio of the camera. (Perspective projection only.) <br /></td></tr>
 <tr class="separator:a56d69bec15fff652f14609780a4057a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a519619f3dfa5218066b465eec49ba8a7"><td class="memItemLeft" align="right" valign="top"><a id="a519619f3dfa5218066b465eec49ba8a7"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a519619f3dfa5218066b465eec49ba8a7">camera_near_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
+f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a519619f3dfa5218066b465eec49ba8a7">camera_near_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
 <tr class="memdesc:a519619f3dfa5218066b465eec49ba8a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the near clip distance of the camera. <br /></td></tr>
 <tr class="separator:a519619f3dfa5218066b465eec49ba8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae47c37d9dfb18148244dcfc3fecd6fd1"><td class="memItemLeft" align="right" valign="top"><a id="ae47c37d9dfb18148244dcfc3fecd6fd1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ae47c37d9dfb18148244dcfc3fecd6fd1">camera_set_near_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 near)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ae47c37d9dfb18148244dcfc3fecd6fd1">camera_set_near_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 near)</td></tr>
 <tr class="memdesc:ae47c37d9dfb18148244dcfc3fecd6fd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the near clip distance of the camera. <br /></td></tr>
 <tr class="separator:ae47c37d9dfb18148244dcfc3fecd6fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3968667eb60f843c1406ccdd0be3e74"><td class="memItemLeft" align="right" valign="top"><a id="ad3968667eb60f843c1406ccdd0be3e74"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ad3968667eb60f843c1406ccdd0be3e74">camera_far_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
+f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ad3968667eb60f843c1406ccdd0be3e74">camera_far_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i) const</td></tr>
 <tr class="memdesc:ad3968667eb60f843c1406ccdd0be3e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the far clip distance of the camera. <br /></td></tr>
 <tr class="separator:ad3968667eb60f843c1406ccdd0be3e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbee47bf5e8b572842fd8952c08cd2ef"><td class="memItemLeft" align="right" valign="top"><a id="abbee47bf5e8b572842fd8952c08cd2ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#abbee47bf5e8b572842fd8952c08cd2ef">camera_set_far_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 far)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#abbee47bf5e8b572842fd8952c08cd2ef">camera_set_far_clip_distance</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 far)</td></tr>
 <tr class="memdesc:abbee47bf5e8b572842fd8952c08cd2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the far clip distance of the camera. <br /></td></tr>
 <tr class="separator:abbee47bf5e8b572842fd8952c08cd2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a516f62c5150aab4e18f7388d65551633"><td class="memItemLeft" align="right" valign="top"><a id="a516f62c5150aab4e18f7388d65551633"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a516f62c5150aab4e18f7388d65551633">camera_set_orthographic_metrics</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 left, f32 right, f32 bottom, f32 top)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a516f62c5150aab4e18f7388d65551633">camera_set_orthographic_metrics</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, f32 left, f32 right, f32 bottom, f32 top)</td></tr>
 <tr class="memdesc:a516f62c5150aab4e18f7388d65551633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the coordinates for orthographic clipping planes. (Orthographic projection only.) <br /></td></tr>
 <tr class="separator:a516f62c5150aab4e18f7388d65551633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a022746b48ae5321918f9c9b561fad28c"><td class="memItemLeft" align="right" valign="top"><a id="a022746b48ae5321918f9c9b561fad28c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a022746b48ae5321918f9c9b561fad28c">camera_set_viewport_metrics</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, u16 x, u16 y, u16 width, u16 height)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a022746b48ae5321918f9c9b561fad28c">camera_set_viewport_metrics</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, u16 x, u16 y, u16 width, u16 height)</td></tr>
 <tr class="memdesc:a022746b48ae5321918f9c9b561fad28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the coordinates for the camera viewport in pixels. <br /></td></tr>
 <tr class="separator:a022746b48ae5321918f9c9b561fad28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26bc3f7f820751b423c7508265ce472f"><td class="memItemLeft" align="right" valign="top"><a id="a26bc3f7f820751b423c7508265ce472f"></a>
-<a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a26bc3f7f820751b423c7508265ce472f">camera_screen_to_world</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)</td></tr>
+<a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a26bc3f7f820751b423c7508265ce472f">camera_screen_to_world</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)</td></tr>
 <tr class="memdesc:a26bc3f7f820751b423c7508265ce472f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>pos</em> from screen-space to world-space coordinates. <br /></td></tr>
 <tr class="separator:a26bc3f7f820751b423c7508265ce472f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82795f0cfdf2d5c1d422f6c77da10ed6"><td class="memItemLeft" align="right" valign="top"><a id="a82795f0cfdf2d5c1d422f6c77da10ed6"></a>
-<a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a82795f0cfdf2d5c1d422f6c77da10ed6">camera_world_to_screen</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)</td></tr>
+<a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a82795f0cfdf2d5c1d422f6c77da10ed6">camera_world_to_screen</a> (<a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos)</td></tr>
 <tr class="memdesc:a82795f0cfdf2d5c1d422f6c77da10ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>pos</em> from world-space to screen-space coordinates. <br /></td></tr>
 <tr class="separator:a82795f0cfdf2d5c1d422f6c77da10ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ccd3ff490052af75d8313ee46e5fae"><td class="memItemLeft" align="right" valign="top"><a id="aa3ccd3ff490052af75d8313ee46e5fae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#aa3ccd3ff490052af75d8313ee46e5fae">update_animations</a> (f32 dt)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#aa3ccd3ff490052af75d8313ee46e5fae">update_animations</a> (f32 dt)</td></tr>
 <tr class="memdesc:aa3ccd3ff490052af75d8313ee46e5fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update all animations with <em>dt</em>. <br /></td></tr>
 <tr class="separator:aa3ccd3ff490052af75d8313ee46e5fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b51d033c4386657d6ed9f459c9c20a3"><td class="memItemLeft" align="right" valign="top"><a id="a6b51d033c4386657d6ed9f459c9c20a3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a6b51d033c4386657d6ed9f459c9c20a3">update_scene</a> (f32 dt)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a6b51d033c4386657d6ed9f459c9c20a3">update_scene</a> (f32 dt)</td></tr>
 <tr class="memdesc:a6b51d033c4386657d6ed9f459c9c20a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update scene with <em>dt</em>. <br /></td></tr>
 <tr class="separator:a6b51d033c4386657d6ed9f459c9c20a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af11629a836727966af7ad1b6ec484dad"><td class="memItemLeft" align="right" valign="top"><a id="af11629a836727966af7ad1b6ec484dad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#af11629a836727966af7ad1b6ec484dad">update</a> (f32 dt)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#af11629a836727966af7ad1b6ec484dad">update</a> (f32 dt)</td></tr>
 <tr class="memdesc:af11629a836727966af7ad1b6ec484dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all units and sub-systems with the given <em>dt</em> delta time. <br /></td></tr>
 <tr class="separator:af11629a836727966af7ad1b6ec484dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a009e2c9c84e9b647d5733688fc1c2"><td class="memItemLeft" align="right" valign="top"><a id="ad8a009e2c9c84e9b647d5733688fc1c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ad8a009e2c9c84e9b647d5733688fc1c2">render</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;view, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;projection)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ad8a009e2c9c84e9b647d5733688fc1c2">render</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;view, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;projection)</td></tr>
 <tr class="memdesc:ad8a009e2c9c84e9b647d5733688fc1c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the world using <em>view</em> and <em>projection</em>. <br /></td></tr>
 <tr class="separator:ad8a009e2c9c84e9b647d5733688fc1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17e3c27eed09fb65e58c232dafd08f25"><td class="memItemLeft" align="right" valign="top"><a id="a17e3c27eed09fb65e58c232dafd08f25"></a>
 SoundInstanceId&#160;</td><td class="memItemRight" valign="bottom"><b>play_sound</b> (const <a class="el" href="structcrown_1_1_sound_resource.html">SoundResource</a> &amp;sr, bool loop=false, f32 volume=1.0f, const Vector3 &amp;position=VECTOR3_ZERO, f32 range=50.0f)</td></tr>
 <tr class="separator:a17e3c27eed09fb65e58c232dafd08f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010670d80c5e183b428a563612506dc1"><td class="memItemLeft" align="right" valign="top">SoundInstanceId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a010670d80c5e183b428a563612506dc1">play_sound</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const bool loop, const f32 volume, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const f32 range)</td></tr>
+<tr class="memitem:a010670d80c5e183b428a563612506dc1"><td class="memItemLeft" align="right" valign="top">SoundInstanceId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a010670d80c5e183b428a563612506dc1">play_sound</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const bool loop, const f32 volume, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const f32 range)</td></tr>
 <tr class="memdesc:a010670d80c5e183b428a563612506dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the sound with the given <em>name</em> at the given <em>position</em>, with the given <em>volume</em> and <em>range</em>.  <a href="#a010670d80c5e183b428a563612506dc1">More...</a><br /></td></tr>
 <tr class="separator:a010670d80c5e183b428a563612506dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b31d017ca5cfc3c61f112f44464095b"><td class="memItemLeft" align="right" valign="top"><a id="a5b31d017ca5cfc3c61f112f44464095b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a5b31d017ca5cfc3c61f112f44464095b">stop_sound</a> (SoundInstanceId id)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a5b31d017ca5cfc3c61f112f44464095b">stop_sound</a> (SoundInstanceId id)</td></tr>
 <tr class="memdesc:a5b31d017ca5cfc3c61f112f44464095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the sound with the given <em>id</em>. <br /></td></tr>
 <tr class="separator:a5b31d017ca5cfc3c61f112f44464095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4a14390380d16cbe9ab34c1a3a6e84a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#ae4a14390380d16cbe9ab34c1a3a6e84a">link_sound</a> (SoundInstanceId id, <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, s32 node)</td></tr>
+<tr class="memitem:ae4a14390380d16cbe9ab34c1a3a6e84a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ae4a14390380d16cbe9ab34c1a3a6e84a">link_sound</a> (SoundInstanceId id, <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, s32 node)</td></tr>
 <tr class="memdesc:ae4a14390380d16cbe9ab34c1a3a6e84a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Links the sound <em>id</em> to the <em>node</em> of the given <em>unit</em>.  <a href="#ae4a14390380d16cbe9ab34c1a3a6e84a">More...</a><br /></td></tr>
 <tr class="separator:ae4a14390380d16cbe9ab34c1a3a6e84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa05005589bc279d9aa8fc459cb6f9f01"><td class="memItemLeft" align="right" valign="top"><a id="aa05005589bc279d9aa8fc459cb6f9f01"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#aa05005589bc279d9aa8fc459cb6f9f01">set_listener_pose</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;pose)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#aa05005589bc279d9aa8fc459cb6f9f01">set_listener_pose</a> (const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;pose)</td></tr>
 <tr class="memdesc:aa05005589bc279d9aa8fc459cb6f9f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>pose</em> of the listener. <br /></td></tr>
 <tr class="separator:aa05005589bc279d9aa8fc459cb6f9f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef62f93e020c28f62200e635caf0ddc8"><td class="memItemLeft" align="right" valign="top"><a id="aef62f93e020c28f62200e635caf0ddc8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#aef62f93e020c28f62200e635caf0ddc8">set_sound_position</a> (SoundInstanceId id, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;position)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#aef62f93e020c28f62200e635caf0ddc8">set_sound_position</a> (SoundInstanceId id, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;position)</td></tr>
 <tr class="memdesc:aef62f93e020c28f62200e635caf0ddc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>position</em> of the sound <em>id</em>. <br /></td></tr>
 <tr class="separator:aef62f93e020c28f62200e635caf0ddc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb9eb635fc5e89876a766aae6e2ac549"><td class="memItemLeft" align="right" valign="top"><a id="abb9eb635fc5e89876a766aae6e2ac549"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#abb9eb635fc5e89876a766aae6e2ac549">set_sound_range</a> (SoundInstanceId id, f32 range)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#abb9eb635fc5e89876a766aae6e2ac549">set_sound_range</a> (SoundInstanceId id, f32 range)</td></tr>
 <tr class="memdesc:abb9eb635fc5e89876a766aae6e2ac549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>range</em> of the sound <em>id</em>. <br /></td></tr>
 <tr class="separator:abb9eb635fc5e89876a766aae6e2ac549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5d6a6fa15fb4b5c7907091777dd5bda"><td class="memItemLeft" align="right" valign="top"><a id="af5d6a6fa15fb4b5c7907091777dd5bda"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#af5d6a6fa15fb4b5c7907091777dd5bda">set_sound_volume</a> (SoundInstanceId id, f32 volume)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#af5d6a6fa15fb4b5c7907091777dd5bda">set_sound_volume</a> (SoundInstanceId id, f32 volume)</td></tr>
 <tr class="memdesc:af5d6a6fa15fb4b5c7907091777dd5bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>volume</em> of the sound <em>id</em>. <br /></td></tr>
 <tr class="separator:af5d6a6fa15fb4b5c7907091777dd5bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d7dcd79667a833c3a38d45b6946ab4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a5d7dcd79667a833c3a38d45b6946ab4b">create_debug_line</a> (bool depth_test)</td></tr>
+<tr class="memitem:a5d7dcd79667a833c3a38d45b6946ab4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a5d7dcd79667a833c3a38d45b6946ab4b">create_debug_line</a> (bool depth_test)</td></tr>
 <tr class="memdesc:a5d7dcd79667a833c3a38d45b6946ab4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="structcrown_1_1_debug_line.html" title="Draws lines. ">DebugLine</a>.  <a href="#a5d7dcd79667a833c3a38d45b6946ab4b">More...</a><br /></td></tr>
 <tr class="separator:a5d7dcd79667a833c3a38d45b6946ab4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc63cc0dffebb78c41a36b5f4396fd50"><td class="memItemLeft" align="right" valign="top"><a id="adc63cc0dffebb78c41a36b5f4396fd50"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#adc63cc0dffebb78c41a36b5f4396fd50">destroy_debug_line</a> (<a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> &amp;line)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#adc63cc0dffebb78c41a36b5f4396fd50">destroy_debug_line</a> (<a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> &amp;line)</td></tr>
 <tr class="memdesc:adc63cc0dffebb78c41a36b5f4396fd50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the debug <em>line</em>. <br /></td></tr>
 <tr class="separator:adc63cc0dffebb78c41a36b5f4396fd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b1966ff724dfe500d32ff78e63ed41d"><td class="memItemLeft" align="right" valign="top"><a id="a9b1966ff724dfe500d32ff78e63ed41d"></a>
-<a class="el" href="structcrown_1_1_debug_gui.html">DebugGui</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a9b1966ff724dfe500d32ff78e63ed41d">create_screen_debug_gui</a> (f32 scale_w, f32 scale_h)</td></tr>
+<a class="el" href="structcrown_1_1_debug_gui.html">DebugGui</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a9b1966ff724dfe500d32ff78e63ed41d">create_screen_debug_gui</a> (f32 scale_w, f32 scale_h)</td></tr>
 <tr class="memdesc:a9b1966ff724dfe500d32ff78e63ed41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new screen-space Gui. <br /></td></tr>
 <tr class="separator:a9b1966ff724dfe500d32ff78e63ed41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44bde2a34161a20e35e928a15e1cae9e"><td class="memItemLeft" align="right" valign="top"><a id="a44bde2a34161a20e35e928a15e1cae9e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a44bde2a34161a20e35e928a15e1cae9e">destroy_gui</a> (<a class="el" href="structcrown_1_1_debug_gui.html">DebugGui</a> &amp;gui)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a44bde2a34161a20e35e928a15e1cae9e">destroy_gui</a> (<a class="el" href="structcrown_1_1_debug_gui.html">DebugGui</a> &amp;gui)</td></tr>
 <tr class="memdesc:a44bde2a34161a20e35e928a15e1cae9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <em>gui</em>. <br /></td></tr>
 <tr class="separator:a44bde2a34161a20e35e928a15e1cae9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa65a9d06970c067a87340043993ac50"><td class="memItemLeft" align="right" valign="top"><a id="afa65a9d06970c067a87340043993ac50"></a>
-<a class="el" href="classcrown_1_1_level.html">Level</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#afa65a9d06970c067a87340043993ac50">load_level</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot)</td></tr>
+<a class="el" href="structcrown_1_1_level.html">Level</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#afa65a9d06970c067a87340043993ac50">load_level</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot)</td></tr>
 <tr class="memdesc:afa65a9d06970c067a87340043993ac50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the level <em>name</em> into the world. <br /></td></tr>
 <tr class="separator:afa65a9d06970c067a87340043993ac50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240fb1754119bbb8183e146ec6d67cda"><td class="memItemLeft" align="right" valign="top"><a id="a240fb1754119bbb8183e146ec6d67cda"></a>
-<a class="el" href="group___containers.html#gabf3f2058f3c0a30ddb3fa7b37663f783">EventStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a240fb1754119bbb8183e146ec6d67cda">events</a> ()</td></tr>
-<tr class="memdesc:a240fb1754119bbb8183e146ec6d67cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the events. <br /></td></tr>
-<tr class="separator:a240fb1754119bbb8183e146ec6d67cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ad4157d95cb1d0e764648381848cb83"><td class="memItemLeft" align="right" valign="top"><a id="a2ad4157d95cb1d0e764648381848cb83"></a>
-<a class="el" href="structcrown_1_1_scene_graph.html">SceneGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a2ad4157d95cb1d0e764648381848cb83">scene_graph</a> ()</td></tr>
-<tr class="memdesc:a2ad4157d95cb1d0e764648381848cb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the scene graph. <br /></td></tr>
-<tr class="separator:a2ad4157d95cb1d0e764648381848cb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff28e2323bf4bbd31ce63b0b742f8951"><td class="memItemLeft" align="right" valign="top"><a id="aff28e2323bf4bbd31ce63b0b742f8951"></a>
-<a class="el" href="classcrown_1_1_render_world.html">RenderWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#aff28e2323bf4bbd31ce63b0b742f8951">render_world</a> ()</td></tr>
-<tr class="memdesc:aff28e2323bf4bbd31ce63b0b742f8951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rendering sub-world. <br /></td></tr>
-<tr class="separator:aff28e2323bf4bbd31ce63b0b742f8951"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd51df399d0aaa0195f677851dc605f7"><td class="memItemLeft" align="right" valign="top"><a id="acd51df399d0aaa0195f677851dc605f7"></a>
-<a class="el" href="classcrown_1_1_physics_world.html">PhysicsWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#acd51df399d0aaa0195f677851dc605f7">physics_world</a> ()</td></tr>
-<tr class="memdesc:acd51df399d0aaa0195f677851dc605f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the physics sub-world. <br /></td></tr>
-<tr class="separator:acd51df399d0aaa0195f677851dc605f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8275874f07bcc65744e343e4f283f4d9"><td class="memItemLeft" align="right" valign="top"><a id="a8275874f07bcc65744e343e4f283f4d9"></a>
-<a class="el" href="classcrown_1_1_sound_world.html">SoundWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_world.html#a8275874f07bcc65744e343e4f283f4d9">sound_world</a> ()</td></tr>
-<tr class="memdesc:a8275874f07bcc65744e343e4f283f4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sound sub-world. <br /></td></tr>
-<tr class="separator:a8275874f07bcc65744e343e4f283f4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61086a4a7aa15fb3b1e10d085a1fd502"><td class="memItemLeft" align="right" valign="top"><a id="a61086a4a7aa15fb3b1e10d085a1fd502"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>post_unit_spawned_event</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="separator:a61086a4a7aa15fb3b1e10d085a1fd502"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +243,60 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>post_unit_destroyed_e
 <tr class="memitem:afe905bee56223f7c0ce5fa0a2577d99b"><td class="memItemLeft" align="right" valign="top"><a id="afe905bee56223f7c0ce5fa0a2577d99b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>post_level_loaded_event</b> ()</td></tr>
 <tr class="separator:afe905bee56223f7c0ce5fa0a2577d99b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae09be9051289090bf41d6c47a0fb02f3"><td class="memItemLeft" align="right" valign="top"><a id="ae09be9051289090bf41d6c47a0fb02f3"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
+<tr class="separator:ae09be9051289090bf41d6c47a0fb02f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9e8bf0e0a22d3ed0715dffa5ef831c"><td class="memItemLeft" align="right" valign="top"><a id="abe9e8bf0e0a22d3ed0715dffa5ef831c"></a>
+<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_allocator</b></td></tr>
+<tr class="separator:abe9e8bf0e0a22d3ed0715dffa5ef831c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d43407ab74ff7505b19493e5263655f"><td class="memItemLeft" align="right" valign="top"><a id="a4d43407ab74ff7505b19493e5263655f"></a>
+<a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_resource_manager</b></td></tr>
+<tr class="separator:a4d43407ab74ff7505b19493e5263655f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea4b0869b5a1d2be28e2af7a49747f6"><td class="memItemLeft" align="right" valign="top"><a id="a3ea4b0869b5a1d2be28e2af7a49747f6"></a>
+<a class="el" href="structcrown_1_1_shader_manager.html">ShaderManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_shader_manager</b></td></tr>
+<tr class="separator:a3ea4b0869b5a1d2be28e2af7a49747f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef4a0e1f44705f3b812c31028c3b066d"><td class="memItemLeft" align="right" valign="top"><a id="aef4a0e1f44705f3b812c31028c3b066d"></a>
+<a class="el" href="structcrown_1_1_material_manager.html">MaterialManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_material_manager</b></td></tr>
+<tr class="separator:aef4a0e1f44705f3b812c31028c3b066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ffd15680048bb86018fa789c46dd76b"><td class="memItemLeft" align="right" valign="top"><a id="a2ffd15680048bb86018fa789c46dd76b"></a>
+<a class="el" href="structcrown_1_1_lua_environment.html">LuaEnvironment</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_lua_environment</b></td></tr>
+<tr class="separator:a2ffd15680048bb86018fa789c46dd76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31708ad7c81ae94861b6eebf0b65d4fe"><td class="memItemLeft" align="right" valign="top"><a id="a31708ad7c81ae94861b6eebf0b65d4fe"></a>
+<a class="el" href="structcrown_1_1_unit_manager.html">UnitManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_unit_manager</b></td></tr>
+<tr class="separator:a31708ad7c81ae94861b6eebf0b65d4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f67e30b47224d347187d1c5cbcec76"><td class="memItemLeft" align="right" valign="top"><a id="a57f67e30b47224d347187d1c5cbcec76"></a>
+<a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_lines</b></td></tr>
+<tr class="separator:a57f67e30b47224d347187d1c5cbcec76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab894518839d572d8f82b22a1c3f84f22"><td class="memItemLeft" align="right" valign="top"><a id="ab894518839d572d8f82b22a1c3f84f22"></a>
+<a class="el" href="structcrown_1_1_scene_graph.html">SceneGraph</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_scene_graph</b></td></tr>
+<tr class="separator:ab894518839d572d8f82b22a1c3f84f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39ea750fc365264dd8ec98dc234a5f0"><td class="memItemLeft" align="right" valign="top"><a id="aa39ea750fc365264dd8ec98dc234a5f0"></a>
+<a class="el" href="structcrown_1_1_render_world.html">RenderWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_render_world</b></td></tr>
+<tr class="separator:aa39ea750fc365264dd8ec98dc234a5f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942c02883a0e64fa421149ebf0391336"><td class="memItemLeft" align="right" valign="top"><a id="a942c02883a0e64fa421149ebf0391336"></a>
+<a class="el" href="structcrown_1_1_physics_world.html">PhysicsWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_physics_world</b></td></tr>
+<tr class="separator:a942c02883a0e64fa421149ebf0391336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0912794b05872035b9ed7124f8dc6bb8"><td class="memItemLeft" align="right" valign="top"><a id="a0912794b05872035b9ed7124f8dc6bb8"></a>
+<a class="el" href="structcrown_1_1_sound_world.html">SoundWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_sound_world</b></td></tr>
+<tr class="separator:a0912794b05872035b9ed7124f8dc6bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3459300df01c2f811ee5bbee165bed31"><td class="memItemLeft" align="right" valign="top"><a id="a3459300df01c2f811ee5bbee165bed31"></a>
+<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_units</b></td></tr>
+<tr class="separator:a3459300df01c2f811ee5bbee165bed31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcff807bd3f17e89a73b280753eb5c15"><td class="memItemLeft" align="right" valign="top"><a id="abcff807bd3f17e89a73b280753eb5c15"></a>
+<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_level.html">Level</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_levels</b></td></tr>
+<tr class="separator:abcff807bd3f17e89a73b280753eb5c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c8f44d4b544c4d3b971ea4f859d369"><td class="memItemLeft" align="right" valign="top"><a id="a45c8f44d4b544c4d3b971ea4f859d369"></a>
+<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_world_1_1_camera.html">Camera</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_camera</b></td></tr>
+<tr class="separator:a45c8f44d4b544c4d3b971ea4f859d369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1adab76d914138046e573c0c7f4717c"><td class="memItemLeft" align="right" valign="top"><a id="aa1adab76d914138046e573c0c7f4717c"></a>
+<a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>, u32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_camera_map</b></td></tr>
+<tr class="separator:aa1adab76d914138046e573c0c7f4717c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad889185cbc686c673e96a7a623f7afca"><td class="memItemLeft" align="right" valign="top"><a id="ad889185cbc686c673e96a7a623f7afca"></a>
+<a class="el" href="group___containers.html#gabf3f2058f3c0a30ddb3fa7b37663f783">EventStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_events</b></td></tr>
+<tr class="separator:ad889185cbc686c673e96a7a623f7afca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a game world. </p>
@@ -365,14 +408,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>post_level_loaded_eve
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/world/<a class="el" href="world_8h_source.html">world.h</a></li>
 <li>src/world/world.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 7 2016 21:39:23 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 1 2017 00:31:10 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

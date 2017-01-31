@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
-<title>Pepper: crown::ShaderManager Class Reference</title>
+<title>Pepper: crown::ShaderManager Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,25 +46,42 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_shader_manager.html">ShaderManager</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_shader_manager.html">ShaderManager</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_shader_manager-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structcrown_1_1_shader_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::ShaderManager Class Reference<div class="ingroups"><a class="el" href="group___world.html">World</a></div></div>  </div>
+<div class="title">crown::ShaderManager Struct Reference<div class="ingroups"><a class="el" href="group___world.html">World</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Manages shaders.  
- <a href="classcrown_1_1_shader_manager.html#details">More...</a></p>
+ <a href="structcrown_1_1_shader_manager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="shader__manager_8h_source.html">shader_manager.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_shader_manager_1_1_shader_data.html">ShaderData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:abbfdaa4e236fbd672662941e677b56d3"><td class="memItemLeft" align="right" valign="top"><a id="abbfdaa4e236fbd672662941e677b56d3"></a>
+typedef <a class="el" href="structcrown_1_1_sort_map.html">SortMap</a>&lt; <a class="el" href="structcrown_1_1_string_id32.html">StringId32</a>, <a class="el" href="structcrown_1_1_shader_manager_1_1_shader_data.html">ShaderData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ShaderMap</b></td></tr>
+<tr class="separator:abbfdaa4e236fbd672662941e677b56d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad255742c58352215d1927e4031d02898"><td class="memItemLeft" align="right" valign="top"><a id="ad255742c58352215d1927e4031d02898"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_shader</b> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> name, u64 state, bgfx::ProgramHandle program)</td></tr>
+<tr class="separator:ad255742c58352215d1927e4031d02898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe378f2c1528c35feeed44dd2419a4e0"><td class="memItemLeft" align="right" valign="top"><a id="afe378f2c1528c35feeed44dd2419a4e0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ShaderManager</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
 <tr class="separator:afe378f2c1528c35feeed44dd2419a4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -80,21 +97,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>offline</b> (<a class
 <tr class="memitem:afb821bf09e2645889723722ec56d85bf"><td class="memItemLeft" align="right" valign="top"><a id="afb821bf09e2645889723722ec56d85bf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unload</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, void *res)</td></tr>
 <tr class="separator:afb821bf09e2645889723722ec56d85bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97622a44ef7b31fbb88ac52d0c7d9554"><td class="memItemLeft" align="right" valign="top"><a id="a97622a44ef7b31fbb88ac52d0c7d9554"></a>
-const <a class="el" href="structcrown_1_1_shader_data.html">ShaderData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_shader_manager.html#a97622a44ef7b31fbb88ac52d0c7d9554">get</a> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> id)</td></tr>
-<tr class="memdesc:a97622a44ef7b31fbb88ac52d0c7d9554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shader <em>id</em>. <br /></td></tr>
-<tr class="separator:a97622a44ef7b31fbb88ac52d0c7d9554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a118c5e861ac9a41af98f3add6ade26e3"><td class="memItemLeft" align="right" valign="top"><a id="a118c5e861ac9a41af98f3add6ade26e3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>submit</b> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> shader_id, u8 view_id)</td></tr>
+<tr class="separator:a118c5e861ac9a41af98f3add6ade26e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa7370b2b366113d841c5b06640ba3f50"><td class="memItemLeft" align="right" valign="top"><a id="aa7370b2b366113d841c5b06640ba3f50"></a>
+<a class="el" href="structcrown_1_1_sort_map.html">ShaderMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_shader_map</b></td></tr>
+<tr class="separator:aa7370b2b366113d841c5b06640ba3f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages shaders. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/world/<a class="el" href="shader__manager_8h_source.html">shader_manager.h</a></li>
 <li>src/world/shader_manager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 7 2016 21:39:23 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 1 2017 00:31:10 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.12
 </small></address>

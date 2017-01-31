@@ -1,7 +1,7 @@
 var searchData=
 [
   ['join',['join',['../namespacecrown_1_1path.html#a0af8ce6a17bf3cb2611ffb44810e50ca',1,'crown::path']]],
-  ['joint_5fcreate',['joint_create',['../classcrown_1_1_physics_world.html#ab933c1c1fbf71972cc8561586639018c',1,'crown::PhysicsWorld']]],
+  ['joint_5fcreate',['joint_create',['../structcrown_1_1_physics_world.html#ab933c1c1fbf71972cc8561586639018c',1,'crown::PhysicsWorld']]],
   ['jointdesc',['JointDesc',['../structcrown_1_1_joint_desc.html',1,'crown']]],
   ['jointinstance',['JointInstance',['../structcrown_1_1_joint_instance.html',1,'crown']]],
   ['jointtype',['JointType',['../structcrown_1_1_joint_type.html',1,'crown']]],

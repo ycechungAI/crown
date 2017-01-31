@@ -9,7 +9,7 @@ var searchData=
   ['map_3c_20crown_3a_3afixedstring_2c_20const_20char_20_2a_3e',['Map&lt; crown::FixedString, const char *&gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['map_3c_20crown_3a_3astringid32_2c_20u32_20_3e',['Map&lt; crown::StringId32, u32 &gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['material',['Material',['../structcrown_1_1_material.html',1,'crown']]],
-  ['materialmanager',['MaterialManager',['../classcrown_1_1_material_manager.html',1,'crown']]],
+  ['materialmanager',['MaterialManager',['../structcrown_1_1_material_manager.html',1,'crown']]],
   ['materialresource',['MaterialResource',['../structcrown_1_1_material_resource.html',1,'crown']]],
   ['matrix3x3',['Matrix3x3',['../structcrown_1_1_matrix3x3.html',1,'crown']]],
   ['matrix4x4',['Matrix4x4',['../structcrown_1_1_matrix4x4.html',1,'crown']]],

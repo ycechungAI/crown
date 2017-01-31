@@ -13,7 +13,7 @@ var searchData=
   ['vector_3c_20crown_3a_3asortmap_3a_3aentry_20_3e',['Vector&lt; crown::SortMap::Entry &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
   ['vector_3c_20crown_3a_3atcpsocket_20_3e',['Vector&lt; crown::TCPSocket &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
   ['vector_3c_20staticcompile_20_3e',['Vector&lt; StaticCompile &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
-  ['version',['version',['../classcrown_1_1_device.html#a286d7d3eb174334fe1265057ffafca5e',1,'crown::Device']]],
+  ['version',['version',['../structcrown_1_1_device.html#a286d7d3eb174334fe1265057ffafca5e',1,'crown::Device']]],
   ['vertex',['vertex',['../namespacecrown_1_1aabb.html#a0bf58bcf11e451a3a6c0c71cda1257c9',1,'crown::aabb::vertex()'],['../namespacecrown_1_1frustum.html#a041c9602c2051442bb8ec1d5eaeccd90',1,'crown::frustum::vertex()']]],
   ['vertexdata',['VertexData',['../structcrown_1_1_vertex_data.html',1,'crown']]],
   ['vertexdata',['VertexData',['../structcrown_1_1_debug_gui_1_1_vertex_data.html',1,'crown::DebugGui']]],

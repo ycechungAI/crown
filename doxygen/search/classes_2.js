@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['camera',['Camera',['../structcrown_1_1_world_1_1_camera.html',1,'crown::World']]],
   ['cameradesc',['CameraDesc',['../structcrown_1_1_camera_desc.html',1,'crown']]],
   ['camerainstance',['CameraInstance',['../structcrown_1_1_camera_instance.html',1,'crown']]],
   ['capsuleshape',['CapsuleShape',['../structcrown_1_1_capsule_shape.html',1,'crown']]],

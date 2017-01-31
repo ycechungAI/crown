@@ -6,7 +6,7 @@ var searchData=
   ['readresult',['ReadResult',['../structcrown_1_1_read_result.html',1,'crown']]],
   ['recordfloat',['RecordFloat',['../structcrown_1_1_record_float.html',1,'crown']]],
   ['recordvector3',['RecordVector3',['../structcrown_1_1_record_vector3.html',1,'crown']]],
-  ['renderworld',['RenderWorld',['../classcrown_1_1_render_world.html',1,'crown']]],
+  ['renderworld',['RenderWorld',['../structcrown_1_1_render_world.html',1,'crown']]],
   ['resolutionevent',['ResolutionEvent',['../structcrown_1_1_resolution_event.html',1,'crown']]],
   ['resource',['Resource',['../structcrown_1_1_package_resource_1_1_resource.html',1,'crown::PackageResource']]],
   ['resourceloader',['ResourceLoader',['../classcrown_1_1_resource_loader.html',1,'crown']]],
