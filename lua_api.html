@@ -1037,52 +1037,54 @@ After unlinking, the &#64;a unit's local pose is set to its previous world pose.
 <h2><a class="toc-backref" href="#id46">Sprite</a></h2>
 <dl class="docutils">
 <dt><strong>sprite_create</strong> (rw, unit, sprite_resource, material_resource, visible, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
-<dd>Creates a new sprite instance for <em>unit</em> and returns its id.</dd>
-<dt><strong>sprite_destroy</strong> (rw, id)</dt>
-<dd>Destroys the sprite <em>id</em>.</dd>
-<dt><strong>sprite_set_frame</strong> (rw, id, index)</dt>
-<dd>Sets the frame <em>index</em> of the sprite <em>id</em>.</dd>
-<dt><strong>sprite_set_visible</strong> (rw, id, visible)</dt>
-<dd>Sets whether the sprite <em>id</em> is <em>visible</em>.</dd>
-<dt><strong>sprite_flip_x</strong> (rw, id, flip)</dt>
-<dd>Sets whether to flip the sprite on the x-axis.</dd>
-<dt><strong>sprite_flip_y</strong> (rw, id, flip)</dt>
-<dd>Sets whether to flip the sprite on the y-axis.</dd>
+<dd>Creates a new sprite instance for the <em>unit</em> and returns its id.</dd>
+<dt><strong>sprite_destroy</strong> (rw, unit)</dt>
+<dd>Destroys the sprite of the <em>unit</em>.</dd>
 <dt><strong>sprite_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the sprites of the <em>unit</em>.</dd>
+<dt><strong>sprite_set_frame</strong> (rw, unit, index)</dt>
+<dd>Sets the frame <em>index</em> of the sprite.</dd>
+<dt><strong>sprite_set_visible</strong> (rw, unit, visible)</dt>
+<dd>Sets whether the sprite is <em>visible</em>.</dd>
+<dt><strong>sprite_flip_x</strong> (rw, unit, flip)</dt>
+<dd>Sets whether to flip the sprite on the x-axis.</dd>
+<dt><strong>sprite_flip_y</strong> (rw, unit, flip)</dt>
+<dd>Sets whether to flip the sprite on the y-axis.</dd>
 </dl>
 </div>
 <div class="section" id="light">
 <h2><a class="toc-backref" href="#id47">Light</a></h2>
 <dl class="docutils">
 <dt><strong>light_create</strong> (rw, unit, type, range, intensity, spot_angle, color, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
-<dd>Creates a new light for <em>unit</em> and returns its id.
+<dd>Creates a new light for the <em>unit</em> and returns its id.
 Type can be either <cite>directional</cite>, <cite>omni</cite> or <cite>spot</cite>.</dd>
-<dt><strong>light_destroy</strong> (rw, id)</dt>
-<dd>Destroys the light <em>id</em>.</dd>
+<dt><strong>light_destroy</strong> (rw, unit)</dt>
+<dd>Destroys the light of the <em>unit</em>.</dd>
 <dt><strong>light_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the lights of the <em>unit</em>.</dd>
-<dt><strong>light_type</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
-<dd>Returns the type of the light <em>id</em>.
+<dt><strong>light_type</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd>Returns the type of the light of the <em>unit</em>.
 It can be either <cite>directional</cite>, <cite>omni</cite> or <cite>spot</cite>.</dd>
-<dt><strong>light_color</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">Color4</span></dt>
-<dd>Returns the color of the light <em>id</em>.</dd>
-<dt><strong>light_range</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd>Returns the range of the light <em>id</em>.</dd>
-<dt><strong>light_intensity</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd>Returns the intensity of the light <em>id</em>.</dd>
-<dt><strong>light_spot_angle</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd>Returns the spot angle of the light <em>id</em>.</dd>
-<dt><strong>light_set_type</strong> (rw, id, type)</dt>
-<dd>Sets the <em>type</em> of the light <em>id</em>.</dd>
-<dt><strong>light_set_color</strong> (rw, id, color)</dt>
-<dd>Sets the <em>color</em> of the light <em>id</em>.</dd>
-<dt><strong>light_set_range</strong> (rw, id, range)</dt>
-<dd>Sets the <em>range</em> of the light <em>id</em>.</dd>
-<dt><strong>light_set_intensity</strong> (rw, id, intensity)</dt>
-<dd>Sets the <em>intensity</em> of the light <em>id</em>.</dd>
-<dt><strong>light_set_spot_angle</strong> (rw, id, angle)</dt>
-<dd>Sets the spot <em>angle</em> of the light <em>id</em>.</dd>
+<dt><strong>light_color</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Color4</span></dt>
+<dd>Returns the color of the light.</dd>
+<dt><strong>light_range</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Returns the range of the light.</dd>
+<dt><strong>light_intensity</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Returns the intensity of the light.</dd>
+<dt><strong>light_spot_angle</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>Returns the spot angle of the light.</dd>
+<dt><strong>light_set_type</strong> (rw, unit, type)</dt>
+<dd>Sets the <em>type</em> of the light.</dd>
+<dt><strong>light_set_color</strong> (rw, unit, color)</dt>
+<dd>Sets the <em>color</em> of the light.</dd>
+<dt><strong>light_set_range</strong> (rw, unit, range)</dt>
+<dd>Sets the <em>range</em> of the light.</dd>
+<dt><strong>light_set_intensity</strong> (rw, unit, intensity)</dt>
+<dd>Sets the <em>intensity</em> of the light.</dd>
+<dt><strong>light_set_spot_angle</strong> (rw, unit, angle)v</dt>
+<dd>Sets the spot <em>angle</em> of the light.</dd>
+<dt><strong>light_debug_draw</strong> (rw, unit, debug_line)</dt>
+<dd>Fills <em>debug_line</em> with debug lines from the light.</dd>
 </dl>
 </div>
 </div>
