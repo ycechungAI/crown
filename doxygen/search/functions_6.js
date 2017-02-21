@@ -5,8 +5,8 @@ var searchData=
   ['get_5finverted',['get_inverted',['../group___math.html#ga2b07ef3a6d72871c35dd8d3bb8dbaffb',1,'crown::get_inverted(Matrix3x3 m)'],['../group___math.html#ga978a90980194f410b68083eecd8392f6',1,'crown::get_inverted(Matrix4x4 m)']]],
   ['get_5floaded',['get_loaded',['../classcrown_1_1_resource_loader.html#a243c71b6ac1f4d08d84e3499888d2855',1,'crown::ResourceLoader']]],
   ['get_5ftransposed',['get_transposed',['../group___math.html#ga480af5946b986fd9395d7fb74a9641f4',1,'crown::get_transposed(Matrix3x3 m)'],['../group___math.html#ga7cfc892e0f08adcdfd463e978cf72675',1,'crown::get_transposed(Matrix4x4 m)']]],
-  ['getcwd',['getcwd',['../namespacecrown_1_1os.html#a38429dc7aa00c8db88c2f9a67721d780',1,'crown::os']]],
-  ['getenv',['getenv',['../namespacecrown_1_1os.html#a5d3f4992a2b2160fc96f1ad1f898ff09',1,'crown::os']]],
+  ['getcwd',['getcwd',['../namespacecrown_1_1os.html#a9b73587eb4105aa672587351ed2a3b6a',1,'crown::os']]],
+  ['getenv',['getenv',['../namespacecrown_1_1os.html#a691ade88622a9ecac3eb3b43ef208727',1,'crown::os']]],
   ['gravity',['gravity',['../structcrown_1_1_physics_world.html#a66e0084f719f285fb6357b3d1cd87882',1,'crown::PhysicsWorld']]],
   ['grow',['grow',['../namespacecrown_1_1array.html#aa55ac953b36e5cbcaecd376ea9c1899d',1,'crown::array::grow()'],['../namespacecrown_1_1queue.html#a6733ed439555a2a99496d18e8c4a2130',1,'crown::queue::grow()'],['../namespacecrown_1_1vector.html#a14ff6d19af18605cd73d055bab7e4c59',1,'crown::vector::grow()']]]
 ];

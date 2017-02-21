@@ -2,8 +2,7 @@ var searchData=
 [
   ['where',['where',['../structcrown_1_1_physics_collision_event.html#a6323781999548235916ddd4c73571c08',1,'crown::PhysicsCollisionEvent']]],
   ['window',['Window',['../structcrown_1_1_window.html',1,'crown']]],
-  ['world',['World',['../structcrown_1_1_world.html',1,'crown']]],
-  ['world',['World',['../group___world.html',1,'']]],
+  ['world',['World',['../structcrown_1_1_world.html',1,'crown::World'],['../group___world.html',1,'(Global Namespace)']]],
   ['world_5fpose',['world_pose',['../structcrown_1_1_scene_graph.html#af64f74fe2ac307ba315d146ecc2678b5',1,'crown::SceneGraph']]],
   ['world_5fposition',['world_position',['../structcrown_1_1_scene_graph.html#a06803dd329105a653aab65a025b0feb9',1,'crown::SceneGraph']]],
   ['world_5frotation',['world_rotation',['../structcrown_1_1_scene_graph.html#a2e2c0dbd88ff1fa9c911120faa5986f3',1,'crown::SceneGraph']]],
