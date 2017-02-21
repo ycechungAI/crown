@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manual &mdash; Crown Engine 0.0.26 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Crown Engine 0.0.26 documentation" href="index.html"/>
+        <link rel="next" title="Lua API Reference" href="lua_api.html"/>
+        <link rel="prev" title="The Flexible Game Engine" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Crown Engine
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.26
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-it">What is it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-requirements">System requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-concepts">Basic concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-source-directory">The source directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-boot-directory-and-the-boot-config-file">The boot directory and the boot.config file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-data-directory">The data directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-bundleignore-file">The .bundleignore file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#units-of-measurement">Units of measurement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#boot-config-file-reference">boot.config file reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generic-configurations">Generic configurations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#platform-specific-configurations">Platform-specific configurations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#renderer-configurations">Renderer configurations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#command-line-reference">Command line reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lua_api.html">Lua API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Crown Engine</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Manual</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="manual">
+<h1>Manual<a class="headerlink" href="#manual" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-it">
+<h3>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline">¶</a></h3>
+<p>Pepper is a general purpose data-driven game engine, written from scratch in orthodox C++ with a minimalistic and data-oriented design philosophy in mind.</p>
+<p>It is loosely inspired by Bitsquid (now Stingray) engine and its design principles.</p>
+</div>
+<div class="section" id="system-requirements">
+<h3>System requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h3>
+<p><strong>Development</strong></p>
+<ul class="simple">
+<li>Any 64-bit Linux distribution with GTK+ 3.14 or newer, 64-bit Ubuntu 16.04+ recommended</li>
+<li>64-bit dual-core CPU or higher</li>
+<li>OpenGL 2.1+ graphics card with 512 MB of RAM, 1 GB recommended</li>
+<li>4 GB of RAM minimum, 8 GB recommended</li>
+<li>1280x768 display minimum, 1920x1080 recommended</li>
+<li>Three-button mouse</li>
+</ul>
+<p><strong>Deployment</strong></p>
+<ul class="simple">
+<li>Android 2.3.7+ (ARMv7), Ubuntu 12.04+ (32 and 64-bit) or Windows 7, 8, 10 (32 and 64-bit)</li>
+</ul>
+</div>
+</div>
+<div class="section" id="basic-concepts">
+<h2>Basic concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-source-directory">
+<h3>The source directory<a class="headerlink" href="#the-source-directory" title="Permalink to this headline">¶</a></h3>
+<p>The source directory contains all the files that make up an application.</p>
+<p>There is no fixed structure for the files and folders in the source directory, you can organize your content as you see fit. You can for example decide to put all the textures and sounds in the &#8220;textures&#8221; and &#8220;sounds&#8221; folders respectively, or maybe sort the content on a per-object basis by putting all the assets for an enemy in the &#8220;units/enemy&#8221; folder.</p>
+<p>There is, however, a small number of required files which are needed for the engine to start-up correctly:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>.
+├── boot.config            &lt;- First file loaded by the engine
+├── boot.package           &lt;- Package to load on boot
+├── boot.lua               &lt;- Lua script to launch on boot
+└── global.physics_config  &lt;- Global physics-related configurations
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-boot-directory-and-the-boot-config-file">
+<h3>The boot directory and the boot.config file<a class="headerlink" href="#the-boot-directory-and-the-boot-config-file" title="Permalink to this headline">¶</a></h3>
+<p>Any directory within <a class="reference internal" href="#the-source-directory">the source directory</a> containing the file named <code class="docutils literal"><span class="pre">boot.config</span></code> is a boot directory.</p>
+<p>The <code class="docutils literal"><span class="pre">boot.config</span></code> is the first file loaded by Pepper; it specifies the package to load and the lua script to execute on boot and various other boot-time settings. See <a class="reference internal" href="#boot-config-file-reference">boot.config file reference</a> for more details.</p>
+<p>There can be an arbitrary number of boot directories. You can set which boot directory Pepper should use with the switch <code class="docutils literal"><span class="pre">--boot-dir</span></code>.</p>
+<p>In the example below, the engine is told to load the package <code class="docutils literal"><span class="pre">boot</span></code> and run the Lua script <code class="docutils literal"><span class="pre">lua/game</span></code>.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">boot_package</span> <span class="o">=</span> <span class="s2">&quot;boot&quot;</span>      <span class="o">//</span> <span class="n">Package</span> <span class="n">to</span> <span class="n">load</span> <span class="n">on</span> <span class="n">boot</span>
+<span class="n">boot_script</span>  <span class="o">=</span> <span class="s2">&quot;lua/game&quot;</span>  <span class="o">//</span> <span class="n">Lua</span> <span class="n">script</span> <span class="n">to</span> <span class="n">execute</span> <span class="n">on</span> <span class="n">boot</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-data-directory">
+<h3>The data directory<a class="headerlink" href="#the-data-directory" title="Permalink to this headline">¶</a></h3>
+<p>Pepper reads source data from <a class="reference internal" href="#the-source-directory">the source directory</a> and compiles it into efficient binary representation.
+The result of the compilation process is stored in the data directory.</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>.
+├── data                &lt;- Contains compiled data files
+|   ├── a14e8dfa2cd...  &lt;- Compiled file
+|   ├── 72e3cc03787...  &lt;- Another compiled file
+|   └── ...
+├── temp                &lt;- Temporary files from data compilers
+└── last.log            &lt;- Text log from the last engine execution
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-bundleignore-file">
+<h3>The .bundleignore file<a class="headerlink" href="#the-bundleignore-file" title="Permalink to this headline">¶</a></h3>
+<p>Many programs store metadata files alongside edited files. This is often the case with text editors and version control systems.</p>
+<p>When Pepper bumps into unknown files in the source directory, it quits the compilation and reports an error.</p>
+<p>The <code class="docutils literal"><span class="pre">.bundleignore</span></code> file specifies files that Pepper should ignore when compiling data.</p>
+<p>Example:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="c1"># This is a comment.</span>
+
+<span class="c1"># Blank lines are ignored.</span>
+<span class="c1"># Everything else is simple glob pattern (*, ?).</span>
+<span class="o">*.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="units-of-measurement">
+<h3>Units of measurement<a class="headerlink" href="#units-of-measurement" title="Permalink to this headline">¶</a></h3>
+<p>Pepper uses MKS (meters, kilograms and seconds) units and radians for angles.</p>
+</div>
+</div>
+<div class="section" id="boot-config-file-reference">
+<h2>boot.config file reference<a class="headerlink" href="#boot-config-file-reference" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generic-configurations">
+<h3>Generic configurations<a class="headerlink" href="#generic-configurations" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">boot_script</span> <span class="pre">=</span> <span class="pre">&quot;lua/game&quot;</span></code></dt>
+<dd>Lua script to launch on boot.</dd>
+<dt><code class="docutils literal"><span class="pre">boot_package</span> <span class="pre">=</span> <span class="pre">&quot;boot&quot;</span></code></dt>
+<dd>Package to load on boot.</dd>
+<dt><code class="docutils literal"><span class="pre">window_title</span> <span class="pre">=</span> <span class="pre">&quot;My</span> <span class="pre">window&quot;</span></code></dt>
+<dd>Title of the main window on platforms that support it.</dd>
+</dl>
+</div>
+<div class="section" id="platform-specific-configurations">
+<h3>Platform-specific configurations<a class="headerlink" href="#platform-specific-configurations" title="Permalink to this headline">¶</a></h3>
+<p>All configurations for a given <em>platform</em> are placed under a key named <em>platform</em>. E.g.:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Linux</span><span class="o">-</span><span class="n">only</span> <span class="n">configs</span>
+<span class="n">linux</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">renderer</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">resolution</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">1280</span> <span class="mi">720</span> <span class="p">]</span>
+      <span class="n">aspect_ratio</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+      <span class="n">vsync</span> <span class="o">=</span> <span class="n">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="renderer-configurations">
+<h4>Renderer configurations<a class="headerlink" href="#renderer-configurations" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">resolution</span> <span class="pre">=</span> <span class="pre">[</span> <span class="pre">1280</span> <span class="pre">720</span> <span class="pre">]</span></code></dt>
+<dd>Sets the width and height of the main window.</dd>
+<dt><code class="docutils literal"><span class="pre">aspect_ratio</span> <span class="pre">=</span> <span class="pre">-1</span></code></dt>
+<dd>Sets the aspect ratio.
+If the value is set to <code class="docutils literal"><span class="pre">-1</span></code>, the aspect ratio is computed as <code class="docutils literal"><span class="pre">width/height</span></code> of the main window.</dd>
+<dt><code class="docutils literal"><span class="pre">vsync</span> <span class="pre">=</span> <span class="pre">true</span></code></dt>
+<dd>Sets whether to enable the vsync.</dd>
+<dt><code class="docutils literal"><span class="pre">fullscreen</span> <span class="pre">=</span> <span class="pre">false</span></code></dt>
+<dd>Sets whether to enable fullscreen.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="command-line-reference">
+<h2>Command line reference<a class="headerlink" href="#command-line-reference" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-h</span></code> <code class="docutils literal"><span class="pre">--help</span></code></dt>
+<dd>Display the help and quit.</dd>
+<dt><code class="docutils literal"><span class="pre">-v</span></code> <code class="docutils literal"><span class="pre">--version</span></code></dt>
+<dd>Display engine version and quit.</dd>
+<dt><code class="docutils literal"><span class="pre">--source-dir</span> <span class="pre">&lt;path&gt;</span></code></dt>
+<dd><p class="first">Use &lt;path&gt; as the source directory for resource compilation.</p>
+<p class="last">The &lt;path&gt; must be absolute.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--data-dir</span> <span class="pre">&lt;path&gt;</span></code></dt>
+<dd><p class="first">Use &lt;path&gt; as the destination directory for compiled resources.</p>
+<p class="last">The &lt;path&gt; must be absolute.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--boot-dir</span> <span class="pre">&lt;path&gt;</span></code></dt>
+<dd><p class="first">Boot the engine with the <code class="docutils literal"><span class="pre">boot.config</span></code> from given &lt;path&gt;.</p>
+<p class="last">The &lt;path&gt; must be relative.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--compile</span></code></dt>
+<dd><p class="first">Do a full compile of the resources.</p>
+<p class="last">When using this option you must also specify <code class="docutils literal"><span class="pre">--platform</span></code>, <code class="docutils literal"><span class="pre">--source-dir</span></code> and <code class="docutils literal"><span class="pre">--data-dir</span></code>.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--platform</span> <span class="pre">&lt;platform&gt;</span></code></dt>
+<dd><p class="first">Compile resources for the given &lt;platform&gt;.
+Possible values for &lt;platform&gt; are:</p>
+<ul class="last simple">
+<li><code class="docutils literal"><span class="pre">android</span></code></li>
+<li><code class="docutils literal"><span class="pre">linux</span></code></li>
+<li><code class="docutils literal"><span class="pre">windows</span></code></li>
+</ul>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--continue</span></code></dt>
+<dd>Run the engine after resource compilation.</dd>
+<dt><code class="docutils literal"><span class="pre">--console-port</span> <span class="pre">&lt;port&gt;</span></code></dt>
+<dd><p class="first">Set port of the console.</p>
+<p class="last">When no port is specified, the engine uses the port 10001.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--wait-console</span></code></dt>
+<dd>Wait for a console connection before starting up.</dd>
+<dt><code class="docutils literal"><span class="pre">--parent-window</span> <span class="pre">&lt;handle&gt;</span></code></dt>
+<dd><p class="first">Set the parent window &lt;handle&gt; of the main window.</p>
+<p class="last">This option should be used only by the tools.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--server</span></code></dt>
+<dd><p class="first">Run the engine in server mode.</p>
+<p class="last">When using this option you must also specify <code class="docutils literal"><span class="pre">--source-dir</span></code>.</p>
+</dd>
+<dt><code class="docutils literal"><span class="pre">--run-unit-tests</span></code></dt>
+<dd>Run unit tests and quit. Available only on <code class="docutils literal"><span class="pre">linux</span></code> and <code class="docutils literal"><span class="pre">windows</span></code>.</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lua_api.html" class="btn btn-neutral float-right" title="Lua API Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="The Flexible Game Engine" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2017, Daniele Bartolini and individual contributors.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.26',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
