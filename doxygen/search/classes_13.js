@@ -8,6 +8,5 @@ var searchData=
   ['thread',['Thread',['../structcrown_1_1_thread.html',1,'crown']]],
   ['touchaxis',['TouchAxis',['../structcrown_1_1_touch_axis.html',1,'crown']]],
   ['touchbutton',['TouchButton',['../structcrown_1_1_touch_button.html',1,'crown']]],
-  ['transformdesc',['TransformDesc',['../structcrown_1_1_transform_desc.html',1,'crown']]],
-  ['transforminstance',['TransformInstance',['../structcrown_1_1_transform_instance.html',1,'crown']]]
+  ['transformdesc',['TransformDesc',['../structcrown_1_1_transform_desc.html',1,'crown']]]
 ];

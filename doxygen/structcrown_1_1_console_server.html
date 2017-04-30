@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
-<title>Pepper: crown::ConsoleServer Class Reference</title>
+<title>Pepper: crown::ConsoleServer Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,59 +46,86 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="classcrown_1_1_console_server.html">ConsoleServer</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_console_server.html">ConsoleServer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrown_1_1_console_server-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structcrown_1_1_console_server-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::ConsoleServer Class Reference<div class="ingroups"><a class="el" href="group___device.html">Device</a></div></div>  </div>
+<div class="title">crown::ConsoleServer Struct Reference<div class="ingroups"><a class="el" href="group___device.html">Device</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Provides service to communicate with engine via TCP/IP.  
- <a href="classcrown_1_1_console_server.html#details">More...</a></p>
+ <a href="structcrown_1_1_console_server.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="console__server_8h_source.html">console_server.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server_1_1_command.html">Command</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a40de3e4355f5f0c5a4515e9ee927b0c7"><td class="memItemLeft" align="right" valign="top"><a id="a40de3e4355f5f0c5a4515e9ee927b0c7"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>CommandFunction</b>) (<a class="el" href="structcrown_1_1_console_server.html">ConsoleServer</a> &amp;cs, <a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *json, void *user_data)</td></tr>
+<tr class="separator:a40de3e4355f5f0c5a4515e9ee927b0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a199ae0b830c3eb784ad0a9d3b93687fb"><td class="memItemLeft" align="right" valign="top"><a id="a199ae0b830c3eb784ad0a9d3b93687fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ConsoleServer</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#a199ae0b830c3eb784ad0a9d3b93687fb">ConsoleServer</a> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a)</td></tr>
+<tr class="memdesc:a199ae0b830c3eb784ad0a9d3b93687fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:a199ae0b830c3eb784ad0a9d3b93687fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71401690366c779f1b78225f80235b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#a71401690366c779f1b78225f80235b49">listen</a> (u16 port, bool wait)</td></tr>
+<tr class="memitem:a71401690366c779f1b78225f80235b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#a71401690366c779f1b78225f80235b49">listen</a> (u16 port, bool wait)</td></tr>
 <tr class="memdesc:a71401690366c779f1b78225f80235b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listens on the given <em>port</em>.  <a href="#a71401690366c779f1b78225f80235b49">More...</a><br /></td></tr>
 <tr class="separator:a71401690366c779f1b78225f80235b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0d7161664ae25b93505869c459c94a7"><td class="memItemLeft" align="right" valign="top"><a id="af0d7161664ae25b93505869c459c94a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#af0d7161664ae25b93505869c459c94a7">shutdown</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#af0d7161664ae25b93505869c459c94a7">shutdown</a> ()</td></tr>
 <tr class="memdesc:af0d7161664ae25b93505869c459c94a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdowns the server. <br /></td></tr>
 <tr class="separator:af0d7161664ae25b93505869c459c94a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a926e0ce3bf4788d72ae453d5d74f1cfe"><td class="memItemLeft" align="right" valign="top"><a id="a926e0ce3bf4788d72ae453d5d74f1cfe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#a926e0ce3bf4788d72ae453d5d74f1cfe">update</a> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#a926e0ce3bf4788d72ae453d5d74f1cfe">update</a> ()</td></tr>
 <tr class="memdesc:a926e0ce3bf4788d72ae453d5d74f1cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collects requests from clients and processes them all. <br /></td></tr>
 <tr class="separator:a926e0ce3bf4788d72ae453d5d74f1cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7d1ed1a7627749db5dded030f130f73"><td class="memItemLeft" align="right" valign="top"><a id="ae7d1ed1a7627749db5dded030f130f73"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73">send</a> (const char *json)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73">send</a> (const char *json)</td></tr>
 <tr class="memdesc:ae7d1ed1a7627749db5dded030f130f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the given JSON-encoded string to all clients. <br /></td></tr>
 <tr class="separator:ae7d1ed1a7627749db5dded030f130f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a570ee0747ae53f23d5ee22a026b37b08"><td class="memItemLeft" align="right" valign="top"><a id="a570ee0747ae53f23d5ee22a026b37b08"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#a570ee0747ae53f23d5ee22a026b37b08">send</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *json)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#a570ee0747ae53f23d5ee22a026b37b08">send</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *json)</td></tr>
 <tr class="memdesc:a570ee0747ae53f23d5ee22a026b37b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the given JSON-encoded string to <em>client</em>. <br /></td></tr>
 <tr class="separator:a570ee0747ae53f23d5ee22a026b37b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af58d7054fc7f242650bad1f02cf81382"><td class="memItemLeft" align="right" valign="top"><a id="af58d7054fc7f242650bad1f02cf81382"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#af58d7054fc7f242650bad1f02cf81382">error</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *msg)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#af58d7054fc7f242650bad1f02cf81382">error</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *msg)</td></tr>
 <tr class="memdesc:af58d7054fc7f242650bad1f02cf81382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an error message to <em>client</em>. <br /></td></tr>
 <tr class="separator:af58d7054fc7f242650bad1f02cf81382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80c40b3afbda9b813cdd64c462b65c39"><td class="memItemLeft" align="right" valign="top"><a id="a80c40b3afbda9b813cdd64c462b65c39"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#a80c40b3afbda9b813cdd64c462b65c39">success</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *msg)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#a80c40b3afbda9b813cdd64c462b65c39">success</a> (<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> client, const char *msg)</td></tr>
 <tr class="memdesc:a80c40b3afbda9b813cdd64c462b65c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a success message to <em>client</em>. <br /></td></tr>
 <tr class="separator:a80c40b3afbda9b813cdd64c462b65c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6a4fa5c8715f3e5b812e530de227a4a"><td class="memItemLeft" align="right" valign="top"><a id="af6a4fa5c8715f3e5b812e530de227a4a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_console_server.html#af6a4fa5c8715f3e5b812e530de227a4a">register_command</a> (const char *type, CommandFunction cmd)</td></tr>
-<tr class="memdesc:af6a4fa5c8715f3e5b812e530de227a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the command <em>type</em>. <br /></td></tr>
-<tr class="separator:af6a4fa5c8715f3e5b812e530de227a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e66c7d2287f62ec6c0dc56d8a656999"><td class="memItemLeft" align="right" valign="top"><a id="a8e66c7d2287f62ec6c0dc56d8a656999"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_console_server.html#a8e66c7d2287f62ec6c0dc56d8a656999">register_command</a> (const char *type, CommandFunction cmd, void *user_data)</td></tr>
+<tr class="memdesc:a8e66c7d2287f62ec6c0dc56d8a656999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the command <em>type</em>. <br /></td></tr>
+<tr class="separator:a8e66c7d2287f62ec6c0dc56d8a656999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a35d768819de45bc30f080c51427f4548"><td class="memItemLeft" align="right" valign="top"><a id="a35d768819de45bc30f080c51427f4548"></a>
+<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_server</b></td></tr>
+<tr class="separator:a35d768819de45bc30f080c51427f4548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46297a3e7c4f6202fe47b0f188a5d04"><td class="memItemLeft" align="right" valign="top"><a id="aa46297a3e7c4f6202fe47b0f188a5d04"></a>
+<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_clients</b></td></tr>
+<tr class="separator:aa46297a3e7c4f6202fe47b0f188a5d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88744c7d9d4a969fdba66801e7d8edaf"><td class="memItemLeft" align="right" valign="top"><a id="a88744c7d9d4a969fdba66801e7d8edaf"></a>
+<a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_string_id32.html">StringId32</a>, <a class="el" href="structcrown_1_1_console_server_1_1_command.html">Command</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_commands</b></td></tr>
+<tr class="separator:a88744c7d9d4a969fdba66801e7d8edaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides service to communicate with engine via TCP/IP. </p>
@@ -134,14 +161,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/device/<a class="el" href="console__server_8h_source.html">console_server.h</a></li>
 <li>src/device/console_server.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2017 21:05:20 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 30 2017 18:43:58 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

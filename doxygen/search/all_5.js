@@ -6,6 +6,8 @@ var searchData=
   ['fequal',['fequal',['../group___math.html#ga9370f904c105e1d86a7df603c8dc0f6b',1,'crown']]],
   ['ffract',['ffract',['../group___math.html#ga96c5e769e6b8296ddf0ce234afe8e824',1,'crown']]],
   ['file',['File',['../classcrown_1_1_file.html',1,'crown']]],
+  ['filemonitor',['FileMonitor',['../structcrown_1_1_file_monitor.html',1,'crown']]],
+  ['filemonitorevent',['FileMonitorEvent',['../structcrown_1_1_file_monitor_event.html',1,'crown']]],
   ['fileopenmode',['FileOpenMode',['../structcrown_1_1_file_open_mode.html',1,'crown']]],
   ['filesystem',['Filesystem',['../classcrown_1_1_filesystem.html',1,'crown::Filesystem'],['../group___filesystem.html',1,'(Global Namespace)']]],
   ['filesystemdisk',['FilesystemDisk',['../classcrown_1_1_filesystem_disk.html',1,'crown']]],

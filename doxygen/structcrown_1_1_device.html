@@ -69,9 +69,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4537cc4b9ea14e1b456cb8c0f0ab4c8"><td class="memItemLeft" align="right" valign="top"><a id="ab4537cc4b9ea14e1b456cb8c0f0ab4c8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>process_events</b> (s16 &amp;mouse_x, s16 &amp;mouse_y, s16 &amp;mouse_last_x, s16 &amp;mouse_last_y, bool vsync)</td></tr>
 <tr class="separator:ab4537cc4b9ea14e1b456cb8c0f0ab4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a596bb0489e64caf33f4e52c46be3cc40"><td class="memItemLeft" align="right" valign="top"><a id="a596bb0489e64caf33f4e52c46be3cc40"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Device</b> (const <a class="el" href="structcrown_1_1_device_options.html">DeviceOptions</a> &amp;opts)</td></tr>
-<tr class="separator:a596bb0489e64caf33f4e52c46be3cc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a1067dfed55585991771b84003ce88"><td class="memItemLeft" align="right" valign="top"><a id="a81a1067dfed55585991771b84003ce88"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Device</b> (const <a class="el" href="structcrown_1_1_device_options.html">DeviceOptions</a> &amp;opts, <a class="el" href="structcrown_1_1_console_server.html">ConsoleServer</a> &amp;cs)</td></tr>
+<tr class="separator:a81a1067dfed55585991771b84003ce88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8a55464f42fa29940670268644b7cf0"><td class="memItemLeft" align="right" valign="top"><a id="aa8a55464f42fa29940670268644b7cf0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0">run</a> ()</td></tr>
 <tr class="memdesc:aa8a55464f42fa29940670268644b7cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the engine. <br /></td></tr>
@@ -84,18 +84,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 const char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a3a112f8997b7e463e72252ef17c8a57a">argv</a> () const</td></tr>
 <tr class="memdesc:a3a112f8997b7e463e72252ef17c8a57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns command line parameters. <br /></td></tr>
 <tr class="separator:a3a112f8997b7e463e72252ef17c8a57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f9421c99f3d5ec229e6745954af5e2b"><td class="memItemLeft" align="right" valign="top"><a id="a7f9421c99f3d5ec229e6745954af5e2b"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a7f9421c99f3d5ec229e6745954af5e2b">platform</a> () const</td></tr>
-<tr class="memdesc:a7f9421c99f3d5ec229e6745954af5e2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying what platform the engine is running on. <br /></td></tr>
-<tr class="separator:a7f9421c99f3d5ec229e6745954af5e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c4c882f8f551f9d6b030556e78958c2"><td class="memItemLeft" align="right" valign="top"><a id="a9c4c882f8f551f9d6b030556e78958c2"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a9c4c882f8f551f9d6b030556e78958c2">architecture</a> () const</td></tr>
-<tr class="memdesc:a9c4c882f8f551f9d6b030556e78958c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying what architecture the engine is running on. <br /></td></tr>
-<tr class="separator:a9c4c882f8f551f9d6b030556e78958c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a286d7d3eb174334fe1265057ffafca5e"><td class="memItemLeft" align="right" valign="top"><a id="a286d7d3eb174334fe1265057ffafca5e"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a286d7d3eb174334fe1265057ffafca5e">version</a> () const</td></tr>
-<tr class="memdesc:a286d7d3eb174334fe1265057ffafca5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string identifying the engine version. <br /></td></tr>
-<tr class="separator:a286d7d3eb174334fe1265057ffafca5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1740ce0bd27ed055c43a1b9ea1f1215d"><td class="memItemLeft" align="right" valign="top"><a id="a1740ce0bd27ed055c43a1b9ea1f1215d"></a>
 u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a1740ce0bd27ed055c43a1b9ea1f1215d">frame_count</a> () const</td></tr>
 <tr class="memdesc:a1740ce0bd27ed055c43a1b9ea1f1215d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of frames rendered. <br /></td></tr>
@@ -125,7 +113,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memdesc:a42944015e4989ccafcad7730ce9d3f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the main window resolution. <br /></td></tr>
 <tr class="separator:a42944015e4989ccafcad7730ce9d3f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5d67f6089395a436d5cfb6074c4ffb"><td class="memItemLeft" align="right" valign="top"><a id="a2f5d67f6089395a436d5cfb6074c4ffb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a2f5d67f6089395a436d5cfb6074c4ffb">render</a> (<a class="el" href="structcrown_1_1_world.html">World</a> &amp;world, <a class="el" href="structcrown_1_1_camera_instance.html">CameraInstance</a> camera)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a2f5d67f6089395a436d5cfb6074c4ffb">render</a> (<a class="el" href="structcrown_1_1_world.html">World</a> &amp;world, CameraInstance camera)</td></tr>
 <tr class="memdesc:a2f5d67f6089395a436d5cfb6074c4ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders <em>world</em> using <em>camera</em>. <br /></td></tr>
 <tr class="separator:a2f5d67f6089395a436d5cfb6074c4ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bf21977aca9128c5f8435cc3235170"><td class="memItemLeft" align="right" valign="top"><a id="a05bf21977aca9128c5f8435cc3235170"></a>
@@ -147,10 +135,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#afae63663bdee167465f128a8e56754c9">reload</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name)</td></tr>
 <tr class="memdesc:afae63663bdee167465f128a8e56754c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reloads the resource <em>type</em> <em>name</em>. <br /></td></tr>
 <tr class="separator:afae63663bdee167465f128a8e56754c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad35ccff9c1681865b26e3d548798d3de"><td class="memItemLeft" align="right" valign="top"><a id="ad35ccff9c1681865b26e3d548798d3de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#ad35ccff9c1681865b26e3d548798d3de">log</a> (const char *msg, LogSeverity::Enum severity)</td></tr>
-<tr class="memdesc:ad35ccff9c1681865b26e3d548798d3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs <em>msg</em> to log file and console. <br /></td></tr>
-<tr class="separator:ad35ccff9c1681865b26e3d548798d3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9edbf18cc925fcc35095d164fd8ae3ff"><td class="memItemLeft" align="right" valign="top"><a id="a9edbf18cc925fcc35095d164fd8ae3ff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_device.html#a9edbf18cc925fcc35095d164fd8ae3ff">log</a> (const char *msg)</td></tr>
+<tr class="memdesc:a9edbf18cc925fcc35095d164fd8ae3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs <em>msg</em> to log file and console. <br /></td></tr>
+<tr class="separator:a9edbf18cc925fcc35095d164fd8ae3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -164,11 +152,8 @@ const <a class="el" href="structcrown_1_1_device_options.html">DeviceOptions</a>
 <a class="el" href="structcrown_1_1_boot_config.html">BootConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_boot_config</b></td></tr>
 <tr class="separator:ad4860096c24ffa71c56f5ab82148e191"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb9cd4661bab44e127c7f1320fc71259"><td class="memItemLeft" align="right" valign="top"><a id="abb9cd4661bab44e127c7f1320fc71259"></a>
-<a class="el" href="classcrown_1_1_console_server.html">ConsoleServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_console_server</b></td></tr>
+<a class="el" href="structcrown_1_1_console_server.html">ConsoleServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_console_server</b></td></tr>
 <tr class="separator:abb9cd4661bab44e127c7f1320fc71259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9374dd45a53f0072bf1acad97bd914b6"><td class="memItemLeft" align="right" valign="top"><a id="a9374dd45a53f0072bf1acad97bd914b6"></a>
-<a class="el" href="classcrown_1_1_data_compiler.html">DataCompiler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_data_compiler</b></td></tr>
-<tr class="separator:a9374dd45a53f0072bf1acad97bd914b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdcb0c6f94bb7201ff27fd2cb921cbf1"><td class="memItemLeft" align="right" valign="top"><a id="acdcb0c6f94bb7201ff27fd2cb921cbf1"></a>
 <a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_bundle_filesystem</b></td></tr>
 <tr class="separator:acdcb0c6f94bb7201ff27fd2cb921cbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,7 +179,7 @@ BgfxCallback *&#160;</td><td class="memItemRight" valign="bottom"><b>_bgfx_callb
 <a class="el" href="structcrown_1_1_material_manager.html">MaterialManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_material_manager</b></td></tr>
 <tr class="separator:a8de22ff2b984ff662af962917d6cc387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac496e3394641d4fc1acd5ddb9650fd22"><td class="memItemLeft" align="right" valign="top"><a id="ac496e3394641d4fc1acd5ddb9650fd22"></a>
-<a class="el" href="classcrown_1_1_input_manager.html">InputManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_input_manager</b></td></tr>
+<a class="el" href="structcrown_1_1_input_manager.html">InputManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_input_manager</b></td></tr>
 <tr class="separator:ac496e3394641d4fc1acd5ddb9650fd22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaec8957e46967e8f8dec7f856f98fbcd"><td class="memItemLeft" align="right" valign="top"><a id="aaec8957e46967e8f8dec7f856f98fbcd"></a>
 <a class="el" href="structcrown_1_1_unit_manager.html">UnitManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_unit_manager</b></td></tr>
@@ -264,7 +249,7 @@ f64&#160;</td><td class="memItemRight" valign="bottom"><b>_time_since_start</b><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2017 21:05:20 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 30 2017 18:43:58 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

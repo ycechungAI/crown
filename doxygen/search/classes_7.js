@@ -16,7 +16,11 @@ var searchData=
   ['hash_3c_20u8_20_3e',['hash&lt; u8 &gt;',['../structcrown_1_1hash_3_01u8_01_4.html',1,'crown']]],
   ['hash_3c_20unitid_20_3e',['hash&lt; UnitId &gt;',['../structcrown_1_1hash_3_01_unit_id_01_4.html',1,'crown']]],
   ['hashmap',['HashMap',['../structcrown_1_1_hash_map.html',1,'crown']]],
+  ['hashmap_3c_20crown_3a_3astringid32_2c_20crown_3a_3aconsoleserver_3a_3acommand_20_3e',['HashMap&lt; crown::StringId32, crown::ConsoleServer::Command &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
+  ['hashmap_3c_20crown_3a_3astringid64_2c_20resourcetypedata_20_3e',['HashMap&lt; crown::StringId64, ResourceTypeData &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
+  ['hashmap_3c_20crown_3a_3astringid64_2c_20u32_20_3e',['HashMap&lt; crown::StringId64, u32 &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
   ['hashmap_3c_20crown_3a_3aunitid_2c_20u32_20_3e',['HashMap&lt; crown::UnitId, u32 &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
+  ['hashmap_3c_20stringid32_2c_20shaderdata_20_3e',['HashMap&lt; StringId32, ShaderData &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
   ['heightfieldshape',['HeightfieldShape',['../structcrown_1_1_heightfield_shape.html',1,'crown']]],
   ['hingejoint',['HingeJoint',['../structcrown_1_1_hinge_joint.html',1,'crown']]]
 ];

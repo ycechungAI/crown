@@ -67,23 +67,15 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae0b199b6cc69dbb40807e8dba19e530e"><td class="memItemLeft" align="right" valign="top"><a id="ae0b199b6cc69dbb40807e8dba19e530e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CommandLine</b> (int argc, const char **argv)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_command_line.html#ae0b199b6cc69dbb40807e8dba19e530e">CommandLine</a> (int argc, const char **argv)</td></tr>
+<tr class="memdesc:ae0b199b6cc69dbb40807e8dba19e530e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
 <tr class="separator:ae0b199b6cc69dbb40807e8dba19e530e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa31939f1d4ff53a840cc9ff0a3c6b0b"><td class="memItemLeft" align="right" valign="top"><a id="aaa31939f1d4ff53a840cc9ff0a3c6b0b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>find_argument</b> (const char *longopt, char shortopt)</td></tr>
-<tr class="separator:aaa31939f1d4ff53a840cc9ff0a3c6b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a954fdb0288af21d52479d2b20fc0c286"><td class="memItemLeft" align="right" valign="top"><a id="a954fdb0288af21d52479d2b20fc0c286"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_shortopt</b> (const char *arg, char shortopt)</td></tr>
-<tr class="separator:a954fdb0288af21d52479d2b20fc0c286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71ba486a28c3a7912bb6b5be8e14db33"><td class="memItemLeft" align="right" valign="top"><a id="a71ba486a28c3a7912bb6b5be8e14db33"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_longopt</b> (const char *arg, const char *longopt)</td></tr>
-<tr class="separator:a71ba486a28c3a7912bb6b5be8e14db33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a131b6f9da2acc1a846da475245bb19"><td class="memItemLeft" align="right" valign="top"><a id="a6a131b6f9da2acc1a846da475245bb19"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>get_parameter</b> (int i, const char *longopt, char shortopt='\0')</td></tr>
-<tr class="separator:a6a131b6f9da2acc1a846da475245bb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4efc8bcd4911583b95b6baecb2394466"><td class="memItemLeft" align="right" valign="top"><a id="a4efc8bcd4911583b95b6baecb2394466"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_argument</b> (const char *longopt, char shortopt='\0')</td></tr>
-<tr class="separator:a4efc8bcd4911583b95b6baecb2394466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a2cb44da292987c8d089931b39eab47"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_command_line.html#a9a2cb44da292987c8d089931b39eab47">get_parameter</a> (int i, const char *longopt, char shortopt='\0')</td></tr>
+<tr class="memdesc:a9a2cb44da292987c8d089931b39eab47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the i-th parameter of the option identified by <em>longopt</em> or <em>shortopt</em>, or NULL if the parameter does not exist.  <a href="#a9a2cb44da292987c8d089931b39eab47">More...</a><br /></td></tr>
+<tr class="separator:a9a2cb44da292987c8d089931b39eab47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7839c641985aa1073338312e8ad3e25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_command_line.html#ae7839c641985aa1073338312e8ad3e25">has_option</a> (const char *longopt, char shortopt='\0')</td></tr>
+<tr class="memdesc:ae7839c641985aa1073338312e8ad3e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the command line has the option identified by <em>longopt</em> or <em>shortopt</em>.  <a href="#ae7839c641985aa1073338312e8ad3e25">More...</a><br /></td></tr>
+<tr class="separator:ae7839c641985aa1073338312e8ad3e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -96,13 +88,81 @@ const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_argv</b></t
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Helper for parsing command line. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9a2cb44da292987c8d089931b39eab47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a2cb44da292987c8d089931b39eab47">&#9670;&nbsp;</a></span>get_parameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * crown::CommandLine::get_parameter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>longopt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>shortopt</em> = <code>'\0'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the i-th parameter of the option identified by <em>longopt</em> or <em>shortopt</em>, or NULL if the parameter does not exist. </p>
+
+</div>
+</div>
+<a id="ae7839c641985aa1073338312e8ad3e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7839c641985aa1073338312e8ad3e25">&#9670;&nbsp;</a></span>has_option()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::CommandLine::has_option </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>longopt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>shortopt</em> = <code>'\0'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether the command line has the option identified by <em>longopt</em> or <em>shortopt</em>. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/core/<a class="el" href="command__line_8h_source.html">command_line.h</a></li>
+<li>src/core/command_line.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2017 21:05:20 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 30 2017 18:43:58 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

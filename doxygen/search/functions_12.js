@@ -5,7 +5,7 @@ var searchData=
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html#a7570d50231c79bdc35ab942ff488b3ea',1,'crown::ScopedMutex']]],
   ['seek',['seek',['../classcrown_1_1_file.html#a6d849fb4fdb16ffc33f24ffef4c111a9',1,'crown::File']]],
   ['seek_5fto_5fend',['seek_to_end',['../classcrown_1_1_file.html#ab045f19a41718fa85a71ac4d4c9d6870',1,'crown::File']]],
-  ['send',['send',['../classcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73',1,'crown::ConsoleServer::send(const char *json)'],['../classcrown_1_1_console_server.html#a570ee0747ae53f23d5ee22a026b37b08',1,'crown::ConsoleServer::send(TCPSocket client, const char *json)']]],
+  ['send',['send',['../structcrown_1_1_console_server.html#ae7d1ed1a7627749db5dded030f130f73',1,'crown::ConsoleServer::send(const char *json)'],['../structcrown_1_1_console_server.html#a570ee0747ae53f23d5ee22a026b37b08',1,'crown::ConsoleServer::send(TCPSocket client, const char *json)']]],
   ['set',['set',['../structcrown_1_1_dynamic_string.html#a86af0d8dfb2ab56c814bc14ed5019059',1,'crown::DynamicString::set()'],['../namespacecrown_1_1hash__map.html#ae1f9943c9834a6cb37f4df0981679c05',1,'crown::hash_map::set()'],['../namespacecrown_1_1map.html#aea7e2bdf60ff931d446a3e2e305815af',1,'crown::map::set()']]],
   ['set_5fblocking',['set_blocking',['../structcrown_1_1_t_c_p_socket.html#a80f8499997d5fe54efbae01bae5de6ac',1,'crown::TCPSocket']]],
   ['set_5fcapacity',['set_capacity',['../namespacecrown_1_1array.html#a437aadf254e9778dfe2bc1d2e88a0dc4',1,'crown::array::set_capacity()'],['../namespacecrown_1_1vector.html#a7c2bba53a08dbb2f4d10832329e8fc9e',1,'crown::vector::set_capacity()']]],
@@ -42,7 +42,7 @@ var searchData=
   ['set_5fz',['set_z',['../group___math.html#gaf53d85187407bec55ebd02f72c38e030',1,'crown']]],
   ['show',['show',['../structcrown_1_1_window.html#a8c1b03c116436894e2d5960ef9932b95',1,'crown::Window']]],
   ['show_5fcursor',['show_cursor',['../structcrown_1_1_window.html#a602119e26aff4d9dc15b10bdb0c6daff',1,'crown::Window']]],
-  ['shutdown',['shutdown',['../classcrown_1_1_console_server.html#af0d7161664ae25b93505869c459c94a7',1,'crown::ConsoleServer::shutdown()'],['../namespacecrown_1_1audio__globals.html#a50a436b99cc475a2848c6a197e51e540',1,'crown::audio_globals::shutdown()'],['../namespacecrown_1_1physics__globals.html#a01e11fbb87ea00149f15ea0482716797',1,'crown::physics_globals::shutdown()']]],
+  ['shutdown',['shutdown',['../structcrown_1_1_console_server.html#af0d7161664ae25b93505869c459c94a7',1,'crown::ConsoleServer::shutdown()'],['../namespacecrown_1_1audio__globals.html#a50a436b99cc475a2848c6a197e51e540',1,'crown::audio_globals::shutdown()'],['../namespacecrown_1_1physics__globals.html#a01e11fbb87ea00149f15ea0482716797',1,'crown::physics_globals::shutdown()']]],
   ['size',['size',['../classcrown_1_1_file.html#a84dc03d2fb8e112ed72f647f56d5df2d',1,'crown::File::size()'],['../namespacecrown_1_1array.html#a12e5d0c4d79c30b2a75e76b3c4254dcf',1,'crown::array::size()'],['../namespacecrown_1_1hash__map.html#ab4529f23e61d087e3d88bcd2f857506e',1,'crown::hash_map::size()'],['../namespacecrown_1_1map.html#ab5d6207f6ae910c1d31ce1edbba0ad79',1,'crown::map::size()'],['../namespacecrown_1_1queue.html#a7a3218d6bc6da503e8c3f9a8a4c173dd',1,'crown::queue::size()'],['../namespacecrown_1_1sort__map.html#a55bd8f1affce6e8de3a9cba74411ebd9',1,'crown::sort_map::size()'],['../namespacecrown_1_1vector.html#a6f7da7aabd4b7eb94e416d75c8d4392f',1,'crown::vector::size()'],['../namespacecrown_1_1json__object.html#ad5a1ea9147aabd741cbc745a80a18fc0',1,'crown::json_object::size()']]],
   ['skip',['skip',['../classcrown_1_1_file.html#ad0f4934aa3d26378fc6c4bdc867e56b4',1,'crown::File']]],
   ['sleep',['sleep',['../namespacecrown_1_1os.html#a98bf016f297f7a4c0fa1112692bd6f0c',1,'crown::os']]],
@@ -63,5 +63,5 @@ var searchData=
   ['stop_5fall',['stop_all',['../structcrown_1_1_sound_world.html#a84e1146efc2ea54a14656dd005f0fa8b',1,'crown::SoundWorld']]],
   ['stop_5fsound',['stop_sound',['../structcrown_1_1_world.html#a5b31d017ca5cfc3c61f112f44464095b',1,'crown::World']]],
   ['submit',['submit',['../structcrown_1_1_debug_line.html#aeb338a656490c118533ece64a3887bd8',1,'crown::DebugLine']]],
-  ['success',['success',['../classcrown_1_1_console_server.html#a80c40b3afbda9b813cdd64c462b65c39',1,'crown::ConsoleServer']]]
+  ['success',['success',['../structcrown_1_1_console_server.html#a80c40b3afbda9b813cdd64c462b65c39',1,'crown::ConsoleServer']]]
 ];

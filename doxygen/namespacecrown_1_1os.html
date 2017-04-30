@@ -134,15 +134,15 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a691ade88622a9ecac3eb3b43ef208727">getenv</a> (const char *name)</td></tr>
 <tr class="memdesc:a691ade88622a9ecac3eb3b43ef208727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the environment variable <em>name</em>. <br /></td></tr>
 <tr class="separator:a691ade88622a9ecac3eb3b43ef208727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1396fc42b8ed54add06d2892ee3ea0ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a1396fc42b8ed54add06d2892ee3ea0ac">execute_process</a> (const char *path, const char *args, <a class="el" href="group___string.html#gabb8d0cc45a7450fd244c57c4308e5bc8">StringStream</a> &amp;output)</td></tr>
-<tr class="memdesc:a1396fc42b8ed54add06d2892ee3ea0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the process <em>path</em> with the given <em>args</em> and returns its exit code.  <a href="#a1396fc42b8ed54add06d2892ee3ea0ac">More...</a><br /></td></tr>
-<tr class="separator:a1396fc42b8ed54add06d2892ee3ea0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85d8fcc83a746a56647b4de6e3cb20b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#ab85d8fcc83a746a56647b4de6e3cb20b">execute_process</a> (const char *const  *argv, <a class="el" href="group___string.html#gabb8d0cc45a7450fd244c57c4308e5bc8">StringStream</a> &amp;output)</td></tr>
+<tr class="memdesc:ab85d8fcc83a746a56647b4de6e3cb20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the process described by <em>argv</em> and returns its exit code.  <a href="#ab85d8fcc83a746a56647b4de6e3cb20b">More...</a><br /></td></tr>
+<tr class="separator:ab85d8fcc83a746a56647b4de6e3cb20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Operating system functions. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a1396fc42b8ed54add06d2892ee3ea0ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1396fc42b8ed54add06d2892ee3ea0ac">&#9670;&nbsp;</a></span>execute_process()</h2>
+<a id="ab85d8fcc83a746a56647b4de6e3cb20b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85d8fcc83a746a56647b4de6e3cb20b">&#9670;&nbsp;</a></span>execute_process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -150,14 +150,8 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">int crown::os::execute_process </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
+          <td class="paramtype">const char *const *&#160;</td>
+          <td class="paramname"><em>argv</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -173,7 +167,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       </table>
 </div><div class="memdoc">
 
-<p>Executes the process <em>path</em> with the given <em>args</em> and returns its exit code. </p>
+<p>Executes the process described by <em>argv</em> and returns its exit code. </p>
 <p>It fills <em>output</em> with stdout and stderr. </p>
 
 </div>
@@ -181,7 +175,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2017 21:05:20 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 30 2017 18:43:58 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

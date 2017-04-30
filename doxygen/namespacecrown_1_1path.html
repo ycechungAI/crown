@@ -74,16 +74,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1path.html#a87c6298b23d5423c5306e7754a86aba5">is_root</a> (const char *path)</td></tr>
 <tr class="memdesc:a87c6298b23d5423c5306e7754a86aba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <em>path</em> is the root path. <br /></td></tr>
 <tr class="separator:a87c6298b23d5423c5306e7754a86aba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0af8ce6a17bf3cb2611ffb44810e50ca"><td class="memItemLeft" align="right" valign="top"><a id="a0af8ce6a17bf3cb2611ffb44810e50ca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1path.html#a0af8ce6a17bf3cb2611ffb44810e50ca">join</a> (const char *path_a, const char *path_b, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;path)</td></tr>
-<tr class="memdesc:a0af8ce6a17bf3cb2611ffb44810e50ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends <em>path_b</em> to <em>path_a</em> and fills <em>path</em> with the result. <br /></td></tr>
-<tr class="separator:a0af8ce6a17bf3cb2611ffb44810e50ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75df09ad44e0136a4f8787c42c64d849"><td class="memItemLeft" align="right" valign="top"><a id="a75df09ad44e0136a4f8787c42c64d849"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1path.html#a75df09ad44e0136a4f8787c42c64d849">join</a> (<a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;path, const char *path_a, const char *path_b)</td></tr>
+<tr class="memdesc:a75df09ad44e0136a4f8787c42c64d849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends <em>path_b</em> to <em>path_a</em> and fills <em>path</em> with the result. <br /></td></tr>
+<tr class="separator:a75df09ad44e0136a4f8787c42c64d849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda30be5f46804efbe5be2dde58bbf52"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1path.html#aeda30be5f46804efbe5be2dde58bbf52">basename</a> (const char *path)</td></tr>
 <tr class="memdesc:aeda30be5f46804efbe5be2dde58bbf52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the basename of the <em>path</em>.  <a href="#aeda30be5f46804efbe5be2dde58bbf52">More...</a><br /></td></tr>
 <tr class="separator:aeda30be5f46804efbe5be2dde58bbf52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a898603050e2b4573e894aff42793f35a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1path.html#a898603050e2b4573e894aff42793f35a">extension</a> (const char *path)</td></tr>
 <tr class="memdesc:a898603050e2b4573e894aff42793f35a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the extension of the <em>path</em> or NULL.  <a href="#a898603050e2b4573e894aff42793f35a">More...</a><br /></td></tr>
 <tr class="separator:a898603050e2b4573e894aff42793f35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac136190e608cc4f0de2d9686c0c45d1c"><td class="memItemLeft" align="right" valign="top"><a id="ac136190e608cc4f0de2d9686c0c45d1c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1path.html#ac136190e608cc4f0de2d9686c0c45d1c">has_trailing_separator</a> (const char *path)</td></tr>
+<tr class="memdesc:ac136190e608cc4f0de2d9686c0c45d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <em>path</em> has a trailing separator. <br /></td></tr>
+<tr class="separator:ac136190e608cc4f0de2d9686c0c45d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa270336af7bdc0b3a94c388753ea9564"><td class="memItemLeft" align="right" valign="top"><a id="aa270336af7bdc0b3a94c388753ea9564"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>any_separator</b> (char c)</td></tr>
+<tr class="separator:aa270336af7bdc0b3a94c388753ea9564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5e129a64d6a500dd41ea4031ad8d97"><td class="memItemLeft" align="right" valign="top"><a id="a2c5e129a64d6a500dd41ea4031ad8d97"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1path.html#a2c5e129a64d6a500dd41ea4031ad8d97">reduce</a> (<a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;clean, const char *path)</td></tr>
+<tr class="memdesc:a2c5e129a64d6a500dd41ea4031ad8d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes unnecessary dots and separators from <em>path</em>. <br /></td></tr>
+<tr class="separator:a2c5e129a64d6a500dd41ea4031ad8d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions for operating on strings as file paths. </p>
@@ -133,7 +144,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2017 21:05:20 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 30 2017 18:43:58 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

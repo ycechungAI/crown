@@ -13,7 +13,7 @@ var searchData=
   ['min',['min',['../group___math.html#ga6d102ac898db4ba0d50c8a71f2deaff6',1,'crown::min(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#ga8cee13ecf2d06e54f8306fc688b79603',1,'crown::min(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gaab2cdd0aad9a26e05874faf61ed62c3b',1,'crown::min(const Vector4 &amp;a, const Vector4 &amp;b)']]],
   ['minimize',['minimize',['../structcrown_1_1_window.html#af6cc16c37897312a2b7bac9d998f2901',1,'crown::Window']]],
   ['modes',['modes',['../structcrown_1_1_display.html#a48bad59180eccf136c579a8deac2786d',1,'crown::Display']]],
-  ['mouse',['mouse',['../classcrown_1_1_input_manager.html#ae582114a4b68e874a6f96cfc6553f405',1,'crown::InputManager']]],
+  ['mouse',['mouse',['../structcrown_1_1_input_manager.html#ae582114a4b68e874a6f96cfc6553f405',1,'crown::InputManager']]],
   ['move',['move',['../structcrown_1_1_window.html#a9a878e6eb81c5fbfeb537c746fe3e480',1,'crown::Window']]],
   ['mtime',['mtime',['../namespacecrown_1_1os.html#aba683cea11738c6b6e15e6d2250ff74c',1,'crown::os']]]
 ];

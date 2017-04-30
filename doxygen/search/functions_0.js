@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['abort',['abort',['../namespacecrown_1_1error.html#a38ea409cab33c5614ceb3945e153ebcb',1,'crown::error']]],
+  ['abort',['abort',['../namespacecrown_1_1error.html#a7e740e75fd823d2371261462be91f62b',1,'crown::error']]],
   ['accept',['accept',['../structcrown_1_1_t_c_p_socket.html#ad8642227c5f39b4ed5a22e86fc2c5314',1,'crown::TCPSocket']]],
   ['accept_5fnonblock',['accept_nonblock',['../structcrown_1_1_t_c_p_socket.html#a514e220da54434e7bf31f75571ef56d7',1,'crown::TCPSocket']]],
   ['actor_5fadd_5fimpulse',['actor_add_impulse',['../structcrown_1_1_physics_world.html#a56d73e3a9453da636ad6601db4c74ca7',1,'crown::PhysicsWorld']]],
@@ -58,7 +58,6 @@ var searchData=
   ['angle',['angle',['../group___math.html#ga2e490c006d641557c03f98e9c6c9d133',1,'crown::angle(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#ga6bb2a6d17667136abd9b44d8b5b0e419',1,'crown::angle(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gadb460d88274f37a515055f880376b53f',1,'crown::angle(const Vector4 &amp;a, const Vector4 &amp;b)']]],
   ['any_5fpressed',['any_pressed',['../structcrown_1_1_input_device.html#a4b9544e20cdb03a53745b4895f8d006b',1,'crown::InputDevice']]],
   ['any_5freleased',['any_released',['../structcrown_1_1_input_device.html#ac5ab636ba85382a525fec900d072e0e3',1,'crown::InputDevice']]],
-  ['architecture',['architecture',['../structcrown_1_1_device.html#a9c4c882f8f551f9d6b030556e78958c2',1,'crown::Device']]],
   ['argc',['argc',['../structcrown_1_1_device.html#af74f8548368a967361e031540df2f651',1,'crown::Device']]],
   ['argv',['argv',['../structcrown_1_1_device.html#a3a112f8997b7e463e72252ef17c8a57a',1,'crown::Device']]],
   ['axis',['axis',['../structcrown_1_1_input_device.html#a9cb95f621a27b254ca5bb61b6c83b1d6',1,'crown::InputDevice']]],

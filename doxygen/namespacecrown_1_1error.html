@@ -62,19 +62,19 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a38ea409cab33c5614ceb3945e153ebcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1error.html#a38ea409cab33c5614ceb3945e153ebcb">abort</a> (const char *file, int line, const char *format,...)</td></tr>
-<tr class="memdesc:a38ea409cab33c5614ceb3945e153ebcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aborts the program execution logging an error message and the stacktrace if the platform supports it.  <a href="#a38ea409cab33c5614ceb3945e153ebcb">More...</a><br /></td></tr>
-<tr class="separator:a38ea409cab33c5614ceb3945e153ebcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85b23f65f854b6dc42f1e46131d488b2"><td class="memItemLeft" align="right" valign="top"><a id="a85b23f65f854b6dc42f1e46131d488b2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1error.html#a85b23f65f854b6dc42f1e46131d488b2">print_callstack</a> ()</td></tr>
-<tr class="memdesc:a85b23f65f854b6dc42f1e46131d488b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the current call stack. <br /></td></tr>
-<tr class="separator:a85b23f65f854b6dc42f1e46131d488b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed8ee27352a3aa3a5400b7a85deee4a"><td class="memItemLeft" align="right" valign="top"><a id="a0ed8ee27352a3aa3a5400b7a85deee4a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1error.html#a0ed8ee27352a3aa3a5400b7a85deee4a">callstack</a> (<a class="el" href="group___string.html#gabb8d0cc45a7450fd244c57c4308e5bc8">StringStream</a> &amp;ss)</td></tr>
+<tr class="memdesc:a0ed8ee27352a3aa3a5400b7a85deee4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills <em>ss</em> with the current call stack. <br /></td></tr>
+<tr class="separator:a0ed8ee27352a3aa3a5400b7a85deee4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e740e75fd823d2371261462be91f62b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1error.html#a7e740e75fd823d2371261462be91f62b">abort</a> (const char *format,...)</td></tr>
+<tr class="memdesc:a7e740e75fd823d2371261462be91f62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aborts the program execution logging an error message and the stacktrace if the platform supports it.  <a href="#a7e740e75fd823d2371261462be91f62b">More...</a><br /></td></tr>
+<tr class="separator:a7e740e75fd823d2371261462be91f62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Error management. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a38ea409cab33c5614ceb3945e153ebcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38ea409cab33c5614ceb3945e153ebcb">&#9670;&nbsp;</a></span>abort()</h2>
+<a id="a7e740e75fd823d2371261462be91f62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e740e75fd823d2371261462be91f62b">&#9670;&nbsp;</a></span>abort()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -82,18 +82,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
         <tr>
           <td class="memname">void crown::error::abort </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>line</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>format</em>, </td>
         </tr>
@@ -118,7 +106,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2017 21:05:20 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 30 2017 18:43:58 for Pepper by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

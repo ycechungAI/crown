@@ -14,7 +14,7 @@ var searchData=
   ['num_5fargs',['num_args',['../structcrown_1_1_lua_stack.html#a41c25040850c35c8f4b545b5b5620ac4',1,'crown::LuaStack']]],
   ['num_5faxes',['num_axes',['../structcrown_1_1_input_device.html#a320f0962110a88f69a25efcef028e1b3',1,'crown::InputDevice']]],
   ['num_5fbuttons',['num_buttons',['../structcrown_1_1_input_device.html#a5a910bf700624db402a29bcc13a331af',1,'crown::InputDevice']]],
-  ['num_5fjoypads',['num_joypads',['../classcrown_1_1_input_manager.html#a40594c723f193844bfa2bc8d358ae27e',1,'crown::InputManager']]],
+  ['num_5fjoypads',['num_joypads',['../structcrown_1_1_input_manager.html#a40594c723f193844bfa2bc8d358ae27e',1,'crown::InputManager']]],
   ['num_5fnodes',['num_nodes',['../structcrown_1_1_scene_graph.html#a3d2c8106d0b5fee4fe807adccfdb02d8',1,'crown::SceneGraph']]],
   ['num_5fsegments',['NUM_SEGMENTS',['../structcrown_1_1_debug_line.html#a28d83c2208f7fac441b08fdad462ae11',1,'crown::DebugLine']]],
   ['num_5funits',['num_units',['../structcrown_1_1_world.html#a2f3dd841fc9019e2dfe102c97c127885',1,'crown::World']]]
