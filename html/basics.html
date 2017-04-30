@@ -190,13 +190,13 @@ correctly:</p>
 <h2>The boot directory and the boot.config file<a class="headerlink" href="#the-boot-directory-and-the-boot-config-file" title="Permalink to this headline">¶</a></h2>
 <p>Any directory within <a class="reference internal" href="#the-source-directory">the source directory</a> containing the file named <code class="docutils literal"><span class="pre">boot.config</span></code> is a boot
 directory.</p>
-<p>The <code class="docutils literal"><span class="pre">boot.config</span></code> is the first file read by Pepper; it specifies the package to load and the lua
+<p>The <code class="docutils literal"><span class="pre">boot.config</span></code> is the first file read by Crown; it specifies the package to load and the lua
 script to execute on boot and various other boot-time settings.
 See <a href="#id1"><span class="problematic" id="id2">`boot.config file reference`_</span></a> for more details.</p>
 <p>Normally there is a single <code class="docutils literal"><span class="pre">boot.config</span></code> file, placed at the top of the source directory. This is
-the file which Pepper looks at by default.</p>
+the file which Crown looks at by default.</p>
 <p>In some circumstances is desirable to have multiple <code class="docutils literal"><span class="pre">boot.config</span></code> files.
-You can set which boot directory Pepper should use with the switch <code class="docutils literal"><span class="pre">--boot-dir</span></code>.</p>
+You can set which boot directory Crown should use with the switch <code class="docutils literal"><span class="pre">--boot-dir</span></code>.</p>
 <p>In the example below, a minimal <code class="docutils literal"><span class="pre">boot.config</span></code> file tells the engine to load the package <code class="docutils literal"><span class="pre">boot</span></code>
 and run the Lua script <code class="docutils literal"><span class="pre">lua/game</span></code>.</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>$ cat boot.config
@@ -207,7 +207,7 @@ boot_script  = &quot;lua/game&quot;  // Lua script to execute on boot
 </div>
 <div class="section" id="the-data-directory">
 <h2>The data directory<a class="headerlink" href="#the-data-directory" title="Permalink to this headline">¶</a></h2>
-<p>Pepper reads source data from <a class="reference internal" href="#the-source-directory">the source directory</a> and compiles it into efficient binary
+<p>Crown reads source data from <a class="reference internal" href="#the-source-directory">the source directory</a> and compiles it into efficient binary
 representation. The result of the compilation process is stored in the data directory.</p>
 <div class="code highlight-default"><div class="highlight"><pre><span></span>.
 ├── data                &lt;- Contains compiled data files
@@ -221,8 +221,8 @@ representation. The result of the compilation process is stored in the data dire
 </div>
 <div class="section" id="the-dataignore-file">
 <h2>The .dataignore file<a class="headerlink" href="#the-dataignore-file" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">.dataignore</span></code> file specifies files that Pepper should ignore when compiling data.</p>
-<p>When Pepper bumps into unknown files in the source directory, it reports and error and quits the
+<p>The <code class="docutils literal"><span class="pre">.dataignore</span></code> file specifies files that Crown should ignore when compiling data.</p>
+<p>When Crown bumps into unknown files in the source directory, it reports and error and quits the
 compilation.
 This is often desired behavior, since you do not want non-essential data in your source directory.</p>
 <p>In all other cases, you should create a <code class="docutils literal"><span class="pre">.dataignore</span></code> in the source directory.</p>
@@ -238,7 +238,7 @@ This is often desired behavior, since you do not want non-essential data in your
 </div>
 <div class="section" id="units-of-measurement">
 <h2>Units of measurement<a class="headerlink" href="#units-of-measurement" title="Permalink to this headline">¶</a></h2>
-<p>Pepper uses MKS (meters, kilograms and seconds) units and radians for angles.</p>
+<p>Crown uses MKS (meters, kilograms and seconds) units and radians for angles.</p>
 </div>
 </div>
 
