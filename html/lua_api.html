@@ -634,29 +634,29 @@ enable depth test when rendering the lines.</dd>
 Projection can be either <code class="docutils literal"><span class="pre">orthographic</span></code> or <code class="docutils literal"><span class="pre">perspective</span></code>.</dd>
 <dt><strong>camera_instances</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the cameras of the <em>unit</em>.</dd>
-<dt><strong>camera_set_projection_type</strong> (world, camera, projection)</dt>
+<dt><strong>camera_set_projection_type</strong> (world, unit, projection)</dt>
 <dd>Sets the projection type of the camera.
 Projection can be either <code class="docutils literal"><span class="pre">orthographic</span></code> or <code class="docutils literal"><span class="pre">perspective</span></code>.</dd>
-<dt><strong>camera_projection_type</strong> (world, camera) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dt><strong>camera_projection_type</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the projection type of the camera.
 It can be either <code class="docutils literal"><span class="pre">orthographic</span></code> or <code class="docutils literal"><span class="pre">perspective</span></code>.</dd>
-<dt><strong>camera_fov</strong> (world, camera) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dt><strong>camera_fov</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the field-of-view of the camera in degrees.</dd>
-<dt><strong>camera_set_fov</strong> (world, camera, fov)</dt>
+<dt><strong>camera_set_fov</strong> (world, unit, fov)</dt>
 <dd>Sets the field-of-view of the camera in degrees.</dd>
-<dt><strong>camera_near_clip_distance</strong> (world, camera) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dt><strong>camera_near_clip_distance</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the near clip distance of the camera.</dd>
-<dt><strong>camera_set_near_clip_distance</strong> (world, camera, near)</dt>
+<dt><strong>camera_set_near_clip_distance</strong> (world, unit, near)</dt>
 <dd>Sets the near clip distance of the camera.</dd>
-<dt><strong>camera_far_clip_distance</strong> (world, camera) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dt><strong>camera_far_clip_distance</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the far clip distance of the camera.</dd>
-<dt><strong>camera_set_far_clip_distance</strong> (world, camera, far)</dt>
+<dt><strong>camera_set_far_clip_distance</strong> (world, unit, far)</dt>
 <dd>Sets the far clip distance of the camera.</dd>
-<dt><strong>camera_set_orthographic_metrics</strong> (world, camera, left, right, bottom, top)</dt>
+<dt><strong>camera_set_orthographic_metrics</strong> (world, unit, left, right, bottom, top)</dt>
 <dd>Sets the coordinates for orthographic clipping planes. (Orthographic projection only.)</dd>
-<dt><strong>camera_screen_to_world</strong> (world, camera, pos) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
+<dt><strong>camera_screen_to_world</strong> (world, unit, pos) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns <em>pos</em> from screen-space to world-space coordinates.</dd>
-<dt><strong>camera_world_to_screen</strong> (world, camera, pos) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
+<dt><strong>camera_world_to_screen</strong> (world, unit, pos) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns <em>pos</em> from world-space to screen-space coordinates.</dd>
 </dl>
 </div>
