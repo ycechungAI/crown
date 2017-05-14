@@ -55,6 +55,7 @@ var searchData=
   ['sprite_5fflip_5fx',['sprite_flip_x',['../structcrown_1_1_render_world.html#a4d8bc191fc2a5acb876a12f3581c3082',1,'crown::RenderWorld']]],
   ['sprite_5fflip_5fy',['sprite_flip_y',['../structcrown_1_1_render_world.html#aa45cb3f01b15557dc960f0c8561b2353',1,'crown::RenderWorld']]],
   ['sprite_5finstances',['sprite_instances',['../structcrown_1_1_render_world.html#a9f17a2303c8d290fc1290ca8d9c95623',1,'crown::RenderWorld']]],
+  ['sprite_5fobb',['sprite_obb',['../structcrown_1_1_render_world.html#ad91f21122ef3bb0babe391f4b95aa693',1,'crown::RenderWorld']]],
   ['sprite_5fraycast',['sprite_raycast',['../structcrown_1_1_render_world.html#adc3651975ed51cb658159f4d311dc2fe',1,'crown::RenderWorld']]],
   ['sprite_5fset_5fframe',['sprite_set_frame',['../structcrown_1_1_render_world.html#aea23670c502e08857a26c3126568b9f7',1,'crown::RenderWorld']]],
   ['sprite_5fset_5fmaterial',['sprite_set_material',['../structcrown_1_1_render_world.html#a635f4cc64fc3ecd22cd8548ffd079afd',1,'crown::RenderWorld']]],
