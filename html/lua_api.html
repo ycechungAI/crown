@@ -754,7 +754,7 @@ After unlinking, the &#64;a unit&#8217;s local pose is set to its previous world
 <dt><strong>mesh_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the meshes of the <em>unit</em>.</dd>
 <dt><strong>mesh_obb</strong> (rw, id) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4, Vector3</span></dt>
-<dd>Returns the OBB of the mesh <em>id</em>.</dd>
+<dd>Returns the OBB of the mesh <em>id</em> as (pose, half_extents).</dd>
 <dt><strong>mesh_raycast</strong> (rw, id, from, dir) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the distance along ray (from, dir) to intersection point with the mesh <em>id</em> or -1.0 if no intersection.</dd>
 </dl>
@@ -772,12 +772,12 @@ After unlinking, the &#64;a unit&#8217;s local pose is set to its previous world
 <dd>Sets the frame <em>index</em> of the sprite.</dd>
 <dt><strong>sprite_set_visible</strong> (rw, unit, visible)</dt>
 <dd>Sets whether the sprite is <em>visible</em>.</dd>
-<dt><strong>sprite_obb</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4, Vector3</span></dt>
-<dd>Returns the OBB of the sprite.</dd>
 <dt><strong>sprite_flip_x</strong> (rw, unit, flip)</dt>
 <dd>Sets whether to flip the sprite on the x-axis.</dd>
 <dt><strong>sprite_flip_y</strong> (rw, unit, flip)</dt>
 <dd>Sets whether to flip the sprite on the y-axis.</dd>
+<dt><strong>sprite_obb</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4, Vector3</span></dt>
+<dd>Returns the OBB of the sprite as (pose, half_extents).</dd>
 <dt><strong>sprite_raycast</strong> (rw, unit, from, dir) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the distance along ray (from, dir) to intersection point with the sprite or -1.0 if no
 intersection.</dd>
