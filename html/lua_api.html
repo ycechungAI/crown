@@ -652,8 +652,9 @@ It can be either <code class="docutils literal"><span class="pre">orthographic</
 <dd>Returns the far clip distance of the camera.</dd>
 <dt><strong>camera_set_far_clip_distance</strong> (world, unit, far)</dt>
 <dd>Sets the far clip distance of the camera.</dd>
-<dt><strong>camera_set_orthographic_metrics</strong> (world, unit, left, right, bottom, top)</dt>
-<dd>Sets the coordinates for orthographic clipping planes. (Orthographic projection only.)</dd>
+<dt><strong>camera_set_orthographic_size</strong> (world, unit, half_size)</dt>
+<dd>Sets the vertical <em>half_size</em> of the orthographic view volume.
+The horizontal size is proportional to the viewport’s aspect ratio.</dd>
 <dt><strong>camera_screen_to_world</strong> (world, unit, pos) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns <em>pos</em> from screen-space to world-space coordinates.</dd>
 <dt><strong>camera_world_to_screen</strong> (world, unit, pos) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
@@ -724,7 +725,7 @@ After this call, the sound <em>id</em> will follow the unit <em>unit</em>.</dd>
 <dd>Links the unit <em>child</em> to the unit <em>parent</em>.</dd>
 <dt><strong>unlink</strong> (sg, unit)</dt>
 <dd>Unlinks the <em>unit</em> from its parent if it has any.
-After unlinking, the &#64;a unit&#8217;s local pose is set to its previous world pose.</dd>
+After unlinking, the &#64;a unit’s local pose is set to its previous world pose.</dd>
 </dl>
 </div>
 <div class="section" id="material">
@@ -956,7 +957,7 @@ It can be either <code class="docutils literal"><span class="pre">android</span>
 It can be either <code class="docutils literal"><span class="pre">32-bit</span></code> or <code class="docutils literal"><span class="pre">64-bit</span></code>.</dd>
 <dt><strong>version</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying the engine version.
-The form is &#8220;major.minor.micro&#8221;.</dd>
+The form is “major.minor.micro”.</dd>
 <dt><strong>last_delta_time</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the time in seconds needed to render the last frame</dd>
 <dt><strong>quit</strong> ()</dt>
