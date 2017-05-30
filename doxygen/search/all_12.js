@@ -26,7 +26,6 @@ var searchData=
   ['set_5flocal_5frotation',['set_local_rotation',['../structcrown_1_1_scene_graph.html#a16f7b6503194c75c18724e97d594fe63',1,'crown::SceneGraph']]],
   ['set_5flocal_5fscale',['set_local_scale',['../structcrown_1_1_scene_graph.html#a48090e6ee2b5c837e226a833dc75b11c',1,'crown::SceneGraph']]],
   ['set_5fmode',['set_mode',['../structcrown_1_1_display.html#a347187da2901ace2e10c62fd5f28981f',1,'crown::Display']]],
-  ['set_5fmodule_5fconstructor',['set_module_constructor',['../structcrown_1_1_lua_environment.html#a1a160bd5484dc82be50fe68786328db5',1,'crown::LuaEnvironment']]],
   ['set_5fprefix',['set_prefix',['../classcrown_1_1_filesystem_disk.html#a6079519310a3b072b8a2807d0cf64549',1,'crown::FilesystemDisk']]],
   ['set_5freuse_5faddress',['set_reuse_address',['../structcrown_1_1_t_c_p_socket.html#adf751aef623227a9966ebe92e27becb1',1,'crown::TCPSocket']]],
   ['set_5frotation',['set_rotation',['../group___math.html#gac76f5db064ce45028a62eeeae6cfe997',1,'crown::set_rotation(Matrix4x4 &amp;m, const Matrix3x3 &amp;rot)'],['../group___math.html#ga68154889c10dcc8c4d4f9af51fc37f05',1,'crown::set_rotation(Matrix4x4 &amp;m, const Quaternion &amp;rot)']]],
