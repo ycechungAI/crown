@@ -42,6 +42,7 @@ var searchData=
   ['add_5fcircle',['add_circle',['../structcrown_1_1_debug_line.html#a5e0f5e1f123c05c2f2ea8327fa3b6b3f',1,'crown::DebugLine']]],
   ['add_5fcone',['add_cone',['../structcrown_1_1_debug_line.html#a034f66410a61ad3ef0451db57c228bbd',1,'crown::DebugLine']]],
   ['add_5ffrustum',['add_frustum',['../structcrown_1_1_debug_line.html#abae93657f1006190489fa29517a51963',1,'crown::DebugLine']]],
+  ['add_5fignore_5fglob',['add_ignore_glob',['../classcrown_1_1_data_compiler.html#abb8357db97728b6288dfad60f3a29a6e',1,'crown::DataCompiler']]],
   ['add_5fline',['add_line',['../structcrown_1_1_debug_line.html#ad65a8a90ffe572de0190b8df802cdd8d',1,'crown::DebugLine']]],
   ['add_5fmesh',['add_mesh',['../structcrown_1_1_debug_line.html#afb360fa2341eb9be60aac790e4f0a4c6',1,'crown::DebugLine']]],
   ['add_5fmodule_5ffunction',['add_module_function',['../structcrown_1_1_lua_environment.html#a226b97ca10e65b1277f9aa5868639a9e',1,'crown::LuaEnvironment::add_module_function(const char *module, const char *name, const lua_CFunction func)'],['../structcrown_1_1_lua_environment.html#abd455a30a8badd2c1ab6d0e12aeff342',1,'crown::LuaEnvironment::add_module_function(const char *module, const char *name, const char *func)']]],

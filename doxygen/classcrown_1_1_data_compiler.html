@@ -53,6 +53,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcrown_1_1_data_compiler-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">crown::DataCompiler Class Reference</div>  </div>
@@ -71,25 +72,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>map_source_dir</b> (c
 void&#160;</td><td class="memItemRight" valign="bottom"><b>source_dir</b> (const char *resource_name, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;source_dir)</td></tr>
 <tr class="separator:af127380d2c60c3c9819cf5880141487e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8357db97728b6288dfad60f3a29a6e"><td class="memItemLeft" align="right" valign="top"><a id="abb8357db97728b6288dfad60f3a29a6e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add_ignore_glob</b> (const char *glob)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#abb8357db97728b6288dfad60f3a29a6e">add_ignore_glob</a> (const char *glob)</td></tr>
+<tr class="memdesc:abb8357db97728b6288dfad60f3a29a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <em>glob</em> pattern to ignore when scanning the source directory. <br /></td></tr>
 <tr class="separator:abb8357db97728b6288dfad60f3a29a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db347d93bcf6b2104090f712e66c501"><td class="memItemLeft" align="right" valign="top"><a id="a4db347d93bcf6b2104090f712e66c501"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#a4db347d93bcf6b2104090f712e66c501">scan</a> ()</td></tr>
-<tr class="memdesc:a4db347d93bcf6b2104090f712e66c501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans source tree for resources. <br /></td></tr>
+<tr class="memdesc:a4db347d93bcf6b2104090f712e66c501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans source directory for resources. <br /></td></tr>
 <tr class="separator:a4db347d93bcf6b2104090f712e66c501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad68d12db5b4209761166d801d314ab5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#ad68d12db5b4209761166d801d314ab5c">compile</a> (const char *bundle_dir, const char *platform)</td></tr>
-<tr class="memdesc:ad68d12db5b4209761166d801d314ab5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in the source tree and puts them in <em>bundle_dir</em>.  <a href="#ad68d12db5b4209761166d801d314ab5c">More...</a><br /></td></tr>
+<tr class="memdesc:ad68d12db5b4209761166d801d314ab5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in the source directory and puts them in <em>bundle_dir</em>.  <a href="#ad68d12db5b4209761166d801d314ab5c">More...</a><br /></td></tr>
 <tr class="separator:ad68d12db5b4209761166d801d314ab5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b6b21708cd324e8b7bbba07c14b306"><td class="memItemLeft" align="right" valign="top"><a id="aa4b6b21708cd324e8b7bbba07c14b306"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#aa4b6b21708cd324e8b7bbba07c14b306">register_compiler</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, u32 version, CompileFunction compiler)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#aa4b6b21708cd324e8b7bbba07c14b306">register_compiler</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, u32 <a class="el" href="classcrown_1_1_data_compiler.html#af3979031f96a20577758844a74fbb6c6">version</a>, CompileFunction compiler)</td></tr>
 <tr class="memdesc:aa4b6b21708cd324e8b7bbba07c14b306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the resource <em>compiler</em> for the given resource <em>type</em> and <em>version</em>. <br /></td></tr>
 <tr class="separator:aa4b6b21708cd324e8b7bbba07c14b306"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3979031f96a20577758844a74fbb6c6"><td class="memItemLeft" align="right" valign="top"><a id="af3979031f96a20577758844a74fbb6c6"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>version</b> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type)</td></tr>
+<tr class="memitem:a187bbdb530e6834f18616d67881039ab"><td class="memItemLeft" align="right" valign="top"><a id="a187bbdb530e6834f18616d67881039ab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#a187bbdb530e6834f18616d67881039ab">can_compile</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type)</td></tr>
+<tr class="memdesc:a187bbdb530e6834f18616d67881039ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether there is a compiler for the resource <em>type</em>. <br /></td></tr>
+<tr class="separator:a187bbdb530e6834f18616d67881039ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3979031f96a20577758844a74fbb6c6"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#af3979031f96a20577758844a74fbb6c6">version</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type)</td></tr>
+<tr class="memdesc:af3979031f96a20577758844a74fbb6c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version of the compiler for <em>type</em> or COMPILER_NOT_FOUND if no compiler is found.  <a href="#af3979031f96a20577758844a74fbb6c6">More...</a><br /></td></tr>
 <tr class="separator:af3979031f96a20577758844a74fbb6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca1e087826df9b0d86260f95cebdf47"><td class="memItemLeft" align="right" valign="top"><a id="a6ca1e087826df9b0d86260f95cebdf47"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *msg, va_list args)</td></tr>
 <tr class="separator:a6ca1e087826df9b0d86260f95cebdf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a80528a15720f32e95c356b6e37e61791"><td class="memItemLeft" align="right" valign="top"><a id="a80528a15720f32e95c356b6e37e61791"></a>
+static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>COMPILER_NOT_FOUND</b> = UINT32_MAX</td></tr>
+<tr class="separator:a80528a15720f32e95c356b6e37e61791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad68d12db5b4209761166d801d314ab5c"></a>
@@ -118,8 +130,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char
       </table>
 </div><div class="memdoc">
 
-<p>Compiles all the resources found in the source tree and puts them in <em>bundle_dir</em>. </p>
+<p>Compiles all the resources found in the source directory and puts them in <em>bundle_dir</em>. </p>
 <p>Returns true on success, false otherwise. </p>
+
+</div>
+</div>
+<a id="af3979031f96a20577758844a74fbb6c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3979031f96a20577758844a74fbb6c6">&#9670;&nbsp;</a></span>version()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u32 crown::DataCompiler::version </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_string_id64.html">StringId64</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the version of the compiler for <em>type</em> or COMPILER_NOT_FOUND if no compiler is found. </p>
 
 </div>
 </div>
@@ -130,7 +162,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 30 2017 23:09:19 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 1 2017 23:18:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
