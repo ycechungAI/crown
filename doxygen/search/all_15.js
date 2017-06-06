@@ -7,7 +7,7 @@ var searchData=
   ['vector4',['Vector4',['../structcrown_1_1_vector4.html',1,'crown::Vector4'],['../group___math.html#gac6e9afc181facd9c523ce1fafb3405b5',1,'crown::vector4(f32 x, f32 y, f32 z, f32 w)']]],
   ['vector_3c_20crown_3a_3adynamicstring_20_3e',['Vector&lt; crown::DynamicString &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
   ['vector_3c_20crown_3a_3amap_3a_3anode_20_3e',['Vector&lt; crown::Map::Node &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
-  ['vector_3c_20crown_3a_3asortmap_3a_3aentry_20_3e',['Vector&lt; crown::SortMap::Entry &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
+  ['vector_3c_20entry_20_3e',['Vector&lt; Entry &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
   ['vector_3c_20staticcompile_20_3e',['Vector&lt; StaticCompile &gt;',['../structcrown_1_1_vector.html',1,'crown']]],
   ['version',['version',['../classcrown_1_1_data_compiler.html#af3979031f96a20577758844a74fbb6c6',1,'crown::DataCompiler']]],
   ['vertex',['vertex',['../namespacecrown_1_1aabb.html#a0bf58bcf11e451a3a6c0c71cda1257c9',1,'crown::aabb::vertex()'],['../namespacecrown_1_1frustum.html#a041c9602c2051442bb8ec1d5eaeccd90',1,'crown::frustum::vertex()']]],

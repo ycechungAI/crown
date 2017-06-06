@@ -56,9 +56,14 @@ $(function() {
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcrown_1_1_data_compiler-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::DataCompiler Class Reference</div>  </div>
+<div class="title">crown::DataCompiler Class Reference<div class="ingroups"><a class="el" href="group___resource.html">Resource</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Compiles source data into binary.  
+ <a href="classcrown_1_1_data_compiler.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="data__compiler_8h_source.html">data_compiler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -79,9 +84,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#a4db347d93bcf6b2104090f712e66c501">scan</a> ()</td></tr>
 <tr class="memdesc:a4db347d93bcf6b2104090f712e66c501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scans source directory for resources. <br /></td></tr>
 <tr class="separator:a4db347d93bcf6b2104090f712e66c501"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad68d12db5b4209761166d801d314ab5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#ad68d12db5b4209761166d801d314ab5c">compile</a> (const char *bundle_dir, const char *platform)</td></tr>
-<tr class="memdesc:ad68d12db5b4209761166d801d314ab5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in the source directory and puts them in <em>bundle_dir</em>.  <a href="#ad68d12db5b4209761166d801d314ab5c">More...</a><br /></td></tr>
-<tr class="separator:ad68d12db5b4209761166d801d314ab5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e797e2dab14232028b2a8f70e5a233"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#a83e797e2dab14232028b2a8f70e5a233">compile</a> (const char *data_dir, const char *platform)</td></tr>
+<tr class="memdesc:a83e797e2dab14232028b2a8f70e5a233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiles all the resources found in the source directory and puts them in <em>data_dir</em>.  <a href="#a83e797e2dab14232028b2a8f70e5a233">More...</a><br /></td></tr>
+<tr class="separator:a83e797e2dab14232028b2a8f70e5a233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4b6b21708cd324e8b7bbba07c14b306"><td class="memItemLeft" align="right" valign="top"><a id="aa4b6b21708cd324e8b7bbba07c14b306"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrown_1_1_data_compiler.html#aa4b6b21708cd324e8b7bbba07c14b306">register_compiler</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, u32 <a class="el" href="classcrown_1_1_data_compiler.html#af3979031f96a20577758844a74fbb6c6">version</a>, CompileFunction compiler)</td></tr>
 <tr class="memdesc:aa4b6b21708cd324e8b7bbba07c14b306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the resource <em>compiler</em> for the given resource <em>type</em> and <em>version</em>. <br /></td></tr>
@@ -103,9 +108,11 @@ Static Public Attributes</h2></td></tr>
 static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>COMPILER_NOT_FOUND</b> = UINT32_MAX</td></tr>
 <tr class="separator:a80528a15720f32e95c356b6e37e61791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad68d12db5b4209761166d801d314ab5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad68d12db5b4209761166d801d314ab5c">&#9670;&nbsp;</a></span>compile()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Compiles source data into binary. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a83e797e2dab14232028b2a8f70e5a233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e797e2dab14232028b2a8f70e5a233">&#9670;&nbsp;</a></span>compile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -114,7 +121,7 @@ static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>COMPILER_
           <td class="memname">bool crown::DataCompiler::compile </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>bundle_dir</em>, </td>
+          <td class="paramname"><em>data_dir</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -130,7 +137,7 @@ static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>COMPILER_
       </table>
 </div><div class="memdoc">
 
-<p>Compiles all the resources found in the source directory and puts them in <em>bundle_dir</em>. </p>
+<p>Compiles all the resources found in the source directory and puts them in <em>data_dir</em>. </p>
 <p>Returns true on success, false otherwise. </p>
 
 </div>
@@ -162,7 +169,7 @@ static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>COMPILER_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 1 2017 23:18:22 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 6 2017 22:20:52 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
