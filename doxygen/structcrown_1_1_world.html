@@ -76,7 +76,7 @@ Public Member Functions</h2></td></tr>
 CameraInstance&#160;</td><td class="memItemRight" valign="bottom"><b>camera_make_instance</b> (u32 i)</td></tr>
 <tr class="separator:a667322fa00b553f16eb078c87231854c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6214e129fb1d74b269451b1ce195afe3"><td class="memItemLeft" align="right" valign="top"><a id="a6214e129fb1d74b269451b1ce195afe3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>World</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> &amp;rm, <a class="el" href="structcrown_1_1_shader_manager.html">ShaderManager</a> &amp;sm, <a class="el" href="structcrown_1_1_material_manager.html">MaterialManager</a> &amp;mm, <a class="el" href="structcrown_1_1_unit_manager.html">UnitManager</a> &amp;um, <a class="el" href="structcrown_1_1_lua_environment.html">LuaEnvironment</a> &amp;env)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>World</b> (<a class="el" href="classcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="structcrown_1_1_resource_manager.html">ResourceManager</a> &amp;rm, <a class="el" href="structcrown_1_1_shader_manager.html">ShaderManager</a> &amp;sm, <a class="el" href="structcrown_1_1_material_manager.html">MaterialManager</a> &amp;mm, <a class="el" href="structcrown_1_1_unit_manager.html">UnitManager</a> &amp;um, <a class="el" href="structcrown_1_1_lua_environment.html">LuaEnvironment</a> &amp;env)</td></tr>
 <tr class="separator:a6214e129fb1d74b269451b1ce195afe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43fa063295d6559a07bc838078195861"><td class="memItemLeft" align="right" valign="top"><a id="a43fa063295d6559a07bc838078195861"></a>
 <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a43fa063295d6559a07bc838078195861">spawn_unit</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos=VECTOR3_ZERO, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot=QUATERNION_IDENTITY)</td></tr>
@@ -252,7 +252,7 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 <a class="el" href="classcrown_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_allocator</b></td></tr>
 <tr class="separator:abe9e8bf0e0a22d3ed0715dffa5ef831c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d43407ab74ff7505b19493e5263655f"><td class="memItemLeft" align="right" valign="top"><a id="a4d43407ab74ff7505b19493e5263655f"></a>
-<a class="el" href="classcrown_1_1_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_resource_manager</b></td></tr>
+<a class="el" href="structcrown_1_1_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_resource_manager</b></td></tr>
 <tr class="separator:a4d43407ab74ff7505b19493e5263655f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ea4b0869b5a1d2be28e2af7a49747f6"><td class="memItemLeft" align="right" valign="top"><a id="a3ea4b0869b5a1d2be28e2af7a49747f6"></a>
 <a class="el" href="structcrown_1_1_shader_manager.html">ShaderManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_shader_manager</b></td></tr>
@@ -284,6 +284,9 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 <tr class="memitem:a961cf2977658993d56e6bf825dd49323"><td class="memItemLeft" align="right" valign="top"><a id="a961cf2977658993d56e6bf825dd49323"></a>
 <a class="el" href="structcrown_1_1_script_world.html">ScriptWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_script_world</b></td></tr>
 <tr class="separator:a961cf2977658993d56e6bf825dd49323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af3b055a3b4e1180889f89798b41396"><td class="memItemLeft" align="right" valign="top"><a id="a5af3b055a3b4e1180889f89798b41396"></a>
+<a class="el" href="structcrown_1_1_animation_state_machine.html">AnimationStateMachine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_animation_state_machine</b></td></tr>
+<tr class="separator:a5af3b055a3b4e1180889f89798b41396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3459300df01c2f811ee5bbee165bed31"><td class="memItemLeft" align="right" valign="top"><a id="a3459300df01c2f811ee5bbee165bed31"></a>
 <a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_units</b></td></tr>
 <tr class="separator:a3459300df01c2f811ee5bbee165bed31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -448,7 +451,7 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 22:20:52 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 15 2017 22:46:46 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

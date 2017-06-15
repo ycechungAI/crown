@@ -73,9 +73,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ad4c723f44a4aee3ad93dba263f12aece"><td class="memItemLeft" align="right" valign="top"><a id="ad4c723f44a4aee3ad93dba263f12aece"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyFunction</b>) (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, void *user_ptr)</td></tr>
-<tr class="separator:ad4c723f44a4aee3ad93dba263f12aece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae557883148b8a70ef0ac38b4292478e5"><td class="memItemLeft" align="right" valign="top"><a id="ae557883148b8a70ef0ac38b4292478e5"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyFunction</b>) (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, void *user_data)</td></tr>
+<tr class="separator:ae557883148b8a70ef0ac38b4292478e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -101,12 +101,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_unit_manager.html#aa860d341c7ed480b57938ece7e8eb299">destroy</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="memdesc:aa860d341c7ed480b57938ece7e8eb299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the unit <em>id</em>. <br /></td></tr>
 <tr class="separator:aa860d341c7ed480b57938ece7e8eb299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8516602a4a574abf8c17d530111ea33c"><td class="memItemLeft" align="right" valign="top"><a id="a8516602a4a574abf8c17d530111ea33c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_destroy_function</b> (DestroyFunction fn, void *user_ptr)</td></tr>
-<tr class="separator:a8516602a4a574abf8c17d530111ea33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92e9cf4cea0a440bb98b1a4ee45d0903"><td class="memItemLeft" align="right" valign="top"><a id="a92e9cf4cea0a440bb98b1a4ee45d0903"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_destroy_function</b> (void *user_ptr)</td></tr>
-<tr class="separator:a92e9cf4cea0a440bb98b1a4ee45d0903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b548ae17cb306ceb05ad0d64e404b2"><td class="memItemLeft" align="right" valign="top"><a id="a21b548ae17cb306ceb05ad0d64e404b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>register_destroy_function</b> (DestroyFunction fn, void *user_data)</td></tr>
+<tr class="separator:a21b548ae17cb306ceb05ad0d64e404b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45b7c224bd97becab214f974f1e6d709"><td class="memItemLeft" align="right" valign="top"><a id="a45b7c224bd97becab214f974f1e6d709"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_destroy_function</b> (void *user_data)</td></tr>
+<tr class="separator:a45b7c224bd97becab214f974f1e6d709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2e630290e53011e17d85b153bcf1db3"><td class="memItemLeft" align="right" valign="top"><a id="ae2e630290e53011e17d85b153bcf1db3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_destroy_callbacks</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="separator:ae2e630290e53011e17d85b153bcf1db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +132,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 22:20:52 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 15 2017 22:46:46 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

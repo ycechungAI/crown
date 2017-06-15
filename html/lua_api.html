@@ -154,6 +154,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#soundworld">SoundWorld</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#animationstatemachine">AnimationStateMachine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#resourcepackage">ResourcePackage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#device">Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#debuggui">DebugGui</a></li>
@@ -625,6 +626,8 @@ enable depth test when rendering the lines.</dd>
 <dd>Returns the physics sub-world.</dd>
 <dt><strong>sound_world</strong> (world) <span class="classifier-delimiter">:</span> <span class="classifier">SoundWorld</span></dt>
 <dd>Returns the sound sub-world.</dd>
+<dt><strong>animation_state_machine</strong> (world) <span class="classifier-delimiter">:</span> <span class="classifier">AnimationStateMachine</span></dt>
+<dd>Returns the animation state machine.</dd>
 </dl>
 <div class="section" id="camera">
 <h3>Camera<a class="headerlink" href="#camera" title="Permalink to this headline">¶</a></h3>
@@ -813,7 +816,7 @@ It can be either <code class="docutils literal"><span class="pre">directional</s
 <dd>Sets the <em>range</em> of the light.</dd>
 <dt><strong>light_set_intensity</strong> (rw, unit, intensity)</dt>
 <dd>Sets the <em>intensity</em> of the light.</dd>
-<dt><strong>light_set_spot_angle</strong> (rw, unit, angle)v</dt>
+<dt><strong>light_set_spot_angle</strong> (rw, unit, angle)</dt>
 <dd>Sets the spot <em>angle</em> of the light.</dd>
 <dt><strong>light_debug_draw</strong> (rw, unit, debug_line)</dt>
 <dd>Fills <em>debug_line</em> with debug lines from the light.</dd>
@@ -927,6 +930,19 @@ Note that this call only affects nonkinematic actors.</dd>
 <dd>Resumes all previously paused sounds in the world.</dd>
 <dt><strong>is_playing</strong> (sound_world, id) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the sound <em>id</em> is playing.</dd>
+</dl>
+</div>
+<div class="section" id="animationstatemachine">
+<h2>AnimationStateMachine<a class="headerlink" href="#animationstatemachine" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><strong>variable_id</strong> (state_machine, unit, name) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
+<dd>Returns the ID of the variable <em>name</em> in the <em>state_machine</em>.</dd>
+<dt><strong>variable</strong> (state_machine, unit, variable_id) <span class="classifier-delimiter">:</span> <span class="classifier">number</span></dt>
+<dd>Returns the value of the <em>variable_id</em> in the <em>state_machine</em>.</dd>
+<dt><strong>set_variable</strong> (state_machine, unit, variable_id, value)</dt>
+<dd>Sets the <em>value</em> of the <em>variable_id</em> in the <em>state_machine</em>.</dd>
+<dt><strong>trigger</strong> (state_machine, unit, name)</dt>
+<dd>Triggers the event <em>name</em> in the <em>state_machine</em>.</dd>
 </dl>
 </div>
 <div class="section" id="resourcepackage">

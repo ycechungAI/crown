@@ -1,7 +1,7 @@
 var searchData=
 [
   ['data',['Data',['../structcrown_1_1_shader_resource_1_1_data.html',1,'crown::ShaderResource']]],
-  ['datacompiler',['DataCompiler',['../classcrown_1_1_data_compiler.html',1,'crown']]],
+  ['datacompiler',['DataCompiler',['../structcrown_1_1_data_compiler.html',1,'crown']]],
   ['deallocatememory',['DeallocateMemory',['../structcrown_1_1_deallocate_memory.html',1,'crown']]],
   ['debuggui',['DebugGui',['../structcrown_1_1_debug_gui.html',1,'crown']]],
   ['debugline',['DebugLine',['../structcrown_1_1_debug_line.html',1,'crown']]],

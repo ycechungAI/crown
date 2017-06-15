@@ -170,6 +170,9 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>get_id</b> (int i)</td
 <tr class="memitem:adea5b245306e28ae55fb9f9227838191"><td class="memItemLeft" align="right" valign="top"><a id="adea5b245306e28ae55fb9f9227838191"></a>
 <a class="el" href="structcrown_1_1_script_world.html">ScriptWorld</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_script_world</b> (int i)</td></tr>
 <tr class="separator:adea5b245306e28ae55fb9f9227838191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a656a7fe7a3c398b735b613e247f20838"><td class="memItemLeft" align="right" valign="top"><a id="a656a7fe7a3c398b735b613e247f20838"></a>
+<a class="el" href="structcrown_1_1_animation_state_machine.html">AnimationStateMachine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_animation_state_machine</b> (int i)</td></tr>
+<tr class="separator:a656a7fe7a3c398b735b613e247f20838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39d4bcdf9b138082dbe19a7bdd7cea96"><td class="memItemLeft" align="right" valign="top"><a id="a39d4bcdf9b138082dbe19a7bdd7cea96"></a>
 <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_unit</b> (int i)</td></tr>
 <tr class="separator:a39d4bcdf9b138082dbe19a7bdd7cea96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,6 +314,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>push_sound_world</b> 
 <tr class="memitem:aafc6516057bcaae88d556276603dbdfa"><td class="memItemLeft" align="right" valign="top"><a id="aafc6516057bcaae88d556276603dbdfa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_script_world</b> (<a class="el" href="structcrown_1_1_script_world.html">ScriptWorld</a> *world)</td></tr>
 <tr class="separator:aafc6516057bcaae88d556276603dbdfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115631b625893d678c6bed98c8d236d7"><td class="memItemLeft" align="right" valign="top"><a id="a115631b625893d678c6bed98c8d236d7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push_animation_state_machine</b> (<a class="el" href="structcrown_1_1_animation_state_machine.html">AnimationStateMachine</a> *sm)</td></tr>
+<tr class="separator:a115631b625893d678c6bed98c8d236d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff0abce9fde584665e8fcadc0380267b"><td class="memItemLeft" align="right" valign="top"><a id="aff0abce9fde584665e8fcadc0380267b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>push_unit</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="separator:aff0abce9fde584665e8fcadc0380267b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -404,12 +410,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i
 <tr class="memitem:a676c5b0584b040bd44a7e4760d09d7f0"><td class="memItemLeft" align="right" valign="top"><a id="a676c5b0584b040bd44a7e4760d09d7f0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_render_world.html">RenderWorld</a> *p)</td></tr>
 <tr class="separator:a676c5b0584b040bd44a7e4760d09d7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba49ca5f19cb7b329c463971c278029"><td class="memItemLeft" align="right" valign="top"><a id="acba49ca5f19cb7b329c463971c278029"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_physics_world.html">PhysicsWorld</a> *p)</td></tr>
+<tr class="separator:acba49ca5f19cb7b329c463971c278029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacad841209f40d2a78c67f4c4668ec00"><td class="memItemLeft" align="right" valign="top"><a id="aacad841209f40d2a78c67f4c4668ec00"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_sound_world.html">SoundWorld</a> *p)</td></tr>
+<tr class="separator:aacad841209f40d2a78c67f4c4668ec00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774b33d615e844612726fae1aad8f847"><td class="memItemLeft" align="right" valign="top"><a id="a774b33d615e844612726fae1aad8f847"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_level.html">Level</a> *p)</td></tr>
 <tr class="separator:a774b33d615e844612726fae1aad8f847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc7e568461c508009a03ed4fc90d5e91"><td class="memItemLeft" align="right" valign="top"><a id="acc7e568461c508009a03ed4fc90d5e91"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_script_world.html">ScriptWorld</a> *p)</td></tr>
 <tr class="separator:acc7e568461c508009a03ed4fc90d5e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a317c268a10f5938762110c89709411aa"><td class="memItemLeft" align="right" valign="top"><a id="a317c268a10f5938762110c89709411aa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>check_type</b> (int i, const <a class="el" href="structcrown_1_1_animation_state_machine.html">AnimationStateMachine</a> *p)</td></tr>
+<tr class="separator:a317c268a10f5938762110c89709411aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -524,7 +539,7 @@ lua_State *&#160;</td><td class="memItemRight" valign="bottom"><b>L</b></td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 22:20:52 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 15 2017 22:46:46 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
