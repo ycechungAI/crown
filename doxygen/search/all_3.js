@@ -20,7 +20,6 @@ var searchData=
   ['destroy_5funit',['destroy_unit',['../structcrown_1_1_world.html#a7901f69df610c922b7ad8cb703064b95',1,'crown::World']]],
   ['destroy_5fworld',['destroy_world',['../structcrown_1_1_device.html#afbf3f1608e5cf24ced11ba3bd2af4728',1,'crown::Device']]],
   ['destroydata',['DestroyData',['../structcrown_1_1_unit_manager_1_1_destroy_data.html',1,'crown::UnitManager']]],
-  ['determinant',['determinant',['../group___math.html#ga73fe335f38752e2fe20fbd8713269a1e',1,'crown::determinant(const Matrix3x3 &amp;m)'],['../group___math.html#ga35411994177d07ddc83486cceecc1b1c',1,'crown::determinant(const Matrix4x4 &amp;m)']]],
   ['device',['Device',['../structcrown_1_1_device.html',1,'crown::Device'],['../group___device.html',1,'(Global Namespace)']]],
   ['deviceeventqueue',['DeviceEventQueue',['../structcrown_1_1_device_event_queue.html',1,'crown']]],
   ['deviceoptions',['DeviceOptions',['../structcrown_1_1_device_options.html',1,'crown']]],

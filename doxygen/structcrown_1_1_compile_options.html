@@ -61,15 +61,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9524f6f68e32e2d0551071b3da1ca6c"><td class="memItemLeft" align="right" valign="top"><a id="ab9524f6f68e32e2d0551071b3da1ca6c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (<a class="el" href="structcrown_1_1_data_compiler.html">DataCompiler</a> &amp;dc, <a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;data_filesystem, <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;output, const char *platform)</td></tr>
-<tr class="separator:ab9524f6f68e32e2d0551071b3da1ca6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2489bed385de76c1c845dcb4b73e84a0"><td class="memItemLeft" align="right" valign="top"><a id="a2489bed385de76c1c845dcb4b73e84a0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (<a class="el" href="structcrown_1_1_data_compiler.html">DataCompiler</a> &amp;dc, <a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;data_filesystem, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;source_path, <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;output, const char *platform)</td></tr>
+<tr class="separator:a2489bed385de76c1c845dcb4b73e84a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1dec190ec6081402da156378aa7cc7"><td class="memItemLeft" align="right" valign="top"><a id="a3c1dec190ec6081402da156378aa7cc7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *msg, va_list args)</td></tr>
 <tr class="separator:a3c1dec190ec6081402da156378aa7cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13cf3eadebc4e1e0eea8c964988e60b0"><td class="memItemLeft" align="right" valign="top"><a id="a13cf3eadebc4e1e0eea8c964988e60b0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *msg,...)</td></tr>
 <tr class="separator:a13cf3eadebc4e1e0eea8c964988e60b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a950669da8400b83e1594543d9c4da7"><td class="memItemLeft" align="right" valign="top"><a id="a4a950669da8400b83e1594543d9c4da7"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>source_path</b> ()</td></tr>
+<tr class="separator:a4a950669da8400b83e1594543d9c4da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19869c5932fee2ee321f6f6886f28f0e"><td class="memItemLeft" align="right" valign="top"><a id="a19869c5932fee2ee321f6f6886f28f0e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>file_exists</b> (const char *path)</td></tr>
 <tr class="separator:a19869c5932fee2ee321f6f6886f28f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -85,6 +88,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>write_temporary</b> (
 <tr class="memitem:a4d55cc2df5dd53d7c599d5eaa7294b4f"><td class="memItemLeft" align="right" valign="top"><a id="a4d55cc2df5dd53d7c599d5eaa7294b4f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write_temporary</b> (const char *path, const <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;data)</td></tr>
 <tr class="separator:a4d55cc2df5dd53d7c599d5eaa7294b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06cf756f78103ad84dc1a6c5b4238d3c"><td class="memItemLeft" align="right" valign="top"><a id="a06cf756f78103ad84dc1a6c5b4238d3c"></a>
+<a class="el" href="structcrown_1_1_array.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</td></tr>
+<tr class="separator:a06cf756f78103ad84dc1a6c5b4238d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e9dac36239a61ac0e258541eb0b2780"><td class="memItemLeft" align="right" valign="top"><a id="a3e9dac36239a61ac0e258541eb0b2780"></a>
 <a class="el" href="structcrown_1_1_array.html">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (const char *path)</td></tr>
 <tr class="separator:a3e9dac36239a61ac0e258541eb0b2780"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +134,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a89eabb40b9dfc9fcf3e1109d5721068c"><td class="memItemLeft" align="right" valign="top"><a id="a89eabb40b9dfc9fcf3e1109d5721068c"></a>
 <a class="el" href="classcrown_1_1_filesystem.html">Filesystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_data_filesystem</b></td></tr>
 <tr class="separator:a89eabb40b9dfc9fcf3e1109d5721068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b828bcd9654d733a6a0ecffc3486f6c"><td class="memItemLeft" align="right" valign="top"><a id="a0b828bcd9654d733a6a0ecffc3486f6c"></a>
+<a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_source_path</b></td></tr>
+<tr class="separator:a0b828bcd9654d733a6a0ecffc3486f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dbd110eb2780a159703c31064e448b4"><td class="memItemLeft" align="right" valign="top"><a id="a6dbd110eb2780a159703c31064e448b4"></a>
 <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_output</b></td></tr>
 <tr class="separator:a6dbd110eb2780a159703c31064e448b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +154,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>_platform</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 15 2017 22:46:46 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 21 2017 23:36:19 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -13,7 +13,7 @@ var searchData=
   ['int2type',['Int2Type',['../structcrown_1_1_int2_type.html',1,'crown']]],
   ['integer',['integer',['../classcrown_1_1_random.html#ab4956a161d6d6bf873ffb3430be84629',1,'crown::Random::integer()'],['../classcrown_1_1_random.html#afd852a78f53cfe80e0e0489bbc021e31',1,'crown::Random::integer(s32 max)']]],
   ['inverse',['inverse',['../group___math.html#ga9cd98e06e9e2a526e0ed4b16256b8991',1,'crown']]],
-  ['invert',['invert',['../group___math.html#ga49e9eab02bdd09c779b4266d0c911a9a',1,'crown::invert(Matrix3x3 &amp;m)'],['../group___math.html#gada803116bb9cbed485fe9368bb22c489',1,'crown::invert(Matrix4x4 &amp;m)']]],
+  ['invert',['invert',['../group___math.html#ga988b26d2c441fc0b7bd059e9489407a6',1,'crown::invert(Matrix3x3 &amp;m)'],['../group___math.html#ga57034b62848f95fa1b2a8dc01e04a55b',1,'crown::invert(Matrix4x4 &amp;m)']]],
   ['ipaddress',['IPAddress',['../structcrown_1_1_i_p_address.html',1,'crown']]],
   ['is_5fabsolute',['is_absolute',['../namespacecrown_1_1path.html#a8290f0dc478fa56398ca62f629b7cdaa',1,'crown::path']]],
   ['is_5fallocator_5faware',['is_allocator_aware',['../structcrown_1_1is__allocator__aware.html',1,'crown']]],
