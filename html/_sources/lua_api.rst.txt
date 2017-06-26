@@ -66,13 +66,13 @@ Functions
 	Returns true whether the vectors *a* and *b* are equal.
 
 **length** (a) : float
-	Returns the lenght of *a*.
+	Returns the length of *a*.
 
 **length_squared** (a) : float
 	Returns the squared length of *a*.
 
 **set_length** (a, len)
-	Sets the lenght of *a* to *len*.
+	Sets the length of *a* to *len*.
 
 **normalize** (a) : Vector3
 	Normalizes *a* and returns the result.
@@ -432,6 +432,9 @@ World
 
 **destroy_debug_line** (world, line)
 	Destroys the debug *line*.
+
+**create_screen_gui** (world) : Gui
+	Creates a new Gui.
 
 **scene_graph** (world) : SceneGraph
 	Returns the scene graph.
@@ -930,10 +933,16 @@ Device
 **guid** () : string
 	Returns a new GUID.
 
-DebugGui
-========
+Gui
+===
 
-**rect** (pos, size, material_resource, color)
+**move** (pos)
+	Moves the Gui to *pos*.
+
+**triangle** (a, b, c, color)
+	Draws a triangle defined by vertices *a*, *b* and *c*.
+
+**rect** (pos, size, color)
 	Draws a rectangle.
 
 **image** (pos, size, material_resource, color)

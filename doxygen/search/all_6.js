@@ -14,5 +14,7 @@ var searchData=
   ['greater',['greater',['../structcrown_1_1greater.html',1,'crown']]],
   ['greater_5fequal',['greater_equal',['../structcrown_1_1greater__equal.html',1,'crown']]],
   ['grow',['grow',['../namespacecrown_1_1array.html#aa55ac953b36e5cbcaecd376ea9c1899d',1,'crown::array::grow()'],['../namespacecrown_1_1queue.html#a6733ed439555a2a99496d18e8c4a2130',1,'crown::queue::grow()'],['../namespacecrown_1_1vector.html#a14ff6d19af18605cd73d055bab7e4c59',1,'crown::vector::grow()']]],
+  ['gui',['Gui',['../structcrown_1_1_gui.html',1,'crown']]],
+  ['guibuffer',['GuiBuffer',['../structcrown_1_1_gui_buffer.html',1,'crown']]],
   ['guid',['Guid',['../structcrown_1_1_guid.html',1,'crown']]]
 ];

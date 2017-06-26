@@ -221,14 +221,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#adc63cc0dffebb78c41a36b5f4396fd50">destroy_debug_line</a> (<a class="el" href="structcrown_1_1_debug_line.html">DebugLine</a> &amp;line)</td></tr>
 <tr class="memdesc:adc63cc0dffebb78c41a36b5f4396fd50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the debug <em>line</em>. <br /></td></tr>
 <tr class="separator:adc63cc0dffebb78c41a36b5f4396fd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1966ff724dfe500d32ff78e63ed41d"><td class="memItemLeft" align="right" valign="top"><a id="a9b1966ff724dfe500d32ff78e63ed41d"></a>
-<a class="el" href="structcrown_1_1_debug_gui.html">DebugGui</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a9b1966ff724dfe500d32ff78e63ed41d">create_screen_debug_gui</a> (f32 scale_w, f32 scale_h)</td></tr>
-<tr class="memdesc:a9b1966ff724dfe500d32ff78e63ed41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new screen-space Gui. <br /></td></tr>
-<tr class="separator:a9b1966ff724dfe500d32ff78e63ed41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44bde2a34161a20e35e928a15e1cae9e"><td class="memItemLeft" align="right" valign="top"><a id="a44bde2a34161a20e35e928a15e1cae9e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a44bde2a34161a20e35e928a15e1cae9e">destroy_gui</a> (<a class="el" href="structcrown_1_1_debug_gui.html">DebugGui</a> &amp;gui)</td></tr>
-<tr class="memdesc:a44bde2a34161a20e35e928a15e1cae9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <em>gui</em>. <br /></td></tr>
-<tr class="separator:a44bde2a34161a20e35e928a15e1cae9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dc0942aa810108a0e04bb59fd20aabf"><td class="memItemLeft" align="right" valign="top"><a id="a8dc0942aa810108a0e04bb59fd20aabf"></a>
+<a class="el" href="structcrown_1_1_gui.html">Gui</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a8dc0942aa810108a0e04bb59fd20aabf">create_screen_gui</a> ()</td></tr>
+<tr class="memdesc:a8dc0942aa810108a0e04bb59fd20aabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new screen-space <a class="el" href="structcrown_1_1_gui.html" title="Immediate mode Gui. ">Gui</a>. <br /></td></tr>
+<tr class="separator:a8dc0942aa810108a0e04bb59fd20aabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ea11ad19368f7df26fcd72eb3a2b6d"><td class="memItemLeft" align="right" valign="top"><a id="ad7ea11ad19368f7df26fcd72eb3a2b6d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ad7ea11ad19368f7df26fcd72eb3a2b6d">destroy_gui</a> (<a class="el" href="structcrown_1_1_gui.html">Gui</a> &amp;gui)</td></tr>
+<tr class="memdesc:ad7ea11ad19368f7df26fcd72eb3a2b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the <em>gui</em>. <br /></td></tr>
+<tr class="separator:ad7ea11ad19368f7df26fcd72eb3a2b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa65a9d06970c067a87340043993ac50"><td class="memItemLeft" align="right" valign="top"><a id="afa65a9d06970c067a87340043993ac50"></a>
 <a class="el" href="structcrown_1_1_level.html">Level</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#afa65a9d06970c067a87340043993ac50">load_level</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot)</td></tr>
 <tr class="memdesc:afa65a9d06970c067a87340043993ac50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the level <em>name</em> into the world. <br /></td></tr>
@@ -302,6 +302,12 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 <tr class="memitem:ad889185cbc686c673e96a7a623f7afca"><td class="memItemLeft" align="right" valign="top"><a id="ad889185cbc686c673e96a7a623f7afca"></a>
 <a class="el" href="group___containers.html#gabf3f2058f3c0a30ddb3fa7b37663f783">EventStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_events</b></td></tr>
 <tr class="separator:ad889185cbc686c673e96a7a623f7afca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1b2de9cbb2697ec1c1c1fd0c9725a6"><td class="memItemLeft" align="right" valign="top"><a id="aeb1b2de9cbb2697ec1c1c1fd0c9725a6"></a>
+<a class="el" href="structcrown_1_1_gui_buffer.html">GuiBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_gui_buffer</b></td></tr>
+<tr class="separator:aeb1b2de9cbb2697ec1c1c1fd0c9725a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba15eec42c4169139a889424aa01655a"><td class="memItemLeft" align="right" valign="top"><a id="aba15eec42c4169139a889424aa01655a"></a>
+<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_gui.html">Gui</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_guis</b></td></tr>
+<tr class="separator:aba15eec42c4169139a889424aa01655a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a game world. </p>
@@ -451,7 +457,7 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 21 2017 23:38:00 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 27 2017 01:25:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

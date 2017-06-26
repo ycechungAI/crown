@@ -78,6 +78,7 @@ var searchData=
   ['array_3c_20char_20_3e',['Array&lt; char &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20componenttypeinfo_20_3e',['Array&lt; ComponentTypeInfo &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3aanimationstatemachine_3a_3aanimation_20_3e',['Array&lt; crown::AnimationStateMachine::Animation &gt;',['../structcrown_1_1_array.html',1,'crown']]],
+  ['array_3c_20crown_3a_3agui_20_2a_3e',['Array&lt; crown::Gui *&gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3alevel_20_2a_3e',['Array&lt; crown::Level *&gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3ameshgeometry_20_2a_3e',['Array&lt; crown::MeshGeometry *&gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3apackageresource_3a_3aresource_20_3e',['Array&lt; crown::PackageResource::Resource &gt;',['../structcrown_1_1_array.html',1,'crown']]],

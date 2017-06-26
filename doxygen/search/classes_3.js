@@ -3,7 +3,6 @@ var searchData=
   ['data',['Data',['../structcrown_1_1_shader_resource_1_1_data.html',1,'crown::ShaderResource']]],
   ['datacompiler',['DataCompiler',['../structcrown_1_1_data_compiler.html',1,'crown']]],
   ['deallocatememory',['DeallocateMemory',['../structcrown_1_1_deallocate_memory.html',1,'crown']]],
-  ['debuggui',['DebugGui',['../structcrown_1_1_debug_gui.html',1,'crown']]],
   ['debugline',['DebugLine',['../structcrown_1_1_debug_line.html',1,'crown']]],
   ['destroydata',['DestroyData',['../structcrown_1_1_unit_manager_1_1_destroy_data.html',1,'crown::UnitManager']]],
   ['device',['Device',['../structcrown_1_1_device.html',1,'crown']]],

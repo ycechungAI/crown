@@ -76,7 +76,7 @@ var searchData=
   ['create_5ffile',['create_file',['../classcrown_1_1_filesystem.html#a40011e6c27eb3406ba9d93e89d164f97',1,'crown::Filesystem::create_file()'],['../classcrown_1_1_filesystem_disk.html#a2cd84cd770dcd5c40729f6847134ba6c',1,'crown::FilesystemDisk::create_file()'],['../namespacecrown_1_1os.html#a1333b06b6238a5f28acf1e63cf50508f',1,'crown::os::create_file()']]],
   ['create_5fmaterial',['create_material',['../structcrown_1_1_material_manager.html#a77d2fb39e58b8eb265737c09df9d0901',1,'crown::MaterialManager']]],
   ['create_5fresource_5fpackage',['create_resource_package',['../structcrown_1_1_device.html#a0e6069641781ee8d9b0d722f13e0e23b',1,'crown::Device']]],
-  ['create_5fscreen_5fdebug_5fgui',['create_screen_debug_gui',['../structcrown_1_1_world.html#a9b1966ff724dfe500d32ff78e63ed41d',1,'crown::World']]],
+  ['create_5fscreen_5fgui',['create_screen_gui',['../structcrown_1_1_world.html#a8dc0942aa810108a0e04bb59fd20aabf',1,'crown::World']]],
   ['create_5fworld',['create_world',['../structcrown_1_1_device.html#a05bf21977aca9128c5f8435cc3235170',1,'crown::Device']]],
   ['cross',['cross',['../group___math.html#ga8c5246b6d0051fc25ef9cee87d0d8a7f',1,'crown']]],
   ['cubic',['cubic',['../group___math.html#ga4a0281f1bb81968b6b6f26065eb99173',1,'crown']]],

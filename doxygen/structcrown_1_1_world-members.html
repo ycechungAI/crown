@@ -62,6 +62,8 @@ $(function() {
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>_camera</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>_camera_map</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>_events</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>_gui_buffer</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>_guis</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>_levels</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>_lines</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>_lua_environment</b> (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
@@ -96,9 +98,9 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#ab50deebb7d6b873d61ebcfb815ee5d2b">camera_view_matrix</a>(UnitId unit)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#aaff27ede79f1a4f71a80efe1f666feee">camera_world_to_screen</a>(UnitId unit, const Vector3 &amp;pos)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#a5d7dcd79667a833c3a38d45b6946ab4b">create_debug_line</a>(bool depth_test)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#a9b1966ff724dfe500d32ff78e63ed41d">create_screen_debug_gui</a>(f32 scale_w, f32 scale_h)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#a8dc0942aa810108a0e04bb59fd20aabf">create_screen_gui</a>()</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#adc63cc0dffebb78c41a36b5f4396fd50">destroy_debug_line</a>(DebugLine &amp;line)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#a44bde2a34161a20e35e928a15e1cae9e">destroy_gui</a>(DebugGui &amp;gui)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#ad7ea11ad19368f7df26fcd72eb3a2b6d">destroy_gui</a>(Gui &amp;gui)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#a7901f69df610c922b7ad8cb703064b95">destroy_unit</a>(UnitId id)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#ae4a14390380d16cbe9ab34c1a3a6e84a">link_sound</a>(SoundInstanceId id, UnitId unit, s32 node)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#afa65a9d06970c067a87340043993ac50">load_level</a>(StringId64 name, const Vector3 &amp;pos, const Quaternion &amp;rot)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
@@ -125,7 +127,7 @@ $(function() {
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 21 2017 23:38:00 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 27 2017 01:25:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
