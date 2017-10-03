@@ -14,6 +14,5 @@ var searchData=
   ['minimize',['minimize',['../structcrown_1_1_window.html#af6cc16c37897312a2b7bac9d998f2901',1,'crown::Window']]],
   ['modes',['modes',['../structcrown_1_1_display.html#a48bad59180eccf136c579a8deac2786d',1,'crown::Display']]],
   ['mouse',['mouse',['../structcrown_1_1_input_manager.html#ae582114a4b68e874a6f96cfc6553f405',1,'crown::InputManager']]],
-  ['move',['move',['../structcrown_1_1_window.html#a9a878e6eb81c5fbfeb537c746fe3e480',1,'crown::Window']]],
-  ['mtime',['mtime',['../namespacecrown_1_1os.html#aba683cea11738c6b6e15e6d2250ff74c',1,'crown::os']]]
+  ['move',['move',['../structcrown_1_1_window.html#a9a878e6eb81c5fbfeb537c746fe3e480',1,'crown::Window']]]
 ];

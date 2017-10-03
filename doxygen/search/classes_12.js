@@ -27,6 +27,7 @@ var searchData=
   ['spriteresource',['SpriteResource',['../structcrown_1_1_sprite_resource.html',1,'crown']]],
   ['stack',['Stack',['../structskinny_1_1expression__language_1_1_stack.html',1,'skinny::expression_language']]],
   ['stackallocator',['StackAllocator',['../classcrown_1_1_stack_allocator.html',1,'crown']]],
+  ['stat',['Stat',['../structcrown_1_1_stat.html',1,'crown']]],
   ['state',['State',['../structcrown_1_1_state.html',1,'crown']]],
   ['statemachineresource',['StateMachineResource',['../structcrown_1_1_state_machine_resource.html',1,'crown']]],
   ['statusevent',['StatusEvent',['../structcrown_1_1_status_event.html',1,'crown']]],

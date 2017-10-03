@@ -9,7 +9,6 @@ var searchData=
   ['fmin',['fmin',['../group___math.html#gaf10b2ed34b27cd06bca36718b0dd2f8d',1,'crown']]],
   ['forward',['forward',['../group___math.html#gab505715176e1ac1985e7092af7d1d6d2',1,'crown']]],
   ['frad',['frad',['../group___math.html#gaa2afb13a7187320f7b285007433f8e94',1,'crown']]],
-  ['frame_5fcount',['frame_count',['../structcrown_1_1_device.html#a1740ce0bd27ed055c43a1b9ea1f1215d',1,'crown::Device']]],
   ['from_5fmatrix',['from_matrix',['../namespacecrown_1_1frustum.html#ab1c6a5398f07f1f66db3424e6bb7d4d6',1,'crown::frustum']]],
   ['from_5fpoint_5fand_5fnormal',['from_point_and_normal',['../namespacecrown_1_1plane3.html#adee3880d8a9c1ce919790c678475af49',1,'crown::plane3']]],
   ['from_5frgb',['from_rgb',['../group___math.html#ga23ebdc2682e878b01c0d3cc2118274f0',1,'crown']]],

@@ -7,7 +7,6 @@ var searchData=
   ['texturehandle',['TextureHandle',['../structcrown_1_1_texture_handle.html',1,'crown']]],
   ['textureresource',['TextureResource',['../structcrown_1_1_texture_resource.html',1,'crown']]],
   ['thread',['Thread',['../structcrown_1_1_thread.html',1,'crown::Thread'],['../group___thread.html',1,'(Global Namespace)']]],
-  ['time_5fsince_5fstart',['time_since_start',['../structcrown_1_1_device.html#a349ff16a8fbf185c57886a45740879e3',1,'crown::Device']]],
   ['title',['title',['../structcrown_1_1_window.html#a6300523cd464f5d2439f47f720be025c',1,'crown::Window']]],
   ['to_5faabb',['to_aabb',['../namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4',1,'crown::frustum']]],
   ['to_5fabgr',['to_abgr',['../group___math.html#gada442382ca06957608b55038994e44ef',1,'crown']]],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['last_5fmodified_5ftime',['last_modified_time',['../classcrown_1_1_filesystem.html#ae8f30341292298ddcd5d6a7697cb0dea',1,'crown::Filesystem::last_modified_time()'],['../classcrown_1_1_filesystem_disk.html#ab4e1b93fa9745d473b6af3939c8fb603',1,'crown::FilesystemDisk::last_modified_time()']]],
+  ['layer',['layer',['../structcrown_1_1_sprite_renderer_desc.html#af46d26b506a9e25025f1a8688ba71003',1,'crown::SpriteRendererDesc']]],
   ['leave_5fprofile_5fscope',['leave_profile_scope',['../namespacecrown_1_1profiler.html#a50e52e1cabd46da042dd3f125545f2f8',1,'crown::profiler']]],
   ['leaveprofilescope',['LeaveProfileScope',['../structcrown_1_1_leave_profile_scope.html',1,'crown']]],
   ['length',['length',['../structcrown_1_1_dynamic_string.html#a085094dd5d696c0850686ee394ba4a7c',1,'crown::DynamicString::length()'],['../group___math.html#ga04b96a3f33f5e91cbcb0f844a14d5342',1,'crown::length(const Quaternion &amp;q)'],['../group___math.html#gaf634e48c91964a41a48d27e64f4fe173',1,'crown::length(const Vector2 &amp;a)'],['../group___math.html#ga680fff1d482bae470626b63ea14b2b32',1,'crown::length(const Vector3 &amp;a)'],['../group___math.html#ga27b56b790b86fac70ec52b7cb2aa784d',1,'crown::length(const Vector4 &amp;a)']]],

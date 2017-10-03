@@ -20,7 +20,6 @@ var searchData=
   ['actor_5fis_5fstatic',['actor_is_static',['../structcrown_1_1_physics_world.html#a7d8464215b0db43169d504efaa0ccc81',1,'crown::PhysicsWorld']]],
   ['actor_5flinear_5fdamping',['actor_linear_damping',['../structcrown_1_1_physics_world.html#ae9cefbbf9220c0892e2c6ccca3a0d75d',1,'crown::PhysicsWorld']]],
   ['actor_5flinear_5fvelocity',['actor_linear_velocity',['../structcrown_1_1_physics_world.html#a056b7c8490aa75d7d2cc845928267370',1,'crown::PhysicsWorld']]],
-  ['actor_5fmove',['actor_move',['../structcrown_1_1_physics_world.html#a27f048da48c87fdf398fa28f78d023f1',1,'crown::PhysicsWorld']]],
   ['actor_5fpush',['actor_push',['../structcrown_1_1_physics_world.html#ae3b63e537838de5c28464a5c4c669230',1,'crown::PhysicsWorld']]],
   ['actor_5fpush_5fat',['actor_push_at',['../structcrown_1_1_physics_world.html#a69127c92a1ae770891462cd815a30637',1,'crown::PhysicsWorld']]],
   ['actor_5fset_5fangular_5fdamping',['actor_set_angular_damping',['../structcrown_1_1_physics_world.html#a1b8ef54d6bd49637fc7273f6f8363517',1,'crown::PhysicsWorld']]],

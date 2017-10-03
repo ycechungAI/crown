@@ -10,6 +10,6 @@ var searchData=
   ['execute',['execute',['../structcrown_1_1_lua_environment.html#ad648636fbbab62945d084018711adc5b',1,'crown::LuaEnvironment']]],
   ['execute_5fprocess',['execute_process',['../namespacecrown_1_1os.html#ab85d8fcc83a746a56647b4de6e3cb20b',1,'crown::os']]],
   ['execute_5fstring',['execute_string',['../structcrown_1_1_lua_environment.html#afa194440576015572aa867d24fe696b3',1,'crown::LuaEnvironment']]],
-  ['exists',['exists',['../classcrown_1_1_filesystem.html#a60ffbd7fae7d1fcd0c34b17f95483874',1,'crown::Filesystem::exists()'],['../classcrown_1_1_filesystem_disk.html#a16f42101c2a48dcb57428fbfdb0fed33',1,'crown::FilesystemDisk::exists()'],['../namespacecrown_1_1os.html#a54032cedeae72ca265a64981e5e3ba22',1,'crown::os::exists()']]],
+  ['exists',['exists',['../classcrown_1_1_filesystem.html#a60ffbd7fae7d1fcd0c34b17f95483874',1,'crown::Filesystem::exists()'],['../classcrown_1_1_filesystem_disk.html#a16f42101c2a48dcb57428fbfdb0fed33',1,'crown::FilesystemDisk::exists()']]],
   ['extension',['extension',['../namespacecrown_1_1path.html#a898603050e2b4573e894aff42793f35a',1,'crown::path']]]
 ];

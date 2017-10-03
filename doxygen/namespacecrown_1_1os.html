@@ -90,26 +90,10 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="na
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a4e16936154282e2b9736c9333ba38bb5">log</a> (const char *msg)</td></tr>
 <tr class="memdesc:a4e16936154282e2b9736c9333ba38bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs the message <em>msg</em>. <br /></td></tr>
 <tr class="separator:a4e16936154282e2b9736c9333ba38bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54032cedeae72ca265a64981e5e3ba22"><td class="memItemLeft" align="right" valign="top"><a id="a54032cedeae72ca265a64981e5e3ba22"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a54032cedeae72ca265a64981e5e3ba22">exists</a> (const char *path)</td></tr>
-<tr class="memdesc:a54032cedeae72ca265a64981e5e3ba22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <em>path</em> exists. <br /></td></tr>
-<tr class="separator:a54032cedeae72ca265a64981e5e3ba22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44cab65a617eebd6fccd59215b8e1035"><td class="memItemLeft" align="right" valign="top"><a id="a44cab65a617eebd6fccd59215b8e1035"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a44cab65a617eebd6fccd59215b8e1035">is_directory</a> (const char *path)</td></tr>
-<tr class="memdesc:a44cab65a617eebd6fccd59215b8e1035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <em>path</em> is a directory. <br /></td></tr>
-<tr class="separator:a44cab65a617eebd6fccd59215b8e1035"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bae387a59193af3e43576e1aae6c36f"><td class="memItemLeft" align="right" valign="top"><a id="a4bae387a59193af3e43576e1aae6c36f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a4bae387a59193af3e43576e1aae6c36f">is_file</a> (const char *path)</td></tr>
-<tr class="memdesc:a4bae387a59193af3e43576e1aae6c36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <em>path</em> is a regular file. <br /></td></tr>
-<tr class="separator:a4bae387a59193af3e43576e1aae6c36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba683cea11738c6b6e15e6d2250ff74c"><td class="memItemLeft" align="right" valign="top"><a id="aba683cea11738c6b6e15e6d2250ff74c"></a>
-u64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#aba683cea11738c6b6e15e6d2250ff74c">mtime</a> (const char *path)</td></tr>
-<tr class="memdesc:aba683cea11738c6b6e15e6d2250ff74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the last modification time of <em>path</em>. <br /></td></tr>
-<tr class="separator:aba683cea11738c6b6e15e6d2250ff74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1333b06b6238a5f28acf1e63cf50508f"><td class="memItemLeft" align="right" valign="top"><a id="a1333b06b6238a5f28acf1e63cf50508f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a1333b06b6238a5f28acf1e63cf50508f">create_file</a> (const char *path)</td></tr>
-<tr class="memdesc:a1333b06b6238a5f28acf1e63cf50508f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a regular file named <em>path</em>. <br /></td></tr>
-<tr class="separator:a1333b06b6238a5f28acf1e63cf50508f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f9cf4057da918a94a8061599dc7744"><td class="memItemLeft" align="right" valign="top"><a id="a80f9cf4057da918a94a8061599dc7744"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a80f9cf4057da918a94a8061599dc7744">stat</a> (<a class="el" href="structcrown_1_1_stat.html">Stat</a> &amp;info, const char *path)</td></tr>
+<tr class="memdesc:a80f9cf4057da918a94a8061599dc7744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns information about <em>path</em>. <br /></td></tr>
+<tr class="separator:a80f9cf4057da918a94a8061599dc7744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2307fad91d50f9395af1b6b7ff6be23c"><td class="memItemLeft" align="right" valign="top"><a id="a2307fad91d50f9395af1b6b7ff6be23c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1os.html#a2307fad91d50f9395af1b6b7ff6be23c">delete_file</a> (const char *path)</td></tr>
 <tr class="memdesc:a2307fad91d50f9395af1b6b7ff6be23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the file at <em>path</em>. <br /></td></tr>
@@ -175,7 +159,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 27 2017 01:25:04 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 3 2017 19:52:14 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

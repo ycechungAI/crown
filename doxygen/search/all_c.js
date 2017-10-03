@@ -40,6 +40,6 @@ var searchData=
   ['mouseaxis',['MouseAxis',['../structcrown_1_1_mouse_axis.html',1,'crown']]],
   ['mousebutton',['MouseButton',['../structcrown_1_1_mouse_button.html',1,'crown']]],
   ['move',['move',['../structcrown_1_1_window.html#a9a878e6eb81c5fbfeb537c746fe3e480',1,'crown::Window']]],
-  ['mtime',['mtime',['../namespacecrown_1_1os.html#aba683cea11738c6b6e15e6d2250ff74c',1,'crown::os']]],
+  ['mtime',['mtime',['../structcrown_1_1_stat.html#a931be91dba7c09c9bf1718cc73c72cbc',1,'crown::Stat']]],
   ['mutex',['Mutex',['../structcrown_1_1_mutex.html',1,'crown']]]
 ];

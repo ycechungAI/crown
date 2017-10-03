@@ -780,6 +780,10 @@ After unlinking, the &#64;a unit’s local pose is set to its previous world pos
 <dd>Sets whether to flip the sprite on the x-axis.</dd>
 <dt><strong>sprite_flip_y</strong> (rw, unit, flip)</dt>
 <dd>Sets whether to flip the sprite on the y-axis.</dd>
+<dt><strong>sprite_set_layer</strong> (rw, unit, layer)</dt>
+<dd>Sets the layer of the sprite.</dd>
+<dt><strong>sprite_set_depth</strong> (rw, unit, depth)</dt>
+<dd>Sets the depth of the sprite.</dd>
 <dt><strong>sprite_obb</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4, Vector3</span></dt>
 <dd>Returns the OBB of the sprite as (pose, half_extents).</dd>
 <dt><strong>sprite_raycast</strong> (rw, unit, from, dir) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
@@ -866,11 +870,12 @@ Mode can be either <code class="docutils literal"><span class="pre">closest</spa
 <dt><strong>actor_set_collision_filter</strong> (pw, actor, name)</dt>
 <dd>Sets the collision filter of the actor.</dd>
 <dt><strong>actor_set_kinematic</strong> (pw, actor, kinematic)</dt>
-<dd>Sets whether the actor is kinematic or not.
-Note that this call has no effect on static actors.</dd>
-<dt><strong>actor_move</strong> (pw, actor, position)</dt>
-<dd>Moves the actor to <em>pos</em>
-Note that this call only affects nonkinematic actors.</dd>
+<dd><p class="first">Sets whether the actor is kinematic or not.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This call has no effect on static actors.</p>
+</div>
+</dd>
 <dt><strong>actor_is_static</strong> (pw, actor) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the actor is static.</dd>
 <dt><strong>actor_is_dynamic</strong> (pw, actor) bool</dt>
@@ -890,28 +895,52 @@ Note that this call only affects nonkinematic actors.</dd>
 <dt><strong>actor_linear_velocity</strong> (pw, actor) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns the linear velocity of the actor.</dd>
 <dt><strong>actor_set_linear_velocity</strong> (pw, actor, velocity)</dt>
-<dd>Sets the linear velocity of the actor.
-Note that this call only affects nonkinematic actors.</dd>
+<dd><p class="first">Sets the linear velocity of the actor.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This call only affects nonkinematic actors.</p>
+</div>
+</dd>
 <dt><strong>actor_angular_velocity</strong> (pw, actor) <span class="classifier-delimiter">:</span> <span class="classifier">Vector3</span></dt>
 <dd>Returns the angular velocity of the actor.</dd>
 <dt><strong>actor_set_angular_velocity</strong> (pw, actor, velocity)</dt>
-<dd>Sets the angular velocity of the actor.
-Note that this call only affects nonkinematic actors.</dd>
+<dd><p class="first">Sets the angular velocity of the actor.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This call only affects nonkinematic actors.</p>
+</div>
+</dd>
 <dt><strong>actor_add_impulse</strong> (pw, actor, impulse)</dt>
-<dd>Adds a linear impulse (acting along the center of mass) to the actor.
-Note that this call only affects nonkinematic actors.</dd>
+<dd><p class="first">Adds a linear impulse (acting along the center of mass) to the actor.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This call only affects nonkinematic actors.</p>
+</div>
+</dd>
 <dt><strong>actor_add_impulse_at</strong> (pw, actor, impulse, position)</dt>
-<dd>Adds a linear impulse (acting along the world position <em>pos</em>) to the actor.
-Note that this call only affects nonkinematic actors.</dd>
+<dd><p class="first">Adds a linear impulse (acting along the world position <em>pos</em>) to the actor.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This call only affects nonkinematic actors.</p>
+</div>
+</dd>
 <dt><strong>actor_add_torque_impulse</strong> (pw, actor, impulse)</dt>
 <dd>Adds a torque impulse to the actor.</dd>
 <dt><strong>actor_push</strong> (pw, actor, velocity, mass)</dt>
-<dd>Pushes the actor as if it was hit by a point object with the given <em>mass</em>
-travelling at the given <em>velocity</em>.
-Note that this call only affects nonkinematic actors.</dd>
+<dd><p class="first">Pushes the actor as if it was hit by a point object with the given <em>mass</em>
+travelling at the given <em>velocity</em>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This call only affects nonkinematic actors.</p>
+</div>
+</dd>
 <dt><strong>actor_push_at</strong> (pw, actor, velocity, mass, position)</dt>
-<dd>Like push() but applies the force at the world position <em>pos</em>.
-Note that this call only affects nonkinematic actors.</dd>
+<dd><p class="first">Like push() but applies the force at the world position <em>pos</em>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This call only affects nonkinematic actors.</p>
+</div>
+</dd>
 <dt><strong>actor_is_sleeping</strong> (pw, actor) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the actor is sleeping.</dd>
 <dt><strong>actor_wake_up</strong> (pw, actor)</dt>
@@ -949,15 +978,19 @@ Note that this call only affects nonkinematic actors.</dd>
 <h2>ResourcePackage<a class="headerlink" href="#resourcepackage" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><strong>load</strong> (package)</dt>
-<dd>Loads all the resources in the package.
-Note that the resources are not immediately available after the call is made,
-instead, you have to poll for completion with has_loaded().</dd>
+<dd><p class="first">Loads all the resources in the <em>package</em>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The resources are not immediately available after the call is made,
+instead, you have to poll for completion with has_loaded().</p>
+</div>
+</dd>
 <dt><strong>unload</strong> (package)</dt>
-<dd>Unloads all the resources in the package.</dd>
+<dd>Unloads all the resources in the <em>package</em>.</dd>
 <dt><strong>flush</strong> (package)</dt>
-<dd>Waits until the package has been loaded.</dd>
+<dd>Waits until the <em>package</em> has been loaded.</dd>
 <dt><strong>has_loaded</strong> (package) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd>Returns whether the package has been loaded.</dd>
+<dd>Returns whether the <em>package</em> has been loaded.</dd>
 </dl>
 </div>
 <div class="section" id="device">
@@ -987,9 +1020,13 @@ The form is “major.minor.micro”.</dd>
 <dt><strong>create_resource_package</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">ResourcePackage</span></dt>
 <dd>Returns the resource package with the given <em>package_name</em> name.</dd>
 <dt><strong>destroy_resource_package</strong> (package)</dt>
-<dd>Destroy a previously created resource <em>package</em>.
-Note that to unload the resources loaded by the package, you have to call
-ResourcePackage.unload() first.</dd>
+<dd><p class="first">Destroy a previously created resource <em>package</em>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To unload the resources loaded by the package, you have to call
+ResourcePackage.unload() first.</p>
+</div>
+</dd>
 <dt><strong>console_send</strong> (table)</dt>
 <dd>Sends the given lua <em>table</em> to clients connected to the engine.
 Values can be either <code class="docutils literal"><span class="pre">nil</span></code>, bool, number, string, table, array, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
