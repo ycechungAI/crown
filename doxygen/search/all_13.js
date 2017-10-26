@@ -3,6 +3,7 @@ var searchData=
   ['tcpsocket',['TCPSocket',['../structcrown_1_1_t_c_p_socket.html',1,'crown']]],
   ['temp_5fcount',['temp_count',['../structcrown_1_1_lua_environment.html#a51d9a99f527a1519ab0825ef0845a737',1,'crown::LuaEnvironment']]],
   ['tempallocator',['TempAllocator',['../classcrown_1_1_temp_allocator.html',1,'crown::TempAllocator&lt; BUFFER_SIZE &gt;'],['../classcrown_1_1_temp_allocator.html#a8b83308ebc2f54f58d2ae584ab777103',1,'crown::TempAllocator::TempAllocator()']]],
+  ['textevent',['TextEvent',['../structcrown_1_1_text_event.html',1,'crown']]],
   ['texturedata',['TextureData',['../structcrown_1_1_texture_data.html',1,'crown']]],
   ['texturehandle',['TextureHandle',['../structcrown_1_1_texture_handle.html',1,'crown']]],
   ['textureresource',['TextureResource',['../structcrown_1_1_texture_resource.html',1,'crown']]],

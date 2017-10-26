@@ -10,7 +10,7 @@ var searchData=
   ['map_3c_20crown_3a_3aguid_2c_20stateinfo_20_3e',['Map&lt; crown::Guid, StateInfo &gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['map_3c_20crown_3a_3astringid32_2c_20u32_20_3e',['Map&lt; crown::StringId32, u32 &gt;',['../structcrown_1_1_map.html',1,'crown']]],
   ['mass',['mass',['../structcrown_1_1_actor_resource.html#a94378565dddf76e7a213467b7056adb9',1,'crown::ActorResource']]],
-  ['material',['Material',['../structcrown_1_1_material.html',1,'crown::Material'],['../structcrown_1_1_collider_desc.html#a9ac42b64ac65e4d147269ef8de8db361',1,'crown::ColliderDesc::material()']]],
+  ['material',['Material',['../structcrown_1_1_material.html',1,'crown::Material'],['../structcrown_1_1_actor_resource.html#a13840a7607baafdad5c660dd554e5fe7',1,'crown::ActorResource::material()'],['../structcrown_1_1_collider_desc.html#a9ac42b64ac65e4d147269ef8de8db361',1,'crown::ColliderDesc::material()']]],
   ['material_5fresource',['material_resource',['../structcrown_1_1_mesh_renderer_desc.html#a47a0f7ced2a4f1aa6b473aab2ff65f90',1,'crown::MeshRendererDesc::material_resource()'],['../structcrown_1_1_sprite_renderer_desc.html#a22766e349b922b1a3937cf662b85ef3e',1,'crown::SpriteRendererDesc::material_resource()']]],
   ['materialmanager',['MaterialManager',['../structcrown_1_1_material_manager.html',1,'crown']]],
   ['materialresource',['MaterialResource',['../structcrown_1_1_material_resource.html',1,'crown']]],

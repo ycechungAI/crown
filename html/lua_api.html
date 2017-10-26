@@ -786,9 +786,9 @@ After unlinking, the &#64;a unit’s local pose is set to its previous world pos
 <dd>Sets the depth of the sprite.</dd>
 <dt><strong>sprite_obb</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Matrix4x4, Vector3</span></dt>
 <dd>Returns the OBB of the sprite as (pose, half_extents).</dd>
-<dt><strong>sprite_raycast</strong> (rw, unit, from, dir) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd>Returns the distance along ray (from, dir) to intersection point with the sprite or -1.0 if no
-intersection.</dd>
+<dt><strong>sprite_raycast</strong> (rw, unit, from, dir) <span class="classifier-delimiter">:</span> <span class="classifier">float, int, int</span></dt>
+<dd>Returns (t, layer, depth), where <em>t</em> is the distance along ray (from, dir) to
+intersection point with the sprite or -1.0 if no intersection.</dd>
 </dl>
 </div>
 <div class="section" id="light">

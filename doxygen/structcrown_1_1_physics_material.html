@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
-<title>Crown: crown::PhysicsConfigActor Struct Reference</title>
+<title>Crown: crown::PhysicsMaterial Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,45 +46,32 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_physics_config_actor.html">PhysicsConfigActor</a></li>  </ul>
+<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_physics_material.html">PhysicsMaterial</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structcrown_1_1_physics_config_actor-members.html">List of all members</a>  </div>
+<a href="structcrown_1_1_physics_material-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crown::PhysicsConfigActor Struct Reference</div>  </div>
+<div class="title">crown::PhysicsMaterial Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a6e5ad0ced4639349411d13409957b0d3"><td class="memItemLeft" align="right" valign="top"><a id="a6e5ad0ced4639349411d13409957b0d3"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<b>DYNAMIC</b> = 1 &lt;&lt; 0, 
-<br />
-&#160;&#160;<b>KINEMATIC</b> = 1 &lt;&lt; 1, 
-<br />
-&#160;&#160;<b>DISABLE_GRAVITY</b> = 1 &lt;&lt; 2
-<br />
- }</td></tr>
-<tr class="separator:a6e5ad0ced4639349411d13409957b0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a58ee8da735e3b40ce4c7721704807243"><td class="memItemLeft" align="right" valign="top"><a id="a58ee8da735e3b40ce4c7721704807243"></a>
+<tr class="memitem:a3ff0557a7e462711299b7be849bea270"><td class="memItemLeft" align="right" valign="top"><a id="a3ff0557a7e462711299b7be849bea270"></a>
 <a class="el" href="structcrown_1_1_string_id32.html">StringId32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
-<tr class="separator:a58ee8da735e3b40ce4c7721704807243"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb60295d3255d287f14dad8df5f6415"><td class="memItemLeft" align="right" valign="top"><a id="a0fb60295d3255d287f14dad8df5f6415"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>linear_damping</b></td></tr>
-<tr class="separator:a0fb60295d3255d287f14dad8df5f6415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae18434f6e28ead6b26fcffc7f0d76fde"><td class="memItemLeft" align="right" valign="top"><a id="ae18434f6e28ead6b26fcffc7f0d76fde"></a>
-f32&#160;</td><td class="memItemRight" valign="bottom"><b>angular_damping</b></td></tr>
-<tr class="separator:ae18434f6e28ead6b26fcffc7f0d76fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ee36295e3aab56a09b0e654a6fca225"><td class="memItemLeft" align="right" valign="top"><a id="a2ee36295e3aab56a09b0e654a6fca225"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
-<tr class="separator:a2ee36295e3aab56a09b0e654a6fca225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a3ff0557a7e462711299b7be849bea270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3632066c30e2631d4cf11a9b8577272"><td class="memItemLeft" align="right" valign="top"><a id="af3632066c30e2631d4cf11a9b8577272"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><b>friction</b></td></tr>
+<tr class="separator:af3632066c30e2631d4cf11a9b8577272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2669433f33cb9af064a2463b660ff780"><td class="memItemLeft" align="right" valign="top"><a id="a2669433f33cb9af064a2463b660ff780"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><b>rolling_friction</b></td></tr>
+<tr class="separator:a2669433f33cb9af064a2463b660ff780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af90deeea8442f186356431e6e7b2228e"><td class="memItemLeft" align="right" valign="top"><a id="af90deeea8442f186356431e6e7b2228e"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><b>restitution</b></td></tr>
+<tr class="separator:af90deeea8442f186356431e6e7b2228e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/resource/<a class="el" href="physics__resource_8h_source.html">physics_resource.h</a></li>
@@ -92,7 +79,7 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 3 2017 19:52:14 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 26 2017 19:55:30 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
