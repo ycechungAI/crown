@@ -149,6 +149,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#physicsworld">PhysicsWorld</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#raycasthit">RaycastHit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#actor">Actor</a></li>
 </ul>
 </li>
@@ -179,7 +180,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#profiler">Profiler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#display">Display</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#display-mode">Display Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#displaymode">DisplayMode</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#window">Window</a></li>
@@ -836,12 +837,27 @@ It can be either <code class="docutils literal"><span class="pre">directional</s
 <dd>Returns the gravity.</dd>
 <dt><strong>set_gravity</strong> (pw, gravity)</dt>
 <dd>Sets the gravity.</dd>
-<dt><strong>raycast</strong> (pw, from, dir, length, mode) <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
-<dd>Returns the actors which intersects the raycast.
-Mode can be either <code class="docutils literal"><span class="pre">closest</span></code> or <code class="docutils literal"><span class="pre">all</span></code>.</dd>
+<dt><strong>raycast_closest</strong> (pw, from, dir, length) <span class="classifier-delimiter">:</span> <span class="classifier">hit, collision_pos, normal, Actor</span></dt>
+<dd>Casts a ray into the physics world and returns the closest
+actor it intersects with.
+If <em>hit</em> is true the following return values contain
+the <em>collision_pos</em> in world space, the <em>normal</em> of
+the surface that was hit and the <em>actor</em> that was hit.</dd>
+<dt><strong>raycast_all</strong> (pw, from, dir, length) <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
+<dd>Casts a ray into the physics world and returns all the
+actors it intersects with as an array of <a class="reference internal" href="#raycasthit">RaycastHit</a> tables.</dd>
 <dt><strong>enable_debug_drawing</strong> (pw, enable)</dt>
 <dd>Sets whether to <em>enable</em> debug drawing.</dd>
 </dl>
+<div class="section" id="raycasthit">
+<h3>RaycastHit<a class="headerlink" href="#raycasthit" title="Permalink to this headline">¶</a></h3>
+<p>RaycastHit is a lua table with 3 fields:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">[1]</span></code>: The collision position in world space.</li>
+<li><code class="docutils literal"><span class="pre">[2]</span></code>: The normal of the surface that was hit.</li>
+<li><code class="docutils literal"><span class="pre">[3]</span></code>: The actor that was hit.</li>
+</ul>
+</div>
 <div class="section" id="actor">
 <h3>Actor<a class="headerlink" href="#actor" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
@@ -1270,14 +1286,14 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <h2>Display<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><strong>modes</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
-<dd>Returns an array of display modes. See <a class="reference internal" href="#display-mode">Display Mode</a>.</dd>
+<dd>Returns an array of <a class="reference internal" href="#displaymode">DisplayMode</a> tables.</dd>
 <dt><strong>set_mode</strong> (id)</dt>
 <dd>Sets the display mode <em>id</em>.
 The initial display mode is automatically reset when the program terminates.</dd>
 </dl>
-<div class="section" id="display-mode">
-<h3>Display Mode<a class="headerlink" href="#display-mode" title="Permalink to this headline">¶</a></h3>
-<p>Display mode is a lua table with 3 fields:</p>
+<div class="section" id="displaymode">
+<h3>DisplayMode<a class="headerlink" href="#displaymode" title="Permalink to this headline">¶</a></h3>
+<p>DisplayMode is a lua table with 3 fields:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">id</span></code>: The id of the display mode.</li>
 <li><code class="docutils literal"><span class="pre">width</span></code>: The width of the display mode.</li>
