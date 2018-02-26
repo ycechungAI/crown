@@ -1,20 +1,23 @@
 var searchData=
 [
+  ['fabs',['fabs',['../group___math.html#ga98fefffde2b234efaa64772168f21600',1,'crown']]],
+  ['facos',['facos',['../group___math.html#gacf6db8e7bcb694636d5d4c5ea11c3197',1,'crown']]],
   ['far_5frange',['far_range',['../structcrown_1_1_camera_desc.html#ad4a83d26969ed5186c30932578c1d3c3',1,'crown::CameraDesc']]],
   ['fclamp',['fclamp',['../group___math.html#ga4115ad7dc3bf222d0527c61c05ab17e4',1,'crown']]],
+  ['fcos',['fcos',['../group___math.html#ga15cf12bb21ae38d83c042677e186c670',1,'crown']]],
   ['fdeg',['fdeg',['../group___math.html#gad38c425b00ee8fa616b7e11da37e1437',1,'crown']]],
   ['fequal',['fequal',['../group___math.html#ga9370f904c105e1d86a7df603c8dc0f6b',1,'crown']]],
   ['ffract',['ffract',['../group___math.html#ga96c5e769e6b8296ddf0ce234afe8e824',1,'crown']]],
-  ['file',['File',['../classcrown_1_1_file.html',1,'crown']]],
+  ['file',['File',['../structcrown_1_1_file.html',1,'crown']]],
   ['filemonitor',['FileMonitor',['../structcrown_1_1_file_monitor.html',1,'crown']]],
   ['filemonitorevent',['FileMonitorEvent',['../structcrown_1_1_file_monitor_event.html',1,'crown']]],
   ['fileopenmode',['FileOpenMode',['../structcrown_1_1_file_open_mode.html',1,'crown']]],
-  ['filesystem',['Filesystem',['../classcrown_1_1_filesystem.html',1,'crown::Filesystem'],['../group___filesystem.html',1,'(Global Namespace)']]],
-  ['filesystemdisk',['FilesystemDisk',['../classcrown_1_1_filesystem_disk.html',1,'crown']]],
+  ['filesystem',['Filesystem',['../structcrown_1_1_filesystem.html',1,'crown::Filesystem'],['../group___filesystem.html',1,'(Global Namespace)']]],
+  ['filesystemdisk',['FilesystemDisk',['../structcrown_1_1_filesystem_disk.html',1,'crown']]],
   ['findresult',['FindResult',['../structcrown_1_1sort__map__internal_1_1_find_result.html',1,'crown::sort_map_internal']]],
   ['fixedstring',['FixedString',['../structcrown_1_1_fixed_string.html',1,'crown']]],
   ['flags',['flags',['../structcrown_1_1_actor_resource.html#adeb6d15df7cd6ca0a89660ea2acea89d',1,'crown::ActorResource']]],
-  ['flush',['flush',['../classcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6',1,'crown::File::flush()'],['../structcrown_1_1_resource_loader.html#aaec8425fcee7e58d20f4f565b1bd79a1',1,'crown::ResourceLoader::flush()'],['../structcrown_1_1_resource_manager.html#ab47f375d6d2c3bf122fef7cf37c96669',1,'crown::ResourceManager::flush()'],['../structcrown_1_1_resource_package.html#af381debea6c92cefbe52d15213e41e5f',1,'crown::ResourcePackage::flush()']]],
+  ['flush',['flush',['../structcrown_1_1_file.html#a57bdfab238a7e244a6e4237d66943da6',1,'crown::File::flush()'],['../structcrown_1_1_resource_loader.html#aaec8425fcee7e58d20f4f565b1bd79a1',1,'crown::ResourceLoader::flush()'],['../structcrown_1_1_resource_manager.html#ab47f375d6d2c3bf122fef7cf37c96669',1,'crown::ResourceManager::flush()'],['../structcrown_1_1_resource_package.html#af381debea6c92cefbe52d15213e41e5f',1,'crown::ResourcePackage::flush()']]],
   ['fmax',['fmax',['../group___math.html#ga19dd4e5c9c1591af36e012c75fc5690d',1,'crown']]],
   ['fmin',['fmin',['../group___math.html#gaf10b2ed34b27cd06bca36718b0dd2f8d',1,'crown']]],
   ['fontresource',['FontResource',['../structcrown_1_1_font_resource.html',1,'crown']]],
@@ -28,5 +31,8 @@ var searchData=
   ['front',['front',['../namespacecrown_1_1array.html#ac1715d61092d72cb1ea6c5fcf6a928eb',1,'crown::array::front(Array&lt; T &gt; &amp;a)'],['../namespacecrown_1_1array.html#aadadddc8f9bc74edd8f6623d59b4c82e',1,'crown::array::front(const Array&lt; T &gt; &amp;a)'],['../namespacecrown_1_1vector.html#a1f0636a2776ca8f2dbbf9e8954fc3e9d',1,'crown::vector::front(Vector&lt; T &gt; &amp;v)'],['../namespacecrown_1_1vector.html#a3c8f07dc71509dcdbb45a4c6ec618800',1,'crown::vector::front(const Vector&lt; T &gt; &amp;v)']]],
   ['frustum',['Frustum',['../structcrown_1_1_frustum.html',1,'crown']]],
   ['frustum_5fbox_5fintersection',['frustum_box_intersection',['../group___math.html#ga1d490762d4b506dd4f78412791339a59',1,'crown']]],
-  ['frustum_5fsphere_5fintersection',['frustum_sphere_intersection',['../group___math.html#ga618bd1d60d10675ff3f77ab39f947e87',1,'crown']]]
+  ['frustum_5fsphere_5fintersection',['frustum_sphere_intersection',['../group___math.html#ga618bd1d60d10675ff3f77ab39f947e87',1,'crown']]],
+  ['fsin',['fsin',['../group___math.html#ga2877d13a149928c872c1195d6e26d65d',1,'crown']]],
+  ['fsqrt',['fsqrt',['../group___math.html#ga58d8427bd85b742a57425fd6ae9bbb31',1,'crown']]],
+  ['ftan',['ftan',['../group___math.html#gaa58c68b9315582ac7001d265a33b8dfd',1,'crown']]]
 ];

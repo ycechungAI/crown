@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unit',['unit',['../structcrown_1_1_unit_spawned_event.html#ac985abf3d51c3be14f10d8fe1a6e40db',1,'crown::UnitSpawnedEvent::unit()'],['../structcrown_1_1_unit_destroyed_event.html#a721c5127458e3296ec79401bbc5ef201',1,'crown::UnitDestroyedEvent::unit()']]]
+  ['visible',['visible',['../structcrown_1_1_mesh_renderer_desc.html#ac7cc6319729a63258484d1b230acca2e',1,'crown::MeshRendererDesc::visible()'],['../structcrown_1_1_sprite_renderer_desc.html#aeeeaa6f138e021d5f55a34ccd6d532a8',1,'crown::SpriteRendererDesc::visible()']]]
 ];

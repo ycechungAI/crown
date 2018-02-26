@@ -6,7 +6,7 @@ var searchData=
   ['actorresource',['ActorResource',['../structcrown_1_1_actor_resource.html',1,'crown']]],
   ['actortype',['ActorType',['../structcrown_1_1_actor_type.html',1,'crown']]],
   ['allocatememory',['AllocateMemory',['../structcrown_1_1_allocate_memory.html',1,'crown']]],
-  ['allocator',['Allocator',['../classcrown_1_1_allocator.html',1,'crown']]],
+  ['allocator',['Allocator',['../structcrown_1_1_allocator.html',1,'crown']]],
   ['animation',['Animation',['../structcrown_1_1_animation.html',1,'crown::Animation'],['../structcrown_1_1_animation_state_machine_1_1_animation.html',1,'crown::AnimationStateMachine::Animation']]],
   ['animationarray',['AnimationArray',['../structcrown_1_1_animation_array.html',1,'crown']]],
   ['animationstatemachine',['AnimationStateMachine',['../structcrown_1_1_animation_state_machine.html',1,'crown']]],

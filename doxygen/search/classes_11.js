@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['random',['Random',['../classcrown_1_1_random.html',1,'crown']]],
+  ['random',['Random',['../structcrown_1_1_random.html',1,'crown']]],
   ['raycasthit',['RaycastHit',['../structcrown_1_1_raycast_hit.html',1,'crown']]],
   ['raycastmode',['RaycastMode',['../structcrown_1_1_raycast_mode.html',1,'crown']]],
   ['readresult',['ReadResult',['../structcrown_1_1_read_result.html',1,'crown']]],

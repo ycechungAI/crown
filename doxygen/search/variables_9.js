@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['position',['position',['../structcrown_1_1_raycast_hit.html#a9b9b487ba20dc315fd7012c71d999904',1,'crown::RaycastHit::position()'],['../structcrown_1_1_physics_transform_event.html#ad2730892e20ad353ea6bc1e553c6a62b',1,'crown::PhysicsTransformEvent::position()']]]
+  ['range',['range',['../structcrown_1_1_light_desc.html#aede144d16e5318bc377769adaf00bb87',1,'crown::LightDesc']]],
+  ['rotation',['rotation',['../structcrown_1_1_physics_transform_event.html#a43fb68e2820b8604695df9dcb6dc60bb',1,'crown::PhysicsTransformEvent']]]
 ];

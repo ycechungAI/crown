@@ -15,10 +15,11 @@ var searchData=
   ['physicstransformevent',['PhysicsTransformEvent',['../structcrown_1_1_physics_transform_event.html',1,'crown']]],
   ['physicstriggerevent',['PhysicsTriggerEvent',['../structcrown_1_1_physics_trigger_event.html',1,'crown']]],
   ['physicsworld',['PhysicsWorld',['../structcrown_1_1_physics_world.html',1,'crown']]],
+  ['pipeline',['Pipeline',['../structcrown_1_1_pipeline.html',1,'crown']]],
   ['plane3',['Plane3',['../structcrown_1_1_plane3.html',1,'crown']]],
-  ['poolallocator',['PoolAllocator',['../classcrown_1_1_pool_allocator.html',1,'crown']]],
+  ['poolallocator',['PoolAllocator',['../structcrown_1_1_pool_allocator.html',1,'crown']]],
   ['pose',['Pose',['../structcrown_1_1_scene_graph_1_1_pose.html',1,'crown::SceneGraph']]],
   ['profilereventtype',['ProfilerEventType',['../structcrown_1_1_profiler_event_type.html',1,'crown']]],
   ['projectiontype',['ProjectionType',['../structcrown_1_1_projection_type.html',1,'crown']]],
-  ['proxyallocator',['ProxyAllocator',['../classcrown_1_1_proxy_allocator.html',1,'crown']]]
+  ['proxyallocator',['ProxyAllocator',['../structcrown_1_1_proxy_allocator.html',1,'crown']]]
 ];

@@ -14,6 +14,5 @@ var searchData=
   ['componenttypedata',['ComponentTypeData',['../structcrown_1_1_unit_compiler_1_1_component_type_data.html',1,'crown::UnitCompiler']]],
   ['componenttypeinfo',['ComponentTypeInfo',['../structcrown_1_1_unit_compiler_1_1_component_type_info.html',1,'crown::UnitCompiler']]],
   ['connectresult',['ConnectResult',['../structcrown_1_1_connect_result.html',1,'crown']]],
-  ['consoleserver',['ConsoleServer',['../structcrown_1_1_console_server.html',1,'crown']]],
-  ['controllerdesc',['ControllerDesc',['../structcrown_1_1_controller_desc.html',1,'crown']]]
+  ['consoleserver',['ConsoleServer',['../structcrown_1_1_console_server.html',1,'crown']]]
 ];

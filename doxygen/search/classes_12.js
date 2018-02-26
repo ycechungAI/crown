@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['sampler',['Sampler',['../structcrown_1_1_shader_resource_1_1_sampler.html',1,'crown::ShaderResource']]],
   ['scenegraph',['SceneGraph',['../structcrown_1_1_scene_graph.html',1,'crown']]],
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html',1,'crown']]],
   ['scriptdata',['ScriptData',['../structcrown_1_1_script_world_1_1_script_data.html',1,'crown::ScriptWorld']]],
@@ -25,8 +26,8 @@ var searchData=
   ['spritemanager',['SpriteManager',['../structcrown_1_1_render_world_1_1_sprite_manager.html',1,'crown::RenderWorld']]],
   ['spriterendererdesc',['SpriteRendererDesc',['../structcrown_1_1_sprite_renderer_desc.html',1,'crown']]],
   ['spriteresource',['SpriteResource',['../structcrown_1_1_sprite_resource.html',1,'crown']]],
-  ['stack',['Stack',['../structskinny_1_1expression__language_1_1_stack.html',1,'skinny::expression_language']]],
-  ['stackallocator',['StackAllocator',['../classcrown_1_1_stack_allocator.html',1,'crown']]],
+  ['stack',['Stack',['../structcrown_1_1skinny_1_1expression__language_1_1_stack.html',1,'crown::skinny::expression_language']]],
+  ['stackallocator',['StackAllocator',['../structcrown_1_1_stack_allocator.html',1,'crown']]],
   ['stat',['Stat',['../structcrown_1_1_stat.html',1,'crown']]],
   ['state',['State',['../structcrown_1_1_state.html',1,'crown']]],
   ['statemachineresource',['StateMachineResource',['../structcrown_1_1_state_machine_resource.html',1,'crown']]],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['radius',['radius',['../namespacecrown_1_1aabb.html#af93c53a098c88e8f7355776d5acabe33',1,'crown::aabb']]],
-  ['random',['Random',['../classcrown_1_1_random.html#a68932de32823bfa656c46b2004955624',1,'crown::Random']]],
+  ['random',['Random',['../structcrown_1_1_random.html#a68932de32823bfa656c46b2004955624',1,'crown::Random']]],
   ['ray_5fdisc_5fintersection',['ray_disc_intersection',['../group___math.html#ga23fbe04c191b3c6d9ccdf0529eeff8fe',1,'crown']]],
   ['ray_5fmesh_5fintersection',['ray_mesh_intersection',['../group___math.html#ga55966cae0ae6ceef84a396766304aeba',1,'crown']]],
   ['ray_5fobb_5fintersection',['ray_obb_intersection',['../group___math.html#ga342ce1be8389270ca2fced2859f787ad',1,'crown']]],
@@ -9,7 +9,7 @@ var searchData=
   ['ray_5fsphere_5fintersection',['ray_sphere_intersection',['../group___math.html#gaf2b6f91858fd117c1c59564d81076aa6',1,'crown']]],
   ['ray_5ftriangle_5fintersection',['ray_triangle_intersection',['../group___math.html#ga0611bb224786987a21b03b87b20e8638',1,'crown']]],
   ['raycast',['raycast',['../structcrown_1_1_physics_world.html#ac47f9c79913a5d34db7eab93d985df8a',1,'crown::PhysicsWorld']]],
-  ['read',['read',['../classcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../structcrown_1_1_t_c_p_socket.html#ac751152281c78d8afa53bf80f9199429',1,'crown::TCPSocket::read()']]],
+  ['read',['read',['../structcrown_1_1_file.html#aba8b10f9cb326f04c4319eb261061d2e',1,'crown::File::read()'],['../structcrown_1_1_t_c_p_socket.html#ac751152281c78d8afa53bf80f9199429',1,'crown::TCPSocket::read()']]],
   ['read_5fnonblock',['read_nonblock',['../structcrown_1_1_t_c_p_socket.html#aa250047ef7a3fa4f49d41dd5af322a48',1,'crown::TCPSocket']]],
   ['record_5ffloat',['record_float',['../namespacecrown_1_1profiler.html#a6010b0da2baf3016924042529a1b046c',1,'crown::profiler']]],
   ['record_5fvector3',['record_vector3',['../namespacecrown_1_1profiler.html#a13c2d80e128516bc6984954a9d8a1013',1,'crown::profiler']]],
@@ -33,5 +33,5 @@ var searchData=
   ['right',['right',['../group___math.html#ga9340f3b72e9b7db6d4370d4493e33588',1,'crown']]],
   ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]],
   ['rtrim',['rtrim',['../structcrown_1_1_dynamic_string.html#aa6de3c5f496d1423d3a82152f8cb488b',1,'crown::DynamicString']]],
-  ['run',['run',['../structcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device']]]
+  ['run',['run',['../structcrown_1_1_thread.html#a34d0e11ba7dba0a5071354ecbaab1f35',1,'crown::Thread::run()'],['../structcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device::run()'],['../structcrown_1_1_resource_loader.html#abb549689b8fbd47015064d3f7c171603',1,'crown::ResourceLoader::run()']]]
 ];

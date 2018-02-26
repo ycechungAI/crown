@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../classcrown_1_1_proxy_allocator.html#ab229c62b2cd2d8c09311ba200085e792',1,'crown::ProxyAllocator::name()'],['../structcrown_1_1_input_device.html#ac72f034d2a542b20a0cc0ba37b917f26',1,'crown::InputDevice::name()']]],
+  ['name',['name',['../structcrown_1_1_proxy_allocator.html#ab229c62b2cd2d8c09311ba200085e792',1,'crown::ProxyAllocator::name()'],['../structcrown_1_1_input_device.html#ac72f034d2a542b20a0cc0ba37b917f26',1,'crown::InputDevice::name()']]],
   ['near_5frange',['near_range',['../structcrown_1_1_camera_desc.html#ab737e8f9ef6f7dff56c0b32efa379334',1,'crown::CameraDesc']]],
   ['network',['Network',['../group___network.html',1,'']]],
   ['new_5fguid',['new_guid',['../namespacecrown_1_1guid.html#a15eda1c5653ea40d6320572a50b13c13',1,'crown::guid']]],

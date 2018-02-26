@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lua API reference &mdash; Crown Engine 0.0.30 documentation</title>
+  <title>Lua API reference &mdash; Crown Engine 0.0.31 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Crown Engine 0.0.30 documentation" href="index.html"/>
+    <link rel="top" title="Crown Engine 0.0.31 documentation" href="index.html"/>
         <link rel="next" title="boot.config reference" href="boot_config.html"/>
         <link rel="prev" title="Basic concepts" href="basics.html"/> 
 
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.0.30
+                0.0.31
               </div>
             
           
@@ -637,15 +637,15 @@ enable depth test when rendering the lines.</dd>
 <dl class="docutils">
 <dt><strong>camera_create</strong> (world, unit, projection, fov, far_range, near_range, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates a new camera for <em>unit</em> and returns its id.
-Projection can be either <code class="docutils literal"><span class="pre">orthographic</span></code> or <code class="docutils literal"><span class="pre">perspective</span></code>.</dd>
+Projection can be either <code class="docutils literal notranslate"><span class="pre">orthographic</span></code> or <code class="docutils literal notranslate"><span class="pre">perspective</span></code>.</dd>
 <dt><strong>camera_instances</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the cameras of the <em>unit</em>.</dd>
 <dt><strong>camera_set_projection_type</strong> (world, unit, projection)</dt>
 <dd>Sets the projection type of the camera.
-Projection can be either <code class="docutils literal"><span class="pre">orthographic</span></code> or <code class="docutils literal"><span class="pre">perspective</span></code>.</dd>
+Projection can be either <code class="docutils literal notranslate"><span class="pre">orthographic</span></code> or <code class="docutils literal notranslate"><span class="pre">perspective</span></code>.</dd>
 <dt><strong>camera_projection_type</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the projection type of the camera.
-It can be either <code class="docutils literal"><span class="pre">orthographic</span></code> or <code class="docutils literal"><span class="pre">perspective</span></code>.</dd>
+It can be either <code class="docutils literal notranslate"><span class="pre">orthographic</span></code> or <code class="docutils literal notranslate"><span class="pre">perspective</span></code>.</dd>
 <dt><strong>camera_fov</strong> (world, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
 <dd>Returns the field-of-view of the camera in degrees.</dd>
 <dt><strong>camera_set_fov</strong> (world, unit, fov)</dt>
@@ -799,14 +799,14 @@ intersection point with the sprite or -1.0 if no intersection.</dd>
 <dl class="docutils">
 <dt><strong>light_create</strong> (rw, unit, type, range, intensity, spot_angle, color, pose) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Creates a new light for the <em>unit</em> and returns its id.
-Type can be either <code class="docutils literal"><span class="pre">directional</span></code>, <code class="docutils literal"><span class="pre">omni</span></code> or <code class="docutils literal"><span class="pre">spot</span></code>.</dd>
+Type can be either <code class="docutils literal notranslate"><span class="pre">directional</span></code>, <code class="docutils literal notranslate"><span class="pre">omni</span></code> or <code class="docutils literal notranslate"><span class="pre">spot</span></code>.</dd>
 <dt><strong>light_destroy</strong> (rw, unit)</dt>
 <dd>Destroys the light of the <em>unit</em>.</dd>
 <dt><strong>light_instances</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Id</span></dt>
 <dd>Returns the IDs for all the lights of the <em>unit</em>.</dd>
 <dt><strong>light_type</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the type of the light of the <em>unit</em>.
-It can be either <code class="docutils literal"><span class="pre">directional</span></code>, <code class="docutils literal"><span class="pre">omni</span></code> or <code class="docutils literal"><span class="pre">spot</span></code>.</dd>
+It can be either <code class="docutils literal notranslate"><span class="pre">directional</span></code>, <code class="docutils literal notranslate"><span class="pre">omni</span></code> or <code class="docutils literal notranslate"><span class="pre">spot</span></code>.</dd>
 <dt><strong>light_color</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">Color4</span></dt>
 <dd>Returns the color of the light.</dd>
 <dt><strong>light_range</strong> (rw, unit) <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
@@ -837,12 +837,12 @@ It can be either <code class="docutils literal"><span class="pre">directional</s
 <dd>Returns the gravity.</dd>
 <dt><strong>set_gravity</strong> (pw, gravity)</dt>
 <dd>Sets the gravity.</dd>
-<dt><strong>raycast_closest</strong> (pw, from, dir, length) <span class="classifier-delimiter">:</span> <span class="classifier">hit, collision_pos, normal, Actor</span></dt>
+<dt><strong>raycast_closest</strong> (pw, from, dir, length) <span class="classifier-delimiter">:</span> <span class="classifier">hit, collision_pos, normal, UnitId, Actor</span></dt>
 <dd>Casts a ray into the physics world and returns the closest
 actor it intersects with.
 If <em>hit</em> is true the following return values contain
 the <em>collision_pos</em> in world space, the <em>normal</em> of
-the surface that was hit and the <em>actor</em> that was hit.</dd>
+the surface that was hit and the <em>unit</em> and the <em>actor</em> that was hit.</dd>
 <dt><strong>raycast_all</strong> (pw, from, dir, length) <span class="classifier-delimiter">:</span> <span class="classifier">table</span></dt>
 <dd>Casts a ray into the physics world and returns all the
 actors it intersects with as an array of <a class="reference internal" href="#raycasthit">RaycastHit</a> tables.</dd>
@@ -853,9 +853,10 @@ actors it intersects with as an array of <a class="reference internal" href="#ra
 <h3>RaycastHit<a class="headerlink" href="#raycasthit" title="Permalink to this headline">¶</a></h3>
 <p>RaycastHit is a lua table with 3 fields:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">[1]</span></code>: The collision position in world space.</li>
-<li><code class="docutils literal"><span class="pre">[2]</span></code>: The normal of the surface that was hit.</li>
-<li><code class="docutils literal"><span class="pre">[3]</span></code>: The actor that was hit.</li>
+<li><code class="docutils literal notranslate"><span class="pre">[1]</span></code>: The collision position in world space.</li>
+<li><code class="docutils literal notranslate"><span class="pre">[2]</span></code>: The normal of the surface that was hit.</li>
+<li><code class="docutils literal notranslate"><span class="pre">[3]</span></code>: The unit that was hit.</li>
+<li><code class="docutils literal notranslate"><span class="pre">[4]</span></code>: The actor that was hit.</li>
 </ul>
 </div>
 <div class="section" id="actor">
@@ -1018,10 +1019,10 @@ instead, you have to poll for completion with has_loaded().</p>
 <dd>Returns a table containing the command line parameters the engine was started with.</dd>
 <dt><strong>platform</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying what platform the engine is running on.
-It can be either <code class="docutils literal"><span class="pre">android</span></code>, <code class="docutils literal"><span class="pre">linux</span></code> or <code class="docutils literal"><span class="pre">windows</span></code></dd>
+It can be either <code class="docutils literal notranslate"><span class="pre">android</span></code>, <code class="docutils literal notranslate"><span class="pre">linux</span></code> or <code class="docutils literal notranslate"><span class="pre">windows</span></code></dd>
 <dt><strong>architecture</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying what architecture the engine is running on.
-It can be either <code class="docutils literal"><span class="pre">32-bit</span></code> or <code class="docutils literal"><span class="pre">64-bit</span></code>.</dd>
+It can be either <code class="docutils literal notranslate"><span class="pre">32-bit</span></code> or <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>.</dd>
 <dt><strong>version</strong> () <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns a string identifying the engine version.
 The form is “major.minor.micro”.</dd>
@@ -1047,7 +1048,7 @@ ResourcePackage.unload() first.</p>
 </dd>
 <dt><strong>console_send</strong> (table)</dt>
 <dd>Sends the given lua <em>table</em> to clients connected to the engine.
-Values can be either <code class="docutils literal"><span class="pre">nil</span></code>, bool, number, string, table, array, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
+Values can be either <code class="docutils literal notranslate"><span class="pre">nil</span></code>, bool, number, string, table, array, Vector2, Vector3, Quaternion, Matrix4x4 or Color4.</dd>
 <dt><strong>can_get</strong> (type, name) <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd>Returns whether the resource (type, name) is loaded.
 When resource autoload is enabled it always returns true.</dd>
@@ -1130,18 +1131,18 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <dt><strong>button_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the button <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal"><span class="pre">nil</span></code> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal notranslate"><span class="pre">nil</span></code> if no matching button is found.</dd>
 </dl>
 <div class="section" id="keyboard-button-names">
 <h4>Keyboard Button Names<a class="headerlink" href="#keyboard-button-names" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">tab</span></code>, <code class="docutils literal"><span class="pre">enter</span></code>, <code class="docutils literal"><span class="pre">escape</span></code>, <code class="docutils literal"><span class="pre">space</span></code>, <code class="docutils literal"><span class="pre">backspace</span></code></li>
-<li><code class="docutils literal"><span class="pre">num_lock</span></code>, <code class="docutils literal"><span class="pre">numpad_enter</span></code>, <code class="docutils literal"><span class="pre">numpad_.</span></code>, <code class="docutils literal"><span class="pre">numpad_*</span></code>, <code class="docutils literal"><span class="pre">numpad_+</span></code>, <code class="docutils literal"><span class="pre">numpad_-</span></code>, <code class="docutils literal"><span class="pre">numpad_/</span></code>, <code class="docutils literal"><span class="pre">numpad_0</span></code>, <code class="docutils literal"><span class="pre">numpad_1</span></code>, <code class="docutils literal"><span class="pre">numpad_2</span></code>, <code class="docutils literal"><span class="pre">numpad_3</span></code>, <code class="docutils literal"><span class="pre">numpad_4</span></code>, <code class="docutils literal"><span class="pre">numpad_5</span></code>, <code class="docutils literal"><span class="pre">numpad_6</span></code>, <code class="docutils literal"><span class="pre">numpad_7</span></code>, <code class="docutils literal"><span class="pre">numpad_8</span></code>, <code class="docutils literal"><span class="pre">numpad_9</span></code></li>
-<li><code class="docutils literal"><span class="pre">f1</span></code>, <code class="docutils literal"><span class="pre">f2</span></code>, <code class="docutils literal"><span class="pre">f3</span></code>, <code class="docutils literal"><span class="pre">f4</span></code>, <code class="docutils literal"><span class="pre">f5</span></code>, <code class="docutils literal"><span class="pre">f6</span></code>, <code class="docutils literal"><span class="pre">f7</span></code>, <code class="docutils literal"><span class="pre">f8</span></code>, <code class="docutils literal"><span class="pre">f9</span></code>, <code class="docutils literal"><span class="pre">f10</span></code>, <code class="docutils literal"><span class="pre">f11</span></code>, <code class="docutils literal"><span class="pre">f12</span></code></li>
-<li><code class="docutils literal"><span class="pre">home</span></code>, <code class="docutils literal"><span class="pre">left</span></code>, <code class="docutils literal"><span class="pre">up</span></code>, <code class="docutils literal"><span class="pre">right</span></code>, <code class="docutils literal"><span class="pre">down</span></code>, <code class="docutils literal"><span class="pre">page_up</span></code>, <code class="docutils literal"><span class="pre">page_down</span></code>, <code class="docutils literal"><span class="pre">ins</span></code>, <code class="docutils literal"><span class="pre">del</span></code>, <code class="docutils literal"><span class="pre">end</span></code></li>
-<li><code class="docutils literal"><span class="pre">ctrl_left</span></code>, <code class="docutils literal"><span class="pre">ctrl_right</span></code>, <code class="docutils literal"><span class="pre">shift_left</span></code>, <code class="docutils literal"><span class="pre">shift_right</span></code>, <code class="docutils literal"><span class="pre">caps_lock</span></code>, <code class="docutils literal"><span class="pre">alt_left</span></code>, <code class="docutils literal"><span class="pre">alt_right</span></code>, <code class="docutils literal"><span class="pre">super_left</span></code>, <code class="docutils literal"><span class="pre">super_right</span></code></li>
-<li><code class="docutils literal"><span class="pre">0</span></code>, <code class="docutils literal"><span class="pre">1</span></code>, <code class="docutils literal"><span class="pre">2</span></code>, <code class="docutils literal"><span class="pre">3</span></code>, <code class="docutils literal"><span class="pre">4</span></code>, <code class="docutils literal"><span class="pre">5</span></code>, <code class="docutils literal"><span class="pre">6</span></code>, <code class="docutils literal"><span class="pre">7</span></code>, <code class="docutils literal"><span class="pre">8</span></code>, <code class="docutils literal"><span class="pre">9</span></code></li>
-<li><code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code>, <code class="docutils literal"><span class="pre">c</span></code>, <code class="docutils literal"><span class="pre">d</span></code>, <code class="docutils literal"><span class="pre">e</span></code>, <code class="docutils literal"><span class="pre">f</span></code>, <code class="docutils literal"><span class="pre">g</span></code>, <code class="docutils literal"><span class="pre">h</span></code>, <code class="docutils literal"><span class="pre">i</span></code>, <code class="docutils literal"><span class="pre">j</span></code>, <code class="docutils literal"><span class="pre">k</span></code>, <code class="docutils literal"><span class="pre">l</span></code>, <code class="docutils literal"><span class="pre">m</span></code>, <code class="docutils literal"><span class="pre">n</span></code>, <code class="docutils literal"><span class="pre">o</span></code>, <code class="docutils literal"><span class="pre">p</span></code>, <code class="docutils literal"><span class="pre">q</span></code>, <code class="docutils literal"><span class="pre">r</span></code>, <code class="docutils literal"><span class="pre">s</span></code>, <code class="docutils literal"><span class="pre">t</span></code>, <code class="docutils literal"><span class="pre">u</span></code>, <code class="docutils literal"><span class="pre">v</span></code>, <code class="docutils literal"><span class="pre">w</span></code>, <code class="docutils literal"><span class="pre">x</span></code>, <code class="docutils literal"><span class="pre">y</span></code>, <code class="docutils literal"><span class="pre">z</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">tab</span></code>, <code class="docutils literal notranslate"><span class="pre">enter</span></code>, <code class="docutils literal notranslate"><span class="pre">escape</span></code>, <code class="docutils literal notranslate"><span class="pre">space</span></code>, <code class="docutils literal notranslate"><span class="pre">backspace</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">num_lock</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_enter</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_.</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_*</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_+</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_-</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_/</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_0</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_1</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_2</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_3</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_4</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_5</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_6</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_7</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_8</span></code>, <code class="docutils literal notranslate"><span class="pre">numpad_9</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">f1</span></code>, <code class="docutils literal notranslate"><span class="pre">f2</span></code>, <code class="docutils literal notranslate"><span class="pre">f3</span></code>, <code class="docutils literal notranslate"><span class="pre">f4</span></code>, <code class="docutils literal notranslate"><span class="pre">f5</span></code>, <code class="docutils literal notranslate"><span class="pre">f6</span></code>, <code class="docutils literal notranslate"><span class="pre">f7</span></code>, <code class="docutils literal notranslate"><span class="pre">f8</span></code>, <code class="docutils literal notranslate"><span class="pre">f9</span></code>, <code class="docutils literal notranslate"><span class="pre">f10</span></code>, <code class="docutils literal notranslate"><span class="pre">f11</span></code>, <code class="docutils literal notranslate"><span class="pre">f12</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">home</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>, <code class="docutils literal notranslate"><span class="pre">down</span></code>, <code class="docutils literal notranslate"><span class="pre">page_up</span></code>, <code class="docutils literal notranslate"><span class="pre">page_down</span></code>, <code class="docutils literal notranslate"><span class="pre">ins</span></code>, <code class="docutils literal notranslate"><span class="pre">del</span></code>, <code class="docutils literal notranslate"><span class="pre">end</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">ctrl_left</span></code>, <code class="docutils literal notranslate"><span class="pre">ctrl_right</span></code>, <code class="docutils literal notranslate"><span class="pre">shift_left</span></code>, <code class="docutils literal notranslate"><span class="pre">shift_right</span></code>, <code class="docutils literal notranslate"><span class="pre">caps_lock</span></code>, <code class="docutils literal notranslate"><span class="pre">alt_left</span></code>, <code class="docutils literal notranslate"><span class="pre">alt_right</span></code>, <code class="docutils literal notranslate"><span class="pre">super_left</span></code>, <code class="docutils literal notranslate"><span class="pre">super_right</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">6</span></code>, <code class="docutils literal notranslate"><span class="pre">7</span></code>, <code class="docutils literal notranslate"><span class="pre">8</span></code>, <code class="docutils literal notranslate"><span class="pre">9</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code>, <code class="docutils literal notranslate"><span class="pre">e</span></code>, <code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code>, <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">l</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code>, <code class="docutils literal notranslate"><span class="pre">o</span></code>, <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">q</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code></li>
 </ul>
 </div>
 <div class="section" id="keyboard-axis-names">
@@ -1175,20 +1176,20 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal"><span class="pre">nil</span></code> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal notranslate"><span class="pre">nil</span></code> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em> or <code class="docutils literal"><span class="pre">nil</span></code> if no matching axis is found.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <code class="docutils literal notranslate"><span class="pre">nil</span></code> if no matching axis is found.</dd>
 </dl>
 <div class="section" id="mouse-button-names">
 <h4>Mouse Button Names<a class="headerlink" href="#mouse-button-names" title="Permalink to this headline">¶</a></h4>
-<p><code class="docutils literal"><span class="pre">left</span></code>, <code class="docutils literal"><span class="pre">middle</span></code>, <code class="docutils literal"><span class="pre">right</span></code>, <code class="docutils literal"><span class="pre">extra_1</span></code>, <code class="docutils literal"><span class="pre">extra_2</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">middle</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>, <code class="docutils literal notranslate"><span class="pre">extra_1</span></code>, <code class="docutils literal notranslate"><span class="pre">extra_2</span></code></p>
 </div>
 <div class="section" id="mouse-axis-names">
 <h4>Mouse Axis Names<a class="headerlink" href="#mouse-axis-names" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">cursor</span></code>: Returns the cursor position (x, y) in screen coordinates.</li>
-<li><code class="docutils literal"><span class="pre">cursor_delta</span></code>: Returns the delta of the cursor position (x, y) since last frame.</li>
-<li><code class="docutils literal"><span class="pre">wheel</span></code>: Returns the movement of the mouse wheel in the y axis. Positive values of y mean upward scrolling, negative values mean downward scrolling.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cursor</span></code>: Returns the cursor position (x, y) in screen coordinates.</li>
+<li><code class="docutils literal notranslate"><span class="pre">cursor_delta</span></code>: Returns the delta of the cursor position (x, y) since last frame.</li>
+<li><code class="docutils literal notranslate"><span class="pre">wheel</span></code>: Returns the movement of the mouse wheel in the y axis. Positive values of y mean upward scrolling, negative values mean downward scrolling.</li>
 </ul>
 </div>
 </div>
@@ -1218,9 +1219,9 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal"><span class="pre">nil</span></code> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal notranslate"><span class="pre">nil</span></code> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em> or <code class="docutils literal"><span class="pre">nil</span></code> if no matching axis is found.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <code class="docutils literal notranslate"><span class="pre">nil</span></code> if no matching axis is found.</dd>
 </dl>
 </div>
 <div class="section" id="pad1-pad2-pad3-pad4">
@@ -1249,24 +1250,24 @@ the box. <em>half_extents</em> describes the size of the box along the axis.</dd
 <dt><strong>axis_name</strong> (id) <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
 <dd>Returns the name of the axis <em>id</em>.</dd>
 <dt><strong>button_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal"><span class="pre">nil</span></code> if no matching button is found.</dd>
+<dd>Returns the <em>id</em> of the button <em>name</em> or <code class="docutils literal notranslate"><span class="pre">nil</span></code> if no matching button is found.</dd>
 <dt><strong>axis_id</strong> (name) <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>Returns the <em>id</em> of the axis <em>name</em> or <code class="docutils literal"><span class="pre">nil</span></code> if no matching axis is found.</dd>
+<dd>Returns the <em>id</em> of the axis <em>name</em> or <code class="docutils literal notranslate"><span class="pre">nil</span></code> if no matching axis is found.</dd>
 </dl>
 <div class="section" id="pad-button-names">
 <h4>Pad Button Names<a class="headerlink" href="#pad-button-names" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">up</span></code>, <code class="docutils literal"><span class="pre">down</span></code>, <code class="docutils literal"><span class="pre">left</span></code>, <code class="docutils literal"><span class="pre">right</span></code></li>
-<li><code class="docutils literal"><span class="pre">start</span></code>, <code class="docutils literal"><span class="pre">back</span></code>, <code class="docutils literal"><span class="pre">guide</span></code></li>
-<li><code class="docutils literal"><span class="pre">thumb_left</span></code>, <code class="docutils literal"><span class="pre">thumb_right</span></code></li>
-<li><code class="docutils literal"><span class="pre">shoulder_left</span></code>, <code class="docutils literal"><span class="pre">shoulder_right</span></code></li>
-<li><code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code>, <code class="docutils literal"><span class="pre">x</span></code>, <code class="docutils literal"><span class="pre">y</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">down</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">back</span></code>, <code class="docutils literal notranslate"><span class="pre">guide</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">thumb_left</span></code>, <code class="docutils literal notranslate"><span class="pre">thumb_right</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">shoulder_left</span></code>, <code class="docutils literal notranslate"><span class="pre">shoulder_right</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code></li>
 </ul>
 </div>
 <div class="section" id="pad-axis-names">
 <h4>Pad Axis Names<a class="headerlink" href="#pad-axis-names" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">left</span></code>, <code class="docutils literal"><span class="pre">right</span></code>: Returns the direction (x, y) of the left or right thumbstick [-1; +1]. The z element represents the left or right trigger [0; +1].</li>
+<li><code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>: Returns the direction (x, y) of the left or right thumbstick [-1; +1]. The z element represents the left or right trigger [0; +1].</li>
 </ul>
 </div>
 </div>
@@ -1295,9 +1296,9 @@ The initial display mode is automatically reset when the program terminates.</dd
 <h3>DisplayMode<a class="headerlink" href="#displaymode" title="Permalink to this headline">¶</a></h3>
 <p>DisplayMode is a lua table with 3 fields:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">id</span></code>: The id of the display mode.</li>
-<li><code class="docutils literal"><span class="pre">width</span></code>: The width of the display mode.</li>
-<li><code class="docutils literal"><span class="pre">height</span></code>: The height of the display mode.</li>
+<li><code class="docutils literal notranslate"><span class="pre">id</span></code>: The id of the display mode.</li>
+<li><code class="docutils literal notranslate"><span class="pre">width</span></code>: The width of the display mode.</li>
+<li><code class="docutils literal notranslate"><span class="pre">height</span></code>: The height of the display mode.</li>
 </ul>
 </div>
 </div>
@@ -1370,7 +1371,7 @@ The initial display mode is automatically reset when the program terminates.</dd
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.0.30',
+            VERSION:'0.0.31',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
