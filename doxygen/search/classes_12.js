@@ -11,7 +11,7 @@ var searchData=
   ['shadermanager',['ShaderManager',['../structcrown_1_1_shader_manager.html',1,'crown']]],
   ['shaderresource',['ShaderResource',['../structcrown_1_1_shader_resource.html',1,'crown']]],
   ['sortmap',['SortMap',['../structcrown_1_1_sort_map.html',1,'crown']]],
-  ['sortmap_3c_20crown_3a_3astringid64_2c_20crown_3a_3amaterial_20_2a_3e',['SortMap&lt; crown::StringId64, crown::Material *&gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
+  ['sortmap_3c_20crown_3a_3astringid64_2c_20crown_3a_3amaterial_20_2a_20_3e',['SortMap&lt; crown::StringId64, crown::Material * &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20resourcepair_2c_20resourceentry_20_3e',['SortMap&lt; ResourcePair, ResourceEntry &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20stringid32_2c_20componenttypedata_20_3e',['SortMap&lt; StringId32, ComponentTypeData &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],
   ['sortmap_3c_20stringid64_2c_20resourcetypedata_20_3e',['SortMap&lt; StringId64, ResourceTypeData &gt;',['../structcrown_1_1_sort_map.html',1,'crown']]],

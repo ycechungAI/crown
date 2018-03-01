@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_5fstr',['c_str',['../structcrown_1_1_dynamic_string.html#a64bb5b5b2e69f4cf6bb0af9d07f1c306',1,'crown::DynamicString::c_str()'],['../namespacecrown_1_1string__stream.html#aecf9041eaf7334b2cd1a6bf11ce8d8ac',1,'crown::string_stream::c_str()']]],
+  ['c_5fstr',['c_str',['../structcrown_1_1_dynamic_string.html#aeac24042d121bd93cff0bba2bc15e203',1,'crown::DynamicString::c_str()'],['../namespacecrown_1_1string__stream.html#aecf9041eaf7334b2cd1a6bf11ce8d8ac',1,'crown::string_stream::c_str()']]],
   ['call_5fglobal',['call_global',['../structcrown_1_1_lua_environment.html#aaa5d0facd74cc4dfe51096954e2c9aa2',1,'crown::LuaEnvironment']]],
   ['callstack',['callstack',['../namespacecrown_1_1error.html#a0ed8ee27352a3aa3a5400b7a85deee4a',1,'crown::error']]],
   ['camera_5fcreate',['camera_create',['../structcrown_1_1_world.html#a276705cf28c640236abcaf5e2dc11832',1,'crown::World']]],
@@ -38,7 +38,7 @@ var searchData=
   ['condense',['condense',['../namespacecrown_1_1array.html#afa0f6a0fffeced013371f2b73db0d051',1,'crown::array::condense()'],['../namespacecrown_1_1vector.html#a26e09a38511ac2f0fdc56e929fc41d01',1,'crown::vector::condense()']]],
   ['conjugate',['conjugate',['../group___math.html#ga295c42b0881f56c53f0d3b14e282d2b3',1,'crown']]],
   ['connect',['connect',['../structcrown_1_1_t_c_p_socket.html#a56bef5687d72cd7bb524c0739e168d05',1,'crown::TCPSocket']]],
-  ['connected',['connected',['../structcrown_1_1_input_device.html#a384460051403ce6f56c6a6f89d02fb0f',1,'crown::InputDevice']]],
+  ['connected',['connected',['../structcrown_1_1_input_device.html#afb6497e2fdcb8497cdf1445a3c51d14c',1,'crown::InputDevice']]],
   ['consoleserver',['ConsoleServer',['../structcrown_1_1_console_server.html#a199ae0b830c3eb784ad0a9d3b93687fb',1,'crown::ConsoleServer']]],
   ['contains_5fpoint',['contains_point',['../namespacecrown_1_1aabb.html#a125ada6a172b5a285e4315b2b7cb08a5',1,'crown::aabb::contains_point()'],['../namespacecrown_1_1frustum.html#aa6506b04d0487bcb98597a929f4c6465',1,'crown::frustum::contains_point()'],['../namespacecrown_1_1sphere.html#a4d301efa896c88ae547815b01ff324aa',1,'crown::sphere::contains_point()']]],
   ['cosine',['cosine',['../group___math.html#gaaecc0c982aa11a06a9535d23d54ab7dd',1,'crown']]],

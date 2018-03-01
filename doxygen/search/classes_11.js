@@ -15,5 +15,6 @@ var searchData=
   ['resourcepackage',['ResourcePackage',['../structcrown_1_1_resource_package.html',1,'crown']]],
   ['resourcepair',['ResourcePair',['../structcrown_1_1_resource_manager_1_1_resource_pair.html',1,'crown::ResourceManager']]],
   ['resourcerequest',['ResourceRequest',['../structcrown_1_1_resource_request.html',1,'crown']]],
-  ['resourcetypedata',['ResourceTypeData',['../structcrown_1_1_data_compiler_1_1_resource_type_data.html',1,'crown::DataCompiler::ResourceTypeData'],['../structcrown_1_1_resource_manager_1_1_resource_type_data.html',1,'crown::ResourceManager::ResourceTypeData']]]
+  ['resourcetypedata',['ResourceTypeData',['../structcrown_1_1_data_compiler_1_1_resource_type_data.html',1,'crown::DataCompiler']]],
+  ['resourcetypedata',['ResourceTypeData',['../structcrown_1_1_resource_manager_1_1_resource_type_data.html',1,'crown::ResourceManager']]]
 ];
