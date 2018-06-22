@@ -30,7 +30,6 @@ var searchData=
   ['physicscollisionfilter',['PhysicsCollisionFilter',['../structcrown_1_1_physics_collision_filter.html',1,'crown']]],
   ['physicsconfigresource',['PhysicsConfigResource',['../structcrown_1_1_physics_config_resource.html',1,'crown']]],
   ['physicsmaterial',['PhysicsMaterial',['../structcrown_1_1_physics_material.html',1,'crown']]],
-  ['physicsshape',['PhysicsShape',['../structcrown_1_1_physics_shape.html',1,'crown']]],
   ['physicstransformevent',['PhysicsTransformEvent',['../structcrown_1_1_physics_transform_event.html',1,'crown']]],
   ['physicstriggerevent',['PhysicsTriggerEvent',['../structcrown_1_1_physics_trigger_event.html',1,'crown']]],
   ['physicsworld',['PhysicsWorld',['../structcrown_1_1_physics_world.html',1,'crown']]],

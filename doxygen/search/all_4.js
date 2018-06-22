@@ -7,6 +7,7 @@ var searchData=
   ['end_5fof_5ffile',['end_of_file',['../structcrown_1_1_file.html#a4390b1f686292fafd104512a2c4b685e',1,'crown::File']]],
   ['enter_5fprofile_5fscope',['enter_profile_scope',['../namespacecrown_1_1profiler.html#a8edd34577531cd95acb365bd9dc31c14',1,'crown::profiler']]],
   ['enterprofilescope',['EnterProfileScope',['../structcrown_1_1_enter_profile_scope.html',1,'crown']]],
+  ['enum',['Enum',['../structcrown_1_1_deadzone_mode.html#a8d504100a0eb6a7525cc18226cdcb153',1,'crown::DeadzoneMode']]],
   ['equal_5fto',['equal_to',['../structcrown_1_1equal__to.html',1,'crown']]],
   ['error',['error',['../structcrown_1_1_console_server.html#af58d7054fc7f242650bad1f02cf81382',1,'crown::ConsoleServer::error()'],['../group___error.html',1,'(Global Namespace)']]],
   ['eventheader',['EventHeader',['../structcrown_1_1_event_header.html',1,'crown']]],

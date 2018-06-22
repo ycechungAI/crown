@@ -1,6 +1,7 @@
 var searchData=
 [
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a211ff1e8f278ddfd69a0bd143547051c',1,'crown::queue']]],
+  ['independent',['INDEPENDENT',['../structcrown_1_1_deadzone_mode.html#a8d504100a0eb6a7525cc18226cdcb153a76add39259ec406afa2f9acbc31c35ec',1,'crown::DeadzoneMode']]],
   ['index',['Index',['../structcrown_1_1_hash_map_1_1_index.html',1,'crown::HashMap']]],
   ['indexdata',['IndexData',['../structcrown_1_1_index_data.html',1,'crown']]],
   ['indexdata',['IndexData',['../structcrown_1_1_gui_1_1_index_data.html',1,'crown::Gui']]],
@@ -23,6 +24,7 @@ var searchData=
   ['is_5fdirectory',['is_directory',['../structcrown_1_1_filesystem.html#a73280b7dd4d7c9c6d534b8bb13967dac',1,'crown::Filesystem::is_directory()'],['../structcrown_1_1_filesystem_disk.html#a7398056057e3b75ad867c54fb0ca1474',1,'crown::FilesystemDisk::is_directory()']]],
   ['is_5ffile',['is_file',['../structcrown_1_1_filesystem.html#a5f5cc9a1cab36e7e20b0233d9a884474',1,'crown::Filesystem::is_file()'],['../structcrown_1_1_filesystem_disk.html#a605de84d6f0268c3557ef0a2e001979b',1,'crown::FilesystemDisk::is_file()']]],
   ['is_5fmatrix4x4',['is_matrix4x4',['../structcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053',1,'crown::LuaEnvironment']]],
+  ['is_5fopen',['is_open',['../structcrown_1_1_file.html#a79a0dfa29e975317f0420a2ce65c507b',1,'crown::File']]],
   ['is_5fplaying',['is_playing',['../structcrown_1_1_sound_world.html#a5d9818022dd98de4360fceda1f3c76e6',1,'crown::SoundWorld']]],
   ['is_5fquaternion',['is_quaternion',['../structcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440',1,'crown::LuaEnvironment']]],
   ['is_5frelative',['is_relative',['../namespacecrown_1_1path.html#a635845f60a84a299c0e31e251d72cb9a',1,'crown::path']]],

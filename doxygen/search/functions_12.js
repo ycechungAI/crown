@@ -9,6 +9,7 @@ var searchData=
   ['set',['set',['../structcrown_1_1_dynamic_string.html#a86af0d8dfb2ab56c814bc14ed5019059',1,'crown::DynamicString::set()'],['../namespacecrown_1_1hash__map.html#ae1f9943c9834a6cb37f4df0981679c05',1,'crown::hash_map::set()'],['../namespacecrown_1_1map.html#aea7e2bdf60ff931d446a3e2e305815af',1,'crown::map::set()']]],
   ['set_5fblocking',['set_blocking',['../structcrown_1_1_t_c_p_socket.html#a80f8499997d5fe54efbae01bae5de6ac',1,'crown::TCPSocket']]],
   ['set_5fcapacity',['set_capacity',['../namespacecrown_1_1array.html#a437aadf254e9778dfe2bc1d2e88a0dc4',1,'crown::array::set_capacity()'],['../namespacecrown_1_1vector.html#a7c2bba53a08dbb2f4d10832329e8fc9e',1,'crown::vector::set_capacity()']]],
+  ['set_5fdeadzone',['set_deadzone',['../structcrown_1_1_input_device.html#a977dc8cc055a0f9bf2ae3f1ccf2fa892',1,'crown::InputDevice']]],
   ['set_5ffloat',['set_float',['../structcrown_1_1_material.html#a5bf4ccae98e9f2b6e8911ba30fc0190c',1,'crown::Material']]],
   ['set_5ffullscreen',['set_fullscreen',['../structcrown_1_1_window.html#a7cecaf73518321286a8fbbc424f21e43',1,'crown::Window']]],
   ['set_5fgravity',['set_gravity',['../structcrown_1_1_physics_world.html#a814ada58ad97184d4f2fc11e17cec652',1,'crown::PhysicsWorld']]],

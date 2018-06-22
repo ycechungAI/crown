@@ -107,10 +107,6 @@ s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_resource_loader.html#a4d34528cac9d5ad5f20e36935810a1b9">ResourceLoader</a> (<a class="el" href="structcrown_1_1_filesystem.html">Filesystem</a> &amp;data_filesystem)</td></tr>
 <tr class="memdesc:a4d34528cac9d5ad5f20e36935810a1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read resources from <em>data_filesystem</em>. <br /></td></tr>
 <tr class="separator:a4d34528cac9d5ad5f20e36935810a1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98fe19efc19629dc5fd0a553762e0701"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98fe19efc19629dc5fd0a553762e0701"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_resource_loader.html#a98fe19efc19629dc5fd0a553762e0701">can_load</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name)</td></tr>
-<tr class="memdesc:a98fe19efc19629dc5fd0a553762e0701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the resource (type, name) can be loaded. <br /></td></tr>
-<tr class="separator:a98fe19efc19629dc5fd0a553762e0701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae269de3efae087a8c06a67e6056dba80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae269de3efae087a8c06a67e6056dba80"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_resource_loader.html#ae269de3efae087a8c06a67e6056dba80">add_request</a> (const <a class="el" href="structcrown_1_1_resource_request.html">ResourceRequest</a> &amp;rr)</td></tr>
 <tr class="memdesc:ae269de3efae087a8c06a67e6056dba80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a request for loading the resource described by <em>rr</em>. <br /></td></tr>
@@ -123,6 +119,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_resource_loader.html#a243c71b6ac1f4d08d84e3499888d2855">get_loaded</a> (<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_resource_request.html">ResourceRequest</a> &gt; &amp;loaded)</td></tr>
 <tr class="memdesc:a243c71b6ac1f4d08d84e3499888d2855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all the resources that have been loaded. <br /></td></tr>
 <tr class="separator:a243c71b6ac1f4d08d84e3499888d2855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaa3b43b010108e8b2ba8e2be6427dab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaa3b43b010108e8b2ba8e2be6427dab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_resource_loader.html#adaa3b43b010108e8b2ba8e2be6427dab">register_fallback</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> type, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name)</td></tr>
+<tr class="memdesc:adaa3b43b010108e8b2ba8e2be6427dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a fallback resource <em>name</em> for the given resource <em>type</em>. <br /></td></tr>
+<tr class="separator:adaa3b43b010108e8b2ba8e2be6427dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -135,6 +135,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2b6a4c5aabde6d0252ea0adfea64686f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b6a4c5aabde6d0252ea0adfea64686f"></a>
 <a class="el" href="structcrown_1_1_queue.html">Queue</a>&lt; <a class="el" href="structcrown_1_1_resource_request.html">ResourceRequest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_loaded</b></td></tr>
 <tr class="separator:a2b6a4c5aabde6d0252ea0adfea64686f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72410b8ee53b8721d6caa57cdd4f3258"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72410b8ee53b8721d6caa57cdd4f3258"></a>
+<a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a>, <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_fallback</b></td></tr>
+<tr class="separator:a72410b8ee53b8721d6caa57cdd4f3258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad740a7204c66e3df6882ec6ffe660332"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad740a7204c66e3df6882ec6ffe660332"></a>
 <a class="el" href="structcrown_1_1_thread.html">Thread</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_thread</b></td></tr>
 <tr class="separator:ad740a7204c66e3df6882ec6ffe660332"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +160,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_exit</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 1 2018 13:30:39 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 23 2018 00:34:36 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

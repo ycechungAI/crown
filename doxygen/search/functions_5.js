@@ -2,7 +2,7 @@ var searchData=
 [
   ['fabs',['fabs',['../group___math.html#ga98fefffde2b234efaa64772168f21600',1,'crown']]],
   ['facos',['facos',['../group___math.html#gacf6db8e7bcb694636d5d4c5ea11c3197',1,'crown']]],
-  ['fclamp',['fclamp',['../group___math.html#ga4115ad7dc3bf222d0527c61c05ab17e4',1,'crown']]],
+  ['fclamp',['fclamp',['../group___math.html#ga9ef526acd2e615b715b762afca9eb0e2',1,'crown']]],
   ['fcos',['fcos',['../group___math.html#ga15cf12bb21ae38d83c042677e186c670',1,'crown']]],
   ['fdeg',['fdeg',['../group___math.html#gad38c425b00ee8fa616b7e11da37e1437',1,'crown']]],
   ['fequal',['fequal',['../group___math.html#ga9370f904c105e1d86a7df603c8dc0f6b',1,'crown']]],

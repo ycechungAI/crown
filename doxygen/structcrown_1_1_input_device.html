@@ -93,6 +93,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9d2251d7c5ed882e2359055156d8ef96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d2251d7c5ed882e2359055156d8ef96"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_button</b> (u8 id, bool state)</td></tr>
+<tr class="separator:a9d2251d7c5ed882e2359055156d8ef96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ce3ef058ab92fc916a2c731e502c30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9ce3ef058ab92fc916a2c731e502c30"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_axis</b> (u8 id, f32 x, f32 y, f32 z)</td></tr>
+<tr class="separator:aa9ce3ef058ab92fc916a2c731e502c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4ac0e195411088ba811c36404955e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b4ac0e195411088ba811c36404955e9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="separator:a9b4ac0e195411088ba811c36404955e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77cdbecc53b949e4bc61302ab5c7500d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77cdbecc53b949e4bc61302ab5c7500d"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a77cdbecc53b949e4bc61302ab5c7500d">name</a> () const </td></tr>
 <tr class="memdesc:a77cdbecc53b949e4bc61302ab5c7500d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the input device. <br /></td></tr>
@@ -125,6 +134,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#ae6f040dbe19fb26644d29a639ea4ba5d">any_released</a> () const </td></tr>
 <tr class="memdesc:ae6f040dbe19fb26644d29a639ea4ba5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any button is released in the current frame. <br /></td></tr>
 <tr class="separator:ae6f040dbe19fb26644d29a639ea4ba5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c8e6eec077571e59687e1c26796d8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9c8e6eec077571e59687e1c26796d8e"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#af9c8e6eec077571e59687e1c26796d8e">button</a> (u8 id) const </td></tr>
+<tr class="memdesc:af9c8e6eec077571e59687e1c26796d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the button <em>id</em> in the range [0..1]. <br /></td></tr>
+<tr class="separator:af9c8e6eec077571e59687e1c26796d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ef01da8b3a7c622ed9f8d78dd695d69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ef01da8b3a7c622ed9f8d78dd695d69"></a>
 <a class="el" href="structcrown_1_1_vector3.html">Vector3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a7ef01da8b3a7c622ed9f8d78dd695d69">axis</a> (u8 id) const </td></tr>
 <tr class="memdesc:a7ef01da8b3a7c622ed9f8d78dd695d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the axis <em>id</em>. <br /></td></tr>
@@ -145,15 +158,14 @@ u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct
 u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a6344b6a1c79ab9fd931ce544fb37315d">axis_id</a> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> <a class="el" href="structcrown_1_1_input_device.html#a77cdbecc53b949e4bc61302ab5c7500d">name</a>)</td></tr>
 <tr class="memdesc:a6344b6a1c79ab9fd931ce544fb37315d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the axis <em>name</em> of UINT8_MAX if no matching axis is found. <br /></td></tr>
 <tr class="separator:a6344b6a1c79ab9fd931ce544fb37315d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25302ee885d5459d357e5509f4a24524"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25302ee885d5459d357e5509f4a24524"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_button</b> (u8 i, bool state)</td></tr>
-<tr class="separator:a25302ee885d5459d357e5509f4a24524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ee7f0a9d401a126711b5eea4c49c94b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ee7f0a9d401a126711b5eea4c49c94b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_axis</b> (u8 i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;value)</td></tr>
-<tr class="separator:a9ee7f0a9d401a126711b5eea4c49c94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b4ac0e195411088ba811c36404955e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b4ac0e195411088ba811c36404955e9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
-<tr class="separator:a9b4ac0e195411088ba811c36404955e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc9c5b005614d04817427c6b06cd5e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebc9c5b005614d04817427c6b06cd5e8"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#aebc9c5b005614d04817427c6b06cd5e8">deadzone</a> (u8 id, <a class="el" href="structcrown_1_1_deadzone_mode.html#a8d504100a0eb6a7525cc18226cdcb153">DeadzoneMode::Enum</a> *deadzone_mode)</td></tr>
+<tr class="memdesc:aebc9c5b005614d04817427c6b06cd5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the deadzone size and the deadzone <em>mode</em> for the axis <em>id</em>. <br /></td></tr>
+<tr class="separator:aebc9c5b005614d04817427c6b06cd5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977dc8cc055a0f9bf2ae3f1ccf2fa892"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a977dc8cc055a0f9bf2ae3f1ccf2fa892"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a977dc8cc055a0f9bf2ae3f1ccf2fa892">set_deadzone</a> (u8 id, <a class="el" href="structcrown_1_1_deadzone_mode.html#a8d504100a0eb6a7525cc18226cdcb153">DeadzoneMode::Enum</a> deadzone_mode, f32 deadzone_size)</td></tr>
+<tr class="memdesc:a977dc8cc055a0f9bf2ae3f1ccf2fa892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <em>deadzone_mode</em> and <em>deadzone_size</em> for the axis <em>id</em>. <br /></td></tr>
+<tr class="separator:a977dc8cc055a0f9bf2ae3f1ccf2fa892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -169,6 +181,12 @@ u8&#160;</td><td class="memItemRight" valign="bottom"><b>_num_axes</b></td></tr>
 <tr class="memitem:a222233409301fd652b489ce079f48fda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a222233409301fd652b489ce079f48fda"></a>
 u8&#160;</td><td class="memItemRight" valign="bottom"><b>_last_button</b></td></tr>
 <tr class="separator:a222233409301fd652b489ce079f48fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dd08dfd0e176f6eaeb1b7f2691d645a"></a>
+const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_button_name</b></td></tr>
+<tr class="separator:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4eedb1ebeb9e2de257207ff833ae07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e4eedb1ebeb9e2de257207ff833ae07"></a>
+const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_axis_name</b></td></tr>
+<tr class="separator:a0e4eedb1ebeb9e2de257207ff833ae07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca3334f7a0c8194972c6ccd8416a7d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ca3334f7a0c8194972c6ccd8416a7d3"></a>
 u8 *&#160;</td><td class="memItemRight" valign="bottom"><b>_last_state</b></td></tr>
 <tr class="separator:a6ca3334f7a0c8194972c6ccd8416a7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,12 +196,12 @@ u8 *&#160;</td><td class="memItemRight" valign="bottom"><b>_state</b></td></tr>
 <tr class="memitem:a10eae51c6e7ab440e20ae5b028de125c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10eae51c6e7ab440e20ae5b028de125c"></a>
 <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_axis</b></td></tr>
 <tr class="separator:a10eae51c6e7ab440e20ae5b028de125c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dd08dfd0e176f6eaeb1b7f2691d645a"></a>
-const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_button_name</b></td></tr>
-<tr class="separator:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e4eedb1ebeb9e2de257207ff833ae07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e4eedb1ebeb9e2de257207ff833ae07"></a>
-const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_axis_name</b></td></tr>
-<tr class="separator:a0e4eedb1ebeb9e2de257207ff833ae07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c58bdc4a705f6856f3711e08be76ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73c58bdc4a705f6856f3711e08be76ce"></a>
+u32 *&#160;</td><td class="memItemRight" valign="bottom"><b>_deadzone_mode</b></td></tr>
+<tr class="separator:a73c58bdc4a705f6856f3711e08be76ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf98b894d375feeaaa20fee80b876b0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf98b894d375feeaaa20fee80b876b0d"></a>
+f32 *&#160;</td><td class="memItemRight" valign="bottom"><b>_deadzone_size</b></td></tr>
+<tr class="separator:aaf98b894d375feeaaa20fee80b876b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fe37a1ee3cb1994bf7b3388ef323fec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fe37a1ee3cb1994bf7b3388ef323fec"></a>
 <a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_button_hash</b></td></tr>
 <tr class="separator:a4fe37a1ee3cb1994bf7b3388ef323fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +221,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>_name</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 1 2018 13:30:39 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 23 2018 00:34:35 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
