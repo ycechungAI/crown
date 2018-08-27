@@ -33,5 +33,5 @@ var searchData=
   ['right',['right',['../group___math.html#ga9340f3b72e9b7db6d4370d4493e33588',1,'crown']]],
   ['rotation',['rotation',['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown']]],
   ['rtrim',['rtrim',['../structcrown_1_1_dynamic_string.html#aa6de3c5f496d1423d3a82152f8cb488b',1,'crown::DynamicString']]],
-  ['run',['run',['../structcrown_1_1_thread.html#a34d0e11ba7dba0a5071354ecbaab1f35',1,'crown::Thread::run()'],['../structcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device::run()'],['../structcrown_1_1_resource_loader.html#abb549689b8fbd47015064d3f7c171603',1,'crown::ResourceLoader::run()']]]
+  ['run',['run',['../structcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device::run()'],['../structcrown_1_1_resource_loader.html#abb549689b8fbd47015064d3f7c171603',1,'crown::ResourceLoader::run()']]]
 ];

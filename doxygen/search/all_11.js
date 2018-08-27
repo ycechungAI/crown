@@ -45,12 +45,12 @@ var searchData=
   ['resourcepackage',['ResourcePackage',['../structcrown_1_1_resource_package.html',1,'crown']]],
   ['resourcepair',['ResourcePair',['../structcrown_1_1_resource_manager_1_1_resource_pair.html',1,'crown::ResourceManager']]],
   ['resourcerequest',['ResourceRequest',['../structcrown_1_1_resource_request.html',1,'crown']]],
-  ['resourcetypedata',['ResourceTypeData',['../structcrown_1_1_data_compiler_1_1_resource_type_data.html',1,'crown::DataCompiler']]],
   ['resourcetypedata',['ResourceTypeData',['../structcrown_1_1_resource_manager_1_1_resource_type_data.html',1,'crown::ResourceManager']]],
+  ['resourcetypedata',['ResourceTypeData',['../structcrown_1_1_data_compiler_1_1_resource_type_data.html',1,'crown::DataCompiler']]],
   ['restore',['restore',['../structcrown_1_1_window.html#a66da1ae8f0f1e4cf51d6b250f7dfad4c',1,'crown::Window']]],
   ['resume_5fall',['resume_all',['../structcrown_1_1_sound_world.html#abba7c705239c7edee81a49b224661e1d',1,'crown::SoundWorld']]],
   ['right',['right',['../group___math.html#ga9340f3b72e9b7db6d4370d4493e33588',1,'crown']]],
   ['rotation',['rotation',['../structcrown_1_1_physics_transform_event.html#a43fb68e2820b8604695df9dcb6dc60bb',1,'crown::PhysicsTransformEvent::rotation()'],['../group___math.html#ga1da4c24bf1430ebdda5a7227f19a5a44',1,'crown::rotation()']]],
   ['rtrim',['rtrim',['../structcrown_1_1_dynamic_string.html#aa6de3c5f496d1423d3a82152f8cb488b',1,'crown::DynamicString']]],
-  ['run',['run',['../structcrown_1_1_thread.html#a34d0e11ba7dba0a5071354ecbaab1f35',1,'crown::Thread::run()'],['../structcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device::run()'],['../structcrown_1_1_resource_loader.html#abb549689b8fbd47015064d3f7c171603',1,'crown::ResourceLoader::run()']]]
+  ['run',['run',['../structcrown_1_1_device.html#aa8a55464f42fa29940670268644b7cf0',1,'crown::Device::run()'],['../structcrown_1_1_resource_loader.html#abb549689b8fbd47015064d3f7c171603',1,'crown::ResourceLoader::run()']]]
 ];

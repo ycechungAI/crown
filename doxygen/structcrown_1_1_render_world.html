@@ -130,9 +130,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#a539b535db7d07e58940975dd128785bc">mesh_obb</a> (MeshInstance i)</td></tr>
 <tr class="memdesc:a539b535db7d07e58940975dd128785bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a> of the mesh <em>i</em>. <br /></td></tr>
 <tr class="separator:a539b535db7d07e58940975dd128785bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7ee88ca2277b8485eb3bdc86b231205"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#aa7ee88ca2277b8485eb3bdc86b231205">mesh_raycast</a> (MeshInstance i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir)</td></tr>
-<tr class="memdesc:aa7ee88ca2277b8485eb3bdc86b231205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with mesh <em>i</em> or -1.0 if no intersection.  <a href="#aa7ee88ca2277b8485eb3bdc86b231205">More...</a><br /></td></tr>
-<tr class="separator:aa7ee88ca2277b8485eb3bdc86b231205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17561b1460f01b520df827308e6a115"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#ad17561b1460f01b520df827308e6a115">mesh_cast_ray</a> (MeshInstance i, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir)</td></tr>
+<tr class="memdesc:ad17561b1460f01b520df827308e6a115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with mesh <em>i</em> or -1.0 if no intersection.  <a href="#ad17561b1460f01b520df827308e6a115">More...</a><br /></td></tr>
+<tr class="separator:ad17561b1460f01b520df827308e6a115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b5f851379059feeaefd9a296d579ce8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b5f851379059feeaefd9a296d579ce8"></a>
 SpriteInstance&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#a0b5f851379059feeaefd9a296d579ce8">sprite_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_sprite_renderer_desc.html">SpriteRendererDesc</a> &amp;srd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
 <tr class="memdesc:a0b5f851379059feeaefd9a296d579ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new sprite instance. <br /></td></tr>
@@ -177,9 +177,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#ad91f21122ef3bb0babe391f4b95aa693">sprite_obb</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit)</td></tr>
 <tr class="memdesc:ad91f21122ef3bb0babe391f4b95aa693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrown_1_1_o_b_b.html">OBB</a> of the sprite. <br /></td></tr>
 <tr class="separator:ad91f21122ef3bb0babe391f4b95aa693"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6012a279807df95da58f6b11e1e91e1"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#ac6012a279807df95da58f6b11e1e91e1">sprite_raycast</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir, u32 &amp;layer, u32 &amp;depth)</td></tr>
-<tr class="memdesc:ac6012a279807df95da58f6b11e1e91e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with sprite or -1.0 if no intersection.  <a href="#ac6012a279807df95da58f6b11e1e91e1">More...</a><br /></td></tr>
-<tr class="separator:ac6012a279807df95da58f6b11e1e91e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf2a4ac6318866b271566e80a1c14ef"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#aaaf2a4ac6318866b271566e80a1c14ef">sprite_cast_ray</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;from, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;dir, u32 &amp;layer, u32 &amp;depth)</td></tr>
+<tr class="memdesc:aaaf2a4ac6318866b271566e80a1c14ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the distance along ray (from, dir) to intersection point with sprite or -1.0 if no intersection.  <a href="#aaaf2a4ac6318866b271566e80a1c14ef">More...</a><br /></td></tr>
+<tr class="separator:aaaf2a4ac6318866b271566e80a1c14ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8426769626c4c35f1820bd59ba223a19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8426769626c4c35f1820bd59ba223a19"></a>
 LightInstance&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_render_world.html#a8426769626c4c35f1820bd59ba223a19">light_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, const <a class="el" href="structcrown_1_1_light_desc.html">LightDesc</a> &amp;ld, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
 <tr class="memdesc:a8426769626c4c35f1820bd59ba223a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new light instance. <br /></td></tr>
@@ -305,12 +305,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_debug_drawing</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages graphics objects in a <a class="el" href="structcrown_1_1_world.html" title="Represents a game world. ">World</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa7ee88ca2277b8485eb3bdc86b231205"></a>
+<a class="anchor" id="ad17561b1460f01b520df827308e6a115"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">f32 crown::RenderWorld::mesh_raycast </td>
+          <td class="memname">f32 crown::RenderWorld::mesh_cast_ray </td>
           <td>(</td>
           <td class="paramtype">MeshInstance&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -339,12 +339,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_debug_drawing</b></t
 
 </div>
 </div>
-<a class="anchor" id="ac6012a279807df95da58f6b11e1e91e1"></a>
+<a class="anchor" id="aaaf2a4ac6318866b271566e80a1c14ef"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">f32 crown::RenderWorld::sprite_raycast </td>
+          <td class="memname">f32 crown::RenderWorld::sprite_cast_ray </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td>
           <td class="paramname"><em>unit</em>, </td>
@@ -392,7 +392,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_debug_drawing</b></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 23 2018 00:34:36 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2018 19:16:52 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

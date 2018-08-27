@@ -100,6 +100,9 @@ typedef s32(*&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadFuncti
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a92623ea0cc20e4928052fafde926e5c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92623ea0cc20e4928052fafde926e5c5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CE_ALIGN_DECL</b> (16, u8 _data[32])</td></tr>
+<tr class="separator:a92623ea0cc20e4928052fafde926e5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1cf4c64d38acc6989d972f987b378cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1cf4c64d38acc6989d972f987b378cc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Thread</b> (const <a class="el" href="structcrown_1_1_thread.html">Thread</a> &amp;)=delete</td></tr>
 <tr class="separator:af1cf4c64d38acc6989d972f987b378cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,10 +118,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stop</b> ()</td></tr>
 <tr class="memitem:ae762a3a861f7669c7026145272ee5317"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae762a3a861f7669c7026145272ee5317"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_running</b> ()</td></tr>
 <tr class="separator:ae762a3a861f7669c7026145272ee5317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34d0e11ba7dba0a5071354ecbaab1f35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34d0e11ba7dba0a5071354ecbaab1f35"></a>
-s32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_thread.html#a34d0e11ba7dba0a5071354ecbaab1f35">run</a> ()</td></tr>
-<tr class="memdesc:a34d0e11ba7dba0a5071354ecbaab1f35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do not call explicitly. <br /></td></tr>
-<tr class="separator:a34d0e11ba7dba0a5071354ecbaab1f35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6cf5432ce8304f55e74da27e2a8b17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f6cf5432ce8304f55e74da27e2a8b17"></a>
+s32&#160;</td><td class="memItemRight" valign="bottom"><b>exit_code</b> ()</td></tr>
+<tr class="separator:a3f6cf5432ce8304f55e74da27e2a8b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -134,6 +136,9 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>_user_data</b></td>
 <tr class="memitem:ae014a23a46157b8c49f03c767c87eb0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae014a23a46157b8c49f03c767c87eb0c"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_running</b></td></tr>
 <tr class="separator:ae014a23a46157b8c49f03c767c87eb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8602665092da6f298d241f3ca0455fdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8602665092da6f298d241f3ca0455fdc"></a>
+s32&#160;</td><td class="memItemRight" valign="bottom"><b>_exit_code</b></td></tr>
+<tr class="separator:a8602665092da6f298d241f3ca0455fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structcrown_1_1_thread.html" title="Thread. ">Thread</a>. </p>
@@ -144,7 +149,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_running</b></td><
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jun 23 2018 00:34:36 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2018 19:16:53 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>
