@@ -21,7 +21,7 @@ var searchData=
   ['destroy_5fmaterial',['destroy_material',['../structcrown_1_1_material_manager.html#a89361a98a3905cd8ae436fae8adc0f94',1,'crown::MaterialManager']]],
   ['destroy_5fresource_5fpackage',['destroy_resource_package',['../structcrown_1_1_device.html#ae09c348ff702ee8e3c158f8acfab3994',1,'crown::Device']]],
   ['destroy_5funit',['destroy_unit',['../structcrown_1_1_world.html#a7901f69df610c922b7ad8cb703064b95',1,'crown::World']]],
-  ['destroy_5fworld',['destroy_world',['../structcrown_1_1_device.html#afbf3f1608e5cf24ced11ba3bd2af4728',1,'crown::Device']]],
+  ['destroy_5fworld',['destroy_world',['../structcrown_1_1_device.html#aab2ea0f214eec0a5073678e64eb4a477',1,'crown::Device']]],
   ['destroydata',['DestroyData',['../structcrown_1_1_unit_manager_1_1_destroy_data.html',1,'crown::UnitManager']]],
   ['device',['Device',['../group___device.html',1,'']]],
   ['device',['Device',['../structcrown_1_1_device.html',1,'crown']]],

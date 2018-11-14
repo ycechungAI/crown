@@ -14,7 +14,7 @@ var searchData=
   ['destroy_5fmaterial',['destroy_material',['../structcrown_1_1_material_manager.html#a89361a98a3905cd8ae436fae8adc0f94',1,'crown::MaterialManager']]],
   ['destroy_5fresource_5fpackage',['destroy_resource_package',['../structcrown_1_1_device.html#ae09c348ff702ee8e3c158f8acfab3994',1,'crown::Device']]],
   ['destroy_5funit',['destroy_unit',['../structcrown_1_1_world.html#a7901f69df610c922b7ad8cb703064b95',1,'crown::World']]],
-  ['destroy_5fworld',['destroy_world',['../structcrown_1_1_device.html#afbf3f1608e5cf24ced11ba3bd2af4728',1,'crown::Device']]],
+  ['destroy_5fworld',['destroy_world',['../structcrown_1_1_device.html#aab2ea0f214eec0a5073678e64eb4a477',1,'crown::Device']]],
   ['distance',['distance',['../group___math.html#gaf45d3bfb4eee023a0b130effdd6bbb18',1,'crown::distance(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#gaf9ff0472898d088a1f4b86f823d1d744',1,'crown::distance(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gab7d0ea44d405273d16feda800bce5640',1,'crown::distance(const Vector4 &amp;a, const Vector4 &amp;b)']]],
   ['distance_5fsquared',['distance_squared',['../group___math.html#ga32fdda0e26720f8a198ce349e9e925f8',1,'crown::distance_squared(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#ga8ca11400b8a604b6a7b53fa9cafc0f47',1,'crown::distance_squared(const Vector3 &amp;a, const Vector3 &amp;b)'],['../group___math.html#gad3eb1a8c171ffc45025921a6e405e1a2',1,'crown::distance_squared(const Vector4 &amp;a, const Vector4 &amp;b)']]],
   ['distance_5fto_5fpoint',['distance_to_point',['../namespacecrown_1_1plane3.html#aaf782649bb9f411618ec567cd839dc2f',1,'crown::plane3']]],
