@@ -8,7 +8,6 @@ var searchData=
   ['collisiongroup',['CollisionGroup',['../structcrown_1_1_collision_group.html',1,'crown']]],
   ['command',['Command',['../structcrown_1_1_console_server_1_1_command.html',1,'crown::ConsoleServer']]],
   ['commandline',['CommandLine',['../structcrown_1_1_command_line.html',1,'crown']]],
-  ['compareentry',['CompareEntry',['../structcrown_1_1sort__map__internal_1_1_compare_entry.html',1,'crown::sort_map_internal']]],
   ['compileoptions',['CompileOptions',['../structcrown_1_1_compile_options.html',1,'crown']]],
   ['componentdata',['ComponentData',['../structcrown_1_1_component_data.html',1,'crown']]],
   ['componenttypedata',['ComponentTypeData',['../structcrown_1_1_unit_compiler_1_1_component_type_data.html',1,'crown::UnitCompiler']]],

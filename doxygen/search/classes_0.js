@@ -2,6 +2,7 @@ var searchData=
 [
   ['aabb',['AABB',['../structcrown_1_1_a_a_b_b.html',1,'crown']]],
   ['acceptresult',['AcceptResult',['../structcrown_1_1_accept_result.html',1,'crown']]],
+  ['accessflags',['AccessFlags',['../structcrown_1_1_access_flags.html',1,'crown']]],
   ['actorflags',['ActorFlags',['../structcrown_1_1_actor_flags.html',1,'crown']]],
   ['actorresource',['ActorResource',['../structcrown_1_1_actor_resource.html',1,'crown']]],
   ['actortype',['ActorType',['../structcrown_1_1_actor_type.html',1,'crown']]],
@@ -28,7 +29,6 @@ var searchData=
   ['array_3c_20crown_3a_3atexturedata_20_3e',['Array&lt; crown::TextureData &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3auniformdata_20_3e',['Array&lt; crown::UniformData &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3aunitid_20_3e',['Array&lt; crown::UnitId &gt;',['../structcrown_1_1_array.html',1,'crown']]],
-  ['array_3c_20crown_3a_3aunitmanager_3a_3adestroydata_20_3e',['Array&lt; crown::UnitManager::DestroyData &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20crown_3a_3aworld_3a_3acamera_20_3e',['Array&lt; crown::World::Camera &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20f32_20_3e',['Array&lt; f32 &gt;',['../structcrown_1_1_array.html',1,'crown']]],
   ['array_3c_20u16_20_3e',['Array&lt; u16 &gt;',['../structcrown_1_1_array.html',1,'crown']]],

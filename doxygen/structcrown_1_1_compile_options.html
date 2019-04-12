@@ -91,6 +91,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2489bed385de76c1c845dcb4b73e84a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2489bed385de76c1c845dcb4b73e84a0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (<a class="el" href="structcrown_1_1_data_compiler.html">DataCompiler</a> &amp;dc, <a class="el" href="structcrown_1_1_filesystem.html">Filesystem</a> &amp;data_filesystem, <a class="el" href="structcrown_1_1_dynamic_string.html">DynamicString</a> &amp;source_path, <a class="el" href="structcrown_1_1_array.html">Buffer</a> &amp;output, const char *platform)</td></tr>
 <tr class="separator:a2489bed385de76c1c845dcb4b73e84a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3a4465c8e334fc0362e1844bdc432f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d3a4465c8e334fc0362e1844bdc432f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CompileOptions</b> (const <a class="el" href="structcrown_1_1_compile_options.html">CompileOptions</a> &amp;)=delete</td></tr>
+<tr class="separator:a9d3a4465c8e334fc0362e1844bdc432f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085aa23e94a82213b5638f1590fcaa39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a085aa23e94a82213b5638f1590fcaa39"></a>
+<a class="el" href="structcrown_1_1_compile_options.html">CompileOptions</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structcrown_1_1_compile_options.html">CompileOptions</a> &amp;)=delete</td></tr>
+<tr class="separator:a085aa23e94a82213b5638f1590fcaa39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1dec190ec6081402da156378aa7cc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c1dec190ec6081402da156378aa7cc7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *msg, va_list args)</td></tr>
 <tr class="separator:a3c1dec190ec6081402da156378aa7cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +155,10 @@ const <a class="el" href="structcrown_1_1_vector.html">Vector</a>&lt; <a class="
 <tr class="memitem:a3f38afb2a125980a436fa22c376fbc77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f38afb2a125980a436fa22c376fbc77"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>add_dependency</b> (const char *path)</td></tr>
 <tr class="separator:a3f38afb2a125980a436fa22c376fbc77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b8b27ff5416b1b118329e38d2220a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32b8b27ff5416b1b118329e38d2220a4"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_compile_options.html#a32b8b27ff5416b1b118329e38d2220a4">exe_path</a> (const char *const *paths, u32 num)</td></tr>
+<tr class="memdesc:a32b8b27ff5416b1b118329e38d2220a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first path with executable permissions or NULL if none found. <br /></td></tr>
+<tr class="separator:a32b8b27ff5416b1b118329e38d2220a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c4817ef1e4ee66a6b58e34bd4ff908b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c4817ef1e4ee66a6b58e34bd4ff908b"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>run_external_compiler</b> (const char *const *argv, <a class="el" href="group___string.html#gabb8d0cc45a7450fd244c57c4308e5bc8">StringStream</a> &amp;output)</td></tr>
 <tr class="separator:a3c4817ef1e4ee66a6b58e34bd4ff908b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,7 +191,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>_platform</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 15 2018 00:09:37 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 12 2019 02:18:10 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

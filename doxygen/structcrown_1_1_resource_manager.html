@@ -116,12 +116,12 @@ typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>OfflineFunc
 <tr class="memitem:ae3a72cc2a6110eb041d103afab37fdfb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3a72cc2a6110eb041d103afab37fdfb"></a>
 typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>UnloadFunction</b>) (<a class="el" href="structcrown_1_1_allocator.html">Allocator</a> &amp;allocator, void *resource)</td></tr>
 <tr class="separator:ae3a72cc2a6110eb041d103afab37fdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dea53b96331a89984f31b82c9f6bcb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dea53b96331a89984f31b82c9f6bcb9"></a>
-typedef <a class="el" href="structcrown_1_1_sort_map.html">SortMap</a>&lt; <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a>, <a class="el" href="structcrown_1_1_resource_manager_1_1_resource_type_data.html">ResourceTypeData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TypeMap</b></td></tr>
-<tr class="separator:a1dea53b96331a89984f31b82c9f6bcb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4091d02141d5a2610ab2b835c19fd727"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4091d02141d5a2610ab2b835c19fd727"></a>
-typedef <a class="el" href="structcrown_1_1_sort_map.html">SortMap</a>&lt; <a class="el" href="structcrown_1_1_resource_manager_1_1_resource_pair.html">ResourcePair</a>, <a class="el" href="structcrown_1_1_resource_manager_1_1_resource_entry.html">ResourceEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ResourceMap</b></td></tr>
-<tr class="separator:a4091d02141d5a2610ab2b835c19fd727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3940ccea4be50f1e54f6b92d1ffcab02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3940ccea4be50f1e54f6b92d1ffcab02"></a>
+typedef <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_string_id64.html">StringId64</a>, <a class="el" href="structcrown_1_1_resource_manager_1_1_resource_type_data.html">ResourceTypeData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TypeMap</b></td></tr>
+<tr class="separator:a3940ccea4be50f1e54f6b92d1ffcab02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ceb5fb57ec370fb66c753c662996a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60ceb5fb57ec370fb66c753c662996a4"></a>
+typedef <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_resource_manager_1_1_resource_pair.html">ResourcePair</a>, <a class="el" href="structcrown_1_1_resource_manager_1_1_resource_entry.html">ResourceEntry</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>ResourceMap</b></td></tr>
+<tr class="separator:a60ceb5fb57ec370fb66c753c662996a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -185,10 +185,10 @@ Public Attributes</h2></td></tr>
 <a class="el" href="structcrown_1_1_resource_loader.html">ResourceLoader</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>_loader</b></td></tr>
 <tr class="separator:a98476a8750c7630c0b0636e0953d793d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8021686da190037b8d55cc997ef4281"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8021686da190037b8d55cc997ef4281"></a>
-<a class="el" href="structcrown_1_1_sort_map.html">TypeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_type_data</b></td></tr>
+<a class="el" href="structcrown_1_1_hash_map.html">TypeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_type_data</b></td></tr>
 <tr class="separator:ae8021686da190037b8d55cc997ef4281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212d74c5d6dab31a7bd43d7abcef3517"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a212d74c5d6dab31a7bd43d7abcef3517"></a>
-<a class="el" href="structcrown_1_1_sort_map.html">ResourceMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_rm</b></td></tr>
+<a class="el" href="structcrown_1_1_hash_map.html">ResourceMap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_rm</b></td></tr>
 <tr class="separator:a212d74c5d6dab31a7bd43d7abcef3517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeac1e59136755b7142e24ac651f47f09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeac1e59136755b7142e24ac651f47f09"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_autoload</b></td></tr>
@@ -262,7 +262,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_autoload</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 15 2018 00:09:37 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 12 2019 02:18:11 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

@@ -78,8 +78,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structcrown_1_1_unit_manager-members.html">List of all members</a>  </div>
@@ -93,17 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="unit__manager_8h_source.html">unit_manager.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_unit_manager_1_1_destroy_data.html">DestroyData</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:ae557883148b8a70ef0ac38b4292478e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae557883148b8a70ef0ac38b4292478e5"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>DestroyFunction</b>) (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, void *user_data)</td></tr>
-<tr class="separator:ae557883148b8a70ef0ac38b4292478e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6d618a00436bc54e55572a70265b6884"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d618a00436bc54e55572a70265b6884"></a>
@@ -128,12 +115,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_unit_manager.html#aa860d341c7ed480b57938ece7e8eb299">destroy</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="memdesc:aa860d341c7ed480b57938ece7e8eb299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the unit <em>id</em>. <br /></td></tr>
 <tr class="separator:aa860d341c7ed480b57938ece7e8eb299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b548ae17cb306ceb05ad0d64e404b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21b548ae17cb306ceb05ad0d64e404b2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>register_destroy_function</b> (DestroyFunction fn, void *user_data)</td></tr>
-<tr class="separator:a21b548ae17cb306ceb05ad0d64e404b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45b7c224bd97becab214f974f1e6d709"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45b7c224bd97becab214f974f1e6d709"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_destroy_function</b> (void *user_data)</td></tr>
-<tr class="separator:a45b7c224bd97becab214f974f1e6d709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a451f310a1888b4edc538fce9b069acb7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a451f310a1888b4edc538fce9b069acb7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>register_destroy_callback</b> (<a class="el" href="structcrown_1_1_unit_destroy_callback.html">UnitDestroyCallback</a> *udc)</td></tr>
+<tr class="separator:a451f310a1888b4edc538fce9b069acb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e1e298ef3dcd489a8bfd7d6c357fef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46e1e298ef3dcd489a8bfd7d6c357fef"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>unregister_destroy_callback</b> (<a class="el" href="structcrown_1_1_unit_destroy_callback.html">UnitDestroyCallback</a> *udc)</td></tr>
+<tr class="separator:a46e1e298ef3dcd489a8bfd7d6c357fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2e630290e53011e17d85b153bcf1db3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2e630290e53011e17d85b153bcf1db3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>trigger_destroy_callbacks</b> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id)</td></tr>
 <tr class="separator:ae2e630290e53011e17d85b153bcf1db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,9 +133,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aa824bf1b52537e290cbc26037f2af7a2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa824bf1b52537e290cbc26037f2af7a2"></a>
 <a class="el" href="structcrown_1_1_queue.html">Queue</a>&lt; u32 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_free_indices</b></td></tr>
 <tr class="separator:aa824bf1b52537e290cbc26037f2af7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04c4c51e8699d08c25891bdcfc5faa34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04c4c51e8699d08c25891bdcfc5faa34"></a>
-<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_unit_manager_1_1_destroy_data.html">DestroyData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_destroy_callbacks</b></td></tr>
-<tr class="separator:a04c4c51e8699d08c25891bdcfc5faa34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f230da8aca42d0ac3c26f4ef8da1447"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f230da8aca42d0ac3c26f4ef8da1447"></a>
+<a class="el" href="structcrown_1_1_unit_destroy_callback.html">UnitDestroyCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_callbacks</b></td></tr>
+<tr class="separator:a2f230da8aca42d0ac3c26f4ef8da1447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages units. </p>
@@ -159,7 +146,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 15 2018 00:09:37 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 12 2019 02:18:11 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

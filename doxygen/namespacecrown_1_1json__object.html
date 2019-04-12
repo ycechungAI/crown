@@ -95,21 +95,24 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="names
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1json__object.html#aa0dc0929fa59585ed8948f38aad4fdea">has</a> (const <a class="el" href="structcrown_1_1_json_object.html">JsonObject</a> &amp;jo, const char *key)</td></tr>
 <tr class="memdesc:aa0dc0929fa59585ed8948f38aad4fdea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the object <em>jo</em> has the <em>key</em>. <br /></td></tr>
 <tr class="separator:aa0dc0929fa59585ed8948f38aad4fdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7c158a554782f4f61b80118b8c7472b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7c158a554782f4f61b80118b8c7472b"></a>
-const <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a>, const char * &gt;::Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1json__object.html#ae7c158a554782f4f61b80118b8c7472b">begin</a> (const <a class="el" href="structcrown_1_1_json_object.html">JsonObject</a> &amp;jo)</td></tr>
-<tr class="memdesc:ae7c158a554782f4f61b80118b8c7472b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the first item in the object <em>jo</em>. <br /></td></tr>
-<tr class="separator:ae7c158a554782f4f61b80118b8c7472b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc5414c9e9a17595fd48ab4fb8963255"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc5414c9e9a17595fd48ab4fb8963255"></a>
-const <a class="el" href="structcrown_1_1_map.html">Map</a>&lt; <a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a>, const char * &gt;::Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1json__object.html#afc5414c9e9a17595fd48ab4fb8963255">end</a> (const <a class="el" href="structcrown_1_1_json_object.html">JsonObject</a> &amp;jo)</td></tr>
-<tr class="memdesc:afc5414c9e9a17595fd48ab4fb8963255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the item following the last item in the object <em>jo</em>. <br /></td></tr>
-<tr class="separator:afc5414c9e9a17595fd48ab4fb8963255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34101ef4471c25ff82cac14078a85e4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a34101ef4471c25ff82cac14078a85e4c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_hole</b> (const <a class="el" href="structcrown_1_1_json_object.html">JsonObject</a> &amp;jo, const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a>, const char * &gt;::Entry *entry)</td></tr>
+<tr class="separator:a34101ef4471c25ff82cac14078a85e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875062198f61c225e61feaa8c560b15d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a875062198f61c225e61feaa8c560b15d"></a>
+const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a>, const char * &gt;::Entry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1json__object.html#a875062198f61c225e61feaa8c560b15d">begin</a> (const <a class="el" href="structcrown_1_1_json_object.html">JsonObject</a> &amp;jo)</td></tr>
+<tr class="memdesc:a875062198f61c225e61feaa8c560b15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the first item in the object <em>jo</em>. <br /></td></tr>
+<tr class="separator:a875062198f61c225e61feaa8c560b15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48812814716254d0abc972f507e85255"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48812814716254d0abc972f507e85255"></a>
+const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; <a class="el" href="structcrown_1_1_fixed_string.html">FixedString</a>, const char * &gt;::Entry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1json__object.html#a48812814716254d0abc972f507e85255">end</a> (const <a class="el" href="structcrown_1_1_json_object.html">JsonObject</a> &amp;jo)</td></tr>
+<tr class="memdesc:a48812814716254d0abc972f507e85255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the item following the last item in the object <em>jo</em>. <br /></td></tr>
+<tr class="separator:a48812814716254d0abc972f507e85255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to manipulate <a class="el" href="structcrown_1_1_json_object.html" title="Map from key to pointers to json-encoded data. ">JsonObject</a>. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 15 2018 00:09:37 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 12 2019 02:18:11 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

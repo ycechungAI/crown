@@ -93,9 +93,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9d2251d7c5ed882e2359055156d8ef96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d2251d7c5ed882e2359055156d8ef96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_button</b> (u8 id, bool state)</td></tr>
-<tr class="separator:a9d2251d7c5ed882e2359055156d8ef96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56ac2965c22d0c4d973c3e56431d4ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa56ac2965c22d0c4d973c3e56431d4ba"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_button</b> (u8 id, u8 state)</td></tr>
+<tr class="separator:aa56ac2965c22d0c4d973c3e56431d4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9ce3ef058ab92fc916a2c731e502c30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9ce3ef058ab92fc916a2c731e502c30"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_axis</b> (u8 id, f32 x, f32 y, f32 z)</td></tr>
 <tr class="separator:aa9ce3ef058ab92fc916a2c731e502c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,14 +126,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#aca5505507065f99d02f9f1f1a8cf526e">released</a> (u8 id) const </td></tr>
 <tr class="memdesc:aca5505507065f99d02f9f1f1a8cf526e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the button <em>id</em> is released in the current frame. <br /></td></tr>
 <tr class="separator:aca5505507065f99d02f9f1f1a8cf526e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7751e6c377b306a9fdf04205fdff0d04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7751e6c377b306a9fdf04205fdff0d04"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a7751e6c377b306a9fdf04205fdff0d04">any_pressed</a> () const </td></tr>
-<tr class="memdesc:a7751e6c377b306a9fdf04205fdff0d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any button is pressed in the current frame. <br /></td></tr>
-<tr class="separator:a7751e6c377b306a9fdf04205fdff0d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6f040dbe19fb26644d29a639ea4ba5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6f040dbe19fb26644d29a639ea4ba5d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#ae6f040dbe19fb26644d29a639ea4ba5d">any_released</a> () const </td></tr>
-<tr class="memdesc:ae6f040dbe19fb26644d29a639ea4ba5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether any button is released in the current frame. <br /></td></tr>
-<tr class="separator:ae6f040dbe19fb26644d29a639ea4ba5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005b5cb4ff08a31cfa65d8690137c4da"><td class="memItemLeft" align="right" valign="top">u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a005b5cb4ff08a31cfa65d8690137c4da">any_pressed</a> () const </td></tr>
+<tr class="memdesc:a005b5cb4ff08a31cfa65d8690137c4da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the first button that was pressed in the current frame or UINT8_MAX if no buttons were pressed at all.  <a href="#a005b5cb4ff08a31cfa65d8690137c4da">More...</a><br /></td></tr>
+<tr class="separator:a005b5cb4ff08a31cfa65d8690137c4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ce91e6debe0543d66c7e026ea93ce4c"><td class="memItemLeft" align="right" valign="top">u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#a6ce91e6debe0543d66c7e026ea93ce4c">any_released</a> () const </td></tr>
+<tr class="memdesc:a6ce91e6debe0543d66c7e026ea93ce4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the id of the first button that was released in the current frame or UINT8_MAX if no buttons were released at all.  <a href="#a6ce91e6debe0543d66c7e026ea93ce4c">More...</a><br /></td></tr>
+<tr class="separator:a6ce91e6debe0543d66c7e026ea93ce4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9c8e6eec077571e59687e1c26796d8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9c8e6eec077571e59687e1c26796d8e"></a>
 f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_input_device.html#af9c8e6eec077571e59687e1c26796d8e">button</a> (u8 id) const </td></tr>
 <tr class="memdesc:af9c8e6eec077571e59687e1c26796d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the button <em>id</em> in the range [0..1]. <br /></td></tr>
@@ -178,9 +176,9 @@ u8&#160;</td><td class="memItemRight" valign="bottom"><b>_num_buttons</b></td></
 <tr class="memitem:ab5a4d4f483ae288d9dcf4a70cff1826d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5a4d4f483ae288d9dcf4a70cff1826d"></a>
 u8&#160;</td><td class="memItemRight" valign="bottom"><b>_num_axes</b></td></tr>
 <tr class="separator:ab5a4d4f483ae288d9dcf4a70cff1826d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a222233409301fd652b489ce079f48fda"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a222233409301fd652b489ce079f48fda"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>_last_button</b></td></tr>
-<tr class="separator:a222233409301fd652b489ce079f48fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1230ae4bbcbdc0493cbd6317b884a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d1230ae4bbcbdc0493cbd6317b884a8"></a>
+u8&#160;</td><td class="memItemRight" valign="bottom"><b>_first_button</b> [2]</td></tr>
+<tr class="separator:a7d1230ae4bbcbdc0493cbd6317b884a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4dd08dfd0e176f6eaeb1b7f2691d645a"></a>
 const char **&#160;</td><td class="memItemRight" valign="bottom"><b>_button_name</b></td></tr>
 <tr class="separator:a4dd08dfd0e176f6eaeb1b7f2691d645a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,14 +212,49 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>_name</b></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a generic input device. </p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a005b5cb4ff08a31cfa65d8690137c4da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u8 crown::InputDevice::any_pressed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the id of the first button that was pressed in the current frame or UINT8_MAX if no buttons were pressed at all. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6ce91e6debe0543d66c7e026ea93ce4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u8 crown::InputDevice::any_released </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the id of the first button that was released in the current frame or UINT8_MAX if no buttons were released at all. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/device/<a class="el" href="input__device_8h_source.html">input_device.h</a></li>
 <li>src/device/input_device.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 15 2018 00:09:37 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 12 2019 02:18:10 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

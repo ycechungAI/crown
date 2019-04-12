@@ -8,7 +8,6 @@ var searchData=
   ['next_5fmatrix4x4',['next_matrix4x4',['../structcrown_1_1_lua_environment.html#af1fe23bc5051b9ab99a09d3eb755b980',1,'crown::LuaEnvironment']]],
   ['next_5fquaternion',['next_quaternion',['../structcrown_1_1_lua_environment.html#a310af148897a887d8840a33491dc81be',1,'crown::LuaEnvironment']]],
   ['next_5fvector3',['next_vector3',['../structcrown_1_1_lua_environment.html#a7cc6bb8feab98f9052bf05e1b6792576',1,'crown::LuaEnvironment']]],
-  ['node',['Node',['../structcrown_1_1_map_1_1_node.html',1,'crown::Map']]],
   ['normal',['normal',['../structcrown_1_1_raycast_hit.html#a668fe3687724e0ed1b5dd3ba88386e30',1,'crown::RaycastHit::normal()'],['../structcrown_1_1_physics_collision_event.html#aef9b29a23af38dd8d3b72f2a68eb5faf',1,'crown::PhysicsCollisionEvent::normal()']]],
   ['normalize',['normalize',['../namespacecrown_1_1plane3.html#ae25ef07a2239ec6fedc8814836c115e9',1,'crown::plane3::normalize()'],['../group___math.html#ga5e22e7d2734ecd705703582119aad969',1,'crown::normalize(Quaternion &amp;q)'],['../group___math.html#gaa94c00ef818fbaa916016d08eeea7da0',1,'crown::normalize(Vector2 &amp;a)'],['../group___math.html#ga90f52b9b9f0c0428102b68b2e2cbf3b8',1,'crown::normalize(Vector3 &amp;a)'],['../group___math.html#gafc418c58cab18b8fad7a8ea72eb8ac56',1,'crown::normalize(Vector4 &amp;a)']]],
   ['not_5fequal_5fto',['not_equal_to',['../structcrown_1_1not__equal__to.html',1,'crown']]],

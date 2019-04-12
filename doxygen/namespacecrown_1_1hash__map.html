@@ -106,6 +106,10 @@ template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual 
 <tr class="memitem:a63e7814ee7f3e4dce52c8de65170f3f0"><td class="memTemplItemLeft" align="right" valign="top">const TValue &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1hash__map.html#a63e7814ee7f3e4dce52c8de65170f3f0">get</a> (const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;m, const TKey &amp;key, const TValue &amp;deffault)</td></tr>
 <tr class="memdesc:a63e7814ee7f3e4dce52c8de65170f3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value for the given <em>key</em> or <em>deffault</em> if the key does not exist in the map.  <a href="#a63e7814ee7f3e4dce52c8de65170f3f0">More...</a><br /></td></tr>
 <tr class="separator:a63e7814ee7f3e4dce52c8de65170f3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cf346d10174ff221a63ec5efbaf4f7"><td class="memTemplParams" colspan="2">template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </td></tr>
+<tr class="memitem:a78cf346d10174ff221a63ec5efbaf4f7"><td class="memTemplItemLeft" align="right" valign="top">TValue &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1hash__map.html#a78cf346d10174ff221a63ec5efbaf4f7">get</a> (<a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;m, const TKey &amp;key, const TValue &amp;deffault)</td></tr>
+<tr class="memdesc:a78cf346d10174ff221a63ec5efbaf4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value for the given <em>key</em> or <em>deffault</em> if the key does not exist in the map.  <a href="#a78cf346d10174ff221a63ec5efbaf4f7">More...</a><br /></td></tr>
+<tr class="separator:a78cf346d10174ff221a63ec5efbaf4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada6f8d8f14608f093843ba816c8c239c"><td class="memTemplParams" colspan="2"><a class="anchor" id="ada6f8d8f14608f093843ba816c8c239c"></a>
 template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </td></tr>
 <tr class="memitem:ada6f8d8f14608f093843ba816c8c239c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1hash__map.html#ada6f8d8f14608f093843ba816c8c239c">set</a> (<a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;m, const TKey &amp;key, const TValue &amp;value)</td></tr>
@@ -120,6 +124,18 @@ template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual 
 <tr class="memitem:ab69596049321644567d3acd24bb9988c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1hash__map.html#ab69596049321644567d3acd24bb9988c">clear</a> (<a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;m)</td></tr>
 <tr class="memdesc:ab69596049321644567d3acd24bb9988c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all the items in the map.  <a href="#ab69596049321644567d3acd24bb9988c">More...</a><br /></td></tr>
 <tr class="separator:ab69596049321644567d3acd24bb9988c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc69605ac362148fee4600d8527342c4"><td class="memTemplParams" colspan="2">template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </td></tr>
+<tr class="memitem:abc69605ac362148fee4600d8527342c4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1hash__map.html#abc69605ac362148fee4600d8527342c4">is_hole</a> (const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;m, const typename <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt;::Entry *entry)</td></tr>
+<tr class="memdesc:abc69605ac362148fee4600d8527342c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the <em>entry</em> in the map <em>m</em> contains data or is a hole.  <a href="#abc69605ac362148fee4600d8527342c4">More...</a><br /></td></tr>
+<tr class="separator:abc69605ac362148fee4600d8527342c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00f386c45ad09d1698f0e52a694d8eb"><td class="memTemplParams" colspan="2">template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </td></tr>
+<tr class="memitem:ab00f386c45ad09d1698f0e52a694d8eb"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt;::Entry *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1hash__map.html#ab00f386c45ad09d1698f0e52a694d8eb">begin</a> (const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;m)</td></tr>
+<tr class="memdesc:ab00f386c45ad09d1698f0e52a694d8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the first item in the map, can be used to efficiently iterate over the elements (in random order).  <a href="#ab00f386c45ad09d1698f0e52a694d8eb">More...</a><br /></td></tr>
+<tr class="separator:ab00f386c45ad09d1698f0e52a694d8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0826a349769cb17de65e7182e5363cf"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa0826a349769cb17de65e7182e5363cf"></a>
+template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </td></tr>
+<tr class="memitem:aa0826a349769cb17de65e7182e5363cf"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt;::Entry *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>end</b> (const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;m)</td></tr>
+<tr class="separator:aa0826a349769cb17de65e7182e5363cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to manipulate <a class="el" href="structcrown_1_1_hash_map.html" title="Hash map. ">HashMap</a>. </p>
@@ -134,6 +150,42 @@ template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual 
           <td class="memname">const TValue &amp; crown::hash_map::get </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TKey &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TValue &amp;&#160;</td>
+          <td class="paramname"><em>deffault</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the value for the given <em>key</em> or <em>deffault</em> if the key does not exist in the map. </p>
+
+</div>
+</div>
+<a class="anchor" id="a78cf346d10174ff221a63ec5efbaf4f7"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">TValue &amp; crown::hash_map::get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
         </tr>
         <tr>
@@ -181,10 +233,62 @@ template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual 
 
 </div>
 </div>
+<a class="anchor" id="abc69605ac362148fee4600d8527342c4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crown::hash_map::is_hole </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt;::Entry *&#160;</td>
+          <td class="paramname"><em>entry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns whether the <em>entry</em> in the map <em>m</em> contains data or is a hole. </p>
+<p>If the entry is a hole you should not touch data in the entry. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab00f386c45ad09d1698f0e52a694d8eb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TKey , typename TValue , typename Hash , typename KeyEqual &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt;::Entry * crown::hash_map::begin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_hash_map.html">HashMap</a>&lt; TKey, TValue, Hash, KeyEqual &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the first item in the map, can be used to efficiently iterate over the elements (in random order). </p>
+<dl class="section note"><dt>Note</dt><dd>You should check whether the item is valid with <a class="el" href="namespacecrown_1_1hash__map.html#abc69605ac362148fee4600d8527342c4" title="Returns whether the entry in the map m contains data or is a hole. ">hash_map::is_hole()</a>. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 15 2018 00:09:37 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 12 2019 02:18:11 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

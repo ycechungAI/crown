@@ -2,8 +2,8 @@ var searchData=
 [
   ['increase_5fcapacity',['increase_capacity',['../namespacecrown_1_1queue.html#a211ff1e8f278ddfd69a0bd143547051c',1,'crown::queue']]],
   ['independent',['INDEPENDENT',['../structcrown_1_1_deadzone_mode.html#a8d504100a0eb6a7525cc18226cdcb153a76add39259ec406afa2f9acbc31c35ec',1,'crown::DeadzoneMode']]],
-  ['index',['Index',['../structcrown_1_1_hash_set_1_1_index.html',1,'crown::HashSet']]],
   ['index',['Index',['../structcrown_1_1_hash_map_1_1_index.html',1,'crown::HashMap']]],
+  ['index',['Index',['../structcrown_1_1_hash_set_1_1_index.html',1,'crown::HashSet']]],
   ['indexdata',['IndexData',['../structcrown_1_1_gui_1_1_index_data.html',1,'crown::Gui']]],
   ['indexdata',['IndexData',['../structcrown_1_1_index_data.html',1,'crown']]],
   ['init',['init',['../namespacecrown_1_1audio__globals.html#a44bcf0553aeffd0a1a46d5c4ccb6448c',1,'crown::audio_globals::init()'],['../namespacecrown_1_1physics__globals.html#ad43baed76132fa8f741f13d6982c2868',1,'crown::physics_globals::init()']]],
@@ -25,6 +25,7 @@ var searchData=
   ['is_5fallocator_5faware',['is_allocator_aware',['../structcrown_1_1is__allocator__aware.html',1,'crown']]],
   ['is_5fdirectory',['is_directory',['../structcrown_1_1_filesystem.html#a73280b7dd4d7c9c6d534b8bb13967dac',1,'crown::Filesystem::is_directory()'],['../structcrown_1_1_filesystem_disk.html#a7398056057e3b75ad867c54fb0ca1474',1,'crown::FilesystemDisk::is_directory()']]],
   ['is_5ffile',['is_file',['../structcrown_1_1_filesystem.html#a5f5cc9a1cab36e7e20b0233d9a884474',1,'crown::Filesystem::is_file()'],['../structcrown_1_1_filesystem_disk.html#a605de84d6f0268c3557ef0a2e001979b',1,'crown::FilesystemDisk::is_file()']]],
+  ['is_5fhole',['is_hole',['../namespacecrown_1_1hash__map.html#abc69605ac362148fee4600d8527342c4',1,'crown::hash_map']]],
   ['is_5fmatrix4x4',['is_matrix4x4',['../structcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053',1,'crown::LuaEnvironment']]],
   ['is_5fopen',['is_open',['../structcrown_1_1_file.html#a79a0dfa29e975317f0420a2ce65c507b',1,'crown::File']]],
   ['is_5fplaying',['is_playing',['../structcrown_1_1_sound_world.html#a5d9818022dd98de4360fceda1f3c76e6',1,'crown::SoundWorld']]],
