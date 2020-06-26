@@ -11,12 +11,12 @@ var searchData=
   ['is_5fabsolute',['is_absolute',['../namespacecrown_1_1path.html#a8290f0dc478fa56398ca62f629b7cdaa',1,'crown::path']]],
   ['is_5fdirectory',['is_directory',['../structcrown_1_1_filesystem.html#a73280b7dd4d7c9c6d534b8bb13967dac',1,'crown::Filesystem::is_directory()'],['../structcrown_1_1_filesystem_disk.html#a7398056057e3b75ad867c54fb0ca1474',1,'crown::FilesystemDisk::is_directory()']]],
   ['is_5ffile',['is_file',['../structcrown_1_1_filesystem.html#a5f5cc9a1cab36e7e20b0233d9a884474',1,'crown::Filesystem::is_file()'],['../structcrown_1_1_filesystem_disk.html#a605de84d6f0268c3557ef0a2e001979b',1,'crown::FilesystemDisk::is_file()']]],
-  ['is_5fhole',['is_hole',['../namespacecrown_1_1hash__map.html#abc69605ac362148fee4600d8527342c4',1,'crown::hash_map']]],
-  ['is_5fmatrix4x4',['is_matrix4x4',['../structcrown_1_1_lua_environment.html#a6cfd7d319890836562a7e51bbe76b053',1,'crown::LuaEnvironment']]],
+  ['is_5fhole',['is_hole',['../namespacecrown_1_1hash__map.html#abc69605ac362148fee4600d8527342c4',1,'crown::hash_map::is_hole()'],['../namespacecrown_1_1hash__set.html#a6cd6a0434aaa585f315f30ae553a3779',1,'crown::hash_set::is_hole()']]],
+  ['is_5fmatrix4x4',['is_matrix4x4',['../structcrown_1_1_lua_environment.html#a7fab4b7fa091acd2ec97d2b4da33d106',1,'crown::LuaEnvironment']]],
   ['is_5fopen',['is_open',['../structcrown_1_1_file.html#a79a0dfa29e975317f0420a2ce65c507b',1,'crown::File']]],
   ['is_5fplaying',['is_playing',['../structcrown_1_1_sound_world.html#a5d9818022dd98de4360fceda1f3c76e6',1,'crown::SoundWorld']]],
-  ['is_5fquaternion',['is_quaternion',['../structcrown_1_1_lua_environment.html#a17823d5e6cbf2c29288a87c7f343b440',1,'crown::LuaEnvironment']]],
+  ['is_5fquaternion',['is_quaternion',['../structcrown_1_1_lua_environment.html#ad037920b08a7740c1ad9154508e57ca0',1,'crown::LuaEnvironment']]],
   ['is_5frelative',['is_relative',['../namespacecrown_1_1path.html#a635845f60a84a299c0e31e251d72cb9a',1,'crown::path']]],
   ['is_5froot',['is_root',['../namespacecrown_1_1path.html#a87c6298b23d5423c5306e7754a86aba5',1,'crown::path']]],
-  ['is_5fvector3',['is_vector3',['../structcrown_1_1_lua_environment.html#a10501619ca797e39d31aa262596ea160',1,'crown::LuaEnvironment']]]
+  ['is_5fvector3',['is_vector3',['../structcrown_1_1_lua_environment.html#a8b4bac3b8d2da536c0105af608b7c1b3',1,'crown::LuaEnvironment']]]
 ];

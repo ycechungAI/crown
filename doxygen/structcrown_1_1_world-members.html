@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_world.html">World</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrown.html">crown</a></li><li class="navelem"><a class="el" href="structcrown_1_1_world.html">World</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -144,18 +144,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#abb9eb635fc5e89876a766aae6e2ac549">set_sound_range</a>(SoundInstanceId id, f32 range)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#af5d6a6fa15fb4b5c7907091777dd5bda">set_sound_volume</a>(SoundInstanceId id, f32 volume)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#a20a69bb631bca10443962de49d992f02">spawn_empty_unit</a>()</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#a43fa063295d6559a07bc838078195861">spawn_unit</a>(StringId64 name, const Vector3 &amp;pos=VECTOR3_ZERO, const Quaternion &amp;rot=QUATERNION_IDENTITY)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#a1b77936da1d9f65feec86d288d2dc29e">spawn_unit</a>(StringId64 name, const Vector3 &amp;pos=VECTOR3_ZERO, const Quaternion &amp;rot=QUATERNION_IDENTITY, const Vector3 &amp;scl=VECTOR3_ONE)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#a5b31d017ca5cfc3c61f112f44464095b">stop_sound</a>(SoundInstanceId id)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#ab11898294e9fdfc2b45636f3ddf498bb">units</a>(Array&lt; UnitId &gt; &amp;units) const </td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#af11629a836727966af7ad1b6ec484dad">update</a>(f32 dt)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#aa3ccd3ff490052af75d8313ee46e5fae">update_animations</a>(f32 dt)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#a6b51d033c4386657d6ed9f459c9c20a3">update_scene</a>(f32 dt)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>World</b>(Allocator &amp;a, ResourceManager &amp;rm, ShaderManager &amp;sm, MaterialManager &amp;mm, UnitManager &amp;um, LuaEnvironment &amp;env) (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~World</b>() (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#a92c1266f57937f8e4f1905f92fe0c8bb">unit_by_name</a>(StringId32 name)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#ab11898294e9fdfc2b45636f3ddf498bb">units</a>(Array&lt; UnitId &gt; &amp;units) const </td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#af11629a836727966af7ad1b6ec484dad">update</a>(f32 dt)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structcrown_1_1_world.html#aa3ccd3ff490052af75d8313ee46e5fae">update_animations</a>(f32 dt)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structcrown_1_1_world.html#a6b51d033c4386657d6ed9f459c9c20a3">update_scene</a>(f32 dt)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>World</b>(Allocator &amp;a, ResourceManager &amp;rm, ShaderManager &amp;sm, MaterialManager &amp;mm, UnitManager &amp;um, LuaEnvironment &amp;env) (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~World</b>() (defined in <a class="el" href="structcrown_1_1_world.html">crown::World</a>)</td><td class="entry"><a class="el" href="structcrown_1_1_world.html">crown::World</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2019 23:37:00 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 26 2020 22:43:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

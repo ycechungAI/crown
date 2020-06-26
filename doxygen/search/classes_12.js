@@ -13,6 +13,7 @@ var searchData=
   ['soundresource',['SoundResource',['../structcrown_1_1_sound_resource.html',1,'crown']]],
   ['soundtype',['SoundType',['../structcrown_1_1_sound_type.html',1,'crown']]],
   ['soundworld',['SoundWorld',['../structcrown_1_1_sound_world.html',1,'crown']]],
+  ['sourceindex',['SourceIndex',['../structcrown_1_1_source_index.html',1,'crown']]],
   ['sphere',['Sphere',['../structcrown_1_1_sphere.html',1,'crown']]],
   ['sphereshape',['SphereShape',['../structcrown_1_1_sphere_shape.html',1,'crown']]],
   ['spriteanimationresource',['SpriteAnimationResource',['../structcrown_1_1_sprite_animation_resource.html',1,'crown']]],
@@ -29,5 +30,6 @@ var searchData=
   ['statusevent',['StatusEvent',['../structcrown_1_1_status_event.html',1,'crown']]],
   ['stringid32',['StringId32',['../structcrown_1_1_string_id32.html',1,'crown']]],
   ['stringid64',['StringId64',['../structcrown_1_1_string_id64.html',1,'crown']]],
+  ['stringview',['StringView',['../structcrown_1_1_string_view.html',1,'crown']]],
   ['system',['System',['../structcrown_1_1log__internal_1_1_system.html',1,'crown::log_internal']]]
 ];

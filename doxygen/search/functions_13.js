@@ -1,7 +1,6 @@
 var searchData=
 [
   ['temp_5fcount',['temp_count',['../structcrown_1_1_lua_environment.html#a51d9a99f527a1519ab0825ef0845a737',1,'crown::LuaEnvironment']]],
-  ['tempallocator',['TempAllocator',['../structcrown_1_1_temp_allocator.html#a8b83308ebc2f54f58d2ae584ab777103',1,'crown::TempAllocator']]],
   ['title',['title',['../structcrown_1_1_window.html#a6300523cd464f5d2439f47f720be025c',1,'crown::Window']]],
   ['to_5faabb',['to_aabb',['../namespacecrown_1_1frustum.html#a3df4482f08383206fc35290be5674eb4',1,'crown::frustum']]],
   ['to_5fabgr',['to_abgr',['../group___math.html#gada442382ca06957608b55038994e44ef',1,'crown']]],
@@ -11,12 +10,12 @@ var searchData=
   ['to_5frgb',['to_rgb',['../group___math.html#ga7a427da31a608404c7d0e30e23014bc8',1,'crown']]],
   ['to_5frgba',['to_rgba',['../group___math.html#gafd1d800db48dc014c7835080f8081307',1,'crown']]],
   ['to_5fsphere',['to_sphere',['../namespacecrown_1_1aabb.html#a94dd6e49eb9e306559fa4fc802cc0812',1,'crown::aabb']]],
-  ['to_5fstring',['to_string',['../structcrown_1_1_string_id32.html#a080aaff321040229d2fd98a8c2ca5bdd',1,'crown::StringId32::to_string()'],['../structcrown_1_1_string_id64.html#ac69c065b55eed4dd5ebd474ba054d4ce',1,'crown::StringId64::to_string()'],['../namespacecrown_1_1guid.html#a3f73f2a6791c00ab247306e8093ec485',1,'crown::guid::to_string()']]],
+  ['to_5fstring',['to_string',['../structcrown_1_1_string_id32.html#aabb5a3b489fdccfd48ef4982cd02f11e',1,'crown::StringId32::to_string()'],['../structcrown_1_1_string_id64.html#a72474569153a0f3e33103390dd4ba8c5',1,'crown::StringId64::to_string()'],['../namespacecrown_1_1guid.html#afe7198c36ea0d4692444a54aa3ef9bfd',1,'crown::guid::to_string()'],['../group___math.html#ga4e7945f7048eb6d607322ec0283f564b',1,'crown::to_string(const Vector3 &amp;v, char *buf, u32 buf_len)'],['../group___math.html#ga7c814b05f52345bdec90b7f3383c900f',1,'crown::to_string(const Quaternion &amp;q, char *buf, u32 buf_len)'],['../group___math.html#ga38f02438d24bee64592dd7cf5a4e44dc',1,'crown::to_string(const Matrix4x4 &amp;m, char *buf, u32 buf_len)']]],
   ['to_5fstring_5fid',['to_string_id',['../structcrown_1_1_dynamic_string.html#abd57971e45470d3d046f097cb716392e',1,'crown::DynamicString']]],
   ['to_5fvector2',['to_vector2',['../group___math.html#ga4d41396043574e06e0228f605c1e5291',1,'crown']]],
   ['to_5fvector3',['to_vector3',['../group___math.html#ga8d7612963bfa947d20c3e587eb7e2119',1,'crown']]],
   ['to_5fvertices',['to_vertices',['../namespacecrown_1_1aabb.html#aeb35560b88c9391d2e9e8163c9a90f05',1,'crown::aabb']]],
-  ['total_5fallocated',['total_allocated',['../structcrown_1_1_allocator.html#a84fc840df70e6cb9945eaab3118ca9e4',1,'crown::Allocator::total_allocated()'],['../structcrown_1_1_linear_allocator.html#aa9f21bce78b13746cdefff3b1c3e24b1',1,'crown::LinearAllocator::total_allocated()'],['../structcrown_1_1_pool_allocator.html#a633ccc68cde3216b6a609c23c9a97dd0',1,'crown::PoolAllocator::total_allocated()'],['../structcrown_1_1_proxy_allocator.html#a6b24726c0ea9c1824ab2a3efd72a9a68',1,'crown::ProxyAllocator::total_allocated()'],['../structcrown_1_1_stack_allocator.html#ad92ea02c634f145ad4cc9dff997c0351',1,'crown::StackAllocator::total_allocated()'],['../structcrown_1_1_temp_allocator.html#a8bee5c9e92bf7c8f5797efe7dcb04a27',1,'crown::TempAllocator::total_allocated()']]],
+  ['total_5fallocated',['total_allocated',['../structcrown_1_1_allocator.html#a84fc840df70e6cb9945eaab3118ca9e4',1,'crown::Allocator::total_allocated()'],['../structcrown_1_1_linear_allocator.html#aa9f21bce78b13746cdefff3b1c3e24b1',1,'crown::LinearAllocator::total_allocated()'],['../structcrown_1_1_pool_allocator.html#a633ccc68cde3216b6a609c23c9a97dd0',1,'crown::PoolAllocator::total_allocated()'],['../structcrown_1_1_proxy_allocator.html#a6b24726c0ea9c1824ab2a3efd72a9a68',1,'crown::ProxyAllocator::total_allocated()'],['../structcrown_1_1_stack_allocator.html#ad92ea02c634f145ad4cc9dff997c0351',1,'crown::StackAllocator::total_allocated()']]],
   ['touch',['touch',['../structcrown_1_1_input_manager.html#a72b97caad8ca1d80bb5a89714757f4e0',1,'crown::InputManager']]],
   ['transformed',['transformed',['../namespacecrown_1_1aabb.html#aba40b08e30dcb5e90a1cf8a6191567c8',1,'crown::aabb']]],
   ['translation',['translation',['../group___math.html#ga4bd6177e223a00b179b8b914c1c7422c',1,'crown']]],

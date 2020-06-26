@@ -73,12 +73,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_thread.html">Thread</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrown.html">crown</a></li><li class="navelem"><a class="el" href="structcrown_1_1_thread.html">Thread</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structcrown_1_1_thread-members.html">List of all members</a>  </div>
@@ -92,17 +91,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="thread_8h_source.html">thread.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a32b4ff5421e22e206615cfae59b79eaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32b4ff5421e22e206615cfae59b79eaa"></a>
-typedef s32(*&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadFunction</b>) (void *data)</td></tr>
-<tr class="separator:a32b4ff5421e22e206615cfae59b79eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a92623ea0cc20e4928052fafde926e5c5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92623ea0cc20e4928052fafde926e5c5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CE_ALIGN_DECL</b> (16, u8 _data[32])</td></tr>
-<tr class="separator:a92623ea0cc20e4928052fafde926e5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2964972f6f468f088b4b9547b262cf29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2964972f6f468f088b4b9547b262cf29"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CE_ALIGN_DECL</b> (16, u8 _data[256])</td></tr>
+<tr class="separator:a2964972f6f468f088b4b9547b262cf29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1cf4c64d38acc6989d972f987b378cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1cf4c64d38acc6989d972f987b378cc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Thread</b> (const <a class="el" href="structcrown_1_1_thread.html">Thread</a> &amp;)=delete</td></tr>
 <tr class="separator:af1cf4c64d38acc6989d972f987b378cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,21 +117,9 @@ s32&#160;</td><td class="memItemRight" valign="bottom"><b>exit_code</b> ()</td><
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a285dd64f94e4d0ba881a366644e83593"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a285dd64f94e4d0ba881a366644e83593"></a>
-ThreadFunction&#160;</td><td class="memItemRight" valign="bottom"><b>_function</b></td></tr>
-<tr class="separator:a285dd64f94e4d0ba881a366644e83593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a731be4118253564ee39297382aacaba5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a731be4118253564ee39297382aacaba5"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>_user_data</b></td></tr>
-<tr class="separator:a731be4118253564ee39297382aacaba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a3e3f434c8912e86597ff441c744efd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a3e3f434c8912e86597ff441c744efd"></a>
-<a class="el" href="structcrown_1_1_semaphore.html">Semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_sem</b></td></tr>
-<tr class="separator:a6a3e3f434c8912e86597ff441c744efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae014a23a46157b8c49f03c767c87eb0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae014a23a46157b8c49f03c767c87eb0c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_is_running</b></td></tr>
-<tr class="separator:ae014a23a46157b8c49f03c767c87eb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8602665092da6f298d241f3ca0455fdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8602665092da6f298d241f3ca0455fdc"></a>
-s32&#160;</td><td class="memItemRight" valign="bottom"><b>_exit_code</b></td></tr>
-<tr class="separator:a8602665092da6f298d241f3ca0455fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2064096291d1a5082cdec4fcfad8f9e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2064096291d1a5082cdec4fcfad8f9e6"></a>
+struct Private *&#160;</td><td class="memItemRight" valign="bottom"><b>_priv</b></td></tr>
+<tr class="separator:a2064096291d1a5082cdec4fcfad8f9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="structcrown_1_1_thread.html" title="Thread. ">Thread</a>. </p>
@@ -149,7 +130,7 @@ s32&#160;</td><td class="memItemRight" valign="bottom"><b>_exit_code</b></td></t
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2019 23:37:00 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 26 2020 22:43:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

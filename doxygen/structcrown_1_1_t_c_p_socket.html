@@ -73,12 +73,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrown.html">crown</a></li><li class="navelem"><a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structcrown_1_1_t_c_p_socket-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">crown::TCPSocket Struct Reference<div class="ingroups"><a class="el" href="group___core.html">Core</a> &raquo; <a class="el" href="group___network.html">Network</a></div></div>  </div>
@@ -95,6 +96,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0796b3da4007701b09142e61cb0e2bcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0796b3da4007701b09142e61cb0e2bcd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CE_ALIGN_DECL</b> (16, u8 _data[8])</td></tr>
 <tr class="separator:a0796b3da4007701b09142e61cb0e2bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e2b5beebdf358087fb3e17256da710"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9e2b5beebdf358087fb3e17256da710"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TCPSocket</b> (const <a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> &amp;other)</td></tr>
+<tr class="separator:ad9e2b5beebdf358087fb3e17256da710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc41d5a4bf449735145cb9617de4d93c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc41d5a4bf449735145cb9617de4d93c"></a>
+<a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="structcrown_1_1_t_c_p_socket.html">TCPSocket</a> &amp;other)</td></tr>
+<tr class="separator:acc41d5a4bf449735145cb9617de4d93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33c28204b7ce04611067030a919d0f32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33c28204b7ce04611067030a919d0f32"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_t_c_p_socket.html#a33c28204b7ce04611067030a919d0f32">close</a> ()</td></tr>
 <tr class="memdesc:a33c28204b7ce04611067030a919d0f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the socket. <br /></td></tr>
@@ -108,7 +115,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memdesc:af292f8c60c065148ef2b23b717716643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the socket to <em>port</em> and returns the result. <br /></td></tr>
 <tr class="separator:af292f8c60c065148ef2b23b717716643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000c16b0ac62798e11b049f95e57d4de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a000c16b0ac62798e11b049f95e57d4de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_t_c_p_socket.html#a000c16b0ac62798e11b049f95e57d4de">listen</a> (u32 max)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_t_c_p_socket.html#a000c16b0ac62798e11b049f95e57d4de">listen</a> (u32 <a class="el" href="group___math.html#gaf4a1dcd762d161b10fb4e9418614bdf2">max</a>)</td></tr>
 <tr class="memdesc:a000c16b0ac62798e11b049f95e57d4de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listens for <em>max</em> socket connections. <br /></td></tr>
 <tr class="separator:a000c16b0ac62798e11b049f95e57d4de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8642227c5f39b4ed5a22e86fc2c5314"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8642227c5f39b4ed5a22e86fc2c5314"></a>
@@ -135,6 +142,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <a class="el" href="structcrown_1_1_write_result.html">WriteResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_t_c_p_socket.html#af598607a218b45d12d0057ae62f39feb">write_nonblock</a> (const void *data, u32 size)</td></tr>
 <tr class="memdesc:af598607a218b45d12d0057ae62f39feb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes <em>size</em> bytes and returns the result. <br /></td></tr>
 <tr class="separator:af598607a218b45d12d0057ae62f39feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a9805bf0c6eb8fc29c423d7ff28214585"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9805bf0c6eb8fc29c423d7ff28214585"></a>
+struct Private *&#160;</td><td class="memItemRight" valign="bottom"><b>_priv</b></td></tr>
+<tr class="separator:a9805bf0c6eb8fc29c423d7ff28214585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>TCP socket. </p>
@@ -145,7 +158,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2019 23:37:00 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 26 2020 22:43:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

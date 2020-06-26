@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['unit_5fby_5fname',['unit_by_name',['../structcrown_1_1_world.html#a92c1266f57937f8e4f1905f92fe0c8bb',1,'crown::World']]],
   ['unit_5ffloat',['unit_float',['../structcrown_1_1_random.html#ad2b22d2ab8387791232d4e1f25fe8ceb',1,'crown::Random']]],
   ['units',['units',['../structcrown_1_1_world.html#ab11898294e9fdfc2b45636f3ddf498bb',1,'crown::World']]],
   ['unlink',['unlink',['../structcrown_1_1_scene_graph.html#a8dfc151baf67b48dbfaab0ed26679d66',1,'crown::SceneGraph']]],

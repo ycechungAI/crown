@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="namespacecrown_1_1guid.html">guid</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrown.html">crown</a></li><li class="navelem"><a class="el" href="namespacecrown_1_1guid.html">guid</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,9 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a15eda1c5653ea40d6320572a50b13c13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15eda1c5653ea40d6320572a50b13c13"></a>
-<a class="el" href="structcrown_1_1_guid.html">Guid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1guid.html#a15eda1c5653ea40d6320572a50b13c13">new_guid</a> ()</td></tr>
-<tr class="memdesc:a15eda1c5653ea40d6320572a50b13c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new randomly generated <a class="el" href="structcrown_1_1_guid.html" title="Holds a globally unique identifier. ">Guid</a>. <br /></td></tr>
+<tr class="memitem:a15eda1c5653ea40d6320572a50b13c13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcrown_1_1_guid.html">Guid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1guid.html#a15eda1c5653ea40d6320572a50b13c13">new_guid</a> ()</td></tr>
+<tr class="memdesc:a15eda1c5653ea40d6320572a50b13c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new randomly generated <a class="el" href="structcrown_1_1_guid.html" title="Holds a globally unique identifier. ">Guid</a>.  <a href="#a15eda1c5653ea40d6320572a50b13c13">More...</a><br /></td></tr>
 <tr class="separator:a15eda1c5653ea40d6320572a50b13c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd3fdc7f62e0bab06b52f1cc67734793"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd3fdc7f62e0bab06b52f1cc67734793"></a>
 <a class="el" href="structcrown_1_1_guid.html">Guid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1guid.html#afd3fdc7f62e0bab06b52f1cc67734793">parse</a> (const char *str)</td></tr>
@@ -99,17 +98,70 @@ Functions</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1guid.html#a51322a67a6a9a6bf0ab479a8af1d1d0a">try_parse</a> (<a class="el" href="structcrown_1_1_guid.html">Guid</a> &amp;guid, const char *str)</td></tr>
 <tr class="memdesc:a51322a67a6a9a6bf0ab479a8af1d1d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the <em>guid</em> from <em>str</em> and returns true if success. <br /></td></tr>
 <tr class="separator:a51322a67a6a9a6bf0ab479a8af1d1d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f73f2a6791c00ab247306e8093ec485"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f73f2a6791c00ab247306e8093ec485"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1guid.html#a3f73f2a6791c00ab247306e8093ec485">to_string</a> (char *buf, u32 len, const <a class="el" href="structcrown_1_1_guid.html">Guid</a> &amp;guid)</td></tr>
-<tr class="memdesc:a3f73f2a6791c00ab247306e8093ec485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills <em>buf</em> with the string representation of the <em>guid</em>. <br /></td></tr>
-<tr class="separator:a3f73f2a6791c00ab247306e8093ec485"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7198c36ea0d4692444a54aa3ef9bfd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrown_1_1guid.html#afe7198c36ea0d4692444a54aa3ef9bfd">to_string</a> (char *buf, u32 len, const <a class="el" href="structcrown_1_1_guid.html">Guid</a> &amp;guid)</td></tr>
+<tr class="memdesc:afe7198c36ea0d4692444a54aa3ef9bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <em>guid</em> converted to ASCIIZ.  <a href="#afe7198c36ea0d4692444a54aa3ef9bfd">More...</a><br /></td></tr>
+<tr class="separator:afe7198c36ea0d4692444a54aa3ef9bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Functions to manipulate <a class="el" href="structcrown_1_1_guid.html" title="Holds a globally unique identifier. ">Guid</a>. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a15eda1c5653ea40d6320572a50b13c13"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcrown_1_1_guid.html">Guid</a> crown::guid::new_guid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new randomly generated <a class="el" href="structcrown_1_1_guid.html" title="Holds a globally unique identifier. ">Guid</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>User must call guid_globals::init() first. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afe7198c36ea0d4692444a54aa3ef9bfd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * crown::guid::to_string </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcrown_1_1_guid.html">Guid</a> &amp;&#160;</td>
+          <td class="paramname"><em>guid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <em>guid</em> converted to ASCIIZ. </p>
+<p><em>buf</em> size must be greater than or equal to GUID_BUF_LEN or the returned string will be truncated. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2019 23:37:01 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 26 2020 22:43:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

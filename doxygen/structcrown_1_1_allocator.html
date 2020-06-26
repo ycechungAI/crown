@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_allocator.html">Allocator</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrown.html">crown</a></li><li class="navelem"><a class="el" href="structcrown_1_1_allocator.html">Allocator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="allocator_8h_source.html">allocator.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="structcrown_1_1_linear_allocator.html">crown::LinearAllocator</a>, crown::memory::HeapAllocator, crown::memory::ScratchAllocator, <a class="el" href="structcrown_1_1_pool_allocator.html">crown::PoolAllocator</a>, <a class="el" href="structcrown_1_1_proxy_allocator.html">crown::ProxyAllocator</a>, <a class="el" href="structcrown_1_1_stack_allocator.html">crown::StackAllocator</a>, and <a class="el" href="structcrown_1_1_temp_allocator.html">crown::TempAllocator&lt; BUFFER_SIZE &gt;</a>.</p>
+<p>Inherited by <a class="el" href="structcrown_1_1_linear_allocator.html">crown::LinearAllocator</a>, crown::memory::HeapAllocator, crown::memory::ScratchAllocator, <a class="el" href="structcrown_1_1_pool_allocator.html">crown::PoolAllocator</a>, <a class="el" href="structcrown_1_1_proxy_allocator.html">crown::ProxyAllocator</a>, <a class="el" href="structcrown_1_1_stack_allocator.html">crown::StackAllocator</a>, and crown::TempAllocator&lt; BUFFER_SIZE &gt;.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -163,7 +163,7 @@ static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE_NOT_
 
 <p>Allocates <em>size</em> bytes of memory aligned to the specified <em>align</em> byte and returns a pointer to the first allocated byte. </p>
 
-<p>Implemented in <a class="el" href="structcrown_1_1_temp_allocator.html#a48f7759512cea64d9bb218ea671b0e8c">crown::TempAllocator&lt; BUFFER_SIZE &gt;</a>, <a class="el" href="structcrown_1_1_pool_allocator.html#a31d0a32c27bf08530085cbe056e1fcae">crown::PoolAllocator</a>, <a class="el" href="structcrown_1_1_stack_allocator.html#aa883ef09ddda733127fe1bdbcdfff8be">crown::StackAllocator</a>, <a class="el" href="structcrown_1_1_linear_allocator.html#a42763437e42d2e5b1d22163260380393">crown::LinearAllocator</a>, and <a class="el" href="structcrown_1_1_proxy_allocator.html#a25784ef4782edbdc756a0c038a622fc6">crown::ProxyAllocator</a>.</p>
+<p>Implemented in <a class="el" href="structcrown_1_1_pool_allocator.html#a31d0a32c27bf08530085cbe056e1fcae">crown::PoolAllocator</a>, <a class="el" href="structcrown_1_1_stack_allocator.html#aa883ef09ddda733127fe1bdbcdfff8be">crown::StackAllocator</a>, <a class="el" href="structcrown_1_1_linear_allocator.html#a42763437e42d2e5b1d22163260380393">crown::LinearAllocator</a>, and <a class="el" href="structcrown_1_1_proxy_allocator.html#a25784ef4782edbdc756a0c038a622fc6">crown::ProxyAllocator</a>.</p>
 
 </div>
 </div>
@@ -192,7 +192,7 @@ static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE_NOT_
 <p>Returns the size of the memory block pointed by <em>ptr</em> or SIZE_NOT_TRACKED if the allocator does not support memory tracking. </p>
 <p><em>ptr</em> must be a pointer returned by <a class="el" href="structcrown_1_1_allocator.html#ac96c267f0558b8b460d5a2663fb6e8e9" title="Allocates size bytes of memory aligned to the specified align byte and returns a pointer to the first...">Allocator::allocate()</a>. </p>
 
-<p>Implemented in <a class="el" href="structcrown_1_1_temp_allocator.html#a026b09122b00b25337bf5d0264d1e5cf">crown::TempAllocator&lt; BUFFER_SIZE &gt;</a>, <a class="el" href="structcrown_1_1_linear_allocator.html#af1e996878596480c7eb66fa2c06b082e">crown::LinearAllocator</a>, <a class="el" href="structcrown_1_1_stack_allocator.html#a7bb99c514cc210844ea743dee8ad28d6">crown::StackAllocator</a>, <a class="el" href="structcrown_1_1_pool_allocator.html#a793dc23c016315b40e9e2768bbeb5d69">crown::PoolAllocator</a>, and <a class="el" href="structcrown_1_1_proxy_allocator.html#aab6aa9dbb736a852f7caffb1142dd711">crown::ProxyAllocator</a>.</p>
+<p>Implemented in <a class="el" href="structcrown_1_1_linear_allocator.html#af1e996878596480c7eb66fa2c06b082e">crown::LinearAllocator</a>, <a class="el" href="structcrown_1_1_stack_allocator.html#a7bb99c514cc210844ea743dee8ad28d6">crown::StackAllocator</a>, <a class="el" href="structcrown_1_1_pool_allocator.html#a793dc23c016315b40e9e2768bbeb5d69">crown::PoolAllocator</a>, and <a class="el" href="structcrown_1_1_proxy_allocator.html#aab6aa9dbb736a852f7caffb1142dd711">crown::ProxyAllocator</a>.</p>
 
 </div>
 </div>
@@ -202,7 +202,7 @@ static const u32&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE_NOT_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2019 23:36:58 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 26 2020 22:43:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

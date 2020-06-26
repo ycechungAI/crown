@@ -1,7 +1,6 @@
 var searchData=
 [
   ['tcpsocket',['TCPSocket',['../structcrown_1_1_t_c_p_socket.html',1,'crown']]],
-  ['tempallocator',['TempAllocator',['../structcrown_1_1_temp_allocator.html',1,'crown']]],
   ['textevent',['TextEvent',['../structcrown_1_1_text_event.html',1,'crown']]],
   ['texturedata',['TextureData',['../structcrown_1_1_texture_data.html',1,'crown']]],
   ['texturehandle',['TextureHandle',['../structcrown_1_1_texture_handle.html',1,'crown']]],

@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>crown</b></li><li class="navelem"><a class="el" href="structcrown_1_1_world.html">World</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrown.html">crown</a></li><li class="navelem"><a class="el" href="structcrown_1_1_world.html">World</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -105,10 +105,10 @@ CameraInstance&#160;</td><td class="memItemRight" valign="bottom"><b>camera_make
 <tr class="memitem:a6214e129fb1d74b269451b1ce195afe3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6214e129fb1d74b269451b1ce195afe3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>World</b> (<a class="el" href="structcrown_1_1_allocator.html">Allocator</a> &amp;a, <a class="el" href="structcrown_1_1_resource_manager.html">ResourceManager</a> &amp;rm, <a class="el" href="structcrown_1_1_shader_manager.html">ShaderManager</a> &amp;sm, <a class="el" href="structcrown_1_1_material_manager.html">MaterialManager</a> &amp;mm, <a class="el" href="structcrown_1_1_unit_manager.html">UnitManager</a> &amp;um, <a class="el" href="structcrown_1_1_lua_environment.html">LuaEnvironment</a> &amp;env)</td></tr>
 <tr class="separator:a6214e129fb1d74b269451b1ce195afe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43fa063295d6559a07bc838078195861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43fa063295d6559a07bc838078195861"></a>
-<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a43fa063295d6559a07bc838078195861">spawn_unit</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos=VECTOR3_ZERO, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot=QUATERNION_IDENTITY)</td></tr>
-<tr class="memdesc:a43fa063295d6559a07bc838078195861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new instance of the unit <em>name</em> at the given <em>position</em> and <em>rotation</em>. <br /></td></tr>
-<tr class="separator:a43fa063295d6559a07bc838078195861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b77936da1d9f65feec86d288d2dc29e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b77936da1d9f65feec86d288d2dc29e"></a>
+<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a1b77936da1d9f65feec86d288d2dc29e">spawn_unit</a> (<a class="el" href="structcrown_1_1_string_id64.html">StringId64</a> name, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;pos=VECTOR3_ZERO, const <a class="el" href="structcrown_1_1_quaternion.html">Quaternion</a> &amp;rot=QUATERNION_IDENTITY, const <a class="el" href="structcrown_1_1_vector3.html">Vector3</a> &amp;scl=VECTOR3_ONE)</td></tr>
+<tr class="memdesc:a1b77936da1d9f65feec86d288d2dc29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new instance of the unit <em>name</em> at the given <em>position</em>, <em>rotation</em> and <em>scale</em>. <br /></td></tr>
+<tr class="separator:a1b77936da1d9f65feec86d288d2dc29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20a69bb631bca10443962de49d992f02"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20a69bb631bca10443962de49d992f02"></a>
 <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a20a69bb631bca10443962de49d992f02">spawn_empty_unit</a> ()</td></tr>
 <tr class="memdesc:a20a69bb631bca10443962de49d992f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns a new empty unit and returns its id. <br /></td></tr>
@@ -125,6 +125,9 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#ab11898294e9fdfc2b45636f3ddf498bb">units</a> (<a class="el" href="structcrown_1_1_array.html">Array</a>&lt; <a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> &gt; &amp;units) const </td></tr>
 <tr class="memdesc:ab11898294e9fdfc2b45636f3ddf498bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all the the units in the world. <br /></td></tr>
 <tr class="separator:ab11898294e9fdfc2b45636f3ddf498bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c1266f57937f8e4f1905f92fe0c8bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcrown_1_1_unit_id.html">UnitId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a92c1266f57937f8e4f1905f92fe0c8bb">unit_by_name</a> (<a class="el" href="structcrown_1_1_string_id32.html">StringId32</a> name)</td></tr>
+<tr class="memdesc:a92c1266f57937f8e4f1905f92fe0c8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unit with the given <a class="el" href="structcrown_1_1_level.html" title="Game level. ">Level</a> Editor <em>name</em> or UNIT_INVALID if no such unit exists.  <a href="#a92c1266f57937f8e4f1905f92fe0c8bb">More...</a><br /></td></tr>
+<tr class="separator:a92c1266f57937f8e4f1905f92fe0c8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276705cf28c640236abcaf5e2dc11832"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a276705cf28c640236abcaf5e2dc11832"></a>
 CameraInstance&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a276705cf28c640236abcaf5e2dc11832">camera_create</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> id, const <a class="el" href="structcrown_1_1_camera_desc.html">CameraDesc</a> &amp;cd, const <a class="el" href="structcrown_1_1_matrix4x4.html">Matrix4x4</a> &amp;tr)</td></tr>
 <tr class="memdesc:a276705cf28c640236abcaf5e2dc11832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new camera. <br /></td></tr>
@@ -185,7 +188,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memdesc:a6ae1e225375292c97293e8e69d4e4b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertical <em>half_size</em> of the orthographic view volume.  <a href="#a6ae1e225375292c97293e8e69d4e4b7b">More...</a><br /></td></tr>
 <tr class="separator:a6ae1e225375292c97293e8e69d4e4b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21b7c4b556d4c4d6378f0aed0c790825"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21b7c4b556d4c4d6378f0aed0c790825"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a21b7c4b556d4c4d6378f0aed0c790825">camera_set_viewport_metrics</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, u16 x, u16 y, u16 width, u16 height)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrown_1_1_world.html#a21b7c4b556d4c4d6378f0aed0c790825">camera_set_viewport_metrics</a> (<a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> unit, u16 <a class="el" href="group___math.html#ga0782ac7cfe8d858b9df7fa9e192eb805">x</a>, u16 <a class="el" href="group___math.html#ga363fd10e945361cfc4115d6f87a2422e">y</a>, u16 width, u16 height)</td></tr>
 <tr class="memdesc:a21b7c4b556d4c4d6378f0aed0c790825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the coordinates for the camera viewport in pixels. <br /></td></tr>
 <tr class="separator:a21b7c4b556d4c4d6378f0aed0c790825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e24e0fc3328e8951d8b8120f8787e86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e24e0fc3328e8951d8b8120f8787e86"></a>
@@ -342,6 +345,25 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a game world. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a92c1266f57937f8e4f1905f92fe0c8bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcrown_1_1_unit_id.html">UnitId</a> crown::World::unit_by_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrown_1_1_string_id32.html">StringId32</a>&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the unit with the given <a class="el" href="structcrown_1_1_level.html" title="Game level. ">Level</a> Editor <em>name</em> or UNIT_INVALID if no such unit exists. </p>
+<p>If there are multiple units with the same name, a random one will be returned. </p>
+
+</div>
+</div>
 <a class="anchor" id="a6ae1e225375292c97293e8e69d4e4b7b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -479,7 +501,7 @@ u32&#160;</td><td class="memItemRight" valign="bottom"><b>_marker</b></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2019 23:37:00 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 26 2020 22:43:08 for Crown by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.11
 </small></address>

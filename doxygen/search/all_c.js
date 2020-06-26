@@ -1,15 +1,14 @@
 var searchData=
 [
+  ['main_5funit_5ftests',['main_unit_tests',['../namespacecrown.html#afb70052d77034680a26b6e8bea31320b',1,'crown']]],
   ['mass',['mass',['../structcrown_1_1_actor_resource.html#a94378565dddf76e7a213467b7056adb9',1,'crown::ActorResource']]],
   ['material',['Material',['../structcrown_1_1_material.html',1,'crown']]],
-  ['material',['material',['../structcrown_1_1_actor_resource.html#a13840a7607baafdad5c660dd554e5fe7',1,'crown::ActorResource::material()'],['../structcrown_1_1_collider_desc.html#a9ac42b64ac65e4d147269ef8de8db361',1,'crown::ColliderDesc::material()']]],
+  ['material',['material',['../structcrown_1_1_actor_resource.html#a13840a7607baafdad5c660dd554e5fe7',1,'crown::ActorResource']]],
   ['material_5fresource',['material_resource',['../structcrown_1_1_mesh_renderer_desc.html#a47a0f7ced2a4f1aa6b473aab2ff65f90',1,'crown::MeshRendererDesc::material_resource()'],['../structcrown_1_1_sprite_renderer_desc.html#a22766e349b922b1a3937cf662b85ef3e',1,'crown::SpriteRendererDesc::material_resource()']]],
   ['materialmanager',['MaterialManager',['../structcrown_1_1_material_manager.html',1,'crown']]],
   ['materialresource',['MaterialResource',['../structcrown_1_1_material_resource.html',1,'crown']]],
   ['math',['Math',['../group___math.html',1,'']]],
-  ['matrix3x3',['matrix3x3',['../group___math.html#ga3c24a2fc6d280f34752a66cf30e1296f',1,'crown::matrix3x3(f32 xx, f32 xy, f32 xz, f32 yx, f32 yy, f32 yz, f32 zx, f32 zy, f32 zz)'],['../group___math.html#ga6835c8b01e6d4b9384b4ba7d26b5775b',1,'crown::matrix3x3(const Vector3 &amp;x, const Vector3 &amp;y, const Vector3 &amp;z)'],['../group___math.html#ga7290c8c8d1b00e75934a74c0739fe9c3',1,'crown::matrix3x3(const Quaternion &amp;r)']]],
   ['matrix3x3',['Matrix3x3',['../structcrown_1_1_matrix3x3.html',1,'crown']]],
-  ['matrix4x4',['matrix4x4',['../group___math.html#gaaf54358901b82e37f04f8401e77ee289',1,'crown::matrix4x4(f32 xx, f32 xy, f32 xz, f32 xw, f32 yx, f32 yy, f32 yz, f32 yw, f32 zx, f32 zy, f32 zz, f32 zw, f32 tx, f32 ty, f32 tz, f32 tw)'],['../group___math.html#gaf1bb3f2fdc1829c0fce7b6ff232df289',1,'crown::matrix4x4(const f32 a[16])'],['../group___math.html#ga8c8b1775801bcaf19d55650218594848',1,'crown::matrix4x4(const Vector3 &amp;x, const Vector3 &amp;y, const Vector3 &amp;z, const Vector3 &amp;t)'],['../group___math.html#gadc4e1a0690490fa8c08f63a4b6c92613',1,'crown::matrix4x4(const Quaternion &amp;r, const Vector3 &amp;t)'],['../group___math.html#ga32ddb29672974657b87e58a04e1789fb',1,'crown::matrix4x4(const Vector3 &amp;t)'],['../group___math.html#ga65e8b64ffd3925d6b31b78ae53874db9',1,'crown::matrix4x4(const Matrix3x3 &amp;r)']]],
   ['matrix4x4',['Matrix4x4',['../structcrown_1_1_matrix4x4.html',1,'crown']]],
   ['max',['max',['../group___math.html#gaf4a1dcd762d161b10fb4e9418614bdf2',1,'crown::max(const Vector2 &amp;a, const Vector2 &amp;b)'],['../group___math.html#gaeae23a2c2c4c06f34ff6b8ee8297e8f9',1,'crown::max(const Vector4 &amp;a, const Vector4 &amp;b)']]],
   ['max_3c_20vector3_20_3e',['max&lt; Vector3 &gt;',['../group___math.html#ga521d6a4dd7bfee55304b5ab10a7195c7',1,'crown']]],
@@ -19,6 +18,7 @@ var searchData=
   ['mesh_5fcreate',['mesh_create',['../structcrown_1_1_render_world.html#ada59b9db23dfb856e80265ade3f0da2c',1,'crown::RenderWorld']]],
   ['mesh_5fdestroy',['mesh_destroy',['../structcrown_1_1_render_world.html#a7f59b5f74224b276136da7be06d95baf',1,'crown::RenderWorld']]],
   ['mesh_5finstances',['mesh_instances',['../structcrown_1_1_render_world.html#a9700a40dbe19b1dbdd93af5d223c495a',1,'crown::RenderWorld']]],
+  ['mesh_5fmaterial',['mesh_material',['../structcrown_1_1_render_world.html#a51175b05ee1c01d40e900e96799200e4',1,'crown::RenderWorld']]],
   ['mesh_5fobb',['mesh_obb',['../structcrown_1_1_render_world.html#a539b535db7d07e58940975dd128785bc',1,'crown::RenderWorld']]],
   ['mesh_5fresource',['mesh_resource',['../structcrown_1_1_mesh_renderer_desc.html#a27b018d0dd5944b4e9ea82730a523f0b',1,'crown::MeshRendererDesc']]],
   ['mesh_5fset_5fmaterial',['mesh_set_material',['../structcrown_1_1_render_world.html#a703d32543f7297c4a5ddbfedb0aedd86',1,'crown::RenderWorld']]],
@@ -39,5 +39,6 @@ var searchData=
   ['mousecursor',['MouseCursor',['../structcrown_1_1_mouse_cursor.html',1,'crown']]],
   ['move',['move',['../structcrown_1_1_window.html#a9a878e6eb81c5fbfeb537c746fe3e480',1,'crown::Window']]],
   ['mtime',['mtime',['../structcrown_1_1_stat.html#a931be91dba7c09c9bf1718cc73c72cbc',1,'crown::Stat']]],
+  ['murmur32',['murmur32',['../namespacecrown.html#af791cd7c6dbbb32a9cb2c238a60f2de7',1,'crown']]],
   ['mutex',['Mutex',['../structcrown_1_1_mutex.html',1,'crown']]]
 ];
