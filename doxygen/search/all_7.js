@@ -27,7 +27,7 @@ var searchData=
   ['hashmap_3c_20crown_3a_3adynamicstring_2c_20crown_3a_3astat_20_3e',['HashMap&lt; crown::DynamicString, crown::Stat &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
   ['hashmap_3c_20crown_3a_3adynamicstring_2c_20u32_20_3e',['HashMap&lt; crown::DynamicString, u32 &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
   ['hashmap_3c_20crown_3a_3aguid_2c_20u32_20_3e',['HashMap&lt; crown::Guid, u32 &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
-  ['hashmap_3c_20crown_3a_3astringid32_2c_20crown_3a_3aconsoleserver_3a_3acommand_20_3e',['HashMap&lt; crown::StringId32, crown::ConsoleServer::Command &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
+  ['hashmap_3c_20crown_3a_3astringid32_2c_20crown_3a_3aconsoleserver_3a_3acommanddata_20_3e',['HashMap&lt; crown::StringId32, crown::ConsoleServer::CommandData &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
   ['hashmap_3c_20crown_3a_3astringid64_2c_20crown_3a_3adynamicstring_20_3e',['HashMap&lt; crown::StringId64, crown::DynamicString &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
   ['hashmap_3c_20crown_3a_3astringid64_2c_20crown_3a_3ahashmap_3c_20crown_3a_3adynamicstring_2c_20u32_20_3e_20_3e',['HashMap&lt; crown::StringId64, crown::HashMap&lt; crown::DynamicString, u32 &gt; &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],
   ['hashmap_3c_20crown_3a_3astringid64_2c_20crown_3a_3amaterial_20_2a_20_3e',['HashMap&lt; crown::StringId64, crown::Material * &gt;',['../structcrown_1_1_hash_map.html',1,'crown']]],

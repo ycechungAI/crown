@@ -2,6 +2,7 @@ var searchData=
 [
   ['save',['save',['../structcrown_1_1_data_compiler.html#a83e269412b3c8065715109993d12adca',1,'crown::DataCompiler']]],
   ['scale',['scale',['../group___math.html#gaa0883e530a5230305337c08601c197b5',1,'crown::scale(const Matrix3x3 &amp;m)'],['../group___math.html#ga73843b76c3913493fa6ff7af59c1c181',1,'crown::scale(const Matrix4x4 &amp;m)']]],
+  ['scan',['scan',['../structcrown_1_1_source_index.html#a762c8aa36b3a4aa54da4cc741620b449',1,'crown::SourceIndex']]],
   ['scan_5fand_5frestore',['scan_and_restore',['../structcrown_1_1_data_compiler.html#acc98903a4e5fb712db0154eb2b7420bd',1,'crown::DataCompiler']]],
   ['scopedmutex',['ScopedMutex',['../structcrown_1_1_scoped_mutex.html#a7570d50231c79bdc35ab942ff488b3ea',1,'crown::ScopedMutex']]],
   ['seek',['seek',['../structcrown_1_1_file.html#a6d849fb4fdb16ffc33f24ffef4c111a9',1,'crown::File']]],
