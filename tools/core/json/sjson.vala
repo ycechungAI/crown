@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -53,9 +53,8 @@ public class SJSON
 	/// <summary>
 	/// Convenience function for loading a file.
 	/// </summary>
-	public static Hashtable load(string path)
+	public static Hashtable load_from_file(GLib.FileStream? fs)
 	{
-		FileStream fs = FileStream.open(path, "rb");
 		if (fs == null)
 			return new Hashtable();
 
@@ -73,6 +72,15 @@ public class SJSON
 			return new Hashtable();
 
 		return decode(bytes) as Hashtable;
+	}
+
+	/// <summary>
+	/// Convenience function for loading a file.
+	/// </summary>
+	public static Hashtable load_from_path(string path)
+	{
+		FileStream fs = FileStream.open(path, "rb");
+		return load_from_file(fs);
 	}
 
 	/// <summary>
@@ -106,7 +114,8 @@ public class SJSON
 
 	static void write_new_line(StringBuilder builder, int indentation)
 	{
-		builder.append_c('\n');
+		if (builder.len > 0)
+			builder.append_c('\n');
 		for (int i = 0; i < indentation; ++i)
 			builder.append_c('\t');
 	}

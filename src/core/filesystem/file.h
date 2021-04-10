@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -15,7 +15,10 @@ namespace crown
 /// @ingroup Filesystem
 struct File
 {
+	///
 	File() {}
+
+	///
 	virtual ~File() {}
 
 	/// Opens the file at @a path with specified @a mode

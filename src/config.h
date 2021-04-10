@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -8,7 +8,7 @@
 #include "core/platform.h"
 
 #define CROWN_VERSION_MAJOR 0
-#define CROWN_VERSION_MINOR 39
+#define CROWN_VERSION_MINOR 43
 #define CROWN_VERSION_PATCH 0
 
 #define CROWN_VERSION CE_STRINGIZE(CROWN_VERSION_MAJOR) \

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -37,11 +37,12 @@ void Level::load(const Vector3& pos, const Quaternion& rot)
 	// Spawn units
 	const UnitResource* ur = level_resource::unit_resource(_resource);
 
+	// Spawn units
 	array::resize(_unit_lookup, ur->num_units);
 	for (u32 i = 0; i < ur->num_units; ++i)
 		_unit_lookup[i] = _unit_manager->create();
 
-	spawn_units(*_world, *ur, pos, rot, VECTOR3_ONE, array::begin(_unit_lookup));
+	spawn_units(*_world, ur, pos, rot, VECTOR3_ONE, array::begin(_unit_lookup));
 
 	// Play sounds
 	const u32 num_sounds = level_resource::num_sounds(_resource);

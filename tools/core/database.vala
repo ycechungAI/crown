@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -9,6 +9,9 @@ namespace Crown
 {
 public class Database
 {
+	private static bool _debug = false;
+	private static bool _debug_getters = false;
+
 	private enum Action
 	{
 		CREATE,
@@ -295,7 +298,11 @@ public class Database
 	private Stack _redo;
 	private Stack _undo_points;
 	private Stack _redo_points;
-	private bool _changed;
+	// The number of changes to the database since the last successful state
+	// synchronization (load(), save() etc.). If it is less than 0, the changes
+	// came from undo(), otherwise they came from redo() or from regular calls to
+	// create(), destroy(), set_*() etc. A value of 0 means there were no changes.
+	public int _distance_from_last_sync;
 
 	// Signals
 	public signal void key_changed(Guid id, string key);
@@ -321,7 +328,7 @@ public class Database
 		_undo_points.clear();
 		_redo_points.clear();
 
-		_changed = false;
+		_distance_from_last_sync = 0;
 
 		// This is a special field which stores all objects
 		_data.set("_objects", new HashMap<string, Value?>());
@@ -330,34 +337,68 @@ public class Database
 	/// Returns whether the database has been changed since last call to Save().
 	public bool changed()
 	{
-		return _changed;
+		return _distance_from_last_sync != 0;
 	}
 
 	/// Saves database to path without marking it as not changed.
-	public void dump(string path)
+	public void dump(string path, Guid id)
 	{
-		Hashtable json = encode();
+		Hashtable json = encode(id);
 		SJSON.save(json, path);
 	}
 
 	/// Saves database to path.
-	public void save(string path)
+	public void save(string path, Guid id)
 	{
-		dump(path);
-		_changed = false;
+		dump(path, id);
+		_distance_from_last_sync = 0;
 	}
 
-	/// Loads database from path.
-	public void load(string path)
+	// See: load_more_from_path().
+	public int load_more_from_file(ref Guid object_id, FileStream? fs, string resource_path)
 	{
-		Hashtable json = SJSON.load(path);
-		decode(json);
-		_changed = false;
+		Hashtable json = SJSON.load_from_file(fs);
+		object_id = decode(json);
+
+		// Create a mapping between the path and the object it has been loaded into.
+		set_property_internal(0, GUID_ZERO, resource_path, object_id);
+
+		return 0;
 	}
 
-	private Hashtable encode()
+	// Loads the database with the object stored at @a path, without resetting the
+	// database. This makes it possible to load multiple objects from distinct
+	// paths in the same database. @a resource_path is used as a key in the
+	// database to refer to the object that has been loaded. This is useful when
+	// you do not have the object ID but only its path, as it is often the case
+	// since resources use paths and not IDs to reference each other.
+	public int load_more_from_path(ref Guid object_id, string path, string resource_path)
 	{
-		return encode_object(GUID_ZERO, _data);
+		FileStream fs = FileStream.open(path, "rb");
+		if (fs == null)
+			return 1;
+
+		return load_more_from_file(ref object_id, fs, resource_path);
+	}
+
+	/// Loads the database with the object stored at @a path.
+	public int load_from_file(ref Guid object_id, FileStream fs, string resource_path)
+	{
+		reset();
+		return load_more_from_file(ref object_id, fs, resource_path);
+	}
+
+	/// Loads the database with the object stored at @a path.
+	public int load_from_path(ref Guid object_id, string path, string resource_path)
+	{
+		reset();
+		return load_more_from_path(ref object_id, path, resource_path);
+	}
+
+	/// Encodes the object @a id into SJSON object.
+	private Hashtable encode(Guid id)
+	{
+		return encode_object(id, get_data(id));
 	}
 
 	private static bool is_valid_value(Value? value)
@@ -381,7 +422,6 @@ public class Database
 			;
 	}
 
-#if 0
 	private static string value_to_string(Value? value)
 	{
 		if (value == null)
@@ -403,12 +443,19 @@ public class Database
 
 		return "<invalid>";
 	}
-#endif // CROWN_DEBUG
 
-	public void decode(Hashtable json)
+	// Decodes the @a json data inside the database object @a id.
+	public Guid decode(Hashtable json)
 	{
-		reset();
-		decode_object(GUID_ZERO, "", json);
+		Guid id;
+		if (json.has_key("id"))
+			id = Guid.parse((string)json["id"]);
+		else
+			id = Guid.new_guid();
+
+		create_internal(0, id);
+		decode_object(id, "", json);
+		return id;
 	}
 
 	private void decode_object(Guid id, string db_key, Hashtable json)
@@ -436,13 +483,13 @@ public class Database
 			{
 				ArrayList<Value?> arr = (ArrayList<Value?>)val;
 				if (arr.size > 0 && arr[0].holds(typeof(double)))
-					set_property_internal(id, k, decode_value(val));
+					set_property_internal(0, id, k, decode_value(val));
 				else
 					decode_set(id, key, arr);
 			}
 			else
 			{
-				set_property_internal(id, k, decode_value(val));
+				set_property_internal(0, id, k, decode_value(val));
 			}
 
 			k = old_db;
@@ -452,15 +499,15 @@ public class Database
 	private void decode_set(Guid id, string key, ArrayList<Value?> json)
 	{
 		// Set should be created even if it is empty.
-		create_empty_set(id, key);
+		create_empty_set(0, id, key);
 
 		for (int i = 0; i < json.size; ++i)
 		{
 			Hashtable obj = (Hashtable)json[i];
 			Guid item_id = Guid.parse((string)obj["id"]);
-			create_internal(item_id);
+			create_internal(0, item_id);
 			decode_object(item_id, "", obj);
-			add_to_set_internal(id, key, item_id);
+			add_to_set_internal(0, id, key, item_id);
 		}
 	}
 
@@ -570,8 +617,7 @@ public class Database
 			ArrayList<Value?> arr = new Gee.ArrayList<Value?>();
 			foreach (Guid id in hs)
 			{
-				HashMap<string, Value?> objs = (HashMap<string, Value?>)_data["_objects"];
-				arr.add(encode_object(id, (HashMap<string, Value?>)objs[id.to_string()]));
+				arr.add(encode_object(id, get_data(id)));
 			}
 			return arr;
 		}
@@ -585,54 +631,54 @@ public class Database
 	{
 		assert(has_object(id));
 
-		return (HashMap<string, Value?>)(id == GUID_ZERO ? _data : ((HashMap<string, Value?>)_data["_objects"])[id.to_string()]);
+		HashMap<string, Value?> objects = (HashMap<string, Value?>)_data["_objects"];
+		return (HashMap<string, Value?>)(id == GUID_ZERO ? _data : objects[id.to_string()]);
 	}
 
-	private void create_internal(Guid id)
+	private void create_internal(int dir, Guid id)
 	{
 		assert(id != GUID_ZERO);
-#if 0
-		stdout.printf("create %s\n", id.to_string());
-#endif // CROWN_DEBUG
+
+		if (_debug)
+			logi("create %s".printf(id.to_string()));
+
 		((HashMap<string, Value?>)_data["_objects"]).set(id.to_string(), new HashMap<string, Value?>());
 
-		_changed = true;
+		_distance_from_last_sync += dir;
 		key_changed(id, "_objects");
 	}
 
-	private void destroy_internal(Guid id)
+	private void destroy_internal(int dir, Guid id)
 	{
 		assert(id != GUID_ZERO);
 		assert(has_object(id));
-#if 0
-		stdout.printf("destroy %s\n", id.to_string());
-#endif // CROWN_DEBUG
+
+		if (_debug)
+			logi("destroy %s".printf(id.to_string()));
+
 		((HashMap<string, Value?>)_data["_objects"]).unset(id.to_string());
 
-		_changed = true;
+		_distance_from_last_sync += dir;
 		key_changed(id, "_objects");
 	}
 
-	private void set_property_internal(Guid id, string key, Value? value)
+	private void set_property_internal(int dir, Guid id, string key, Value? value)
 	{
 		assert(has_object(id));
 		assert(is_valid_key(key));
 		assert(is_valid_value(value));
-#if 0
-		stdout.printf("set_property %s %s %s\n"
-			, id.to_string()
-			, key
-			, (value == null) ? "null" : value_to_string(value)
-			);
-#endif // CROWN_DEBUG
+
+		if (_debug)
+			logi("set_property %s %s %s".printf(id.to_string(), key, (value == null) ? "null" : value_to_string(value)));
+
 		HashMap<string, Value?> ob = get_data(id);
 		ob[key] = value;
 
-		_changed = true;
+		_distance_from_last_sync += dir;
 		key_changed(id, key);
 	}
 
-	private void create_empty_set(Guid id, string key)
+	private void create_empty_set(int dir, Guid id, string key)
 	{
 		assert(has_object(id));
 		assert(is_valid_key(key));
@@ -643,19 +689,16 @@ public class Database
 		ob[key] = new HashSet<Guid?>(Guid.hash_func, Guid.equal_func);
 	}
 
-	private void add_to_set_internal(Guid id, string key, Guid item_id)
+	private void add_to_set_internal(int dir, Guid id, string key, Guid item_id)
 	{
 		assert(has_object(id));
 		assert(is_valid_key(key));
 		assert(item_id != GUID_ZERO);
 		assert(has_object(item_id));
-#if 0
-		stdout.printf("add_to_set %s %s %s\n"
-			, id.to_string()
-			, key
-			, item_id.to_string()
-			);
-#endif // CROWN_DEBUG
+
+		if (_debug)
+			logi("add_to_set %s %s %s".printf(id.to_string(), key, item_id.to_string()));
+
 		HashMap<string, Value?> ob = get_data(id);
 
 		if (!ob.has_key(key))
@@ -669,26 +712,23 @@ public class Database
 			((HashSet<Guid?>)ob[key]).add(item_id);
 		}
 
-		_changed = true;
+		_distance_from_last_sync += dir;
 		key_changed(id, key);
 	}
 
-	private void remove_from_set_internal(Guid id, string key, Guid item_id)
+	private void remove_from_set_internal(int dir, Guid id, string key, Guid item_id)
 	{
 		assert(has_object(id));
 		assert(is_valid_key(key));
 		assert(item_id != GUID_ZERO);
-#if 0
-		stdout.printf("remove_from_set %s %s %s\n"
-			, id.to_string()
-			, key
-			, item_id.to_string()
-			);
-#endif // CROWN_DEBUG
+
+		if (_debug)
+			logi("remove_from_set %s %s %s".printf(id.to_string(), key, item_id.to_string()));
+
 		HashMap<string, Value?> ob = get_data(id);
 		((HashSet<Guid?>)ob[key]).remove(item_id);
 
-		_changed = true;
+		_distance_from_last_sync += dir;
 		key_changed(id, key);
 	}
 
@@ -701,7 +741,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		create_internal(id);
+		create_internal(1, id);
 	}
 
 	public void destroy(Guid id)
@@ -736,7 +776,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		destroy_internal(id);
+		destroy_internal(1, id);
 	}
 
 	public void set_property_null(Guid id, string key)
@@ -769,7 +809,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		set_property_internal(id, key, null);
+		set_property_internal(1, id, key, null);
 	}
 
 	public void set_property_bool(Guid id, string key, bool val)
@@ -787,7 +827,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		set_property_internal(id, key, val);
+		set_property_internal(1, id, key, val);
 	}
 
 	public void set_property_double(Guid id, string key, double val)
@@ -805,7 +845,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		set_property_internal(id, key, val);
+		set_property_internal(1, id, key, val);
 	}
 
 	public void set_property_string(Guid id, string key, string val)
@@ -823,7 +863,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		set_property_internal(id, key, val);
+		set_property_internal(1, id, key, val);
 	}
 
 	public void set_property_guid(Guid id, string key, Guid val)
@@ -841,7 +881,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		set_property_internal(id, key, val);
+		set_property_internal(1, id, key, val);
 	}
 
 	public void set_property_vector3(Guid id, string key, Vector3 val)
@@ -859,7 +899,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		set_property_internal(id, key, val);
+		set_property_internal(1, id, key, val);
 	}
 
 	public void set_property_quaternion(Guid id, string key, Quaternion val)
@@ -877,7 +917,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		set_property_internal(id, key, val);
+		set_property_internal(1, id, key, val);
 	}
 
 	public void add_to_set(Guid id, string key, Guid item_id)
@@ -891,7 +931,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		add_to_set_internal(id, key, item_id);
+		add_to_set_internal(1, id, key, item_id);
 	}
 
 	public void remove_from_set(Guid id, string key, Guid item_id)
@@ -904,7 +944,7 @@ public class Database
 		_redo.clear();
 		_redo_points.clear();
 
-		remove_from_set_internal(id, key, item_id);
+		remove_from_set_internal(1, id, key, item_id);
 	}
 
 	public bool has_object(Guid id)
@@ -924,13 +964,10 @@ public class Database
 
 		HashMap<string, Value?> ob = get_data(id);
 		Value? value = (ob.has_key(key) ? ob[key] : null);
-#if 0
-		stdout.printf("get_property %s %s %s\n"
-			, id.to_string()
-			, key
-			, (value == null) ? "null" : value_to_string(value)
-			);
-#endif // CROWN_DEBUG
+
+		if (_debug_getters)
+			logi("get_property %s %s %s".printf(id.to_string(), key, (value == null) ? "null" : value_to_string(value)));
+
 		return value;
 	}
 
@@ -970,17 +1007,16 @@ public class Database
 		assert(is_valid_key(key));
 
 		HashMap<string, Value?> ob = get_data(id);
+		HashSet<Guid?> value;
 		if (ob.has_key(key))
-			return ob[key] as HashSet<Guid?>;
+			value = ob[key] as HashSet<Guid?>;
 		else
-			return deffault;
-#if 0
-		// stdout.printf("get_property %s %s %s\n"
-		// 	, id.to_string()
-		// 	, key
-		// 	, (value == null) ? "null" : value_to_string(value)
-		// 	);
-#endif // CROWN_DEBUG
+			value = deffault;
+
+		if (_debug_getters)
+			logi("get_property %s %s %s".printf(id.to_string(), key, (value == null) ? "null" : value_to_string(value)));
+
+		return value;
 	}
 
 	public HashMap<string, Value?> get_object(Guid id)
@@ -996,9 +1032,9 @@ public class Database
 
 	public void add_restore_point(int id, Guid[] data)
 	{
-#if 0
-		stdout.printf("add_restore_point %d, undo size = %u\n", id, _undo.size());
-#endif // CROWN_DEBUG
+		if (_debug)
+			logi("add_restore_point %d, undo size = %u".printf(id, _undo.size()));
+
 		_undo_points.write_restore_point(id, _undo.size(), data);
 
 		_redo.clear();
@@ -1141,6 +1177,8 @@ public class Database
 
 	private void undo_redo_until(uint32 size, Stack undo, Stack redo)
 	{
+		int dir = undo == _undo ? -1 : 1;
+
 		while (undo.size() != size)
 		{
 			uint32 type = undo.peek_type();
@@ -1152,7 +1190,7 @@ public class Database
 				Guid id = undo.read_guid();
 
 				redo.write_destroy_action(id);
-				create_internal(id);
+				create_internal(dir, id);
 			}
 			else if (type == Action.DESTROY)
 			{
@@ -1162,7 +1200,7 @@ public class Database
 				Guid id = undo.read_guid();
 
 				redo.write_create_action(id);
-				destroy_internal(id);
+				destroy_internal(dir, id);
 			}
 			else if (type == Action.SET_PROPERTY_NULL)
 			{
@@ -1191,7 +1229,7 @@ public class Database
 				{
 					redo.write_set_property_null_action(id, key);
 				}
-				set_property_internal(id, key, null);
+				set_property_internal(dir, id, key, null);
 			}
 			else if (type == Action.SET_PROPERTY_BOOL)
 			{
@@ -1206,7 +1244,7 @@ public class Database
 					redo.write_set_property_bool_action(id, key, get_property_bool(id, key));
 				else
 					redo.write_set_property_null_action(id, key);
-				set_property_internal(id, key, val);
+				set_property_internal(dir, id, key, val);
 			}
 			else if (type == Action.SET_PROPERTY_DOUBLE)
 			{
@@ -1221,7 +1259,7 @@ public class Database
 					redo.write_set_property_double_action(id, key, get_property_double(id, key));
 				else
 					redo.write_set_property_null_action(id, key);
-				set_property_internal(id, key, val);
+				set_property_internal(dir, id, key, val);
 			}
 			else if (type == Action.SET_PROPERTY_STRING)
 			{
@@ -1236,7 +1274,7 @@ public class Database
 					redo.write_set_property_string_action(id, key, get_property_string(id, key));
 				else
 					redo.write_set_property_null_action(id, key);
-				set_property_internal(id, key, val);
+				set_property_internal(dir, id, key, val);
 			}
 			else if (type == Action.SET_PROPERTY_GUID)
 			{
@@ -1251,7 +1289,7 @@ public class Database
 					redo.write_set_property_guid_action(id, key, get_property_guid(id, key));
 				else
 					redo.write_set_property_null_action(id, key);
-				set_property_internal(id, key, val);
+				set_property_internal(dir, id, key, val);
 			}
 			else if (type == Action.SET_PROPERTY_VECTOR3)
 			{
@@ -1266,7 +1304,7 @@ public class Database
 					redo.write_set_property_vector3_action(id, key, get_property_vector3(id, key));
 				else
 					redo.write_set_property_null_action(id, key);
-				set_property_internal(id, key, val);
+				set_property_internal(dir, id, key, val);
 			}
 			else if (type == Action.SET_PROPERTY_QUATERNION)
 			{
@@ -1281,7 +1319,7 @@ public class Database
 					redo.write_set_property_quaternion_action(id, key, get_property_quaternion(id, key));
 				else
 					redo.write_set_property_null_action(id, key);
-				set_property_internal(id, key, val);
+				set_property_internal(dir, id, key, val);
 			}
 			else if (type == Action.ADD_TO_SET)
 			{
@@ -1293,7 +1331,7 @@ public class Database
 				Guid item_id = undo.read_guid();
 
 				redo.write_remove_from_set_action(id, key, item_id);
-				add_to_set_internal(id, key, item_id);
+				add_to_set_internal(dir, id, key, item_id);
 			}
 			else if (type == Action.REMOVE_FROM_SET)
 			{
@@ -1305,7 +1343,7 @@ public class Database
 				Guid item_id = undo.read_guid();
 
 				redo.write_add_to_set_action(id, key, item_id);
-				remove_from_set_internal(id, key, item_id);
+				remove_from_set_internal(dir, id, key, item_id);
 			}
 		}
 	}

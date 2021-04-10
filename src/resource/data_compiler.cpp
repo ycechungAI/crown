@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -11,8 +11,10 @@
 #include "core/containers/hash_set.inl"
 #include "core/containers/vector.inl"
 #include "core/filesystem/file.h"
+#include "core/filesystem/file_buffer.inl"
 #include "core/filesystem/filesystem_disk.h"
 #include "core/filesystem/path.h"
+#include "core/guid.inl"
 #include "core/json/json_object.inl"
 #include "core/json/sjson.h"
 #include "core/memory/allocator.h"
@@ -25,7 +27,7 @@
 #include "device/console_server.h"
 #include "device/device_options.h"
 #include "device/log.h"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/config_resource.h"
 #include "resource/data_compiler.h"
 #include "resource/font_resource.h"
@@ -35,7 +37,7 @@
 #include "resource/mesh_resource.h"
 #include "resource/package_resource.h"
 #include "resource/physics_resource.h"
-#include "resource/resource_id.h"
+#include "resource/resource_id.inl"
 #include "resource/shader_resource.h"
 #include "resource/sound_resource.h"
 #include "resource/sprite_resource.h"
@@ -67,7 +69,7 @@ static void notify_add_file(const char* path)
 	TempAllocator512 ta;
 	StringStream ss(ta);
 	ss << "{\"type\":\"add_file\",\"path\":\"" << path << "\"}";
-	console_server()->send(string_stream::c_str(ss));
+	console_server()->broadcast(string_stream::c_str(ss));
 }
 
 static void notify_remove_file(const char* path)
@@ -75,7 +77,7 @@ static void notify_remove_file(const char* path)
 	TempAllocator512 ta;
 	StringStream ss(ta);
 	ss << "{\"type\":\"remove_file\",\"path\":\"" << path << "\"}";
-	console_server()->send(string_stream::c_str(ss));
+	console_server()->broadcast(string_stream::c_str(ss));
 }
 
 static void notify_add_tree(const char* path)
@@ -83,7 +85,7 @@ static void notify_add_tree(const char* path)
 	TempAllocator512 ta;
 	StringStream ss(ta);
 	ss << "{\"type\":\"add_tree\",\"path\":\"" << path << "\"}";
-	console_server()->send(string_stream::c_str(ss));
+	console_server()->broadcast(string_stream::c_str(ss));
 }
 
 static void notify_remove_tree(const char* path)
@@ -91,7 +93,7 @@ static void notify_remove_tree(const char* path)
 	TempAllocator512 ta;
 	StringStream ss(ta);
 	ss << "{\"type\":\"remove_tree\",\"path\":\"" << path << "\"}";
-	console_server()->send(string_stream::c_str(ss));
+	console_server()->broadcast(string_stream::c_str(ss));
 }
 
 SourceIndex::SourceIndex()
@@ -187,13 +189,13 @@ struct LineReader
 		line.set(s, u32(nl - s));
 	}
 
-	bool eof()
+	bool eof() const
 	{
 		return _str[_pos] == '\0';
 	}
 };
 
-static void console_command_compile(ConsoleServer& cs, TCPSocket& client, const char* json, void* user_data)
+static void console_command_compile(ConsoleServer& cs, u32 client_id, const char* json, void* user_data)
 {
 	TempAllocator4096 ta;
 	JsonObject obj(ta);
@@ -209,7 +211,7 @@ static void console_command_compile(ConsoleServer& cs, TCPSocket& client, const 
 	{
 		StringStream ss(ta);
 		ss << "{\"type\":\"compile\",\"id\":\"" << id.c_str() << "\",\"start\":true}";
-		cs.send(client, string_stream::c_str(ss));
+		cs.send(client_id, string_stream::c_str(ss));
 	}
 
 	bool succ = ((DataCompiler*)user_data)->compile(data_dir.c_str(), platform.c_str());
@@ -217,16 +219,16 @@ static void console_command_compile(ConsoleServer& cs, TCPSocket& client, const 
 	{
 		StringStream ss(ta);
 		ss << "{\"type\":\"compile\",\"id\":\"" << id.c_str() << "\",\"success\":" << (succ ? "true" : "false") << "}";
-		cs.send(client, string_stream::c_str(ss));
+		cs.send(client_id, string_stream::c_str(ss));
 	}
 }
 
-static void console_command_quit(ConsoleServer& /*cs*/, TCPSocket& /*client*/, const char* /*json*/, void* /*user_data*/)
+static void console_command_quit(ConsoleServer& /*cs*/, u32 /*client_id*/, const char* /*json*/, void* /*user_data*/)
 {
 	_quit = true;
 }
 
-static void console_command_refresh_list(ConsoleServer& cs, TCPSocket& client, const char* json, void* user_data)
+static void console_command_refresh_list(ConsoleServer& cs, u32 client_id, const char* json, void* user_data)
 {
 	DataCompiler* dc = (DataCompiler*)user_data;
 
@@ -234,7 +236,7 @@ static void console_command_refresh_list(ConsoleServer& cs, TCPSocket& client, c
 	StringStream ss(ta);
 	JsonObject obj(ta);
 	sjson::parse(obj, json);
-	Guid client_id = sjson::parse_guid(obj["client_id"]);
+	Guid client_guid = sjson::parse_guid(obj["client_id"]);
 
 	ss << "{\"type\":\"refresh_list\",\"list\":[";
 	auto cur = hash_map::begin(dc->_data_revisions);
@@ -244,58 +246,48 @@ static void console_command_refresh_list(ConsoleServer& cs, TCPSocket& client, c
 		HASH_MAP_SKIP_HOLE(dc->_data_revisions, cur);
 
 		DynamicString deffault(ta);
-		if (cur->second > hash_map::get(dc->_client_revisions, client_id, u32(0)))
+		if (cur->second > hash_map::get(dc->_client_revisions, client_guid, u32(0)))
 			ss << "\"" << hash_map::get(dc->_data_index, cur->first, deffault).c_str() << "\",";
 	}
 	ss << "]}";
 
-	cs.send(client, string_stream::c_str(ss));
+	cs.send(client_id, string_stream::c_str(ss));
 
 #if CROWN_DEBUG && !CROWN_DEVELOPMENT
 	char buf[GUID_BUF_LEN];
 	logi(DATA_COMPILER, "client %s was at rev: %u"
-		, guid::to_string(buf, sizeof(buf), client_id)
-		, hash_map::get(dc->_client_revisions, client_id, u32(0))
+		, guid::to_string(buf, sizeof(buf), client_guid)
+		, hash_map::get(dc->_client_revisions, client_guid, u32(0))
 		);
 #endif
 
-	hash_map::set(dc->_client_revisions, client_id, dc->_revision);
+	hash_map::set(dc->_client_revisions, client_guid, dc->_revision);
 }
 
 static Buffer read(FilesystemDisk& data_fs, const char* filename)
 {
 	Buffer buffer(default_allocator());
 
-	// FIXME: better return NULL in Filesystem::open().
-	if (data_fs.exists(filename))
+	File* file = data_fs.open(filename, FileOpenMode::READ);
+	if (file->is_open())
 	{
-		File* file = data_fs.open(filename, FileOpenMode::READ);
-		if (file)
+		u32 size = file->size();
+		if (size == 0)
 		{
-			u32 size = file->size();
-			if (size == 0)
-			{
-				data_fs.close(*file);
-				return buffer;
-			}
-
-			array::resize(buffer, size);
-			file->read(array::begin(buffer), size);
 			data_fs.close(*file);
+			return buffer;
 		}
+
+		array::resize(buffer, size);
+		file->read(array::begin(buffer), size);
 	}
+	data_fs.close(*file);
 
 	return buffer;
 }
 
-static void read_data_versions(HashMap<DynamicString, u32>& versions, FilesystemDisk& data_fs, const char* filename)
+static void parse_data_versions(HashMap<DynamicString, u32>& versions, const JsonObject& obj)
 {
-	Buffer json = read(data_fs, filename);
-
-	TempAllocator512 ta;
-	JsonObject obj(ta);
-	sjson::parse(obj, json);
-
 	auto cur = json_object::begin(obj);
 	auto end = json_object::end(obj);
 	for (; cur != end; ++cur)
@@ -310,7 +302,7 @@ static void read_data_versions(HashMap<DynamicString, u32>& versions, Filesystem
 	}
 }
 
-static void read_data_index(HashMap<StringId64, DynamicString>& index, FilesystemDisk& data_fs, const char* filename, const SourceIndex& sources)
+static void read_data_versions(HashMap<DynamicString, u32>& versions, FilesystemDisk& data_fs, const char* filename)
 {
 	Buffer json = read(data_fs, filename);
 
@@ -318,6 +310,11 @@ static void read_data_index(HashMap<StringId64, DynamicString>& index, Filesyste
 	JsonObject obj(ta);
 	sjson::parse(obj, json);
 
+	parse_data_versions(versions, obj);
+}
+
+static void parse_data_index(HashMap<StringId64, DynamicString>& index, const JsonObject& obj, const SourceIndex& sources)
+{
 	auto cur = json_object::begin(obj);
 	auto end = json_object::end(obj);
 	for (; cur != end; ++cur)
@@ -339,14 +336,19 @@ static void read_data_index(HashMap<StringId64, DynamicString>& index, Filesyste
 	}
 }
 
-static void read_data_mtimes(HashMap<StringId64, u64>& mtimes, FilesystemDisk& data_fs, const char* filename, const HashMap<StringId64, DynamicString>& data_index)
+static void read_data_index(HashMap<StringId64, DynamicString>& index, FilesystemDisk& data_fs, const char* filename, const SourceIndex& sources)
 {
 	Buffer json = read(data_fs, filename);
 
-	TempAllocator128 ta;
+	TempAllocator512 ta;
 	JsonObject obj(ta);
 	sjson::parse(obj, json);
 
+	parse_data_index(index, obj, sources);
+}
+
+static void parse_data_mtimes(HashMap<StringId64, u64>& mtimes, const JsonObject& obj, const HashMap<StringId64, DynamicString>& data_index)
+{
 	auto cur = json_object::begin(obj);
 	auto end = json_object::end(obj);
 	for (; cur != end; ++cur)
@@ -368,6 +370,17 @@ static void read_data_mtimes(HashMap<StringId64, u64>& mtimes, FilesystemDisk& d
 		sscanf(mtime_json.c_str(), "%" SCNu64, &mtime);
 		hash_map::set(mtimes, id, mtime);
 	}
+}
+
+static void read_data_mtimes(HashMap<StringId64, u64>& mtimes, FilesystemDisk& data_fs, const char* filename, const HashMap<StringId64, DynamicString>& data_index)
+{
+	Buffer json = read(data_fs, filename);
+
+	TempAllocator128 ta;
+	JsonObject obj(ta);
+	sjson::parse(obj, json);
+
+	parse_data_mtimes(mtimes, obj, data_index);
 }
 
 static void add_dependency_internal(HashMap<StringId64, HashMap<DynamicString, u32> >& dependencies, ResourceId id, const DynamicString& dependency)
@@ -438,7 +451,7 @@ static void write_data_index(FilesystemDisk& data_fs, const char* filename, cons
 	StringStream ss(default_allocator());
 
 	File* file = data_fs.open(filename, FileOpenMode::WRITE);
-	if (file)
+	if (file->is_open())
 	{
 		auto cur = hash_map::begin(index);
 		auto end = hash_map::end(index);
@@ -453,8 +466,8 @@ static void write_data_index(FilesystemDisk& data_fs, const char* filename, cons
 		}
 
 		file->write(string_stream::c_str(ss), strlen32(string_stream::c_str(ss)));
-		data_fs.close(*file);
 	}
+	data_fs.close(*file);
 }
 
 static void write_data_versions(FilesystemDisk& data_fs, const char* filename, const HashMap<DynamicString, u32>& versions)
@@ -462,7 +475,7 @@ static void write_data_versions(FilesystemDisk& data_fs, const char* filename, c
 	StringStream ss(default_allocator());
 
 	File* file = data_fs.open(filename, FileOpenMode::WRITE);
-	if (file)
+	if (file->is_open())
 	{
 
 		auto cur = hash_map::begin(versions);
@@ -475,8 +488,8 @@ static void write_data_versions(FilesystemDisk& data_fs, const char* filename, c
 		}
 
 		file->write(string_stream::c_str(ss), strlen32(string_stream::c_str(ss)));
-		data_fs.close(*file);
 	}
+	data_fs.close(*file);
 }
 
 static void write_data_mtimes(FilesystemDisk& data_fs, const char* filename, const HashMap<StringId64, u64>& mtimes)
@@ -484,7 +497,7 @@ static void write_data_mtimes(FilesystemDisk& data_fs, const char* filename, con
 	StringStream ss(default_allocator());
 
 	File* file = data_fs.open(filename, FileOpenMode::WRITE);
-	if (file)
+	if (file->is_open())
 	{
 
 		auto cur = hash_map::begin(mtimes);
@@ -500,8 +513,8 @@ static void write_data_mtimes(FilesystemDisk& data_fs, const char* filename, con
 		}
 
 		file->write(string_stream::c_str(ss), strlen32(string_stream::c_str(ss)));
-		data_fs.close(*file);
 	}
+	data_fs.close(*file);
 }
 
 static void write_data_dependencies(FilesystemDisk& data_fs, const char* filename, const HashMap<StringId64, DynamicString>& index, const HashMap<StringId64, HashMap<DynamicString, u32> >& dependencies, const HashMap<StringId64, HashMap<DynamicString, u32> >& requirements)
@@ -509,7 +522,7 @@ static void write_data_dependencies(FilesystemDisk& data_fs, const char* filenam
 	StringStream ss(default_allocator());
 
 	File* file = data_fs.open(filename, FileOpenMode::WRITE);
-	if (file)
+	if (file->is_open())
 	{
 		auto cur = hash_map::begin(index);
 		auto end = hash_map::end(index);
@@ -555,8 +568,8 @@ static void write_data_dependencies(FilesystemDisk& data_fs, const char* filenam
 		}
 
 		file->write(string_stream::c_str(ss), strlen32(string_stream::c_str(ss)));
-		data_fs.close(*file);
 	}
+	data_fs.close(*file);
 }
 
 DataCompiler::DataCompiler(const DeviceOptions& opts, ConsoleServer& cs)
@@ -746,14 +759,13 @@ void DataCompiler::scan_and_restore(const char* data_dir)
 
 		_source_fs.set_prefix(prefix.c_str());
 
-		if (_source_fs.exists(CROWN_DATAIGNORE))
+		File* file = _source_fs.open(CROWN_DATAIGNORE, FileOpenMode::READ);
+		if (file->is_open())
 		{
-			File& file = *_source_fs.open(CROWN_DATAIGNORE, FileOpenMode::READ);
-			const u32 size = file.size();
+			const u32 size = file->size();
 			char* data = (char*)default_allocator().allocate(size + 1);
-			file.read(data, size);
+			file->read(data, size);
 			data[size] = '\0';
-			_source_fs.close(file);
 
 			LineReader lr(data);
 
@@ -773,11 +785,12 @@ void DataCompiler::scan_and_restore(const char* data_dir)
 
 			default_allocator().deallocate(data);
 		}
+		_source_fs.close(*file);
 	}
 
 	_source_index.scan(_source_dirs);
 
-	logi(DATA_COMPILER, "Scanned data in %.2fs", time::seconds(time::now() - time_start));
+	logi(DATA_COMPILER, "Scanned data in " TIME_FMT, time::seconds(time::now() - time_start));
 
 	// Restore state from previous run
 	time_start = time::now();
@@ -789,7 +802,7 @@ void DataCompiler::scan_and_restore(const char* data_dir)
 	read_data_mtimes(_data_mtimes, data_fs, CROWN_DATA_MTIMES, _data_index);
 	read_data_dependencies(*this, data_fs, CROWN_DATA_DEPENDENCIES, _data_index);
 	read_data_versions(_data_versions, data_fs, CROWN_DATA_VERSIONS);
-	logi(DATA_COMPILER, "Restored state in %.2fs", time::seconds(time::now() - time_start));
+	logi(DATA_COMPILER, "Restored state in " TIME_FMT, time::seconds(time::now() - time_start));
 
 	if (_options->_server)
 	{
@@ -801,7 +814,7 @@ void DataCompiler::scan_and_restore(const char* data_dir)
 			, file_monitor_callback
 			, this
 			);
-		logi(DATA_COMPILER, "Started file monitor in %.2fs", time::seconds(time::now() - time_start));
+		logi(DATA_COMPILER, "Started file monitor in " TIME_FMT, time::seconds(time::now() - time_start));
 	}
 
 	// Cleanup
@@ -820,7 +833,7 @@ void DataCompiler::save(const char* data_dir)
 	write_data_mtimes(data_fs, CROWN_DATA_MTIMES, _data_mtimes);
 	write_data_dependencies(data_fs, CROWN_DATA_DEPENDENCIES, _data_index, _data_dependencies, _data_requirements);
 	write_data_versions(data_fs, CROWN_DATA_VERSIONS, _data_versions);
-	logi(DATA_COMPILER, "Saved state in %.2fs", time::seconds(time::now() - time_start));
+	logi(DATA_COMPILER, "Saved state in " TIME_FMT, time::seconds(time::now() - time_start));
 }
 
 bool DataCompiler::dependency_changed(const DynamicString& path, ResourceId id, u64 dst_mtime)
@@ -853,7 +866,7 @@ bool DataCompiler::dependency_changed(const DynamicString& path, ResourceId id, 
 
 bool DataCompiler::version_changed(const DynamicString& path, ResourceId id)
 {
-	const char* type = path::extension(path.c_str());
+	const char* type = resource_type(path.c_str());
 	if (data_version_stored(type) != data_version(type))
 		return true;
 
@@ -924,7 +937,7 @@ bool DataCompiler::compile(const char* data_dir, const char* platform)
 			if (path_matches_ignore_glob(path.c_str()))
 				continue;
 
-			if (path::extension(path.c_str()) == NULL)
+			if (resource_type(path.c_str()) == NULL)
 				continue;
 
 			const ResourceId id = resource_id(path.c_str());
@@ -959,7 +972,7 @@ bool DataCompiler::compile(const char* data_dir, const char* platform)
 
 		// If it does not have extension it cannot be a resource so it cannot be
 		// in tracking structures nor in the data folder.
-		if (path::extension(to_remove[i].c_str()) == NULL)
+		if (resource_type(to_remove[i].c_str()) == NULL)
 			continue;
 
 		// Remove from tracking structures
@@ -996,9 +1009,9 @@ bool DataCompiler::compile(const char* data_dir, const char* platform)
 	for (u32 i = 0; i < vector::size(to_compile); ++i)
 	{
 		const DynamicString& path = to_compile[i];
-		logi(DATA_COMPILER, "%s", path.c_str());
+		logi(DATA_COMPILER, _options->_server ? RESOURCE_ID_FMT_STR : "%s", path.c_str());
 
-		const char* type = path::extension(path.c_str());
+		const char* type = resource_type(path.c_str());
 		if (type == NULL || !can_compile(type))
 		{
 			loge(DATA_COMPILER, "Unknown resource file: '%s'", path.c_str());
@@ -1027,12 +1040,13 @@ bool DataCompiler::compile(const char* data_dir, const char* platform)
 			// "foo.unit" from a package, you do not want the list of
 			// requirements to include "foo.unit" again the next time that
 			// package is compiled.
-			Buffer output(default_allocator());
 			HashMap<DynamicString, u32> new_dependencies(default_allocator());
 			HashMap<DynamicString, u32> new_requirements(default_allocator());
 
+			Buffer output(default_allocator());
+			FileBuffer file_buffer(output);
 			// Invoke compiler
-			CompileOptions opts(output
+			CompileOptions opts(file_buffer
 				, new_dependencies
 				, new_requirements
 				, *this
@@ -1073,7 +1087,6 @@ bool DataCompiler::compile(const char* data_dir, const char* platform)
 			if (!path_is_special(path.c_str()))
 			{
 				hash_map::set(_data_index, id, path);
-				hash_map::set(_data_versions, type_str, rtd.version);
 				hash_map::set(_data_mtimes, id, data_fs.last_modified_time(dest.c_str()));
 				hash_map::set(_data_revisions, id, _revision + 1);
 			}
@@ -1087,10 +1100,22 @@ bool DataCompiler::compile(const char* data_dir, const char* platform)
 
 	if (success)
 	{
+		// Data versions are stored per-type, so, before updating _data_versions, we
+		// need to make sure *all* resource files with that type have been
+		// successfully compiled.
+		auto cur = hash_map::begin(_compilers);
+		auto end = hash_map::end(_compilers);
+		for (; cur != end; ++cur)
+		{
+			HASH_MAP_SKIP_HOLE(_compilers, cur);
+
+			hash_map::set(_data_versions, cur->first, cur->second.version);
+		}
+
 		if (vector::size(to_compile))
 		{
 			_revision++;
-			logi(DATA_COMPILER, "Compiled data (rev %u) in %.2fs", _revision, time::seconds(time::now() - time_start));
+			logi(DATA_COMPILER, "Compiled data (rev %u) in " TIME_FMT, _revision, time::seconds(time::now() - time_start));
 		}
 		else
 		{
@@ -1358,8 +1383,7 @@ int main_data_compiler(const DeviceOptions& opts)
 	{
 		while (!_quit)
 		{
-			console_server()->update();
-			os::sleep(60);
+			console_server()->execute_message_handlers(true);
 		}
 	}
 	else

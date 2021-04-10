@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -61,7 +61,7 @@ struct OBB
 
 /// 3D Plane.
 /// The form is ax + by + cz + d = 0
-/// where: d = -vector3::dot(n, p)
+/// where: d = vector3::dot(n, p)
 struct Plane3
 {
 	Vector3 n;
@@ -70,12 +70,7 @@ struct Plane3
 
 struct Frustum
 {
-	Plane3 plane_left;
-	Plane3 plane_right;
-	Plane3 plane_bottom;
-	Plane3 plane_top;
-	Plane3 plane_near;
-	Plane3 plane_far;
+	Plane3 planes[6];
 };
 
 struct Sphere

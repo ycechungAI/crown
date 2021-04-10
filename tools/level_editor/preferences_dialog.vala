@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -8,46 +8,113 @@ using Gee;
 
 namespace Crown
 {
-[GtkTemplate (ui = "/org/crown/level_editor/ui/preferences_dialog.ui")]
 public class PreferencesDialog : Gtk.Dialog
 {
 	// Data
-	LevelEditorApplication _application;
+	public LevelEditorApplication _application;
 
 	// Widgets
-	[GtkChild]
-	ColorButtonVector3 _grid_color_button;
+	public ColorButtonVector3 _grid_color_button;
+	public ColorButtonVector3 _grid_disabled_color_button;
+	public ColorButtonVector3 _axis_x_color_button;
+	public ColorButtonVector3 _axis_y_color_button;
+	public ColorButtonVector3 _axis_z_color_button;
+	public ColorButtonVector3 _axis_selected_color_button;
+	public EntryDouble _gizmo_size_spin_button;
+	public Grid _document_grid;
 
-	[GtkChild]
-	ColorButtonVector3 _grid_disabled_color_button;
+	public EntryDouble _level_autosave_spin_button;
+	public Grid _viewport_grid;
 
-	[GtkChild]
-	ColorButtonVector3 _axis_x_color_button;
+	public EntryDouble _log_delete_after_days;
+	public EntryDouble _console_max_lines;
+	public Grid _system_grid;
 
-	[GtkChild]
-	ColorButtonVector3 _axis_y_color_button;
-
-	[GtkChild]
-	ColorButtonVector3 _axis_z_color_button;
-
-	[GtkChild]
-	ColorButtonVector3 _axis_selected_color_button;
-
-	[GtkChild]
-	Gtk.SpinButton _gizmo_size_spin_button;
-
-	[GtkChild]
-	Gtk.SpinButton _level_autosave_spin_button;
+	public PropertyGridSet _document_set;
+	public PropertyGridSet _viewport_set;
+	public PropertyGridSet _system_set;
+	public Gtk.Notebook _notebook;
 
 	public PreferencesDialog(LevelEditorApplication app)
 	{
+		this.title = "Preferences";
+		this.border_width = 0;
+
 		// Data
 		_application = app;
 
-		this.title = "Preferences";
+		// Widgets
+		_document_set = new PropertyGridSet();
+		_document_set.border_width = 12;
+		_viewport_set = new PropertyGridSet();
+		_viewport_set.border_width = 12;
+		_system_set = new PropertyGridSet();
+		_system_set.border_width = 12;
+
+		_grid_color_button = new ColorButtonVector3();
+		_grid_color_button.value = Vector3(102.0/255.0, 102.0/255.0, 102.0/255.0);
+		_grid_color_button.value_changed.connect(on_color_set);
+		_grid_disabled_color_button = new ColorButtonVector3();
+		_grid_disabled_color_button.value = Vector3(102.0/255.0, 102.0/255.0, 102.0/255.0);
+		_grid_disabled_color_button.value_changed.connect(on_color_set);
+		_axis_x_color_button = new ColorButtonVector3();
+		_axis_x_color_button.value = Vector3(217.0/255.0, 0.0/255.0, 0.0/255.0);
+		_axis_x_color_button.value_changed.connect(on_color_set);
+		_axis_y_color_button = new ColorButtonVector3();
+		_axis_y_color_button.value = Vector3(0.0/255.0, 217.0/255.0, 0.0/255.0);
+		_axis_y_color_button.value_changed.connect(on_color_set);
+		_axis_z_color_button = new ColorButtonVector3();
+		_axis_z_color_button.value = Vector3(0.0/255.0, 0.0/255.0, 217.0/255.0);
+		_axis_z_color_button.value_changed.connect(on_color_set);
+		_axis_selected_color_button = new ColorButtonVector3();
+		_axis_selected_color_button.value = Vector3(217.0/255.0, 217.0/255.0, 0.0/255.0);
+		_axis_selected_color_button.value_changed.connect(on_color_set);
+
+		PropertyGrid cv;
+		cv = new PropertyGrid();
+		cv.add_row(           "Grid", _grid_color_button);
+		cv.add_row("Grid (Disabled)", _grid_disabled_color_button);
+		_document_set.add_property_grid(cv, "Grid");
+
+		cv = new PropertyGrid();
+		cv.add_row(  "X Axis", _axis_x_color_button);
+		cv.add_row(  "Y Axis", _axis_y_color_button);
+		cv.add_row(  "Z Axis", _axis_z_color_button);
+		cv.add_row("Selected", _axis_selected_color_button);
+		_document_set.add_property_grid(cv, "Axes");
+
+		_gizmo_size_spin_button = new EntryDouble(85, 10, 200);
+		_gizmo_size_spin_button.value_changed.connect(on_gizmo_size_value_changed);
+
+		cv = new PropertyGrid();
+		cv.add_row("Size", _gizmo_size_spin_button);
+		_document_set.add_property_grid(cv, "Gizmo");
+
+		_level_autosave_spin_button = new EntryDouble(5, 1, 60);
+		_level_autosave_spin_button.value_changed.connect(on_level_autosave_value_changed);
+
+		cv = new PropertyGrid();
+		cv.add_row("Autosave (mins)", _level_autosave_spin_button);
+		_viewport_set.add_property_grid(cv, "Level");
+
+		_log_delete_after_days = new EntryDouble(10, 0, 90);
+		_console_max_lines = new EntryDouble(256, 10, 1024);
+		cv = new PropertyGrid();
+		cv.add_row("Delete logs older than (days)", _log_delete_after_days);
+		cv.add_row("Console max lines", _console_max_lines);
+		_system_set.add_property_grid(cv, "Memory and Limits");
+
+		_notebook = new Gtk.Notebook();
+		_notebook.append_page(_document_set, new Gtk.Label("Document"));
+		_notebook.append_page(_viewport_set, new Gtk.Label("Viewport"));
+		_notebook.append_page(_system_set, new Gtk.Label("System"));
+		_notebook.vexpand = true;
+		_notebook.show_border = false;
+
+		this.get_content_area().border_width = 0;
+		this.get_content_area().add(_notebook);
 	}
 
-	[GtkCallback]
 	private void on_color_set()
 	{
 		_application._editor.send_script(LevelEditorApi.set_color("grid", _grid_color_button.value));
@@ -56,15 +123,15 @@ public class PreferencesDialog : Gtk.Dialog
 		_application._editor.send_script(LevelEditorApi.set_color("axis_y", _axis_y_color_button.value));
 		_application._editor.send_script(LevelEditorApi.set_color("axis_z", _axis_z_color_button.value));
 		_application._editor.send_script(LevelEditorApi.set_color("axis_selected", _axis_selected_color_button.value));
+		_application._editor.send(DeviceApi.frame());
 	}
 
-	[GtkCallback]
 	private void on_gizmo_size_value_changed()
 	{
 		_application._editor.send_script("Gizmo.size = %f".printf(_gizmo_size_spin_button.value));
+		_application._editor.send(DeviceApi.frame());
 	}
 
-	[GtkCallback]
 	private void on_level_autosave_value_changed()
 	{
 		_application.set_autosave_timer((uint)_level_autosave_spin_button.value);
@@ -80,6 +147,8 @@ public class PreferencesDialog : Gtk.Dialog
 		_axis_selected_color_button.value = Vector3.from_array(preferences.has_key("axis_selected") ? (Gee.ArrayList<GLib.Value?>)preferences["axis_selected"] : _axis_selected_color_button.value.to_array());
 		_gizmo_size_spin_button.value     = preferences.has_key("gizmo_size") ? (double)preferences["gizmo_size"] : _gizmo_size_spin_button.value;
 		_level_autosave_spin_button.value = preferences.has_key("autosave_timer") ? (double)preferences["autosave_timer"] : _level_autosave_spin_button.value;
+		_log_delete_after_days.value      = preferences.has_key("log_expiration") ? (double)preferences["log_expiration"] : _log_delete_after_days.value;
+		_console_max_lines.value          = preferences.has_key("console_max_lines") ? (double)preferences["console_max_lines"] : _console_max_lines.value;
 	}
 
 	public void save(Hashtable preferences)
@@ -92,6 +161,8 @@ public class PreferencesDialog : Gtk.Dialog
 		preferences["axis_selected"]  = _axis_selected_color_button.value.to_array();
 		preferences["gizmo_size"]     = _gizmo_size_spin_button.value;
 		preferences["autosave_timer"] = _level_autosave_spin_button.value;
+		preferences["log_expiration"] = _log_delete_after_days.value;
+		preferences["console_max_lines"] = _console_max_lines.value;
 	}
 
 	public void apply()
@@ -99,6 +170,7 @@ public class PreferencesDialog : Gtk.Dialog
 		GLib.Signal.emit_by_name(_grid_color_button, "color-set");
 		GLib.Signal.emit_by_name(_gizmo_size_spin_button, "value-changed");
 		GLib.Signal.emit_by_name(_level_autosave_spin_button, "value-changed");
+		GLib.Signal.emit_by_name(_log_delete_after_days, "value-changed");
 	}
 }
 

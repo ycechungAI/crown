@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -39,7 +39,7 @@ inline Quaternion from_axis_angle(const Vector3& axis, f32 angle)
 	return q;
 }
 
-/// Returns a new quaternion from matrix @a m.
+/// Returns a new quaternion from rotation matrix @a m.
 Quaternion quaternion(const Matrix3x3& m);
 
 /// Multiplies the quaternions @a a by @a b and returns the result. (i.e. rotates first by @a a then by @a b).
@@ -158,7 +158,9 @@ inline Quaternion look(const Vector3& dir, const Vector3& up)
 	m.x = xaxis;
 	m.y = yaxis;
 	m.z = dir;
-	return quaternion(m);
+	Quaternion q = quaternion(m);
+	normalize(q);
+	return q;
 }
 
 /// Returns the right axis of the rotation represented by @a q.

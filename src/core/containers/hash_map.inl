@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -344,9 +344,9 @@ HashMap<TKey, TValue, Hash, KeyEqual>::HashMap(const HashMap<TKey, TValue, Hash,
 	_size = other._size;
 	_mask = other._mask;
 
-	_allocator->deallocate(_buffer);
 	if (other._capacity > 0)
 	{
+		_allocator->deallocate(_buffer);
 		const u32 size = other._capacity * (sizeof(Index) + sizeof(Entry)) + alignof(Index) + alignof(Entry);
 		_buffer = (char*)_allocator->allocate(size);
 		_index = (Index*)memory::align_top(_buffer, alignof(Index));
@@ -381,9 +381,9 @@ HashMap<TKey, TValue, Hash, KeyEqual>& HashMap<TKey, TValue, Hash, KeyEqual>::op
 	_size = other._size;
 	_mask = other._mask;
 
-	_allocator->deallocate(_buffer);
 	if (other._capacity > 0)
 	{
+		_allocator->deallocate(_buffer);
 		const u32 size = other._capacity * (sizeof(Index) + sizeof(Entry)) + alignof(Index) + alignof(Entry);
 		_buffer = (char*)_allocator->allocate(size);
 		_index = (Index*)memory::align_top(_buffer, alignof(Index));
@@ -394,7 +394,10 @@ HashMap<TKey, TValue, Hash, KeyEqual>& HashMap<TKey, TValue, Hash, KeyEqual>::op
 		{
 			const u32 index = other._index[i].index;
 			if (index != hash_map_internal::FREE && !hash_map_internal::is_deleted(index))
-				new (&_data[i]) Entry(other._data[i]);
+			{
+				new (&_data[i]) Entry(*_allocator);
+				_data[i] = other._data[i];
+			}
 		}
 	}
 	return *this;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -285,6 +285,7 @@ INSTANCE_ID(ColliderInstance)
 INSTANCE_ID(ActorInstance)
 INSTANCE_ID(JointInstance)
 INSTANCE_ID(ScriptInstance)
+INSTANCE_ID(StateMachineInstance)
 
 #undef INSTANCE_ID
 

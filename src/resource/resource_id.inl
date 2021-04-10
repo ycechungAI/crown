@@ -1,14 +1,25 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
 #pragma once
 
+#include "core/filesystem/path.h"
 #include "resource/resource_id.h"
 
 namespace crown
 {
+inline const char* resource_type(const char* path)
+{
+	return path::extension(path);
+}
+
+inline u32 resource_name_length(const char* type, const char* path)
+{
+	return u32(type - path - 1);
+}
+
 inline ResourceId resource_id(StringId64 type, StringId64 name)
 {
 	ResourceId id { type._id ^ name._id };

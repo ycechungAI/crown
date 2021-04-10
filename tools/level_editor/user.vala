@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -54,7 +54,7 @@ public class User
 
 	public void load(string path)
 	{
-		Hashtable sjson = SJSON.load(path);
+		Hashtable sjson = SJSON.load_from_path(path);
 		decode(sjson);
 	}
 

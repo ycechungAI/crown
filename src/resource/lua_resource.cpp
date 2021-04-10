@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -10,7 +10,7 @@
 #include "core/process.h"
 #include "core/strings/dynamic_string.inl"
 #include "core/strings/string_stream.inl"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/lua_resource.h"
 
 #if CROWN_DEBUG
@@ -57,12 +57,7 @@ namespace lua_resource_internal
 			, argv[0]
 			);
 		StringStream output(ta);
-		// Read error messages if any
-		{
-			char err[512];
-			while (pr.fgets(err, sizeof(err)) != NULL)
-				output << err;
-		}
+		opts.read_output(output, pr);
 		s32 ec = pr.wait();
 		DATA_COMPILER_ASSERT(ec == 0
 			, opts

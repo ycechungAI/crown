@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -37,8 +37,12 @@ struct ScriptWorld
 	LuaEnvironment* _lua_environment;
 	World* _world;
 	UnitDestroyCallback _unit_destroy_callback;
+	bool _disable_callbacks;
 
+	///
 	ScriptWorld(Allocator& a, UnitManager& um, ResourceManager& rm, LuaEnvironment& le, World& w);
+
+	///
 	~ScriptWorld();
 };
 
@@ -51,7 +55,7 @@ namespace script_world
 	void destroy(ScriptWorld& sw, UnitId unit, ScriptInstance i);
 
 	/// Returns the component id for the @a unit.
-	ScriptInstance instances(ScriptWorld& sw, UnitId unit);
+	ScriptInstance instance(ScriptWorld& sw, UnitId unit);
 
 	/// Calls the update function on all scripts.
 	void update(ScriptWorld& sw, f32 dt);

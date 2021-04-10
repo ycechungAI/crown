@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -13,10 +13,9 @@ namespace crown
 {
 ResourceId resource_id(const char* path)
 {
-	CE_ENSURE(path::extension(path) != NULL);
-	const char* type = path::extension(path);
-	const u32 len = u32(type - path - 1);
-	return resource_id(type, strlen32(type), path, len);
+	const char* type = resource_type(path);
+	const u32 name_len = resource_name_length(type, path);
+	return resource_id(type, strlen32(type), path, name_len);
 }
 
 void destination_path(DynamicString& path, ResourceId id)

@@ -39,6 +39,7 @@
         <item>
           <attribute name="label" translatable="yes">Import...</attribute>
           <attribute name="action">app.import</attribute>
+          <attribute name="target"></attribute>
           <attribute name="accel">&lt;Primary&gt;I</attribute>
         </item>
       </section>
@@ -91,7 +92,7 @@
         <item>
           <attribute name="label" translatable="yes">Delete</attribute>
           <attribute name="action">app.delete</attribute>
-          <attribute name="accel">&lt;Primary&gt;K</attribute>
+          <attribute name="accel">Delete</attribute>
         </item>
       </section>
       <section>
@@ -99,21 +100,25 @@
           <attribute name="label" translatable="yes">Place</attribute>
           <attribute name="action">app.tool</attribute>
           <attribute name="target">place</attribute>
+          <attribute name="accel">Q</attribute>
         </item>
         <item>
           <attribute name="label" translatable="yes">Move</attribute>
           <attribute name="action">app.tool</attribute>
           <attribute name="target">move</attribute>
+          <attribute name="accel">W</attribute>
         </item>
         <item>
           <attribute name="label" translatable="yes">Rotate</attribute>
           <attribute name="action">app.tool</attribute>
           <attribute name="target">rotate</attribute>
+          <attribute name="accel">E</attribute>
         </item>
         <item>
           <attribute name="label" translatable="yes">Scale</attribute>
           <attribute name="action">app.tool</attribute>
           <attribute name="target">scale</attribute>
+          <attribute name="accel">R</attribute>
         </item>
       </section>
       <section>
@@ -403,7 +408,7 @@
       <section>
         <item>
           <attribute name="label" translatable="yes">_Restart Editor View</attribute>
-          <attribute name="action">app.restart</attribute>
+          <attribute name="action">app.restart-editor-view</attribute>
         </item>
       </section>
     </submenu>

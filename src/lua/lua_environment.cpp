@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -512,7 +512,7 @@ void LuaEnvironment::reload()
 	lua_getfield(L, -1, "load_order");
 	for (size_t i = 1, n = lua_objlen(L, -1); i < n+1; ++i)
 	{
-		lua_rawgeti(L, -1, i);
+		lua_rawgeti(L, -1, (int)i);
 		logi(LUA, "reloading: %s", lua_tostring(L, -1));
 
 		LuaStack stack(L);
@@ -551,7 +551,7 @@ void LuaEnvironment::reset_temporaries()
 #endif
 }
 
-static void console_command_script(ConsoleServer& /*cs*/, TCPSocket& /*client*/, const char* json, void* user_data)
+static void console_command_script(ConsoleServer& /*cs*/, u32 /*client_id*/, const char* json, void* user_data)
 {
 	TempAllocator4096 ta;
 	JsonObject obj(ta);
@@ -585,7 +585,7 @@ static void do_REPL(LuaEnvironment* env, const char* lua)
 	return;
 }
 
-static void console_command_REPL(ConsoleServer& /*cs*/, TCPSocket& /*client*/, const char* json, void* user_data)
+static void console_command_REPL(ConsoleServer& /*cs*/, u32 /*client_id*/, const char* json, void* user_data)
 {
 	TempAllocator4096 ta;
 	JsonObject obj(ta);

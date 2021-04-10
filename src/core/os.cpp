@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -252,8 +252,8 @@ namespace os
 			closedir(dir);
 		}
 #elif CROWN_PLATFORM_WINDOWS
-		TempAllocator256 ta;
-		DynamicString cur_path(ta);
+		TempAllocator256 ta_path;
+		DynamicString cur_path(ta_path);
 		cur_path += path;
 		cur_path += "\\*";
 

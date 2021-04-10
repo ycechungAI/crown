@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -9,13 +9,15 @@
 
 #include "core/containers/array.inl"
 #include "core/containers/hash_map.inl"
+#include "core/filesystem/file_buffer.inl"
+#include "core/guid.inl"
 #include "core/json/json_object.inl"
 #include "core/json/sjson.h"
 #include "core/math/math.h"
 #include "core/memory/temp_allocator.inl"
 #include "core/strings/dynamic_string.inl"
 #include "core/strings/string_id.inl"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/physics_resource.h"
 #include "resource/unit_compiler.h"
 #include "resource/unit_resource.h"
@@ -84,8 +86,11 @@ static s32 compile_transform(Buffer& output, const char* json, CompileOptions& /
 	td.rotation = sjson::parse_quaternion(obj["rotation"]);
 	td.scale    = sjson::parse_vector3   (obj["scale"]);
 
-	array::push(output, (char*)&td, sizeof(td));
-
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
+	bw.write(td.position);
+	bw.write(td.rotation);
+	bw.write(td.scale);
 	return 0;
 }
 
@@ -111,8 +116,12 @@ static s32 compile_camera(Buffer& output, const char* json, CompileOptions& opts
 	cd.near_range = sjson::parse_float(obj["near_range"]);
 	cd.far_range  = sjson::parse_float(obj["far_range"]);
 
-	array::push(output, (char*)&cd, sizeof(cd));
-
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
+	bw.write(cd.type);
+	bw.write(cd.fov);
+	bw.write(cd.near_range);
+	bw.write(cd.far_range);
 	return 0;
 }
 
@@ -140,15 +149,22 @@ static s32 compile_mesh_renderer(Buffer& output, const char* json, CompileOption
 
 	MeshRendererDesc mrd;
 	mrd.mesh_resource     = sjson::parse_resource_name(obj["mesh_resource"]);
-	mrd.geometry_name     = sjson::parse_string_id    (obj["geometry_name"]);
 	mrd.material_resource = sjson::parse_resource_name(obj["material"]);
+	mrd.geometry_name     = sjson::parse_string_id    (obj["geometry_name"]);
 	mrd.visible           = sjson::parse_bool         (obj["visible"]);
 	mrd._pad0[0]          = 0;
 	mrd._pad0[1]          = 0;
 	mrd._pad0[2]          = 0;
 
-	array::push(output, (char*)&mrd, sizeof(mrd));
-
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
+	bw.write(mrd.mesh_resource);
+	bw.write(mrd.material_resource);
+	bw.write(mrd.geometry_name);
+	bw.write(mrd.visible);
+	bw.write(mrd._pad0[0]);
+	bw.write(mrd._pad0[1]);
+	bw.write(mrd._pad0[2]);
 	return 0;
 }
 
@@ -188,8 +204,20 @@ static s32 compile_sprite_renderer(Buffer& output, const char* json, CompileOpti
 	srd._pad1[2]          = 0;
 	srd._pad1[3]          = 0;
 
-	array::push(output, (char*)&srd, sizeof(srd));
-
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
+	bw.write(srd.sprite_resource);
+	bw.write(srd.material_resource);
+	bw.write(srd.layer);
+	bw.write(srd.depth);
+	bw.write(srd.visible);
+	bw.write(srd._pad0[0]);
+	bw.write(srd._pad0[1]);
+	bw.write(srd._pad0[2]);
+	bw.write(srd._pad1[0]);
+	bw.write(srd._pad1[1]);
+	bw.write(srd._pad1[2]);
+	bw.write(srd._pad1[3]);
 	return 0;
 }
 
@@ -216,8 +244,13 @@ static s32 compile_light(Buffer& output, const char* json, CompileOptions& opts)
 	ld.spot_angle = sjson::parse_float  (obj["spot_angle"]);
 	ld.color      = sjson::parse_vector3(obj["color"]);
 
-	array::push(output, (char*)&ld, sizeof(ld));
-
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
+	bw.write(ld.type);
+	bw.write(ld.range);
+	bw.write(ld.intensity);
+	bw.write(ld.spot_angle);
+	bw.write(ld.color);
 	return 0;
 }
 
@@ -238,8 +271,9 @@ static s32 compile_script(Buffer& output, const char* json, CompileOptions& opts
 	ScriptDesc sd;
 	sd.script_resource = sjson::parse_resource_name(obj["script_resource"]);
 
-	array::push(output, (char*)&sd, sizeof(sd));
-
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
+	bw.write(sd.script_resource);
 	return 0;
 }
 
@@ -260,8 +294,9 @@ static s32 compile_animation_state_machine(Buffer& output, const char* json, Com
 	AnimationStateMachineDesc asmd;
 	asmd.state_machine_resource = sjson::parse_resource_name(obj["state_machine_resource"]);
 
-	array::push(output, (char*)&asmd, sizeof(asmd));
-
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
+	bw.write(asmd.state_machine_resource);
 	return 0;
 }
 
@@ -271,6 +306,7 @@ UnitCompiler::UnitCompiler(CompileOptions& opts)
 	, _component_data(default_allocator())
 	, _component_info(default_allocator())
 	, _unit_names(default_allocator())
+	, _unit_parents(default_allocator())
 {
 	register_component_compiler("transform",               &compile_transform,                           0.0f);
 	register_component_compiler("camera",                  &compile_camera,                              1.0f);
@@ -297,16 +333,16 @@ Buffer UnitCompiler::read_unit(const char* path)
 
 s32 UnitCompiler::compile_unit(const char* path)
 {
-	return compile_unit_from_json(array::begin(read_unit(path)));
+	return compile_unit_from_json(array::begin(read_unit(path)), UINT32_MAX);
 }
 
-u32 component_index(const JsonArray& components, const Guid& id)
+u32 object_index_from_id(const JsonArray& objects, const Guid& id)
 {
-	for (u32 i = 0; i < array::size(components); ++i)
+	for (u32 i = 0; i < array::size(objects); ++i)
 	{
 		TempAllocator512 ta;
 		JsonObject obj(ta);
-		sjson::parse(obj, components[i]);
+		sjson::parse(obj, objects[i]);
 		if (sjson::parse_guid(obj["id"]) == id)
 			return i;
 	}
@@ -318,6 +354,7 @@ s32 UnitCompiler::collect_units(Buffer& data, Array<u32>& prefabs, const char* j
 {
 	u32 prefab_offt = array::size(data);
 	array::push(data, json, strlen32(json));
+	array::push_back(data, '\0');
 	array::push_back(prefabs, prefab_offt);
 
 	TempAllocator4096 ta;
@@ -342,7 +379,7 @@ s32 UnitCompiler::collect_units(Buffer& data, Array<u32>& prefabs, const char* j
 	return 1;
 }
 
-s32 UnitCompiler::compile_unit_from_json(const char* json)
+s32 UnitCompiler::compile_unit_from_json(const char* json, const u32 parent)
 {
 	Buffer data(default_allocator());
 	Array<u32> offsets(default_allocator()); // Offsets to JSON objects into data
@@ -351,13 +388,14 @@ s32 UnitCompiler::compile_unit_from_json(const char* json)
 	// offsets[  1] = { prefab = ..., ... }                    <- Prefab of the original unit
 	// offsets[  2] = { prefab = ..., ... }                    <- Prefab of the prefab of the original unit
 	// offsets[n-1] = { prefab = nil, ... }                    <- Root unit
-	if (collect_units(data, offsets, json) < 0)
-		return -1;
-	array::push_back(data, '\0');
+	s32 err = 0;
+	err = collect_units(data, offsets, json);
+	DATA_COMPILER_ENSURE(err >= 0, _opts);
 
 	TempAllocator4096 ta;
 	JsonArray merged_components(ta);
 	JsonArray merged_components_data(ta);
+	JsonArray merged_children(ta);
 	u32 num_prefabs = array::size(offsets);
 
 	// Merge components of all prefabs from the root unit up to the unit that
@@ -403,7 +441,7 @@ s32 UnitCompiler::compile_unit_from_json(const char* json)
 				guid[36] = '\0';
 				Guid component_id = guid::parse(guid);
 
-				u32 comp_idx = component_index(merged_components, component_id);
+				u32 comp_idx = object_index_from_id(merged_components, component_id);
 				if (comp_idx != UINT32_MAX)
 				{
 					u32 comp_last = array::size(merged_components) - 1;
@@ -446,7 +484,7 @@ s32 UnitCompiler::compile_unit_from_json(const char* json)
 				Guid component_id = guid::parse(guid);
 
 				// Patch component "data" key
-				u32 comp_idx = component_index(merged_components, component_id);
+				u32 comp_idx = object_index_from_id(merged_components, component_id);
 				if (comp_idx != UINT32_MAX)
 				{
 					JsonObject modified_component(ta);
@@ -461,6 +499,47 @@ s32 UnitCompiler::compile_unit_from_json(const char* json)
 						, _opts
 						, "Modification of unexisting component ID: %s\n"
 						, guid::to_string(buf, sizeof(buf), component_id)
+						);
+				}
+			}
+		}
+
+		if (json_object::has(prefab, "children"))
+		{
+			JsonArray children(ta);
+			sjson::parse_array(children, prefab["children"]);
+			for (u32 cc = 0; cc < array::size(children); ++cc)
+			{
+				array::push_back(merged_children, children[cc]);
+			}
+		}
+
+		if (json_object::has(prefab, "deleted_children"))
+		{
+			JsonArray deleted_children(ta);
+			sjson::parse_array(deleted_children, prefab["deleted_children"]);
+
+			// Delete components
+			for (u32 ii = 0; ii < array::size(deleted_children); ++ii)
+			{
+				JsonObject obj(ta);
+				sjson::parse_object(obj, deleted_children[ii]);
+				Guid id = sjson::parse_guid(obj["id"]);
+
+				u32 child_index = object_index_from_id(merged_children, id);
+				if (child_index != UINT32_MAX)
+				{
+					u32 child_last = array::size(merged_children) - 1;
+					merged_children[child_index] = merged_children[child_last];
+					array::pop_back(merged_children);
+				}
+				else
+				{
+					char buf[GUID_BUF_LEN];
+					DATA_COMPILER_ASSERT(false
+						, _opts
+						, "Deletion of unexisting child ID: %s\n"
+						, guid::to_string(buf, sizeof(buf), id)
 						);
 				}
 			}
@@ -485,107 +564,129 @@ s32 UnitCompiler::compile_unit_from_json(const char* json)
 		}
 	}
 
-	if (array::size(merged_components) > 0)
+	// Compile component data for each component type found in the chain of units.
+	for (u32 cc = 0; cc < array::size(merged_components); ++cc)
 	{
-		for (u32 cc = 0; cc < array::size(merged_components); ++cc)
+		const char* val = merged_components[cc];
+
+		TempAllocator512 ta;
+		JsonObject component(ta);
+		sjson::parse(component, val);
+
+		const StringId32 type = sjson::parse_string_id(component["type"]);
+
+		Buffer component_data(default_allocator());
+		err = compile_component(component_data, type, merged_components_data[cc]);
+		DATA_COMPILER_ENSURE(err == 0, _opts);
+
+		// Append data to the component data for the given type.
+		ComponentTypeData component_types_deffault(default_allocator());
+		ComponentTypeData& ctd = const_cast<ComponentTypeData&>(hash_map::get(_component_data, type, component_types_deffault));
+
+		// One component per unit max.
+		auto cur = array::begin(ctd._unit_index);
+		auto end = array::end(ctd._unit_index);
+		if (std::find(cur, end, _num_units) != end)
 		{
-			const char* val = merged_components[cc];
-
-			TempAllocator512 ta;
-			JsonObject component(ta);
-			sjson::parse(component, val);
-
-			const StringId32 type = sjson::parse_string_id(component["type"]);
-
-			Buffer output(default_allocator());
-			if (compile_component(output, type, merged_components_data[cc]) != 0)
-				return -1;
-
-			add_component_data(type, output, _num_units);
+			char buf[STRING_ID32_BUF_LEN];
+			DATA_COMPILER_ASSERT(false
+				, _opts
+				, "Unit already has a component of type: %s"
+				, type.to_string(buf, sizeof(buf))
+				);
 		}
-	}
 
+		array::push(ctd._data, array::begin(component_data), array::size(component_data));
+		array::push_back(ctd._unit_index, _num_units);
+		++ctd._num;
+	}
+	array::push_back(_unit_parents, parent);
 	++_num_units;
+
+	err = compile_units_array(merged_children, _num_units-1);
+	DATA_COMPILER_ENSURE(err == 0, _opts);
 	return 0;
 }
 
-s32 UnitCompiler::compile_multiple_units(const char* json)
+s32 UnitCompiler::compile_units_array(const JsonArray& units, const u32 parent)
+{
+	for (u32 i = 0; i < array::size(units); ++i)
+	{
+		s32 err = compile_unit_from_json(units[i], parent);
+		DATA_COMPILER_ENSURE(err == 0, _opts);
+	}
+	return 0;
+}
+
+s32 UnitCompiler::compile_units_array(const char* json, const u32 parent)
 {
 	TempAllocator4096 ta;
 	JsonArray units(ta);
 	sjson::parse_array(units, json);
-
-	for (u32 i = 0; i < array::size(units); ++i)
-	{
-		if (compile_unit_from_json(units[i]) != 0)
-			return -1;
-	}
-
-	return 0;
+	return compile_units_array(units, parent);
 }
 
 Buffer UnitCompiler::blob()
 {
-	UnitResource ur;
-	ur.version = RESOURCE_HEADER(RESOURCE_VERSION_UNIT);
-	ur.num_units = _num_units;
-	ur.num_component_types = 0;
+	Buffer output(default_allocator());
+	FileBuffer fb(output);
+	BinaryWriter bw(fb);
 
+	// Count component types
+	u32 num_component_types = 0;
 	auto cur = hash_map::begin(_component_data);
 	auto end = hash_map::end(_component_data);
 	for (; cur != end; ++cur)
 	{
 		HASH_MAP_SKIP_HOLE(_component_data, cur);
 
-		const u32 num = cur->second._num;
-
-		if (num > 0)
-			++ur.num_component_types;
+		if (cur->second._num > 0)
+			++num_component_types;
 	}
 
-	Buffer buf(default_allocator());
-	array::push(buf, (char*)&ur, sizeof(ur));
+	// Write header
+	UnitResource ur;
+	ur.version = RESOURCE_HEADER(RESOURCE_VERSION_UNIT);
+	ur.num_units = _num_units;
+	ur.num_component_types = num_component_types;
 
-	for (u32 i = 0; i < array::size(_component_info); ++i)
+	bw.write(ur.version);
+	bw.write(ur.num_units);
+	bw.write(ur.num_component_types);
+
+	// Write parents
+	for (u32 ii = 0; ii < _num_units; ++ii)
+		bw.write(_unit_parents[ii]);
+
+	for (u32 ii = 0; ii < array::size(_component_info); ++ii)
 	{
-		const StringId32 type        = _component_info[i]._type;
+		const StringId32 type        = _component_info[ii]._type;
 		const ComponentTypeData& ctd = hash_map::get(_component_data, type, ComponentTypeData(default_allocator()));
 
 		const Buffer& data           = ctd._data;
 		const Array<u32>& unit_index = ctd._unit_index;
 		const u32 num                = ctd._num;
 
-		if (num > 0)
-		{
-			ComponentData cd;
-			cd.type = type;
-			cd.num_instances = num;
-			cd.size = array::size(data) + sizeof(u32)*array::size(unit_index);
+		if (num == 0)
+			continue;
 
-			const u32 pad = cd.size % alignof(cd);
-			cd.size += pad;
+		// Write component data
+		ComponentData cd;
+		cd.type = type;
+		cd.num_instances = num;
+		cd.data_size = array::size(data);
 
-			array::push(buf, (char*)&cd, sizeof(cd));
-			array::push(buf, (char*)array::begin(unit_index), sizeof(u32)*array::size(unit_index));
-			array::push(buf, array::begin(data), array::size(data));
-
-			// Insert padding
-			for (u32 i = 0; i < pad; ++i)
-				array::push_back(buf, (char)0);
-		}
+		bw.align(alignof(cd));
+		bw.write(cd.type);
+		bw.write(cd.num_instances);
+		bw.write(cd.data_size);
+		for (u32 jj = 0; jj < array::size(unit_index); ++jj)
+			bw.write(unit_index[jj]);
+		bw.align(16);
+		bw.write(array::begin(data), array::size(data));
 	}
 
-	return buf;
-}
-
-void UnitCompiler::add_component_data(StringId32 type, const Buffer& data, u32 unit_index)
-{
-	ComponentTypeData component_types_deffault(default_allocator());
-	ComponentTypeData& ctd = const_cast<ComponentTypeData&>(hash_map::get(_component_data, type, component_types_deffault));
-
-	array::push(ctd._data, array::begin(data), array::size(data));
-	array::push_back(ctd._unit_index, unit_index);
-	++ctd._num;
+	return output;
 }
 
 void UnitCompiler::register_component_compiler(const char* type, CompileFunction fn, f32 spawn_order)

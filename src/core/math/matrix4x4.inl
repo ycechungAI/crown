@@ -1,10 +1,11 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
 #pragma once
 
+#include "core/math/constants.h"
 #include "core/math/math.h"
 #include "core/math/matrix3x3.inl"
 #include "core/math/quaternion.inl"
@@ -151,6 +152,16 @@ inline Matrix4x4 operator*(Matrix4x4 a, const Matrix4x4& b)
 {
 	a *= b;
 	return a;
+}
+
+/// Returns true whether the matrices @a a and @a b are equal.
+inline bool operator==(const Matrix4x4& a, const Matrix4x4& b)
+{
+	return a.x == b.x
+		&& a.y == b.y
+		&& a.z == b.z
+		&& a.t == b.t
+		;
 }
 
 /// Transposes the matrix @a m and returns the result.
@@ -317,9 +328,28 @@ inline Matrix3x3 to_matrix3x3(const Matrix4x4& m)
 }
 
 /// Returns the rotation portion of the matrix @a m as a Quaternion.
+inline Quaternion rotation(const Matrix3x3& m)
+{
+	const f32 lx = length(m.x);
+	const f32 ly = length(m.y);
+	const f32 lz = length(m.z);
+
+	if (CE_UNLIKELY(fequal(lx, 0.0f) || fequal(ly, 0.0f) || fequal(lz, 0.0f)))
+		return QUATERNION_IDENTITY;
+
+	Matrix3x3 rot = m;
+	rot.x *= 1.0f / lx;
+	rot.y *= 1.0f / ly;
+	rot.z *= 1.0f / lz;
+	Quaternion q = quaternion(rot);
+	normalize(q);
+	return q;
+}
+
+/// Returns the rotation portion of the matrix @a m as a Quaternion.
 inline Quaternion rotation(const Matrix4x4& m)
 {
-	return quaternion(to_matrix3x3(m));
+	return rotation(to_matrix3x3(m));
 }
 
 /// Sets the rotation portion of the matrix @a m.

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -86,6 +86,11 @@ namespace DeviceApi
 		return "{\"type\":\"resize\",\"width\":%d,\"height\":%d}".printf(width, height);
 	}
 
+	public string frame()
+	{
+		return "{\"type\":\"frame\"}";
+	}
+
 }
 
 namespace LevelEditorApi
@@ -135,19 +140,22 @@ namespace LevelEditorApi
 		PLACE,
 		MOVE,
 		ROTATE,
-		SCALE
-	}
+		SCALE,
 
-	private const string[] _tools =
-	{
-		"place_tool",
-		"move_tool",
-		"rotate_tool",
-		"scale_tool"
-	};
+		COUNT
+	}
 
 	public string set_tool_type(ToolType type)
 	{
+		const string _tools[] =
+		{
+			"place_tool",
+			"move_tool",
+			"rotate_tool",
+			"scale_tool"
+		};
+		GLib.static_assert(_tools.length == LevelEditorApi.ToolType.COUNT);
+
 		return "LevelEditor:set_tool(LevelEditor.%s)".printf(_tools[(int)type]);
 	}
 
@@ -347,7 +355,7 @@ namespace LevelEditorApi
 		return "LevelEditor:set_placeable(\"%s\", \"%s\")".printf(type, name);
 	}
 
-	public string selection_set(Guid[] ids)
+	public string selection_set(Guid?[] ids)
 	{
 		StringBuilder sb = new StringBuilder();
 		sb.append("LevelEditor._selection:set({");

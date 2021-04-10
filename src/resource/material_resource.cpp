@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -15,7 +15,7 @@
 #include "core/strings/string_id.inl"
 #include "core/strings/string_view.inl"
 #include "device/device.h"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/material_resource.h"
 #include "resource/resource_manager.h"
 #include "world/material_manager.h"
@@ -289,13 +289,13 @@ namespace material_resource_internal
 
 		if (json_object::has(obj, "textures"))
 		{
-			if (parse_textures(obj["textures"], texdata, names, dynblob, opts) != 0)
-				return -1;
+			s32 err = parse_textures(obj["textures"], texdata, names, dynblob, opts);
+			DATA_COMPILER_ENSURE(err == 0, opts);
 		}
 		if (json_object::has(obj, "uniforms"))
 		{
-			if (parse_uniforms(obj["uniforms"], unidata, names, dynblob, opts) != 0)
-				return -1;
+			s32 err = parse_uniforms(obj["uniforms"], unidata, names, dynblob, opts);
+			DATA_COMPILER_ENSURE(err == 0, opts);
 		}
 
 		MaterialResource mr;

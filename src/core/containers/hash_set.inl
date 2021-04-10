@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -319,9 +319,9 @@ HashSet<TKey, Hash, KeyEqual>::HashSet(const HashSet& other)
 	_size = other._size;
 	_mask = other._mask;
 
-	_allocator->deallocate(_buffer);
 	if (other._capacity > 0)
 	{
+		_allocator->deallocate(_buffer);
 		const u32 size = other._capacity * (sizeof(Index) + sizeof(TKey)) + alignof(Index) + alignof(TKey);
 		_buffer = (char*)_allocator->allocate(size);
 		_index = (Index*)memory::align_top(_buffer, alignof(Index));
@@ -356,9 +356,9 @@ HashSet<TKey, Hash, KeyEqual>& HashSet<TKey, Hash, KeyEqual>::operator=(const Ha
 	_size = other._size;
 	_mask = other._mask;
 
-	_allocator->deallocate(_buffer);
 	if (other._capacity > 0)
 	{
+		_allocator->deallocate(_buffer);
 		const u32 size = other._capacity * (sizeof(Index) + sizeof(TKey)) + alignof(Index) + alignof(TKey);
 		_buffer = (char*)_allocator->allocate(size);
 		_index = (Index*)memory::align_top(_buffer, alignof(Index));
@@ -369,7 +369,10 @@ HashSet<TKey, Hash, KeyEqual>& HashSet<TKey, Hash, KeyEqual>::operator=(const Ha
 		{
 			const u32 index = other._index[i].index;
 			if (index != hash_set_internal::FREE && !hash_set_internal::is_deleted(index))
-				new (&_data[i]) TKey(other._data[i]);
+			{
+				construct<TKey>(_data + i, *_allocator, IS_ALLOCATOR_AWARE_TYPE(TKey)());
+				_data[i] = other._data[i];
+			}
 		}
 	}
 	return *this;

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -143,14 +143,7 @@ void DebugLine::add_frustum(const Matrix4x4& mvp, const Color4& color)
 	frustum::from_matrix(f, mvp);
 
 	Vector3 pt[8];
-	plane_3_intersection(f.plane_near, f.plane_left,   f.plane_top,    pt[0]);
-	plane_3_intersection(f.plane_near, f.plane_top,    f.plane_right,  pt[1]);
-	plane_3_intersection(f.plane_near, f.plane_right,  f.plane_bottom, pt[2]);
-	plane_3_intersection(f.plane_near, f.plane_bottom, f.plane_left,   pt[3]);
-	plane_3_intersection(f.plane_far,  f.plane_left,   f.plane_top,    pt[4]);
-	plane_3_intersection(f.plane_far,  f.plane_top,    f.plane_right,  pt[5]);
-	plane_3_intersection(f.plane_far,  f.plane_right,  f.plane_bottom, pt[6]);
-	plane_3_intersection(f.plane_far,  f.plane_bottom, f.plane_left,   pt[7]);
+	frustum::vertices(pt, f);
 
 	add_line(pt[0], pt[1], color);
 	add_line(pt[1], pt[2], color);
@@ -212,13 +205,11 @@ void DebugLine::add_unit(ResourceManager& rm, const Matrix4x4& tm, StringId64 na
 {
 	const UnitResource& ur = *(const UnitResource*)rm.get(RESOURCE_TYPE_UNIT, name);
 
-	const char* component_data = (const char*)(&ur + 1);
-
+	const ComponentData* component = unit_resource::component_type_data(&ur, NULL);
 	for (u32 cc = 0; cc < ur.num_component_types; ++cc)
 	{
-		const ComponentData* component = (const ComponentData*)component_data;
-		const u32* unit_index = (const u32*)(component + 1);
-		const char* data = (const char*)(unit_index + component->num_instances);
+		const u32* unit_index = unit_resource::component_unit_index(component);
+		const char* data = unit_resource::component_payload(component);
 
 		if (component->type == COMPONENT_TYPE_MESH_RENDERER)
 		{
@@ -251,7 +242,7 @@ void DebugLine::add_unit(ResourceManager& rm, const Matrix4x4& tm, StringId64 na
 			}
 		}
 
-		component_data += component->size + sizeof(ComponentData);
+		component = unit_resource::component_type_data(&ur, component);
 	}
 }
 

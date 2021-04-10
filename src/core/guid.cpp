@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -7,7 +7,6 @@
 #include "core/guid.h"
 #include "core/platform.h"
 #include <stdio.h>  // sscanf
-#include <string.h> // memcmp
 
 #if CROWN_PLATFORM_POSIX
 	#include <fcntl.h>
@@ -96,20 +95,5 @@ namespace guid
 	}
 
 } // namespace guid
-
-bool operator==(const Guid& a, const Guid& b)
-{
-	return memcmp(&a, &b, sizeof(a)) == 0;
-}
-
-bool operator<(const Guid& a, const Guid& b)
-{
-	return memcmp(&a, &b, sizeof(a)) < 0;
-}
-
-u32 hash<Guid>::operator()(const Guid& id) const
-{
-	return id.data1;
-}
 
 } // namespace crown

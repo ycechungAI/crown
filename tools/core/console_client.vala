@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -31,8 +31,35 @@ public class ConsoleClient : GLib.Object
 		}
 		catch (Error e)
 		{
-			stderr.printf("%s\n", e.message);
+			// Ignore
 		}
+	}
+
+	// Tries to connect to the @a client. Return the number of tries after
+	// it succeeded or @a num_tries if failed.
+	public async int connect_async(string address, int port, int num_tries, int interval)
+	{
+		// SourceFunc callback = connect_async.callback;
+		int[] output = new int[1];
+
+		// new Thread<bool>(null, () => {
+			// Try to connect to data compiler.
+			int tries;
+			for (tries = 0; tries < num_tries; ++tries)
+			{
+				this.connect(address, port);
+				if (this.is_connected())
+					break;
+
+				GLib.Thread.usleep(interval*1000);
+			}
+			output[0] = tries;
+		//     Idle.add((owned) callback);
+		//     return true;
+		// });
+
+		// yield;
+		return output[0];
 	}
 
 	public void close()
@@ -48,7 +75,7 @@ public class ConsoleClient : GLib.Object
 		}
 		catch (Error e)
 		{
-			stderr.printf("%s\n", e.message);
+			loge(e.message);
 		}
 	}
 
@@ -60,7 +87,7 @@ public class ConsoleClient : GLib.Object
 	// Sends the JSON-encoded data to the target
 	public void send(string json)
 	{
-		if (_connection == null)
+		if (!is_connected())
 			return;
 
 		try
@@ -68,16 +95,17 @@ public class ConsoleClient : GLib.Object
 			// FIXME: Add bit conversion utils
 			uint32 len = json.length;
 			uint8* ptr = (uint8*)(&len);
-			var array = new uint8[4];
+			uint8 header[4];
 			for (var i = 0; i < 4; ++i)
-				array[i] = ptr[i];
+				header[i] = ptr[i];
 
-			_connection.output_stream.write(array);
-			_connection.output_stream.write(json.data);
+			size_t bytes_read;
+			_connection.output_stream.write_all(header, out bytes_read);
+			_connection.output_stream.write_all(json.data, out bytes_read);
 		}
 		catch (Error e)
 		{
-			stderr.printf("%s\n", e.message);
+			loge(e.message);
 		}
 	}
 
@@ -121,9 +149,8 @@ public class ConsoleClient : GLib.Object
 		}
 		catch (Error e)
 		{
-			stderr.printf("%s\n", e.message);
 			if (e.code == 44) // An existing connection was forcibly closed by the remote host.
-				disconnected();
+				close();
 		}
 	}
 }

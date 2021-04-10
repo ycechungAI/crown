@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -9,14 +9,14 @@
 #include "core/containers/vector.inl"
 #include "core/error/error.h"
 #include "core/filesystem/file.h"
-#include "core/guid.h"
+#include "core/guid.inl"
 #include "core/json/json_object.inl"
 #include "core/json/sjson.h"
 #include "core/math/math.h"
 #include "core/memory/temp_allocator.inl"
 #include "core/strings/dynamic_string.inl"
 #include "core/strings/string_id.inl"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/expression_language.h"
 #include "resource/state_machine_resource.h"
 #include "resource/types.h"
@@ -76,7 +76,7 @@ namespace state_machine
 	const Animation* animation(const AnimationArray* aa, u32 index)
 	{
 		CE_ASSERT(index < aa->num, "Index out of bounds");
-		Animation* first = (Animation*)(&aa[1]);
+		Animation* first = (Animation*)(memory::align_top((void*)&aa[1], alignof(Animation)));
 		return &first[index];
 	}
 
@@ -146,13 +146,22 @@ namespace state_machine_internal
 		{
 		}
 
+		void align(u32 align)
+		{
+			_offset = (u32)(uintptr_t)memory::align_top((void*)(uintptr_t)_offset, align);
+		}
+
 		// Returns the offset of
 		u32 offset(u32 num_animations, u32 num_transitions)
 		{
 			const u32 offt = _offset;
+			align(alignof(State));
 			_offset += sizeof(State);
+			align(alignof(Transition));
 			_offset += sizeof(Transition) * num_transitions;
+			align(alignof(AnimationArray));
 			_offset += sizeof(AnimationArray);
+			align(alignof(Animation));
 			_offset += sizeof(Animation) * num_animations;
 			return offt;
 		}
@@ -188,15 +197,6 @@ namespace state_machine_internal
 		u32 speed_bytecode;
 		u32 loop;
 
-		StateInfo()
-			: animations(default_allocator())
-			, transitions(default_allocator())
-			, speed(default_allocator())
-			, speed_bytecode(UINT32_MAX)
-			, loop(0)
-		{
-		}
-
 		explicit StateInfo(Allocator& a)
 			: animations(a)
 			, transitions(a)
@@ -214,12 +214,6 @@ namespace state_machine_internal
 		DynamicString name_string;
 		StringId32 name;
 		float value;
-
-		VariableInfo()
-			: name_string(default_allocator())
-			, value(0.0f)
-		{
-		}
 
 		explicit VariableInfo(Allocator& a)
 			: name_string(a)
@@ -247,6 +241,186 @@ namespace state_machine_internal
 		{
 		}
 
+		s32 parse_animations(StateInfo& si, const JsonArray& animations)
+		{
+			for (u32 i = 0; i < array::size(animations); ++i)
+			{
+				TempAllocator4096 ta;
+				JsonObject animation(ta);
+				sjson::parse_object(animation, animations[i]);
+
+				DynamicString animation_resource(ta);
+				sjson::parse_string(animation_resource, animation["name"]);
+				DATA_COMPILER_ASSERT_RESOURCE_EXISTS("sprite_animation"
+					, animation_resource.c_str()
+					, _opts
+					);
+				_opts.add_requirement("sprite_animation", animation_resource.c_str());
+
+				AnimationInfo ai(ta);
+				ai.name = sjson::parse_resource_name(animation["name"]);
+				sjson::parse_string(ai.weight, animation["weight"]);
+
+				vector::push_back(si.animations, ai);
+			}
+			DATA_COMPILER_ASSERT(vector::size(si.animations) > 0
+				, _opts
+				, "State must contain one animation at least"
+				);
+
+			return 0;
+		}
+
+		s32 parse_transitions(StateInfo& si, const JsonArray& transitions)
+		{
+			for (u32 i = 0; i < array::size(transitions); ++i)
+			{
+				TempAllocator4096 ta;
+				JsonObject transition(ta);
+				sjson::parse_object(transition, transitions[i]);
+
+				DynamicString mode_str(ta);
+				sjson::parse_string(mode_str, transition["mode"]);
+				const u32 mode = name_to_transition_mode(mode_str.c_str());
+				DATA_COMPILER_ASSERT(mode != TransitionMode::COUNT
+					, _opts
+					, "Unknown transition mode: '%s'"
+					, mode_str.c_str()
+					);
+
+				TransitionInfo ti;
+				ti.transition.event        = sjson::parse_string_id(transition["event"]);
+				ti.transition.state_offset = UINT32_MAX;
+				ti.transition.mode         = mode;
+				ti.state                   = sjson::parse_guid(transition["to"]);
+
+				vector::push_back(si.transitions, ti);
+			}
+
+			return 0;
+		}
+
+		s32 parse_states(const JsonArray& states)
+		{
+			for (u32 i = 0; i < array::size(states); ++i)
+			{
+				TempAllocator4096 ta;
+				JsonObject state(ta);
+				JsonArray animations(ta);
+				JsonArray transitions(ta);
+				sjson::parse_object(state, states[i]);
+				sjson::parse_array(animations, state["animations"]);
+				sjson::parse_array(transitions, state["transitions"]);
+
+				StateInfo si(ta);
+				sjson::parse_string(si.speed, state["speed"]);
+				si.loop = sjson::parse_bool(state["loop"]);
+
+				parse_transitions(si, transitions);
+				parse_animations(si, animations);
+
+				Guid guid = sjson::parse_guid(state["id"]);
+				DATA_COMPILER_ASSERT(!hash_map::has(_states, guid)
+					, _opts
+					, "State GUID duplicated"
+					);
+				hash_map::set(_states, guid, si);
+			}
+
+			return 0;
+		}
+
+		s32 parse_variables(const JsonArray& variables)
+		{
+			for (u32 i = 0; i < array::size(variables); ++i)
+			{
+				TempAllocator4096 ta;
+				JsonObject variable(ta);
+				sjson::parse_object(variable, variables[i]);
+
+				VariableInfo vi(ta);
+				vi.name  = sjson::parse_string_id(variable["name"]);
+				vi.value = sjson::parse_float(variable["value"]);
+				sjson::parse_string(vi.name_string, variable["name"]);
+
+				vector::push_back(_variables, vi);
+			}
+
+			return 0;
+		}
+
+		s32 compute_state_offsets()
+		{
+			// Limit byte code to 4K
+			array::resize(_byte_code, 1024);
+			u32 written = 0;
+
+			const u32 num_variables = vector::size(_variables);
+			const char** variables = (const char**)default_allocator().allocate(num_variables*sizeof(char*));
+
+			for (u32 i = 0; i < num_variables; ++i)
+				variables[i] = _variables[i].name_string.c_str();
+
+			const u32 num_constants = 1;
+			const char* constants[] =
+			{
+				"PI"
+			};
+			const f32 constant_values[] =
+			{
+				PI
+			};
+
+			auto cur = hash_map::begin(_states);
+			auto end = hash_map::end(_states);
+			for (; cur != end; ++cur)
+			{
+				HASH_MAP_SKIP_HOLE(_states, cur);
+
+				const Guid& guid    = cur->first;
+				const StateInfo& si = cur->second;
+
+				const u32 offset = _offset_accumulator.offset(vector::size(si.animations), vector::size(si.transitions));
+				hash_map::set(_offsets, guid, offset);
+
+				for (u32 i = 0; i < vector::size(si.animations); ++i)
+				{
+					const u32 num = skinny::expression_language::compile(si.animations[i].weight.c_str()
+						, num_variables
+						, variables
+						, num_constants
+						, constants
+						, constant_values
+						, array::begin(_byte_code) + written
+						, array::size(_byte_code)
+						);
+
+					const_cast<AnimationInfo&>(si.animations[i]).bytecode_entry = num > 0 ? written : UINT32_MAX;
+					written += num;
+				}
+
+				const u32 num = skinny::expression_language::compile(si.speed.c_str()
+					, num_variables
+					, variables
+					, num_constants
+					, constants
+					, constant_values
+					, array::begin(_byte_code) + written
+					, array::size(_byte_code)
+					);
+
+				const_cast<StateInfo&>(si).speed_bytecode = num > 0 ? written : UINT32_MAX;
+				written += num;
+			}
+
+			// Resize to total amount of written bytecode
+			array::resize(_byte_code, written);
+
+			default_allocator().deallocate(variables);
+
+			return 0;
+		}
+
 		s32 parse(Buffer& buf)
 		{
 			TempAllocator4096 ta;
@@ -258,82 +432,9 @@ namespace state_machine_internal
 			sjson::parse_array(states, obj["states"]);
 			sjson::parse_array(variables, obj["variables"]);
 
-			// Parse states
-			for (u32 i = 0; i < array::size(states); ++i)
-			{
-				TempAllocator4096 ta;
-				JsonObject state(ta);
-				JsonArray animations(ta);
-				JsonArray transitions(ta);
-				sjson::parse_object(state, states[i]);
-				sjson::parse_array(animations, state["animations"]);
-				sjson::parse_array(transitions, state["transitions"]);
-
-				StateInfo si;
-
-				sjson::parse_string(si.speed, state["speed"]);
-				si.loop = sjson::parse_bool(state["loop"]);
-
-				// Parse transitions
-				{
-					for (u32 i = 0; i < array::size(transitions); ++i)
-					{
-						JsonObject transition(ta);
-						sjson::parse_object(transition, transitions[i]);
-
-						DynamicString mode_str(ta);
-						sjson::parse_string(mode_str, transition["mode"]);
-						const u32 mode = name_to_transition_mode(mode_str.c_str());
-						DATA_COMPILER_ASSERT(mode != TransitionMode::COUNT
-							, _opts
-							, "Unknown transition mode: '%s'"
-							, mode_str.c_str()
-							);
-
-						TransitionInfo ti;
-						ti.transition.event        = sjson::parse_string_id(transition["event"]);
-						ti.transition.state_offset = UINT32_MAX;
-						ti.transition.mode         = mode;
-						ti.state                   = sjson::parse_guid(transition["to"]);
-
-						vector::push_back(si.transitions, ti);
-					}
-				}
-
-				// Parse animations
-				{
-					for (u32 i = 0; i < array::size(animations); ++i)
-					{
-						JsonObject animation(ta);
-						sjson::parse_object(animation, animations[i]);
-
-						DynamicString animation_resource(ta);
-						sjson::parse_string(animation_resource, animation["name"]);
-						DATA_COMPILER_ASSERT_RESOURCE_EXISTS("sprite_animation"
-							, animation_resource.c_str()
-							, _opts
-							);
-						_opts.add_requirement("sprite_animation", animation_resource.c_str());
-
-						AnimationInfo ai(ta);
-						ai.name = sjson::parse_resource_name(animation["name"]);
-						sjson::parse_string(ai.weight, animation["weight"]);
-
-						vector::push_back(si.animations, ai);
-					}
-					DATA_COMPILER_ASSERT(vector::size(si.animations) > 0
-						, _opts
-						, "State must contain one animation at least"
-						);
-				}
-
-				Guid guid = sjson::parse_guid(state["id"]);
-				DATA_COMPILER_ASSERT(!hash_map::has(_states, guid)
-					, _opts
-					, "State GUID duplicated"
-					);
-				hash_map::set(_states, guid, si);
-			}
+			s32 err = 0;
+			err = parse_states(states);
+			DATA_COMPILER_ENSURE(err == 0, _opts);
 			DATA_COMPILER_ASSERT(hash_map::size(_states) > 0
 				, _opts
 				, "State machine must contain one state at least"
@@ -345,91 +446,11 @@ namespace state_machine_internal
 				, "Initial state references non-existing state"
 				);
 
-			// Parse variables
-			{
-				for (u32 i = 0; i < array::size(variables); ++i)
-				{
-					JsonObject variable(ta);
-					sjson::parse_object(variable, variables[i]);
+			err = parse_variables(variables);
+			DATA_COMPILER_ENSURE(err == 0, _opts);
 
-					VariableInfo vi;
-					vi.name  = sjson::parse_string_id(variable["name"]);
-					vi.value = sjson::parse_float(variable["value"]);
-					sjson::parse_string(vi.name_string, variable["name"]);
-
-					vector::push_back(_variables, vi);
-				}
-			}
-
-			// Compute state offsets
-			{
-				// Limit byte code to 4K
-				array::resize(_byte_code, 1024);
-				u32 written = 0;
-
-				const u32 num_variables = vector::size(_variables);
-				const char** variables = (const char**)default_allocator().allocate(num_variables*sizeof(char*));
-
-				for (u32 i = 0; i < num_variables; ++i)
-					variables[i] = _variables[i].name_string.c_str();
-
-				const u32 num_constants = 1;
-				const char* constants[] =
-				{
-					"PI"
-				};
-				const f32 constant_values[] =
-				{
-					PI
-				};
-
-				auto cur = hash_map::begin(_states);
-				auto end = hash_map::end(_states);
-				for (; cur != end; ++cur)
-				{
-					HASH_MAP_SKIP_HOLE(_states, cur);
-
-					const Guid& guid    = cur->first;
-					const StateInfo& si = cur->second;
-
-					const u32 offset = _offset_accumulator.offset(vector::size(si.animations), vector::size(si.transitions));
-					hash_map::set(_offsets, guid, offset);
-
-					for (u32 i = 0; i < vector::size(si.animations); ++i)
-					{
-						const u32 num = skinny::expression_language::compile(si.animations[i].weight.c_str()
-							 , num_variables
-							 , variables
-							 , num_constants
-							 , constants
-							 , constant_values
-							 , array::begin(_byte_code) + written
-							 , array::size(_byte_code)
-							 );
-
-						const_cast<AnimationInfo&>(si.animations[i]).bytecode_entry = num > 0 ? written : UINT32_MAX;
-						written += num;
-					}
-
-					const u32 num = skinny::expression_language::compile(si.speed.c_str()
-						 , num_variables
-						 , variables
-						 , num_constants
-						 , constants
-						 , constant_values
-						 , array::begin(_byte_code) + written
-						 , array::size(_byte_code)
-						 );
-
-					const_cast<StateInfo&>(si).speed_bytecode = num > 0 ? written : UINT32_MAX;
-					written += num;
-				}
-
-				// Resize to total amount of written bytecode
-				array::resize(_byte_code, written);
-
-				default_allocator().deallocate(variables);
-			}
+			err = compute_state_offsets();
+			DATA_COMPILER_ENSURE(err == 0, _opts);
 
 			return 0;
 		}
@@ -517,8 +538,9 @@ namespace state_machine_internal
 		Buffer buf = opts.read();
 
 		StateMachineCompiler smc(opts);
-		if (smc.parse(buf) != 0)
-			return -1;
+		s32 err = 0;
+		err = smc.parse(buf);
+		DATA_COMPILER_ENSURE(err == 0, opts);
 
 		return smc.write();
 	}

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -82,12 +82,16 @@ inline bool operator<(const DynamicString& a, const DynamicString& b)
 
 inline bool operator==(const DynamicString& a, const DynamicString& b)
 {
-	return strcmp(a.c_str(), b.c_str()) == 0;
+	return array::size(a._data) == array::size(b._data)
+		&& strcmp(a.c_str(), b.c_str()) == 0
+		;
 }
 
 inline bool operator!=(const DynamicString& a, const DynamicString& b)
 {
-	return strcmp(a.c_str(), b.c_str()) != 0;
+	return array::size(a._data) != array::size(b._data)
+		|| strcmp(a.c_str(), b.c_str()) != 0
+		;
 }
 
 inline bool operator==(const DynamicString& a, const char* str)

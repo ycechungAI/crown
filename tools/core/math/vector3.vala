@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -35,6 +35,38 @@ public struct Vector3
 		arr.add(this.y);
 		arr.add(this.z);
 		return arr;
+	}
+
+	public double dot(Vector3 b)
+	{
+		return this.x * b.x + this.y * b.y + this.z * b.z;
+	}
+
+	public double length_squared()
+	{
+		return dot(this);
+	}
+
+	public double length()
+	{
+		return Math.sqrt(length_squared());
+	}
+
+	public void normalize()
+	{
+		double len = length();
+		double inv_len = 1.0 / len;
+		this.x *= inv_len;
+		this.y *= inv_len;
+		this.z *= inv_len;
+	}
+
+	public void set_length(double len)
+	{
+		normalize();
+		this.x *= len;
+		this.y *= len;
+		this.z *= len;
 	}
 
 	public string to_string()

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -17,13 +17,13 @@ public class PanelProjectsList : Gtk.ScrolledWindow
 
 	// Widgets
 	[GtkChild]
-	Gtk.ListBox _list_projects;
+	unowned Gtk.ListBox _list_projects;
 
 	[GtkChild]
-	Gtk.Button _button_new_project;
+	unowned Gtk.Button _button_new_project;
 
 	[GtkChild]
-	Gtk.Button _button_import_project;
+	unowned Gtk.Button _button_import_project;
 
 	public PanelProjectsList(LevelEditorApplication app, User user)
 	{
@@ -42,15 +42,10 @@ public class PanelProjectsList : Gtk.ScrolledWindow
 		});
 
 		_button_import_project.clicked.connect(() => {
-			DialogOpenProject op = new DialogOpenProject((Gtk.Window)this.get_toplevel());
-			if (op.run() != ResponseType.ACCEPT)
-			{
-				op.destroy();
+			string source_dir;
+			int rt = _application.run_open_project_dialog(out source_dir, (Gtk.Window)this.get_toplevel());
+			if (rt != ResponseType.ACCEPT)
 				return;
-			}
-
-			string source_dir = op.get_filename();
-			op.destroy();
 
 			_user.add_recent_project(source_dir, source_dir);
 		});
@@ -127,7 +122,7 @@ public class PanelProjectsList : Gtk.ScrolledWindow
 			_list_projects.invalidate_sort();
 			_user.touch_recent_project(row.get_data("source_dir"), mtime);
 			_application.show_panel("main_vbox", Gtk.StackTransitionType.NONE);
-			_application.restart_compiler(source_dir, null);
+			_application.restart_backend.begin(source_dir, LEVEL_NONE);
 		});
 		hbox.pack_end(button_open, false, false, 0);
 

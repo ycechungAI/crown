@@ -1,11 +1,13 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
 #pragma once
 
 #include "core/types.h"
+
+#define TIME_FMT "%.3fs"
 
 namespace crown
 {

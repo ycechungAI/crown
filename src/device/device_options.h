@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -29,6 +29,7 @@ struct DeviceOptions
 	bool _do_compile;
 	bool _do_continue;
 	bool _server;
+	bool _pumped;
 	u32 _parent_window;
 	u16 _console_port;
 	u16 _window_x;

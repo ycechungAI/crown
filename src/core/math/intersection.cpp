@@ -1,14 +1,16 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
 #include "core/math/aabb.inl"
 #include "core/math/constants.h"
+#include "core/math/frustum.inl"
 #include "core/math/intersection.h"
 #include "core/math/plane3.inl"
 #include "core/math/sphere.inl"
 #include "core/math/vector3.inl"
+#include <float.h> // FLT_MAX
 
 namespace crown
 {
@@ -20,7 +22,7 @@ f32 ray_plane_intersection(const Vector3& from, const Vector3& dir, const Plane3
 	if (fequal(den, 0.0f))
 		return -1.0f;
 
-	return (-p.d - num) / den;
+	return (p.d - num) / den;
 }
 
 f32 ray_disc_intersection(const Vector3& from, const Vector3& dir, const Vector3& center, f32 radius, const Vector3& normal)
@@ -56,7 +58,7 @@ f32 ray_sphere_intersection(const Vector3& from, const Vector3& dir, const Spher
 f32 ray_obb_intersection(const Vector3& from, const Vector3& dir, const Matrix4x4& tm, const Vector3& half_extents)
 {
 	f32 tmin = 0.0f;
-	f32 tmax = 999999999.9f;
+	f32 tmax = FLT_MAX;
 
 	const Vector3 obb_pos = vector3(tm.t.x, tm.t.y, tm.t.z);
 	const Vector3 delta = obb_pos - from;
@@ -71,8 +73,8 @@ f32 ray_obb_intersection(const Vector3& from, const Vector3& dir, const Matrix4x
 			f32 t1 = (e-half_extents.x)/f;
 			f32 t2 = (e+half_extents.x)/f;
 
-			if (t1 > t2) { f32 w=t1;t1=t2;t2=w; }
-
+			if (t1 > t2)
+				exchange(t1, t2);
 			if (t2 < tmax)
 				tmax = t2;
 			if (t1 > tmin)
@@ -99,8 +101,8 @@ f32 ray_obb_intersection(const Vector3& from, const Vector3& dir, const Matrix4x
 			f32 t1 = (e-half_extents.y)/f;
 			f32 t2 = (e+half_extents.y)/f;
 
-			if (t1 > t2) { f32 w=t1;t1=t2;t2=w; }
-
+			if (t1 > t2)
+				exchange(t1, t2);
 			if (t2 < tmax)
 				tmax = t2;
 			if (t1 > tmin)
@@ -126,8 +128,8 @@ f32 ray_obb_intersection(const Vector3& from, const Vector3& dir, const Matrix4x
 			f32 t1 = (e-half_extents.z)/f;
 			f32 t2 = (e+half_extents.z)/f;
 
-			if (t1 > t2) { f32 w=t1;t1=t2;t2=w; }
-
+			if (t1 > t2)
+				exchange(t1, t2);
 			if (t2 < tmax)
 				tmax = t2;
 			if (t1 > tmin)
@@ -157,7 +159,7 @@ f32 ray_triangle_intersection(const Vector3& from, const Vector3& dir, const Vec
 f32 ray_mesh_intersection(const Vector3& from, const Vector3& dir, const Matrix4x4& tm, const void* vertices, u32 stride, const u16* indices, u32 num)
 {
 	bool hit = false;
-	f32 tmin = 999999999.9f;
+	f32 tmin = FLT_MAX;
 
 	for (u32 i = 0; i < num; i += 3)
 	{
@@ -218,12 +220,12 @@ f32 ray_mesh_intersection(const Vector3& from, const Vector3& dir, const Matrix4
 	return hit ? tmin : -1.0f;
 }
 
-bool plane_3_intersection(const Plane3& a, const Plane3& b, const Plane3& c, Vector3& ip)
+bool plane_3_intersection(Vector3& ip, const Plane3& a, const Plane3& b, const Plane3& c)
 {
 	const Vector3 na = a.n;
 	const Vector3 nb = b.n;
 	const Vector3 nc = c.n;
-	const f32 den    = -dot(cross(na, nb), nc);
+	const f32 den    = dot(cross(na, nb), nc);
 
 	if (fequal(den, 0.0f))
 		return false;
@@ -239,107 +241,101 @@ bool plane_3_intersection(const Plane3& a, const Plane3& b, const Plane3& c, Vec
 	return true;
 }
 
-bool frustum_sphere_intersection(const Frustum& f, const Sphere& s)
+bool sphere_intersects_frustum(const Sphere& s, const Frustum& f)
 {
-	if (plane3::distance_to_point(f.plane_left, s.c) < -s.r ||
-		plane3::distance_to_point(f.plane_right, s.c) < -s.r)
+	for (u32 ii = 0; ii < countof(f.planes); ++ii)
 	{
-		return false;
-	}
-
-	if (plane3::distance_to_point(f.plane_bottom, s.c) < -s.r ||
-		plane3::distance_to_point(f.plane_top, s.c) < -s.r)
-	{
-		return false;
-	}
-
-	if (plane3::distance_to_point(f.plane_near, s.c) < -s.r ||
-		plane3::distance_to_point(f.plane_far, s.c) < -s.r)
-	{
-		return false;
+		if (plane3::distance_to_point(f.planes[ii], s.c) < -s.r)
+			return false;
 	}
 
 	return true;
 }
 
-bool frustum_box_intersection(const Frustum& f, const AABB& b)
+bool obb_intersects_frustum(const OBB& obb, const Frustum& f)
 {
-	const Vector3 v0 = aabb::vertex(b, 0);
-	const Vector3 v1 = aabb::vertex(b, 1);
-	const Vector3 v2 = aabb::vertex(b, 2);
-	const Vector3 v3 = aabb::vertex(b, 3);
-	const Vector3 v4 = aabb::vertex(b, 4);
-	const Vector3 v5 = aabb::vertex(b, 5);
-	const Vector3 v6 = aabb::vertex(b, 6);
-	const Vector3 v7 = aabb::vertex(b, 7);
+	const Vector3 obb_x = vector3(obb.tm.x.x, obb.tm.x.y, obb.tm.x.z);
+	const Vector3 obb_y = vector3(obb.tm.y.x, obb.tm.y.y, obb.tm.y.z);
+	const Vector3 obb_z = vector3(obb.tm.z.x, obb.tm.z.y, obb.tm.z.z);
+	const Vector3 obb_p = vector3(obb.tm.t.x, obb.tm.t.y, obb.tm.t.z);
 
-	u8 out = 0;
-	out += (plane3::distance_to_point(f.plane_left, v0) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_left, v1) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_left, v2) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_left, v3) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_left, v4) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_left, v5) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_left, v6) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_left, v7) < 0.0f) ? 1 : 0;
-	if (out == 8) return false;
+	const Vector3 bx = obb_x * obb.half_extents.x;
+	const Vector3 by = obb_y * obb.half_extents.y;
+	const Vector3 bz = obb_z * obb.half_extents.z;
 
-	out = 0;
-	out += (plane3::distance_to_point(f.plane_right, v0) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_right, v1) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_right, v2) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_right, v3) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_right, v4) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_right, v5) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_right, v6) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_right, v7) < 0.0f) ? 1 : 0;
-	if (out == 8) return false;
+	// p3 ---- p2  Front face.
+	//  |      |
+	//  |      |
+	// p0 ---- p1
+	const Vector3 p0 = obb_p - bx - by - bz; // This is min in OBB space.
+	const Vector3 p1 = obb_p + bx - by - bz;
+	const Vector3 p2 = obb_p + bx + by - bz;
+	const Vector3 p3 = obb_p - bx + by - bz;
 
-	out = 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v0) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v1) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v2) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v3) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v4) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v5) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v6) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_bottom, v7) < 0.0f) ? 1 : 0;
-	if (out == 8) return false;
+	// p7 ---- p6  Back face.
+	//  |      |
+	//  |      |
+	// p4 ---- p5
+	const Vector3 p4 = obb_p - bx - by + bz;
+	const Vector3 p5 = obb_p + bx - by + bz;
+	const Vector3 p6 = obb_p + bx + by + bz;
+	const Vector3 p7 = obb_p - bx + by + bz; // This is max in OBB space.
 
-	out = 0;
-	out += (plane3::distance_to_point(f.plane_top, v0) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_top, v1) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_top, v2) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_top, v3) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_top, v4) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_top, v5) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_top, v6) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_top, v7) < 0.0f) ? 1 : 0;
-	if (out == 8) return false;
+	for (u32 ii = 0; ii < 6; ++ii)
+	{
+		u32 out = 0;
+		if (plane3::distance_to_point(f.planes[ii], p0) < 0.0f)
+			++out;
+		if (plane3::distance_to_point(f.planes[ii], p1) < 0.0f)
+			++out;
+		if (plane3::distance_to_point(f.planes[ii], p2) < 0.0f)
+			++out;
+		if (plane3::distance_to_point(f.planes[ii], p3) < 0.0f)
+			++out;
+		if (plane3::distance_to_point(f.planes[ii], p4) < 0.0f)
+			++out;
+		if (plane3::distance_to_point(f.planes[ii], p5) < 0.0f)
+			++out;
+		if (plane3::distance_to_point(f.planes[ii], p6) < 0.0f)
+			++out;
+		if (plane3::distance_to_point(f.planes[ii], p7) < 0.0f)
+			++out;
 
-	out = 0;
-	out += (plane3::distance_to_point(f.plane_near, v0) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_near, v1) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_near, v2) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_near, v3) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_near, v4) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_near, v5) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_near, v6) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_near, v7) < 0.0f) ? 1 : 0;
-	if (out == 8) return false;
+		if (out == 8)
+			return false;
+	}
 
-	out = 0;
-	out += (plane3::distance_to_point(f.plane_far, v0) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_far, v1) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_far, v2) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_far, v3) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_far, v4) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_far, v5) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_far, v6) < 0.0f) ? 1 : 0;
-	out += (plane3::distance_to_point(f.plane_far, v7) < 0.0f) ? 1 : 0;
-	if (out == 8) return false;
+	// Check for false positives.
+	// Compute OBB volume planes. Normals point inside the volume.
+	Plane3 obb_planes[] =
+	{
+		plane3::from_point_and_normal(p0,  obb_z), // Front.
+		plane3::from_point_and_normal(p1, -obb_x), // Right.
+		plane3::from_point_and_normal(p2, -obb_y), // Top.
+		plane3::from_point_and_normal(p3,  obb_x), // Left.
+		plane3::from_point_and_normal(p0,  obb_y), // Bottom.
+		plane3::from_point_and_normal(p4, -obb_z)  // Back.
+	};
 
-	// If we are here, it is because either the box intersects or it is contained in the frustum
+	Vector3 frustum_points[8];
+	frustum::vertices(frustum_points, f);
+
+	// For each OBB plane.
+	for (u32 jj = 0; jj < 6; ++jj)
+	{
+		// For each frustum vertex.
+		u32 out = 0;
+		for (u32 ii = 0; ii < 8; ++ii)
+		{
+			if (plane3::distance_to_point(obb_planes[jj], frustum_points[ii]) < 0.0f)
+				++out;
+		}
+
+		if (out == 8)
+			return false;
+	}
+
+	// Inside the frustum.
 	return true;
 }
 

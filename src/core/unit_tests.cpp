@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -13,7 +13,7 @@
 #include "core/containers/hash_set.inl"
 #include "core/containers/vector.inl"
 #include "core/filesystem/path.h"
-#include "core/guid.h"
+#include "core/guid.inl"
 #include "core/json/json.h"
 #include "core/json/sjson.h"
 #include "core/math/aabb.inl"
@@ -35,10 +35,14 @@
 #include "core/strings/dynamic_string.inl"
 #include "core/strings/string.inl"
 #include "core/strings/string_id.inl"
+#include "core/strings/string_view.inl"
 #include "core/thread/thread.h"
 #include "core/time.h"
 #include <stdlib.h> // EXIT_SUCCESS, EXIT_FAILURE
 
+#undef CE_ASSERT
+#undef CE_ENSURE
+#undef CE_FATAL
 #define ENSURE(condition)                                \
 	do                                                   \
 	{                                                    \
@@ -146,6 +150,12 @@ static void test_hash_map()
 			hash_map::remove(m, i);
 		}
 	}
+	{
+		HashMap<s32, s32> ma(a);
+		HashMap<s32, s32> mb(a);
+		hash_map::set(ma, 0, 0);
+		ma = mb;
+	}
 	memory_globals::shutdown();
 }
 
@@ -177,6 +187,12 @@ static void test_hash_set()
 
 		for (s32 i = 0; i < 100; ++i)
 			ENSURE(!hash_set::has(m, i*i));
+	}
+	{
+		HashSet<s32> ma(a);
+		HashSet<s32> mb(a);
+		hash_set::insert(ma, 0);
+		ma = mb;
 	}
 	memory_globals::shutdown();
 }
@@ -708,6 +724,23 @@ static void test_matrix4x4()
 		ENSURE(fequal(b.t.z, -9.2f, 0.00001f));
 		ENSURE(fequal(b.t.w,  4.9f, 0.00001f));
 	}
+	{
+		Matrix4x4 m;
+		Quaternion q;
+
+		m = MATRIX4X4_IDENTITY;
+		m.x.x = 0.0f;
+		q = rotation(m);
+		ENSURE(memcmp(&q, &QUATERNION_IDENTITY, sizeof(q)) == 0);
+		m = MATRIX4X4_IDENTITY;
+		m.y.y = 0.0f;
+		q = rotation(m);
+		ENSURE(memcmp(&q, &QUATERNION_IDENTITY, sizeof(q)) == 0);
+		m = MATRIX4X4_IDENTITY;
+		m.z.z = 0.0f;
+		q = rotation(m);
+		ENSURE(memcmp(&q, &QUATERNION_IDENTITY, sizeof(q)) == 0);
+	}
 }
 
 static void test_aabb()
@@ -996,6 +1029,62 @@ static void test_dynamic_string()
 		ENSURE(str.length() == 16);
 		ENSURE(strcmp(str.c_str(), "2f4a8724618f4c63") == 0);
 	}
+	{
+		TempAllocator128 ta;
+		DynamicString ds1(ta);
+		DynamicString ds2(ta);
+		ds1.set("foo", 3);
+		ds2.set("foo", 3);
+		ENSURE(ds1 == ds2);
+	}
+	{
+		TempAllocator128 ta;
+		DynamicString ds1(ta);
+		DynamicString ds2(ta);
+		ds1.set("foo", 3);
+		ds2.set("bar", 3);
+		ENSURE(ds1 != ds2);
+	}
+	{
+		TempAllocator128 ta;
+		DynamicString ds1(ta);
+		DynamicString ds2(ta);
+		ds1.set("bar", 3);
+		ds2.set("foo", 3);
+		ENSURE(ds1 < ds2);
+	}
+	memory_globals::shutdown();
+}
+
+static void test_string_view()
+{
+	memory_globals::init();
+	{
+		const char* str = "foo";
+		StringView sv(str);
+		ENSURE(sv._length == 3);
+		ENSURE(sv._data == &str[0]);
+	}
+	{
+		StringView sv1("foo");
+		StringView sv2("foo");
+		ENSURE(sv1 == sv2);
+	}
+	{
+		StringView sv1("foo");
+		StringView sv2("bar");
+		ENSURE(sv1 != sv2);
+	}
+	{
+		StringView sv1("bar");
+		StringView sv2("foo");
+		ENSURE(sv1 < sv2);
+	}
+	{
+		StringView sv1("foo");
+		StringView sv2("fooo");
+		ENSURE(sv1 < sv2);
+	}
 	memory_globals::shutdown();
 }
 
@@ -1014,6 +1103,11 @@ static void test_guid()
 		Guid guid;
 		ENSURE(guid::try_parse(guid, "961f8005-6a7e-4371-9272-8454dd786884"));
 		ENSURE(!guid::try_parse(guid, "961f80056a7e-4371-9272-8454dd786884"));
+	}
+	{
+		Guid guid1 = guid::parse("8ec79062-c8fd-41b5-b044-cb545afc9976");
+		Guid guid2 = guid::parse("8f879a4e-e9dd-4981-8b9e-344bb917d7dc");
+		ENSURE(guid1 < guid2);
 	}
 	guid_globals::shutdown();
 	memory_globals::shutdown();
@@ -1378,29 +1472,34 @@ static void test_thread()
 
 static void test_process()
 {
-#if CROWN_PLATFORM_POSIX
+#if CROWN_PLATFORM_LINUX
 	{
-		const char* argv[] = {"printf", "Hello,\\nworld.\\n", NULL};
-
-		Process pr;
-		if (pr.spawn(argv, ProcessFlags::STDOUT_PIPE) == 0)
-		{
-			char buf[128] = {0};
-			pr.fgets(buf, sizeof(buf));
-			ENSURE(strcmp(buf, "Hello,\n") == 0);
-			pr.fgets(buf, sizeof(buf));
-			ENSURE(strcmp(buf, "world.\n") == 0);
-			pr.wait();
-		}
-	}
-	{
-		const char* argv[] = {"false", NULL};
-
-		Process pr;
-		if (pr.spawn(argv) == 0)
-			ENSURE(pr.wait() == 1);
-	}
+#if CROWN_DEVELOPMENT
+		#define CROWN_SUFFIX "development"
+#elif CROWN_DEBUG
+		#define CROWN_SUFFIX "debug"
+#else
+		#define CROWN_SUFFIX "release"
 #endif
+		const char* argv[] =
+		{
+			EXE_PATH("crown-" CROWN_SUFFIX)
+			, "--version"
+			, NULL
+		};
+
+		Process pr;
+		s32 err = pr.spawn(argv, ProcessFlags::STDOUT_PIPE);
+		ENSURE(err == 0);
+		u32 nbr;
+		char buf[128] = {0};
+		pr.read(&nbr, buf, sizeof(buf));
+		const char* ver = "Crown " CROWN_VERSION;
+		ENSURE(strncmp(buf, ver, strlen32(ver)) == 0);
+		s32 ec = pr.wait();
+		ENSURE(ec == 0);
+	}
+#endif // CROWN_PLATFORM_LINUX
 }
 
 static void test_filesystem()
@@ -1457,6 +1556,7 @@ int main_unit_tests()
 	RUN_TEST(test_murmur);
 	RUN_TEST(test_string_id);
 	RUN_TEST(test_dynamic_string);
+	RUN_TEST(test_string_view);
 	RUN_TEST(test_guid);
 	RUN_TEST(test_json);
 	RUN_TEST(test_sjson);

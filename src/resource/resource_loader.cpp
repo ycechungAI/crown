@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -119,7 +119,7 @@ s32 ResourceLoader::run()
 			_data_filesystem.close(*file);
 			file = _data_filesystem.open(path.c_str(), FileOpenMode::READ);
 		}
-		CE_ASSERT(file->is_open(), "Can't load resource: " RESOURCE_ID_FMT, res_id._id);
+		CE_ASSERT(file->is_open(), "Can't load fallback resource: " RESOURCE_ID_FMT, res_id._id);
 
 		if (rr.load_function)
 		{
@@ -128,7 +128,7 @@ s32 ResourceLoader::run()
 		else
 		{
 			const u32 size = file->size();
-			rr.data = rr.allocator->allocate(size);
+			rr.data = rr.allocator->allocate(size, 16);
 			file->read(rr.data, size);
 			CE_ASSERT(*(u32*)rr.data == RESOURCE_HEADER(rr.version), "Wrong version");
 		}

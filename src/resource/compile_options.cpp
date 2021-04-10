@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -13,19 +13,20 @@
 #include "core/filesystem/file.h"
 #include "core/filesystem/filesystem.h"
 #include "core/filesystem/path.h"
+#include "core/filesystem/reader_writer.inl"
 #include "core/guid.h"
 #include "core/memory/temp_allocator.inl"
 #include "core/os.h"
 #include "core/process.h"
 #include "core/strings/dynamic_string.inl"
-#include "core/strings/string_stream.h"
+#include "core/strings/string_stream.inl"
 #include "device/log.h"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/data_compiler.h"
 
 namespace crown
 {
-CompileOptions::CompileOptions(Buffer& output
+CompileOptions::CompileOptions(File& output
 	, HashMap<DynamicString, u32>& new_dependencies
 	, HashMap<DynamicString, u32>& new_requirements
 	, DataCompiler& dc
@@ -34,7 +35,8 @@ CompileOptions::CompileOptions(Buffer& output
 	, const DynamicString& source_path
 	, const char* platform
 	)
-	: _output(output)
+	: _file(output)
+	, _binary_writer(_file)
 	, _new_dependencies(new_dependencies)
 	, _new_requirements(new_requirements)
 	, _data_compiler(dc)
@@ -85,13 +87,22 @@ bool CompileOptions::resource_exists(const char* type, const char* name)
 	return file_exists(path.c_str());
 }
 
-Buffer CompileOptions::read_temporary(const char* path)
+Buffer CompileOptions::read_all(File* file)
 {
-	File* file = _data_filesystem.open(path, FileOpenMode::READ);
-	u32 size = file->size();
+	const u32 size = file->size();
 	Buffer buf(default_allocator());
 	array::resize(buf, size);
-	file->read(array::begin(buf), size);
+	if (size != 0)
+		file->read(array::begin(buf), size);
+	return buf;
+}
+
+Buffer CompileOptions::read_temporary(const char* path)
+{
+	Buffer buf(default_allocator());
+	File* file = _data_filesystem.open(path, FileOpenMode::READ);
+	if (file->is_open())
+		buf = read_all(file);
 	_data_filesystem.close(*file);
 	return buf;
 }
@@ -99,19 +110,14 @@ Buffer CompileOptions::read_temporary(const char* path)
 void CompileOptions::write_temporary(const char* path, const char* data, u32 size)
 {
 	File* file = _data_filesystem.open(path, FileOpenMode::WRITE);
-	file->write(data, size);
+	if (file->is_open())
+		file->write(data, size);
 	_data_filesystem.close(*file);
 }
 
 void CompileOptions::write_temporary(const char* path, const Buffer& data)
 {
 	write_temporary(path, array::begin(data), array::size(data));
-}
-
-///
-Buffer CompileOptions::read()
-{
-	return read(_source_path.c_str());
 }
 
 Buffer CompileOptions::read(const char* path)
@@ -125,13 +131,17 @@ Buffer CompileOptions::read(const char* path)
 	FilesystemDisk source_filesystem(ta);
 	source_filesystem.set_prefix(source_dir.c_str());
 
-	File* file = source_filesystem.open(path, FileOpenMode::READ);
-	const u32 size = file->size();
 	Buffer buf(default_allocator());
-	array::resize(buf, size);
-	file->read(array::begin(buf), size);
+	File* file = source_filesystem.open(path, FileOpenMode::READ);
+	if (file->is_open())
+		buf = read_all(file);
 	source_filesystem.close(*file);
 	return buf;
+}
+
+Buffer CompileOptions::read()
+{
+	return read(_source_path.c_str());
 }
 
 void CompileOptions::fake_read(const char* path)
@@ -184,14 +194,19 @@ DeleteResult CompileOptions::delete_file(const char* path)
 	return _data_filesystem.delete_file(path);
 }
 
+void CompileOptions::align(const u32 align)
+{
+	_binary_writer.align(align);
+}
+
 void CompileOptions::write(const void* data, u32 size)
 {
-	array::push(_output, (const char*)data, size);
+	_binary_writer.write(data, size);
 }
 
 void CompileOptions::write(const Buffer& data)
 {
-	array::push(_output, array::begin(data), array::size(data));
+	write(array::begin(data), array::size(data));
 }
 
 const char* CompileOptions::platform() const
@@ -208,6 +223,17 @@ const char* CompileOptions::exe_path(const char* const* paths, u32 num)
 	}
 
 	return NULL;
+}
+
+void CompileOptions::read_output(StringStream& output, Process& pr)
+{
+	u32 nbr = 0;
+	char msg[512];
+	while (pr.read(&nbr, msg, sizeof(msg)-1) != NULL)
+	{
+		msg[nbr] = '\0';
+		output << msg;
+	}
 }
 
 } // namespace crown

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -14,7 +14,7 @@
 #include "core/strings/dynamic_string.inl"
 #include "core/strings/string_stream.inl"
 #include "device/device.h"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/resource_manager.h"
 #include "resource/shader_resource.h"
 #include "world/shader_manager.h"
@@ -722,32 +722,32 @@ namespace shader_resource_internal
 
 			if (json_object::has(obj, "render_states"))
 			{
-				if (parse_render_states(obj["render_states"]) != 0)
-					return -1;
+				s32 err = parse_render_states(obj["render_states"]);
+				DATA_COMPILER_ENSURE(err == 0, _opts);
 			}
 
 			if (json_object::has(obj, "sampler_states"))
 			{
-				if (parse_sampler_states(obj["sampler_states"]) != 0)
-					return -1;
+				s32 err = parse_sampler_states(obj["sampler_states"]);
+				DATA_COMPILER_ENSURE(err == 0, _opts);
 			}
 
 			if (json_object::has(obj, "bgfx_shaders"))
 			{
-				if (parse_bgfx_shaders(obj["bgfx_shaders"]) != 0)
-					return -1;
+				s32 err = parse_bgfx_shaders(obj["bgfx_shaders"]);
+				DATA_COMPILER_ENSURE(err == 0, _opts);
 			}
 
 			if (json_object::has(obj, "shaders"))
 			{
-				if (parse_shaders(obj["shaders"]) != 0)
-					return -1;
+				s32 err = parse_shaders(obj["shaders"]);
+				DATA_COMPILER_ENSURE(err == 0, _opts);
 			}
 
 			if (json_object::has(obj, "static_compile"))
 			{
-				if (parse_static_compile(obj["static_compile"]) != 0)
-					return -1;
+				s32 err = parse_static_compile(obj["static_compile"]);
+				DATA_COMPILER_ENSURE(err == 0, _opts);
 			}
 
 			return 0;
@@ -1099,20 +1099,20 @@ namespace shader_resource_internal
 			JsonArray static_compile(ta);
 			sjson::parse_array(static_compile, json);
 
-			for (u32 i = 0; i < array::size(static_compile); ++i)
+			for (u32 ii = 0; ii < array::size(static_compile); ++ii)
 			{
 				JsonObject obj(ta);
-				sjson::parse_object(obj, static_compile[i]);
+				sjson::parse_object(obj, static_compile[ii]);
 
 				StaticCompile sc(default_allocator());
 				sjson::parse_string(sc._shader, obj["shader"]);
 
 				JsonArray defines(ta);
 				sjson::parse_array(defines, obj["defines"]);
-				for (u32 i = 0; i < array::size(defines); ++i)
+				for (u32 jj = 0; jj < array::size(defines); ++jj)
 				{
 					DynamicString def(ta);
-					sjson::parse_string(def, defines[i]);
+					sjson::parse_string(def, defines[jj]);
 					vector::push_back(sc._defines, def);
 				}
 
@@ -1136,19 +1136,19 @@ namespace shader_resource_internal
 			_opts.write(RESOURCE_HEADER(RESOURCE_VERSION_SHADER));
 			_opts.write(vector::size(_static_compile));
 
-			for (u32 i = 0; i < vector::size(_static_compile); ++i)
+			for (u32 ii = 0; ii < vector::size(_static_compile); ++ii)
 			{
-				const StaticCompile& sc              = _static_compile[i];
+				const StaticCompile& sc              = _static_compile[ii];
 				const DynamicString& shader          = sc._shader;
 				const Vector<DynamicString>& defines = sc._defines;
 
 				TempAllocator1024 ta;
 				DynamicString str(ta);
 				str = shader;
-				for (u32 i = 0; i < vector::size(defines); ++i)
+				for (u32 jj = 0; jj < vector::size(defines); ++jj)
 				{
 					str += "+";
-					str += defines[i];
+					str += defines[jj];
 				}
 				const StringId32 shader_name(str.c_str());
 
@@ -1176,11 +1176,11 @@ namespace shader_resource_internal
 				const RenderState rs_default;
 				const RenderState& rs = hash_map::get(_render_states, render_state, rs_default);
 
-				_opts.write(shader_name._id);                               // Shader name
-				_opts.write(rs.encode());                                   // Render state
-				compile_sampler_states(bgfx_shader.c_str());                // Sampler states
-				if (compile_bgfx_shader(bgfx_shader.c_str(), defines) != 0) // Shader code
-					return -1;
+				_opts.write(shader_name._id);                                // Shader name
+				_opts.write(rs.encode());                                    // Render state
+				compile_sampler_states(bgfx_shader.c_str());                 // Sampler states
+				s32 err = compile_bgfx_shader(bgfx_shader.c_str(), defines); // Shader code
+				DATA_COMPILER_ENSURE(err == 0, _opts);
 			}
 
 			return 0;
@@ -1252,10 +1252,7 @@ namespace shader_resource_internal
 			_opts.write_temporary(_varying_path.c_str(), shader._varying.c_str(), shader._varying.length());
 
 			const char* shaderc = _opts.exe_path(shaderc_paths, countof(shaderc_paths));
-			DATA_COMPILER_ASSERT(shaderc != NULL
-				, _opts
-				, "shaderc not found"
-				);
+			DATA_COMPILER_ASSERT(shaderc != NULL, _opts, "shaderc not found");
 
 			// Invoke shaderc
 			Process pr_vert;
@@ -1304,36 +1301,29 @@ namespace shader_resource_internal
 			StringStream output_vert(ta);
 			StringStream output_frag(ta);
 
-			// Read error messages if any
-			{
-				char err[512];
-				while (pr_vert.fgets(err, sizeof(err)) != NULL)
-					output_vert << err;
-			}
+			_opts.read_output(output_vert, pr_vert);
 			ec = pr_vert.wait();
 			if (ec != 0)
 			{
+				pr_frag.wait();
 				delete_temp_files();
 				DATA_COMPILER_ASSERT(false
 					, _opts
-					, "Failed to compile vertex shader:\n%s"
+					, "Failed to compile vertex shader `%s`:\n%s"
+					, bgfx_shader
 					, string_stream::c_str(output_vert)
 					);
 			}
 
-			// Read error messages if any
-			{
-				char err[512];
-				while (pr_frag.fgets(err, sizeof(err)) != NULL)
-					output_frag << err;
-			}
+			_opts.read_output(output_frag, pr_frag);
 			ec = pr_frag.wait();
 			if (ec != 0)
 			{
 				delete_temp_files();
 				DATA_COMPILER_ASSERT(false
 					, _opts
-					, "Failed to compile fragment shader:\n%s"
+					, "Failed to compile fragment shader `%s`:\n%s"
+					, bgfx_shader
 					, string_stream::c_str(output_frag)
 					);
 			}
@@ -1355,8 +1345,8 @@ namespace shader_resource_internal
 	s32 compile(CompileOptions& opts)
 	{
 		ShaderCompiler sc(opts);
-		if (sc.parse(opts.source_path()) != 0)
-			return -1;
+		s32 err = sc.parse(opts.source_path());
+		DATA_COMPILER_ENSURE(err == 0, opts);
 
 		return sc.compile();
 	}

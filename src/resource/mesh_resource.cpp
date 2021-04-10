@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -19,12 +19,64 @@
 #include "core/strings/dynamic_string.inl"
 #include "core/strings/string_id.inl"
 #include "device/log.h"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/mesh_resource.h"
 #include "resource/resource_manager.h"
+#include <bx/readerwriter.h>
+#include <bx/error.h>
+#include <vertexlayout.h> // bgfx::write, bgfx::read
 
 namespace crown
 {
+struct BgfxReader : public bx::ReaderI
+{
+	BinaryReader* _br;
+
+	///
+	BgfxReader(BinaryReader& br)
+		: _br(&br)
+	{
+	}
+
+	///
+	virtual ~BgfxReader()
+	{
+	}
+
+	///
+	virtual int32_t read(void* _data, int32_t _size, bx::Error* _err)
+	{
+		CE_UNUSED(_err);
+		_br->read(_data, _size);
+		return _size; // FIXME: return the actual number of bytes read
+	}
+};
+
+/// Writer interface.
+struct BgfxWriter : public bx::WriterI
+{
+	BinaryWriter* _bw;
+
+	///
+	BgfxWriter(BinaryWriter& bw)
+		: _bw(&bw)
+	{
+	}
+
+	///
+	virtual ~BgfxWriter()
+	{
+	}
+
+	///
+	virtual int32_t write(const void* _data, int32_t _size, bx::Error* _err)
+	{
+		CE_UNUSED(_err);
+		_bw->write(_data, _size);
+		return _size; // FIXME: return the actual number of bytes written
+	}
+};
+
 MeshResource::MeshResource(Allocator& a)
 	: geometry_names(a)
 	, geometries(a)
@@ -66,7 +118,8 @@ namespace mesh_resource_internal
 			br.read(name);
 
 			bgfx::VertexLayout layout;
-			br.read(layout);
+			BgfxReader reader(br);
+			bgfx::read(&reader, layout);
 
 			OBB obb;
 			br.read(obb);
@@ -158,6 +211,28 @@ namespace mesh_resource_internal
 #if CROWN_CAN_COMPILE
 namespace mesh_resource_internal
 {
+	static void parse_float_array(Array<f32>& output, const char* json)
+	{
+		TempAllocator4096 ta;
+		JsonArray floats(ta);
+		sjson::parse_array(floats, json);
+
+		array::resize(output, array::size(floats));
+		for (u32 i = 0; i < array::size(floats); ++i)
+			output[i] = sjson::parse_float(floats[i]);
+	}
+
+	static void parse_index_array(Array<u16>& output, const char* json)
+	{
+		TempAllocator4096 ta;
+		JsonArray indices(ta);
+		sjson::parse_array(indices, json);
+
+		array::resize(output, array::size(indices));
+		for (u32 i = 0; i < array::size(indices); ++i)
+			output[i] = (u16)sjson::parse_int(indices[i]);
+	}
+
 	struct MeshCompiler
 	{
 		CompileOptions& _opts;
@@ -173,8 +248,6 @@ namespace mesh_resource_internal
 		Array<u16> _uv_indices;
 		Array<u16> _tangent_indices;
 		Array<u16> _binormal_indices;
-
-		Matrix4x4 _matrix_local;
 
 		u32 _vertex_stride;
 		Array<char> _vertex_buffer;
@@ -200,7 +273,6 @@ namespace mesh_resource_internal
 			, _uv_indices(default_allocator())
 			, _tangent_indices(default_allocator())
 			, _binormal_indices(default_allocator())
-			, _matrix_local(MATRIX4X4_IDENTITY)
 			, _vertex_stride(0)
 			, _vertex_buffer(default_allocator())
 			, _index_buffer(default_allocator())
@@ -235,32 +307,6 @@ namespace mesh_resource_internal
 			_has_uv = false;
 		}
 
-		void parse_float_array(Array<f32>& output, const char* array_json)
-		{
-			TempAllocator4096 ta;
-			JsonArray arr(ta);
-			sjson::parse_array(arr, array_json);
-
-			array::resize(output, array::size(arr));
-			for (u32 i = 0; i < array::size(arr); ++i)
-			{
-				output[i] = sjson::parse_float(arr[i]);
-			}
-		}
-
-		void parse_index_array(Array<u16>& output, const char* array_json)
-		{
-			TempAllocator4096 ta;
-			JsonArray arr(ta);
-			sjson::parse_array(arr, array_json);
-
-			array::resize(output, array::size(arr));
-			for (u32 i = 0; i < array::size(arr); ++i)
-			{
-				output[i] = (u16)sjson::parse_int(arr[i]);
-			}
-		}
-
 		void parse_indices(const char* json)
 		{
 			TempAllocator4096 ta;
@@ -282,13 +328,11 @@ namespace mesh_resource_internal
 			}
 		}
 
-		void parse(const char* geometry, const char* node)
+		void parse(const char* geometry)
 		{
 			TempAllocator4096 ta;
 			JsonObject obj(ta);
-			JsonObject obj_node(ta);
 			sjson::parse(obj, geometry);
-			sjson::parse(obj_node, node);
 
 			_has_normal = json_object::has(obj, "normal");
 			_has_uv     = json_object::has(obj, "texcoord");
@@ -305,8 +349,6 @@ namespace mesh_resource_internal
 			}
 
 			parse_indices(obj["indices"]);
-
-			_matrix_local = sjson::parse_matrix4x4(obj_node["matrix_local"]);
 
 			_vertex_stride = 0;
 			_vertex_stride += 3 * sizeof(f32);
@@ -326,7 +368,6 @@ namespace mesh_resource_internal
 				xyz.x = _positions[p_idx + 0];
 				xyz.y = _positions[p_idx + 1];
 				xyz.z = _positions[p_idx + 2];
-				xyz = xyz * _matrix_local;
 				array::push(_vertex_buffer, (char*)&xyz, sizeof(xyz));
 
 				if (_has_normal)
@@ -370,13 +411,14 @@ namespace mesh_resource_internal
 				, array::begin(_positions)
 				);
 
-			_obb.tm = from_quaternion_translation(QUATERNION_IDENTITY, aabb::center(_aabb) * _matrix_local);
+			_obb.tm = from_quaternion_translation(QUATERNION_IDENTITY, aabb::center(_aabb));
 			_obb.half_extents = (_aabb.max - _aabb.min) * 0.5f;
 		}
 
 		void write()
 		{
-			_opts.write(_layout);
+			BgfxWriter writer(_opts._binary_writer);
+			bgfx::write(&writer, _layout);
 			_opts.write(_obb);
 
 			_opts.write(array::size(_vertex_buffer) / _vertex_stride);
@@ -387,6 +429,42 @@ namespace mesh_resource_internal
 			_opts.write(array::begin(_index_buffer), array::size(_index_buffer) * sizeof(u16));
 		}
 	};
+
+	s32 compile_node(MeshCompiler& mc, CompileOptions& opts, const JsonObject& geometries, const HashMap<StringView, const char*>::Entry* entry)
+	{
+		TempAllocator4096 ta;
+		const StringView key = entry->first;
+		const char* node = entry->second;
+		const char* geometry = geometries[key];
+
+		const StringId32 node_name(key.data(), key.length());
+		opts.write(node_name._id);
+
+		JsonObject obj_node(ta);
+		sjson::parse(obj_node, node);
+
+		mc.reset();
+		mc.parse(geometry);
+		mc.write();
+
+		if (json_object::has(obj_node, "children"))
+		{
+			JsonObject children(ta);
+			sjson::parse_object(children, obj_node["children"]);
+
+			auto cur = json_object::begin(children);
+			auto end = json_object::end(children);
+			for (; cur != end; ++cur)
+			{
+				JSON_OBJECT_SKIP_HOLE(children, cur);
+
+				s32 err = compile_node(mc, opts, geometries, cur);
+				DATA_COMPILER_ENSURE(err == 0, opts);
+			}
+		}
+
+		return 0;
+	}
 
 	s32 compile(CompileOptions& opts)
 	{
@@ -406,22 +484,14 @@ namespace mesh_resource_internal
 
 		MeshCompiler mc(opts);
 
-		auto cur = json_object::begin(geometries);
-		auto end = json_object::end(geometries);
+		auto cur = json_object::begin(nodes);
+		auto end = json_object::end(nodes);
 		for (; cur != end; ++cur)
 		{
-			JSON_OBJECT_SKIP_HOLE(geometries, cur);
+			JSON_OBJECT_SKIP_HOLE(nodes, cur);
 
-			const StringView key = cur->first;
-			const char* geometry = cur->second;
-			const char* node = nodes[key];
-
-			const StringId32 name(key.data(), key.length());
-			opts.write(name._id);
-
-			mc.reset();
-			mc.parse(geometry, node);
-			mc.write();
+			s32 err = compile_node(mc, opts, geometries, cur);
+			DATA_COMPILER_ENSURE(err == 0, opts);
 		}
 
 		return 0;

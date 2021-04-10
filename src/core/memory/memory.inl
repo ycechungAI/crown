@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -15,17 +15,14 @@ namespace crown
 namespace memory
 {
 	/// Returns the pointer @a p aligned to the desired @a align byte
-	inline void* align_top(void* p, u32 align)
+	inline void* align_top(const void* p, u32 align)
 	{
 		CE_ASSERT(align >= 1, "Alignment must be > 1");
 		CE_ASSERT(align % 2 == 0 || align == 1, "Alignment must be a power of two");
 
+		const uintptr_t mask = align-1;
 		uintptr_t ptr = (uintptr_t)p;
-		const u32 mod = ptr % align;
-
-		if (mod)
-			ptr += align - mod;
-
+		ptr = (ptr + mask) & ~mask;
 		return (void*)ptr;
 	}
 

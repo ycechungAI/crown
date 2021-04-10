@@ -44,10 +44,10 @@ To build documentation you will also need:
 	sudo apt-get install python3-sphinx
 	sudo apt-get install doxygen
 
-Windows (VS 2017)
+Windows (VS 2019)
 -----------------
 
-Visual Studio 2017:
+Visual Studio 2019:
 
 	* https://visualstudio.microsoft.com/downloads
 
@@ -57,6 +57,23 @@ GnuWin32 utilities:
 	* http://gnuwin32.sourceforge.net/packages/coreutils.htm
 	* http://gnuwin32.sourceforge.net/packages/libiconv.htm
 	* http://gnuwin32.sourceforge.net/packages/libintl.htm
+
+Windows (MinGW)
+---------------
+
+MSYS2:
+
+	* https://www.msys2.org/
+
+.. code::
+
+	pacman -S make mingw-w64-x86_64-gcc mingw-w64-x86_64-pkg-config mingw-w64-x86_64-gtk3 mingw-w64-x86_64-vala mingw-w64-x86_64-libgee
+
+Set MINGW path:
+
+.. code::
+
+	export MINGW=/mingw64
 
 Build
 =====
@@ -78,8 +95,14 @@ Linux
 Windows
 -------
 
-Open Visual Studio 2017 Command Prompt:
+Open Visual Studio 2019 Command Prompt:
 
 .. code::
 
 	make tools-linux-release64
+
+To build tools, open MSYS2 MSYS:
+
+.. code::
+
+	make tools-mingw-release64

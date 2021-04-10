@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -158,7 +158,7 @@ struct Joypad
 	Axis _axis[CROWN_MAX_JOYPADS];
 	bool _connected[CROWN_MAX_JOYPADS];
 
-	void init()
+	Joypad()
 	{
 		memset(&_state, 0, sizeof(_state));
 		memset(&_axis, 0, sizeof(_axis));
@@ -331,8 +331,8 @@ struct WindowsDevice
 		}
 		else
 		{
-			style |= WS_POPUP | WS_SYSMENU;
-			exstyle |= WS_EX_TRANSPARENT | WS_EX_LAYERED;
+			style |= WS_POPUP;
+			exstyle |= WS_EX_TRANSPARENT | WS_EX_LAYERED | WS_EX_NOACTIVATE;
 		}
 
 		RECT rect;
@@ -663,12 +663,13 @@ struct WindowWin : public Window
 		_width = width;
 		_height = height;
 
+		DWORD style = GetWindowLongA(s_wdvc._hwnd, GWL_STYLE);
 		RECT rect;
 		rect.left   = 0;
 		rect.top    = 0;
 		rect.right  = _width;
 		rect.bottom = _height;
-		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, FALSE);
+		AdjustWindowRect(&rect, style, FALSE);
 
 		MoveWindow(s_wdvc._hwnd
 			, _x

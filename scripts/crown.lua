@@ -1,5 +1,5 @@
 --
--- Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+-- Copyright (c) 2012-2021 Daniele Bartolini et al.
 -- License: https://github.com/dbartolini/crown/blob/master/LICENSE
 --
 
@@ -11,6 +11,7 @@ function crown_project(_name, _kind, _defines)
 		includedirs {
 			CROWN_DIR .. "src",
 			CROWN_DIR .. "3rdparty/bgfx/include",
+			CROWN_DIR .. "3rdparty/bgfx/src",
 			CROWN_DIR .. "3rdparty/bx/include",
 			CROWN_DIR .. "3rdparty/stb",
 			CROWN_DIR .. "3rdparty/bullet3/src",

@@ -1,9 +1,132 @@
 Changelog
 =========
 
-0.39.0
+0.43.0
 ------
 *DD MMM YYYY*
+
+**Data Compiler**
+
+* Windows: fixed garbage data written past EOF in some circumnstances.
+
+**Runtime**
+
+* Added --pumped mode to skip rendering of frames unless explicitly requested.
+
+**Tools**
+
+* Windows: fixed wrong Editor View window size.
+* Added a setting to limit the number of lines displayed by the Console.
+* Added hyperlinks to resource paths in the Console.
+* Selection is now correctly restored after Editor View restarts.
+* Fix Editor window title showing incorrect level-changed state.
+* Reduced CPU & GPU usage by launching Editor Views with --pumped runtime.
+
+**Lua API**
+
+* Added ``Math.obb_intersects_frustum()``
+
+0.42.0
+------
+*05 Mar 2021*
+
+**Editor**
+
+* Improved the visibility and picking of the handles of every gizmo.
+* Added camera-plane translation to the Move tool.
+* Added camera-plane rotation to the Rotate tool.
+* Added axis-, plane- and uniform-scaling to the Scale tool.
+* Fixed an issue that prevented the Editor View to be restarted in some circumnstances.
+* Fixed the translation of multiple unaligned objects when snapping was enabled.
+* Added new Crown logo.
+* Added icons to the Level Tree View.
+* Updated the meshes for Sound, Camera and Light units.
+* Added a button to the Resource Chooser to "reveal" the selected resource in the Project Browser.
+* Fixed placement of objects when snap-to-grid was enabled.
+
+**Runtime**
+
+* Upgraded to LuaJIT 2.1.
+* Added support to 64-bits Android (ARMv8-a).
+* Fixed changing Mesh and Sprite visibility.
+
+0.41.0
+------
+*16 Jan 2021*
+
+**Manual**
+
+* Improved the Introduction and added Features section
+* Added Glossary
+* Added license statement about "Your Game or Application"
+
+**Data Compiler**
+
+* Fixed compilation of collider volumes
+
+**Runtime**
+
+* Fixed loading of collider volumes
+
+**Tools**
+
+* The Editor View now will use the actual unit being placed as a preview instead of its wireframe
+* Fixed an issue that caused textures with supported extension types to be skipped by the importer
+* Added the ability select distinct resource types in the Import dialog
+* Fixed Lua error when setting camera parameters
+* The Project Browser will now show every file type except those used only internally by the Editor
+* Removed the default "FPSCamera" camera from the core game framework
+
+0.40.0
+------
+*06 Jan 2021*
+
+**Data Compiler**
+
+* Fixed an issue that caused resources to not be compiled with the proper version in rare circumnstances
+* Fixed an issue that caused the compiler to crash when reading empty source files
+* Fixed an issue that prevented the output from external data compilers to not be read under Windows
+
+**Runtime**
+
+* Fixed child nodes in the SceneGraph not being marked as changed when their parent was changed
+* Removed support for multiple components per Unit.
+* Added ability to express unit's parent-child relationship from within .unit and .level files
+
+**Exporters**
+
+* Added the ability to export full scene hierarchy to the Blender exporter
+* Removed support for Blender < 2.80
+
+**Tools**
+
+* Added logs expiration option to Preferences dialog
+* Added the ability to select from a number of templates (samples) when creating new projects
+* Changed the default accelerator for deleting objects from Ctrl+K to Delete
+* Fixed an issue that caused the Level Editor to ask multiple times whether save the level in some circumnstances
+* Level Editor now restores the Console's history from previous sessions
+* Improved the title of the Level Editor window to include the name of the current opened level and an indication of whether it has been modified since the last save to disk
+
+**Lua API**
+
+* All component managers accessors have been uniformed to accept a component instance ID (instead of a UnitId or both):
+	- All ``AnimationStateMachine.*``, except ``AnimationStateMachine.create()``
+	- All ``RenderWorld.light_*``, except ``RenderWorld.light_create()``
+	- All ``RenderWorld.sprite_*``, except ``RenderWorld.sprite_create()``
+	- All ``SceneGraph.*``, except ``SceneGraph.create()``
+	- All ``World.camera_*``, except ``World.camera_create()``
+	- ``PhysicsWorld.actor_instances()``
+* Added AnimationStateMachine.instance()
+* ``RenderWorld.set_mesh_visible()`` will now work as expected
+* Changed ``SceneGraph.link()`` behavior and added parameters to explicitly set the position, rotation and scale of the child transform after linking is done
+* Fixed ``Matrix4x4.rotation()`` to return the correct Quaternion even when the matrix has scaling applied
+* Fixed ``SceneGraph.*_rotation()`` to return the correct Quaternion even when the node has scaling applied
+* Fixed ``SceneGraph.unlink()`` to correctly set the local pose of the unlinked transform to its previous world pose
+* Fixed ``SceneGraph.destroy()`` to correctly update any linked transform before deleting the node
+
+0.39.0
+------
+*24 Oct 2020*
 
 **Data Compiler**
 
@@ -15,28 +138,40 @@ Changelog
 
 **Runtime**
 
-* Remove support for 32-bit x86 architectures
+* Removed support for 32-bit x86 architectures
 
 **Tools**
 
 * Added ability to crate new scripts from Project Browser
 * Added ability to crate new units from Project Browser
 * Added Debug > Build Data
+* Added QWER accelerators to place, move, rotate and scale object actions
+* Added support for Windows
+* Added the ability to duplicate objects from Level Tree
 * Added Welcome panel with a list of recent projects and the ability to create new projects or import existing ones
 * Bumped minimum GTK+ version to 3.16 (Ubuntu 16.04.2+)
 * Fix an issue that caused the Editor View camera not returning to idle in some circumnstances
 * Fixed a number of dialog boxes that were not centered to the Level Editor's main window
 * Fixed an issue that allowed the user to enter blank names when creating new folders in the Project Browser
 * Fixed an issue that caused Project Browser to show inconsistent folder structured in some circumnstances
+* Fixed an issue that caused the camera view accelerators to interfere with text input
+* Fixed an issue that prevented some components from being removed when reimporting sprites
 * Fixed and issue that caused generation of spurious "set-actions" when editing properties in the Properties panel
 * Fixed modifier keys getting stuck in the wrong state in some circumnstances
+* Fixed multiple selection in Level Tree
 * Fixed undo/redo when setting properties of some unit components
 * Improved Project Browser to not show irrelevant items
 * Improved Test Level/Start Game button behavior when game failed to launch
+* Level Editor connection to the Data Compiler, Editor View(s) and Game is now faster and more robust
 * Level Editor now saves aggregate logs to disk. User can browse logs folder from Help > Browse Logs...
 * New Project dialog no longer allows selecting non-empty folders for new projects
 * Objects inside .level files are now ordered by their ID before serialization
+* Save Level dialog now warns before overwriting a file that already exists
 * Unified Engine and Run menubar items into a single Debug menubar item
+
+**Lua API**
+
+* Added Matrix4x4.equal()
 
 0.38.0
 ------

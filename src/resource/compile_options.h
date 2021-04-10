@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -10,9 +10,12 @@
 #if CROWN_CAN_COMPILE
 
 #include "core/containers/types.h"
+#include "core/filesystem/reader_writer.h"
 #include "core/filesystem/types.h"
 #include "core/os.h"
+#include "core/process.h"
 #include "core/strings/dynamic_string.h"
+#include "core/strings/string_stream.h"
 #include "core/strings/types.h"
 #include "resource/resource_id.h"
 #include "resource/types.h"
@@ -27,6 +30,12 @@
 			return -1;                                  \
 		}                                               \
 	} while(0)
+
+#define DATA_COMPILER_ENSURE(condition, opts)             \
+	DATA_COMPILER_ASSERT(condition                        \
+		, opts                                            \
+		, "DATA_COMPILER_ENSURE(" # condition ") failed." \
+		)
 
 #define DATA_COMPILER_ASSERT_RESOURCE_EXISTS(type, name, opts) \
 	DATA_COMPILER_ASSERT(opts.resource_exists(type, name)      \
@@ -43,23 +52,12 @@
 		, name                                       \
 		)
 
-#if CROWN_PLATFORM_LINUX
-	#define EXE_PREFIX "./"
-	#define EXE_SUFFIX ""
-#elif CROWN_PLATFORM_WINDOWS
-	#define EXE_PREFIX ""
-	#define EXE_SUFFIX ".exe"
-#else
-	#error "Unknown platform"
-#endif // CROWN_PLATFORM_LINUX
-
-#define EXE_PATH(exe) EXE_PREFIX exe EXE_SUFFIX
-
 namespace crown
 {
 struct CompileOptions
 {
-	Buffer& _output;
+	File& _file;
+	BinaryWriter _binary_writer;
 	HashMap<DynamicString, u32>& _new_dependencies;
 	HashMap<DynamicString, u32>& _new_requirements;
 	DataCompiler& _data_compiler;
@@ -69,7 +67,7 @@ struct CompileOptions
 	ResourceId _resource_id;
 
 	///
-	CompileOptions(Buffer& output
+	CompileOptions(File& output
 		, HashMap<DynamicString, u32>& new_dependencies
 		, HashMap<DynamicString, u32>& new_requirements
 		, DataCompiler& dc
@@ -101,6 +99,9 @@ struct CompileOptions
 	bool resource_exists(const char* type, const char* name);
 
 	///
+	Buffer read_all(File* file);
+
+	///
 	Buffer read_temporary(const char* path);
 
 	///
@@ -109,13 +110,13 @@ struct CompileOptions
 	///
 	void write_temporary(const char* path, const Buffer& data);
 
-	/// Reads the source data and returns it.
-	/// It also registers the source path as a dependency.
-	Buffer read();
-
 	/// Reads the data at @a path and returns it.
 	/// It also registers @a path as a dependency.
 	Buffer read(const char* path);
+
+	/// Reads the source data and returns it.
+	/// It also registers the source path as a dependency.
+	Buffer read();
 
 	/// Registers @a path as dependency without reading anything.
 	void fake_read(const char* path);
@@ -133,14 +134,14 @@ struct CompileOptions
 	DeleteResult delete_file(const char* path);
 
 	///
+	void align(const u32 align);
+
+	///
 	void write(const void* data, u32 size);
 
 	///
 	template <typename T>
-	void write(const T& data)
-	{
-		write(&data, sizeof(data));
-	}
+	void write(const T& data);
 
 	///
 	void write(const Buffer& data);
@@ -150,6 +151,9 @@ struct CompileOptions
 
 	/// Returns the first path with executable permissions or NULL if none found.
 	const char* exe_path(const char* const* paths, u32 num);
+
+	///
+	void read_output(StringStream& ss, Process& pr);
 };
 
 } // namespace crown

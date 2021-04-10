@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -8,7 +8,7 @@ using Gtk;
 
 namespace Crown
 {
-public class LevelLayersTreeView : Gtk.Bin
+public class LevelLayersTreeView : Gtk.Box
 {
 	private enum ItemFlags
 	{
@@ -21,24 +21,25 @@ public class LevelLayersTreeView : Gtk.Bin
 	private Database _db;
 
 	// Widgets
-	private Gtk.Entry _filter_entry;
+	private EntrySearch _filter_entry;
 	private Gtk.ListStore _list_store;
 	private Gtk.TreeModelFilter _tree_filter;
 	private Gtk.TreeView _tree_view;
 	private Gtk.TreeSelection _tree_selection;
 	private Gtk.ScrolledWindow _scrolled_window;
-	private Gtk.Box _vbox;
 
 	public LevelLayersTreeView(Database db, Level level)
 	{
+		Object(orientation: Gtk.Orientation.VERTICAL, spacing: 0);
+
 		// Data
 		_level = level;
 		_db = db;
 
 		// Widgets
-		_filter_entry = new Gtk.SearchEntry();
+		_filter_entry = new EntrySearch();
 		_filter_entry.set_placeholder_text("Search...");
-		_filter_entry.changed.connect(on_filter_entry_text_changed);
+		_filter_entry.search_changed.connect(on_filter_entry_text_changed);
 
 		_list_store = new Gtk.ListStore(3, typeof(string), typeof(string), typeof(string));
 		_list_store.insert_with_values(null, -1
@@ -73,11 +74,8 @@ public class LevelLayersTreeView : Gtk.Bin
 		_scrolled_window = new Gtk.ScrolledWindow(null, null);
 		_scrolled_window.add(_tree_view);
 
-		_vbox = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
-		_vbox.pack_start(_filter_entry, false, true, 0);
-		_vbox.pack_start(_scrolled_window, true, true, 0);
-
-		this.add(_vbox);
+		this.pack_start(_filter_entry, false, true, 0);
+		this.pack_start(_scrolled_window, true, true, 0);
 
 		this.get_style_context().add_class("level-layers-view");
 	}

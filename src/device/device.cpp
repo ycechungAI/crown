@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -9,7 +9,6 @@
 #include "core/filesystem/filesystem.h"
 #include "core/filesystem/filesystem_apk.h"
 #include "core/filesystem/filesystem_disk.h"
-#include "core/filesystem/path.h"
 #include "core/json/json_object.inl"
 #include "core/json/sjson.h"
 #include "core/list.inl"
@@ -169,22 +168,22 @@ struct BgfxAllocator : public bx::AllocatorI
 	}
 };
 
-static void device_command_pause(ConsoleServer& /*cs*/, TCPSocket& /*client*/, JsonArray& /*args*/, void* /*user_data*/)
+static void device_command_pause(ConsoleServer& /*cs*/, u32 /*client_id*/, JsonArray& /*args*/, void* /*user_data*/)
 {
 	device()->pause();
 }
 
-static void device_command_unpause(ConsoleServer& /*cs*/, TCPSocket& /*client*/, JsonArray& /*args*/, void* /*user_data*/)
+static void device_command_unpause(ConsoleServer& /*cs*/, u32 /*client_id*/, JsonArray& /*args*/, void* /*user_data*/)
 {
 	device()->unpause();
 }
 
-static void device_command_refresh(ConsoleServer& /*cs*/, TCPSocket& /*client*/, JsonArray& /*args*/, void* /*user_data*/)
+static void device_command_refresh(ConsoleServer& /*cs*/, u32 /*client_id*/, JsonArray& /*args*/, void* /*user_data*/)
 {
 	device()->refresh();
 }
 
-static void device_message_resize(ConsoleServer& /*cs*/, TCPSocket& /*client*/, const char* json, void* /*user_data*/)
+static void device_message_resize(ConsoleServer& /*cs*/, u32 /*client_id*/, const char* json, void* /*user_data*/)
 {
 	TempAllocator256 ta;
 	JsonObject obj(ta);
@@ -196,6 +195,11 @@ static void device_message_resize(ConsoleServer& /*cs*/, TCPSocket& /*client*/, 
 	height = sjson::parse_int(obj["height"]);
 
 	device()->_window->resize((u16)width, (u16)height);
+}
+
+static void device_message_frame(ConsoleServer& /*cs*/, u32 /*client_id*/, const char* /*json*/, void* user_data)
+{
+	((Device*)user_data)->_needs_draw = true;
 }
 
 Device::Device(const DeviceOptions& opts, ConsoleServer& cs)
@@ -220,6 +224,7 @@ Device::Device(const DeviceOptions& opts, ConsoleServer& cs)
 	, _height(0)
 	, _quit(false)
 	, _paused(false)
+	, _needs_draw(true)
 {
 	list::init_head(_worlds);
 }
@@ -285,6 +290,7 @@ void Device::run()
 	_console_server->register_command_name("unpause", "Resume the engine", device_command_unpause, this);
 	_console_server->register_command_name("refresh", "Reload all changed resources", device_command_refresh, this);
 	_console_server->register_message_type("resize", device_message_resize, this);
+	_console_server->register_message_type("frame", device_message_frame, this);
 
 	_console_server->listen(_options._console_port, _options._wait_console);
 
@@ -425,13 +431,15 @@ void Device::run()
 	tool_init();
 #endif
 
-	logi(DEVICE, "Initialized in %.2fs", time::seconds(time::now() - run_t0));
+	logi(DEVICE, "Initialized in " TIME_FMT, time::seconds(time::now() - run_t0));
 
 	_lua_environment->call_global("init");
 
 	u16 old_width = _width;
 	u16 old_height = _height;
 	s64 time_last = time::now();
+
+	_needs_draw = !_options._pumped;
 
 	while (!process_events(_boot_config.vsync) && !_quit)
 	{
@@ -440,7 +448,11 @@ void Device::run()
 		time_last = time;
 
 		profiler_globals::clear();
-		_console_server->update();
+		_console_server->execute_message_handlers(_options._pumped);
+
+		if (CE_UNLIKELY(!_needs_draw))
+			continue;
+		_needs_draw = !_options._pumped;
 
 		RECORD_FLOAT("device.dt", dt);
 		RECORD_FLOAT("device.fps", 1.0f/dt);
@@ -452,7 +464,7 @@ void Device::run()
 			_pipeline->reset(_width, _height);
 		}
 
-		if (!_paused)
+		if (CE_LIKELY(!_paused))
 		{
 			_resource_manager->complete_requests();
 
@@ -483,6 +495,8 @@ void Device::run()
 
 #if CROWN_TOOLS
 		tool_update(dt);
+#else
+		_pipeline->render(*_shader_manager, STRING_ID_32("blit", 0xc04ce9f7), VIEW_BLIT, _width, _height);
 #endif
 
 		bgfx::frame();
@@ -554,11 +568,12 @@ void Device::render(World& world, UnitId camera_unit)
 		? (f32)_width/(f32)_height
 		: _boot_config.aspect_ratio
 		);
-	world.camera_set_aspect(camera_unit, aspect_ratio);
-	world.camera_set_viewport_metrics(camera_unit, 0, 0, _width, _height);
+	CameraInstance camera = world.camera_instance(camera_unit);
+	world.camera_set_aspect(camera, aspect_ratio);
+	world.camera_set_viewport_metrics(camera, 0, 0, _width, _height);
 
-	const Matrix4x4 view = world.camera_view_matrix(camera_unit);
-	const Matrix4x4 proj = world.camera_projection_matrix(camera_unit);
+	const Matrix4x4 view = world.camera_view_matrix(camera);
+	const Matrix4x4 proj = world.camera_projection_matrix(camera);
 
 	const bgfx::Caps* caps = bgfx::getCaps();
 	f32 bx_ortho[16];
@@ -627,12 +642,9 @@ void Device::render(World& world, UnitId camera_unit)
 	bgfx::touch(VIEW_DEBUG);
 	bgfx::touch(VIEW_GUI);
 	bgfx::touch(VIEW_GRAPH);
+	bgfx::touch(VIEW_BLIT);
 
 	world.render(view);
-
-#if !CROWN_TOOLS
-	_pipeline->render(*_shader_manager, STRING_ID_32("blit", 0xc04ce9f7), 0, _width, _height);
-#endif // CROWN_TOOLS
 }
 
 World* Device::create_world()
@@ -732,8 +744,8 @@ void Device::refresh()
 				sjson::parse_string(resource, list[i]);
 				logi(DEVICE, "%s", resource.c_str());
 
-				const char* type = path::extension(resource.c_str());
-				const u32 len = u32(type - resource.c_str() - 1);
+				const char* type = resource_type(resource.c_str());
+				const u32 len = resource_name_length(type, resource.c_str());
 
 				StringId64 resource_type(type);
 				StringId64 resource_name(resource.c_str(), len);

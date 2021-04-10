@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -55,7 +55,7 @@ struct FileDisk : public File
 			, (mode == FileOpenMode::READ) ? GENERIC_READ : GENERIC_WRITE
 			, 0
 			, NULL
-			, OPEN_ALWAYS
+			, (mode == FileOpenMode::READ) ? OPEN_EXISTING : CREATE_ALWAYS
 			, FILE_ATTRIBUTE_NORMAL
 			, NULL
 			);

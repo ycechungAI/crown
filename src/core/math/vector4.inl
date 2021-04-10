@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -215,6 +215,11 @@ inline Vector3 to_vector3(const Vector4& a)
 	v.z = a.z;
 	return v;
 }
+
+/// Returns a string representing the vector @v.
+/// @note This function is for debugging purposes only and doesn't
+/// output round-trip safe ASCII conversions. Do not use in production.
+const char* to_string(const Vector4& v, char* buf, u32 buf_len);
 
 /// @}
 

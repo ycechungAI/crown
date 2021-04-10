@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+# Copyright (c) 2012-2021 Daniele Bartolini et al.
 # License: https://github.com/dbartolini/crown/blob/master/LICENSE
 #
 
@@ -27,16 +27,25 @@ endif
 GENIE=3rdparty/bx/tools/bin/$(OS)/genie
 MAKE_JOBS=1
 
+# LuaJIT
 NDKABI=$(ANDROID_NDK_ABI)
 NDKDIR=$(ANDROID_NDK_ROOT)
 NDKBIN=$(NDKDIR)/toolchains/llvm/prebuilt/linux-x86_64/bin
 NDKCROSS=$(NDKBIN)/arm-linux-androideabi-
 NDKCC=$(NDKBIN)/armv7a-linux-androideabi$(NDKABI)-clang
+NDKCROSS64=$(NDKBIN)/aarch64-linux-android-
+NDKCC64=$(NDKBIN)/aarch64-linux-android$(NDKABI)-clang
 
 build/android-arm/bin/libluajit.a:
 	$(MAKE) -j$(MAKE_JOBS) -R -C 3rdparty/luajit/src HOST_CC="gcc -m32" CROSS=$(NDKCROSS) STATIC_CC=$(NDKCC) DYNAMIC_CC="$(NDKCC) -fPIC" TARGET_LD=$(NDKCC)
 	mkdir -p build/android-arm/bin
 	cp -r 3rdparty/luajit/src/jit 3rdparty/luajit/src/libluajit.a build/android-arm/bin
+	$(MAKE) -j$(MAKE_JOBS) -R -C 3rdparty/luajit/src clean
+
+build/android-arm64/bin/libluajit.a:
+	$(MAKE) -j$(MAKE_JOBS) -R -C 3rdparty/luajit/src CROSS=$(NDKCROSS64) STATIC_CC=$(NDKCC64) DYNAMIC_CC="$(NDKCC64) -fPIC" TARGET_LD=$(NDKCC64)
+	mkdir -p build/android-arm64/bin
+	cp -r 3rdparty/luajit/src/jit 3rdparty/luajit/src/libluajit.a build/android-arm64/bin
 	$(MAKE) -j$(MAKE_JOBS) -R -C 3rdparty/luajit/src clean
 
 build/linux64/bin/luajit:
@@ -73,6 +82,16 @@ android-arm-release: build/projects/android-arm build/android-arm/bin/libluajit.
 	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/android-arm config=release
 android-arm: android-arm-debug android-arm-development android-arm-release
 
+build/projects/android-arm64:
+	$(GENIE) --file=scripts/genie.lua --with-luajit --compiler=android-arm64 gmake
+android-arm64-debug: build/projects/android-arm64 build/android-arm64/bin/libluajit.a
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/android-arm64 config=debug
+android-arm64-development: build/projects/android-arm64 build/android-arm64/bin/libluajit.a
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/android-arm64 config=development
+android-arm64-release: build/projects/android-arm64 build/android-arm64/bin/libluajit.a
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/android-arm64 config=release
+android-arm64: android-arm64-debug android-arm64-development android-arm64-release
+
 build/linux64/bin/texturec:
 	$(MAKE) -j$(MAKE_JOBS) -R -C 3rdparty/bimg/.build/projects/gmake-linux config=release64 texturec
 	cp -r 3rdparty/bimg/.build/linux64_gcc/bin/texturecRelease $@
@@ -85,11 +104,11 @@ build/projects/linux:
 	$(GENIE) --file=3rdparty/bimg/scripts/genie.lua --with-tools --gcc=linux-gcc gmake
 	$(GENIE) --gfxapi=gl32 --with-luajit --with-tools --compiler=linux-gcc gmake
 linux-debug64: build/projects/linux build/linux64/bin/luajit build/linux64/bin/texturec build/linux64/bin/shaderc
-	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux config=debug64
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux crown config=debug64
 linux-development64: build/projects/linux build/linux64/bin/luajit build/linux64/bin/texturec build/linux64/bin/shaderc
-	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux config=development64
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux crown config=development64
 linux-release64: build/projects/linux build/linux64/bin/luajit
-	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux config=release64
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux crown config=release64
 linux: linux-debug64 linux-development64 linux-release64
 
 build/projects/mingw:
@@ -103,39 +122,41 @@ mingw-release64: build/projects/mingw build/mingw64/bin/luajit.exe
 mingw: mingw-debug64 mingw-development64 mingw-release64
 
 build/windows64/bin/texturec.exe:
-	devenv.com 3rdparty/bimg/.build/projects/vs2017/bimg.sln $(ARG_PREFIX)Build "Release|x64" $(ARG_PREFIX)Project texturec.vcxproj
-	cp -r 3rdparty/bimg/.build/win64_vs2017/bin/texturecRelease.exe $@
+	devenv.com 3rdparty/bimg/.build/projects/vs2019/bimg.sln $(ARG_PREFIX)Build "Release|x64" $(ARG_PREFIX)Project texturec.vcxproj
+	cp -r 3rdparty/bimg/.build/win64_vs2019/bin/texturecRelease.exe $@
 build/windows64/bin/shaderc.exe:
-	devenv.com 3rdparty/bgfx/.build/projects/vs2017/bgfx.sln $(ARG_PREFIX)Build "Release|x64" $(ARG_PREFIX)Project shaderc.vcxproj
-	cp -r 3rdparty/bgfx/.build/win64_vs2017/bin/shadercRelease.exe $@
+	devenv.com 3rdparty/bgfx/.build/projects/vs2019/bgfx.sln $(ARG_PREFIX)Build "Release|x64" $(ARG_PREFIX)Project shaderc.vcxproj
+	cp -r 3rdparty/bgfx/.build/win64_vs2019/bin/shadercRelease.exe $@
 
-build/projects/vs2017:
-	$(GENIE) --file=3rdparty/bgfx/scripts/genie.lua --with-tools vs2017
-	$(GENIE) --file=3rdparty/bimg/scripts/genie.lua --with-tools vs2017
-	$(GENIE) --gfxapi=d3d11 --with-luajit --with-tools --no-level-editor vs2017
-windows-debug64: build/projects/vs2017 build/windows64/bin/luajit.exe build/windows64/bin/texturec.exe build/windows64/bin/shaderc.exe
-	devenv.com build/projects/vs2017/crown.sln $(ARG_PREFIX)Build "debug|x64"
-windows-development64: build/projects/vs2017 build/windows64/bin/luajit.exe build/windows64/bin/texturec.exe build/windows64/bin/shaderc.exe
-	devenv.com build/projects/vs2017/crown.sln $(ARG_PREFIX)Build "development|x64"
-windows-release64: build/projects/vs2017 build/windows64/bin/luajit.exe
-	devenv.com build/projects/vs2017/crown.sln $(ARG_PREFIX)Build "release|x64"
+build/projects/vs2019:
+	$(GENIE) --file=3rdparty/bgfx/scripts/genie.lua --with-tools vs2019
+	$(GENIE) --file=3rdparty/bimg/scripts/genie.lua --with-tools vs2019
+	$(GENIE) --gfxapi=d3d11 --with-luajit --with-tools --no-level-editor vs2019
+windows-debug64: build/projects/vs2019 build/windows64/bin/luajit.exe build/windows64/bin/texturec.exe build/windows64/bin/shaderc.exe
+	devenv.com build/projects/vs2019/crown.sln $(ARG_PREFIX)Build "debug|x64"
+windows-development64: build/projects/vs2019 build/windows64/bin/luajit.exe build/windows64/bin/texturec.exe build/windows64/bin/shaderc.exe
+	devenv.com build/projects/vs2019/crown.sln $(ARG_PREFIX)Build "development|x64"
+windows-release64: build/projects/vs2019 build/windows64/bin/luajit.exe
+	devenv.com build/projects/vs2019/crown.sln $(ARG_PREFIX)Build "release|x64"
 
-.PHONY: rebuild-glib-resources
-rebuild-glib-resources:
-	$(MAKE) -j$(MAKE_JOBS) -R -C tools/level_editor/resources rebuild
+level-editor-linux-debug64:
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux level-editor config=debug64
+level-editor-linux-release64:
+	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux level-editor config=release64
 
-tools-linux-debug64: linux-debug64
-	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux level-editor config=debug
-tools-linux-release64: linux-development64
-	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/linux level-editor config=release
+tools-linux-debug64: linux-debug64 level-editor-linux-debug64
+tools-linux-release64: linux-development64 level-editor-linux-release64
 
 tools-windows-debug64: windows-debug64
 tools-windows-release64: windows-development64
 
-tools-mingw-debug64: build/projects/mingw
+level-editor-mingw-debug64: build/projects/mingw
 	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/mingw level-editor config=debug
-tools-mingw-release64: build/projects/mingw
+level-editor-mingw-release64: build/projects/mingw
 	$(MAKE) -j$(MAKE_JOBS) -R -C build/projects/mingw level-editor config=release
+
+tools-mingw-debug64: level-editor-mingw-debug64
+tools-mingw-release64: level-editor-mingw-release64
 
 .PHONY: docs
 docs:
@@ -170,6 +191,10 @@ clean-samples:
 	-@rm -rf samples/00-empty_$(OS)
 	-@rm -rf samples/01-physics_$(OS)
 	-@rm -rf samples/02-animation_$(OS)
+
+.PHONY: codespell
+codespell:
+	codespell docs src tools tools-imgui --skip "Doxyfile.doxygen,*.ttf.h,*.png,docs/_themes"
 
 .PHONY: clean
 clean: clean-samples

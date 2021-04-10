@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -11,7 +11,7 @@
 #include "core/memory/allocator.h"
 #include "core/memory/temp_allocator.inl"
 #include "core/strings/dynamic_string.inl"
-#include "resource/compile_options.h"
+#include "resource/compile_options.inl"
 #include "resource/sound_resource.h"
 
 namespace crown

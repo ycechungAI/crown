@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -20,6 +20,7 @@
 #define VIEW_DEBUG     17
 #define VIEW_GUI      128
 #define VIEW_GRAPH    129
+#define VIEW_BLIT     254
 #define VIEW_IMGUI    255
 
 namespace crown

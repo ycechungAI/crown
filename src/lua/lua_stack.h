@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -155,10 +155,10 @@ struct LuaStack
 	UnitId get_unit(int i);
 
 	///
-	CameraInstance get_camera(int i);
+	CameraInstance get_camera_instance(int i);
 
 	///
-	TransformInstance get_transform(int i);
+	TransformInstance get_transform_instance(int i);
 
 	///
 	MeshInstance get_mesh_instance(int i);
@@ -170,10 +170,13 @@ struct LuaStack
 	LightInstance get_light_instance(int i);
 
 	///
+	StateMachineInstance get_state_machine_instance(int i);
+
+	///
 	Material* get_material(int i);
 
 	///
-	ActorInstance get_actor(int i);
+	ActorInstance get_actor_instance(int i);
 
 	///
 	SoundInstanceId get_sound_instance_id(int i);
@@ -301,7 +304,7 @@ struct LuaStack
 	void push_animation_state_machine(AnimationStateMachine* sm);
 
 	///
-	void push_unit(UnitId id);
+	void push_unit(UnitId unit);
 
 	///
 	void push_camera(CameraInstance i);
@@ -317,6 +320,9 @@ struct LuaStack
 
 	///
 	void push_light_instance(LightInstance i);
+
+	///
+	void push_state_machine_instance(StateMachineInstance i);
 
 	///
 	void push_material(Material* material);

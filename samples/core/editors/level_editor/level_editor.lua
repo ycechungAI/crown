@@ -12,7 +12,83 @@ Colors = Colors or {
 
 Gizmo = Gizmo or {
 	size = 85,
+	axis_fadeout_threshold  = 1.38,
+	axis_hidden_threshold   = 1.52,
+	plane_fadeout_threshold = 1.03,
+	plane_hidden_threshold  = 1.17
 }
+
+function Color4.lerp_alpha(color, alpha)
+	local cr, cg, cb, ca = Quaternion.elements(color)
+	local color_transparent = Quaternion.from_elements(cr, cg, cb, 0)
+	return Color4.lerp(color_transparent, color, alpha)
+end
+
+function dot_alpha(dot, fadeout_threshold, hidden_threshold)
+	local f0 = math.cos(fadeout_threshold)
+	local h0 = math.cos(hidden_threshold)
+	assert(f0 <= 1 and f0 >= 0)
+	assert(h0 <= 1 and h0 >= 0)
+	assert(f0 > h0)
+
+	--           f0
+	--      h0   |
+	--      |    |
+	-- 00000fffff11111
+	--
+	if dot < h0 then -- The axis is parallel to the viewer.
+		return 0
+	elseif dot < f0 then -- The axis is starting to get perpendicular to the viewer.
+		return (dot - h0) / (f0 - h0)
+	end
+
+	-- The axis is perpendicular to the viewer.
+	return 1
+end
+
+function axis_alpha(axis, camera_dir, fadeout_threshold, hidden_threshold)
+	return dot_alpha(1-math.abs(Vector3.dot(axis, camera_dir)), fadeout_threshold, hidden_threshold)
+end
+
+function plane_alpha(axis, camera_dir, fadeout_threshold, hidden_threshold)
+	return dot_alpha(math.abs(Vector3.dot(axis, camera_dir)), fadeout_threshold, hidden_threshold)
+end
+
+function axis_enabled(axis, camera_dir)
+	local alpha = axis_alpha(axis
+		, camera_dir
+		, Gizmo.axis_fadeout_threshold
+		, Gizmo.axis_hidden_threshold
+		)
+	return alpha ~= 0
+end
+
+function axis_color(axis, camera_dir, color)
+	local alpha = axis_alpha(axis
+		, camera_dir
+		, Gizmo.axis_fadeout_threshold
+		, Gizmo.axis_hidden_threshold
+		)
+	return Color4.lerp_alpha(color, alpha)
+end
+
+function plane_enabled(axis, camera_dir)
+	local alpha = plane_alpha(axis
+		, camera_dir
+		, Gizmo.plane_fadeout_threshold
+		, Gizmo.plane_hidden_threshold
+		)
+	return alpha ~= 0
+end
+
+function plane_color(axis, camera_dir, color)
+	local alpha = plane_alpha(axis
+		, camera_dir
+		, Gizmo.plane_fadeout_threshold
+		, Gizmo.plane_hidden_threshold
+		)
+	return Color4.lerp_alpha(color, alpha)
+end
 
 -- From Bitsquid's grid_plane.lua
 function snap_vector(tm, vector, size)
@@ -53,9 +129,12 @@ function draw_grid(lines, tm, center, size, axis, color)
 	elseif axis == "z" then
 		x = Matrix4x4.x(tm)
 		y = Matrix4x4.z(tm)
-	else
+	elseif axis == "xy" then
 		x = Matrix4x4.x(tm)
 		y = Matrix4x4.y(tm)
+	else
+		x = Matrix4x4.x(tm)
+		y = Matrix4x4.z(tm)
 	end
 
 	local cr, cg, cb, ca = Quaternion.elements(color)
@@ -79,6 +158,28 @@ function draw_grid(lines, tm, center, size, axis, color)
 	Device.set_temp_count(nv, nq, nm)
 end
 
+-- From Bitsquid's math.lua
+function line_line(line_a_pt1, line_a_pt2, line_b_pt1, line_b_pt2)
+	local line_a_vector = line_a_pt2 - line_a_pt1
+	local line_b_vector = line_b_pt2 - line_b_pt1
+	local a = Vector3.dot(line_a_vector, line_a_vector)
+	local e = Vector3.dot(line_b_vector, line_b_vector)
+	local b = Vector3.dot(line_a_vector, line_b_vector)
+	local d = a * e - b * b
+
+	if d < 0.001 then
+		-- The lines are parallel. There is no intersection.
+		return nil, nil
+	end
+
+	local r = line_a_pt1 - line_b_pt1
+	local c = Vector3.dot(line_a_vector, r)
+	local f = Vector3.dot(line_b_vector, r)
+	local normalized_distance_along_line_a = (b * f - c * e) / d
+	local normalized_distance_along_line_b = (a * f - b * c) / d
+	return normalized_distance_along_line_a, normalized_distance_along_line_b
+end
+
 function draw_world_origin_grid(lines, size, step)
 	local nv, nq, nm = Device.temp_count()
 
@@ -100,13 +201,14 @@ function draw_world_origin_grid(lines, size, step)
 end
 
 function draw_mesh_obb(render_world, unit_id, lines)
-	local mesh_component = RenderWorld.mesh_instances(render_world, unit_id)
-	local tm, hext = RenderWorld.mesh_obb(render_world, mesh_component)
+	local mesh = RenderWorld.mesh_instance(render_world, unit_id)
+	local tm, hext = RenderWorld.mesh_obb(render_world, mesh)
 	DebugLine.add_obb(lines, tm, hext, Color4(0, 170, 0, 150))
 end
 
 function draw_sprite_obb(render_world, unit_id, lines)
-	local tm, hext = RenderWorld.sprite_obb(render_world, unit_id)
+	local sprite = RenderWorld.sprite_instance(render_world, unit_id)
+	local tm, hext = RenderWorld.sprite_obb(render_world, sprite)
 	DebugLine.add_obb(lines, tm, hext, Color4(0, 170, 0, 150))
 end
 
@@ -243,6 +345,16 @@ function Selection:send_move_objects()
 		}
 end
 
+UnitUtils = UnitUtils or {}
+
+function UnitUtils.freeze(world, unit_id)
+	local pw = World.physics_world(world)
+	local actor = PhysicsWorld.actor_instance(pw, unit_id)
+	if (actor ~= nil) then
+		PhysicsWorld.actor_set_kinematic(pw, actor, true)
+	end
+end
+
 UnitBox = class(UnitBox)
 
 function UnitBox:init(world, id, unit_id, prefab)
@@ -253,12 +365,7 @@ function UnitBox:init(world, id, unit_id, prefab)
 	self._sg = World.scene_graph(world)
 	self._selected = false
 
-	local pw = World.physics_world(world)
-
-	local actor = PhysicsWorld.actor_instances(pw, unit_id)
-	if actor then
-		PhysicsWorld.actor_set_kinematic(pw, actor, true)
-	end
+	UnitUtils.freeze(world, unit_id)
 end
 
 function UnitBox:id()
@@ -278,27 +385,33 @@ function UnitBox:destroy()
 end
 
 function UnitBox:local_position()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_position(self._sg, self._unit_id) or Vector3.zero()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_position(self._sg, tr) or Vector3.zero()
 end
 
 function UnitBox:local_rotation()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_rotation(self._sg, self._unit_id) or Quaternion.identity()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_rotation(self._sg, tr) or Quaternion.identity()
 end
 
 function UnitBox:local_scale()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_scale(self._sg, self._unit_id) or Vector3(1, 1, 1)
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_scale(self._sg, tr) or Vector3(1, 1, 1)
 end
 
 function UnitBox:local_pose()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_pose(self._sg, self._unit_id) or Matrix4x4.identity()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_pose(self._sg, tr) or Matrix4x4.identity()
 end
 
 function UnitBox:world_position()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.world_position(self._sg, self._unit_id) or Vector3.zero()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.world_position(self._sg, tr) or Vector3.zero()
 end
 
 function UnitBox:world_rotation()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.world_rotation(self._sg, self._unit_id) or Quaternion.identity()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.world_rotation(self._sg, tr) or Quaternion.identity()
 end
 
 function UnitBox:world_scale()
@@ -306,25 +419,28 @@ function UnitBox:world_scale()
 end
 
 function UnitBox:world_pose()
-	local position = self:world_position()
-	local rotation = self:local_rotation() -- FIXME: this should compute world rotation from local rotations
-	return Matrix4x4.from_quaternion_translation(rotation, position)
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.world_pose(self._sg, tr) or Matrix4x4.identity()
 end
 
 function UnitBox:set_local_position(pos)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_position(self._sg, self._unit_id, pos) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_position(self._sg, tr, pos) end
 end
 
 function UnitBox:set_local_rotation(rot)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_rotation(self._sg, self._unit_id, rot) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_rotation(self._sg, tr, rot) end
 end
 
 function UnitBox:set_local_scale(scale)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_scale(self._sg, self._unit_id, scale) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_scale(self._sg, tr, scale) end
 end
 
 function UnitBox:set_local_pose(pose)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_pose(self._sg, self._unit_id, pose) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_pose(self._sg, tr, pose) end
 end
 
 function UnitBox:on_selected(selected)
@@ -333,14 +449,14 @@ end
 
 function UnitBox:raycast(pos, dir)
 	local rw = LevelEditor._rw
-	local mesh_component = RenderWorld.mesh_instances(rw, self._unit_id)
-	if mesh_component then
-		return RenderWorld.mesh_cast_ray(rw, mesh_component, pos, dir)
+	local mesh = RenderWorld.mesh_instance(rw, self._unit_id)
+	if mesh then
+		return RenderWorld.mesh_cast_ray(rw, mesh, pos, dir)
 	end
 
-	local sprite_component = RenderWorld.sprite_instances(rw, self._unit_id)
-	if sprite_component then
-		return RenderWorld.sprite_cast_ray(rw, self._unit_id, pos, dir)
+	local sprite = RenderWorld.sprite_instance(rw, self._unit_id)
+	if sprite then
+		return RenderWorld.sprite_cast_ray(rw, sprite, pos, dir)
 	end
 
 	return -1.0
@@ -348,18 +464,17 @@ end
 
 function UnitBox:draw()
 	if self._selected then
-		-- Draw lights
-		local lights = RenderWorld.light_instances(LevelEditor._rw, self._unit_id)
-		if lights ~= nil then
-			RenderWorld.light_debug_draw(LevelEditor._rw, self._unit_id, LevelEditor._lines)
+		local light = RenderWorld.light_instance(LevelEditor._rw, self._unit_id)
+		if light then
+			RenderWorld.light_debug_draw(LevelEditor._rw, light, LevelEditor._lines)
 		end
 
-		local mesh_component = RenderWorld.mesh_instances(LevelEditor._rw, self._unit_id)
-		if mesh_component then
+		local mesh = RenderWorld.mesh_instance(LevelEditor._rw, self._unit_id)
+		if mesh then
 			draw_mesh_obb(LevelEditor._rw, self._unit_id, LevelEditor._lines)
 		end
 
-		local sprite = RenderWorld.sprite_instances(LevelEditor._rw, self._unit_id)
+		local sprite = RenderWorld.sprite_instance(LevelEditor._rw, self._unit_id)
 		if sprite then
 			draw_sprite_obb(LevelEditor._rw, self._unit_id, LevelEditor._lines)
 		end
@@ -367,31 +482,34 @@ function UnitBox:draw()
 end
 
 function UnitBox:set_light(type, range, intensity, angle, color)
-	RenderWorld.light_set_type(LevelEditor._rw, self._unit_id, type)
-	RenderWorld.light_set_color(LevelEditor._rw, self._unit_id, color)
-	RenderWorld.light_set_range(LevelEditor._rw, self._unit_id, range)
-	RenderWorld.light_set_intensity(LevelEditor._rw, self._unit_id, intensity)
-	RenderWorld.light_set_spot_angle(LevelEditor._rw, self._unit_id, angle)
+	local light = RenderWorld.light_instance(LevelEditor._rw, self._unit_id)
+	RenderWorld.light_set_type(LevelEditor._rw, light, type)
+	RenderWorld.light_set_color(LevelEditor._rw, light, color)
+	RenderWorld.light_set_range(LevelEditor._rw, light, range)
+	RenderWorld.light_set_intensity(LevelEditor._rw, light, intensity)
+	RenderWorld.light_set_spot_angle(LevelEditor._rw, light, angle)
 end
 
 function UnitBox:set_mesh(instance_id, material, visible)
-	local mesh_component = RenderWorld.mesh_instances(LevelEditor._rw, self._unit_id)
-	RenderWorld.mesh_set_material(LevelEditor._rw, mesh_component, material)
-	RenderWorld.mesh_set_visible(LevelEditor._rw, mesh_component, visible)
+	local mesh = RenderWorld.mesh_instance(LevelEditor._rw, self._unit_id)
+	RenderWorld.mesh_set_material(LevelEditor._rw, mesh, material)
+	RenderWorld.mesh_set_visible(LevelEditor._rw, mesh, visible)
 end
 
 function UnitBox:set_sprite(material, layer, depth, visible)
-	RenderWorld.sprite_set_material(LevelEditor._rw, self._unit_id, material)
-	RenderWorld.sprite_set_layer(LevelEditor._rw, self._unit_id, layer)
-	RenderWorld.sprite_set_depth(LevelEditor._rw, self._unit_id, depth)
-	RenderWorld.sprite_set_visible(LevelEditor._rw, self._unit_id, visible)
+	local sprite = RenderWorld.sprite_instance(LevelEditor._rw, self._unit_id)
+	RenderWorld.sprite_set_material(LevelEditor._rw, sprite, material)
+	RenderWorld.sprite_set_layer(LevelEditor._rw, sprite, layer)
+	RenderWorld.sprite_set_depth(LevelEditor._rw, sprite, depth)
+	RenderWorld.sprite_set_visible(LevelEditor._rw, sprite, visible)
 end
 
 function UnitBox:set_camera(projection, fov, near_range, far_range)
-	World.camera_set_projection_type(LevelEditor._world, self._unit_id, projection)
-	World.camera_set_fov(LevelEditor._world, self._unit_id, fov)
-	World.camera_set_near_clip_distance(LevelEditor._world, self._unit_id, near_range)
-	World.camera_set_far_clip_distance(LevelEditor._world, self._unit_id, far_range)
+	local camera = World.camera_instance(LevelEditor._world, self._unit_id)
+	World.camera_set_projection_type(LevelEditor._world, camera, projection)
+	World.camera_set_fov(LevelEditor._world, camera, fov)
+	World.camera_set_near_clip_distance(LevelEditor._world, camera, near_range)
+	World.camera_set_far_clip_distance(LevelEditor._world, camera, far_range)
 end
 
 SoundObject = class(SoundObject)
@@ -425,27 +543,33 @@ function SoundObject:name()
 end
 
 function SoundObject:local_position()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_position(self._sg, self._unit_id) or Vector3.zero()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_position(self._sg, tr) or Vector3.zero()
 end
 
 function SoundObject:local_rotation()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_rotation(self._sg, self._unit_id) or Quaternion.identity()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_rotation(self._sg, tr) or Quaternion.identity()
 end
 
 function SoundObject:local_scale()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_scale(self._sg, self._unit_id) or Vector3(1, 1, 1)
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_scale(self._sg, tr) or Vector3(1, 1, 1)
 end
 
 function SoundObject:local_pose()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.local_pose(self._sg, self._unit_id) or Matrix4x4.identity()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.local_pose(self._sg, tr) or Matrix4x4.identity()
 end
 
 function SoundObject:world_position()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.world_position(self._sg, self._unit_id) or Vector3.zero()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.world_position(self._sg, tr) or Vector3.zero()
 end
 
 function SoundObject:world_rotation()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.world_rotation(self._sg, self._unit_id) or Quaternion.identity()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.world_rotation(self._sg, tr) or Quaternion.identity()
 end
 
 function SoundObject:world_scale()
@@ -453,23 +577,28 @@ function SoundObject:world_scale()
 end
 
 function SoundObject:world_pose()
-	return SceneGraph.instances(self._sg, self._unit_id) and SceneGraph.world_pose(self._sg, self._unit_id) or Matrix4x4.identity()
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	return tr and SceneGraph.world_pose(self._sg, tr) or Matrix4x4.identity()
 end
 
 function SoundObject:set_local_position(pos)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_position(self._sg, self._unit_id, pos) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_position(self._sg, tr, pos) end
 end
 
 function SoundObject:set_local_rotation(rot)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_rotation(self._sg, self._unit_id, rot) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_rotation(self._sg, tr, rot) end
 end
 
 function SoundObject:set_local_scale(scale)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_scale(self._sg, self._unit_id, scale) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_scale(self._sg, tr, scale) end
 end
 
 function SoundObject:set_local_pose(pose)
-	if SceneGraph.instances(self._sg, self._unit_id) then SceneGraph.set_local_pose(self._sg, self._unit_id, pose) end
+	local tr = SceneGraph.instance(self._sg, self._unit_id)
+	if tr then SceneGraph.set_local_pose(self._sg, tr, pose) end
 end
 
 function SoundObject:on_selected(selected)
@@ -478,9 +607,9 @@ end
 
 function SoundObject:raycast(pos, dir)
 	local rw = LevelEditor._rw
-	local mesh_component = RenderWorld.mesh_instances(rw, self._unit_id)
-	local tm, hext = RenderWorld.mesh_obb(rw, mesh_component)
-	return RenderWorld.mesh_cast_ray(rw, mesh_component, pos, dir)
+	local mesh = RenderWorld.mesh_instance(rw, self._unit_id)
+	local tm, hext = RenderWorld.mesh_obb(rw, mesh)
+	return RenderWorld.mesh_cast_ray(rw, mesh, pos, dir)
 end
 
 function SoundObject:draw()
@@ -540,7 +669,10 @@ function PlaceTool:init()
 	-- Data
 	self._position       = Vector3Box(Vector3.zero())
 	self._placeable_type = nil
-	self._placeable      = nil
+	self._placeable_name = nil
+	self._placeable_id   = nil
+	self._spawn_height       = 0 -- The spawn height at the time of "idle" -> "placing" transition.
+	self._spawn_point_height = 0 -- The spawn point height at the time of "idle" -> "placing" transition.
 
 	self:set_state("idle")
 end
@@ -567,42 +699,70 @@ function PlaceTool:set_position(pos)
 end
 
 function PlaceTool:set_placeable(placeable_type, name)
-	assert(placeable_type == "unit" or placeable_type == "sound")
+	assert(placeable_type == nil or placeable_type == "unit" or placeable_type == "sound")
 	self._placeable_type = placeable_type
-	self._placeable = name
+	self._placeable_name = name
+
+	if (self._placeable_id ~= nil) then
+		World.destroy_unit(LevelEditor._world, self._placeable_id)
+		self._placeable_id = nil
+	end
 end
 
 function PlaceTool:update(dt, x, y)
+	if self._placeable_type == nil then
+		return
+	end
+
 	local pos = self:position()
 	LevelEditor:draw_grid(Matrix4x4.from_translation(pos), self:position(), LevelEditor._grid.size, "z")
 
-	if self._placeable ~= nil then
-		local lines = LevelEditor._lines
-		local tm = Matrix4x4.from_translation(pos)
+	-- Create placeable preview if it does not exist yet
+	if self._placeable_id == nil then
 		if self._placeable_type == "unit" then
-			DebugLine.add_unit(lines, tm, self._placeable, Color4.green())
+			self._placeable_id = World.spawn_unit(LevelEditor._world, self._placeable_name, pos)
 		elseif self._placeable_type == "sound" then
-			DebugLine.add_unit(lines, tm, "core/units/sound", Color4.green())
+			self._placeable_id = World.spawn_unit(LevelEditor._world, "core/units/sound", pos)
+		end
+
+		UnitUtils.freeze(LevelEditor._world, self._placeable_id)
+	end
+
+	-- Update placeable position
+	if (self._placeable_id ~= nil) then
+		local sg = World.scene_graph(LevelEditor._world)
+		local tr = SceneGraph.instance(sg, self._placeable_id)
+		if tr ~= nil then
+			SceneGraph.set_local_position(sg, tr, pos)
 		end
 	end
 end
 
 function PlaceTool:mouse_move(x, y)
 	if self:is_idle() then
-		local target = LevelEditor:find_spawn_point(x, y)
-		self:set_position(target)
-	end
-
-	if self:is_placing() then
+		local spawn_point = LevelEditor:find_spawn_point(x, y)
+		self._spawn_height = LevelEditor._spawn_height
+		self._spawn_point_height = spawn_point.y
+		self:set_position(spawn_point)
+	elseif self:is_placing() then
 		local pos, dir = LevelEditor:camera():camera_ray(x, y)
-		local point = self:position()
+		local gizmo_pos = self:position()
+		local point = Vector3(gizmo_pos.x, self._spawn_height, gizmo_pos.y)
 		local normal = Vector3.up()
 
 		local t = Math.ray_plane_intersection(pos, dir, point, normal)
 		if t ~= -1.0 then
-			local target = pos + dir * t
-			target = LevelEditor:snap(Matrix4x4.identity(), target) or target
-			self:set_position(target)
+			local spawn_point = pos + dir * t
+			spawn_point = LevelEditor:snap(Matrix4x4.identity(), spawn_point) or spawn_point
+			spawn_point.y = self._spawn_point_height
+			if LevelEditor.debug then
+				DebugLine.add_sphere(LevelEditor._lines_no_depth
+					, spawn_point
+					, 0.1
+					, Color4.blue()
+					)
+			end
+			self:set_position(spawn_point)
 		end
 	end
 end
@@ -614,15 +774,15 @@ end
 function PlaceTool:mouse_up(x, y)
 	self:set_state("idle")
 
-	if self._placeable == nil then
+	if self._placeable_name == nil then
 		return
 	end
 
 	local level_object = nil
 	if self._placeable_type == "unit" then
 		local guid = Device.guid()
-		local unit = World.spawn_unit(LevelEditor._world, self._placeable, self:position())
-		level_object = UnitBox(LevelEditor._world, guid, unit, self._placeable)
+		local unit = World.spawn_unit(LevelEditor._world, self._placeable_name, self:position())
+		level_object = UnitBox(LevelEditor._world, guid, unit, self._placeable_name)
 
 		Device.console_send { type = "unit_spawned"
 			, id = guid
@@ -635,7 +795,7 @@ function PlaceTool:mouse_up(x, y)
 		LevelEditor._objects[guid] = level_object
 	elseif self._placeable_type == "sound" then
 		local guid = Device.guid()
-		level_object = SoundObject(LevelEditor._world, guid, self._placeable, 10.0, 1.0, false)
+		level_object = SoundObject(LevelEditor._world, guid, self._placeable_name, 10.0, 1.0, false)
 		level_object:set_local_position(self:position())
 		level_object:set_local_rotation(Quaternion.identity())
 
@@ -656,6 +816,13 @@ function PlaceTool:mouse_up(x, y)
 	LevelEditor._selection:clear()
 	LevelEditor._selection:add(level_object:id())
 	LevelEditor._selection:send()
+end
+
+function PlaceTool:on_leave()
+	if self._placeable_id ~= nil then
+		World.destroy_unit(LevelEditor._world, self._placeable_id)
+		self._placeable_id = nil
+	end
 end
 
 MoveTool = class(MoveTool)
@@ -731,6 +898,7 @@ function MoveTool:axis_selected()
 		or self._selected == "xy"
 		or self._selected == "yz"
 		or self._selected == "xz"
+		or self._selected == "xyz"
 end
 
 function MoveTool:drag_start()
@@ -745,23 +913,27 @@ function MoveTool:drag_axis()
 end
 
 function MoveTool:drag_plane()
-	if self._selected == "xy" then return self:position(),  Vector3.cross(self:x_axis(), self:y_axis()) end
-	if self._selected == "yz" then return self:position(),  Vector3.cross(self:y_axis(), self:z_axis()) end
-	if self._selected == "xz" then return self:position(), -Vector3.cross(self:x_axis(), self:z_axis()) end
+	if self._selected == "xy" then return self:drag_start(),  Vector3.cross(self:x_axis(), self:y_axis()) end
+	if self._selected == "yz" then return self:drag_start(),  Vector3.cross(self:y_axis(), self:z_axis()) end
+	if self._selected == "xz" then return self:drag_start(), -Vector3.cross(self:x_axis(), self:z_axis()) end
+	if self._selected == "xyz" then return self:drag_start(), -Matrix4x4.z(LevelEditor:camera():local_pose()) end
 	return nil, nil
 end
 
 function MoveTool:update(dt, x, y)
 	local selected = LevelEditor._selection:last_selected_object()
+	if not selected then
+		return
+	end
 
 	-- Update gizmo pose
-	if selected then
-		self:set_pose(LevelEditor._reference_system == "world" and Matrix4x4.from_translation(selected:local_position()) or selected:world_pose())
-	end
+	self:set_pose(LevelEditor._reference_system == "world" and Matrix4x4.from_translation(selected:local_position()) or selected:world_pose())
 
 	local tm = self:pose()
 	local p  = self:position()
 	local l  = LevelEditor:camera():screen_length_to_world_length(self:position(), Gizmo.size)
+	local cam_z = Matrix4x4.z(LevelEditor:camera():local_pose())
+	local cam_to_gizmo = Vector3.normalize(p-Matrix4x4.translation(LevelEditor:camera():local_pose()))
 
 	local function transform(tm, offset)
 		local m = Matrix4x4.copy(tm)
@@ -770,70 +942,54 @@ function MoveTool:update(dt, x, y)
 	end
 
 	-- Select axis
-	if self:is_idle() and selected then
+	if self:is_idle() then
 		local pos, dir = LevelEditor:camera():camera_ray(x, y)
 
 		local axis = {
-			Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.5, 0.0, 0.0)), l * Vector3(0.50, 0.07, 0.07)),
-			Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.0, 0.5, 0.0)), l * Vector3(0.07, 0.50, 0.07)),
-			Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.0, 0.0, 0.5)), l * Vector3(0.07, 0.07, 0.50)),
-			Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.4, 0.4, 0.0)), l * Vector3(0.1, 0.1, 0.0)),
-			Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.0, 0.4, 0.4)), l * Vector3(0.0, 0.1, 0.1)),
-			Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.4, 0.0, 0.4)), l * Vector3(0.1, 0.0, 0.1))
+			axis_enabled(self:x_axis(), cam_to_gizmo) and Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.30+(1.1-0.30)/2, 0   , 0   )), l * Vector3((1.1-0.30)/2, 0.07, 0.07)) or -1,
+			axis_enabled(self:y_axis(), cam_to_gizmo) and Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0   , 0.30+(1.1-0.30)/2, 0   )), l * Vector3(0.07, (1.1-0.30)/2, 0.07)) or -1,
+			axis_enabled(self:z_axis(), cam_to_gizmo) and Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0   , 0   , 0.30+(1.1-0.30)/2)), l * Vector3(0.07, 0.07, (1.1-0.30)/2)) or -1,
+			plane_enabled(self:z_axis(), cam_to_gizmo) and Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.4, 0.4, 0.0)), l * Vector3(0.1, 0.1, 0.0)) or -1,
+			plane_enabled(self:x_axis(), cam_to_gizmo) and Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.0, 0.4, 0.4)), l * Vector3(0.0, 0.1, 0.1)) or -1,
+			plane_enabled(self:y_axis(), cam_to_gizmo) and Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0.4, 0.0, 0.4)), l * Vector3(0.1, 0.0, 0.1)) or -1,
+			Math.ray_disc_intersection(pos, dir, self:position(), l * 2*0.07, -cam_z)
 		}
 
 		local nearest = nil
-		local t = math.huge
-		local axis_names = { "x", "y", "z", "xy", "yz", "xz" }
-		for i, name in ipairs(axis_names) do
-			if axis[i] ~= -1.0 and axis[i] < t then
-				nearest = i
-				t = axis[i]
+		local dist = math.huge
+		local axis_names = { "x", "y", "z", "xy", "yz", "xz", "xyz" }
+		for ii, name in ipairs(axis_names) do
+			if axis[ii] ~= -1.0 and axis[ii] < dist then
+				nearest = ii
+				dist = axis[ii]
 			end
 		end
 		self._selected = nearest and axis_names[nearest] or nil
 	end
 
 	-- Drawing
-	if selected then
-		local lines = LevelEditor._lines_no_depth
-		DebugLine.add_line(lines, p, p + l * Matrix4x4.x(tm), self:is_axis_selected("x") and Colors.axis_selected() or Colors.axis_x())
-		DebugLine.add_line(lines, p, p + l * Matrix4x4.y(tm), self:is_axis_selected("y") and Colors.axis_selected() or Colors.axis_y())
-		DebugLine.add_line(lines, p, p + l * Matrix4x4.z(tm), self:is_axis_selected("z") and Colors.axis_selected() or Colors.axis_z())
-		DebugLine.add_obb(lines, transform(tm, l * Vector3(0.4, 0.4, 0.0)), l * Vector3(0.1, 0.1, 0.0), self:is_axis_selected("xy") and Colors.axis_selected() or Colors.axis_x())
-		DebugLine.add_obb(lines, transform(tm, l * Vector3(0.0, 0.4, 0.4)), l * Vector3(0.0, 0.1, 0.1), self:is_axis_selected("yz") and Colors.axis_selected() or Colors.axis_y())
-		DebugLine.add_obb(lines, transform(tm, l * Vector3(0.4, 0.0, 0.4)), l * Vector3(0.1, 0.0, 0.1), self:is_axis_selected("xz") and Colors.axis_selected() or Colors.axis_z())
+	local lines = LevelEditor._lines_no_depth
+	-- Draw axes.
+	DebugLine.add_line(lines, p + 0.30*l*Matrix4x4.x(tm), p + l*Matrix4x4.x(tm), axis_color(self:x_axis(), cam_to_gizmo, self:is_axis_selected("x") and Colors.axis_selected() or Colors.axis_x()))
+	DebugLine.add_line(lines, p + 0.30*l*Matrix4x4.y(tm), p + l*Matrix4x4.y(tm), axis_color(self:y_axis(), cam_to_gizmo, self:is_axis_selected("y") and Colors.axis_selected() or Colors.axis_y()))
+	DebugLine.add_line(lines, p + 0.30*l*Matrix4x4.z(tm), p + l*Matrix4x4.z(tm), axis_color(self:z_axis(), cam_to_gizmo, self:is_axis_selected("z") and Colors.axis_selected() or Colors.axis_z()))
+	-- Draw axis tips.
+	DebugLine.add_cone(lines, p + Matrix4x4.x(tm) * l * 0.9, p + Matrix4x4.x(tm) * l * 1.1, l * 0.05, axis_color(self:x_axis(), cam_to_gizmo, self:is_axis_selected("x") and Colors.axis_selected() or Colors.axis_x()))
+	DebugLine.add_cone(lines, p + Matrix4x4.y(tm) * l * 0.9, p + Matrix4x4.y(tm) * l * 1.1, l * 0.05, axis_color(self:y_axis(), cam_to_gizmo, self:is_axis_selected("y") and Colors.axis_selected() or Colors.axis_y()))
+	DebugLine.add_cone(lines, p + Matrix4x4.z(tm) * l * 0.9, p + Matrix4x4.z(tm) * l * 1.1, l * 0.05, axis_color(self:z_axis(), cam_to_gizmo, self:is_axis_selected("z") and Colors.axis_selected() or Colors.axis_z()))
+	-- Draw plane handles.
+	DebugLine.add_obb(lines, transform(tm, l * Vector3(0.4, 0.4, 0.0)), l * Vector3(0.1, 0.1, 0.0), plane_color(self:z_axis(), cam_to_gizmo, self._selected == "xy" and Colors.axis_selected() or Colors.axis_x()))
+	DebugLine.add_obb(lines, transform(tm, l * Vector3(0.0, 0.4, 0.4)), l * Vector3(0.0, 0.1, 0.1), plane_color(self:x_axis(), cam_to_gizmo, self._selected == "yz" and Colors.axis_selected() or Colors.axis_y()))
+	DebugLine.add_obb(lines, transform(tm, l * Vector3(0.4, 0.0, 0.4)), l * Vector3(0.1, 0.0, 0.1), plane_color(self:y_axis(), cam_to_gizmo, self._selected == "xz" and Colors.axis_selected() or Colors.axis_z()))
+	-- Draw camera plane handle.
+	DebugLine.add_circle(lines, p, l * 2*0.07, -cam_z, self:is_axis_selected("xyz") and Colors.axis_selected() or Colors.grid())
 
-		if self:axis_selected() then
-			DebugLine.add_sphere(lines, self:drag_start(), 0.05, Color4.green())
-			LevelEditor:draw_grid(LevelEditor:grid_pose(self:pose()), self:position(), LevelEditor._grid.size, self._selected)
-		end
+	if self:axis_selected() then
+		LevelEditor:draw_grid(LevelEditor:grid_pose(self:pose()), self:position(), LevelEditor._grid.size, self._selected)
 	end
 end
 
 function MoveTool:drag_offset(x, y)
-	-- From Bitsquid's math.lua
-	function line_line(line_a_pt1, line_a_pt2, line_b_pt1, line_b_pt2)
-		local line_a_vector = line_a_pt2 - line_a_pt1
-		local line_b_vector = line_b_pt2 - line_b_pt1
-		local a = Vector3.dot(line_a_vector, line_a_vector)
-		local e = Vector3.dot(line_b_vector, line_b_vector)
-		local b = Vector3.dot(line_a_vector, line_b_vector)
-		local d = a * e - b * b
-
-		if d < 0.001 then
-			-- The lines are parallel. There is no intersection.
-			return nil, nil
-		end
-
-		local r = line_a_pt1 - line_b_pt1
-		local c = Vector3.dot(line_a_vector, r)
-		local f = Vector3.dot(line_b_vector, r)
-		local normalized_distance_along_line_a = (b * f - c * e) / d
-		local normalized_distance_along_line_b = (a * f - b * c) / d
-		return normalized_distance_along_line_a, normalized_distance_along_line_b
-	end
-
 	local pos, dir = LevelEditor:camera():camera_ray(x, y)
 	local drag_axis = self:drag_axis()
 	local drag_plane = self:drag_plane()
@@ -871,9 +1027,7 @@ end
 function MoveTool:mouse_up(x, y)
 	if self:is_idle() then
 		LevelEditor.select_tool:mouse_up(x, y)
-	end
-
-	if self:is_moving() then
+	elseif self:is_moving() then
 		LevelEditor._selection:send_move_objects()
 	end
 
@@ -887,9 +1041,7 @@ end
 function MoveTool:mouse_move(x, y)
 	if self:is_idle() then
 		LevelEditor.select_tool:mouse_move(x, y)
-	end
-
-	if self:is_moving() then
+	elseif self:is_moving() then
 		local delta = self:drag_offset(x, y) - self._drag_offset:unbox()
 		local drag_vector = Vector3.zero()
 
@@ -906,11 +1058,14 @@ function MoveTool:mouse_move(x, y)
 			drag_vector = drag_vector + axis*contribution
 		end
 
-		-- FIXME Move selected objects
+		-- Apply translation to selected objects.
 		local objects = LevelEditor._selection:objects()
-		for k, v in pairs(objects) do
-			local pos = Matrix4x4.translation(self._poses_start[k]:unbox()) + drag_vector
-			v:set_local_position(LevelEditor:snap(self:pose(), pos) or pos)
+		for ii, obj in pairs(objects) do
+			local obj_position = Matrix4x4.translation(self._poses_start[ii]:unbox())
+			local gizmo_position = self:position()
+			local gizmo_obj_distance = obj_position - gizmo_position
+			local new_gizmo_position = gizmo_position + drag_vector
+			obj:set_local_position((LevelEditor:snap(self:pose(), new_gizmo_position) or new_gizmo_position) + gizmo_obj_distance)
 		end
 	end
 end
@@ -965,6 +1120,7 @@ function RotateTool:axis_selected()
 	return self._selected == "x"
 		or self._selected == "y"
 		or self._selected == "z"
+		or self._selected == "xyz"
 end
 
 function RotateTool:drag_start()
@@ -975,49 +1131,93 @@ function RotateTool:rotate_normal()
 	if self._selected == "x" then return Quaternion.right(self:rotation()) end
 	if self._selected == "y" then return Quaternion.up(self:rotation()) end
 	if self._selected == "z" then return Quaternion.forward(self:rotation()) end
+	if self._selected == "xyz" then return -Matrix4x4.z(LevelEditor:camera():local_pose()) end
 	return nil
 end
 
 function RotateTool:update(dt, x, y)
 	local selected = LevelEditor._selection:last_selected_object()
+	if not selected then
+		return
+	end
 
 	-- Update gizmo pose
-	if selected then
-		self:set_pose(LevelEditor._reference_system == "world" and Matrix4x4.from_translation(selected:local_position()) or selected:world_pose())
-	end
+	self:set_pose(LevelEditor._reference_system == "world" and Matrix4x4.from_translation(selected:local_position()) or selected:world_pose())
 
 	local tm = self:pose()
 	local p  = self:position()
 	local l  = LevelEditor:camera():screen_length_to_world_length(self:position(), Gizmo.size)
+	local cam_z = Matrix4x4.z(LevelEditor:camera():local_pose())
 
 	-- Select axis
-	if self:is_idle() and selected then
+	if self:is_idle() then
 		local pos, dir = LevelEditor:camera():camera_ray(x, y)
 
 		local axis = {
 			Math.ray_disc_intersection(pos, dir, p, l, Matrix4x4.x(tm)),
 			Math.ray_disc_intersection(pos, dir, p, l, Matrix4x4.y(tm)),
-			Math.ray_disc_intersection(pos, dir, p, l, Matrix4x4.z(tm))
+			Math.ray_disc_intersection(pos, dir, p, l, Matrix4x4.z(tm)),
+			Math.ray_disc_intersection(pos, dir, p, l*1.25, -cam_z)
 		}
 
 		local nearest = nil
-		local t = math.huge
-		local axis_names = { "x", "y", "z" }
-		for i, name in ipairs(axis_names) do
-			if axis[i] ~= -1.0 and axis[i] < t then
-				nearest = i
-				t = axis[i]
+		local dist = math.huge
+		local axis_names = { "x", "y", "z", "xyz" }
+		for ii, name in ipairs(axis_names) do
+			if axis[ii] ~= -1.0 and axis[ii] < dist then
+				nearest = ii
+				dist = axis[ii]
 			end
 		end
 		self._selected = nearest and axis_names[nearest] or nil
 	end
 
+	function DebugLine.add_arc(lines, center, radius, normal, color, segments)
+		if not segments then
+			segments = 36
+		end
+
+		-- Pick a right axis.
+		local right = Vector3(normal.z, normal.z , -normal.x-normal.y)
+		if normal.z ~= 0 and -normal.x ~= normal.y then
+			 right = Vector3(-normal.y-normal.z, normal.x, normal.x)
+		end
+		Vector3.normalize(right)
+
+		local x = right * radius
+		local y = Vector3.cross(right, normal) * radius
+		local step = (2*math.pi) / (segments > 3 and segments or 3)
+		local from = center - y
+
+		local cam_to_center = Vector3.normalize(center-Matrix4x4.translation(LevelEditor:camera():local_pose()))
+
+		for i=0,segments+1 do
+			local t = step * i - (math.pi/2)
+			local to = center + x*math.cos(t) + y*math.sin(t)
+
+			local center_to_vertex = Vector3.normalize(to - center)
+			local ctc_dot_ctv = Vector3.dot(center_to_vertex, cam_to_center)
+			if ctc_dot_ctv <= 0 then
+				DebugLine.add_line(lines, from, to, color)
+			end
+			from = to
+		end
+	end
+
 	-- Drawing
-	if selected then
-		local lines = LevelEditor._lines_no_depth
-		DebugLine.add_circle(lines, p, l, Matrix4x4.x(tm), self._selected == "x" and Colors.axis_selected() or Colors.axis_x())
-		DebugLine.add_circle(lines, p, l, Matrix4x4.y(tm), self._selected == "y" and Colors.axis_selected() or Colors.axis_y())
-		DebugLine.add_circle(lines, p, l, Matrix4x4.z(tm), self._selected == "z" and Colors.axis_selected() or Colors.axis_z())
+	local lines = LevelEditor._lines_no_depth
+	-- Draw major planes handles.
+	DebugLine.add_arc(lines, p, l, Matrix4x4.x(tm), self._selected == "x" and Colors.axis_selected() or Colors.axis_x())
+	DebugLine.add_arc(lines, p, l, Matrix4x4.y(tm), self._selected == "y" and Colors.axis_selected() or Colors.axis_y())
+	DebugLine.add_arc(lines, p, l, Matrix4x4.z(tm), self._selected == "z" and Colors.axis_selected() or Colors.axis_z())
+	-- Draw camera plane handle.
+	DebugLine.add_circle(lines, p, l*1.25, cam_z, self._selected == "xyz" and Colors.axis_selected() or Colors.grid())
+
+
+	if self:is_rotating() then
+		local radius = self._selected == "xyz" and l*1.25 or l
+		DebugLine.add_line(lines, self:position(), self:position() - radius*Vector3.normalize(self:position() - self:drag_start()), Colors.axis_selected())
+		DebugLine.add_line(lines, self:position(), self:position() - radius*Vector3.normalize(self:position() - self:drag_offset(x, y)), Colors.axis_selected())
 	end
 end
 
@@ -1055,9 +1255,7 @@ end
 function RotateTool:mouse_up(x, y)
 	if self:is_idle() then
 		LevelEditor.select_tool:mouse_up(x, y)
-	end
-
-	if self:is_rotating() then
+	elseif self:is_rotating() then
 		LevelEditor._selection:send_move_objects()
 	end
 
@@ -1071,9 +1269,7 @@ end
 function RotateTool:mouse_move(x, y)
 	if self:is_idle() then
 		LevelEditor.select_tool:mouse_move(x, y)
-	end
-
-	if self:is_rotating() then
+	elseif self:is_rotating() then
 		local point_on_plane = self:drag_offset(x, y)
 		local drag_start = self:drag_start()
 		local drag_handle = Vector3.normalize(point_on_plane - self:position())
@@ -1109,12 +1305,6 @@ function RotateTool:mouse_move(x, y)
 			v:set_local_position(Matrix4x4.translation(new_pose))
 			v:set_local_rotation(Matrix4x4.rotation(new_pose))
 		end
-
-		-- Drawing
-		local lines = LevelEditor._lines_no_depth
-		DebugLine.add_sphere(lines, point_on_plane, 0.1, Color4.green())
-		DebugLine.add_line(lines, self:position(), self:position() + Vector3.normalize(drag_start - self:position()), Color4.yellow())
-		DebugLine.add_line(lines, self:position(), self:position() + Vector3.normalize(point_on_plane - self:position()), Color4.yellow())
 	end
 end
 
@@ -1122,11 +1312,13 @@ ScaleTool = class(ScaleTool)
 
 function ScaleTool:init()
 	-- Data
-	self._rotation    = QuaternionBox(Quaternion.identity())
-	self._position    = Vector3Box(Vector3.zero())
-	self._drag_start  = Vector3Box(Vector3.zero())
+	self._rotation    = QuaternionBox(Quaternion.identity()) -- Rotation of the gizmo.
+	self._position    = Vector3Box(Vector3.zero())           -- Position of the gizmo.
 	self._drag_offset = Vector3Box(Vector3.zero())
-	self._selected    = nil
+	self._start_positions = {} -- Initial positions of all selected objects.
+	self._start_scales = {}    -- Initial scales of all selected objects.
+	self._selected    = nil    -- Set of axes that have been selected.
+	self.SCALE_MIN    = 0.01   -- Minimum absolute scale value for any given object.
 	-- States
 	self._state = "idle"
 end
@@ -1159,27 +1351,22 @@ function ScaleTool:z_axis()
 	return Quaternion.forward(self:rotation())
 end
 
-function ScaleTool:drag_start()
-	return self._drag_start:unbox()
-end
-
 function ScaleTool:axis_selected()
 	return self._selected == "x"
 		or self._selected == "y"
 		or self._selected == "z"
+		or self._selected == "xy"
+		or self._selected == "yz"
+		or self._selected == "xz"
 		or self._selected == "xyz"
-end
-
-function ScaleTool:selected_axis()
-	if self._selected == "x"   then return Quaternion.right(self._rotation) end
-	if self._selected == "y"   then return Quaternion.up(self._selected) end
-	if self._selected == "z"   then return Quaternion.forward(self._selected) end
-	if self._selected == "xyz" then return Quaternion.righ(self._selected) end
-	return nil
 end
 
 function ScaleTool:is_idle()
 	return self._state == "idle"
+end
+
+function ScaleTool:is_scaling()
+	return self._state == "scaling"
 end
 
 function ScaleTool:set_state(state)
@@ -1197,131 +1384,196 @@ function ScaleTool:world_pose()
 end
 
 function ScaleTool:update(dt, x, y)
+	local selected = LevelEditor._selection:last_selected_object()
+	if not selected then
+		return
+	end
+
 	local function transform(tm, offset)
 		local m = Matrix4x4.copy(tm)
 		Matrix4x4.set_translation(m, Matrix4x4.transform(tm, offset))
 		return m
 	end
 
-	local selected = LevelEditor._selection:last_selected_object()
-	if not selected then return end
-
 	self:set_pose(selected:world_pose())
 
-	local l = LevelEditor:camera():screen_length_to_world_length(self:position(), Gizmo.size)
+	local tm = self:world_pose()
+	local p = self:position()
+	local axis_len = LevelEditor:camera():screen_length_to_world_length(self:position(), Gizmo.size)
+	local cam_z = Matrix4x4.z(LevelEditor:camera():local_pose())
+	local cam_to_gizmo = Vector3.normalize(p-Matrix4x4.translation(LevelEditor:camera():local_pose()))
 
-	-- Select axis
 	if self:is_idle() then
-		local tm = self:world_pose()
-
 		-- Select axis
 		local pos, dir = LevelEditor:camera():camera_ray(x, y)
 
-		self._selected = "none"
-		if Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(1, 0, 0)), l * Vector3(0.1, 0.1, 0.1)) ~= -1.0 then self._selected = "x" end
-		if Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0, 1, 0)), l * Vector3(0.1, 0.1, 0.1)) ~= -1.0 then self._selected = "y" end
-		if Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3(0, 0, 1)), l * Vector3(0.1, 0.1, 0.1)) ~= -1.0 then self._selected = "z" end
-		if Math.ray_obb_intersection(pos, dir, transform(tm, l * Vector3.zero()), l * Vector3(0.1, 0.1, 0.1)) ~= -1.0 then self._selected = "xyz" end
+		local axis = {
+			{ axis_enabled(self:x_axis(), cam_to_gizmo) , 1, Math.ray_obb_intersection(pos, dir, transform(tm, axis_len*Vector3(0.5, 0.0, 0.0)), axis_len*Vector3(0.50, 0.07, 0.07))    },
+			{ axis_enabled(self:y_axis(), cam_to_gizmo) , 1, Math.ray_obb_intersection(pos, dir, transform(tm, axis_len*Vector3(0.0, 0.5, 0.0)), axis_len*Vector3(0.07, 0.50, 0.07))    },
+			{ axis_enabled(self:z_axis(), cam_to_gizmo) , 1, Math.ray_obb_intersection(pos, dir, transform(tm, axis_len*Vector3(0.0, 0.0, 0.5)), axis_len*Vector3(0.07, 0.07, 0.50))    },
+			{ plane_enabled(self:z_axis(), cam_to_gizmo), 1, Math.ray_obb_intersection(pos, dir, transform(tm, axis_len*Vector3(0.25, 0.25, 0   )), axis_len*Vector3(0.25, 0.25, 0.07)) },
+			{ plane_enabled(self:x_axis(), cam_to_gizmo), 1, Math.ray_obb_intersection(pos, dir, transform(tm, axis_len*Vector3(0   , 0.25, 0.25)), axis_len*Vector3(0.07, 0.25, 0.25)) },
+			{ plane_enabled(self:y_axis(), cam_to_gizmo), 1, Math.ray_obb_intersection(pos, dir, transform(tm, axis_len*Vector3(0.25, 0   , 0.25)), axis_len*Vector3(0.25, 0.07, 0.25)) },
+			{ 1                                         , 2, Math.ray_disc_intersection(pos, dir, Matrix4x4.translation(tm), axis_len*1.25, cam_z)                                      }
+		}
+
+		local nearest = nil
+		local dist = math.huge
+		local prio = math.huge
+		local axis_names = { "x", "y", "z", "xy", "yz", "xz", "xyz" }
+		for ii, name in ipairs(axis_names) do
+			if axis[ii][1] and axis[ii][2] <= prio and axis[ii][3] ~= -1.0 and axis[ii][3] < dist then
+				nearest = ii
+				dist = axis[ii][3]
+				prio = axis[ii][2]
+			end
+		end
+		self._selected = nearest and axis_names[nearest] or nil
 	end
 
 	-- Drawing
-	local tm = self:world_pose()
-	local p = self:position()
-
+	local hs = 0.05 -- Axis handle half-size
 	local lines = LevelEditor._lines_no_depth
-	DebugLine.add_line(lines, p, p + l * Matrix4x4.x(tm), self._selected == "x" and Colors.axis_selected() or Colors.axis_x())
-	DebugLine.add_line(lines, p, p + l * Matrix4x4.y(tm), self._selected == "y" and Colors.axis_selected() or Colors.axis_y())
-	DebugLine.add_line(lines, p, p + l * Matrix4x4.z(tm), self._selected == "z" and Colors.axis_selected() or Colors.axis_z())
-
-	DebugLine.add_obb(lines, transform(tm, l * Vector3(1, 0, 0)), l * Vector3(0.1, 0.1, 0.1), self._selected == "x" and Colors.axis_selected() or Colors.axis_x())
-	DebugLine.add_obb(lines, transform(tm, l * Vector3(0, 1, 0)), l * Vector3(0.1, 0.1, 0.1), self._selected == "y" and Colors.axis_selected() or Colors.axis_y())
-	DebugLine.add_obb(lines, transform(tm, l * Vector3(0, 0, 1)), l * Vector3(0.1, 0.1, 0.1), self._selected == "z" and Colors.axis_selected() or Colors.axis_z())
-	DebugLine.add_obb(lines, transform(tm, l * Vector3.zero()), l * Vector3(0.1, 0.1, 0.1), self._selected == "xyz" and Colors.axis_selected() or Colors.axis_z())
+	-- Draw axes.
+	DebugLine.add_line(lines, p, p + Matrix4x4.x(tm)*axis_len*(1-2*hs), axis_color(self:x_axis(), cam_to_gizmo, self._selected == "x" and Colors.axis_selected() or Colors.axis_x()))
+	DebugLine.add_line(lines, p, p + Matrix4x4.y(tm)*axis_len*(1-2*hs), axis_color(self:y_axis(), cam_to_gizmo, self._selected == "y" and Colors.axis_selected() or Colors.axis_y()))
+	DebugLine.add_line(lines, p, p + Matrix4x4.z(tm)*axis_len*(1-2*hs), axis_color(self:z_axis(), cam_to_gizmo, self._selected == "z" and Colors.axis_selected() or Colors.axis_z()))
+	-- Draw axis handles.
+	DebugLine.add_obb(lines, transform(tm, axis_len*Vector3(1-hs, 0   , 0   )), axis_len*Vector3(hs, hs, hs), axis_color(self:x_axis(), cam_to_gizmo, self._selected == "x" and Colors.axis_selected() or Colors.axis_x()))
+	DebugLine.add_obb(lines, transform(tm, axis_len*Vector3(0   , 1-hs, 0   )), axis_len*Vector3(hs, hs, hs), axis_color(self:y_axis(), cam_to_gizmo, self._selected == "y" and Colors.axis_selected() or Colors.axis_y()))
+	DebugLine.add_obb(lines, transform(tm, axis_len*Vector3(0   , 0   , 1-hs)), axis_len*Vector3(hs, hs, hs), axis_color(self:z_axis(), cam_to_gizmo, self._selected == "z" and Colors.axis_selected() or Colors.axis_z()))
+	-- Draw plane handles.
+	DebugLine.add_line(lines, p + Matrix4x4.x(tm)*axis_len*0.5, p + Matrix4x4.x(tm)*axis_len*0.5 + Matrix4x4.y(tm)*axis_len*0.5, plane_color(self:z_axis(), cam_to_gizmo, self._selected == "xy" and Colors.axis_selected() or Colors.axis_x()))
+	DebugLine.add_line(lines, p + Matrix4x4.y(tm)*axis_len*0.5, p + Matrix4x4.y(tm)*axis_len*0.5 + Matrix4x4.x(tm)*axis_len*0.5, plane_color(self:z_axis(), cam_to_gizmo, self._selected == "xy" and Colors.axis_selected() or Colors.axis_y()))
+	DebugLine.add_line(lines, p + Matrix4x4.y(tm)*axis_len*0.5, p + Matrix4x4.y(tm)*axis_len*0.5 + Matrix4x4.z(tm)*axis_len*0.5, plane_color(self:x_axis(), cam_to_gizmo, self._selected == "yz" and Colors.axis_selected() or Colors.axis_y()))
+	DebugLine.add_line(lines, p + Matrix4x4.z(tm)*axis_len*0.5, p + Matrix4x4.z(tm)*axis_len*0.5 + Matrix4x4.y(tm)*axis_len*0.5, plane_color(self:x_axis(), cam_to_gizmo, self._selected == "yz" and Colors.axis_selected() or Colors.axis_z()))
+	DebugLine.add_line(lines, p + Matrix4x4.x(tm)*axis_len*0.5, p + Matrix4x4.x(tm)*axis_len*0.5 + Matrix4x4.z(tm)*axis_len*0.5, plane_color(self:y_axis(), cam_to_gizmo, self._selected == "xz" and Colors.axis_selected() or Colors.axis_x()))
+	DebugLine.add_line(lines, p + Matrix4x4.z(tm)*axis_len*0.5, p + Matrix4x4.z(tm)*axis_len*0.5 + Matrix4x4.x(tm)*axis_len*0.5, plane_color(self:y_axis(), cam_to_gizmo, self._selected == "xz" and Colors.axis_selected() or Colors.axis_z()))
+	-- Draw camera plane handle.
+	DebugLine.add_circle(lines, p, axis_len*1.25, cam_z, self._selected == "xyz" and Colors.axis_selected() or Colors.grid())
 end
 
 function ScaleTool:mouse_move(x, y)
-	if self:is_idle() then return end
+	if self:is_idle() then
+		LevelEditor.select_tool:mouse_move(x, y)
+	elseif self:axis_selected() then
+		local end_scale = self:drag_offset(x, y)
+		local start_scale = self._drag_offset:unbox()
+		local scale_ratio = Vector3(end_scale.x/start_scale.x
+			, end_scale.y/start_scale.y
+			, end_scale.z/start_scale.z
+			)
 
-	if self:axis_selected() then
-			local delta = self:drag_offset(x, y) - self._drag_offset:unbox()
-			local drag_vector = Vector3.zero()
+		-- Apply transformation to all selected objects.
+		local selection = LevelEditor._selection:objects()
+		for ii, obj in pairs(selection) do
+			-- Apply scale.
+			local obj_scale = self._start_scales[ii]:unbox()
+			obj_scale.x = math.max(self.SCALE_MIN, obj_scale.x * scale_ratio.x)
+			obj_scale.y = math.max(self.SCALE_MIN, obj_scale.y * scale_ratio.y)
+			obj_scale.z = math.max(self.SCALE_MIN, obj_scale.z * scale_ratio.z)
+			obj:set_local_scale(LevelEditor:snap(self:world_pose(), obj_scale) or obj_scale)
 
-			for _, a in ipairs{"x", "y", "z"} do
-				local axis = Vector3.zero()
-
-				if self:is_axis_selected(a) then
-					if a == "x" then axis = Vector3.right() end
-					if a == "y" then axis = Vector3.up() end
-					if a == "z" then axis = Vector3.forward() end
-				end
-
-				local contribution = Vector3.dot(axis, delta)
-				drag_vector = drag_vector + axis*contribution
-			end
-
-			local selected = LevelEditor._selection:last_selected_object()
-			local pos = Vector3(1, 1, 1) + drag_vector
-			-- print(Vector3.to_string(self:drag_start()))
-			-- print(Vector3.to_string(pos))
-			-- print(Matrix4x4.to_string(selected:world_pose()) .. "\n")
-			-- selected:set_local_scale(LevelEditor:snap(self:world_pose(), pos) or pos)
+			-- Apply translation. Selected objects new positions are proportional to
+			-- their distance from the gizmo times the scale factor.
+			local obj_position = self._start_positions[ii]:unbox()
+			local gizmo_position = self:position()
+			local gizmo_obj_distance = obj_position - gizmo_position
+			gizmo_obj_distance.x = gizmo_obj_distance.x * scale_ratio.x
+			gizmo_obj_distance.y = gizmo_obj_distance.y * scale_ratio.y
+			gizmo_obj_distance.z = gizmo_obj_distance.z * scale_ratio.z
+			local obj_new_position = gizmo_position + gizmo_obj_distance
+			obj:set_local_position(LevelEditor:snap(self:world_pose(), obj_new_position) or obj_new_position)
+		end
 	end
 end
 
 function ScaleTool:mouse_down(x, y)
-	if self:axis_selected() then
-		self:set_state("scaling")
-		self._drag_start:store(self:position())
-		self._drag_offset:store(self:drag_offset(x, y))
-	else
-		LevelEditor.select_tool:mouse_down(x, y)
+	if self:is_idle() then
+		if self:axis_selected() and LevelEditor._selection:last_selected_object() then
+			self._drag_offset:store(self:drag_offset(x, y))
+
+			-- Store initial positions and scales for all selected objects.
+			local selection = LevelEditor._selection:objects()
+			for _, obj in pairs(selection) do
+				self._start_positions[#self._start_positions + 1] = Vector3Box(obj:local_position())
+				self._start_scales[#self._start_scales + 1] = Vector3Box(obj:local_scale())
+			end
+
+			self:set_state("scaling")
+		else
+			LevelEditor.select_tool:mouse_down(x, y)
+		end
 	end
 end
 
 function ScaleTool:mouse_up(x, y)
-	self:set_state("idle")
+	if self:is_scaling() then
+		LevelEditor._selection:send_move_objects()
 
-	if self:axis_selected() then
-		self._drag_start:store(Vector3.zero())
 		self._drag_offset:store(Vector3(1, 1, 1))
+		self._start_positions = {}
+		self._start_scales = {}
 	else
 		LevelEditor.select_tool:mouse_up(x, y)
 	end
+
+	self:set_state("idle")
 end
 
 function ScaleTool:is_axis_selected(axis)
 	return string.find(self._selected, axis)
 end
 
+function ScaleTool:drag_axis()
+	if self._selected == "x" then return self:x_axis()
+	elseif self._selected == "y" then return self:y_axis()
+	elseif self._selected == "z" then return self:z_axis()
+	else return nil end
+end
+
 function ScaleTool:drag_plane()
-	if self._selected == "x"   then return self:position(), self:y_axis() end
-	if self._selected == "y"   then return self:position(), self:x_axis() end
-	if self._selected == "z"   then return self:position(), self:y_axis() end
-	if self._selected == "xyz" then return self:position(), self:x_axis() end
-	return nil
+	local camera_dir = Matrix4x4.z(LevelEditor:camera():local_pose())
+	if self._selected == "xy" then return self:position(), self:z_axis()
+	elseif self._selected == "yz" then return self:position(), self:x_axis()
+	elseif self._selected == "xz" then return self:position(), self:y_axis()
+	elseif self._selected == "xyz" then return self:position(), -camera_dir
+	else return nil end
 end
 
 function ScaleTool:drag_offset(x, y)
+	local drag_axis = self:drag_axis()
 	local drag_plane = self:drag_plane()
+	local pos, dir = LevelEditor:camera():camera_ray(x, y)
+	local distance = 1
 
-	if (drag_plane ~= nil) then
-		local pos, dir = LevelEditor:camera():camera_ray(x, y)
-		local t = Math.ray_plane_intersection(pos, dir, self:drag_plane())
-
-		if t ~= -1.0 then
-			local point_on_plane = pos + dir*t
-			local offset = point_on_plane - self:drag_start()
-			return offset;
+	if drag_axis ~= nil then
+		local _, dist = line_line(pos, pos + dir, self:position(), self:position() + drag_axis)
+		distance = dist and math.max(0, dist) or 1
+	elseif drag_plane ~= nil then
+		local dist = Math.ray_plane_intersection(pos, dir, self:drag_plane())
+		if dist ~= -1.0 then
+			local point_on_plane = pos + dir*dist
+			distance = Vector3.distance(point_on_plane, self:position())
 		end
 	end
 
-	return Vector3.zero()
+	local scale = Vector3(1, 1, 1)
+	for _, a in ipairs{"x", "y", "z"} do
+		if self:is_axis_selected(a) then
+			if a == "x" then scale.x = distance end
+			if a == "y" then scale.y = distance end
+			if a == "z" then scale.z = distance end
+		end
+	end
+	return scale
 end
 
 LevelEditor = LevelEditor or {}
 
 function LevelEditor:init()
 	self._world = Device.create_world()
+	World.disable_unit_callbacks(self._world)
 	self._pw = World.physics_world(self._world)
 	self._rw = World.render_world(self._world)
 	self._sg = World.scene_graph(self._world)
@@ -1346,6 +1598,7 @@ function LevelEditor:init()
 	self.rotate_tool = RotateTool()
 	self.scale_tool = ScaleTool()
 	self.tool = self.place_tool
+	self.debug = false
 
 	-- Spawn camera
 	local pos = Vector3(20, 20, -20)
@@ -1353,15 +1606,13 @@ function LevelEditor:init()
 	local len = math.abs(Vector3.length(zero_pos))
 	local dir = Vector3.normalize(zero_pos)
 	self._camera._target_distance = len
-	SceneGraph.set_local_rotation(self._sg, self._camera:unit(), Quaternion.look(dir))
-	SceneGraph.set_local_position(self._sg, self._camera:unit(), pos)
+	local tr = SceneGraph.instance(self._sg, self._camera:unit())
+	SceneGraph.set_local_rotation(self._sg, tr, Quaternion.look(dir))
+	SceneGraph.set_local_position(self._sg, tr, pos)
 end
 
 function LevelEditor:update(dt)
 	World.update(self._world, dt)
-
-	DebugLine.reset(self._lines)
-	DebugLine.reset(self._lines_no_depth)
 
 	if self._show_grid then
 		draw_world_origin_grid(self._lines, 10, self._grid.size)
@@ -1392,13 +1643,15 @@ function LevelEditor:update(dt)
 	for k, v in pairs(self._objects) do
 		self._objects[k]:draw()
 	end
-
-	DebugLine.submit(self._lines)
-	DebugLine.submit(self._lines_no_depth)
 end
 
 function LevelEditor:render(dt)
 	Device.render(self._world, self._camera:unit())
+
+	DebugLine.submit(self._lines)
+	DebugLine.reset(self._lines)
+	DebugLine.submit(self._lines_no_depth)
+	DebugLine.reset(self._lines_no_depth)
 end
 
 function LevelEditor:shutdown()
@@ -1425,11 +1678,15 @@ function LevelEditor:mouse_wheel(delta)
 end
 
 function LevelEditor:mouse_down(x, y)
-	self.tool:mouse_down(x, y)
+	if self._camera:is_idle() then
+		self.tool:mouse_down(x, y)
+	end
 end
 
 function LevelEditor:mouse_up(x, y)
-	self.tool:mouse_up(x, y)
+	if self._camera:is_idle() then
+		self.tool:mouse_up(x, y)
+	end
 end
 
 function LevelEditor:key_down(key)
@@ -1457,7 +1714,19 @@ function LevelEditor:camera()
 end
 
 function LevelEditor:set_tool(tool)
+	if self.tool == tool then
+		return
+	end
+
+	if self.tool.on_leave ~= nil then
+		self.tool:on_leave()
+	end
+
 	self.tool = tool
+
+	if self.tool.on_enter ~= nil then
+		self.tool:on_enter()
+	end
 end
 
 function LevelEditor:multiple_selection_enabled()
@@ -1531,7 +1800,21 @@ function LevelEditor:find_spawn_point(x, y)
 	local normal = Vector3.up()
 	local t = Math.ray_plane_intersection(pos, dir, point, normal)
 	local target = t == -1.0 and point or pos + dir * t
-	return LevelEditor:snap(Matrix4x4.identity(), target) or target
+	local result = LevelEditor:snap(Matrix4x4.identity(), target) or target
+	if self.debug then
+		-- Debug
+		DebugLine.add_sphere(self._lines_no_depth
+			, target
+			, 0.1
+			, Color4.green()
+			)
+		DebugLine.add_sphere(self._lines_no_depth
+			, result
+			, 0.1
+			, Color4.red()
+			)
+	end
+	return result
 end
 
 function LevelEditor:draw_grid(tm, center, size, axis)

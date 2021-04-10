@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -247,18 +247,18 @@ inline UnitId LuaStack::get_unit(int i)
 		CE_UNREACHABLE();
 	}
 #endif // CROWN_DEBUG
-	UnitId id;
-	id._idx = u32((enc & LIGHTDATA_UNIT_ID_MASK) >> LIGHTDATA_UNIT_ID_SHIFT);
-	return id;
+	UnitId unit;
+	unit._idx = u32((enc & LIGHTDATA_UNIT_ID_MASK) >> LIGHTDATA_UNIT_ID_SHIFT);
+	return unit;
 }
 
-inline CameraInstance LuaStack::get_camera(int i)
+inline CameraInstance LuaStack::get_camera_instance(int i)
 {
 	CameraInstance inst = { get_id(i) };
 	return inst;
 }
 
-inline TransformInstance LuaStack::get_transform(int i)
+inline TransformInstance LuaStack::get_transform_instance(int i)
 {
 	TransformInstance inst = { get_id(i) };
 	return inst;
@@ -282,12 +282,18 @@ inline LightInstance LuaStack::get_light_instance(int i)
 	return inst;
 }
 
+inline StateMachineInstance LuaStack::get_state_machine_instance(int i)
+{
+	StateMachineInstance inst = { get_id(i) };
+	return inst;
+}
+
 inline Material* LuaStack::get_material(int i)
 {
 	return (Material*)get_pointer(i);
 }
 
-inline ActorInstance LuaStack::get_actor(int i)
+inline ActorInstance LuaStack::get_actor_instance(int i)
 {
 	ActorInstance inst = { get_id(i) };
 	return inst;
@@ -525,9 +531,9 @@ inline void LuaStack::push_animation_state_machine(AnimationStateMachine* sm)
 	push_pointer(sm);
 }
 
-inline void LuaStack::push_unit(UnitId id)
+inline void LuaStack::push_unit(UnitId unit)
 {
-	uintptr_t enc = (uintptr_t(id._idx) << LIGHTDATA_UNIT_ID_SHIFT) | LIGHTDATA_UNIT_MARKER;
+	uintptr_t enc = (uintptr_t(unit._idx) << LIGHTDATA_UNIT_ID_SHIFT) | LIGHTDATA_UNIT_MARKER;
 	push_pointer((void*)enc);
 }
 
@@ -552,6 +558,11 @@ inline void LuaStack::push_sprite_instance(SpriteInstance i)
 }
 
 inline void LuaStack::push_light_instance(LightInstance i)
+{
+	push_id(i.i);
+}
+
+inline void LuaStack::push_state_machine_instance(StateMachineInstance i)
 {
 	push_id(i.i);
 }

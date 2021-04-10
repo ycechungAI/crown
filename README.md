@@ -1,20 +1,37 @@
 The flexible game engine. [![Build Status](https://github.com/dbartolini/crown/workflows/build_and_test/badge.svg)](https://github.com/dbartolini/crown/actions)
 =====================================
 
-Crown is a general purpose data-driven game engine, written from scratch in [orthodox C++](https://gist.github.com/bkaradzic/2e39896bc7d8c34e042b) with a minimalistic and data-oriented design philosophy in mind.
+Crown is a general purpose and data-driven game engine, written in [orthodox
+C++](https://gist.github.com/bkaradzic/2e39896bc7d8c34e042b) with a minimalistic
+and data-oriented design philosophy in mind.
 
-It is loosely inspired by Bitsquid (now Stingray) engine and its design principles; the current Lua API is similar to that of Bitsquid but this engine is *not* meant to be its clone *nor* to be API compatible with it.
+Crown isn't tied to a particular game type or genre but instead it offers a set
+of generic primitives and facilities to help you create a wide gamut of
+interactive 2D and 3D products.
+
+Check out the
+[Introduction](https://dbartolini.github.io/crown/html/latest/introduction.html)
+for more info.
 
 ## Download
+### Binaries
 
-  * [Crown v0.38.0 for Linux 64-bits](https://github.com/dbartolini/crown/releases/download/v0.38.0/crown-0.38.0-linux-x64.tar.gz)
   * [Changelog](https://dbartolini.github.io/crown/html/latest/changelog.html)
+  * [Crown v0.42.0 for Linux 64-bits](https://github.com/dbartolini/crown/releases/download/v0.42.0/crown-0.42.0-linux-x64.tar.gz)
+  * [Crown v0.42.0 for Windows 64-bits](https://github.com/dbartolini/crown/releases/download/v0.42.0/crown-0.42.0-windows-x64.zip)
+  * [Crown v0.42.0 all releases](https://github.com/dbartolini/crown/releases/tag/v0.42.0)
   
-## Support & Development
+### Arch Linux ([AUR](https://aur.archlinux.org/packages/crown/))
+    yay -S crown
+  
+## Documentation
 
-  * [Manual](https://dbartolini.github.io/crown/html/latest)
+  * [User Manual](https://dbartolini.github.io/crown/html/latest)
   * [Lua API](https://dbartolini.github.io/crown/html/latest/lua_api.html)
   * [Building](https://dbartolini.github.io/crown/html/latest/hackers/building.html)
+
+## Community Support & Development
+
   * [Discord](https://discord.gg/CeXVWCT): [![Discord Chat](https://img.shields.io/discord/572468149358690314.svg)](https://discord.gg/CeXVWCT)
   * [Trello Roadmap](https://trello.com/b/h88kbJNm/crown-game-engine)
 
@@ -49,12 +66,13 @@ Daniele Bartolini ([@dbartolini](https://github.com/dbartolini))
 Simone Boscaratto ([@Xed89](https://github.com/Xed89))  
 Michele Rossi ([@mikymod](https://github.com/mikymod))  
 Michela Iacchelli - Pepper logo.  
-Raphael de Vasconcelos Nascimento ([@vasconssa](https://github.com/vasconssa))
+Raphael de Vasconcelos Nascimento ([@vasconssa](https://github.com/vasconssa))  
+Giulia Gazzoli - Crown logo.
 
 License
 -------
 
-	Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+	Copyright (c) 2012-2021 Daniele Bartolini et al.
 
 	Permission is hereby granted, free of charge, to any person
 	obtaining a copy of this software and associated documentation

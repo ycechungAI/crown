@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2020 Daniele Bartolini and individual contributors.
+ * Copyright (c) 2012-2021 Daniele Bartolini et al.
  * License: https://github.com/dbartolini/crown/blob/master/LICENSE
  */
 
@@ -18,9 +18,9 @@
 
 namespace crown
 {
-static void unit_destroyed_callback_bridge(UnitId id, void* user_ptr)
+static void unit_destroyed_callback_bridge(UnitId unit, void* user_ptr)
 {
-	((SceneGraph*)user_ptr)->unit_destroyed_callback(id);
+	((SceneGraph*)user_ptr)->unit_destroyed_callback(unit);
 }
 
 SceneGraph::Pose& SceneGraph::Pose::operator=(const Matrix4x4& m)
@@ -60,8 +60,7 @@ SceneGraph::~SceneGraph()
 
 TransformInstance SceneGraph::make_instance(u32 i)
 {
-	TransformInstance inst = { i };
-	return inst;
+	TransformInstance inst = { i }; return inst;
 }
 
 void SceneGraph::allocate(u32 num)
@@ -103,10 +102,11 @@ void SceneGraph::allocate(u32 num)
 	_data = new_data;
 }
 
-void SceneGraph::unit_destroyed_callback(UnitId id)
+void SceneGraph::unit_destroyed_callback(UnitId unit)
 {
-	if (has(id))
-		destroy(id, make_instance(UINT32_MAX));
+	TransformInstance inst = instance(unit);
+	if (is_valid(inst))
+		destroy(inst);
 }
 
 TransformInstance SceneGraph::create(UnitId unit, const Vector3& pos, const Quaternion& rot, const Vector3& scale)
@@ -122,9 +122,9 @@ TransformInstance SceneGraph::create(UnitId unit, const Vector3& pos, const Quat
 
 TransformInstance SceneGraph::create(UnitId unit, const Matrix4x4& pose)
 {
-	CE_ASSERT(!hash_map::has(_map, unit), "Unit already has transform");
+	CE_ASSERT(!hash_map::has(_map, unit), "Unit already has a transform component");
 
-	if (_data.capacity == _data.size)
+	if (_data.capacity == 0 || _data.capacity-1 == _data.size)
 		grow();
 
 	const u32 last = _data.size;
@@ -145,31 +145,83 @@ TransformInstance SceneGraph::create(UnitId unit, const Matrix4x4& pose)
 	return make_instance(last);
 }
 
-void SceneGraph::destroy(UnitId unit, TransformInstance /*id*/)
+/// Moves the node data from index @a src to index @a dst, while preserving
+/// internal links between nodes.
+static void scene_graph_move_data(const SceneGraph& sg, u32 dst, u32 src)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
+	// Any node can be referenced by its children.
+	TransformInstance cur = sg._data.first_child[src];
+	while (is_valid(cur))
+	{
+		sg._data.parent[cur.i].i = dst;
+		cur = sg._data.next_sibling[cur.i];
+	}
+
+	if (sg._data.parent[src].i != UINT32_MAX)
+	{
+		// Child node can also be referenced by its parent (if it is the parent's
+		// first child)...
+		if (sg._data.first_child[sg._data.parent[src].i].i == src)
+			sg._data.first_child[sg._data.parent[src].i].i = dst;
+
+		// ... and (at most) by its two closest siblings.
+		if (sg._data.next_sibling[src].i != UINT32_MAX)
+			sg._data.prev_sibling[sg._data.next_sibling[src].i].i = dst;
+		if (sg._data.prev_sibling[src].i != UINT32_MAX)
+			sg._data.next_sibling[sg._data.prev_sibling[src].i].i = dst;
+	}
+
+	sg._data.unit[dst]         = sg._data.unit[src];
+	sg._data.world[dst]        = sg._data.world[src];
+	sg._data.local[dst]        = sg._data.local[src];
+	sg._data.parent[dst]       = sg._data.parent[src];
+	sg._data.first_child[dst]  = sg._data.first_child[src];
+	sg._data.next_sibling[dst] = sg._data.next_sibling[src];
+	sg._data.prev_sibling[dst] = sg._data.prev_sibling[src];
+	sg._data.changed[dst]      = sg._data.changed[src];
+}
+
+/// Swaps the transforms @a aa and @a bb.
+static void scene_graph_swap(const SceneGraph& sg, TransformInstance aa, TransformInstance bb)
+{
+	// Index of the temporary storage slot. Memory access past size-1 is allowed
+	// because we allocate one extra slot in SceneGraph::grow().
+	const u32 tt = sg._data.size;
+
+	scene_graph_move_data(sg, tt, aa.i);
+	scene_graph_move_data(sg, aa.i, bb.i);
+	scene_graph_move_data(sg, bb.i, tt);
+}
+
+void SceneGraph::destroy(TransformInstance transform)
+{
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+
+	// Unlink all children.
+	TransformInstance cur = _data.first_child[transform.i];
+	while (is_valid(cur))
+	{
+		TransformInstance next_sibling = _data.next_sibling[cur.i];
+		unlink(cur);
+		cur = next_sibling;
+	}
+	unlink(transform);
 
 	const u32 last = _data.size - 1;
-	const UnitId u = _data.unit[i.i];
+	const UnitId u = _data.unit[transform.i];
 	const UnitId last_u = _data.unit[last];
 
-	_data.unit[i.i]         = _data.unit[last];
-	_data.world[i.i]        = _data.world[last];
-	_data.local[i.i]        = _data.local[last];
-	_data.parent[i.i]       = _data.parent[last];
-	_data.first_child[i.i]  = _data.first_child[last];
-	_data.next_sibling[i.i] = _data.next_sibling[last];
-	_data.prev_sibling[i.i] = _data.prev_sibling[last];
-	_data.changed[i.i]      = _data.changed[last];
-
-	hash_map::set(_map, last_u, i.i);
+	if (last != transform.i)
+	{
+		scene_graph_swap(*this, transform, make_instance(last));
+		hash_map::set(_map, last_u, transform.i);
+	}
 	hash_map::remove(_map, u);
 
 	--_data.size;
 }
 
-TransformInstance SceneGraph::instances(UnitId unit)
+TransformInstance SceneGraph::instance(UnitId unit)
 {
 	return make_instance(hash_map::get(_map, unit, UINT32_MAX));
 }
@@ -179,102 +231,91 @@ bool SceneGraph::has(UnitId unit)
 	return hash_map::has(_map, unit);
 }
 
-void SceneGraph::set_local_position(UnitId unit, const Vector3& pos)
+void SceneGraph::set_local_position(TransformInstance transform, const Vector3& pos)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	_data.local[i.i].position = pos;
-	set_local(i);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	_data.local[transform.i].position = pos;
+	set_local(transform);
 }
 
-void SceneGraph::set_local_rotation(UnitId unit, const Quaternion& rot)
+void SceneGraph::set_local_rotation(TransformInstance transform, const Quaternion& rot)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	_data.local[i.i].rotation = from_quaternion(rot);
-	set_local(i);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	_data.local[transform.i].rotation = from_quaternion(rot);
+	set_local(transform);
 }
 
-void SceneGraph::set_local_scale(UnitId unit, const Vector3& scale)
+void SceneGraph::set_local_scale(TransformInstance transform, const Vector3& scale)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	_data.local[i.i].scale = scale;
-	set_local(i);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	_data.local[transform.i].scale = scale;
+	set_local(transform);
 }
 
-void SceneGraph::set_local_pose(UnitId unit, const Matrix4x4& pose)
+void SceneGraph::set_local_pose(TransformInstance transform, const Matrix4x4& pose)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	_data.local[i.i] = pose;
-	set_local(i);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	_data.local[transform.i] = pose;
+	set_local(transform);
 }
 
-Vector3 SceneGraph::local_position(UnitId unit)
+Vector3 SceneGraph::local_position(TransformInstance transform)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	return _data.local[i.i].position;
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	return _data.local[transform.i].position;
 }
 
-Quaternion SceneGraph::local_rotation(UnitId unit)
+Quaternion SceneGraph::local_rotation(TransformInstance transform)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	return quaternion(_data.local[i.i].rotation);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	return rotation(_data.local[transform.i].rotation);
 }
 
-Vector3 SceneGraph::local_scale(UnitId unit)
+Vector3 SceneGraph::local_scale(TransformInstance transform)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	return _data.local[i.i].scale;
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	return _data.local[transform.i].scale;
 }
 
-Matrix4x4 SceneGraph::local_pose(UnitId unit)
+Matrix4x4 SceneGraph::local_pose(TransformInstance transform)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	Matrix4x4 tr = from_quaternion_translation(quaternion(_data.local[i.i].rotation), _data.local[i.i].position);
-	set_scale(tr, _data.local[i.i].scale);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	Matrix4x4 tr = from_quaternion_translation(quaternion(_data.local[transform.i].rotation), _data.local[transform.i].position);
+	set_scale(tr, _data.local[transform.i].scale);
 	return tr;
 }
 
-Vector3 SceneGraph::world_position(UnitId unit)
+Vector3 SceneGraph::world_position(TransformInstance transform)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	return translation(_data.world[i.i]);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	return translation(_data.world[transform.i]);
 }
 
-Quaternion SceneGraph::world_rotation(UnitId unit)
+Quaternion SceneGraph::world_rotation(TransformInstance transform)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	return rotation(_data.world[i.i]);
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	return rotation(_data.world[transform.i]);
 }
 
-Matrix4x4 SceneGraph::world_pose(UnitId unit)
+Matrix4x4 SceneGraph::world_pose(TransformInstance transform)
 {
-	TransformInstance i = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	return _data.world[i.i];
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	return _data.world[transform.i];
 }
 
-void SceneGraph::set_world_pose(TransformInstance i, const Matrix4x4& pose)
+void SceneGraph::set_world_pose(TransformInstance transform, const Matrix4x4& pose)
 {
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	_data.world[i.i] = pose;
-	_data.changed[i.i] = true;
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	_data.world[transform.i] = pose;
+	_data.changed[transform.i] = true;
 }
 
-void SceneGraph::set_world_pose_and_rescale(TransformInstance i, const Matrix4x4& pose)
+void SceneGraph::set_world_pose_and_rescale(TransformInstance transform, const Matrix4x4& pose)
 {
-	CE_ASSERT(i.i < _data.size, "Index out of bounds");
-	_data.world[i.i] = pose;
-	set_scale(_data.world[i.i], _data.local[i.i].scale);
-	_data.changed[i.i] = true;
+	CE_ASSERT(transform.i < _data.size, "Index out of bounds");
+	_data.world[transform.i] = pose;
+	set_scale(_data.world[transform.i], _data.local[transform.i].scale);
+	_data.changed[transform.i] = true;
 }
 
 u32 SceneGraph::num_nodes() const
@@ -282,84 +323,70 @@ u32 SceneGraph::num_nodes() const
 	return _data.size;
 }
 
-void SceneGraph::link(UnitId child, UnitId parent)
+void SceneGraph::link(TransformInstance parent
+	, TransformInstance child
+	, const Vector3& child_local_position
+	, const Quaternion& child_local_rotation
+	, const Vector3& child_local_scale
+	)
 {
-	TransformInstance tc = make_instance(hash_map::get(_map, child, UINT32_MAX));
-	TransformInstance tp = make_instance(hash_map::get(_map, parent, UINT32_MAX));
-	CE_ASSERT(tc.i < _data.size, "Index out of bounds");
-	CE_ASSERT(tp.i < _data.size, "Index out of bounds");
+	CE_ASSERT(child.i < _data.size, "Index out of bounds");
+	CE_ASSERT(parent.i < _data.size, "Index out of bounds");
 
 	unlink(child);
 
-	if (!is_valid(_data.first_child[tp.i]))
+	// Append transform to the list of parent's children
+	if (!is_valid(_data.first_child[parent.i]))
 	{
-		_data.first_child[tp.i] = tc;
-		_data.parent[tc.i] = tp;
+		_data.first_child[parent.i] = child;
+		_data.parent[child.i] = parent;
 	}
 	else
 	{
 		TransformInstance prev = { UINT32_MAX };
-		TransformInstance node = _data.first_child[tp.i];
+		TransformInstance node = _data.first_child[parent.i];
 		while (is_valid(node))
 		{
 			prev = node;
 			node = _data.next_sibling[node.i];
 		}
 
-		_data.next_sibling[prev.i] = tc;
+		_data.next_sibling[prev.i] = child;
 
-		_data.first_child[tc.i].i = UINT32_MAX;
-		_data.next_sibling[tc.i].i = UINT32_MAX;
-		_data.prev_sibling[tc.i] = prev;
+		_data.first_child[child.i].i = UINT32_MAX;
+		_data.next_sibling[child.i].i = UINT32_MAX;
+		_data.prev_sibling[child.i] = prev;
 	}
 
-	Matrix4x4 parent_tr = _data.world[tp.i];
-	Matrix4x4 child_tr = _data.world[tc.i];
-	const Vector3 cs = scale(child_tr);
+	_data.local[child.i].position = child_local_position;
+	_data.local[child.i].rotation = from_quaternion(child_local_rotation);
+	_data.local[child.i].scale    = child_local_scale;
+	_data.parent[child.i] = parent;
 
-	Vector3 px = x(parent_tr);
-	Vector3 py = y(parent_tr);
-	Vector3 pz = z(parent_tr);
-	Vector3 cx = x(child_tr);
-	Vector3 cy = y(child_tr);
-	Vector3 cz = z(child_tr);
-
-	set_x(parent_tr, normalize(px));
-	set_y(parent_tr, normalize(py));
-	set_z(parent_tr, normalize(pz));
-	set_x(child_tr, normalize(cx));
-	set_y(child_tr, normalize(cy));
-	set_z(child_tr, normalize(cz));
-
-	const Matrix4x4 rel_tr = child_tr * get_inverted(parent_tr);
-
-	_data.local[tc.i].position = translation(rel_tr);
-	_data.local[tc.i].rotation = to_matrix3x3(rel_tr);
-	_data.local[tc.i].scale = cs;
-	_data.parent[tc.i] = tp;
-
-	transform(parent_tr, tc);
+	transform(_data.world[parent.i], child);
 }
 
-void SceneGraph::unlink(UnitId unit)
+void SceneGraph::unlink(TransformInstance child)
 {
-	TransformInstance tc = make_instance(hash_map::get(_map, unit, UINT32_MAX));
-	CE_ASSERT(tc.i < _data.size, "Index out of bounds");
+	CE_ASSERT(child.i < _data.size, "Index out of bounds");
 
-	if (!is_valid(_data.parent[tc.i]))
+	if (!is_valid(_data.parent[child.i]))
 		return;
 
-	if (!is_valid(_data.prev_sibling[tc.i]))
-		_data.first_child[_data.parent[tc.i].i] = _data.next_sibling[tc.i];
+	if (_data.first_child[_data.parent[child.i].i].i == child.i)
+		_data.first_child[_data.parent[child.i].i] = _data.next_sibling[child.i];
 	else
-		_data.next_sibling[_data.prev_sibling[tc.i].i] = _data.next_sibling[tc.i];
+		_data.next_sibling[_data.prev_sibling[child.i].i] = _data.next_sibling[child.i];
 
-	if (is_valid(_data.next_sibling[tc.i]))
-		_data.prev_sibling[_data.next_sibling[tc.i].i] = _data.prev_sibling[tc.i];
+	if (is_valid(_data.next_sibling[child.i]))
+		_data.prev_sibling[_data.next_sibling[child.i].i] = _data.prev_sibling[child.i];
 
-	_data.parent[tc.i].i = UINT32_MAX;
-	_data.next_sibling[tc.i].i = UINT32_MAX;
-	_data.prev_sibling[tc.i].i = UINT32_MAX;
+	_data.local[child.i].position = translation(_data.world[child.i]);
+	_data.local[child.i].rotation = from_quaternion(rotation(_data.world[child.i]));
+	_data.local[child.i].scale = scale(_data.world[child.i]);
+	_data.parent[child.i].i = UINT32_MAX;
+	_data.next_sibling[child.i].i = UINT32_MAX;
+	_data.prev_sibling[child.i].i = UINT32_MAX;
 }
 
 void SceneGraph::clear_changed()
@@ -382,30 +409,32 @@ void SceneGraph::get_changed(Array<UnitId>& units, Array<Matrix4x4>& world_poses
 	}
 }
 
-void SceneGraph::set_local(TransformInstance i)
+void SceneGraph::set_local(TransformInstance transform)
 {
-	TransformInstance parent = _data.parent[i.i];
+	TransformInstance parent = _data.parent[transform.i];
 	Matrix4x4 parent_tm = is_valid(parent) ? _data.world[parent.i] : MATRIX4X4_IDENTITY;
-	transform(parent_tm, i);
+	SceneGraph::transform(parent_tm, transform);
 
-	_data.changed[i.i] = true;
+	_data.changed[transform.i] = true;
 }
 
-void SceneGraph::transform(const Matrix4x4& parent, TransformInstance i)
+void SceneGraph::transform(const Matrix4x4& parent, TransformInstance transform)
 {
-	_data.world[i.i] = local_pose(_data.unit[i.i]) * parent;
+	_data.world[transform.i] = local_pose(transform) * parent;
+	_data.changed[transform.i] = true;
 
-	TransformInstance child = _data.first_child[i.i];
+	TransformInstance child = _data.first_child[transform.i];
 	while (is_valid(child))
 	{
-		transform(_data.world[i.i], child);
+		SceneGraph::transform(_data.world[transform.i], child);
 		child = _data.next_sibling[child.i];
 	}
 }
 
 void SceneGraph::grow()
 {
-	allocate(_data.capacity * 2 + 1);
+	// Allocate one extra slot to be used as a temporary storage.
+	allocate(2 + _data.capacity*2);
 }
 
 } // namespace crown
